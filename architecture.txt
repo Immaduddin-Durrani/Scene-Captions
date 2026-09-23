@@ -1,0 +1,352 @@
+=================================================================
+SCENECAPTIONS — ADAPTIVE NON-SPEECH CAPTIONS FOR DHH VIEWERS
+OF LONG-FORM VIDEO
+Architecture Reference — v1 (Next.js web app, precomputed captions)
+=================================================================
+
+Legend: [DECIDED] = agreed by the team in discussion.
+        [PROPOSED] = recommended, not yet agreed/built.
+        [UNVERIFIED] = a claim/limit that must be checked against
+        current official docs before relying on it.
+
+## 0a. KNOWN ENVIRONMENT NOTES
+
+- NVIDIA NIM: free access with a 40 RPM cap [DECIDED to use].
+  Pace calls at 1 request per >=2s (~30 RPM) to leave headroom;
+  retry HTTP 429 with exponential backoff. [PROPOSED]
+- Model names confirmed against the team's 38-model NIM list.
+  NVIDIA docs: nemotron-3-nano-omni takes video (mp4, up to 2 min),
+  audio (wav/mp3, up to 1 h), image, text; English only; supports
+  JSON output. [UNVERIFIED] How the HOSTED free endpoint accepts
+  video/audio (encoding, size caps), whether reasoning mode works
+  with audio/video, and how well it labels NON-SPEECH sounds.
+  Run a 10-clip test before building on it.
+- Free endpoint usage is logged; do not send participant data,
+  voices or faces of study participants. [confirm NVIDIA terms]
+- Render free web service: 512 MB RAM, 0.1 CPU, spins down after
+  ~15 min without inbound traffic, ~1 min cold start. 750 free
+  instance hours per WORKSPACE per month (a 31-day month = 744 h),
+  so ONE always-awake free service uses almost all of it and a
+  second awake service can exhaust it and get every free service
+  suspended until next month. Filesystem is ephemeral (no
+  persistent disk). [Sources agree; confirm on Render's docs.]
+- Render bandwidth allowance: [UNVERIFIED] sources conflict
+  (5 GB vs 100 GB/month). Check the dashboard. Design so video
+  never flows through Render regardless.
+- UptimeRobot free tier sends HEAD requests. Next.js route handlers
+  do not fall back to GET for HEAD, so /api/ping needs an explicit
+  HEAD handler alongside GET (learned in the Cervana project).
+  Ping interval <=10 min, dedicated no-DB route.
+- Archive.org hotlinking + HTTP range requests (seeking) inside a
+  <video> tag: [UNVERIFIED]. Test before relying on it.
+- getUserMedia is not used here. No secure-context constraints
+  beyond normal HTTPS.
+
+## 1. PURPOSE
+
+Web-based video player for ONE full-length story-driven piece
+(TV episode or 20-30 min film) that shows personalized
+NON-SPEECH captions (e.g. "[soft piano music]") for Deaf and
+hard-of-hearing (DHH) viewers, and is evaluated with DHH
+participants against a fixed-caption baseline.
+
+Research question: How can personalized non-speech captions adapt
+across long-form, story-driven video while staying consistent,
+understandable, and under the viewer's control?
+
+Scope: non-speech sound captions only. NOT general subtitling,
+NOT live captioning, NOT speech-prosody styling.
+
+Team: Zuhair Amirali Merchant (29021), Muhammad Hamza Kashif
+(29022), Immaduddin Durrani (29204).
+
+## 1a. HCI / ACCESSIBILITY DESIGN PRINCIPLES
+
+- Viewer control comes first. A one-tap "Show Original" (the
+  creator's caption) is always reachable. Some participants in
+  prior work disliked customization entirely.
+- No hidden adaptation. If a caption changed because of the scene,
+  the viewer can find out why (on-demand disclosure, e.g. hover or
+  tap). [PROPOSED, experimental]
+- Simple controls over dense ones. Prior work criticized a 10x10
+  detail/expressiveness grid; use a coarse scale (3-5 levels) or
+  presets. [PROPOSED, experimental]
+- Progressive disclosure: few controls first, advanced later.
+- Caption text: readable contrast, resizable, never covering
+  critical on-screen content; full keyboard operation of the
+  player and controls; check against WCAG guidance. [PROPOSED]
+- Desktop/laptop/tablet are the study targets. Phone layout should
+  work but is not the design driver. [PROPOSED]
+- Don't overclaim in the writeup: prior studies are small
+  qualitative samples (see section 13).
+
+## 2. TECH STACK
+
+- Frontend + light API: Next.js (React). [DECIDED]
+- Player: native <video> with a custom caption overlay
+  component. [PROPOSED]
+- Ingestion: local scripts (Node or Python), run on a team
+  member's machine only, never hosted. [DECIDED: local-first]
+- AI: NVIDIA NIM API (section 4). [DECIDED]
+- Caption generation approach follows CapTune's split (offline
+  creator-side generation, lightweight viewer-side selection).
+  The proposal said to reuse CapTune's open-source engine.
+  [UNVERIFIED] Check its repo/license and whether it fits this
+  pipeline; otherwise use our own prompts on NIM models.
+- Hosting: Render free tier + UptimeRobot pings. [DECIDED]
+  Vercel free remains a fallback option.
+- Static data: precomputed JSON per video (section 5).
+- Study data store: external free DB, e.g. Supabase. [PROPOSED]
+  Required because Render's filesystem is ephemeral.
+- Video hosting: NOT on Render. Archive.org or another free host.
+
+## 3. CORE PRINCIPLE: PRECOMPUTE, NEVER CALL NIM DURING VIEWING
+
+- No NIM call happens while a participant watches. Every caption
+  variant a viewer can select is generated once, offline, and
+  stored as JSON. The viewer only picks a cached variant.
+- Effect: the 40 RPM cap limits only how fast we can INGEST a new
+  video, not how many people watch or how long a session runs.
+- Scene-context extraction is cached separately from caption
+  variant generation, so changing the caption prompt does not
+  force re-running the expensive context step.
+
+## 4. INGESTION PIPELINE (LOCAL, ONE VIDEO AT A TIME) [PROPOSED]
+
+1. Input: video file + any existing caption/subtitle file.
+2. Cue list: (a) detect bracketed/parenthetical non-speech cues in
+   SDH-style subtitles if they exist; (b) otherwise generate cues
+   from the audio with a NIM model. Do NOT assume a source's
+   subtitles contain non-speech cues.
+3. Context window: extract a few seconds of audio+video around
+   each cue (ffmpeg, local).
+4. Scene context call: NIM omni model produces a scene/sound
+   description per cue. Candidate: nemotron-3-nano-omni-30b-a3b-
+   reasoning. Fallback (video/image only, no audio): cosmos3-nano-reasoner.
+   If the omni model cannot label non-speech sounds reliably,
+   audio cues need another source (SDH captions, or a local
+   audio-event tagger, not yet researched).
+5. Caption variants call: one structured-JSON call per cue
+   returns the whole grid (candidate 3x3: Level of Detail x
+   Expressiveness) plus 2-3 sound-representation variants. Pass a
+   running glossary of already-captioned sounds so the same sound
+   gets consistent wording across the video.
+   Candidate model: nemotron-3.5-lightning-30b-a3b, fallback
+   gpt-oss-20b. Larger models only for an optional quality pass.
+   [UNVERIFIED, see 0a]
+6. Validate every response against the schema (retry once on bad
+   JSON), write one JSON per video. Human review pass over the
+   output before it goes into a study (consistency, hallucinated
+   sounds, tone).
+7. Call-count estimate: roughly 2 calls per cue. With 100-300
+   cues per film, ~200-600 calls, i.e. about 5-20 min at 30 RPM.
+   These cue counts are a GUESS; measure on the first video.
+- NIM API key lives in a local .env only. Never committed, never
+  in a NEXT_PUBLIC_* variable, never on the host.
+
+## 5. PRECOMPUTED DATA SCHEMA [PROPOSED, not built]
+
+One JSON file per video, e.g. data/captions/{video_id}.json:
+  video_id, title, source_url, license, duration_seconds,
+  schema_version, generated_with (model names, prompt version)
+  cues: [
+    { cue_id, start_s, end_s, original_text,
+      scene_context (short text),
+      sound_key (normalized label used for consistency),
+      grid: { "<detail>-<expr>": text, ... },
+      representations: { descriptive, onomatopoeic?, plain } }
+  ]
+Viewer state is a small profile object stored in the browser
+(and logged for the study), not in this file.
+
+## 6. RUNTIME BEHAVIOR (HOSTED APP)
+
+- Loads the video's JSON and the viewer's profile.
+- Persistent caption profile: detail/expressiveness set once,
+  applied for the whole runtime. [DECIDED in proposal]
+- Scene-aware adaptation: shorter/simpler captions during dense or
+  fast scenes, richer during quiet or off-screen sound. HOW a scene
+  is classified is NOT decided. [PROPOSED] derive it from
+  ingestion-time metadata (e.g. cue density per time window) so
+  no live computation is needed.
+- "Show Original" toggle: swaps to the creator's stored caption.
+  [DECIDED in proposal]
+- Preview pane: renders sample cues from the cached grid under a
+  candidate setting before committing. [DECIDED in proposal]
+- Baseline condition for the study: fixed original captions.
+- All of the above are cache lookups; no model calls.
+
+## 7. STUDY FLOW AND DATA
+
+- Planned flow: consent -> intro/profile setup -> watch piece
+  (SceneCaptions vs baseline) -> questionnaire. Sample size and
+  protocol NOT fixed.
+- Measures named in the proposal: comprehension of non-speech
+  events, perceived consistency, reading effort, stated
+  preference. Exact instruments TBD.
+- Log (with consent): profile settings over time, "Show Original"
+  taps, preview usage, timestamps. Store in an external DB, not on
+  Render's disk. [PROPOSED]
+- Pseudonymous participant IDs; no unnecessary personal data.
+  [PROPOSED]
+- Confirm with the course instructor what ethics/consent process
+  applies to a study with DHH participants. [OPEN]
+
+## 8. CONTENT SOURCING AND RIGHTS
+
+- Scope is rights-clear content: public-domain and CC-licensed
+  only. This matches the project proposal and is a hard rule. Not
+  "non-commercial therefore fine": non-commercial use does not by
+  itself make copying or hosting copyrighted material legal.
+  No pirated content, ever.
+- Candidates: Blender open movies (CC-BY, ~10-15 min each, so they
+  would need chaining/segments to reach 20-30 min) and public
+  domain features on Archive.org (clip a 20-30 min segment).
+  Check each item's own license/page; restorations and new
+  soundtracks can carry their own copyright.
+- Choose the study piece by listening to audio for non-speech
+  event density. Old films may have sparse or degraded sound
+  design.
+- Study piece: 1 main (+ optional backup). Demo library: 4-6
+  titles across genres AFTER the first film works end to end.
+  A 20-30 title library is out of scope.
+- Subtitles: check the item's own page first; then OpenSubtitles
+  (free API tier, small daily download limits, current limits
+  [UNVERIFIED]) or SubDL. Subscene shut down in 2024.
+  subtitlecat.com: unverified, do not depend on it. Community
+  subs are usually dialogue-only and timed to one specific release;
+  verify sync against our exact file.
+- Posters/metadata: use the film's own official stills; TMDB free
+  API if needed (attribution required, terms [UNVERIFIED]).
+- Attribution/credits for each title shown in the app.
+
+## 9. HOSTING AND DEPLOYMENT
+
+- Render free web service runs the Next.js app: static app, JSON
+  lookups, participant logging API routes.
+- One always-on free service only (750 h/workspace).
+- /api/ping: GET + HEAD, returns 200, no DB calls. UptimeRobot
+  hits only this route every <=10 min.
+- Video streams from its external host directly to the browser.
+- Caption JSON is committed in the repo or served from free
+  object storage. It is read-only at runtime.
+- Cold starts are possible if a ping is missed; schedule study
+  sessions with a warm-up check beforehand.
+- Local-first: the whole flow (ingest -> JSON -> Next.js dev
+  server) works locally before deploying.
+
+## 10. SECURITY NOTES
+
+- NIM key: local ingestion env only. Nothing NIM-related runs on
+  the host, so it never needs to be deployed.
+- Any DB/server secret (e.g. Supabase service key) is server-side
+  env only. NEXT_PUBLIC_* ships to the client. Never put secrets
+  there.
+- If a public DB key is used client-side, enforce access control
+  with row-level security, not client checks.
+- Participant logs are research data: minimize fields, no direct
+  identifiers, restrict access to the team.
+- Rate-limit and validate any logging endpoint.
+
+## 11. DEPENDENCIES (update on any addition)
+
+- next, react, react-dom
+- DB client for study logging (e.g. @supabase/supabase-js) [PROPOSED]
+- Local ingestion tooling: ffmpeg, an HTTP client for NIM, a
+  JSON schema validator [PROPOSED]
+- Any Python ingestion dependency goes in requirements.txt; any
+  Node dependency goes in package.json.
+
+## 12. TESTING (LOCAL-FIRST)
+
+- Ingestion: run one short clip, check cue detection, JSON schema
+  validity, glossary consistency.
+- Player: seeking, caption timing/sync against the exact video
+  file, profile persistence across a full runtime, Show Original,
+  preview pane.
+- Rate limiting: confirm the queue stays under the cap and 429
+  handling works.
+- Accessibility: keyboard-only pass, contrast check, zoom.
+- Test with the real hosted video URL, including range requests.
+
+## 13. RESEARCH GROUNDING (what the papers do and don't support)
+
+Counts below were taken from earlier chat notes, not re-read from
+the papers. [UNVERIFIED] Re-check each figure in the source
+before citing it.
+
+CapTune (Huang et al., ASSETS '25, arXiv:2508.19971): the closest
+prior work. Small qualitative samples (12 DHH viewers, 7
+creators). Its evaluation used 2-8 minute clips. Reported themes
+that motivate this project: wanting persistent profiles across
+videos, preview before committing, dense grid controls hard to
+use, fast/dense captions hard to follow, richer captions wanted
+for off-screen sound, discomfort when captions feel too
+interpretive, and the same sound sometimes captioned differently
+within a video.
+
+CuCap (de Lacerda Pataca et al., ASSETS '25): about speech
+prosody/emotion styling, NOT non-speech captions. Use only its
+design philosophy (progressive disclosure, defaults with override,
+genre presets). Do not cite its numbers as evidence about
+non-speech sound.
+
+Interpretive Caption (Ubur et al., ASSETS '25): real-time speech
+emotion cues for live lectures, 8 participants, exploratory. Use
+only the on-demand disclosure UI idea. It does not validate
+anything about non-speech captions or long-form video.
+
+Open questions this project tests (no prior evidence):
+- Does a persistent profile stay consistent over 20-90 minutes?
+- Does reading fatigue compound over a full runtime?
+- Does same-sound inconsistency worsen at length; does a
+  glossary/lock per sound_key fix it?
+- Do viewers want scene-level overrides on top of a global
+  profile?
+- Does a coarse 3-5 level scale beat a fine slider?
+- Do genre-based presets reduce onboarding friction?
+
+## 14. OPEN ITEMS (nothing below is settled)
+
+- Confirm NIM model names, audio/video input support, size limits.
+- CapTune engine: reuse vs. our own prompts (license, fit).
+- Scene classification method for adaptation.
+- Grid size and sound-representation variants.
+- Study piece selection and length (Blender shorts are shorter
+  than the 20-30 min in the proposal).
+- Study protocol, sample size, instruments, ethics/consent path.
+- Archive.org seeking/hotlink test; fallback video host.
+- Render bandwidth limit; Vercel as a fallback.
+- Study data store choice and schema.
+- Omni-model 10-clip test: hosted-endpoint input format, thinking
+  on/off with audio, non-speech label accuracy.
+
+=================================================================
+ARCHITECTURE DECISIONS (append-only log — newest entry at bottom,
+never delete or rewrite prior entries)
+=================================================================
+
+(empty)
+
+=================================================================
+COPY-PASTE BLOCK FOR FUTURE PROMPTS
+=================================================================
+
+Strictly make sure that if you change any part of the code, every
+part that uses it or is connected to it is updated to stay
+compatible, and vice versa. Also check that every fix is securely
+implemented and does not introduce a vulnerability (API keys or
+secrets exposed to the frontend or easily extractable), an
+architecture violation, an accessibility regression (captions,
+contrast, keyboard use), or a performance problem. If any new
+library is used, add it to package.json (and requirements.txt for
+Python scripts). Never add a NIM/LLM call to the viewing path; all
+caption variants must stay precomputed. Only use rights-clear
+(public domain / CC) content, never pirated material. Do not
+state anything from a paper or a platform limit as fact unless it
+has been verified; mark it [UNVERIFIED] instead. If you make a key
+architecture decision, note it in architecture.txt under
+Architecture Decisions (DON'T DELETE existing entries), but only
+if it is crucial; otherwise ignore it. Architecture can change,
+but only when crucial, and then this doc must be updated and a new
+entry logged in the Architecture Decisions section.
