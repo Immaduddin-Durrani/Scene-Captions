@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-eb7fdfe4-2d95-410b-aa18-a172b8278461",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "{\"description\":\"A choir singing with a string instrument playing a melody.\"}",
+        "role": "assistant",
+        "reasoning_content": null
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792763229,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 166,
+    "completion_tokens": 16,
+    "total_tokens": 182
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 16,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 0.5901057720184326,
+      "generation_tokens_per_second": 27.11378325494539,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}

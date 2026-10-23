@@ -1,0 +1,8 @@
+{
+  "duration_seconds": 5.0,
+  "sample_rate": 16000,
+  "channels": 1,
+  "sample_width": 2,
+  "pcm_all_zero": true,
+  "wav_sha256": "82f094972da287786fe1ffaec62618c6dc27cec9d8a582219ebb195eada54dae"
+}

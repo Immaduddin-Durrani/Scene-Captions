@@ -2,6 +2,30 @@
 
 Adaptive non-speech captions for Deaf and hard-of-hearing (DHH) viewers of long-form video.
 
+## Phase 1: run the prototype
+
+Requires Node.js 22.13+, npm, unzip, and a modern browser. No API key is needed.
+
+```sh
+npm ci
+npm run setup:demo
+npm run dev
+```
+
+Open http://localhost:3000 for the working player and
+http://localhost:3000/experiment for the experimental plan.
+The licensed sample video downloads once; your team's own video can be
+opened locally with matching precomputed caption JSON. Nothing is uploaded.
+
+Deliverables and demonstration steps: [Phase 1 handoff](docs/PHASE1.md).
+Research protocol: [Experimental plan](docs/EXPERIMENTAL_PLAN.md).
+Own-video preparation: [Caption import guide](docs/CAPTION_IMPORT.md).
+The sample now includes 87 timed non-speech caption cues from the licensed
+[Demuxed caption track](https://github.com/demuxed/big-buck-captions), with
+source-anchored wording variants and cue-density adaptation. No API key is
+needed. See [caption provenance and checks](docs/CAPTION_GENERATION_STATUS.md).
+The study still needs a full caption review against your team's own video.
+
 ## Team
 - Zuhair Amirali Merchant (29021)
 - Muhammad Hamza Kashif (29022)
@@ -28,21 +52,28 @@ film, with:
 
 ## Scope
 Non-speech sound captioning for story-driven video only — not general subtitling,
-not live captioning, not speech/paralinguistic styling. We reuse the open-source
-CapTune generation engine rather than building caption generation from scratch.
+not live captioning, not speech/paralinguistic styling. The viewer uses precomputed caption variants supplied as JSON. CapTune engine reuse remains unverified; it is
+not integrated into this prototype.
 
 ## Tech Stack
 - Frontend: Next.js (React)
-- Backend: Next.js API routes, possibly proxying a Python service if CapTune's
-  engine requires it
-- Caption generation: CapTune (open-source, reused, not rebuilt)
+- API: Next.js GET/HEAD health route; no model calls or participant uploads
+- Caption data: licensed sound-caption SRT converted to validated JSON, with local video/JSON import
+- Future generation: local-only ingestion; CapTune reuse versus NIM prompts
+  remains an open decision. Generation never runs during viewing.
 
 ## Status
-Early-stage project / research proposal. Study protocol and sample size TBD.
+Working local captioned player and proposed experimental plan.
+The team will create the study video. Proposed sample size, recruitment,
+instruments and ethics require instructor approval; no participant study has run.
 
 ---
 
 ## Related Work
+
+The detailed figures below are retained proposal notes. Unless verified
+against the collected source, treat them as [UNVERIFIED]. See
+[research index](docs/RESEARCH_INDEX.md) for retrieved papers and limitations.
 
 ### CapTune — the most directly relevant paper
 The closest neighbor to this project: non-speech captioning, customization,

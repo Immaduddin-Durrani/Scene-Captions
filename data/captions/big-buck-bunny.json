@@ -1,0 +1,2180 @@
+{
+  "schema_version": 1,
+  "video_id": "big-buck-bunny",
+  "title": "Big Buck Bunny",
+  "source_url": "https://peach.blender.org/about/",
+  "license": "CC BY 3.0",
+  "attribution": "Film © 2008 Blender Foundation / peach.blender.org. Sound captions: Demuxed / big-buck-captions contributors, CC BY 3.0. Wording variants and cue-density adaptation added by SceneCaptions.",
+  "duration_seconds": 596.461678,
+  "annotation_status": "draft",
+  "generated_with": {
+    "method": "Imported licensed Demuxed sound captions with unchanged timings; locally authored source-anchored wording variants. Visual sync anchors spot-checked; not a complete listening or participant review.",
+    "prompt_version": "demuxed-anchored-v1",
+    "kind": "sourced",
+    "source_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "expressiveness": "source-anchored",
+    "scene_load_method": "cue-density",
+    "caption_source": {
+      "url": "https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt",
+      "revision": "e490383ca58f53507cfa18a64e1324f28d77c65a",
+      "license": "CC BY 3.0",
+      "author": "Demuxed / big-buck-captions contributors",
+      "sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd"
+    },
+    "quality_gate": "unverified"
+  },
+  "cues": [
+    {
+      "cue_id": "bbb-sdh-001",
+      "start_s": 2.499,
+      "end_s": 6.416,
+      "original_text": "[SERENE MUSIC]",
+      "scene_context": "Demuxed source cue 1: [SERENE MUSIC]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "serene-music",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[serene music]",
+        "2-2": "[Serene music plays]",
+        "2-3": "[A serene musical passage]",
+        "3-1": "[Music with a serene character]",
+        "3-2": "[Music plays with a serene character]",
+        "3-3": "[A musical passage with a serene character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[serene music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-002",
+      "start_s": 11.791,
+      "end_s": 13.958,
+      "original_text": "[BROOK BABBLES]\n[FLY BUZZES]",
+      "scene_context": "Demuxed source cue 2: [BROOK BABBLES] [FLY BUZZES]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "brook-babbles--fly-buzzes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[water]\n[buzzing]",
+        "1-2": "[Water]\n[Buzzing]",
+        "1-3": "[Water]\n[Buzz!]",
+        "2-1": "[babbling brook]\n[fly buzzing]",
+        "2-2": "[A brook babbles]\n[A fly buzzes]",
+        "2-3": "[A brook babbles]\n[Buzz! fly buzzing]",
+        "3-1": "[The sound of water babbling in a brook]\n[The buzzing sound of a fly]",
+        "3-2": "[The sound of water babbling in a brook.]\n[The buzzing sound of a fly.]",
+        "3-3": "[The sound of water babbling in a brook.]\n[Buzz! The buzzing sound of a fly]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[babbling brook]\n[fly buzzing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-003",
+      "start_s": 16.166,
+      "end_s": 17.666,
+      "original_text": "[BIRD TWEETS]",
+      "scene_context": "Demuxed source cue 3: [BIRD TWEETS]. Original source timing preserved. Adaptation uses 5 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bird-tweets",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[bird call]",
+        "1-2": "[Bird call]",
+        "1-3": "[Tweet!]",
+        "2-1": "[bird tweets]",
+        "2-2": "[A bird tweets]",
+        "2-3": "[Tweet! bird tweets]",
+        "3-1": "[A bird makes tweeting sounds]",
+        "3-2": "[A bird makes tweeting sounds.]",
+        "3-3": "[Tweet! A bird makes tweeting sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bird tweets]",
+        "onomatopoeic": "[Tweet — bird tweets]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-004",
+      "start_s": 17.666,
+      "end_s": 18.708,
+      "original_text": "[WINGS FLAP]",
+      "scene_context": "Demuxed source cue 4: [WINGS FLAP]. Original source timing preserved. Adaptation uses 7 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "wings-flap",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[flapping]",
+        "1-2": "[Flapping]",
+        "1-3": "[Flapping]",
+        "2-1": "[wings flapping]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[The sound of wings flapping]",
+        "3-2": "[The sound of wings flapping.]",
+        "3-3": "[The sound of wings flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "start_s": 19.833,
+      "end_s": 20.374,
+      "original_text": "[BIRD TWEETS]\n[WINGS FLAP]",
+      "scene_context": "Demuxed source cue 5: [BIRD TWEETS] [WINGS FLAP]. Original source timing preserved. Adaptation uses 6 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bird-tweets--wings-flap",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[bird call]\n[flapping]",
+        "1-2": "[Bird call]\n[Flapping]",
+        "1-3": "[Tweet!]\n[Flapping]",
+        "2-1": "[bird tweets]\n[wings flapping]",
+        "2-2": "[A bird tweets]\n[Wings flap]",
+        "2-3": "[Tweet! bird tweets]\n[Wings flap]",
+        "3-1": "[A bird makes tweeting sounds]\n[The sound of wings flapping]",
+        "3-2": "[A bird makes tweeting sounds.]\n[The sound of wings flapping.]",
+        "3-3": "[Tweet! A bird makes tweeting sounds]\n[The sound of wings flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bird tweets]\n[wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "start_s": 20.374,
+      "end_s": 21.041,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 6: [THUD]. Original source timing preserved. Adaptation uses 6 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "start_s": 21.374,
+      "end_s": 22.249,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 7: [THUD]. Original source timing preserved. Adaptation uses 7 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "start_s": 22.249,
+      "end_s": 23.083,
+      "original_text": "[SQUIRREL LAUGHS]",
+      "scene_context": "Demuxed source cue 8: [SQUIRREL LAUGHS]. Original source timing preserved. Adaptation uses 7 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-laughs",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[laughter]",
+        "1-2": "[Laughter]",
+        "1-3": "[Laughter]",
+        "2-1": "[squirrel laughing]",
+        "2-2": "[A squirrel laughs]",
+        "2-3": "[A squirrel laughs]",
+        "3-1": "[The sound of a squirrel laughing]",
+        "3-2": "[The sound of a squirrel laughing.]",
+        "3-3": "[The sound of a squirrel laughing.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel laughing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-009",
+      "start_s": 26.249,
+      "end_s": 27.541,
+      "original_text": "[SNORES]",
+      "scene_context": "Demuxed source cue 9: [SNORES]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "snores",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snore!]",
+        "2-1": "[snoring]",
+        "2-2": "[Snoring is heard]",
+        "2-3": "[Snore! snoring]",
+        "3-1": "[The sound of snoring]",
+        "3-2": "[The sound of snoring.]",
+        "3-3": "[Snore! The sound of snoring]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[snoring]",
+        "onomatopoeic": "[Snore — snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-010",
+      "start_s": 29.416,
+      "end_s": 30.708,
+      "original_text": "[SNORES]",
+      "scene_context": "Demuxed source cue 10: [SNORES]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snore!]",
+        "2-1": "[snoring]",
+        "2-2": "[Snoring is heard]",
+        "2-3": "[Snore! snoring]",
+        "3-1": "[The sound of snoring]",
+        "3-2": "[The sound of snoring.]",
+        "3-3": "[Snore! The sound of snoring]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[snoring]",
+        "onomatopoeic": "[Snore — snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-011",
+      "start_s": 32.749,
+      "end_s": 34.041,
+      "original_text": "[BUNNY SNORES]",
+      "scene_context": "Demuxed source cue 11: [BUNNY SNORES]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snore!]",
+        "2-1": "[bunny snoring]",
+        "2-2": "[The bunny snores]",
+        "2-3": "[Snore! bunny snoring]",
+        "3-1": "[The sound of the bunny snoring]",
+        "3-2": "[The sound of the bunny snoring.]",
+        "3-3": "[Snore! The sound of the bunny snoring]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny snoring]",
+        "onomatopoeic": "[Snore — bunny snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-012",
+      "start_s": 35.916,
+      "end_s": 37.249,
+      "original_text": "[BUNNY SNORES]",
+      "scene_context": "Demuxed source cue 12: [BUNNY SNORES]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snore!]",
+        "2-1": "[bunny snoring]",
+        "2-2": "[The bunny snores]",
+        "2-3": "[Snore! bunny snoring]",
+        "3-1": "[The sound of the bunny snoring]",
+        "3-2": "[The sound of the bunny snoring.]",
+        "3-3": "[Snore! The sound of the bunny snoring]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny snoring]",
+        "onomatopoeic": "[Snore — bunny snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "start_s": 45.333,
+      "end_s": 46.541,
+      "original_text": "[BUNNY SNIFFS]",
+      "scene_context": "Demuxed source cue 13: [BUNNY SNIFFS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-sniffs",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[sniffing]",
+        "1-2": "[Sniffing]",
+        "1-3": "[Sniff!]",
+        "2-1": "[bunny sniffing]",
+        "2-2": "[The bunny sniffs]",
+        "2-3": "[Sniff! bunny sniffing]",
+        "3-1": "[The sound of the bunny sniffing]",
+        "3-2": "[The sound of the bunny sniffing.]",
+        "3-3": "[Sniff! The sound of the bunny sniffing]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny sniffing]",
+        "onomatopoeic": "[Sniff — bunny sniffing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-014",
+      "start_s": 46.541,
+      "end_s": 47.874,
+      "original_text": "[EARS POP]",
+      "scene_context": "Demuxed source cue 14: [EARS POP]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "ears-pop",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[popping]",
+        "1-2": "[Popping]",
+        "1-3": "[Pop!]",
+        "2-1": "[ears popping]",
+        "2-2": "[Ears pop]",
+        "2-3": "[Pop! ears popping]",
+        "3-1": "[The sound of ears popping]",
+        "3-2": "[The sound of ears popping.]",
+        "3-3": "[Pop! The sound of ears popping]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[ears popping]",
+        "onomatopoeic": "[Pop — ears popping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-015",
+      "start_s": 50.083,
+      "end_s": 51.958,
+      "original_text": "[BUNNY YAWNS]",
+      "scene_context": "Demuxed source cue 15: [BUNNY YAWNS]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-yawns",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[yawning]",
+        "1-2": "[Yawning]",
+        "1-3": "[Yawn!]",
+        "2-1": "[bunny yawning]",
+        "2-2": "[The bunny yawns]",
+        "2-3": "[Yawn! bunny yawning]",
+        "3-1": "[The sound of the bunny yawning]",
+        "3-2": "[The sound of the bunny yawning.]",
+        "3-3": "[Yawn! The sound of the bunny yawning]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny yawning]",
+        "onomatopoeic": "[Yawn — bunny yawning]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "start_s": 52.499,
+      "end_s": 53.541,
+      "original_text": "[BUNNY CRACKS NECK]",
+      "scene_context": "Demuxed source cue 16: [BUNNY CRACKS NECK]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-cracks-neck",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[cracking]",
+        "1-2": "[Cracking]",
+        "1-3": "[Crack!]",
+        "2-1": "[bunny's neck cracking]",
+        "2-2": "[The bunny cracks its neck]",
+        "2-3": "[Crack! bunny's neck cracking]",
+        "3-1": "[The sound of the bunny cracking its neck]",
+        "3-2": "[The sound of the bunny cracking its neck.]",
+        "3-3": "[Crack! The sound of the bunny cracking its neck]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny's neck cracking]",
+        "onomatopoeic": "[Crack — bunny's neck cracking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-017",
+      "start_s": 68.416,
+      "end_s": 69.958,
+      "original_text": "[BUNNY SNIFFS DEEPLY]",
+      "scene_context": "Demuxed source cue 17: [BUNNY SNIFFS DEEPLY]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-sniffs-deeply",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[sniffing]",
+        "1-2": "[Sniffing]",
+        "1-3": "[Sniff!]",
+        "2-1": "[bunny sniffing]",
+        "2-2": "[The bunny sniffs]",
+        "2-3": "[Sniff! bunny sniffing]",
+        "3-1": "[The bunny takes a deep sniff]",
+        "3-2": "[The bunny takes a deep sniff.]",
+        "3-3": "[Sniff! The bunny takes a deep sniff]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny sniffing]",
+        "onomatopoeic": "[Sniff — bunny sniffing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-018",
+      "start_s": 73.499,
+      "end_s": 75.166,
+      "original_text": "[BUNNY SNIFFS DEEPLY]",
+      "scene_context": "Demuxed source cue 18: [BUNNY SNIFFS DEEPLY]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-sniffs-deeply",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[sniffing]",
+        "1-2": "[Sniffing]",
+        "1-3": "[Sniff!]",
+        "2-1": "[bunny sniffing]",
+        "2-2": "[The bunny sniffs]",
+        "2-3": "[Sniff! bunny sniffing]",
+        "3-1": "[The bunny takes a deep sniff]",
+        "3-2": "[The bunny takes a deep sniff.]",
+        "3-3": "[Sniff! The bunny takes a deep sniff]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny sniffing]",
+        "onomatopoeic": "[Sniff — bunny sniffing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-019",
+      "start_s": 75.166,
+      "end_s": 76.416,
+      "original_text": "[BUNNY SIGHS]",
+      "scene_context": "Demuxed source cue 19: [BUNNY SIGHS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-sighs",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[sighing]",
+        "1-2": "[Sighing]",
+        "1-3": "[Sigh!]",
+        "2-1": "[bunny sighing]",
+        "2-2": "[The bunny sighs]",
+        "2-3": "[Sigh! bunny sighing]",
+        "3-1": "[The sound of the bunny sighing]",
+        "3-2": "[The sound of the bunny sighing.]",
+        "3-3": "[Sigh! The sound of the bunny sighing]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny sighing]",
+        "onomatopoeic": "[Sigh — bunny sighing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-020",
+      "start_s": 83.624,
+      "end_s": 84.999,
+      "original_text": "[APPLE THUDS]",
+      "scene_context": "Demuxed source cue 20: [APPLE THUDS]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "apple-thuds",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[apple thud]",
+        "2-2": "[An apple thuds]",
+        "2-3": "[Thud! apple thud]",
+        "3-1": "[An apple makes a thudding sound]",
+        "3-2": "[An apple makes a thudding sound.]",
+        "3-3": "[Thud! An apple makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[apple thud]",
+        "onomatopoeic": "[Thud — apple thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "start_s": 90.041,
+      "end_s": 91.083,
+      "original_text": "[TREE RUSTLES SUSPICIOUSLY]",
+      "scene_context": "Demuxed source cue 21: [TREE RUSTLES SUSPICIOUSLY]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "tree-rustles-suspiciously",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustle!]",
+        "2-1": "[tree rustling]",
+        "2-2": "[A tree rustles]",
+        "2-3": "[Rustle! tree rustling]",
+        "3-1": "[The sound of a tree rustling]",
+        "3-2": "[The sound of a tree rustling.]",
+        "3-3": "[Rustle! The sound of a tree rustling]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[tree rustling]",
+        "onomatopoeic": "[Rustle — tree rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "start_s": 94.499,
+      "end_s": 95.541,
+      "original_text": "[APPLE CRUNCHES]",
+      "scene_context": "Demuxed source cue 22: [APPLE CRUNCHES]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "apple-crunches",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[crunching]",
+        "1-2": "[Crunching]",
+        "1-3": "[Crunch!]",
+        "2-1": "[apple crunch]",
+        "2-2": "[An apple crunches]",
+        "2-3": "[Crunch! apple crunch]",
+        "3-1": "[The sound of an apple crunching]",
+        "3-2": "[The sound of an apple crunching.]",
+        "3-3": "[Crunch! The sound of an apple crunching]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[apple crunch]",
+        "onomatopoeic": "[Crunch — apple crunch]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "start_s": 101.958,
+      "end_s": 102.999,
+      "original_text": "[LEAVES RUSTLE]",
+      "scene_context": "Demuxed source cue 23: [LEAVES RUSTLE]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "leaves-rustle",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustle!]",
+        "2-1": "[leaves rustling]",
+        "2-2": "[Leaves rustle]",
+        "2-3": "[Rustle! leaves rustling]",
+        "3-1": "[The sound of leaves rustling]",
+        "3-2": "[The sound of leaves rustling.]",
+        "3-3": "[Rustle! The sound of leaves rustling]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[leaves rustling]",
+        "onomatopoeic": "[Rustle — leaves rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "start_s": 106.541,
+      "end_s": 107.583,
+      "original_text": "[APPLE CORE THUDS]",
+      "scene_context": "Demuxed source cue 24: [APPLE CORE THUDS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "apple-core-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[apple core thud]",
+        "2-2": "[An apple core thuds]",
+        "2-3": "[Thud! apple core thud]",
+        "3-1": "[An apple core makes a thudding sound]",
+        "3-2": "[An apple core makes a thudding sound.]",
+        "3-3": "[Thud! An apple core makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[apple core thud]",
+        "onomatopoeic": "[Thud — apple core thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "start_s": 130.874,
+      "end_s": 131.916,
+      "original_text": "[SQUIRREL SCUTTLES]",
+      "scene_context": "Demuxed source cue 25: [SQUIRREL SCUTTLES]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-scuttles",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[scuttling]",
+        "1-2": "[Scuttling]",
+        "1-3": "[Scuttling]",
+        "2-1": "[squirrel scuttling]",
+        "2-2": "[A squirrel scuttles]",
+        "2-3": "[A squirrel scuttles]",
+        "3-1": "[The sound of a squirrel scuttling]",
+        "3-2": "[The sound of a squirrel scuttling.]",
+        "3-3": "[The sound of a squirrel scuttling.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel scuttling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "start_s": 133.083,
+      "end_s": 134.249,
+      "original_text": "[BRANCHES RUSTLE]",
+      "scene_context": "Demuxed source cue 26: [BRANCHES RUSTLE]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "branches-rustle",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustle!]",
+        "2-1": "[branches rustling]",
+        "2-2": "[Branches rustle]",
+        "2-3": "[Rustle! branches rustling]",
+        "3-1": "[The sound of branches rustling]",
+        "3-2": "[The sound of branches rustling.]",
+        "3-3": "[Rustle! The sound of branches rustling]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[branches rustling]",
+        "onomatopoeic": "[Rustle — branches rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "start_s": 139.499,
+      "end_s": 140.374,
+      "original_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Demuxed source cue 27: [SQUIRREL SQUEAKS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[The sound of a squirrel squeaking]",
+        "3-2": "[The sound of a squirrel squeaking.]",
+        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-028",
+      "start_s": 140.374,
+      "end_s": 141.416,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 28: [THUD]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-029",
+      "start_s": 149.208,
+      "end_s": 152.083,
+      "original_text": "[NUT CRUNCHING]",
+      "scene_context": "Demuxed source cue 29: [NUT CRUNCHING]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nut-crunching",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[crunching]",
+        "1-2": "[Crunching]",
+        "1-3": "[Crunch!]",
+        "2-1": "[nut crunching]",
+        "2-2": "[A nut crunches]",
+        "2-3": "[Crunch! nut crunching]",
+        "3-1": "[The sound of a nut crunching]",
+        "3-2": "[The sound of a nut crunching.]",
+        "3-3": "[Crunch! The sound of a nut crunching]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nut crunching]",
+        "onomatopoeic": "[Crunch — nut crunching]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "start_s": 152.916,
+      "end_s": 153.749,
+      "original_text": "[SQUIRREL SQUEAKS ANGRILY]",
+      "scene_context": "Demuxed source cue 30: [SQUIRREL SQUEAKS ANGRILY]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks-angrily",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[A squirrel squeaks angrily]",
+        "3-2": "[A squirrel squeaks angrily.]",
+        "3-3": "[Squeak! A squirrel squeaks angrily]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "start_s": 153.749,
+      "end_s": 154.749,
+      "original_text": "[NUT THUDS]",
+      "scene_context": "Demuxed source cue 31: [NUT THUDS]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nut-thuds",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[nut thud]",
+        "2-2": "[A nut thuds]",
+        "2-3": "[Thud! nut thud]",
+        "3-1": "[A nut makes a thudding sound]",
+        "3-2": "[A nut makes a thudding sound.]",
+        "3-3": "[Thud! A nut makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nut thud]",
+        "onomatopoeic": "[Thud — nut thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "start_s": 158.166,
+      "end_s": 159.166,
+      "original_text": "[NUT THUDS]",
+      "scene_context": "Demuxed source cue 32: [NUT THUDS]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nut-thuds",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[nut thud]",
+        "2-2": "[A nut thuds]",
+        "2-3": "[Thud! nut thud]",
+        "3-1": "[A nut makes a thudding sound]",
+        "3-2": "[A nut makes a thudding sound.]",
+        "3-3": "[Thud! A nut makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nut thud]",
+        "onomatopoeic": "[Thud — nut thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-033",
+      "start_s": 160.999,
+      "end_s": 162.708,
+      "original_text": "[SQUIRRELS LAUGHING]",
+      "scene_context": "Demuxed source cue 33: [SQUIRRELS LAUGHING]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrels-laughing",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[laughter]",
+        "1-2": "[Laughter]",
+        "1-3": "[Laughter]",
+        "2-1": "[squirrels laughing]",
+        "2-2": "[Squirrels laugh]",
+        "2-3": "[Squirrels laugh]",
+        "3-1": "[The sound of squirrels laughing]",
+        "3-2": "[The sound of squirrels laughing.]",
+        "3-3": "[The sound of squirrels laughing.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrels laughing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "start_s": 164.166,
+      "end_s": 165.166,
+      "original_text": "[SQUIRREL SNAPS FINGERS]",
+      "scene_context": "Demuxed source cue 34: [SQUIRREL SNAPS FINGERS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-snaps-fingers",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[squirrel's fingers snapping]",
+        "2-2": "[A squirrel snaps its fingers]",
+        "2-3": "[Snap! squirrel's fingers snapping]",
+        "3-1": "[The sound of a squirrel snapping its fingers]",
+        "3-2": "[The sound of a squirrel snapping its fingers.]",
+        "3-3": "[Snap! The sound of a squirrel snapping its fingers]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel's fingers snapping]",
+        "onomatopoeic": "[Snap — squirrel's fingers snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-035",
+      "start_s": 169.374,
+      "end_s": 170.916,
+      "original_text": "[NUT WHOOSHES]",
+      "scene_context": "Demuxed source cue 35: [NUT WHOOSHES]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nut-whooshes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[whooshing]",
+        "1-2": "[Whooshing]",
+        "1-3": "[Whoosh!]",
+        "2-1": "[nut whooshing]",
+        "2-2": "[A nut whooshes]",
+        "2-3": "[Whoosh! nut whooshing]",
+        "3-1": "[A nut makes a whooshing sound]",
+        "3-2": "[A nut makes a whooshing sound.]",
+        "3-3": "[Whoosh! A nut makes a whooshing sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nut whooshing]",
+        "onomatopoeic": "[Whoosh — nut whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-036",
+      "start_s": 174.458,
+      "end_s": 176.124,
+      "original_text": "[NUTS THUDDING]",
+      "scene_context": "Demuxed source cue 36: [NUTS THUDDING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nuts-thudding",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impacts]",
+        "1-2": "[Impacts]",
+        "1-3": "[Thud!]",
+        "2-1": "[nuts thudding]",
+        "2-2": "[Nuts thud]",
+        "2-3": "[Thud! nuts thudding]",
+        "3-1": "[Nuts make thudding sounds]",
+        "3-2": "[Nuts make thudding sounds.]",
+        "3-3": "[Thud! Nuts make thudding sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nuts thudding]",
+        "onomatopoeic": "[Thud — nuts thudding]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-037",
+      "start_s": 176.124,
+      "end_s": 178.083,
+      "original_text": "[NUTS WHOOSHING]",
+      "scene_context": "Demuxed source cue 37: [NUTS WHOOSHING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nuts-whooshing",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[whooshing]",
+        "1-2": "[Whooshing]",
+        "1-3": "[Whoosh!]",
+        "2-1": "[nuts whooshing]",
+        "2-2": "[Nuts whoosh]",
+        "2-3": "[Whoosh! nuts whooshing]",
+        "3-1": "[Nuts make whooshing sounds]",
+        "3-2": "[Nuts make whooshing sounds.]",
+        "3-3": "[Whoosh! Nuts make whooshing sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nuts whooshing]",
+        "onomatopoeic": "[Whoosh — nuts whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-038",
+      "start_s": 178.083,
+      "end_s": 180.583,
+      "original_text": "[NUTS THUDDING]",
+      "scene_context": "Demuxed source cue 38: [NUTS THUDDING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nuts-thudding",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impacts]",
+        "1-2": "[Impacts]",
+        "1-3": "[Thud!]",
+        "2-1": "[nuts thudding]",
+        "2-2": "[Nuts thud]",
+        "2-3": "[Thud! nuts thudding]",
+        "3-1": "[Nuts make thudding sounds]",
+        "3-2": "[Nuts make thudding sounds.]",
+        "3-3": "[Thud! Nuts make thudding sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nuts thudding]",
+        "onomatopoeic": "[Thud — nuts thudding]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-039",
+      "start_s": 180.583,
+      "end_s": 184.208,
+      "original_text": "[NUTS WHOOSHING]",
+      "scene_context": "Demuxed source cue 39: [NUTS WHOOSHING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nuts-whooshing",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[whooshing]",
+        "1-2": "[Whooshing]",
+        "1-3": "[Whoosh!]",
+        "2-1": "[nuts whooshing]",
+        "2-2": "[Nuts whoosh]",
+        "2-3": "[Whoosh! nuts whooshing]",
+        "3-1": "[Nuts make whooshing sounds]",
+        "3-2": "[Nuts make whooshing sounds.]",
+        "3-3": "[Whoosh! Nuts make whooshing sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nuts whooshing]",
+        "onomatopoeic": "[Whoosh — nuts whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-040",
+      "start_s": 186.541,
+      "end_s": 189.083,
+      "original_text": "[SUSPENSFUL MUSIC]",
+      "scene_context": "Demuxed source cue 40: [SUSPENSFUL MUSIC]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "suspensful-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[suspenseful music]",
+        "2-2": "[Suspenseful music plays]",
+        "2-3": "[A suspenseful musical passage]",
+        "3-1": "[Music with a suspenseful character]",
+        "3-2": "[Music plays with a suspenseful character]",
+        "3-3": "[A musical passage with a suspenseful character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[suspenseful music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "start_s": 195.833,
+      "end_s": 196.833,
+      "original_text": "[BUTTERFLY SPLATS]",
+      "scene_context": "Demuxed source cue 41: [BUTTERFLY SPLATS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "butterfly-splats",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[splat]",
+        "1-2": "[Splat]",
+        "1-3": "[Splat!]",
+        "2-1": "[butterfly splat]",
+        "2-2": "[A butterfly splats]",
+        "2-3": "[Splat! butterfly splat]",
+        "3-1": "[A butterfly makes a splatting sound]",
+        "3-2": "[A butterfly makes a splatting sound.]",
+        "3-3": "[Splat! A butterfly makes a splatting sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[butterfly splat]",
+        "onomatopoeic": "[Splat — butterfly splat]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-042",
+      "start_s": 197.083,
+      "end_s": 199.416,
+      "original_text": "[DRAMATIC MUSIC]",
+      "scene_context": "Demuxed source cue 42: [DRAMATIC MUSIC]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "dramatic-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[dramatic music]",
+        "2-2": "[Dramatic music plays]",
+        "2-3": "[A dramatic musical passage]",
+        "3-1": "[Music with a dramatic character]",
+        "3-2": "[Music plays with a dramatic character]",
+        "3-3": "[A musical passage with a dramatic character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[dramatic music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-043",
+      "start_s": 202.708,
+      "end_s": 204.208,
+      "original_text": "[SQUIRREL CLAPS]",
+      "scene_context": "Demuxed source cue 43: [SQUIRREL CLAPS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-claps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[clapping]",
+        "1-2": "[Clapping]",
+        "1-3": "[Clap!]",
+        "2-1": "[squirrel clapping]",
+        "2-2": "[A squirrel claps]",
+        "2-3": "[Clap! squirrel clapping]",
+        "3-1": "[The sound of a squirrel clapping]",
+        "3-2": "[The sound of a squirrel clapping.]",
+        "3-3": "[Clap! The sound of a squirrel clapping]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel clapping]",
+        "onomatopoeic": "[Clap — squirrel clapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-044",
+      "start_s": 204.999,
+      "end_s": 206.166,
+      "original_text": "[BUNNY GULPS]",
+      "scene_context": "Demuxed source cue 44: [BUNNY GULPS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bunny-gulps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[gulping]",
+        "1-2": "[Gulping]",
+        "1-3": "[Gulp!]",
+        "2-1": "[bunny gulping]",
+        "2-2": "[The bunny gulps]",
+        "2-3": "[Gulp! bunny gulping]",
+        "3-1": "[The sound of the bunny gulping]",
+        "3-2": "[The sound of the bunny gulping.]",
+        "3-3": "[Gulp! The sound of the bunny gulping]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bunny gulping]",
+        "onomatopoeic": "[Gulp — bunny gulping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-045",
+      "start_s": 209.124,
+      "end_s": 210.249,
+      "original_text": "[WINGS FLAP]",
+      "scene_context": "Demuxed source cue 45: [WINGS FLAP]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "wings-flap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[flapping]",
+        "1-2": "[Flapping]",
+        "1-3": "[Flapping]",
+        "2-1": "[wings flapping]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[The sound of wings flapping]",
+        "3-2": "[The sound of wings flapping.]",
+        "3-3": "[The sound of wings flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-046",
+      "start_s": 214.166,
+      "end_s": 215.166,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 46: [THUD]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-047",
+      "start_s": 218.499,
+      "end_s": 220.791,
+      "original_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Demuxed source cue 47: [SQUIRREL SQUEAKS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[The sound of a squirrel squeaking]",
+        "3-2": "[The sound of a squirrel squeaking.]",
+        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "start_s": 225.457,
+      "end_s": 226.457,
+      "original_text": "[CONKERS WHOOSH]",
+      "scene_context": "Demuxed source cue 48: [CONKERS WHOOSH]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "conkers-whoosh",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[whooshing]",
+        "1-2": "[Whooshing]",
+        "1-3": "[Whoosh!]",
+        "2-1": "[conkers whooshing]",
+        "2-2": "[Conkers whoosh]",
+        "2-3": "[Whoosh! conkers whooshing]",
+        "3-1": "[Conkers make whooshing sounds]",
+        "3-2": "[Conkers make whooshing sounds.]",
+        "3-3": "[Whoosh! Conkers make whooshing sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[conkers whooshing]",
+        "onomatopoeic": "[Whoosh — conkers whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "start_s": 226.707,
+      "end_s": 227.707,
+      "original_text": "[CONKERS THUD]",
+      "scene_context": "Demuxed source cue 49: [CONKERS THUD]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "conkers-thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[conkers thudding]",
+        "2-2": "[Conkers thud]",
+        "2-3": "[Thud! conkers thudding]",
+        "3-1": "[Conkers make thudding sounds]",
+        "3-2": "[Conkers make thudding sounds.]",
+        "3-3": "[Thud! Conkers make thudding sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[conkers thudding]",
+        "onomatopoeic": "[Thud — conkers thudding]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-050",
+      "start_s": 254.582,
+      "end_s": 258.582,
+      "original_text": "[MOTIVATIONAL MUSIC]",
+      "scene_context": "Demuxed source cue 50: [MOTIVATIONAL MUSIC]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "motivational-music",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[motivational music]",
+        "2-2": "[Motivational music plays]",
+        "2-3": "[A motivational musical passage]",
+        "3-1": "[Music with a motivational character]",
+        "3-2": "[Music plays with a motivational character]",
+        "3-3": "[A musical passage with a motivational character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[motivational music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-051",
+      "start_s": 270.207,
+      "end_s": 274.291,
+      "original_text": "[JOVIAL MUSIC]",
+      "scene_context": "Demuxed source cue 51: [JOVIAL MUSIC]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "jovial-music",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[jovial music]",
+        "2-2": "[Jovial music plays]",
+        "2-3": "[A jovial musical passage]",
+        "3-1": "[Music with a jovial character]",
+        "3-2": "[Music plays with a jovial character]",
+        "3-3": "[A musical passage with a jovial character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[jovial music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-052",
+      "start_s": 276.582,
+      "end_s": 280.666,
+      "original_text": "[MILITARY MUSIC]",
+      "scene_context": "Demuxed source cue 52: [MILITARY MUSIC]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "military-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[military music]",
+        "2-2": "[Military music plays]",
+        "2-3": "[A military musical passage]",
+        "3-1": "[Music with a military character]",
+        "3-2": "[Music plays with a military character]",
+        "3-3": "[A musical passage with a military character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[military music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-053",
+      "start_s": 285.332,
+      "end_s": 289.416,
+      "original_text": "[INQUISITIVE MUSIC]",
+      "scene_context": "Demuxed source cue 53: [INQUISITIVE MUSIC]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "inquisitive-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[inquisitive music]",
+        "2-2": "[Inquisitive music plays]",
+        "2-3": "[An inquisitive musical passage]",
+        "3-1": "[Music with a inquisitive character]",
+        "3-2": "[Music plays with a inquisitive character]",
+        "3-3": "[A musical passage with a inquisitive character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[inquisitive music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-054",
+      "start_s": 294.541,
+      "end_s": 297.082,
+      "original_text": "[MUSIC CRESCENDOS]",
+      "scene_context": "Demuxed source cue 54: [MUSIC CRESCENDOS]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "music-crescendos",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music]",
+        "1-3": "[Music]",
+        "2-1": "[music crescendo]",
+        "2-2": "[Music builds]",
+        "2-3": "[Music builds]",
+        "3-1": "[Music grows in intensity]",
+        "3-2": "[Music grows in intensity.]",
+        "3-3": "[Music grows in intensity.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[music crescendo]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-055",
+      "start_s": 302.207,
+      "end_s": 304.957,
+      "original_text": "[GRASS RUSTLING]",
+      "scene_context": "Demuxed source cue 55: [GRASS RUSTLING]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "grass-rustling",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustle!]",
+        "2-1": "[grass rustling]",
+        "2-2": "[Grass rustles]",
+        "2-3": "[Rustle! grass rustling]",
+        "3-1": "[The sound of grass rustling]",
+        "3-2": "[The sound of grass rustling.]",
+        "3-3": "[Rustle! The sound of grass rustling]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[grass rustling]",
+        "onomatopoeic": "[Rustle — grass rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "start_s": 321.374,
+      "end_s": 322.207,
+      "original_text": "[BOW STRING PINGS]",
+      "scene_context": "Demuxed source cue 56: [BOW STRING PINGS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bow-string-pings",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[ping]",
+        "1-2": "[Ping]",
+        "1-3": "[Ping!]",
+        "2-1": "[bow string ping]",
+        "2-2": "[A bow string pings]",
+        "2-3": "[Ping! bow string ping]",
+        "3-1": "[A bow string makes a pinging sound]",
+        "3-2": "[A bow string makes a pinging sound.]",
+        "3-3": "[Ping! A bow string makes a pinging sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bow string ping]",
+        "onomatopoeic": "[Ping — bow string ping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "start_s": 322.624,
+      "end_s": 323.457,
+      "original_text": "[VINE SNAPS]",
+      "scene_context": "Demuxed source cue 57: [VINE SNAPS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "vine-snaps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[vine snapping]",
+        "2-2": "[A vine snaps]",
+        "2-3": "[Snap! vine snapping]",
+        "3-1": "[A vine makes a snapping sound]",
+        "3-2": "[A vine makes a snapping sound.]",
+        "3-3": "[Snap! A vine makes a snapping sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[vine snapping]",
+        "onomatopoeic": "[Snap — vine snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-058",
+      "start_s": 325.499,
+      "end_s": 328.416,
+      "original_text": "[SQUIRRELS SNIFFING]",
+      "scene_context": "Demuxed source cue 58: [SQUIRRELS SNIFFING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrels-sniffing",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[sniffing]",
+        "1-2": "[Sniffing]",
+        "1-3": "[Sniff!]",
+        "2-1": "[squirrels sniffing]",
+        "2-2": "[Squirrels sniff]",
+        "2-3": "[Sniff! squirrels sniffing]",
+        "3-1": "[The sound of squirrels sniffing]",
+        "3-2": "[The sound of squirrels sniffing.]",
+        "3-3": "[Sniff! The sound of squirrels sniffing]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrels sniffing]",
+        "onomatopoeic": "[Sniff — squirrels sniffing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "start_s": 329.624,
+      "end_s": 330.832,
+      "original_text": "[SQUIRREL SQUEAKS ORDERS]",
+      "scene_context": "Demuxed source cue 59: [SQUIRREL SQUEAKS ORDERS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks-orders",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[A squirrel squeaks orders]",
+        "3-2": "[A squirrel squeaks orders.]",
+        "3-3": "[Squeak! A squirrel squeaks orders]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-060",
+      "start_s": 332.624,
+      "end_s": 335.082,
+      "original_text": "[ROPES CREAK]",
+      "scene_context": "Demuxed source cue 60: [ROPES CREAK]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "ropes-creak",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[creaking]",
+        "1-2": "[Creaking]",
+        "1-3": "[Creak!]",
+        "2-1": "[ropes creaking]",
+        "2-2": "[Ropes creak]",
+        "2-3": "[Creak! ropes creaking]",
+        "3-1": "[The sound of ropes creaking]",
+        "3-2": "[The sound of ropes creaking.]",
+        "3-3": "[Creak! The sound of ropes creaking]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[ropes creaking]",
+        "onomatopoeic": "[Creak — ropes creaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "start_s": 337.124,
+      "end_s": 338.499,
+      "original_text": "[THUD]\n[SQUIRREL SQUEAKS IN PAIN]",
+      "scene_context": "Demuxed source cue 61: [THUD] [SQUIRREL SQUEAKS IN PAIN]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud--squirrel-squeaks-in-pain",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]\n[squeaking]",
+        "1-2": "[Impact]\n[Squeaking]",
+        "1-3": "[Thud!]\n[Squeak!]",
+        "2-1": "[thud]\n[squirrel squeaking]",
+        "2-2": "[A thud is heard]\n[A squirrel squeaks]",
+        "2-3": "[Thud! thud]\n[Squeak! squirrel squeaking]",
+        "3-1": "[The sound of a thud]\n[A squirrel squeaks in pain]",
+        "3-2": "[The sound of a thud.]\n[A squirrel squeaks in pain.]",
+        "3-3": "[Thud! The sound of a thud]\n[Squeak! A squirrel squeaks in pain]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]\n[squirrel squeaking]",
+        "onomatopoeic": "[Thud — thud]\n[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-062",
+      "start_s": 338.499,
+      "end_s": 339.916,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 62: [THUD]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "start_s": 341.582,
+      "end_s": 342.541,
+      "original_text": "[NUT CRUNCHES]",
+      "scene_context": "Demuxed source cue 63: [NUT CRUNCHES]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "nut-crunches",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[crunching]",
+        "1-2": "[Crunching]",
+        "1-3": "[Crunch!]",
+        "2-1": "[nut crunching]",
+        "2-2": "[A nut crunches]",
+        "2-3": "[Crunch! nut crunching]",
+        "3-1": "[The sound of a nut crunching]",
+        "3-2": "[The sound of a nut crunching.]",
+        "3-3": "[Crunch! The sound of a nut crunching]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[nut crunching]",
+        "onomatopoeic": "[Crunch — nut crunching]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-064",
+      "start_s": 346.374,
+      "end_s": 347.374,
+      "original_text": "[ROCK CRASHES]",
+      "scene_context": "Demuxed source cue 64: [ROCK CRASHES]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "rock-crashes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[crashing]",
+        "1-2": "[Crashing]",
+        "1-3": "[Crash!]",
+        "2-1": "[rock crash]",
+        "2-2": "[A rock crashes]",
+        "2-3": "[Crash! rock crash]",
+        "3-1": "[A rock makes a crashing sound]",
+        "3-2": "[A rock makes a crashing sound.]",
+        "3-3": "[Crash! A rock makes a crashing sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[rock crash]",
+        "onomatopoeic": "[Crash — rock crash]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "start_s": 351.332,
+      "end_s": 352.332,
+      "original_text": "[LOG CRUNCHES]",
+      "scene_context": "Demuxed source cue 65: [LOG CRUNCHES]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "log-crunches",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[crunching]",
+        "1-2": "[Crunching]",
+        "1-3": "[Crunch!]",
+        "2-1": "[log crunching]",
+        "2-2": "[A log crunches]",
+        "2-3": "[Crunch! log crunching]",
+        "3-1": "[A log makes a crunching sound]",
+        "3-2": "[A log makes a crunching sound.]",
+        "3-3": "[Crunch! A log makes a crunching sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[log crunching]",
+        "onomatopoeic": "[Crunch — log crunching]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-066",
+      "start_s": 353.332,
+      "end_s": 354.332,
+      "original_text": "[LOG THUDS]",
+      "scene_context": "Demuxed source cue 66: [LOG THUDS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "log-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[log thud]",
+        "2-2": "[A log thuds]",
+        "2-3": "[Thud! log thud]",
+        "3-1": "[A log makes a thudding sound]",
+        "3-2": "[A log makes a thudding sound.]",
+        "3-3": "[Thud! A log makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[log thud]",
+        "onomatopoeic": "[Thud — log thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-067",
+      "start_s": 360.874,
+      "end_s": 361.874,
+      "original_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Demuxed source cue 67: [SQUIRREL SQUEAKS]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[The sound of a squirrel squeaking]",
+        "3-2": "[The sound of a squirrel squeaking.]",
+        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-068",
+      "start_s": 371.957,
+      "end_s": 372.874,
+      "original_text": "[TRAP PINGS]",
+      "scene_context": "Demuxed source cue 68: [TRAP PINGS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "trap-pings",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[ping]",
+        "1-2": "[Ping]",
+        "1-3": "[Ping!]",
+        "2-1": "[trap ping]",
+        "2-2": "[A trap pings]",
+        "2-3": "[Ping! trap ping]",
+        "3-1": "[A trap makes a pinging sound]",
+        "3-2": "[A trap makes a pinging sound.]",
+        "3-3": "[Ping! A trap makes a pinging sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[trap ping]",
+        "onomatopoeic": "[Ping — trap ping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-069",
+      "start_s": 372.874,
+      "end_s": 375.832,
+      "original_text": "[SQUIRREL SQUEALS]",
+      "scene_context": "Demuxed source cue 69: [SQUIRREL SQUEALS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeals",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[squealing]",
+        "1-2": "[Squealing]",
+        "1-3": "[Squealing]",
+        "2-1": "[squirrel squealing]",
+        "2-2": "[A squirrel squeals]",
+        "2-3": "[A squirrel squeals]",
+        "3-1": "[The sound of a squirrel squealing]",
+        "3-2": "[The sound of a squirrel squealing.]",
+        "3-3": "[The sound of a squirrel squealing.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squealing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-070",
+      "start_s": 388.582,
+      "end_s": 389.499,
+      "original_text": "[THUD]",
+      "scene_context": "Demuxed source cue 70: [THUD]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "thud",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[thud]",
+        "2-2": "[A thud is heard]",
+        "2-3": "[Thud! thud]",
+        "3-1": "[The sound of a thud]",
+        "3-2": "[The sound of a thud.]",
+        "3-3": "[Thud! The sound of a thud]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[thud]",
+        "onomatopoeic": "[Thud — thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-071",
+      "start_s": 398.582,
+      "end_s": 400.332,
+      "original_text": "[WINGS POP]",
+      "scene_context": "Demuxed source cue 71: [WINGS POP]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "wings-pop",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[popping]",
+        "1-2": "[Popping]",
+        "1-3": "[Pop!]",
+        "2-1": "[wings popping]",
+        "2-2": "[Wings pop]",
+        "2-3": "[Pop! wings popping]",
+        "3-1": "[Wings make popping sounds]",
+        "3-2": "[Wings make popping sounds.]",
+        "3-3": "[Pop! Wings make popping sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[wings popping]",
+        "onomatopoeic": "[Pop — wings popping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "start_s": 410.791,
+      "end_s": 411.707,
+      "original_text": "[TWIG SNAPS]",
+      "scene_context": "Demuxed source cue 72: [TWIG SNAPS]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "twig-snaps",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[twig snapping]",
+        "2-2": "[A twig snaps]",
+        "2-3": "[Snap! twig snapping]",
+        "3-1": "[A twig makes a snapping sound]",
+        "3-2": "[A twig makes a snapping sound.]",
+        "3-3": "[Snap! A twig makes a snapping sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[twig snapping]",
+        "onomatopoeic": "[Snap — twig snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "start_s": 418.665,
+      "end_s": 419.582,
+      "original_text": "[APPLE THUDS]",
+      "scene_context": "Demuxed source cue 73: [APPLE THUDS]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "apple-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[impact]",
+        "1-2": "[Impact]",
+        "1-3": "[Thud!]",
+        "2-1": "[apple thud]",
+        "2-2": "[An apple thuds]",
+        "2-3": "[Thud! apple thud]",
+        "3-1": "[An apple makes a thudding sound]",
+        "3-2": "[An apple makes a thudding sound.]",
+        "3-3": "[Thud! An apple makes a thudding sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[apple thud]",
+        "onomatopoeic": "[Thud — apple thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "start_s": 419.999,
+      "end_s": 420.915,
+      "original_text": "[TRAPS SNAP]",
+      "scene_context": "Demuxed source cue 74: [TRAPS SNAP]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "traps-snap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[traps snapping]",
+        "2-2": "[Traps snap]",
+        "2-3": "[Snap! traps snapping]",
+        "3-1": "[Traps make snapping sounds]",
+        "3-2": "[Traps make snapping sounds.]",
+        "3-3": "[Snap! Traps make snapping sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[traps snapping]",
+        "onomatopoeic": "[Snap — traps snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-075",
+      "start_s": 421.874,
+      "end_s": 423.999,
+      "original_text": "[TRAPS SNAPPING]",
+      "scene_context": "Demuxed source cue 75: [TRAPS SNAPPING]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "traps-snapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[traps snapping]",
+        "2-2": "[Traps snap]",
+        "2-3": "[Snap! traps snapping]",
+        "3-1": "[Traps make snapping sounds]",
+        "3-2": "[Traps make snapping sounds.]",
+        "3-3": "[Snap! Traps make snapping sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[traps snapping]",
+        "onomatopoeic": "[Snap — traps snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-076",
+      "start_s": 430.915,
+      "end_s": 433.04,
+      "original_text": "[TRAPS SNAPPING]",
+      "scene_context": "Demuxed source cue 76: [TRAPS SNAPPING]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "traps-snapping",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[traps snapping]",
+        "2-2": "[Traps snap]",
+        "2-3": "[Snap! traps snapping]",
+        "3-1": "[Traps make snapping sounds]",
+        "3-2": "[Traps make snapping sounds.]",
+        "3-3": "[Snap! Traps make snapping sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[traps snapping]",
+        "onomatopoeic": "[Snap — traps snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "start_s": 436.29,
+      "end_s": 436.999,
+      "original_text": "[BRANCHES SNAP]",
+      "scene_context": "Demuxed source cue 77: [BRANCHES SNAP]. Original source timing preserved. Adaptation uses 3 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "branches-snap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snap!]",
+        "2-1": "[branches snapping]",
+        "2-2": "[Branches snap]",
+        "2-3": "[Snap! branches snapping]",
+        "3-1": "[Branches make snapping sounds]",
+        "3-2": "[Branches make snapping sounds.]",
+        "3-3": "[Snap! Branches make snapping sounds]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[branches snapping]",
+        "onomatopoeic": "[Snap — branches snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-078",
+      "start_s": 437.957,
+      "end_s": 439.415,
+      "original_text": "[WINGS FLAPPING]",
+      "scene_context": "Demuxed source cue 78: [WINGS FLAPPING]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "wings-flapping",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[flapping]",
+        "1-2": "[Flapping]",
+        "1-3": "[Flapping]",
+        "2-1": "[wings flapping]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[The sound of wings flapping]",
+        "3-2": "[The sound of wings flapping.]",
+        "3-3": "[The sound of wings flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-079",
+      "start_s": 441.957,
+      "end_s": 443.04,
+      "original_text": "[SQUIRREL SQUEALS]",
+      "scene_context": "Demuxed source cue 79: [SQUIRREL SQUEALS]. Original source timing preserved. Adaptation uses 4 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeals",
+      "scene_load": "dense",
+      "grid": {
+        "1-1": "[squealing]",
+        "1-2": "[Squealing]",
+        "1-3": "[Squealing]",
+        "2-1": "[squirrel squealing]",
+        "2-2": "[A squirrel squeals]",
+        "2-3": "[A squirrel squeals]",
+        "3-1": "[The sound of a squirrel squealing]",
+        "3-2": "[The sound of a squirrel squealing.]",
+        "3-3": "[The sound of a squirrel squealing.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squealing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-080",
+      "start_s": 446.124,
+      "end_s": 448.249,
+      "original_text": "[BRANCH CREAKING]",
+      "scene_context": "Demuxed source cue 80: [BRANCH CREAKING]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "branch-creaking",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[creaking]",
+        "1-2": "[Creaking]",
+        "1-3": "[Creak!]",
+        "2-1": "[branch creaking]",
+        "2-2": "[A branch creaks]",
+        "2-3": "[Creak! branch creaking]",
+        "3-1": "[The sound of a branch creaking]",
+        "3-2": "[The sound of a branch creaking.]",
+        "3-3": "[Creak! The sound of a branch creaking]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[branch creaking]",
+        "onomatopoeic": "[Creak — branch creaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-081",
+      "start_s": 456.749,
+      "end_s": 458.457,
+      "original_text": "[SQUIRREL SQUEAKS IN PAIN]",
+      "scene_context": "Demuxed source cue 81: [SQUIRREL SQUEAKS IN PAIN]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "squirrel-squeaks-in-pain",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[squeaking]",
+        "1-2": "[Squeaking]",
+        "1-3": "[Squeak!]",
+        "2-1": "[squirrel squeaking]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[Squeak! squirrel squeaking]",
+        "3-1": "[A squirrel squeaks in pain]",
+        "3-2": "[A squirrel squeaks in pain.]",
+        "3-3": "[Squeak! A squirrel squeaks in pain]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[squirrel squeaking]",
+        "onomatopoeic": "[Squeak — squirrel squeaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-082",
+      "start_s": 463.249,
+      "end_s": 467.874,
+      "original_text": "[SERENE MUSIC]",
+      "scene_context": "Demuxed source cue 82: [SERENE MUSIC]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "serene-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[serene music]",
+        "2-2": "[Serene music plays]",
+        "2-3": "[A serene musical passage]",
+        "3-1": "[Music with a serene character]",
+        "3-2": "[Music plays with a serene character]",
+        "3-3": "[A musical passage with a serene character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[serene music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-083",
+      "start_s": 480.749,
+      "end_s": 483.499,
+      "original_text": "[WIND BLOWS]",
+      "scene_context": "Demuxed source cue 83: [WIND BLOWS]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "wind-blows",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[wind]",
+        "1-2": "[Wind]",
+        "1-3": "[Wind]",
+        "2-1": "[wind blowing]",
+        "2-2": "[Wind blows]",
+        "2-3": "[Wind blows]",
+        "3-1": "[The sound of wind blowing]",
+        "3-2": "[The sound of wind blowing.]",
+        "3-3": "[The sound of wind blowing.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[wind blowing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-084",
+      "start_s": 490.04,
+      "end_s": 497.04,
+      "original_text": "[TRIUMPHANT MUSIC]",
+      "scene_context": "Demuxed source cue 84: [TRIUMPHANT MUSIC]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "triumphant-music",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[music]",
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[triumphant music]",
+        "2-2": "[Triumphant music plays]",
+        "2-3": "[A triumphant musical passage]",
+        "3-1": "[Music with a triumphant character]",
+        "3-2": "[Music plays with a triumphant character]",
+        "3-3": "[A musical passage with a triumphant character]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[triumphant music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-085",
+      "start_s": 581.79,
+      "end_s": 584.999,
+      "original_text": "[BIRD FLAPPING]",
+      "scene_context": "Demuxed source cue 85: [BIRD FLAPPING]. Original source timing preserved. Adaptation uses 1 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bird-flapping",
+      "scene_load": "quiet",
+      "grid": {
+        "1-1": "[flapping]",
+        "1-2": "[Flapping]",
+        "1-3": "[Flapping]",
+        "2-1": "[bird flapping]",
+        "2-2": "[A bird flaps]",
+        "2-3": "[A bird flaps]",
+        "3-1": "[The sound of a bird flapping]",
+        "3-2": "[The sound of a bird flapping.]",
+        "3-3": "[The sound of a bird flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bird flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-086",
+      "start_s": 587.749,
+      "end_s": 590.957,
+      "original_text": "[BIRD FLAPPING]",
+      "scene_context": "Demuxed source cue 86: [BIRD FLAPPING]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "bird-flapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[flapping]",
+        "1-2": "[Flapping]",
+        "1-3": "[Flapping]",
+        "2-1": "[bird flapping]",
+        "2-2": "[A bird flaps]",
+        "2-3": "[A bird flaps]",
+        "3-1": "[The sound of a bird flapping]",
+        "3-2": "[The sound of a bird flapping.]",
+        "3-3": "[The sound of a bird flapping.]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[bird flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "start_s": 595.665,
+      "end_s": 596.457,
+      "original_text": "[POOP SPLATS]",
+      "scene_context": "Demuxed source cue 87: [POOP SPLATS]. Original source timing preserved. Adaptation uses 2 cue intervals intersecting the ±5-second neighborhood, a caption-density proxy, not measured visual scene complexity.",
+      "sound_key": "poop-splats",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[splat]",
+        "1-2": "[Splat]",
+        "1-3": "[Splat!]",
+        "2-1": "[poop splat]",
+        "2-2": "[Poop splats]",
+        "2-3": "[Splat! poop splat]",
+        "3-1": "[Poop makes a splatting sound]",
+        "3-2": "[Poop makes a splatting sound.]",
+        "3-3": "[Splat! Poop makes a splatting sound]"
+      },
+      "scene_load_basis": "cue-density",
+      "representations": {
+        "plain": "[poop splat]",
+        "onomatopoeic": "[Splat — poop splat]"
+      }
+    }
+  ]
+}

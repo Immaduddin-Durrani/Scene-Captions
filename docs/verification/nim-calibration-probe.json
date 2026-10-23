@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-1d1d78be-bfbb-4b1a-8fab-afdf37ea6ecf",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "{\"description\":\"simple electronic tones\"}",
+        "role": "assistant",
+        "reasoning_content": "So, let's look at the audio. The sounds are simple tones, like electronic beeps. There's no speech, music, or silence\u2014just those tones. So we need to describe that. The description should mention the simple tones. Let's check: the audio has a series of electronic tones, each a short beep. So the description is \"simple tones\" or \"electronic beeps\". Wait, the task says to be specific. Let's see: the audio contains multiple short, distinct electronic tones. So the description is \"simple electronic tones\" or similar. Let's confirm. The audio has no speech, music, or silence\u2014just the tones. So the description is \"simple electronic tones\".\n"
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792762946,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 143,
+    "completion_tokens": 156,
+    "total_tokens": 299
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 12,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 2.33978009223938,
+      "generation_tokens_per_second": 66.67293243387415,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}

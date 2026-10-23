@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-2585a9eb-2e83-4bce-998c-66ec909243af",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "[\n  {\"label\": \"Music\", \"start_s\": 0.0, \"end_s\": 10.0, \"description\": \"A dramatic orchestral piece featuring sweeping strings, powerful brass, and a soaring female vocal line.\"}\n]",
+        "role": "assistant",
+        "reasoning_content": null
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792763445,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 223,
+    "completion_tokens": 54,
+    "total_tokens": 277
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 15,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 1.1359059810638428,
+      "generation_tokens_per_second": 47.53914575696293,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}

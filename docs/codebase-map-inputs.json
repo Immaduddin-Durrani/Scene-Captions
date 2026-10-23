@@ -1,0 +1,30 @@
+{
+  "graphifyy": "0.9.92",
+  "method": "local deterministic AST extraction; no agents, providers, semantic extraction or watchers",
+  "files": {
+    "scripts/browser-smoke.mjs": "18895d5580c3196a9479ab795846ed24f05ba3881e643948f61df1c411561c5d",
+    "scripts/create-demo-data.mjs": "aaa5a81cdb12bdc9ea0474e176a425e889df4180443bf9d5628ea8872204acc1",
+    "scripts/export-plan.ts": "6197a3bd1fa777b89899e75bfc42e4134ab874785c71f4a0684dda366fabb500",
+    "scripts/fetch-demo.mjs": "88f40632f250e31d3e5af693f387975486e055b5be803879a5128e96629efdce",
+    "scripts/map-codebase.py": "fb890894fcb7506ec461ce0d898eb3f6e1f116d298d43707daababc944054600",
+    "scripts/validate-captions.ts": "96e81e85004bd7aee01efd88bb5bed58f45e094cb9bae1cc0dddde472307dad1",
+    "src/app/api/ping/route.ts": "51860516c8f1377915d95cc8dbfd28ae84f93174390648953eedac75af27d8c7",
+    "src/app/experiment/page.tsx": "6ab875538b05bf0afc5361d96ec66cb8b1cae021fcb472090371181d8bfeb6bb",
+    "src/app/layout.tsx": "a79ac0eba615a31b4fa5d551907fef75af324a8dcb5b303fc4b36947814955ea",
+    "src/app/page.tsx": "1379071cc3cda7c909c6f5fd9b98032589ee1fc3fd3cd473bb8eb0a38aab1864",
+    "src/components/header.tsx": "0e0cab104947b70b952cf9dbb32554cc7e07b6d0213596855e6f20ae23f87fdc",
+    "src/components/icon.tsx": "def3dc4cd01a739cb3cd57aacc596d6840d95bc208bccfa6efaa0736845ac7d1",
+    "src/components/preferences.tsx": "6a5bd4cf70eb4c9798273a1ed208bbc2321135ba38f05c731dc5c03686437b0d",
+    "src/components/study-rehearsal.tsx": "b40b9054a1458d8090886607e0d1552e6a2550feae9c1246c0a37945679e8a79",
+    "src/components/video-player.tsx": "71804f445ac1c7a4b5c26c9b923758ec38047059df246c7a358ed3e132c08069",
+    "src/components/workspace.tsx": "beff50e7d5c497f875434de5b19c489ed4c4a76540f31c5c58448233d776903c",
+    "src/lib/captions.ts": "3a30d5ef9f18c9f2243e6995813abcac31e24bd3ec5b8d1731e90c1b52008efc",
+    "src/lib/experiment.ts": "e0914450bd661050894cbcbc43d3109ce07cd95f34e094f5a9c2bb8c7a51af8d",
+    "src/lib/session.ts": "e92dd75509d686b2d7f6b4729707e41c68ee657abef73a64c8165e1390fe8459",
+    "tests/captions.test.ts": "cf7a9d874931e0a0f3ca7adef23059f88c4a18105d9c90882881ff97afd5ea0a",
+    "tests/session.test.ts": "f02dc1b72fbd0b08fea9f7b47177fdde267b0c2a003acc94ad0499f4816d1904"
+  },
+  "nodes": 93,
+  "edges": 187,
+  "limits": "Static extracted relationships are not complete runtime/dependency proof; review aliases, dynamic imports, React event wiring and JSON/media boundaries manually."
+}

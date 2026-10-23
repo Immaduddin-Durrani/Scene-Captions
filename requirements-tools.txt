@@ -1,0 +1,3 @@
+# Optional codebase mapping only; not part of the web app runtime.
+# Install in an isolated environment, never system Python.
+graphifyy==0.9.92

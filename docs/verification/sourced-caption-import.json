@@ -1,0 +1,29 @@
+{
+  "approach": "licensed-source-captions",
+  "source": {
+    "repository": "https://github.com/demuxed/big-buck-captions",
+    "commit": "e490383ca58f53507cfa18a64e1324f28d77c65a",
+    "license": "CC BY 3.0",
+    "license_evidence": "README.md at pinned commit",
+    "author": "Demuxed / big-buck-captions contributors",
+    "commit_author": "Phil",
+    "source_url": "https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt",
+    "file_sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd"
+  },
+  "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "cue_count": 87,
+  "source_event_count": 90,
+  "timing": "All source intervals preserved exactly; no shifts, retiming or cyclic cues.",
+  "full_listening_review": false,
+  "participant_review": false,
+  "visual_sync_anchors": [
+    20.7,
+    83.9,
+    195.9,
+    321.7,
+    410.99,
+    595.9
+  ],
+  "adaptation": "Cue-interval count in ±5 seconds: >=4 dense, <=1 quiet, otherwise balanced. Not visual scene analysis.",
+  "variants": "Local editorial paraphrases of 67 source labels. Detail changes source specificity; expression changes phrasing/punctuation. No new instruments, volume claims, sounds or inferred scene events."
+}

@@ -1,0 +1,10 @@
+{
+  "ubur-2025-interpretive-caption.pdf": {
+    "bytes": 834230,
+    "sha256": "e2fd6f35f537cc8abf82a73b2ed663cddd20e935b56d4d39d3b42204e35debfb"
+  },
+  "huang-2025-captune.pdf": {
+    "bytes": 16255506,
+    "sha256": "4d056cfe7875daa63c58ee62f3e541d1bb4f5ac16da6088c4e636252c165ce33"
+  }
+}

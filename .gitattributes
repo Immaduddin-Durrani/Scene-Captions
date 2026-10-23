@@ -1,0 +1,9 @@
+# Research papers and visual verification artifacts are binary files.
+*.pdf binary
+*.png binary
+*.jpg binary
+
+# Preserve licensed caption bytes and their pinned SHA-256 across checkouts.
+data/sources/big-buck-captions/big-buck-bunny.srt -text -whitespace
+public/research/big-buck-bunny.srt -text -whitespace
+public/research/big-buck-bunny.vtt -text -whitespace

@@ -1,0 +1,32 @@
+{
+  "name": "scene-captions",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "validate:captions": "node --experimental-strip-types scripts/validate-captions.ts",
+    "setup:demo": "node scripts/fetch-demo.mjs",
+    "export:plan": "node --experimental-strip-types scripts/export-plan.ts",
+    "setup:captions": "node --experimental-strip-types scripts/import-demo-captions.ts"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

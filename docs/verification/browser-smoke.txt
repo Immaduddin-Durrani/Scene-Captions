@@ -1,0 +1,93 @@
+### Result
+{"passed":["play/pause, cue seeking, original override, fixed baseline, preview/apply isolation, profile persistence","opt-in rehearsal, event capture, export, stable session material","local video import, cue clearing, malformed JSON handling, valid caption import","responsive layout without horizontal overflow; experimental plan route"]}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const assert = (value, message) => { if (!value) throw new Error(message); };
+  const results = [];
+  await page.goto('http://127.0.0.1:3000');
+  await page.locator('video').waitFor({ state: 'visible' });
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  assert(await page.getByRole('button', { name: 'Play video', exact: true }).first().isEnabled(), 'Cached metadata must enable playback');
+  await page.getByRole('button', { name: 'Play video', exact: true }).first().click();
+  await page.waitForFunction(() => !document.querySelector('video').paused);
+  await page.getByRole('button', { name: 'Pause video', exact: true }).click();
+  await page.getByRole('button', { name: 'Jump to 0:02: [music]', exact: true }).click();
+  await page.waitForFunction(() => document.querySelector('video').currentTime >= 2);
+  assert((await page.locator('.caption-lines').textContent()).includes('melody'), 'Personalized cached caption appears after seeking');
+  await page.getByRole('button', { name: 'Show original', exact: true }).click();
+  assert((await page.locator('.caption-lines').textContent()) === '[music]', 'Original override must show fixed text');
+  await page.getByRole('button', { name: 'Original on', exact: true }).click();
+  await page.getByRole('button', { name: 'Original baseline', exact: true }).click();
+  assert((await page.locator('.caption-lines').textContent()) === '[music]', 'Baseline must show original');
+  assert(await page.getByLabel('Follow the scene', { exact: true }).isDisabled(), 'Baseline content preferences disabled');
+  await page.getByRole('button', { name: 'Personalized', exact: true }).click();
+  await page.getByRole('button', { name: 'Essential', exact: true }).click();
+  assert((await page.locator('.caption-lines').textContent()).includes('melody'), 'Draft must not immediately change applied caption');
+  await page.getByLabel('Follow the scene', { exact: true }).uncheck();
+  await page.getByRole('button', { name: 'Apply preferences', exact: true }).click();
+  assert((await page.locator('.caption-lines').textContent()) === '[music]', 'Applying essential profile changes overlay');
+  await page.reload();
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  assert((await page.getByLabel('Level of detail', { exact: false }).inputValue()) === '1', 'Preferences persist through reload');
+  await page.getByRole('button', { name: 'Jump to 0:58: [footsteps]', exact: true }).click();
+  await page.waitForFunction(() => Math.abs(document.querySelector('video').currentTime - 58) < 0.1);
+  await page.locator('video').focus();
+  await page.keyboard.press('ArrowRight');
+  await page.keyboard.press('ArrowLeft');
+  await page.waitForFunction(() => Math.abs(document.querySelector('video').currentTime - 58) < 0.1);
+  await page.locator('.caption-lines').waitFor();
+  results.push('play/pause, cue seeking, original override, fixed baseline, preview/apply isolation, profile persistence');
+  assert(await page.getByRole('button', { name: 'Start rehearsal', exact: false }).isDisabled(), 'No recording before opt-in');
+  await page.getByLabel('I agree to record this demo’s player interactions locally.').check();
+  await page.getByRole('button', { name: 'Start rehearsal', exact: false }).click();
+  await page.getByRole('button', { name: 'Jump to 0:26: [birds chirping]', exact: true }).click();
+  await page.getByRole('button', { name: 'Original baseline', exact: true }).click();
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export rehearsal JSON', exact: false }).click();
+  const download = await downloadPromise;
+  await download.saveAs('docs/verification/rehearsal-test.json');
+  assert(download.suggestedFilename().endsWith('.json'), 'Rehearsal export must download JSON');
+  await page.getByRole('button', { name: 'Stop recording', exact: true }).click();
+  assert(await page.getByRole('button', { name: 'Choose video', exact: true }).isDisabled(), 'Session video stays fixed after recording');
+  results.push('opt-in rehearsal, event capture, export, stable session material');
+  await page.reload();
+  await page.getByLabel('Choose local video', { exact: true }).setInputFiles('public/media/big-buck-bunny.mp4');
+  await page.waitForFunction(() => document.querySelector('video').src.startsWith('blob:') && document.querySelector('video').readyState >= 1);
+  assert((await page.locator('.cue-row').count()) === 0, 'Changing video clears mismatched sample cues');
+  await page.getByLabel('Choose caption JSON', { exact: true }).setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('{bad') });
+  await page.getByRole('alert').filter({ hasText: 'not valid JSON' }).waitFor();
+  await page.getByLabel('Choose caption JSON', { exact: true }).setInputFiles('public/research/caption-template.json');
+  await page.getByRole('alert').filter({ hasText: 'does not match' }).waitFor();
+  assert(await page.locator('.caption-overlay').count() === 0, 'Duration mismatch suppresses caption overlay');
+  await page.getByLabel('Choose caption JSON', { exact: true }).setInputFiles('data/captions/big-buck-bunny.json');
+  await page.getByRole('button', { name: 'Jump to 0:02: [music]', exact: true }).waitFor();
+  assert((await page.locator('.cue-row').count()) === 32, 'Valid local caption file loads');
+  results.push('local video import, cue clearing, malformed JSON handling, valid caption import');
+  await page.getByRole('button', { name: 'Restore sample film', exact: true }).click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: 'docs/verification/mobile.png', fullPage: true });
+  assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Mobile page must not overflow horizontally');
+  await page.setViewportSize({ width: 1440, height: 1100 });
+  await page.getByRole('link', { name: 'Experimental plan', exact: true }).click();
+  await page.getByRole('heading', { name: 'How we’ll study it.', exact: true }).waitFor();
+  assert(await page.getByRole('link', { name: 'Download full plan', exact: false }).isVisible(), 'Experiment plan downloadable');
+  await page.screenshot({ path: 'docs/verification/experimental-plan.png' });
+  results.push('responsive layout without horizontal overflow; experimental plan route');
+  await page.goto('http://127.0.0.1:3000');
+  await page.evaluate(() => { localStorage.removeItem('scenecaptions.profile.v1'); });
+  await page.reload();
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  await page.getByRole('button', { name: 'Jump to 0:02: [music]', exact: true }).click();
+  await page.waitForFunction(() => Math.abs(document.querySelector('video').currentTime - 2) < 0.1);
+  await page.locator('.caption-lines').waitFor();
+  await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
+  await page.screenshot({ path: 'docs/verification/desktop.png' });
+  return { passed: results };
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-23T12-56-35-795Z.log#L51-L64
+- Downloading file scenecaptions-rehearsal-92040fe3.json ...
+- Downloaded file scenecaptions-rehearsal-92040fe3.json to ".playwright-cli/scenecaptions-rehearsal-92040fe3.json"

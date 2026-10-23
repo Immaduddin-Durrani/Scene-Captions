@@ -306,6 +306,49 @@ Open questions this project tests (no prior evidence):
 - Does a coarse 3-5 level scale beat a fine slider?
 - Do genre-based presets reduce onboarding friction?
 
+## 13a. RESEARCH PAPER COLLECTION [DECIDED]
+
+- Maintain a repository-root docs/ folder for research papers
+  relevant to this HCI-centered product and our research.
+- Store legally available PDFs of relevant papers identified
+  during research, including the related work in section 13 when
+  available. Use publisher/open-access or author-provided copies;
+  do not bypass access restrictions.
+- Prioritize DHH accessibility, non-speech captioning,
+  personalization, viewer control, long-form comprehension,
+  reading effort, and HCI study/evaluation methods.
+- Keep each paper's title, authors, year, DOI/source URL, and a
+  brief relevance note in docs/ when papers are added, so the
+  collection supports product decisions, related work, study
+  design, and writing the final research paper about our product
+  and findings. Distinguish verified findings from hypotheses;
+  do not treat collecting a PDF as validating its claims.
+
+## 13b. PLANNED SKILL USE [DECIDED]
+
+- Graphify: use for codebase mapping once the first working app
+  structure exists; do not wait for the codebase to become large.
+  Map the player, caption selection/adaptation, profile state,
+  ingestion pipeline, schemas, and study-logging boundaries.
+  Refresh the map after substantial structural changes to help
+  trace dependencies and assess the impact of edits. Use local
+  deterministic extraction; review the map against the code,
+  since a graph does not prove complete dependency coverage.
+- Fallow: optional targeted checks for unused code, dependencies,
+  and duplication as implementation grows or before a release.
+  Review findings before removal; do not blindly apply fixes.
+- inferya-design: one initial UI design pass to establish the
+  accessible player layout, caption typography, control states,
+  and reusable tokens/components. Preserve that foundation in
+  later implementation rather than restarting the design process
+  for every feature. Viewer control and readability take priority
+  over decorative styling. Branding, banners, and slides remain
+  separate later deliverables when requested.
+- These are planned uses, not automatic activation: explicitly
+  request the named skill for the relevant task. Do not run any
+  skill during this documentation update, add background hooks,
+  or launch agents/providers as part of mapping or design.
+
 ## 14. OPEN ITEMS (nothing below is settled)
 
 - Confirm NIM model names, audio/video input support, size limits.
@@ -321,12 +364,89 @@ Open questions this project tests (no prior evidence):
 - Omni-model 10-clip test: hosted-endpoint input format, thinking
   on/off with audio, non-speech label accuracy.
 
+## 15. PHASE 1 IMPLEMENTATION STATUS [DECIDED]
+
+- Submission scope: a running application and an experimental
+  plan. The team will create the study video. The bundled
+  rights-clear short film is a temporary demonstration only;
+  its draft cues are illustrative, not verified study material.
+- Implemented: Next.js player, precomputed 3x3 caption selection,
+  manual scene-load tags, profile persistence, preview/apply,
+  Show Original, fixed baseline, readability controls, local
+  video/JSON import, and opt-in local rehearsal JSON export.
+  No AI call occurs during viewing; no API key is needed.
+- Formal study logging, participant allocation, approved consent,
+  database storage, AI ingestion and hosting are not implemented.
+  Rehearsal data stays in page memory and is cleared on reload.
+  Caption preferences alone are saved in browser localStorage.
+- The proposed experiment is documented in
+  docs/EXPERIMENTAL_PLAN.md and available at /experiment.
+  Sample size and ethics are proposals requiring approval.
+- Caption JSON is validated before use. A video-duration mismatch
+  suppresses the caption overlay, but exact-edit matching still
+  requires human review. The actual study needs reviewed cues.
+- Dialogue subtitle import is not implemented. Create a
+  dialogue-free study video, or add the same verified dialogue
+  subtitles in both conditions before using spoken dialogue.
+- For this local demo only, the downloaded movie is served from
+  public/media/. A hosted deployment must use an external video
+  host directly; do not deploy this movie through Render.
+- Dependencies and commands are recorded in package.json and
+  package-lock.json; optional Graphify tooling is isolated and
+  pinned in requirements-tools.txt. Next.js agent-rule injection
+  is disabled; no hooks, agents or integrations are enabled.
+
 =================================================================
 ARCHITECTURE DECISIONS (append-only log — newest entry at bottom,
 never delete or rewrite prior entries)
 =================================================================
 
-(empty)
+2026-10-23 — Maintain docs/ as the research-paper collection for
+the HCI-centered product and final research writeup. Store
+relevant, legally available PDFs with source and relevance notes
+(section 13a). Folder created; paper collection is a later task.
+
+2026-10-23 — Plan Graphify mapping from the first working app
+structure, with updates after substantial structural changes;
+Fallow remains an optional targeted cleanup check. Use
+inferya-design for the initial reusable UI design foundation
+(section 13b). Execution requires an explicit named-skill request
+for the relevant task; no skills were run for this update.
+
+2026-10-23 — Phase 1 delivers a local player and proposed
+experimental plan within the team's 24-hour submission window.
+The team will produce the study video. Use precomputed manual
+demo data now; defer NIM ingestion, hosting and formal participant
+infrastructure. Preserve no-model-calls-during-viewing and make
+all unverified demo/study boundaries explicit (section 15).
+
+2026-10-23 — Superseding the manual-caption demo decision: the
+illustrative Big Buck Bunny track was mismatched and has been
+withdrawn. The replacement NVIDIA key authenticates, but the Omni
+model hallucinated sounds on digitally silent audio in both tested
+thinking modes. Ten film clips are saved as unapproved candidates;
+full-film generation/installation is blocked. A local AST tagger
+also did not supply adequate sound-effect cues. The bundled track
+has zero cues with an explicit failed quality gate; playback stays
+available, and caption controls/rehearsal require imported usable
+cues. Do not claim a reliable captioned Phase 1 demonstration is
+complete. See docs/CAPTION_GENERATION_STATUS.md. All model work
+remains offline; the key stays local and out of viewing code.
+
+2026-10-23 — Working caption fallback: import the CC BY 3.0
+Demuxed Big Buck Bunny sound-caption SRT at pinned commit
+e490383ca58f53507cfa18a64e1324f28d77c65a. Preserve all 87 source
+intervals and original text; derive personalized wording offline
+from a local source-anchored editorial lexicon. Keep source README,
+license, hashes and attribution. This supersedes the empty sample
+track above without re-enabling the failed NVIDIA audio model.
+Visual sync anchors match this exact movie; full listening and
+participant review are still pending. Source imports do not prove
+an arbitrary-video sound-recognition pipeline. Adaptation uses an
+explicit cue-density proxy (interval count in +/-5 seconds),
+labelled Follow cue density, rather than unverified visual scene
+classification. No new API keys, paid services or viewing-time
+model calls are required. See docs/CAPTION_GENERATION_STATUS.md.
 
 =================================================================
 COPY-PASTE BLOCK FOR FUTURE PROMPTS

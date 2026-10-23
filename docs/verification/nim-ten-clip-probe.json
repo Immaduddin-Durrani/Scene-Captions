@@ -1,0 +1,367 @@
+{
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "prompt_version": "nim-av-v4",
+  "clips": [
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-actual-av-v2",
+      "clip_start_s": 0,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1380,
+        "completion_tokens": 647,
+        "total_tokens": 2027
+      },
+      "request_mode": "thinking-budget-512",
+      "prompt_text": "Listen carefully to the attached 12-second soundtrack segment and use the timestamped still images only to disambiguate audible sources. Create non-speech captions for the audio that is actually present. Do not caption silent visible actions. Do not infer character emotions, motives, dialogue or physical events from images alone. Background music is valid; mention sound effects only if audible. Use restrained factual wording. Return a JSON object with a cues array and an uncertainties array, without markdown. For each cue give start_s and end_s as local seconds between 0 and 12.000; sound_key as a short lowercase-hyphenated category (use music for score); confidence as high, medium or low; label as a very short sound label of 1-5 words; concise as an audible description of 4-9 words; detailed as the fullest audio-supported description of 7-16 words; scene_context as a short factual description of the visible scene; and scene_load as exactly quiet, balanced or dense. Maximum 5 cues. Music can span the clip. Effects need their own estimated onset/end. If uncertain omit the effect or name its broad acoustic quality. All text must describe this specific attached clip; do not repeat these instructions. No fictional embellishment. Language: English.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "gentle orchestral",
+            "confidence": "high",
+            "description": "A calm, melodic orchestral score plays continuously, matching the tranquil landscape visuals."
+          }
+        ],
+        "uncertainties": []
+      },
+      "reused_from": "nim-actual-av-v2-0000.json"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-actual-av-v2",
+      "clip_start_s": 60,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1370,
+        "completion_tokens": 971,
+        "total_tokens": 2341
+      },
+      "request_mode": "thinking-budget-512",
+      "prompt_text": "Listen carefully to the attached 12-second soundtrack segment and use the timestamped still images only to disambiguate audible sources. Create non-speech captions for the audio that is actually present. Do not caption silent visible actions. Do not infer character emotions, motives, dialogue or physical events from images alone. Background music is valid; mention sound effects only if audible. Use restrained factual wording. Return a JSON object with a cues array and an uncertainties array, without markdown. For each cue give start_s and end_s as local seconds between 0 and 12.000; sound_key as a short lowercase-hyphenated category (use music for score); confidence as high, medium or low; label as a very short sound label of 1-5 words; concise as an audible description of 4-9 words; detailed as the fullest audio-supported description of 7-16 words; scene_context as a short factual description of the visible scene; and scene_load as exactly quiet, balanced or dense. Maximum 5 cues. Music can span the clip. Effects need their own estimated onset/end. If uncertain omit the effect or name its broad acoustic quality. All text must describe this specific attached clip; do not repeat these instructions. No fictional embellishment. Language: English.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "orchestral score",
+            "confidence": "high",
+            "description": "A light, melodic orchestral score plays softly in the background throughout the clip"
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 4.0,
+            "label": "leaf rustle",
+            "confidence": "medium",
+            "description": "A subtle rustling sound suggests gentle wind moving through nearby foliage"
+          },
+          {
+            "start_s": 6.0,
+            "end_s": 8.0,
+            "label": "bird chirp",
+            "confidence": "low",
+            "description": "A faint bird chirp is heard briefly, indicating nearby wildlife"
+          },
+          {
+            "start_s": 9.0,
+            "end_s": 11.0,
+            "label": "soft sigh",
+            "confidence": "low",
+            "description": "A soft sigh is audible, likely from the rabbit as it relaxes"
+          }
+        ],
+        "uncertainties": []
+      },
+      "reused_from": "nim-actual-av-v2-0060.json"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-actual-av-v2",
+      "clip_start_s": 72,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1346,
+        "completion_tokens": 1018,
+        "total_tokens": 2364
+      },
+      "request_mode": "thinking-budget-512",
+      "prompt_text": "Listen carefully to the attached 12-second soundtrack segment and use the timestamped still images only to disambiguate audible sources. Create non-speech captions for the audio that is actually present. Do not caption silent visible actions. Do not infer character emotions, motives, dialogue or physical events from images alone. Background music is valid; mention sound effects only if audible. Use restrained factual wording. Return a JSON object with a cues array and an uncertainties array, without markdown. For each cue give start_s and end_s as local seconds between 0 and 12.000; sound_key as a short lowercase-hyphenated category (use music for score); confidence as high, medium or low; label as a very short sound label of 1-5 words; concise as an audible description of 4-9 words; detailed as the fullest audio-supported description of 7-16 words; scene_context as a short factual description of the visible scene; and scene_load as exactly quiet, balanced or dense. Maximum 5 cues. Music can span the clip. Effects need their own estimated onset/end. If uncertain omit the effect or name its broad acoustic quality. All text must describe this specific attached clip; do not repeat these instructions. No fictional embellishment. Language: English.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "orchestral score",
+            "confidence": "high",
+            "description": "A lush orchestral score featuring sustained strings and subtle woodwinds plays throughout the scene, creating a serene atmosphere."
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 4.0,
+            "label": "soft rustle",
+            "confidence": "medium",
+            "description": "A faint rustling sound, likely from wind moving through foliage, is audible during this segment."
+          },
+          {
+            "start_s": 6.0,
+            "end_s": 8.0,
+            "label": "soft thump",
+            "confidence": "low",
+            "description": "A soft thudding noise, possibly a footstep or object landing, occurs briefly in the audio."
+          },
+          {
+            "start_s": 10.0,
+            "end_s": 12.0,
+            "label": "bird chirp",
+            "confidence": "medium",
+            "description": "A short, high-pitched bird chirp is heard, adding a natural ambience to the scene."
+          }
+        ],
+        "uncertainties": []
+      },
+      "reused_from": "nim-actual-av-v2-0072.json"
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 108,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 579,
+        "total_tokens": 1865
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "Orchestral Music",
+            "description": "A sweeping orchestral score with strings and brass playing a dramatic melody.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 168,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 760,
+        "total_tokens": 2046
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "label": "whoosh",
+            "description": "A swift whoosh sound effect accompanying character movement.",
+            "confidence": "medium"
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 4.0,
+            "label": "thump",
+            "description": "A solid thump sound indicating a physical impact or collision.",
+            "confidence": "medium"
+          },
+          {
+            "start_s": 4.0,
+            "end_s": 6.0,
+            "label": "squeak",
+            "description": "A high-pitched squeak likely from a small animal or toy.",
+            "confidence": "low"
+          },
+          {
+            "start_s": 6.0,
+            "end_s": 8.0,
+            "label": "laughter",
+            "description": "A brief burst of laughter from an animated character.",
+            "confidence": "low"
+          },
+          {
+            "start_s": 8.0,
+            "end_s": 12.0,
+            "label": "background music",
+            "description": "Continuous upbeat background music playing throughout the scene.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 228,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 195,
+        "total_tokens": 1481
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": []
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 312,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 694,
+        "total_tokens": 1980
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 4.0,
+            "label": "Tense Music",
+            "description": "Low, suspenseful orchestral music builds tension as small animals look worried.",
+            "confidence": "medium"
+          },
+          {
+            "start_s": 4.0,
+            "end_s": 5.0,
+            "label": "Arrow Release",
+            "description": "A sharp 'twang' sound as the bowstring is released.",
+            "confidence": "high"
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 9.0,
+            "label": "Arrow Flight",
+            "description": "Whooshing sound indicating the arrow flying through the air.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 396,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 707,
+        "total_tokens": 1993
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 4.0,
+            "label": "Music",
+            "description": "Orchestral music builds up with strings and percussion, setting an adventurous tone.",
+            "confidence": "high"
+          },
+          {
+            "start_s": 4.0,
+            "end_s": 8.0,
+            "label": "Sound Effect",
+            "description": "A swooshing sound effect accompanies the character spreading its wings and preparing to fly.",
+            "confidence": "high"
+          },
+          {
+            "start_s": 8.0,
+            "end_s": 12.0,
+            "label": "Sound Effect",
+            "description": "A heavy thud or impact sound occurs as the scene cuts to the large rabbit looking up.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 504,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 581,
+        "total_tokens": 1867
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "Orchestral Music",
+            "description": "A continuous orchestral score plays throughout the clip, featuring strings and brass instruments.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "prompt_version": "nim-av-v4",
+      "clip_start_s": 576,
+      "clip_duration_s": 12,
+      "usage": {
+        "prompt_tokens": 1286,
+        "completion_tokens": 674,
+        "total_tokens": 1960
+      },
+      "request_mode": "audio-with-visual-context-thinking-budget-512",
+      "prompt_text": "Listen to this 12.000-second audio. Timestamped still frames supply visual context, but only the AUDIO justifies sound captions. List audible NON-SPEECH sounds, including background music and distinct sound effects. Do not describe visual scenes, imagined objects, character feelings, dialogue or causes. Do not assume every visible action has a sound. Return JSON with a cues array. Each cue must have start_s, end_s, label (short general sound name), and description (one short factual acoustic description, at most 20 words). Times are relative to the attached recording, between 0 and 12.000 seconds. Use separate time intervals for distinct sounds. A continuous sound may span the clip. Maximum five cues. If a sound is ambiguous, use a broad label or omit it. If there are no identifiable non-speech sounds, return an empty cues array. Include confidence as high, medium or low for each cue. If uncertain, mark low. No markdown or instructions in the output.",
+      "result": {
+        "cues": [
+          {
+            "start_s": 0.0,
+            "end_s": 12.0,
+            "label": "Orchestral music",
+            "description": "Sweeping orchestral score with strings and brass, playing continuously.",
+            "confidence": "high"
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 7.0,
+            "label": "Flapping wings",
+            "description": "Rapid wing flapping sound as the creature glides through the air.",
+            "confidence": "medium"
+          },
+          {
+            "start_s": 8.0,
+            "end_s": 10.0,
+            "label": "Bird chirp",
+            "description": "Short bird chirp heard as the bird flies by.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    }
+  ]
+}

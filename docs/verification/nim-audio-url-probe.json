@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-0e7a07a7-ac64-420e-aca7-c81b15460dfb",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "{\"description\":\"Music\"}",
+        "role": "assistant",
+        "reasoning_content": "The audio contains a sustained, high-pitched vocalization that sounds like a human voice, possibly a choir or soloist, singing a melodic phrase. There is no discernible speech, lyrics, or rhythmic structure typical of spoken language. The sound is continuous and melodic, with no percussive or instrumental accompaniment. The timbre is ethereal and resonant, suggesting a large acoustic space. The sound is clearly musical in nature, not a simple tone or silence. Therefore, the primary audible element is music.\n"
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792762977,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 193,
+    "completion_tokens": 113,
+    "total_tokens": 306
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 15,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 3.1985490322113037,
+      "generation_tokens_per_second": 35.328518919679624,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}

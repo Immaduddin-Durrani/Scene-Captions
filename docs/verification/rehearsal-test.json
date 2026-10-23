@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "purpose": "phase1-rehearsal-not-research",
+  "session_id": "92040fe3",
+  "video_id": "big-buck-bunny",
+  "annotation_status": "draft",
+  "caption_version": {
+    "method": "Hand-written illustrative examples; timing and sounds require review",
+    "prompt_version": "phase1-demo-v1"
+  },
+  "final_condition": "baseline",
+  "final_profile": {
+    "detail": 1,
+    "expression": 1,
+    "adaptive": false,
+    "representation": "descriptive",
+    "size": "large",
+    "position": "bottom"
+  },
+  "elapsed_ms": 176,
+  "events": [
+    {
+      "type": "condition",
+      "video_s": 58,
+      "condition": "personalized",
+      "elapsed_ms": 0
+    },
+    {
+      "type": "profile",
+      "video_s": 58,
+      "profile": {
+        "detail": 1,
+        "expression": 1,
+        "adaptive": false,
+        "representation": "descriptive",
+        "size": "large",
+        "position": "bottom"
+      },
+      "elapsed_ms": 0
+    },
+    {
+      "type": "condition",
+      "video_s": 58,
+      "condition": "baseline",
+      "elapsed_ms": 94
+    },
+    {
+      "type": "seek",
+      "video_s": 26,
+      "elapsed_ms": 126
+    }
+  ],
+  "ratings": {},
+  "note": ""
+}

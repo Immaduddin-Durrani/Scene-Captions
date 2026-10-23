@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-a4235142-e17d-45ca-b94f-fce3c9c7e833",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "\n{\"sounds\":[{\"start_s\":0,\"end_s\":10,\"description\":\"A continuous low-frequency hum with intermittent high-pitched electronic whine, resembling a malfunctioning appliance or electrical system under strain.\"}],\"uncertainties\":[]}",
+        "role": "assistant",
+        "reasoning_content": null
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792762889,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 119,
+    "completion_tokens": 54,
+    "total_tokens": 173
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 14,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 0.6219766139984131,
+      "generation_tokens_per_second": 86.81998452137587,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}

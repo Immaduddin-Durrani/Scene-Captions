@@ -1,0 +1,7 @@
+# Optional offline annotation runtime. Rebuild in an isolated environment.
+# See requirements-audio.lock.txt for resolved versions used here.
+torch==2.14.1
+torchaudio==2.11.0
+transformers==4.57.6
+soundfile==0.14.0
+scipy==1.18.1

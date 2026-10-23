@@ -1,0 +1,989 @@
+{
+  "APPLE CORE THUDS": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[apple core thud]",
+      "2-2": "[An apple core thuds]",
+      "2-3": "[Thud! apple core thud]",
+      "3-1": "[An apple core makes a thudding sound]",
+      "3-2": "[An apple core makes a thudding sound.]",
+      "3-3": "[Thud! An apple core makes a thudding sound]"
+    },
+    "plain": "[apple core thud]",
+    "onomatopoeic": "[Thud \u2014 apple core thud]"
+  },
+  "APPLE CRUNCHES": {
+    "grid": {
+      "1-1": "[crunching]",
+      "1-2": "[Crunching]",
+      "1-3": "[Crunch!]",
+      "2-1": "[apple crunch]",
+      "2-2": "[An apple crunches]",
+      "2-3": "[Crunch! apple crunch]",
+      "3-1": "[The sound of an apple crunching]",
+      "3-2": "[The sound of an apple crunching.]",
+      "3-3": "[Crunch! The sound of an apple crunching]"
+    },
+    "plain": "[apple crunch]",
+    "onomatopoeic": "[Crunch \u2014 apple crunch]"
+  },
+  "APPLE THUDS": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[apple thud]",
+      "2-2": "[An apple thuds]",
+      "2-3": "[Thud! apple thud]",
+      "3-1": "[An apple makes a thudding sound]",
+      "3-2": "[An apple makes a thudding sound.]",
+      "3-3": "[Thud! An apple makes a thudding sound]"
+    },
+    "plain": "[apple thud]",
+    "onomatopoeic": "[Thud \u2014 apple thud]"
+  },
+  "BIRD FLAPPING": {
+    "grid": {
+      "1-1": "[flapping]",
+      "1-2": "[Flapping]",
+      "1-3": "[Flapping]",
+      "2-1": "[bird flapping]",
+      "2-2": "[A bird flaps]",
+      "2-3": "[A bird flaps]",
+      "3-1": "[The sound of a bird flapping]",
+      "3-2": "[The sound of a bird flapping.]",
+      "3-3": "[The sound of a bird flapping.]"
+    },
+    "plain": "[bird flapping]"
+  },
+  "BIRD TWEETS": {
+    "grid": {
+      "1-1": "[bird call]",
+      "1-2": "[Bird call]",
+      "1-3": "[Tweet!]",
+      "2-1": "[bird tweets]",
+      "2-2": "[A bird tweets]",
+      "2-3": "[Tweet! bird tweets]",
+      "3-1": "[A bird makes tweeting sounds]",
+      "3-2": "[A bird makes tweeting sounds.]",
+      "3-3": "[Tweet! A bird makes tweeting sounds]"
+    },
+    "plain": "[bird tweets]",
+    "onomatopoeic": "[Tweet \u2014 bird tweets]"
+  },
+  "BOW STRING PINGS": {
+    "grid": {
+      "1-1": "[ping]",
+      "1-2": "[Ping]",
+      "1-3": "[Ping!]",
+      "2-1": "[bow string ping]",
+      "2-2": "[A bow string pings]",
+      "2-3": "[Ping! bow string ping]",
+      "3-1": "[A bow string makes a pinging sound]",
+      "3-2": "[A bow string makes a pinging sound.]",
+      "3-3": "[Ping! A bow string makes a pinging sound]"
+    },
+    "plain": "[bow string ping]",
+    "onomatopoeic": "[Ping \u2014 bow string ping]"
+  },
+  "BRANCH CREAKING": {
+    "grid": {
+      "1-1": "[creaking]",
+      "1-2": "[Creaking]",
+      "1-3": "[Creak!]",
+      "2-1": "[branch creaking]",
+      "2-2": "[A branch creaks]",
+      "2-3": "[Creak! branch creaking]",
+      "3-1": "[The sound of a branch creaking]",
+      "3-2": "[The sound of a branch creaking.]",
+      "3-3": "[Creak! The sound of a branch creaking]"
+    },
+    "plain": "[branch creaking]",
+    "onomatopoeic": "[Creak \u2014 branch creaking]"
+  },
+  "BRANCHES RUSTLE": {
+    "grid": {
+      "1-1": "[rustling]",
+      "1-2": "[Rustling]",
+      "1-3": "[Rustle!]",
+      "2-1": "[branches rustling]",
+      "2-2": "[Branches rustle]",
+      "2-3": "[Rustle! branches rustling]",
+      "3-1": "[The sound of branches rustling]",
+      "3-2": "[The sound of branches rustling.]",
+      "3-3": "[Rustle! The sound of branches rustling]"
+    },
+    "plain": "[branches rustling]",
+    "onomatopoeic": "[Rustle \u2014 branches rustling]"
+  },
+  "BRANCHES SNAP": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[branches snapping]",
+      "2-2": "[Branches snap]",
+      "2-3": "[Snap! branches snapping]",
+      "3-1": "[Branches make snapping sounds]",
+      "3-2": "[Branches make snapping sounds.]",
+      "3-3": "[Snap! Branches make snapping sounds]"
+    },
+    "plain": "[branches snapping]",
+    "onomatopoeic": "[Snap \u2014 branches snapping]"
+  },
+  "BROOK BABBLES": {
+    "grid": {
+      "1-1": "[water]",
+      "1-2": "[Water]",
+      "1-3": "[Water]",
+      "2-1": "[babbling brook]",
+      "2-2": "[A brook babbles]",
+      "2-3": "[A brook babbles]",
+      "3-1": "[The sound of water babbling in a brook]",
+      "3-2": "[The sound of water babbling in a brook.]",
+      "3-3": "[The sound of water babbling in a brook.]"
+    },
+    "plain": "[babbling brook]"
+  },
+  "BUNNY CRACKS NECK": {
+    "grid": {
+      "1-1": "[cracking]",
+      "1-2": "[Cracking]",
+      "1-3": "[Crack!]",
+      "2-1": "[bunny's neck cracking]",
+      "2-2": "[The bunny cracks its neck]",
+      "2-3": "[Crack! bunny's neck cracking]",
+      "3-1": "[The sound of the bunny cracking its neck]",
+      "3-2": "[The sound of the bunny cracking its neck.]",
+      "3-3": "[Crack! The sound of the bunny cracking its neck]"
+    },
+    "plain": "[bunny's neck cracking]",
+    "onomatopoeic": "[Crack \u2014 bunny's neck cracking]"
+  },
+  "BUNNY GULPS": {
+    "grid": {
+      "1-1": "[gulping]",
+      "1-2": "[Gulping]",
+      "1-3": "[Gulp!]",
+      "2-1": "[bunny gulping]",
+      "2-2": "[The bunny gulps]",
+      "2-3": "[Gulp! bunny gulping]",
+      "3-1": "[The sound of the bunny gulping]",
+      "3-2": "[The sound of the bunny gulping.]",
+      "3-3": "[Gulp! The sound of the bunny gulping]"
+    },
+    "plain": "[bunny gulping]",
+    "onomatopoeic": "[Gulp \u2014 bunny gulping]"
+  },
+  "BUNNY SIGHS": {
+    "grid": {
+      "1-1": "[sighing]",
+      "1-2": "[Sighing]",
+      "1-3": "[Sigh!]",
+      "2-1": "[bunny sighing]",
+      "2-2": "[The bunny sighs]",
+      "2-3": "[Sigh! bunny sighing]",
+      "3-1": "[The sound of the bunny sighing]",
+      "3-2": "[The sound of the bunny sighing.]",
+      "3-3": "[Sigh! The sound of the bunny sighing]"
+    },
+    "plain": "[bunny sighing]",
+    "onomatopoeic": "[Sigh \u2014 bunny sighing]"
+  },
+  "BUNNY SNIFFS": {
+    "grid": {
+      "1-1": "[sniffing]",
+      "1-2": "[Sniffing]",
+      "1-3": "[Sniff!]",
+      "2-1": "[bunny sniffing]",
+      "2-2": "[The bunny sniffs]",
+      "2-3": "[Sniff! bunny sniffing]",
+      "3-1": "[The sound of the bunny sniffing]",
+      "3-2": "[The sound of the bunny sniffing.]",
+      "3-3": "[Sniff! The sound of the bunny sniffing]"
+    },
+    "plain": "[bunny sniffing]",
+    "onomatopoeic": "[Sniff \u2014 bunny sniffing]"
+  },
+  "BUNNY SNIFFS DEEPLY": {
+    "grid": {
+      "1-1": "[sniffing]",
+      "1-2": "[Sniffing]",
+      "1-3": "[Sniff!]",
+      "2-1": "[bunny sniffing]",
+      "2-2": "[The bunny sniffs]",
+      "2-3": "[Sniff! bunny sniffing]",
+      "3-1": "[The bunny takes a deep sniff]",
+      "3-2": "[The bunny takes a deep sniff.]",
+      "3-3": "[Sniff! The bunny takes a deep sniff]"
+    },
+    "plain": "[bunny sniffing]",
+    "onomatopoeic": "[Sniff \u2014 bunny sniffing]"
+  },
+  "BUNNY SNORES": {
+    "grid": {
+      "1-1": "[snoring]",
+      "1-2": "[Snoring]",
+      "1-3": "[Snore!]",
+      "2-1": "[bunny snoring]",
+      "2-2": "[The bunny snores]",
+      "2-3": "[Snore! bunny snoring]",
+      "3-1": "[The sound of the bunny snoring]",
+      "3-2": "[The sound of the bunny snoring.]",
+      "3-3": "[Snore! The sound of the bunny snoring]"
+    },
+    "plain": "[bunny snoring]",
+    "onomatopoeic": "[Snore \u2014 bunny snoring]"
+  },
+  "BUNNY YAWNS": {
+    "grid": {
+      "1-1": "[yawning]",
+      "1-2": "[Yawning]",
+      "1-3": "[Yawn!]",
+      "2-1": "[bunny yawning]",
+      "2-2": "[The bunny yawns]",
+      "2-3": "[Yawn! bunny yawning]",
+      "3-1": "[The sound of the bunny yawning]",
+      "3-2": "[The sound of the bunny yawning.]",
+      "3-3": "[Yawn! The sound of the bunny yawning]"
+    },
+    "plain": "[bunny yawning]",
+    "onomatopoeic": "[Yawn \u2014 bunny yawning]"
+  },
+  "BUTTERFLY SPLATS": {
+    "grid": {
+      "1-1": "[splat]",
+      "1-2": "[Splat]",
+      "1-3": "[Splat!]",
+      "2-1": "[butterfly splat]",
+      "2-2": "[A butterfly splats]",
+      "2-3": "[Splat! butterfly splat]",
+      "3-1": "[A butterfly makes a splatting sound]",
+      "3-2": "[A butterfly makes a splatting sound.]",
+      "3-3": "[Splat! A butterfly makes a splatting sound]"
+    },
+    "plain": "[butterfly splat]",
+    "onomatopoeic": "[Splat \u2014 butterfly splat]"
+  },
+  "CONKERS THUD": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[conkers thudding]",
+      "2-2": "[Conkers thud]",
+      "2-3": "[Thud! conkers thudding]",
+      "3-1": "[Conkers make thudding sounds]",
+      "3-2": "[Conkers make thudding sounds.]",
+      "3-3": "[Thud! Conkers make thudding sounds]"
+    },
+    "plain": "[conkers thudding]",
+    "onomatopoeic": "[Thud \u2014 conkers thudding]"
+  },
+  "CONKERS WHOOSH": {
+    "grid": {
+      "1-1": "[whooshing]",
+      "1-2": "[Whooshing]",
+      "1-3": "[Whoosh!]",
+      "2-1": "[conkers whooshing]",
+      "2-2": "[Conkers whoosh]",
+      "2-3": "[Whoosh! conkers whooshing]",
+      "3-1": "[Conkers make whooshing sounds]",
+      "3-2": "[Conkers make whooshing sounds.]",
+      "3-3": "[Whoosh! Conkers make whooshing sounds]"
+    },
+    "plain": "[conkers whooshing]",
+    "onomatopoeic": "[Whoosh \u2014 conkers whooshing]"
+  },
+  "EARS POP": {
+    "grid": {
+      "1-1": "[popping]",
+      "1-2": "[Popping]",
+      "1-3": "[Pop!]",
+      "2-1": "[ears popping]",
+      "2-2": "[Ears pop]",
+      "2-3": "[Pop! ears popping]",
+      "3-1": "[The sound of ears popping]",
+      "3-2": "[The sound of ears popping.]",
+      "3-3": "[Pop! The sound of ears popping]"
+    },
+    "plain": "[ears popping]",
+    "onomatopoeic": "[Pop \u2014 ears popping]"
+  },
+  "FLY BUZZES": {
+    "grid": {
+      "1-1": "[buzzing]",
+      "1-2": "[Buzzing]",
+      "1-3": "[Buzz!]",
+      "2-1": "[fly buzzing]",
+      "2-2": "[A fly buzzes]",
+      "2-3": "[Buzz! fly buzzing]",
+      "3-1": "[The buzzing sound of a fly]",
+      "3-2": "[The buzzing sound of a fly.]",
+      "3-3": "[Buzz! The buzzing sound of a fly]"
+    },
+    "plain": "[fly buzzing]",
+    "onomatopoeic": "[Buzz \u2014 fly buzzing]"
+  },
+  "GRASS RUSTLING": {
+    "grid": {
+      "1-1": "[rustling]",
+      "1-2": "[Rustling]",
+      "1-3": "[Rustle!]",
+      "2-1": "[grass rustling]",
+      "2-2": "[Grass rustles]",
+      "2-3": "[Rustle! grass rustling]",
+      "3-1": "[The sound of grass rustling]",
+      "3-2": "[The sound of grass rustling.]",
+      "3-3": "[Rustle! The sound of grass rustling]"
+    },
+    "plain": "[grass rustling]",
+    "onomatopoeic": "[Rustle \u2014 grass rustling]"
+  },
+  "LEAVES RUSTLE": {
+    "grid": {
+      "1-1": "[rustling]",
+      "1-2": "[Rustling]",
+      "1-3": "[Rustle!]",
+      "2-1": "[leaves rustling]",
+      "2-2": "[Leaves rustle]",
+      "2-3": "[Rustle! leaves rustling]",
+      "3-1": "[The sound of leaves rustling]",
+      "3-2": "[The sound of leaves rustling.]",
+      "3-3": "[Rustle! The sound of leaves rustling]"
+    },
+    "plain": "[leaves rustling]",
+    "onomatopoeic": "[Rustle \u2014 leaves rustling]"
+  },
+  "LOG CRUNCHES": {
+    "grid": {
+      "1-1": "[crunching]",
+      "1-2": "[Crunching]",
+      "1-3": "[Crunch!]",
+      "2-1": "[log crunching]",
+      "2-2": "[A log crunches]",
+      "2-3": "[Crunch! log crunching]",
+      "3-1": "[A log makes a crunching sound]",
+      "3-2": "[A log makes a crunching sound.]",
+      "3-3": "[Crunch! A log makes a crunching sound]"
+    },
+    "plain": "[log crunching]",
+    "onomatopoeic": "[Crunch \u2014 log crunching]"
+  },
+  "LOG THUDS": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[log thud]",
+      "2-2": "[A log thuds]",
+      "2-3": "[Thud! log thud]",
+      "3-1": "[A log makes a thudding sound]",
+      "3-2": "[A log makes a thudding sound.]",
+      "3-3": "[Thud! A log makes a thudding sound]"
+    },
+    "plain": "[log thud]",
+    "onomatopoeic": "[Thud \u2014 log thud]"
+  },
+  "MUSIC CRESCENDOS": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music]",
+      "1-3": "[Music]",
+      "2-1": "[music crescendo]",
+      "2-2": "[Music builds]",
+      "2-3": "[Music builds]",
+      "3-1": "[Music grows in intensity]",
+      "3-2": "[Music grows in intensity.]",
+      "3-3": "[Music grows in intensity.]"
+    },
+    "plain": "[music crescendo]"
+  },
+  "NUT CRUNCHES": {
+    "grid": {
+      "1-1": "[crunching]",
+      "1-2": "[Crunching]",
+      "1-3": "[Crunch!]",
+      "2-1": "[nut crunching]",
+      "2-2": "[A nut crunches]",
+      "2-3": "[Crunch! nut crunching]",
+      "3-1": "[The sound of a nut crunching]",
+      "3-2": "[The sound of a nut crunching.]",
+      "3-3": "[Crunch! The sound of a nut crunching]"
+    },
+    "plain": "[nut crunching]",
+    "onomatopoeic": "[Crunch \u2014 nut crunching]"
+  },
+  "NUT CRUNCHING": {
+    "grid": {
+      "1-1": "[crunching]",
+      "1-2": "[Crunching]",
+      "1-3": "[Crunch!]",
+      "2-1": "[nut crunching]",
+      "2-2": "[A nut crunches]",
+      "2-3": "[Crunch! nut crunching]",
+      "3-1": "[The sound of a nut crunching]",
+      "3-2": "[The sound of a nut crunching.]",
+      "3-3": "[Crunch! The sound of a nut crunching]"
+    },
+    "plain": "[nut crunching]",
+    "onomatopoeic": "[Crunch \u2014 nut crunching]"
+  },
+  "NUT THUDS": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[nut thud]",
+      "2-2": "[A nut thuds]",
+      "2-3": "[Thud! nut thud]",
+      "3-1": "[A nut makes a thudding sound]",
+      "3-2": "[A nut makes a thudding sound.]",
+      "3-3": "[Thud! A nut makes a thudding sound]"
+    },
+    "plain": "[nut thud]",
+    "onomatopoeic": "[Thud \u2014 nut thud]"
+  },
+  "NUT WHOOSHES": {
+    "grid": {
+      "1-1": "[whooshing]",
+      "1-2": "[Whooshing]",
+      "1-3": "[Whoosh!]",
+      "2-1": "[nut whooshing]",
+      "2-2": "[A nut whooshes]",
+      "2-3": "[Whoosh! nut whooshing]",
+      "3-1": "[A nut makes a whooshing sound]",
+      "3-2": "[A nut makes a whooshing sound.]",
+      "3-3": "[Whoosh! A nut makes a whooshing sound]"
+    },
+    "plain": "[nut whooshing]",
+    "onomatopoeic": "[Whoosh \u2014 nut whooshing]"
+  },
+  "NUTS THUDDING": {
+    "grid": {
+      "1-1": "[impacts]",
+      "1-2": "[Impacts]",
+      "1-3": "[Thud!]",
+      "2-1": "[nuts thudding]",
+      "2-2": "[Nuts thud]",
+      "2-3": "[Thud! nuts thudding]",
+      "3-1": "[Nuts make thudding sounds]",
+      "3-2": "[Nuts make thudding sounds.]",
+      "3-3": "[Thud! Nuts make thudding sounds]"
+    },
+    "plain": "[nuts thudding]",
+    "onomatopoeic": "[Thud \u2014 nuts thudding]"
+  },
+  "NUTS WHOOSHING": {
+    "grid": {
+      "1-1": "[whooshing]",
+      "1-2": "[Whooshing]",
+      "1-3": "[Whoosh!]",
+      "2-1": "[nuts whooshing]",
+      "2-2": "[Nuts whoosh]",
+      "2-3": "[Whoosh! nuts whooshing]",
+      "3-1": "[Nuts make whooshing sounds]",
+      "3-2": "[Nuts make whooshing sounds.]",
+      "3-3": "[Whoosh! Nuts make whooshing sounds]"
+    },
+    "plain": "[nuts whooshing]",
+    "onomatopoeic": "[Whoosh \u2014 nuts whooshing]"
+  },
+  "POOP SPLATS": {
+    "grid": {
+      "1-1": "[splat]",
+      "1-2": "[Splat]",
+      "1-3": "[Splat!]",
+      "2-1": "[poop splat]",
+      "2-2": "[Poop splats]",
+      "2-3": "[Splat! poop splat]",
+      "3-1": "[Poop makes a splatting sound]",
+      "3-2": "[Poop makes a splatting sound.]",
+      "3-3": "[Splat! Poop makes a splatting sound]"
+    },
+    "plain": "[poop splat]",
+    "onomatopoeic": "[Splat \u2014 poop splat]"
+  },
+  "ROCK CRASHES": {
+    "grid": {
+      "1-1": "[crashing]",
+      "1-2": "[Crashing]",
+      "1-3": "[Crash!]",
+      "2-1": "[rock crash]",
+      "2-2": "[A rock crashes]",
+      "2-3": "[Crash! rock crash]",
+      "3-1": "[A rock makes a crashing sound]",
+      "3-2": "[A rock makes a crashing sound.]",
+      "3-3": "[Crash! A rock makes a crashing sound]"
+    },
+    "plain": "[rock crash]",
+    "onomatopoeic": "[Crash \u2014 rock crash]"
+  },
+  "ROPES CREAK": {
+    "grid": {
+      "1-1": "[creaking]",
+      "1-2": "[Creaking]",
+      "1-3": "[Creak!]",
+      "2-1": "[ropes creaking]",
+      "2-2": "[Ropes creak]",
+      "2-3": "[Creak! ropes creaking]",
+      "3-1": "[The sound of ropes creaking]",
+      "3-2": "[The sound of ropes creaking.]",
+      "3-3": "[Creak! The sound of ropes creaking]"
+    },
+    "plain": "[ropes creaking]",
+    "onomatopoeic": "[Creak \u2014 ropes creaking]"
+  },
+  "SNORES": {
+    "grid": {
+      "1-1": "[snoring]",
+      "1-2": "[Snoring]",
+      "1-3": "[Snore!]",
+      "2-1": "[snoring]",
+      "2-2": "[Snoring is heard]",
+      "2-3": "[Snore! snoring]",
+      "3-1": "[The sound of snoring]",
+      "3-2": "[The sound of snoring.]",
+      "3-3": "[Snore! The sound of snoring]"
+    },
+    "plain": "[snoring]",
+    "onomatopoeic": "[Snore \u2014 snoring]"
+  },
+  "SQUIRREL CLAPS": {
+    "grid": {
+      "1-1": "[clapping]",
+      "1-2": "[Clapping]",
+      "1-3": "[Clap!]",
+      "2-1": "[squirrel clapping]",
+      "2-2": "[A squirrel claps]",
+      "2-3": "[Clap! squirrel clapping]",
+      "3-1": "[The sound of a squirrel clapping]",
+      "3-2": "[The sound of a squirrel clapping.]",
+      "3-3": "[Clap! The sound of a squirrel clapping]"
+    },
+    "plain": "[squirrel clapping]",
+    "onomatopoeic": "[Clap \u2014 squirrel clapping]"
+  },
+  "SQUIRREL LAUGHS": {
+    "grid": {
+      "1-1": "[laughter]",
+      "1-2": "[Laughter]",
+      "1-3": "[Laughter]",
+      "2-1": "[squirrel laughing]",
+      "2-2": "[A squirrel laughs]",
+      "2-3": "[A squirrel laughs]",
+      "3-1": "[The sound of a squirrel laughing]",
+      "3-2": "[The sound of a squirrel laughing.]",
+      "3-3": "[The sound of a squirrel laughing.]"
+    },
+    "plain": "[squirrel laughing]"
+  },
+  "SQUIRREL SCUTTLES": {
+    "grid": {
+      "1-1": "[scuttling]",
+      "1-2": "[Scuttling]",
+      "1-3": "[Scuttling]",
+      "2-1": "[squirrel scuttling]",
+      "2-2": "[A squirrel scuttles]",
+      "2-3": "[A squirrel scuttles]",
+      "3-1": "[The sound of a squirrel scuttling]",
+      "3-2": "[The sound of a squirrel scuttling.]",
+      "3-3": "[The sound of a squirrel scuttling.]"
+    },
+    "plain": "[squirrel scuttling]"
+  },
+  "SQUIRREL SNAPS FINGERS": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[squirrel's fingers snapping]",
+      "2-2": "[A squirrel snaps its fingers]",
+      "2-3": "[Snap! squirrel's fingers snapping]",
+      "3-1": "[The sound of a squirrel snapping its fingers]",
+      "3-2": "[The sound of a squirrel snapping its fingers.]",
+      "3-3": "[Snap! The sound of a squirrel snapping its fingers]"
+    },
+    "plain": "[squirrel's fingers snapping]",
+    "onomatopoeic": "[Snap \u2014 squirrel's fingers snapping]"
+  },
+  "SQUIRREL SQUEAKS": {
+    "grid": {
+      "1-1": "[squeaking]",
+      "1-2": "[Squeaking]",
+      "1-3": "[Squeak!]",
+      "2-1": "[squirrel squeaking]",
+      "2-2": "[A squirrel squeaks]",
+      "2-3": "[Squeak! squirrel squeaking]",
+      "3-1": "[The sound of a squirrel squeaking]",
+      "3-2": "[The sound of a squirrel squeaking.]",
+      "3-3": "[Squeak! The sound of a squirrel squeaking]"
+    },
+    "plain": "[squirrel squeaking]",
+    "onomatopoeic": "[Squeak \u2014 squirrel squeaking]"
+  },
+  "SQUIRREL SQUEAKS ANGRILY": {
+    "grid": {
+      "1-1": "[squeaking]",
+      "1-2": "[Squeaking]",
+      "1-3": "[Squeak!]",
+      "2-1": "[squirrel squeaking]",
+      "2-2": "[A squirrel squeaks]",
+      "2-3": "[Squeak! squirrel squeaking]",
+      "3-1": "[A squirrel squeaks angrily]",
+      "3-2": "[A squirrel squeaks angrily.]",
+      "3-3": "[Squeak! A squirrel squeaks angrily]"
+    },
+    "plain": "[squirrel squeaking]",
+    "onomatopoeic": "[Squeak \u2014 squirrel squeaking]"
+  },
+  "SQUIRREL SQUEAKS IN PAIN": {
+    "grid": {
+      "1-1": "[squeaking]",
+      "1-2": "[Squeaking]",
+      "1-3": "[Squeak!]",
+      "2-1": "[squirrel squeaking]",
+      "2-2": "[A squirrel squeaks]",
+      "2-3": "[Squeak! squirrel squeaking]",
+      "3-1": "[A squirrel squeaks in pain]",
+      "3-2": "[A squirrel squeaks in pain.]",
+      "3-3": "[Squeak! A squirrel squeaks in pain]"
+    },
+    "plain": "[squirrel squeaking]",
+    "onomatopoeic": "[Squeak \u2014 squirrel squeaking]"
+  },
+  "SQUIRREL SQUEAKS ORDERS": {
+    "grid": {
+      "1-1": "[squeaking]",
+      "1-2": "[Squeaking]",
+      "1-3": "[Squeak!]",
+      "2-1": "[squirrel squeaking]",
+      "2-2": "[A squirrel squeaks]",
+      "2-3": "[Squeak! squirrel squeaking]",
+      "3-1": "[A squirrel squeaks orders]",
+      "3-2": "[A squirrel squeaks orders.]",
+      "3-3": "[Squeak! A squirrel squeaks orders]"
+    },
+    "plain": "[squirrel squeaking]",
+    "onomatopoeic": "[Squeak \u2014 squirrel squeaking]"
+  },
+  "SQUIRREL SQUEALS": {
+    "grid": {
+      "1-1": "[squealing]",
+      "1-2": "[Squealing]",
+      "1-3": "[Squealing]",
+      "2-1": "[squirrel squealing]",
+      "2-2": "[A squirrel squeals]",
+      "2-3": "[A squirrel squeals]",
+      "3-1": "[The sound of a squirrel squealing]",
+      "3-2": "[The sound of a squirrel squealing.]",
+      "3-3": "[The sound of a squirrel squealing.]"
+    },
+    "plain": "[squirrel squealing]"
+  },
+  "SQUIRRELS LAUGHING": {
+    "grid": {
+      "1-1": "[laughter]",
+      "1-2": "[Laughter]",
+      "1-3": "[Laughter]",
+      "2-1": "[squirrels laughing]",
+      "2-2": "[Squirrels laugh]",
+      "2-3": "[Squirrels laugh]",
+      "3-1": "[The sound of squirrels laughing]",
+      "3-2": "[The sound of squirrels laughing.]",
+      "3-3": "[The sound of squirrels laughing.]"
+    },
+    "plain": "[squirrels laughing]"
+  },
+  "SQUIRRELS SNIFFING": {
+    "grid": {
+      "1-1": "[sniffing]",
+      "1-2": "[Sniffing]",
+      "1-3": "[Sniff!]",
+      "2-1": "[squirrels sniffing]",
+      "2-2": "[Squirrels sniff]",
+      "2-3": "[Sniff! squirrels sniffing]",
+      "3-1": "[The sound of squirrels sniffing]",
+      "3-2": "[The sound of squirrels sniffing.]",
+      "3-3": "[Sniff! The sound of squirrels sniffing]"
+    },
+    "plain": "[squirrels sniffing]",
+    "onomatopoeic": "[Sniff \u2014 squirrels sniffing]"
+  },
+  "THUD": {
+    "grid": {
+      "1-1": "[impact]",
+      "1-2": "[Impact]",
+      "1-3": "[Thud!]",
+      "2-1": "[thud]",
+      "2-2": "[A thud is heard]",
+      "2-3": "[Thud! thud]",
+      "3-1": "[The sound of a thud]",
+      "3-2": "[The sound of a thud.]",
+      "3-3": "[Thud! The sound of a thud]"
+    },
+    "plain": "[thud]",
+    "onomatopoeic": "[Thud \u2014 thud]"
+  },
+  "TRAP PINGS": {
+    "grid": {
+      "1-1": "[ping]",
+      "1-2": "[Ping]",
+      "1-3": "[Ping!]",
+      "2-1": "[trap ping]",
+      "2-2": "[A trap pings]",
+      "2-3": "[Ping! trap ping]",
+      "3-1": "[A trap makes a pinging sound]",
+      "3-2": "[A trap makes a pinging sound.]",
+      "3-3": "[Ping! A trap makes a pinging sound]"
+    },
+    "plain": "[trap ping]",
+    "onomatopoeic": "[Ping \u2014 trap ping]"
+  },
+  "TRAPS SNAP": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[traps snapping]",
+      "2-2": "[Traps snap]",
+      "2-3": "[Snap! traps snapping]",
+      "3-1": "[Traps make snapping sounds]",
+      "3-2": "[Traps make snapping sounds.]",
+      "3-3": "[Snap! Traps make snapping sounds]"
+    },
+    "plain": "[traps snapping]",
+    "onomatopoeic": "[Snap \u2014 traps snapping]"
+  },
+  "TRAPS SNAPPING": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[traps snapping]",
+      "2-2": "[Traps snap]",
+      "2-3": "[Snap! traps snapping]",
+      "3-1": "[Traps make snapping sounds]",
+      "3-2": "[Traps make snapping sounds.]",
+      "3-3": "[Snap! Traps make snapping sounds]"
+    },
+    "plain": "[traps snapping]",
+    "onomatopoeic": "[Snap \u2014 traps snapping]"
+  },
+  "TREE RUSTLES SUSPICIOUSLY": {
+    "grid": {
+      "1-1": "[rustling]",
+      "1-2": "[Rustling]",
+      "1-3": "[Rustle!]",
+      "2-1": "[tree rustling]",
+      "2-2": "[A tree rustles]",
+      "2-3": "[Rustle! tree rustling]",
+      "3-1": "[The sound of a tree rustling]",
+      "3-2": "[The sound of a tree rustling.]",
+      "3-3": "[Rustle! The sound of a tree rustling]"
+    },
+    "plain": "[tree rustling]",
+    "onomatopoeic": "[Rustle \u2014 tree rustling]"
+  },
+  "TWIG SNAPS": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[twig snapping]",
+      "2-2": "[A twig snaps]",
+      "2-3": "[Snap! twig snapping]",
+      "3-1": "[A twig makes a snapping sound]",
+      "3-2": "[A twig makes a snapping sound.]",
+      "3-3": "[Snap! A twig makes a snapping sound]"
+    },
+    "plain": "[twig snapping]",
+    "onomatopoeic": "[Snap \u2014 twig snapping]"
+  },
+  "VINE SNAPS": {
+    "grid": {
+      "1-1": "[snapping]",
+      "1-2": "[Snapping]",
+      "1-3": "[Snap!]",
+      "2-1": "[vine snapping]",
+      "2-2": "[A vine snaps]",
+      "2-3": "[Snap! vine snapping]",
+      "3-1": "[A vine makes a snapping sound]",
+      "3-2": "[A vine makes a snapping sound.]",
+      "3-3": "[Snap! A vine makes a snapping sound]"
+    },
+    "plain": "[vine snapping]",
+    "onomatopoeic": "[Snap \u2014 vine snapping]"
+  },
+  "WIND BLOWS": {
+    "grid": {
+      "1-1": "[wind]",
+      "1-2": "[Wind]",
+      "1-3": "[Wind]",
+      "2-1": "[wind blowing]",
+      "2-2": "[Wind blows]",
+      "2-3": "[Wind blows]",
+      "3-1": "[The sound of wind blowing]",
+      "3-2": "[The sound of wind blowing.]",
+      "3-3": "[The sound of wind blowing.]"
+    },
+    "plain": "[wind blowing]"
+  },
+  "WINGS FLAP": {
+    "grid": {
+      "1-1": "[flapping]",
+      "1-2": "[Flapping]",
+      "1-3": "[Flapping]",
+      "2-1": "[wings flapping]",
+      "2-2": "[Wings flap]",
+      "2-3": "[Wings flap]",
+      "3-1": "[The sound of wings flapping]",
+      "3-2": "[The sound of wings flapping.]",
+      "3-3": "[The sound of wings flapping.]"
+    },
+    "plain": "[wings flapping]"
+  },
+  "WINGS FLAPPING": {
+    "grid": {
+      "1-1": "[flapping]",
+      "1-2": "[Flapping]",
+      "1-3": "[Flapping]",
+      "2-1": "[wings flapping]",
+      "2-2": "[Wings flap]",
+      "2-3": "[Wings flap]",
+      "3-1": "[The sound of wings flapping]",
+      "3-2": "[The sound of wings flapping.]",
+      "3-3": "[The sound of wings flapping.]"
+    },
+    "plain": "[wings flapping]"
+  },
+  "WINGS POP": {
+    "grid": {
+      "1-1": "[popping]",
+      "1-2": "[Popping]",
+      "1-3": "[Pop!]",
+      "2-1": "[wings popping]",
+      "2-2": "[Wings pop]",
+      "2-3": "[Pop! wings popping]",
+      "3-1": "[Wings make popping sounds]",
+      "3-2": "[Wings make popping sounds.]",
+      "3-3": "[Pop! Wings make popping sounds]"
+    },
+    "plain": "[wings popping]",
+    "onomatopoeic": "[Pop \u2014 wings popping]"
+  },
+  "SERENE MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[serene music]",
+      "2-2": "[Serene music plays]",
+      "2-3": "[A serene musical passage]",
+      "3-1": "[Music with a serene character]",
+      "3-2": "[Music plays with a serene character]",
+      "3-3": "[A musical passage with a serene character]"
+    },
+    "plain": "[serene music]"
+  },
+  "DRAMATIC MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[dramatic music]",
+      "2-2": "[Dramatic music plays]",
+      "2-3": "[A dramatic musical passage]",
+      "3-1": "[Music with a dramatic character]",
+      "3-2": "[Music plays with a dramatic character]",
+      "3-3": "[A musical passage with a dramatic character]"
+    },
+    "plain": "[dramatic music]"
+  },
+  "INQUISITIVE MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[inquisitive music]",
+      "2-2": "[Inquisitive music plays]",
+      "2-3": "[An inquisitive musical passage]",
+      "3-1": "[Music with a inquisitive character]",
+      "3-2": "[Music plays with a inquisitive character]",
+      "3-3": "[A musical passage with a inquisitive character]"
+    },
+    "plain": "[inquisitive music]"
+  },
+  "JOVIAL MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[jovial music]",
+      "2-2": "[Jovial music plays]",
+      "2-3": "[A jovial musical passage]",
+      "3-1": "[Music with a jovial character]",
+      "3-2": "[Music plays with a jovial character]",
+      "3-3": "[A musical passage with a jovial character]"
+    },
+    "plain": "[jovial music]"
+  },
+  "MILITARY MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[military music]",
+      "2-2": "[Military music plays]",
+      "2-3": "[A military musical passage]",
+      "3-1": "[Music with a military character]",
+      "3-2": "[Music plays with a military character]",
+      "3-3": "[A musical passage with a military character]"
+    },
+    "plain": "[military music]"
+  },
+  "MOTIVATIONAL MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[motivational music]",
+      "2-2": "[Motivational music plays]",
+      "2-3": "[A motivational musical passage]",
+      "3-1": "[Music with a motivational character]",
+      "3-2": "[Music plays with a motivational character]",
+      "3-3": "[A musical passage with a motivational character]"
+    },
+    "plain": "[motivational music]"
+  },
+  "SUSPENSFUL MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[suspenseful music]",
+      "2-2": "[Suspenseful music plays]",
+      "2-3": "[A suspenseful musical passage]",
+      "3-1": "[Music with a suspenseful character]",
+      "3-2": "[Music plays with a suspenseful character]",
+      "3-3": "[A musical passage with a suspenseful character]"
+    },
+    "plain": "[suspenseful music]"
+  },
+  "TRIUMPHANT MUSIC": {
+    "grid": {
+      "1-1": "[music]",
+      "1-2": "[Music plays]",
+      "1-3": "[A musical passage]",
+      "2-1": "[triumphant music]",
+      "2-2": "[Triumphant music plays]",
+      "2-3": "[A triumphant musical passage]",
+      "3-1": "[Music with a triumphant character]",
+      "3-2": "[Music plays with a triumphant character]",
+      "3-3": "[A musical passage with a triumphant character]"
+    },
+    "plain": "[triumphant music]"
+  }
+}

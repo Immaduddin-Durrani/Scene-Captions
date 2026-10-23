@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "authentication": "Replacement key successfully invoked model",
+  "reason": "Model hallucinated audible sounds on digitally silent 5-second WAV in both thinking and non-thinking modes. Non-speech labels and timestamps are not validated.",
+  "control_files": [
+    "nim-silence-probe.json",
+    "nim-silence-thinking-control.json",
+    "nim-beep-thinking-control.json"
+  ],
+  "film_probe": "nim-ten-clip-probe.json",
+  "full_film_generation": false,
+  "installed_candidates": false,
+  "previous_illustrative_track": "withdrawn",
+  "local_classifier": "AST analysis completed on full soundtrack; no non-music class reached 0.85 in saved windows. Not an adequate replacement for the requested sound-effect captions."
+}

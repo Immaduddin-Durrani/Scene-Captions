@@ -1,0 +1,36 @@
+{
+  "id": "chatcmpl-4de055c1-7cdc-4097-95ea-0d84af182a37",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "Electronic beeps and a low hum are audible.",
+        "role": "assistant",
+        "reasoning_content": "The audio contains a sequence of electronic beeps and a low-frequency hum. The beeps are short, distinct, and occur in a pattern, while the hum is continuous and low-pitched. There is no speech or other environmental noise. The sounds are clearly electronic and artificial, likely from a device or system. The most accurate description of the audible non-speech sounds is a series of electronic beeps and a low hum.\n"
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1792763980,
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": {
+    "prompt_tokens": 113,
+    "completion_tokens": 100,
+    "total_tokens": 213
+  },
+  "nvext": {
+    "scheduler_snapshot": {
+      "num_running_reqs": 15,
+      "num_waiting_reqs": 0
+    },
+    "request_throughput": {
+      "e2e_latency_seconds": 2.631101608276367,
+      "generation_tokens_per_second": 38.00689402698892,
+      "draft_tokens_per_second": 0.0
+    }
+  }
+}
