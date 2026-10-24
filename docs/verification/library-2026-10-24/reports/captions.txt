@@ -1,0 +1,7 @@
+
+> scene-captions@0.1.0 validate:captions
+> node --experimental-strip-types scripts/validate-captions.ts
+
+data/captions/big-buck-bunny.json: 87 sound cues, 9 variants each; 0 dialogue cues; draft
+data/captions/sintel.json: 0 sound cues, 9 variants each; 26 dialogue cues; draft
+data/captions/tears-of-steel.json: 0 sound cues, 9 variants each; 76 dialogue cues; draft

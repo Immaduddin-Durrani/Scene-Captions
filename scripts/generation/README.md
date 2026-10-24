@@ -39,3 +39,23 @@ Current result: silence calibration failed again. Thus automatic audio corrobora
 Here, budget means caption characters relative to display time, not money or API tokens. The editing heuristic is 20 characters/second, capped at 280 characters and allowing an existing longer source label to remain intact. This is not a validated DHH threshold. Reports flag difficult cases; the tool never silently extends cue timing to make longer text fit. Shorter text still needs an accuracy review.
 
 Run local tests without API calls using `python -m unittest discover -s tests/offline -v`. See [model candidates/results](../../docs/integrations/NVIDIA_MODELS.md) for capability limits and the [current state](../../docs/PROJECT_STATE.md) for the handoff.
+
+## Human-reviewed preparation when automation fails
+
+Use the new standard-library tool with existing local, rights-clear nonparticipant media. It needs the installed ffmpeg, Node/project schema validator and Python; no key, new package, model request or video download is needed.
+
+```sh
+python scripts/prepare-caption-review.py --input data/captions/big-buck-bunny.json --video public/media/big-buck-bunny.mp4 --output-directory artifacts/caption-review/my-new-packet --rights-clear --limit 3
+```
+
+Open index.html in the new directory. Listen first, then reveal the source and all variants. Clips include one second of context on each side, clamped to the movie bounds; clips.json records the source interval in local clip coordinates. Source timing and playback data are unchanged.
+
+Edit review.json with a human reviewer ID and decisions (`pending`, `approved`, `needs-changes`) for every check and all nine grid cells. Nothing is pre-approved. A three-cue packet is a rehearsal of review and cannot approve an 87-cue track. Use `--limit 0` to prepare a complete packet locally, without model calls. Fix captions before review approval and rebuild the packet when their bytes change.
+
+```sh
+python scripts/prepare-caption-review.py --input data/captions/big-buck-bunny.json --video public/media/big-buck-bunny.mp4 --rights-clear --check artifacts/caption-review/my-new-packet/review.json
+```
+
+Checking rejects wrong hashes, changed/unknown/duplicate/missing cues, absent reviewer identity, unapproved checks and missing grid decisions. It reports documented self-reported review completion only; it never installs output, marks a track reviewed, certifies sound truth or claims independent/DHH review. Follow up with listening/readability and DHH review before study use. The current three-cue packet has **no completed human approvals**.
+
+Explicit non-stop model completions are now rejected even if JSON parses. Atomic wording rejects hidden additional bracket groups and empty labels; semantic errors still need review. See the [current investigation](../../docs/audits/2026-10-24-investigation.md) for all controls and uncertainty.

@@ -37,3 +37,5 @@ _Avoid_: Calling cue density measured scene complexity or cognitive load.
 **Audio corroboration**: Checking a source caption's sound description and timing against the corresponding recording. A model's agreement is supporting evidence to review, not proof that the caption is correct.
 
 **Rehearsal**: An opt-in technical trial of the app and its export flow. It is not an approved participant study or research evidence.
+
+**Human-review receipt**: A record binding a reviewer’s stated listening, timing, wording, simultaneous-event, reading-time and per-variant decisions to exact video/caption/cue content. Completeness checking is not proof of sound correctness, independent review, participant approval or automatic installation. A partial packet cannot approve a whole track.

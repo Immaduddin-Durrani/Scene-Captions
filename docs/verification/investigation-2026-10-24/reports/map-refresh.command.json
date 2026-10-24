@@ -1,0 +1,7 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/graphify/.venv/bin/python",
+    "scripts/map-codebase.py"
+  ],
+  "exit_code": 0
+}

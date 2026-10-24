@@ -1,5 +1,9 @@
 # Phase 1 verification
 
+Latest follow-up: [local film integration and caption coverage](library-2026-10-24/README.md).
+
+Latest checks: [24 October model investigation and component cleanup](investigation-2026-10-24/README.md). Earlier results below retain their original scope.
+
 Checked locally on macOS / Apple silicon with Node 25.2.1 and Google Chrome on 23 October 2026.
 
 ## Current sourced-caption result

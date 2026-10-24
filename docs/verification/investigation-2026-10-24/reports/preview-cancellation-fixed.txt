@@ -1,0 +1,30 @@
+### Result
+{"escapeCancel":true,"playCancel":true,"seekCancel":true,"draftNotPersisted":true}
+### Ran Playwright code
+```js
+await (async page => {
+ await page.goto('http://127.0.0.1:3000');
+ await page.evaluate(() => localStorage.removeItem('scenecaptions.profile.v1'));
+ await page.reload();
+ await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+ const track = await (await page.request.get('http://127.0.0.1:3000/research/demo-captions.json')).json();
+ const apple = track.cues.find(c => c.original_text === '[APPLE THUDS]');
+ await page.locator('.cue-row').nth(track.cues.indexOf(apple)).click();
+ await page.locator('.caption-lines').waitFor();
+ await page.getByRole('button',{name:'Rich',exact:true}).click();
+ const preview = page.getByRole('button',{name:'Preview this cue in the video',exact:true});
+ await preview.click(); await page.locator('.caption-preview-notice').waitFor({state:'visible'}); await page.locator('video').focus(); await page.keyboard.press('Escape');
+ await page.locator('.caption-preview-notice').waitFor({state:'hidden'});
+ await preview.click(); await page.locator('.caption-preview-notice').waitFor({state:'visible'}); await page.getByRole('button',{name:'Play video',exact:true}).first().click();
+ await page.locator('.caption-preview-notice').waitFor({state:'hidden'});
+ await page.getByRole('button',{name:'Pause video',exact:true}).click();
+ await preview.click(); await page.locator('.caption-preview-notice').waitFor({state:'visible'}); await page.locator('#timeline').fill('90');
+ await page.locator('.caption-preview-notice').waitFor({state:'hidden'});
+ await page.waitForFunction(() => Math.abs(document.querySelector('video').currentTime - 90) < .1);
+ const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('scenecaptions.profile.v1')));
+ if (saved && saved.detail === 3) throw new Error('Cancelled preview persisted draft');
+ return {escapeCancel:true,playCancel:true,seekCancel:true,draftNotPersisted:true};
+})(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-24T09-20-23-420Z.log#L77-L80

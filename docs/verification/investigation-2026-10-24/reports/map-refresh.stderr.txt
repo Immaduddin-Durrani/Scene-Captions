@@ -1,0 +1,1 @@
+  warning: 8 code file(s) yielded no symbols (0.03 MB) — a data file, or source this extractor models no symbols for: scripts/browser-smoke.mjs, scripts/media/extract-demo.ps1, scripts/nim-audio-probe.py, scripts/verification/audit-2026-10-24/browser-smoke.mjs, scripts/verification/audit-2026-10-24/edge-cases.mjs (+3 more)

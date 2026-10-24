@@ -1,6 +1,14 @@
+# Current library integration — 24 October 2026
+
+The latest user request explicitly authorized downloading and integrating Sintel and Tears of Steel. Both official full 720p sources are now local and selectable alongside Big Buck Bunny, with independent posters, credits and precomputed English dialogue (26 / 76 cues). Title switching clears the previous workspace; rehearsal locks title selection. Full non-speech tracks for the two new films remain unprepared, and their sound-personalization controls are disabled. No successful automatic sound-caption generation or human review is claimed. See [coverage](LIBRARY_CAPTIONS.md) and [current evidence](verification/library-2026-10-24/README.md).
+
+Current library checks passed: 18 Node tests, 22 offline Python tests, types, all three dataset validations and production build; Chrome checked every new dialogue cue after seek/decode, the existing 87 sound cues, title isolation, transcript/readability behavior and rehearsal locking. These are implementation checks, not full listening approval.
+
+The previously refreshed Graphify map and Fallow reports describe the earlier investigation snapshot and are now stale for the changed player/schema/catalogue files. Their scores and input hashes remain historical evidence; no skill activation or fresh scan was requested for this follow-up.
+
 # Current project state
 
-Last updated: 24 October 2026, after player fixes and controlled model diagnostics. This is the current handoff summary; historical audit findings remain preserved. See [the fixes report](audits/2026-10-24-fixes.md) for current outcomes.
+Last updated: 24 October 2026, after the bounded model investigation and focused component cleanup. Read [the current investigation](audits/2026-10-24-investigation.md) and [current evidence](verification/investigation-2026-10-24/README.md). Prior fixes/audits remain historical evidence, not fresh checks of the new modules.
 
 ## Start here
 
@@ -40,11 +48,11 @@ Source-caption generation and corresponding-audio checks are now the agreed path
 
 ## Fresh verification and findings
 
-See [the original audit](audits/2026-10-24.md), [fixes report](audits/2026-10-24-fixes.md), and [fresh evidence index](verification/fixes-2026-10-24/README.md).
+See [the original audit](audits/2026-10-24.md), [fixes report](audits/2026-10-24-fixes.md), and [latest investigation](audits/2026-10-24-investigation.md) and [fresh evidence index](verification/investigation-2026-10-24/README.md).
 
-- Fresh verification: 13 Node tests and 14 offline Python tests passed; type checking, 87-cue validation and the production build passed on Windows with Node 24.21.0. Retry/timeout tests are simulated; a separate two-process pacing check passed without API calls.
+- Earlier investigation verification: 14 Node tests and 22 offline Python tests passed, plus types, 87-cue validation, production build and Chrome checks in the macOS checkout. Retry/timeout tests are simulated. The earlier Windows/two-process pacing evidence remains historical; no new cross-process network test is claimed.
 - Chrome regression checks passed for all 87 source intervals after actual seeks, play/pause, original/baseline, preference persistence, imports, rehearsal/export and the plan route. This does not establish continuous-play timing accuracy or sound truth.
-- Production dependency advisory check reported zero known vulnerabilities. This is not proof of supply-chain security.
+- The prior checkpoint’s production dependency advisory check reported zero known vulnerabilities; it was not repeated during this investigation. This is not proof of supply-chain security.
 - Fixed and browser-checked: draft preference loss/readability collapse, detail exceeding the maximum, missing starting original-override state, preview not actually trying the candidate, and elapsed export time increasing after recording stopped.
 - Windows ZIP extraction now uses the installed PowerShell/.NET ZIP reader; the cached official archive extracted successfully and matched the expected video hash. Existing video files are also hash-checked before reuse.
 - Seven verbose effect entries were shortened locally without adding facts or changing timing. The worst highlighted simultaneous-cue rich text fell from 68 to 28 characters in the same 0.541 seconds; it still needs reading review. The authoring heuristic flags 206 original/variant cases above 20 characters/second; this is not a validated DHH threshold.
@@ -54,10 +62,10 @@ The working track remains licensed/source-anchored with locally edited wording. 
 ## Maps and audit freshness
 
 - `docs/codebase-map.json`, `docs/codebase-map.html` and `docs/codebase-map-inputs.json`: refreshed deterministic source map, with per-file hashes and scope. See [the map guide](CODEBASE_MAP.md) for unmodeled boundaries. Hashes, not just Git HEAD, establish freshness because changes are uncommitted.
-- `graphify-out/graph.json`, `graphify-out/graph.html` and `graphify-out/GRAPH_REPORT.md`: separately refreshed broad local code-only scan, including structured JSON/evidence. No semantic document/media indexing or agents. These ignored outputs may be absent in another checkout.
-- Fresh Fallow results: `docs/verification/fixes-2026-10-24/reports/fallow-*.json`. Six unused-file candidates are manually invoked/historical utilities, not deletion proof. Seven clone groups include overlapping historical browser scripts; review the report's scope before refactoring. No unused dependencies/exports or cycles were reported.
+- The current authorized refresh is the committed source map: 63 files, 334 nodes and 740 edges, with zero semantic/model tokens. Eight inventoried files yielded no symbols. Broad ignored graphify-out outputs from earlier tasks are historical and were not refreshed or used as current proof.
+- Fresh Fallow results: `docs/verification/investigation-2026-10-24/reports/final-fallow*.json`. Six unused-file candidates are manually invoked/historical utilities, not deletion proof. Seven clone groups include overlapping historical browser scripts; review the report's scope before refactoring. No unused dependencies/exports or cycles were reported.
 - There are currently no configured architecture boundary rules. A zero architecture finding count does not mean those boundaries were measured.
-- Fallow health also flagged 13 heuristic findings, concentrated in dense UI components; its health gate is not clean. See the fixes report for recommended focused refactoring. Python rate/retry helpers were verified separately; Fallow's JS/TS health is not a Python audit.
+- Fallow 3.34.1 comparison: 62.6/C and 13 findings before, 63.2/C and 17 after cleanup. Main component cognitive complexity fell from 66/56/30/19 to 21/27/17/7 (player/workspace/preferences/rehearsal); branching is now distributed among cohesive owners, with residual cognitive/estimated-coverage findings. The health gate remains failed; no suppressions or invented coverage. Python helpers are verified separately. A newly reproduced preview/seek slider race is fixed by updating display time at both external and slider seek requests; native keyboard/pointer and Escape/play/slider cancellation checks pass.
 
 After structural changes, refresh an authorized local map or mark it stale and state what changed. After a substantial audit/milestone, run an authorized targeted Fallow check when useful. Save source revision/input coverage, command, results and limitations; never install automatic hooks or watchers to satisfy freshness.
 
@@ -65,14 +73,24 @@ Historical audit scripts remain under `scripts/verification/audit-2026-10-24/`; 
 
 ## Next work
 
-User media preparation is now complete (24 October): both titles have H.264/AAC video, posters and English VTT files. Local hashes match the generated records. Sintel: 1280x544, 888.032 seconds; Tears of Steel: 1280x534, 734.167 seconds. See [verification](verification/fixes-2026-10-24/reports/local-media.json). Listening and subtitle-timing review are still pending. The two requested pending limits remain: model caption/audio quality gates have not passed, and the saved Fallow report's component-complexity findings remain unresolved. No new model/Fallow run was performed for this push.
+User media preparation is now complete (24 October): both titles have H.264/AAC video, posters and English VTT files. Local hashes match the generated records. Sintel: 1280x544, 888.032 seconds; Tears of Steel: 1280x534, 734.167 seconds. See [verification](verification/fixes-2026-10-24/reports/local-media.json). Listening and subtitle-timing review are still pending. The model quality gates still have not passed. This follow-up performed ten single-attempt synthetic/text requests and measured focused component cleanup; the Fallow gate remains non-clean despite lower main-component complexity. A local contextual listening/review packet is now available; no human approval was fabricated.
 
 720p follow-up: the user rejected the initial 480p preparation setting. The helper now preserves the official 720p-release picture dimensions, reuses completed source downloads, and rebuilds lower-resolution/incomplete browser copies. Replacements are checked before publication; posters regenerate when the video is rebuilt. PowerShell syntax and four simulated checks passed (matching dimensions accepted; 480p, missing audio and truncated duration rejected). The user completed film preparation; no film download or conversion was run by the agent.
 
-Local-media preparation: the user explicitly requires agents to provide PowerShell commands instead of downloading films themselves. `scripts/media/prepare-library.ps1` prepares optional Sintel/Tears of Steel browser MP4s with audio, posters, available English subtitles and provenance records when the user runs it. See [the local media guide](LOCAL_MEDIA.md). The user completed the downloads/conversions; local output checks passed as recorded above. The app still has one built-in caption-ready sample; additional-title selection, dialogue playback and reviewed per-title sound captions remain pending.
+Local-media preparation: the user explicitly requires agents to provide PowerShell commands instead of downloading films themselves. `scripts/media/prepare-library.ps1` prepares optional Sintel/Tears of Steel browser MP4s with audio, posters, available English subtitles and provenance records when the user runs it. See [the local media guide](LOCAL_MEDIA.md). The user completed the downloads/conversions; local output checks passed as recorded above. That preparation-only checkpoint preceded the new request above: title selection/dialogue playback are now implemented; reviewed per-title sound tracks remain pending.
 
-Map freshness: the saved maps predate the new `scripts/media/prepare-library.ps1` helper and do not cover it. Existing Fallow reports also predate this addition. No new Graphify/Fallow invocation is authorized by this prompt; treat the saved results as the earlier snapshot, not verification of the new helper.
+Map freshness: the newly authorized source refresh includes the media-preparation helper, new component owners, diagnostics and review tools. Verify its per-file hashes before relying on it. PowerShell/media/runtime coverage remains limited. Current Fallow reports are distinct from preserved historical results.
 
 For the prepared local catalogue, obtain and review corresponding sound-caption material, then implement selection without mixing tracks across titles. Keep downloads outside Git, show actual durations and label missing/unreviewed caption features honestly. Do not expand into Phase 2 streaming/services during this demo work.
 
 Use the working source-caption demo for the submission. Further model work must be a bounded diagnostic or a justified replacement-method evaluation; do not resume full-film generation on the failed setup. Before research, complete listening/readability review, DHH feedback, final study video/questions, and instructor/ethics approval. A script/scene log can support annotation but must not be fed as the expected answer to an allegedly independent sound check. No benefit or participant result has been established.
+
+## Current investigation outcomes
+
+- Fixed reproduced guards: explicit non-stop model completions cannot become candidates merely because JSON parses; each atomic caption line must contain one nonempty bracket group. This does not validate its meaning.
+- Ten synthetic/text endpoint requests: one HTTP 503 capacity error is inconclusive; sound controls and required English source fidelity did not pass. Correct speech transcription and one held-out noun control show partial capability; the precise hosted failure cause remains uncertain. No broad model sweep or full-film generation.
+- `scripts/prepare-caption-review.py` generates contextual listening clips, a local HTML page and an all-pending receipt. Exact video/track/cue hashes and complete per-variant/check decisions are required for documented human-review completion. It never installs a track or substitutes for listening/DHH review. The generated three-cue packet is under ignored artifacts/caption-review/.
+- Media lifecycle/transport, local imports/blob ownership, rehearsal capture, draft preview, style/readability, source-track presentation and rating/session export now have cohesive owners. Existing component interfaces and successful behavior are preserved by current browser checks.
+- Current skill use: systematic-debugging, conditional Context7 React documentation, playwright-cli, Fallow and deterministic Graphify. No new package installation, agents, film downloads, paid service, persistent integration, commit or push.
+
+Mapping limitation: the raw Graphify diagnostic flags 169 dangling endpoint references and 28 same-endpoint directed pairs under default diagnostic deduplication; the committed DiGraph has bound stored endpoints. The mapper’s dedup=False controls entity merging and does not prevent edge collapse. Treat this as an extraction/resolution warning and inspect source, not evidence of complete call coverage. Eight files yield no symbols. See the current map guide and diagnostic report.

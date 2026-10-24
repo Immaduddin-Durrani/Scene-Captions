@@ -1,0 +1,176 @@
+### Custom Hooks let you share stateful logic, not state itself
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/reusing-logic-with-custom-hooks.md
+
+To better illustrate this, we'll need a different example. Consider this `Form` component:
+
+There's some repetitive logic for each form field:
+
+1. There's a piece of state (`firstName` and `lastName`).
+1. There's a change handler (`handleFirstNameChange` and `handleLastNameChange`).
+1. There's a piece of JSX that specifies the `value` and `onChange` attributes for that input.
+
+You can extract the repetitive logic into this `useFormInput` custom Hook:
+
+Notice that it only declares *one* state variable called `value`.
+
+However, the `Form` component calls `useFormInput` *two times:*
+
+This is why it works like declaring two separate state variables!
+
+**Custom Hooks let you share *stateful logic* but not *state itself.* Each call to a Hook is completely independent from every other call to the same Hook.** This is why the two sandboxes above are completely equivalent. If you'd like, scroll back up and compare them. The behavior before and after extracting a custom Hook is identical.
+
+When you need to share the state itself between multiple components, [lift it up and pass it down](/learn/sharing-state-between-components) instead.
+
+--------------------------------
+
+### Demonstrate Effect lifecycle and cleanup timing with setTimeout
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/synchronizing-with-effects.md
+
+Schedules a timeout log inside an Effect and cancels it in the cleanup function whenever text changes or the component unmounts. In development, React remounts once to verify cleanup, and React always cleans up the previous render's Effect before running the next render's Effect.
+
+```javascript
+import { useState, useEffect } from 'react';
+
+function Playground() {
+  const [text, setText] = useState('a');
+
+  useEffect(() => {
+    function onTimeout() {
+      console.log('⏰ ' + text);
+    }
+
+    console.log('🔵 Schedule "' + text + '" log');
+    const timeoutId = setTimeout(onTimeout, 3000);
+
+    return () => {
+      console.log('🟡 Cancel "' + text + '" log');
+      clearTimeout(timeoutId);
+    };
+  }, [text]);
+
+  return (
+    <>
+      <label>
+        What to log:{' '}
+        <input
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+      </label>
+      <h1>{text}</h1>
+    </>
+  );
+}
+
+export default function App() {
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <button onClick={() => setShow(!show)}>
+        {show ? 'Unmount' : 'Mount'} the component
+      </button>
+      {show && <hr />}
+      {show && <Playground />}
+    </>
+  );
+}
+```
+
+--------------------------------
+
+### Connecting to an External System with useEffect
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/hooks.md
+
+Connects a component to an external system and cleans up the connection when the dependency changes or the component unmounts. Effects should be used as an escape hatch for non-React synchronization rather than application data flow.
+
+```js
+function ChatRoom({ roomId }) {
+  useEffect(() => {
+    const connection = createConnection(roomId);
+    connection.connect();
+    return () => connection.disconnect();
+  }, [roomId]);
+  // ...
+```
+
+--------------------------------
+
+### Custom Hooks let you share stateful logic, not state itself
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/learn/reusing-logic-with-custom-hooks.md
+
+In the earlier example, when you turned the network on and off, both components updated together. However, it's wrong to think that a single `isOnline` state variable is shared between them. Look at this code:
+
+It works the same way as before you extracted the duplication:
+
+These are two completely independent state variables and Effects! They happened to have the same value at the same time because you synchronized them with the same external value (whether the network is on).
+
+--------------------------------
+
+### Encapsulating non-reactive callbacks in a custom useInterval Hook
+
+Source: https://github.com/reactjs/react.dev/blob/main/src/content/reference/react/useEffectEvent.md
+
+Wraps a callback with useEffectEvent inside a custom useInterval Hook so the interval timer does not reset across renders when callback props or state change.
+
+```javascript
+import { useState, useEffect, useEffectEvent } from 'react';
+
+function useInterval(callback, delay) {
+  const onTick = useEffectEvent(callback);
+
+  useEffect(() => {
+    if (delay === null) {
+      return;
+    }
+    const id = setInterval(() => {
+      onTick();
+    }, delay);
+    return () => clearInterval(id);
+  }, [delay]);
+}
+
+function Counter({ incrementBy }) {
+  const [count, setCount] = useState(0);
+
+  useInterval(() => {
+    setCount(c => c + incrementBy);
+  }, 1000);
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <p>Incrementing by {incrementBy} every second</p>
+    </div>
+  );
+}
+
+export default function App() {
+  const [incrementBy, setIncrementBy] = useState(1);
+
+  return (
+    <>
+      <label>
+        Increment by:{' '}
+        <select
+          value={incrementBy}
+          onChange={(e) => setIncrementBy(Number(e.target.value))}
+        >
+          <option value={1}>1</option>
+          <option value={5}>5</option>
+          <option value={10}>10</option>
+        </select>
+      </label>
+      <hr />
+      <Counter incrementBy={incrementBy} />
+    </>
+  );
+}
+```
+
+```css
+label { display: block; margin-bottom: 8px; }
+```

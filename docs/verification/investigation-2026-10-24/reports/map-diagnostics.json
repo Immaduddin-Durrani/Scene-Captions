@@ -1,0 +1,200 @@
+{
+  "node_count": 292,
+  "unverified_node_count": 0,
+  "raw_edge_count": 769,
+  "non_object_edges": 0,
+  "missing_endpoint_edges": 0,
+  "dangling_endpoint_edges": 169,
+  "external_reference_edges": 22,
+  "self_loop_edges": 0,
+  "valid_candidate_edges": 578,
+  "exact_duplicate_edges": 0,
+  "directed_unique_endpoint_pairs": 550,
+  "directed_same_endpoint_collapsed_edges": 28,
+  "undirected_unique_endpoint_pairs": 550,
+  "undirected_same_endpoint_collapsed_edges": 28,
+  "same_endpoint_group_count": 27,
+  "relation_variant_groups": 16,
+  "source_file_variant_groups": 0,
+  "source_location_variant_groups": 11,
+  "context_variant_groups": 0,
+  "post_build_graph_type": "DiGraph",
+  "post_build_node_count": 334,
+  "post_build_edge_count": 740,
+  "post_build_error": "",
+  "producer_suppression": {
+    "path": "/Users/hamza/runtimes/graphify/.venv/lib/python3.13/site-packages/graphify/extract.py",
+    "total_sites": 12,
+    "sites": [
+      {
+        "line": 1789,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2353,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 2355,
+        "name": "seen_doc_refs",
+        "tuple_arity": 0,
+        "sample": "seen_doc_refs: set[str] = set()"
+      },
+      {
+        "line": 3022,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+      },
+      {
+        "line": 3169,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+      },
+      {
+        "line": 4179,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 4365,
+        "name": "seen_keys",
+        "tuple_arity": 0,
+        "sample": "seen_keys: set[tuple] = set()"
+      },
+      {
+        "line": 7608,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 7716,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 7795,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 8310,
+        "name": "seen_ids",
+        "tuple_arity": 0,
+        "sample": "seen_ids: set[str] = set()"
+      },
+      {
+        "line": 8311,
+        "name": "seen_edges",
+        "tuple_arity": 4,
+        "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+      }
+    ],
+    "error": ""
+  },
+  "examples": [
+    {
+      "source": "tests_session_test",
+      "target": "src_lib_session",
+      "edge_count": 3,
+      "relations": [
+        "imports_from"
+      ],
+      "source_files": [
+        "tests/session.test.ts"
+      ],
+      "source_locations": [
+        "L16",
+        "L3",
+        "L4"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "scripts_media_prepare_library",
+      "target": "scripts_media_prepare_library_get_resource",
+      "edge_count": 2,
+      "relations": [
+        "calls",
+        "contains"
+      ],
+      "source_files": [
+        "scripts/media/prepare-library.ps1"
+      ],
+      "source_locations": [
+        "L14",
+        "L58"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "scripts_media_prepare_library",
+      "target": "scripts_media_prepare_library_read_probe",
+      "edge_count": 2,
+      "relations": [
+        "calls",
+        "contains"
+      ],
+      "source_files": [
+        "scripts/media/prepare-library.ps1"
+      ],
+      "source_locations": [
+        "L31",
+        "L77"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "scripts_media_prepare_library",
+      "target": "scripts_media_prepare_library_test_browsercopy",
+      "edge_count": 2,
+      "relations": [
+        "calls",
+        "contains"
+      ],
+      "source_files": [
+        "scripts/media/prepare-library.ps1"
+      ],
+      "source_locations": [
+        "L37",
+        "L82"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "src_components_caption_display",
+      "target": "src_lib_captions",
+      "edge_count": 2,
+      "relations": [
+        "imports_from"
+      ],
+      "source_files": [
+        "src/components/caption-display.tsx"
+      ],
+      "source_locations": [
+        "L3",
+        "L4"
+      ],
+      "contexts": [
+        "import"
+      ]
+    }
+  ]
+}

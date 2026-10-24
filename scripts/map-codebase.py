@@ -21,7 +21,7 @@ to_html(graph, {}, str(root / "docs/codebase-map.html"))
     "graphifyy": version("graphifyy"), "method": "local deterministic AST extraction; no agents, providers, semantic extraction or watchers",
     "generated_at": datetime.now(timezone.utc).isoformat(),
     "scope": "All supported code files under src/, scripts/, tests/, plus root Next.js/package/TypeScript configuration. PowerShell bridge is inventoried even if no symbols are extracted. Media, documents and generated evidence are separate.",
-    "files": {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
+    "files": {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
     "nodes": graph.number_of_nodes(), "edges": graph.number_of_edges(),
     "limits": "Static extracted relationships are not complete runtime/dependency proof; review aliases, dynamic imports, React event wiring and JSON/media boundaries manually.",
 }, indent=2) + "\n")

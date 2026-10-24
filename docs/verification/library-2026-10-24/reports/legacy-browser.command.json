@@ -1,0 +1,7 @@
+{
+  "command": [
+    "node",
+    "artifacts/verification/library-legacy-check.mjs"
+  ],
+  "exit_code": 0
+}

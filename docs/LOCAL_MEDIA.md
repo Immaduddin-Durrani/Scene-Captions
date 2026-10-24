@@ -1,10 +1,14 @@
 # Local demo media
 
-The user runs all video downloads. Agents may prepare code and commands but must not fetch video files themselves. Nothing downloads on app startup or while watching.
+The user explicitly requested agent downloads and integration for this follow-up on 24 October 2026, superseding the earlier user-download-only restriction for these two films. Both official 720p sources were downloaded in the macOS checkout and prepared locally. Nothing downloads on app startup or while watching. No services, accounts or API keys were added.
 
-Keep the existing Big Buck Bunny sample (9:56) and optionally add Sintel (about 15 minutes, animation) and Tears of Steel (about 12 minutes, live action/science fiction). The preparation script measures exact durations and rejects files longer than 30 minutes without trimming credits. These are catalogue candidates, not yet additional caption-ready demos.
+Keep the existing Big Buck Bunny sample (9:56) and optionally add Sintel (about 15 minutes, animation) and Tears of Steel (about 12 minutes, live action/science fiction). The preparation script measures exact durations and rejects files longer than 30 minutes without trimming credits. All three films are now selectable. The additional films have official dialogue subtitles; complete non-speech caption coverage remains unfinished. See [caption coverage](LIBRARY_CAPTIONS.md).
 
-## Run in PowerShell
+## Preparation commands
+
+On macOS/Linux, the equivalent explicit offline command is `python3 scripts/media/prepare-library.py --film all` (Python standard library, existing ffmpeg/ffprobe). It reuses completed sources, preserves compatible H.264 picture bytes, encodes stereo AAC and extracts tagged English subtitles/posters. Then run `node --experimental-strip-types scripts/import-library-captions.ts` to bind official subtitle datasets to the resulting exact MP4 hashes. Do not run downloads during playback.
+
+### PowerShell
 
 Requires `curl.exe`, `ffmpeg` and `ffprobe` on PATH. The script checks these before downloading. From the project folder:
 
@@ -16,7 +20,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\media\prepare-
 
 If the existing Big Buck Bunny file is absent, the separate user-run command is `npm run setup:demo`. The library script does not replace that verified sample.
 
-The user successfully ran the library script on 24 October 2026. Local checks confirmed both MP4s contain H.264 video and AAC audio, matching resource-record hashes, posters and English VTT files. Sintel is 1280x544, 888.032 seconds; Tears of Steel is 1280x534, 734.167 seconds. These are the widescreen picture dimensions of their 720p releases. See [local verification](verification/fixes-2026-10-24/reports/local-media.json). Full listening and subtitle-timing review remain pending. The agent did not download films.
+The user successfully ran the library script on 24 October 2026. Local checks confirmed both MP4s contain H.264 video and AAC audio, matching resource-record hashes, posters and English VTT files. Sintel is 1280x544, 888.032 seconds; Tears of Steel is 1280x534, 734.167 seconds. These are the widescreen picture dimensions of their 720p releases. See [local verification](verification/fixes-2026-10-24/reports/local-media.json). Full listening and subtitle-timing review remain pending. That older Windows preparation was performed by the user; the newer macOS downloads above were explicitly authorized.
 
 The script preserves the original dimensions of each official 720p release; widescreen films can have fewer than 720 picture rows. It does not stretch or upscale them. Completed source downloads are reused. Existing 480p or incomplete browser copies are rebuilt from the cached source and replaced only after resolution, codec, audio and duration checks pass. An interrupted download ending in `.partial` is downloaded again; an interrupted conversion restarts without downloading the completed source again.
 
@@ -43,8 +47,8 @@ Only an explicitly tagged English track is extracted from the Sintel archive. If
 
 ## Application status and next step
 
-The current application still has one built-in, caption-ready sample. This script prepares additional files; it does not add a title selector or import VTT into the player. The generated resource records are preparation metadata, not a caption dataset or an automatically loaded application catalogue.
+The application now has a title selector for Big Buck Bunny, Sintel and Tears of Steel. The new films have 26 and 76 source dialogue cues respectively, rendered from the precomputed datasets with a jumpable transcript. Each film has its own poster, credits and exact video hash. Dialogue wording is independent of sound preferences. Only Big Buck Bunny currently has a sourced non-speech track.
 
-Before offering these titles as full demos, implement separate title selection, dialogue subtitle playback and matching reviewed non-speech caption JSON. Always clear the previous title's captions when switching films; never attach Big Buck Bunny cues to another movie. Preserve audio, viewer controls and correct per-film credits. Review subtitle timing against the exact compressed copy. Keep the study stimulus fixed separately from browsing variety.
+Title changes remount the viewing workspace, clearing old cues, local imports, previews and override state. Stored preferences remain available. Film selection is disabled after rehearsal starts, including after stopping, until reload. Matching reviewed non-speech JSON is still required before these new titles can support the sound-caption study. Source subtitle intervals are preserved and rendering is checked at each cue; that is not a full listening or accessibility review.
 
 Phase 2 may add external hosting/discovery and metadata retrieval. No streaming service integration is part of this step.

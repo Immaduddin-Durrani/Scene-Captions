@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/playwright/node_modules/.bin/playwright-cli",
+    "-s=scenecaptions-investigation",
+    "run-code",
+    "async page => {\n await page.goto('file:///Users/hamza/Scene-Captions/artifacts/caption-review/investigation-2026-10-24/index.html');\n if(await page.locator('audio').count()!==3) throw new Error('Expected three listening clips');\n if(await page.locator('details[open]').count()) throw new Error('Source labels should start hidden');\n const metadata=await page.locator('audio').evaluateAll(async clips=>await Promise.all(clips.map(audio=>new Promise((resolve,reject)=>{audio.onloadedmetadata=()=>resolve({duration:audio.duration,ready:audio.readyState});audio.onerror=()=>reject(new Error('Clip failed to load'));audio.load();}))));\n if(metadata.some(item=>!Number.isFinite(item.duration)||item.duration<=0)) throw new Error('Invalid audio duration');\n return {threeClipsLoaded:true,sourceInitiallyHidden:true,metadata,actualListeningApproval:false};\n}"
+  ],
+  "exit_code": 0
+}

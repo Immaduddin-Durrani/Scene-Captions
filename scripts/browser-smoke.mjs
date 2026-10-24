@@ -44,6 +44,7 @@ async (page) => {
   await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, apple.grid['1-1']);
   await page.reload();
   await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  await page.waitForFunction(() => document.querySelector('#detail')?.value === '1');
   assert(await page.getByLabel('Level of detail', { exact: false }).inputValue() === '1', 'Applied preferences survive reload');
   await page.locator('.cue-row').nth(appleIndex).click();
   await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, apple.grid['1-1']);

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "scripts/media/prepare-library.py",
+    "--film",
+    "tears-of-steel"
+  ],
+  "exit_code": 0
+}

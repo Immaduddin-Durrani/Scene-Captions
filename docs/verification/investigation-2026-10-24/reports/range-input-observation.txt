@@ -1,0 +1,15 @@
+### Result
+{"before":84.3,"fill":{"time":90,"value":"84.3"},"keyboard":{"time":84.4,"value":"84.3"},"events":[{"type":"input","value":"90","trusted":false},{"type":"change","value":"84.3","trusted":false},{"type":"input","value":"84.4","trusted":true},{"type":"change","value":"84.3","trusted":true}]}
+### Ran Playwright code
+```js
+await (async page => {
+ const video=page.locator('video'); const range=page.locator('#timeline');
+ await page.evaluate(()=>{window.rangeEvents=[];const input=document.querySelector('#timeline');for(const type of ['input','change'])input.addEventListener(type,e=>window.rangeEvents.push({type,value:e.target.value,trusted:e.isTrusted}));});
+ const before=await video.evaluate(el=>el.currentTime);
+ await range.fill('90');
+ const fill={time:await video.evaluate(el=>el.currentTime),value:await range.inputValue()};
+ await range.focus();await page.keyboard.press('ArrowRight');
+ const keyboard={time:await video.evaluate(el=>el.currentTime),value:await range.inputValue()};
+ return {before,fill,keyboard,events:await page.evaluate(()=>window.rangeEvents)};
+})(page);
+```

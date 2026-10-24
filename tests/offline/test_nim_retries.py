@@ -48,6 +48,20 @@ class RetryTests(unittest.TestCase):
             self.assertTrue(nim_client.request("test")["ok"])
             sleep.assert_called_once_with(2)
 
+    def test_diagnostic_single_attempt_does_not_retry_a_temporary_error(self):
+        with patch.object(nim_client, "api_key", return_value="test-key"), patch.object(nim_client, "rate_limit"), patch.object(nim_client.urllib.request, "urlopen", side_effect=http_error(503)) as send, patch.object(nim_client.time, "sleep") as sleep:
+            with self.assertRaisesRegex(RuntimeError, "HTTP 503"):
+                nim_client.request("synthetic", max_attempts=1)
+            self.assertEqual(send.call_count, 1)
+            sleep.assert_not_called()
+
+    def test_attempt_override_cannot_exceed_the_shared_retry_bound(self):
+        with patch.object(nim_client, "api_key") as key:
+            for value in (0, 8, True, 1.5):
+                with self.assertRaises(ValueError):
+                    nim_client.request("synthetic", max_attempts=value)
+            key.assert_not_called()
+
     def test_response_wait_is_separate_from_backoff(self):
         for thinking, override, expected in [(False, None, 180), (True, None, 300), (True, 600, 600)]:
             with patch.object(nim_client, "api_key", return_value="test-key"), patch.object(nim_client, "rate_limit"), patch.object(nim_client.urllib.request, "urlopen", return_value=io.BytesIO(b'{"ok":true}')) as send:

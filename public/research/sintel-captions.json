@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "video_id": "sintel",
+  "title": "Sintel",
+  "source_url": "https://durian.blender.org/about/",
+  "license": "CC BY 3.0",
+  "attribution": "© 2010 Blender Foundation / durian.blender.org",
+  "duration_seconds": 888.032,
+  "annotation_status": "draft",
+  "generated_with": {
+    "method": "Official English dialogue subtitles imported without changing wording or timing. No verified non-speech track is available for this film.",
+    "prompt_version": "official-dialogue-v1",
+    "kind": "sourced",
+    "source_sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+    "expressiveness": "conservative",
+    "scene_load_method": "unreviewed",
+    "quality_gate": "unverified",
+    "non_speech_status": "not-prepared"
+  },
+  "dialogue": [
+    {
+      "cue_id": "sintel-dialogue-1",
+      "start_s": 107.25,
+      "end_s": 109.22,
+      "text": "This blade has a dark past."
+    },
+    {
+      "cue_id": "sintel-dialogue-2",
+      "start_s": 111.8,
+      "end_s": 115.8,
+      "text": "It has shed much innocent blood."
+    },
+    {
+      "cue_id": "sintel-dialogue-3",
+      "start_s": 118,
+      "end_s": 121.45,
+      "text": "You're a fool for traveling alone,\nso completely unprepared."
+    },
+    {
+      "cue_id": "sintel-dialogue-4",
+      "start_s": 121.75,
+      "end_s": 124.8,
+      "text": "You're lucky your blood's still flowing."
+    },
+    {
+      "cue_id": "sintel-dialogue-5",
+      "start_s": 125.25,
+      "end_s": 126.3,
+      "text": "Thank you."
+    },
+    {
+      "cue_id": "sintel-dialogue-6",
+      "start_s": 127.5,
+      "end_s": 129,
+      "text": "So..."
+    },
+    {
+      "cue_id": "sintel-dialogue-7",
+      "start_s": 129.4,
+      "end_s": 133.8,
+      "text": "What brings you to\nthe land of the gatekeepers?"
+    },
+    {
+      "cue_id": "sintel-dialogue-8",
+      "start_s": 135,
+      "end_s": 137.5,
+      "text": "I'm searching for someone."
+    },
+    {
+      "cue_id": "sintel-dialogue-9",
+      "start_s": 138,
+      "end_s": 142.2,
+      "text": "Someone very dear?\nA kindred spirit?"
+    },
+    {
+      "cue_id": "sintel-dialogue-10",
+      "start_s": 143.4,
+      "end_s": 145,
+      "text": "A dragon."
+    },
+    {
+      "cue_id": "sintel-dialogue-11",
+      "start_s": 148.85,
+      "end_s": 151.75,
+      "text": "A dangerous quest for a lone hunter."
+    },
+    {
+      "cue_id": "sintel-dialogue-12",
+      "start_s": 152.95,
+      "end_s": 155.87,
+      "text": "I've been alone for\nas long as I can remember."
+    },
+    {
+      "cue_id": "sintel-dialogue-13",
+      "start_s": 207.25,
+      "end_s": 210.5,
+      "text": "We're almost done. Shhh..."
+    },
+    {
+      "cue_id": "sintel-dialogue-14",
+      "start_s": 210.75,
+      "end_s": 213.5,
+      "text": "Hey, sit still."
+    },
+    {
+      "cue_id": "sintel-dialogue-15",
+      "start_s": 228.25,
+      "end_s": 232.25,
+      "text": "Good night, Scales."
+    },
+    {
+      "cue_id": "sintel-dialogue-16",
+      "start_s": 250.35,
+      "end_s": 253.85,
+      "text": "Get him, Scales! Come on!"
+    },
+    {
+      "cue_id": "sintel-dialogue-17",
+      "start_s": 265.25,
+      "end_s": 268.25,
+      "text": "Scales?"
+    },
+    {
+      "cue_id": "sintel-dialogue-18",
+      "start_s": 304,
+      "end_s": 307.5,
+      "text": "Yeah! Come on!"
+    },
+    {
+      "cue_id": "sintel-dialogue-19",
+      "start_s": 338.75,
+      "end_s": 342,
+      "text": "Scales!"
+    },
+    {
+      "cue_id": "sintel-dialogue-20",
+      "start_s": 445.85,
+      "end_s": 447.5,
+      "text": "I have failed."
+    },
+    {
+      "cue_id": "sintel-dialogue-21",
+      "start_s": 452.8,
+      "end_s": 456.5,
+      "text": "You've only failed to see..."
+    },
+    {
+      "cue_id": "sintel-dialogue-22",
+      "start_s": 457.8,
+      "end_s": 460.5,
+      "text": "These are dragon lands, Sintel."
+    },
+    {
+      "cue_id": "sintel-dialogue-23",
+      "start_s": 460.85,
+      "end_s": 464,
+      "text": "You are closer than you know."
+    },
+    {
+      "cue_id": "sintel-dialogue-24",
+      "start_s": 557.6,
+      "end_s": 559.5,
+      "text": "Scales!"
+    },
+    {
+      "cue_id": "sintel-dialogue-25",
+      "start_s": 621.6,
+      "end_s": 624,
+      "text": "Scales?"
+    },
+    {
+      "cue_id": "sintel-dialogue-26",
+      "start_s": 626.2,
+      "end_s": 629.8,
+      "text": "Scales..."
+    }
+  ],
+  "dialogue_source": {
+    "url": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv.zip",
+    "author": "Blender Foundation",
+    "license": "CC BY 3.0",
+    "sha256": "bdbc6fc2f38866435adf4c18eda9668c91d7502e96209e22e326e5c89d77d996"
+  },
+  "cues": []
+}

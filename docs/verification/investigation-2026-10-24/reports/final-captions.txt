@@ -1,0 +1,5 @@
+
+> scene-captions@0.1.0 validate:captions
+> node --experimental-strip-types scripts/validate-captions.ts
+
+data/captions/big-buck-bunny.json: 87 cues, 9 variants each; draft

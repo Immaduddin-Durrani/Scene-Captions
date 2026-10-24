@@ -2,7 +2,7 @@ export interface SrtCue { id: string; start_s: number; end_s: number; text: stri
 
 /** Parse strict SubRip without silently dropping malformed or multiline cues. */
 export function parseSrt(input: string): SrtCue[] {
-  const blocks = input.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").trim().split(/\n[ \t]*\n/);
+  const blocks = input.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").trim().split(/\n(?:[ \t]*\n)+/);
   const seen = new Set<string>();
   const timestamp = "(\\d{2,}):([0-5]\\d):([0-5]\\d),(\\d{3})";
   const timing = new RegExp(`^${timestamp} --> ${timestamp}$`);

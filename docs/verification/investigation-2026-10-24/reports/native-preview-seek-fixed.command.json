@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/playwright/node_modules/.bin/playwright-cli",
+    "-s=scenecaptions-investigation",
+    "run-code",
+    "async page => {\n await page.goto('http://127.0.0.1:3000');\n await page.waitForFunction(()=>document.querySelector('video').readyState >= 1);\n const track=await(await page.request.get('http://127.0.0.1:3000/research/demo-captions.json')).json();\n const apple=track.cues.find(c=>c.original_text==='[APPLE THUDS]'); const mid=(apple.start_s+apple.end_s)/2;\n await page.locator('.cue-row').nth(track.cues.indexOf(apple)).click();\n await page.getByRole('button',{name:'Rich',exact:true}).click();\n const preview=page.getByRole('button',{name:'Preview this cue in the video',exact:true});\n await preview.click(); await page.locator('.caption-preview-notice').waitFor({state:'visible'});\n await page.waitForFunction(s=>Math.abs(document.querySelector('video').currentTime-s)<.02,mid);\n await page.locator('#timeline').focus(); await page.keyboard.press('ArrowRight');\n await page.locator('.caption-preview-notice').waitFor({state:'hidden',timeout:1500});\n await page.waitForFunction(s=>document.querySelector('video').currentTime>s+.01,mid,{timeout:2000});\n const keyboardTime=await page.locator('video').evaluate(el=>el.currentTime);\n await preview.click();await page.locator('.caption-preview-notice').waitFor({state:'visible'});\n await page.locator('#timeline').scrollIntoViewIfNeeded(); const box=await page.locator('#timeline').boundingBox();\n await page.mouse.click(box.x+box.width*.7,box.y+box.height/2);\n await page.locator('.caption-preview-notice').waitFor({state:'hidden',timeout:1500});\n await page.waitForFunction(()=>document.querySelector('video').currentTime>400,{},{timeout:2000});\n return {keyboardTime,pointerTime:await page.locator('video').evaluate(el=>el.currentTime),keyboardCancel:true,pointerCancel:true};\n}"
+  ],
+  "exit_code": 0
+}

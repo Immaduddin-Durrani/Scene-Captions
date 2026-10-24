@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/fallow/node_modules/.bin/fallow",
+    "health",
+    "--format",
+    "json",
+    "--quiet",
+    "--explain"
+  ],
+  "exit_code": 1
+}

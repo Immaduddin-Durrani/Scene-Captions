@@ -1,0 +1,35 @@
+{
+  "id": "sintel",
+  "title": "Sintel",
+  "durationSeconds": 888.032,
+  "video": "/media/sintel.mp4",
+  "poster": "/media/sintel-poster.jpg",
+  "englishSubtitles": "/media/sintel-en.vtt",
+  "subtitleSource": "English subtitle stream embedded in official Sintel 720p MKV",
+  "subtitleTimingReviewed": false,
+  "nonSpeechCaptionStatus": "not-prepared",
+  "source": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv.zip",
+  "sourceSha256": "f12c070e295b38cfc94ebd61ac3357c3bac82d1015985f1e8da93a4c6496c46d",
+  "credit": "\u00a9 2010 Blender Foundation / durian.blender.org",
+  "license": "CC BY 3.0",
+  "licenseSource": "https://durian.blender.org/about/",
+  "modifications": "Full 720p-release picture/credits retained; MP4 remux with original H.264 video where compatible, stereo AAC audio and extracted poster/subtitles",
+  "sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+  "bytes": 625173895,
+  "streams": [
+    {
+      "codec_type": "video",
+      "codec_name": "h264",
+      "width": 1280,
+      "height": 544
+    },
+    {
+      "codec_type": "audio",
+      "codec_name": "aac"
+    },
+    {
+      "codec_type": "data",
+      "codec_name": "bin_data"
+    }
+  ]
+}

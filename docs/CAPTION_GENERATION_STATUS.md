@@ -63,3 +63,13 @@ Text probes copied source wording, omitted a simultaneous sound, returned incomp
 Seven verbose rich-effect entries were shortened locally while preserving the licensed original text and all intervals. One problematic simultaneous cue is now 28 rather than 68 characters in 0.541 seconds. This is still a reading-review concern. A 20-character/second editing heuristic flags 206 original/variant cases; it is not a validated DHH threshold, and timing is not extended automatically.
 
 See [tool usage and request limits](../scripts/generation/README.md), [model results](integrations/NVIDIA_MODELS.md), and [fresh evidence](verification/fixes-2026-10-24/README.md). Review the exact soundtrack and captions with DHH collaborators before study use. Model agreement, concise wording and schema validity do not independently establish sound accuracy.
+
+## Current bounded investigation
+
+See [the 24 October follow-up](audits/2026-10-24-investigation.md). Ten single-attempt synthetic/text requests tested temperature, audio sample rate and prompt specificity. One capacity error is inconclusive; neither non-speech calibration nor English source-fidelity requirements passed. Partial speech/noun successes do not justify clearing the failed gate, and these results do not condemn all audio models.
+
+Structural completion/bracket guards were fixed and regression-tested. The source track is unchanged. A practical human-review alternative now prepares contextual clips, source/variant comparisons and hash-bound pending decisions with `scripts/prepare-caption-review.py`. A three-cue packet was generated; all decisions remain pending. Whole-track review, not just a small sample or valid JSON, is required. See [the guide](../scripts/generation/README.md).
+
+## Added local films — 24 October 2026
+
+The user subsequently authorized downloads/integration. Sintel and Tears of Steel are selectable, with their official 26 / 76 English dialogue cues. Their non-speech status is explicitly `not-prepared`; no generation-failure result or human approval is invented. Source wording/timing and exact-media hashes are retained. A fuller Sintel caption candidate was found online but its separate reuse terms and timing were not verified, so it stays outside playback. See [per-title coverage](LIBRARY_CAPTIONS.md) and the current library evidence. The original failed automated model gate is unchanged.

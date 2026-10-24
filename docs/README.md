@@ -14,15 +14,16 @@ Start with the [project README](../README.md), [architecture](../architecture.tx
 | Proposed study protocol | [EXPERIMENTAL_PLAN.md](EXPERIMENTAL_PLAN.md) |
 | Plan source for app/export | `src/lib/experiment.ts`; regenerate plan copies with the existing exporter after approved edits |
 | Import format and local media preparation | [CAPTION_IMPORT.md](CAPTION_IMPORT.md) |
-| User-run short-film downloads, audio, posters and subtitles | [LOCAL_MEDIA.md](LOCAL_MEDIA.md) |
+| Local short-film preparation, audio, posters and subtitles | [LOCAL_MEDIA.md](LOCAL_MEDIA.md) |
+| Per-title dialogue / sound coverage | [LIBRARY_CAPTIONS.md](LIBRARY_CAPTIONS.md) |
 | Caption provenance, generation failures and limits | [CAPTION_GENERATION_STATUS.md](CAPTION_GENERATION_STATUS.md) |
-| Dated findings and priorities | [original audit](audits/2026-10-24.md), [fixes and diagnosis](audits/2026-10-24-fixes.md), with later audits added under `audits/` |
+| Dated findings and priorities | [original audit](audits/2026-10-24.md), [fixes and diagnosis](audits/2026-10-24-fixes.md), [model investigation and cleanup](audits/2026-10-24-investigation.md) |
 | Model/service capability notes | [NVIDIA candidates](integrations/NVIDIA_MODELS.md) |
 | Offline generation and corresponding-audio checks | [tooling guide](../scripts/generation/README.md); failed candidates never overwrite playback |
 | Research references, verification limits and PDFs | [RESEARCH_INDEX.md](RESEARCH_INDEX.md), `research/` |
 | Original project pitch | [proposal slides](research/proposals/SceneCaptions_Project_Proposal.pptx) and [idea document](research/proposals/SceneCaptions-Project-Idea.docx) |
 | Refreshed committed structural map | [CODEBASE_MAP.md](CODEBASE_MAP.md); verify input hashes before relying on it |
-| Verification history | [verification overview](verification/README.md) and [24 October evidence](verification/audit-2026-10-24/README.md) |
+| Verification history | [verification overview](verification/README.md) and [latest investigation evidence](verification/investigation-2026-10-24/README.md) |
 | Manual browser-check utilities | [verification scripts guide](../scripts/verification/README.md) |
 
 ## Repository layout and ownership

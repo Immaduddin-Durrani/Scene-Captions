@@ -1,0 +1,1 @@
+[X] Exit code 1: gate health-findings (17 at or above error) failed. To report complexity findings without a failure, set the rules complexity-cyclomatic, complexity-cognitive and complexity-crap to "warn", or run `fallow health --report-only`.

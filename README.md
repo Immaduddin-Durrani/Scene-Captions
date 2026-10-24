@@ -7,7 +7,7 @@ Adaptive non-speech captions for Deaf and hard-of-hearing (DHH) viewers of long-
 Read this README, [architecture.txt](architecture.txt) and the required
 [skill workflow](docs/SKILL_WORKFLOW.md) first. Then read the
 [current project state](docs/PROJECT_STATE.md) and
-[latest fixes and diagnosis](docs/audits/2026-10-24-fixes.md) for current decisions,
+[latest investigation and cleanup](docs/audits/2026-10-24-investigation.md) for current decisions,
 verified findings and unfinished work. Use [the glossary](GLOSSARY.md)
 for domain meanings and the experimental plan for study details.
 The [documentation index](docs/README.md) explains where each kind of file belongs.
@@ -42,7 +42,7 @@ Deliverables and demonstration steps: [Phase 1 handoff](docs/PHASE1.md).
 Research protocol: [Experimental plan](docs/EXPERIMENTAL_PLAN.md).
 Own-video preparation: [Caption import guide](docs/CAPTION_IMPORT.md).
 Optional short-film downloads and local resources: [local media guide](docs/LOCAL_MEDIA.md).
-The user runs video downloads; agents prepare commands and code only.
+This follow-up explicitly authorized downloading and integrating Sintel and Tears of Steel. All three films are now selectable; the new titles have official English dialogue subtitles. [Caption coverage](docs/LIBRARY_CAPTIONS.md) distinguishes those subtitles from the still-missing full sound tracks.
 The sample now includes 87 timed non-speech caption cues from the licensed
 [Demuxed caption track](https://github.com/demuxed/big-buck-captions), with
 source-anchored wording variants and cue-density adaptation. No API key is

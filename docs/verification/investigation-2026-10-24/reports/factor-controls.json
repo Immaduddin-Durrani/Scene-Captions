@@ -1,0 +1,409 @@
+{
+  "version": "factor-controls-v1",
+  "actual_calls_this_run": 8,
+  "call_ceiling": 8,
+  "scope": "Synthetic, nonparticipant material only. Single-attempt requests through shared 2.05-second pacing. No installation or quality-gate changes. Ground truth metadata never enters the audio prompts. Historical speech/decode controls reused separately.",
+  "tests": [
+    {
+      "name": "text-temperature-low",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "prompt": "Return only the broad sound type in [SERENE MUSIC]. Omit the mood word. Use one bracketed label.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "response": {
+        "id": "chatcmpl-f62e8bdb-7cb7-4e5f-9197-e9b2e74fa442",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[ambient]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833188,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 42,
+          "completion_tokens": 5,
+          "total_tokens": 47,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 1.123
+    },
+    {
+      "name": "text-temperature-recommended",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "prompt": "Return only the broad sound type in [SERENE MUSIC]. Omit the mood word. Use one bracketed label.",
+      "temperature": 1.0,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "response": {
+        "id": "chatcmpl-8535f51d-4c14-431c-9d71-6583dabe044f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[ambient]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833190,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 42,
+          "completion_tokens": 5,
+          "total_tokens": 47,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 1.697
+    },
+    {
+      "name": "tone-classify-16k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Classify this recording with one word: SILENCE, TONE, MUSIC, SPEECH, OTHER, or UNAVAILABLE. Base the answer only on the audio.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 16000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.1696913427762624,
+        "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+        "known_contents": "tone"
+      },
+      "response": {
+        "id": "chatcmpl-6f4cbeea-fe9e-4551-bea0-0e4d3a8af4d3",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "SILENCE",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833193,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 96,
+          "completion_tokens": 5,
+          "total_tokens": 101
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.148934841156006,
+            "generation_tokens_per_second": 4.351856885956412,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 3.848
+    },
+    {
+      "name": "tone-classify-48k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Classify this recording with one word: SILENCE, TONE, MUSIC, SPEECH, OTHER, or UNAVAILABLE. Base the answer only on the audio.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 48000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.16969184024094552,
+        "sha256": "1b3bafb8627e3690113a72ddf2f85ec5f10beb0dfa27df1b63af5d6f30524d23",
+        "known_contents": "tone"
+      },
+      "operational_status": "inconclusive-error",
+      "error": "NVIDIA HTTP 503: {\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.596
+    },
+    {
+      "name": "silence-classify-16k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Classify this recording with one word: SILENCE, TONE, MUSIC, SPEECH, OTHER, or UNAVAILABLE. Base the answer only on the audio.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 16000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.0,
+        "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+        "known_contents": "silence"
+      },
+      "response": {
+        "id": "chatcmpl-eaeea157-15bc-47d7-9bc9-ffbffe8d09b2",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "TONE",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833198,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 96,
+          "completion_tokens": 3,
+          "total_tokens": 99
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.23096489906311035,
+            "generation_tokens_per_second": 12.988986690918177,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 2.242
+    },
+    {
+      "name": "tone-observe-16k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Describe only the audible contents of this recording in one short sentence. If there are no audible contents, say silence. Do not infer visual events or causes.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 16000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.1696913427762624,
+        "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+        "known_contents": "tone"
+      },
+      "response": {
+        "id": "chatcmpl-f3254a98-664a-4742-a0a8-ea5bcc572c0e",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Silence",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833200,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 89,
+          "completion_tokens": 3,
+          "total_tokens": 92
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.16082000732421875,
+            "generation_tokens_per_second": 18.654395369799328,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 1.973
+    },
+    {
+      "name": "silence-observe-16k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Describe only the audible contents of this recording in one short sentence. If there are no audible contents, say silence. Do not infer visual events or causes.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 16000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.0,
+        "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+        "known_contents": "silence"
+      },
+      "response": {
+        "id": "chatcmpl-00524430-5e99-459d-a8ce-cd759ee9f60f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "silence",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833202,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 89,
+          "completion_tokens": 3,
+          "total_tokens": 92
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.33997249603271484,
+            "generation_tokens_per_second": 8.824243240286462,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 2.136
+    },
+    {
+      "name": "holdout-mixed-observe-16k",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "prompt": "Describe only the audible contents of this recording in one short sentence. If there are no audible contents, say silence. Do not infer visual events or causes.",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "audio": {
+        "duration_s": 3,
+        "sample_rate": 16000,
+        "channels": 1,
+        "pcm_width": 2,
+        "rms": 0.17779739031747832,
+        "sha256": "fba0c45762a2e7675539dc4178fefea134ba27149bb2243713c3aefb044995ef",
+        "known_contents": "mixed"
+      },
+      "response": {
+        "id": "chatcmpl-338817ae-0229-4b19-a597-71badf3ac5f2",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Silence",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833204,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 89,
+          "completion_tokens": 3,
+          "total_tokens": 92
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 12,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.2938203811645508,
+            "generation_tokens_per_second": 10.210319611286202,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 2.003
+    }
+  ]
+}

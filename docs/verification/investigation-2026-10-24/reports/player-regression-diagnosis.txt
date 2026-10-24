@@ -1,0 +1,2 @@
+### Error
+Error: Step 24: page.waitForFunction: Timeout 30000ms exceeded. state={"time":4.4575,"caption":"[Serene music plays]","profile":"{\"detail\":2,\"expression\":2,\"adaptive\":true,\"representation\":\"descriptive\",\"size\":\"extra-large\",\"position\":\"top\"}","detail":"3"}

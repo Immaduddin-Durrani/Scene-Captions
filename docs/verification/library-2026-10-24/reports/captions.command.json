@@ -1,0 +1,8 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "validate:captions"
+  ],
+  "exit_code": 0
+}

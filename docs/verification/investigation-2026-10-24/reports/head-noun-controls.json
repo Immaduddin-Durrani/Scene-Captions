@@ -1,0 +1,103 @@
+{
+  "version": "factor-controls-v1",
+  "actual_calls_this_run": 2,
+  "call_ceiling": 2,
+  "phase": "head-noun",
+  "scope": "Synthetic, nonparticipant material only. Single-attempt requests through shared 2.05-second pacing. No installation or quality-gate changes. Ground truth metadata never enters the audio prompts. Historical speech/decode controls reused separately.",
+  "tests": [
+    {
+      "name": "explicit-head-music",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "prompt": "Copy the sound-category noun from the supplied bracketed caption. Delete descriptive modifiers. Do not substitute a genre, mood or synonym. Return one bracketed lowercase noun. Caption: [SERENE MUSIC]",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "response": {
+        "id": "chatcmpl-69d06d4e-3313-46b4-83e9-0fec90f2f960",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[m\u00fasica]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833618,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 4,
+          "total_tokens": 62,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 1.023
+    },
+    {
+      "name": "heldout-head-footsteps",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "prompt": "Copy the sound-category noun from the supplied bracketed caption. Delete descriptive modifiers. Do not substitute a genre, mood or synonym. Return one bracketed lowercase noun. Caption: [RAPID FOOTSTEPS]",
+      "temperature": 0.2,
+      "thinking": false,
+      "max_tokens": 512,
+      "timeout_s": 180,
+      "max_attempts": 1,
+      "response": {
+        "id": "chatcmpl-2b63d3f5-af25-4a6b-9d94-3c92161abbcb",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[footsteps]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792833620,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 5,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "operational_status": "response-received",
+      "seconds": 1.861
+    }
+  ]
+}

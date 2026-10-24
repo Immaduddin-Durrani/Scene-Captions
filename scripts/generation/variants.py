@@ -1,5 +1,6 @@
 """Strict structural checks and review flags for source-based wording."""
 import math
+import re
 
 GRID_KEYS = {f"{detail}-{expression}" for detail in range(1, 4) for expression in range(1, 4)}
 PROMPT_VERSION = "source-variants-v2-atomic-sounds"
@@ -18,7 +19,7 @@ def validate_item(item, expected_id, max_characters, expected_lines=1):
     for text in [*grid.values(), item.get("plain")]:
         if not isinstance(text, str) or not text.strip() or len(text) > min(280, max_characters):
             raise ValueError("Empty, non-text or overlong generated wording")
-        if any(not line.startswith("[") or not line.endswith("]") for line in text.splitlines()):
+        if any(not re.fullmatch(r"\[[^\[\]\r\n]+\]", line) or not line[1:-1].strip() for line in text.splitlines()):
             raise ValueError("Each sound must be a bracketed caption line")
         if len(text.splitlines()) != expected_lines:
             raise ValueError("A simultaneous sound was dropped or added")

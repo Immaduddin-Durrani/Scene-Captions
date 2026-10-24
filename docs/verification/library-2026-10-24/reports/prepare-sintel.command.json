@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "scripts/media/prepare-library.py",
+    "--film",
+    "sintel"
+  ],
+  "exit_code": 0
+}

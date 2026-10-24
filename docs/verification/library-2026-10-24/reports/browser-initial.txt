@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.fill: Error: Malformed value
+Call log:
+[2m  - waiting for locator('#timeline')[22m
+[2m    - locator resolved to <input min="0" step="0.1" type="range" id="timeline" max="888.032" class="timeline" value="0.122183" aria-valuetext="0:00 of 14:48"/>[22m
+[2m    - fill("108.235")[22m
+[2m  - attempting fill action[22m
+[2m    - waiting for element to be visible, enabled and editable[22m
+
+    at /Users/hamza/Scene-Captions/scripts/verification/library-regression.mjs:43:37 {
+  log: [
+    "  - waiting for locator('#timeline')",
+    '    - locator resolved to <input min="0" step="0.1" type="range" id="timeline" max="888.032" class="timeline" value="0.122183" aria-valuetext="0:00 of 14:48"/>',
+    '    - fill("108.235")',
+    '  - attempting fill action',
+    '    - waiting for element to be visible, enabled and editable'
+  ]
+}
+
+Node.js v25.2.1

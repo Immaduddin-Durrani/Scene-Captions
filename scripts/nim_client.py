@@ -85,37 +85,41 @@ def api_key():
     if not value:raise RuntimeError('NVIDIA_API_KEY or NVIDIA_KEY is missing. Set it in local .env.')
     return value
 
-def request(content,max_tokens=4096,thinking=True,model=MODEL,timeout=None):
+def request(content,max_tokens=4096,thinking=True,model=MODEL,timeout=None,*,temperature=0.2,max_attempts=MAX_ATTEMPTS):
     timeout = timeout if timeout is not None else REASONING_TIMEOUT if thinking else TEXT_TIMEOUT
     if timeout <= 0:
         raise ValueError('Request timeout must be positive.')
+    if not isinstance(max_attempts, int) or isinstance(max_attempts, bool) or not 1 <= max_attempts <= MAX_ATTEMPTS:
+        raise ValueError('Attempts must be an integer between 1 and 7.')
     key=api_key()
-    payload={'model':model,'messages':[{'role':'user','content':content}],'max_tokens':max_tokens,'temperature':0.2,'stream':False,'chat_template_kwargs':{'enable_thinking':thinking}}
+    payload={'model':model,'messages':[{'role':'user','content':content}],'max_tokens':max_tokens,'temperature':temperature,'stream':False,'chat_template_kwargs':{'enable_thinking':thinking}}
     if thinking:payload['reasoning_budget']=512
-    for attempt in range(MAX_ATTEMPTS):
+    for attempt in range(max_attempts):
         rate_limit()
         req=urllib.request.Request('https://integrate.api.nvidia.com/v1/chat/completions',data=json.dumps(payload).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'})
         try:
             with urllib.request.urlopen(req,timeout=timeout) as response:return json.load(response)
         except urllib.error.HTTPError as error:
-            if error.code in [429,502,503,504] and attempt < MAX_ATTEMPTS - 1:
+            if error.code in [429,502,503,504] and attempt < max_attempts - 1:
                 retry_after = error.headers.get('Retry-After') if error.headers else None
                 error.close()
                 delay = _retry_delay(attempt, retry_after)
-                print(f'NVIDIA temporary HTTP {error.code}; retry {attempt + 1}/{MAX_ATTEMPTS - 1} in {delay:g}s.', flush=True)
+                print(f'NVIDIA temporary HTTP {error.code}; retry {attempt + 1}/{max_attempts - 1} in {delay:g}s.', flush=True)
                 time.sleep(delay)
                 continue
             message=error.read().decode()[:1200].replace(key,'[REDACTED]')
             raise RuntimeError(f'NVIDIA HTTP {error.code}: {message}') from None
         except (urllib.error.URLError, TimeoutError) as error:
-            if attempt == MAX_ATTEMPTS - 1:
+            if attempt == max_attempts - 1:
                 raise RuntimeError('NVIDIA transport/timeout retries exhausted. Outcome is inconclusive; no candidate accepted.') from None
             delay = _retry_delay(attempt)
-            print(f'NVIDIA transport/timeout failure; retry {attempt + 1}/{MAX_ATTEMPTS - 1} in {delay:g}s.', flush=True)
+            print(f'NVIDIA transport/timeout failure; retry {attempt + 1}/{max_attempts - 1} in {delay:g}s.', flush=True)
             time.sleep(delay)
 
 def parse_json(response):
     choices = response.get('choices') or []
+    if choices and choices[0].get('finish_reason') not in (None, 'stop'):
+        raise ValueError('Model completion did not finish normally; no candidate can be accepted.')
     text = choices[0].get('message', {}).get('content') if choices else None
     if not isinstance(text, str) or not text.strip():
         raise ValueError('Model returned no usable text; no candidate can be accepted.')

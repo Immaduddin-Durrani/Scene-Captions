@@ -1,0 +1,7 @@
+{
+  "command": [
+    "node",
+    "scripts/verification/library-regression.mjs"
+  ],
+  "exit_code": 0
+}

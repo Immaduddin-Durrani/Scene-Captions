@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/offline",
+    "-v"
+  ],
+  "exit_code": 0
+}

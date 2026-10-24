@@ -1,8 +1,10 @@
+# Current freshness notice
+
+The library integration changed `src/app/page.tsx`, the schema/parser, player/timeline/workspace and added `screening-room.tsx`, subtitle import/preparation and regression checks. The saved graph below predates those changes; its input manifest is stale for them. No new Graphify activation was requested for this follow-up. Read the current [library evidence](verification/library-2026-10-24/README.md) and source for these boundaries.
+
 # Codebase map
 
-Freshness exception: this snapshot predates `scripts/media/prepare-library.ps1`, added later on 24 October. It does not map that user-run media-preparation helper. Inspect the helper directly; refresh only with current-prompt authorization. Playback source files have not changed in this media-preparation step.
-
-Refreshed on 24 October 2026 after the player fixes, offline preparation tools and controlled diagnostics. The [input manifest](codebase-map-inputs.json) is authoritative for file counts, hashes, Graphify version and scope. Extraction is local/deterministic; no providers, agents, semantic extraction, MCP or watchers ran.
+Refreshed on 24 October 2026 after the current [model investigation and component cleanup](audits/2026-10-24-investigation.md). The manifest records 63 source/config/test files, 334 nodes and 740 edges. Local deterministic Graphify extraction used zero semantic/model tokens and no agents, providers, MCP or watchers. The later media helper is now inventoried; eight source files yield no extracted symbols. The current input manifest is authoritative for byte hashes and scope; cross-platform line endings can change those hashes.
 
 - [Machine-readable graph](codebase-map.json)
 - [Interactive Graphify map](codebase-map.html) — optional visualization uses CDN-hosted vis.js when opened; the application does not depend on it.
@@ -51,3 +53,11 @@ Use an isolated Python environment with the pinned Graphify package from `requir
 The current map includes the importer/parser path and newer preparation modules. Pinned SRT + editorial lexicon → importer → strict SRT parser/schema → bundled/public JSON → Workspace/VideoPlayer/Preferences. The importer preserves source timing and hashes the exact movie. Model candidates remain separate; there is no automatic edge from model output into playback. Failed audio calibration and rejected wording require review, not an installation shortcut.
 
 The broad local `graphify-out/` map is refreshed separately with code-only CLI extraction. It also classifies structured JSON/evidence and therefore has a different scope/count from the committed source map. Documents/media were not semantically indexed; a broad scan is not proof of complete understanding. Local ignored outputs may be absent in another checkout. The dated [fixes report](audits/2026-10-24-fixes.md) records freshness and tool limits.
+
+## Current ownership boundaries
+
+`Workspace` orchestrates the viewer; `useLocalMedia` owns local files/blob cleanup, `useRehearsal` owns event capture and stopped time, and track notice/timeline/import panels own presentation. `useVideoPlayback` owns media readiness, events, preview timing and transport actions; player controls and caption display/feedback are separate views. Preferences retain their draft identity with separate style, preview and readability views. Active rehearsal answers/export and pre-start consent are separate phases; snapshot construction is pure.
+
+Offline source caption generation → strict variant/completion guards → separate candidates. Contextual review preparation → hash-bound pending receipt → explicit human review; there is no automatic edge into playback. The refreshed source map includes these boundaries. The broad ignored graphify-out graph from earlier sessions was not refreshed and is historical. Graphs cannot establish complete React wiring, sound correctness or runtime behavior. Current behavior evidence is linked from the investigation.
+
+Integrity warning from the cached raw extraction: 169 dangling endpoint references and 28 same-endpoint directed pairs under the diagnostic's default deduplicating build. The committed mapper uses a DiGraph; all stored endpoints are bound, but that does not resolve the raw reference/coverage uncertainty. Its `dedup=False` controls entity merging, not parallel-edge collapse. See [raw diagnostics](verification/investigation-2026-10-24/reports/map-diagnostics.json). No claim of complete or corruption-free call extraction is made.

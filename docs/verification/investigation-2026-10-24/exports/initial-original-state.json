@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "purpose": "phase1-rehearsal-not-research",
+  "session_id": "b62845b3",
+  "video_id": "big-buck-bunny",
+  "annotation_status": "draft",
+  "caption_version": {
+    "method": "Imported licensed Demuxed sound captions with unchanged timings; locally authored source-anchored wording variants. Visual sync anchors spot-checked; not a complete listening or participant review.",
+    "prompt_version": "demuxed-anchored-v2-concise-effects",
+    "kind": "sourced",
+    "source_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "expressiveness": "source-anchored",
+    "scene_load_method": "cue-density",
+    "caption_source": {
+      "url": "https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt",
+      "revision": "e490383ca58f53507cfa18a64e1324f28d77c65a",
+      "license": "CC BY 3.0",
+      "author": "Demuxed / big-buck-captions contributors",
+      "sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd"
+    },
+    "quality_gate": "unverified"
+  },
+  "final_condition": "personalized",
+  "final_profile": {
+    "detail": 1,
+    "expression": 1,
+    "adaptive": true,
+    "representation": "descriptive",
+    "size": "extra-large",
+    "position": "top"
+  },
+  "final_original_override": true,
+  "elapsed_ms": 33,
+  "events": [
+    {
+      "type": "condition",
+      "video_s": 2.499,
+      "condition": "personalized",
+      "elapsed_ms": 0
+    },
+    {
+      "type": "profile",
+      "video_s": 2.499,
+      "profile": {
+        "detail": 1,
+        "expression": 1,
+        "adaptive": true,
+        "representation": "descriptive",
+        "size": "extra-large",
+        "position": "top"
+      },
+      "elapsed_ms": 0
+    },
+    {
+      "type": "original",
+      "video_s": 2.499,
+      "enabled": true,
+      "elapsed_ms": 0
+    }
+  ],
+  "ratings": {},
+  "note": ""
+}

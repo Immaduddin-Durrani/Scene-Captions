@@ -1,0 +1,13 @@
+{
+  "head": "02f309cbb8cc48801f07036fa27439e32c3d9d40",
+  "preserved_playback_and_failed_gate": [
+    "data/captions/big-buck-bunny.json",
+    "public/research/demo-captions.json",
+    "docs/verification/nim-capability-status.json"
+  ],
+  "local_key_not_found_in_nonignored_files_or_built_browser_js": true,
+  "browser_assets_checked": 22,
+  "env_ignored": true,
+  "source_public_new_tracks_equal": true,
+  "scope": "Bounded current-key check, not an exhaustive secret/history audit. No model calls."
+}

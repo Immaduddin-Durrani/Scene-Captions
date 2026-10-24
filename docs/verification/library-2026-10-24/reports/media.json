@@ -1,0 +1,71 @@
+{
+  "scope": "Official 720p full-film downloads and local MP4 preparation, explicitly requested by user. No full listening review.",
+  "media": [
+    {
+      "id": "sintel",
+      "title": "Sintel",
+      "durationSeconds": 888.032,
+      "video": "/media/sintel.mp4",
+      "poster": "/media/sintel-poster.jpg",
+      "englishSubtitles": "/media/sintel-en.vtt",
+      "subtitleSource": "English subtitle stream embedded in official Sintel 720p MKV",
+      "subtitleTimingReviewed": false,
+      "nonSpeechCaptionStatus": "not-prepared",
+      "source": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv.zip",
+      "sourceSha256": "f12c070e295b38cfc94ebd61ac3357c3bac82d1015985f1e8da93a4c6496c46d",
+      "credit": "\u00a9 2010 Blender Foundation / durian.blender.org",
+      "license": "CC BY 3.0",
+      "licenseSource": "https://durian.blender.org/about/",
+      "modifications": "Full 720p-release picture/credits retained; MP4 remux with original H.264 video where compatible, stereo AAC audio and extracted poster/subtitles",
+      "sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+      "bytes": 625173895,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 544
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac"
+        },
+        {
+          "codec_type": "data",
+          "codec_name": "bin_data"
+        }
+      ]
+    },
+    {
+      "id": "tears-of-steel",
+      "title": "Tears of Steel",
+      "durationSeconds": 734.166667,
+      "video": "/media/tears-of-steel.mp4",
+      "poster": "/media/tears-of-steel-poster.jpg",
+      "englishSubtitles": "/media/tears-of-steel-en.vtt",
+      "subtitleSource": "https://download.blender.org/demo/movies/ToS/subtitles/TOS-en.srt",
+      "subtitleTimingReviewed": false,
+      "nonSpeechCaptionStatus": "not-prepared",
+      "source": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "sourceSha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "credit": "\u00a9 2012 Blender Foundation / mango.blender.org",
+      "license": "CC BY 3.0",
+      "licenseSource": "https://mango.blender.org/about/",
+      "modifications": "Full 720p-release picture/credits retained; MP4 remux with original H.264 video where compatible, stereo AAC audio and extracted poster/subtitles",
+      "sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+      "bytes": 366404677,
+      "streams": [
+        {
+          "codec_type": "video",
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 534
+        },
+        {
+          "codec_type": "audio",
+          "codec_name": "aac"
+        }
+      ]
+    }
+  ]
+}

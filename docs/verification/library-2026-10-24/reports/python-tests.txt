@@ -1,0 +1,35 @@
+NVIDIA temporary HTTP 429; retry 1/6 in 2s.
+NVIDIA temporary HTTP 429; retry 2/6 in 4s.
+NVIDIA temporary HTTP 429; retry 3/6 in 8s.
+NVIDIA temporary HTTP 429; retry 4/6 in 16s.
+NVIDIA temporary HTTP 429; retry 5/6 in 32s.
+NVIDIA temporary HTTP 429; retry 6/6 in 60s.
+NVIDIA temporary HTTP 429; retry 1/6 in 10s.
+NVIDIA transport/timeout failure; retry 1/6 in 2s.
+test_alias_in_local_env_file_is_supported (test_nim_client.CredentialTests.test_alias_in_local_env_file_is_supported) ... ok
+test_missing_key_has_no_secret_in_error (test_nim_client.CredentialTests.test_missing_key_has_no_secret_in_error) ... ok
+test_process_value_takes_precedence_over_local_file (test_nim_client.CredentialTests.test_process_value_takes_precedence_over_local_file) ... ok
+test_attempt_override_cannot_exceed_the_shared_retry_bound (test_nim_retries.RetryTests.test_attempt_override_cannot_exceed_the_shared_retry_bound) ... ok
+test_bad_request_is_not_retried (test_nim_retries.RetryTests.test_bad_request_is_not_retried) ... ok
+test_diagnostic_single_attempt_does_not_retry_a_temporary_error (test_nim_retries.RetryTests.test_diagnostic_single_attempt_does_not_retry_a_temporary_error) ... ok
+test_long_retry_after_stops_instead_of_retrying_early (test_nim_retries.RetryTests.test_long_retry_after_stops_instead_of_retrying_early) ... ok
+test_rate_limit_backoff_is_bounded_at_one_minute (test_nim_retries.RetryTests.test_rate_limit_backoff_is_bounded_at_one_minute) ... ok
+test_response_wait_is_separate_from_backoff (test_nim_retries.RetryTests.test_response_wait_is_separate_from_backoff) ... ok
+test_retry_after_is_honored_within_the_cap (test_nim_retries.RetryTests.test_retry_after_is_honored_within_the_cap) ... ok
+test_temporary_network_failure_can_recover (test_nim_retries.RetryTests.test_temporary_network_failure_can_recover) ... ok
+test_one_bracket_line_cannot_hide_an_extra_event_or_empty_label (test_output_guards.OutputGuardTests.test_one_bracket_line_cannot_hide_an_extra_event_or_empty_label) ... ok
+test_truncated_completion_is_not_a_valid_candidate_even_if_json_parses (test_output_guards.OutputGuardTests.test_truncated_completion_is_not_a_valid_candidate_even_if_json_parses) ... ok
+test_changed_video_track_and_cue_invalidate_receipt (test_review.ReviewTests.test_changed_video_track_and_cue_invalidate_receipt) ... ok
+test_complete_receipt_is_only_documented_review_not_automatic_installation (test_review.ReviewTests.test_complete_receipt_is_only_documented_review_not_automatic_installation) ... ok
+test_partial_receipt_and_missing_variant_are_rejected (test_review.ReviewTests.test_partial_receipt_and_missing_variant_are_rejected) ... ok
+test_pending_receipt_is_not_an_approval (test_review.ReviewTests.test_pending_receipt_is_not_an_approval) ... ok
+test_echoing_the_source_is_not_useful_personalization (test_variants.VariantTests.test_echoing_the_source_is_not_useful_personalization) ... ok
+test_identity_and_length_must_match_the_source_job (test_variants.VariantTests.test_identity_and_length_must_match_the_source_job) ... ok
+test_missing_cells_and_extra_cells_are_rejected (test_variants.VariantTests.test_missing_cells_and_extra_cells_are_rejected) ... ok
+test_reading_flags_do_not_change_source_timing (test_variants.VariantTests.test_reading_flags_do_not_change_source_timing) ... ok
+test_simultaneous_sound_must_not_disappear (test_variants.VariantTests.test_simultaneous_sound_must_not_disappear) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.006s
+
+OK

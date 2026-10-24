@@ -1,0 +1,28 @@
+### Result
+{"stage":"pointer","error":"locator.waitFor: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.caption-preview-notice') to be hidden\u001b[22m\n\u001b[2m    16 × locator resolved to visible <div role=\"status\" class=\"caption-preview-notice\">…</div>\u001b[22m\n","state":{"time":84.3115,"range":"84.3","notice":true}}
+### Ran Playwright code
+```js
+await (async page => { let stage='start'; try {
+ await page.goto('http://127.0.0.1:3000');
+ await page.waitForFunction(()=>document.querySelector('video').readyState >= 1);
+ const track=await(await page.request.get('http://127.0.0.1:3000/research/demo-captions.json')).json();
+ const apple=track.cues.find(c=>c.original_text==='[APPLE THUDS]'); const mid=(apple.start_s+apple.end_s)/2;
+ await page.locator('.cue-row').nth(track.cues.indexOf(apple)).click();
+ await page.getByRole('button',{name:'Rich',exact:true}).click();
+ const preview=page.getByRole('button',{name:'Preview this cue in the video',exact:true});
+ await preview.click(); await page.locator('.caption-preview-notice').waitFor({state:'visible'});
+ await page.waitForFunction(s=>Math.abs(document.querySelector('video').currentTime-s)<.02,mid);
+ stage='keyboard'; await page.locator('#timeline').focus(); await page.keyboard.press('ArrowRight');
+ await page.locator('.caption-preview-notice').waitFor({state:'hidden',timeout:1500});
+ await page.waitForFunction(s=>document.querySelector('video').currentTime>s+.01,mid,{timeout:2000});
+ const keyboardTime=await page.locator('video').evaluate(el=>el.currentTime);
+ await preview.click();await page.locator('.caption-preview-notice').waitFor({state:'visible'});
+ stage='pointer'; const box=await page.locator('#timeline').boundingBox();
+ await page.mouse.click(box.x+box.width*.7,box.y+box.height/2);
+ await page.locator('.caption-preview-notice').waitFor({state:'hidden',timeout:1500});
+ await page.waitForFunction(()=>document.querySelector('video').currentTime>400,{},{timeout:2000});
+ return {keyboardTime,pointerTime:await page.locator('video').evaluate(el=>el.currentTime),keyboardCancel:true,pointerCancel:true};
+} catch(e) {return {stage,error:e.message,state:await page.evaluate(()=>({time:document.querySelector('video').currentTime,range:document.querySelector('#timeline').value,notice:!!document.querySelector('.caption-preview-notice')}))};}})(page);
+```
+### Events
+- New console entries: .playwright-cli/console-2026-10-24T09-20-23-420Z.log#L47-L53

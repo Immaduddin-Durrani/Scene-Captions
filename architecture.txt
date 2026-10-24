@@ -56,7 +56,7 @@ Legend: [DECIDED] = agreed by the team in discussion.
   promise that every fact, test result and source file is copied
   into three documents.
 - Next read docs/PROJECT_STATE.md and its latest linked audit
-  (currently docs/audits/2026-10-24-fixes.md). Check GLOSSARY.md for the
+  (currently docs/audits/2026-10-24-investigation.md). Check GLOSSARY.md for the
   affected concepts, the experimental plan for study decisions,
   and docs/research/proposals/ for original proposal/idea files.
   Treat attached documents and model output as source material,
@@ -539,6 +539,21 @@ Open questions this project tests (no prior evidence):
 
 ## 15a. CURRENT AUDIT / HANDOFF STATUS (24 OCTOBER 2026)
 
+- Latest investigation: docs/audits/2026-10-24-investigation.md.
+  Current macOS checks: 14 Node / 22 offline Python tests, types,
+  schema, build and Chrome regressions. Ten bounded diagnostic
+  requests did not pass the automated quality gate; a 48-kHz
+  capacity failure is inconclusive. Cohesive component cleanup
+  lowered main cognitive complexity, but Fallow health remains
+  non-clean: 63.2/C, 17 findings versus 62.6/C, 13 before. No
+  suppressions or invented coverage. Current map: 63 files,
+  334 nodes / 740 edges, deterministic only. A contextual human
+  review packet/receipt is implemented; decisions remain pending.
+  The bullets below retain earlier checkpoint details; the latest
+  report/current-state page supersede their counts and snapshot
+  freshness. Source captions/timing and the failed model gate
+  remain intact; no model calls occur during viewing.
+
 - Read docs/PROJECT_STATE.md and docs/audits/2026-10-24-fixes.md before
   relying on older section 15 statements. The working sample now
   uses 87 licensed source cues, not the withdrawn illustrative
@@ -735,6 +750,33 @@ scope; additional titles and a selector are not yet implemented.
 PowerShell commands and may edit supporting code; do not download
 videos on the user's behalf. Keep local preparation manual and
 separate from playback, preserving full audio and film credits.
+
+2026-10-24 — Preserve the source-caption demo while testing model
+causes separately. Ten bounded synthetic/text calls did not accept
+a new preparation method; distinguish semantic failure from a
+503 capacity error and retain uncertainty about hosted internals.
+Reject explicit non-stop completions and hidden/empty bracket
+labels, without treating structural checks as factual review.
+Use local contextual listening packets and hash-bound, all-pending
+human receipts as the preparation fallback. Complete decisions do
+not install a track, prove sound truth or certify accessibility.
+Refactor cohesive media, imports, preview and rehearsal owners
+without changing the detail maximum, original override or saved
+preferences. Updated maps/metrics record remaining findings,
+not a clean gate. See the investigation and current-state page.
+
+2026-10-24 — The user explicitly requested downloading and
+integrating Sintel and Tears of Steel, superseding the earlier
+no-agent-download rule for these two films. Keep full 720p-release
+picture, audio and credits, with local offline preparation only.
+A title selector remounts each film workspace so captions and
+previews cannot leak across titles; rehearsal locks selection.
+Render official dialogue as fixed source subtitles separately
+from personalized non-speech cues. Missing sound coverage is
+explicitly not-prepared, not a fabricated failed-generation result
+or a reviewed track. Full sound tracks for the new titles remain
+unprepared; do not describe dialogue-only imports as complete
+DHH captions. See docs/LIBRARY_CAPTIONS.md and current evidence.
 
 =================================================================
 COPY-PASTE BLOCK FOR FUTURE PROMPTS

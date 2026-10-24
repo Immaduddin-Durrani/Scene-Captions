@@ -16,6 +16,10 @@ const cueSchema = z.object({
   scene_load_basis: z.enum(["manual", "cue-density"]).optional(),
   representations: z.object({ plain: z.string().min(1).max(280), onomatopoeic: z.string().min(1).max(280).optional() }),
 }).refine((cue) => cue.end_s > cue.start_s, "Cue end must follow its start.");
+const dialogueCueSchema = z.object({
+  cue_id: z.string().min(1).max(80), start_s: z.number().finite().nonnegative(),
+  end_s: z.number().finite().positive(), text: z.string().trim().min(1).max(1000),
+}).refine((cue) => cue.end_s > cue.start_s, "Dialogue end must follow its start.");
 export const videoSchema = z.object({
   schema_version: z.literal(1), video_id: z.string().regex(/^[a-z0-9-]+$/).max(80),
   title: z.string().min(1).max(160), source_url: z.string().url(),
@@ -30,10 +34,14 @@ export const videoSchema = z.object({
     scene_load_method: z.enum(["unreviewed", "reviewed", "cue-density"]).optional(),
     caption_source: z.object({ url: z.string().url().regex(/^https?:\/\//), revision: z.string(), license: z.string(), author: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
     quality_gate: z.enum(["failed", "unverified", "passed"]).optional(),
+    non_speech_status: z.literal("not-prepared").optional(),
   }),
+  dialogue: z.array(dialogueCueSchema).max(5000).optional(),
+  dialogue_source: z.object({ url: z.string().url().regex(/^https?:\/\//), author: z.string(), license: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
   cues: z.array(cueSchema).max(5000),
 }).superRefine((video, ctx) => {
-  if (!video.cues.length && video.generated_with.quality_gate !== "failed") ctx.addIssue({ code: "custom", path: ["cues"], message: "Provide caption cues, or explicitly mark the failed generation gate." });
+  if (!video.cues.length && video.generated_with.quality_gate !== "failed" && video.generated_with.non_speech_status !== "not-prepared") ctx.addIssue({ code: "custom", path: ["cues"], message: "Provide caption cues, or explicitly mark failed generation or sound captions not prepared." });
+  if (video.cues.length && video.generated_with.non_speech_status === "not-prepared") ctx.addIssue({ code: "custom", path: ["cues"], message: "A not-prepared sound track cannot contain playback sound cues." });
   if (video.generated_with.quality_gate === "failed" && video.cues.length) ctx.addIssue({ code: "custom", path: ["cues"], message: "Failed generation candidates cannot be used for playback. Review and correct the captions first." });
   const ids = new Set<string>();
   video.cues.forEach((cue, index) => {
@@ -41,6 +49,12 @@ export const videoSchema = z.object({
     ids.add(cue.cue_id);
     if (cue.end_s > video.duration_seconds) ctx.addIssue({ code: "custom", path: ["cues", index], message: "Cue exceeds the video duration." });
     if (index && cue.start_s < video.cues[index - 1].start_s) ctx.addIssue({ code: "custom", path: ["cues", index], message: "Cues must be ordered by start time." });
+  });
+  const dialogueIds = new Set<string>();
+  video.dialogue?.forEach((cue, index) => {
+    if (dialogueIds.has(cue.cue_id)) ctx.addIssue({ code: "custom", path: ["dialogue", index, "cue_id"], message: "Dialogue IDs must be unique." });
+    dialogueIds.add(cue.cue_id);
+    if (cue.end_s > video.duration_seconds || (index > 0 && cue.start_s < video.dialogue![index - 1].start_s)) ctx.addIssue({ code: "custom", path: ["dialogue", index], message: "Dialogue must be ordered and within the film duration." });
   });
 });
 export type CaptionCue = z.infer<typeof cueSchema>;
@@ -65,7 +79,8 @@ export function resolveCaption(cue: CaptionCue, profile: CaptionProfile, conditi
   const text = profile.representation === "plain" ? cue.representations.plain
     : profile.representation === "onomatopoeic" && cue.representations.onomatopoeic ? cue.representations.onomatopoeic
       : cue.grid[`${detail}-${profile.expression}`];
-  const reason = adapted ? cue.scene_load_basis === "cue-density" ? cue.scene_load === "dense" ? "Less detail among frequent sound cues" : "More detail among sparse sound cues" : cue.scene_load === "dense" ? "Less detail in a busy scene" : "More detail in a quiet scene" : "Your saved preferences";
+  // The detail-maximum policy only adapts dense cues. Sparse expansion is unreachable.
+  const reason = adapted ? cue.scene_load_basis === "cue-density" ? "Less detail among frequent sound cues" : "Less detail in a busy scene" : "Your saved preferences";
   return { text, reason: profile.representation !== "descriptive" ? "Your selected sound representation" : reason, adapted: adapted && profile.representation === "descriptive", detail };
 }
 

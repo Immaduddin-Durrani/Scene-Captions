@@ -7,3 +7,5 @@
 data/sources/big-buck-captions/big-buck-bunny.srt -text -whitespace
 public/research/big-buck-bunny.srt -text -whitespace
 public/research/big-buck-bunny.vtt -text -whitespace
+# Preserve downloaded/extracted subtitle bytes for provenance SHA-256 checks.
+data/sources/library/*-en.srt -text -whitespace

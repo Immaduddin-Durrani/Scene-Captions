@@ -63,3 +63,11 @@ Protein design, quantum calibration, tabular/relational prediction, body pose, a
 - [Nemotron 3 Nano Omni model card](https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning/modelcard).
 
 These references support advertised capabilities, not successful requests from this account or suitability for the participant study. Existing local failure evidence is described in [caption generation status](../CAPTION_GENERATION_STATUS.md).
+
+## Follow-up: isolated factors and honest limits
+
+The [current investigation](../audits/2026-10-24-investigation.md) reuses historical speech/decoder controls and records ten new single-attempt calls in [current evidence](../verification/investigation-2026-10-24/README.md). Same-prompt Lightning temperature .2/1.0 both returned ambient. Explicit noun-copy prompts produced an unexpected Spanish music word and correct held-out footsteps. This supports partial prompt/task sensitivity, not accepted English caption variants.
+
+Omni again called 16 kHz audible tones silent. Its 48 kHz counterpart returned HTTP 503 worker-capacity exhaustion, so sample-rate suitability is still unresolved. Plain silence was correctly called silent, while classification silence was incorrectly TONE; a held-out two-tone mix was called silent. No film inference, automatic sound matching or gate clearance followed. All requests used 2.05-second shared pacing, one attempt and 180-second waits; production retry defaults remain intact. Account limits/backend checkpoints remain unverified.
+
+Primary-source research also considered Audio Flamingo Next/AF3, specialised temporal grounding (SpotSound), framewise event detection and CLAP retrieval. Published benchmark results do not transfer to this hosted setup. No alternative GPU service, weight download or paid integration was started. The implemented fallback is hash-bound human listening/wording review, not another plausible model response. Exact references, dates, evaluation limits and acceptance criteria are in the current investigation.

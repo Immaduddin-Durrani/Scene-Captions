@@ -1,0 +1,16 @@
+### Result
+{"threeClipsLoaded":true,"sourceInitiallyHidden":true,"metadata":[{"duration":5.917,"ready":4},{"duration":4.167,"ready":4},{"duration":3.5,"ready":4}],"actualListeningApproval":false}
+### Ran Playwright code
+```js
+await (async page => {
+ await page.goto('file:///Users/hamza/Scene-Captions/artifacts/caption-review/investigation-2026-10-24/index.html');
+ if(await page.locator('audio').count()!==3) throw new Error('Expected three listening clips');
+ if(await page.locator('details[open]').count()) throw new Error('Source labels should start hidden');
+ const metadata=await page.locator('audio').evaluateAll(async clips=>await Promise.all(clips.map(audio=>new Promise((resolve,reject)=>{audio.onloadedmetadata=()=>resolve({duration:audio.duration,ready:audio.readyState});audio.onerror=()=>reject(new Error('Clip failed to load'));audio.load();}))));
+ if(metadata.some(item=>!Number.isFinite(item.duration)||item.duration<=0)) throw new Error('Invalid audio duration');
+ return {threeClipsLoaded:true,sourceInitiallyHidden:true,metadata,actualListeningApproval:false};
+})(page);
+```
+### Page
+- Page URL: file:///Users/hamza/Scene-Captions/artifacts/caption-review/investigation-2026-10-24/index.html
+- Page Title: Local caption listening review

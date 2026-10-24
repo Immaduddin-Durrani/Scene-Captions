@@ -1,0 +1,30 @@
+
+> scene-captions@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ cue boundaries exclude ended captions and preserve simultaneous sounds (5.087708ms)
+✔ baseline and Show Original always preserve the original (0.46ms)
+✔ adaptation is cached selection and does not mutate saved preferences (0.294542ms)
+✔ malformed and incomplete annotation files are rejected (1.46175ms)
+✔ alternate representation falls back to descriptive when unavailable (0.479375ms)
+✔ failed audio generation cannot activate unreviewed candidates (2.347625ms)
+✔ bundled captions preserve every licensed source interval and simultaneous event (6.948334ms)
+✔ source-derived adaptation discloses its caption-density proxy (3.563083ms)
+✔ adaptation never exceeds the viewer's detail limit (0.455542ms)
+✔ sintel preserves official dialogue, timing and provenance without inventing sounds (6.265958ms)
+✔ tears-of-steel preserves official dialogue, timing and provenance without inventing sounds (3.475292ms)
+✔ dialogue validation rejects duplicate IDs and intervals outside the selected film (5.403542ms)
+✔ event recording validates event types and stores relative elapsed time (2.523167ms)
+✔ rehearsal event buffer stays bounded (0.378875ms)
+✔ rehearsal snapshots keep stopped duration and the complete caption override state (0.361333ms)
+✔ SubRip preserves BOM/CRLF multiline sound cues and millisecond timing (1.543375ms)
+✔ SubRip rejects broken blocks, reversed intervals, duplicate IDs and invalid timestamps (0.366709ms)
+✔ SubRip accepts multiple blank separators without dropping official dialogue (0.103583ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 248.117417
