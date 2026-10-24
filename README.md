@@ -2,9 +2,30 @@
 
 Adaptive non-speech captions for Deaf and hard-of-hearing (DHH) viewers of long-form video.
 
+## Starting or continuing work
+
+Read this README, [architecture.txt](architecture.txt) and the required
+[skill workflow](docs/SKILL_WORKFLOW.md) first. Then read the
+[current project state](docs/PROJECT_STATE.md) and
+[latest fixes and diagnosis](docs/audits/2026-10-24-fixes.md) for current decisions,
+verified findings and unfinished work. Use [the glossary](GLOSSARY.md)
+for domain meanings and the experimental plan for study details.
+The [documentation index](docs/README.md) explains where each kind of file belongs.
+
+Inspect fresh Graphify maps and relevant Fallow reports before broad source
+exploration; use them to identify affected files, then inspect those files
+and tests before editing. Maps and scans are bounded snapshots, not proof
+of runtime behavior or caption quality. Refresh them when justified and
+authorized for the current task, or clearly mark them stale. See the
+current-state page for snapshot locations and known coverage gaps.
+
+No automatic skill activation, agents, paid services, publishing or hooks
+are authorized by these documents. Keep all model generation outside playback.
+
 ## Phase 1: run the prototype
 
-Requires Node.js 22.13+, npm, unzip, and a modern browser. No API key is needed.
+Requires Node.js 22.13+, npm and a modern browser. Windows uses its installed
+PowerShell ZIP reader; macOS/Linux require unzip. No API key is needed for playback.
 
 ```sh
 npm ci
@@ -20,11 +41,15 @@ opened locally with matching precomputed caption JSON. Nothing is uploaded.
 Deliverables and demonstration steps: [Phase 1 handoff](docs/PHASE1.md).
 Research protocol: [Experimental plan](docs/EXPERIMENTAL_PLAN.md).
 Own-video preparation: [Caption import guide](docs/CAPTION_IMPORT.md).
+Optional short-film downloads and local resources: [local media guide](docs/LOCAL_MEDIA.md).
+The user runs video downloads; agents prepare commands and code only.
 The sample now includes 87 timed non-speech caption cues from the licensed
 [Demuxed caption track](https://github.com/demuxed/big-buck-captions), with
 source-anchored wording variants and cue-density adaptation. No API key is
 needed. See [caption provenance and checks](docs/CAPTION_GENERATION_STATUS.md).
 The study still needs a full caption review against your team's own video.
+Offline model preparation is separate: see [the tooling guide](scripts/generation/README.md).
+Current model trials have not passed caption-generation/audio-corroboration quality gates.
 
 ## Team
 - Zuhair Amirali Merchant (29021)

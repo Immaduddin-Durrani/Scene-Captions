@@ -1,6 +1,6 @@
 # SceneCaptions — Experimental plan
 
-Phase 1 proposal · 23 October 2026
+Phase 1 proposal · revised 24 October 2026
 
 ## Research question
 
@@ -10,9 +10,19 @@ Hypotheses: personalized captions may reduce reported effort and improve control
 
 ## Phase 1 demonstration
 
-Deliver a running local player with fixed and personalized conditions, precomputed caption variants, persistent preferences, a preview, Show Original, readable text settings, a cue timeline, and opt-in rehearsal export. The team will create the study video. A short licensed sample and illustrative draft captions are included only to demonstrate the interface.
+Deliver a running local player with fixed and personalized conditions, precomputed caption variants, persistent preferences, a preview, Show Original, readable text settings, a cue timeline, and opt-in rehearsal export. The team will create the study video. The short licensed sample uses 87 licensed source-caption intervals and source-anchored wording; it is not the long-form study stimulus.
 
-Phase 1 is a technical demonstration and a proposed experimental protocol. No study has been conducted. Rehearsal exports are not research evidence; sample cues are not verified soundtrack annotations.
+Phase 1 is a technical demonstration and a proposed experimental protocol. No study has been conducted. Rehearsal exports are not research evidence. Source-caption correctness and reading time still require a full review.
+
+## Prototype mechanism and preparation limits
+
+The current prototype adapts to sound-cue density, explicitly disclosed as a proxy. It does not measure visual scene complexity, off-screen importance or cognitive load. Chosen detail is a maximum: dense passages can reduce detail, but sparse passages cannot increase it beyond the saved choice. Before the study, freeze and describe the exact adaptation rule being tested rather than calling this proxy verified scene understanding.
+
+The preview pauses at a source cue and temporarily shows the draft settings on the video for five seconds. Saved settings return automatically or on request; preview never saves the draft. Original-caption override takes priority. Readability changes apply immediately in both conditions and preserve unfinished content preferences.
+
+Automated preparation starts from existing timed sound captions. A separate audio check extracts corresponding clips and must pass calibration before its observations can assist review. Current audio calibration failed on silence, and text-model trials did not produce acceptable personalization. No model candidates replaced the working track. Model agreement would still require listening and wording review; it is not independent ground truth.
+
+A 20-character-per-second editing heuristic flags possible reading-time problems, including in source originals. It is not a validated DHH reading-speed limit. Shortening wording does not establish correctness, and source timing is never extended automatically.
 
 ## Participants and approval
 

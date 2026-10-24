@@ -1,0 +1,5 @@
+{
+  "scope": "Negative control: invalid WAV bytes in the same audio_url data-URI field",
+  "expected": "A decode/input error, rather than an asserted audio classification",
+  "error": "RuntimeError: NVIDIA HTTP 500: {\"error\":{\"message\":\"Exception: Failed to load audio from data:audio/wav;base64,Tk9UIEEgVkFMSUQgV0FWIEZJTEU=...: Failed to load audio from data:audio/wav;base64,Tk9UIEEgVkFMSUQgV0FWIEZJTEU=: Invalid or unsupported audio file.\\n\",\"type\":\"Internal Server Error\",\"code\":500}}"
+}

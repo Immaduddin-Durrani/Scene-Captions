@@ -6,7 +6,7 @@ Two deliverables: a running application and the experimental plan.
 
 ## Start the app
 
-Requires Node.js 22.13+ (Node 25.2.1 checked), npm and unzip. Run from this repository:
+Requires Node.js 22.13+ and npm (Windows checks used Node 24.21.0). Windows uses its installed PowerShell ZIP reader; macOS/Linux need unzip. Run from this repository:
 
 ```sh
 npm ci
@@ -19,7 +19,7 @@ Open http://localhost:3000 . The movie is downloaded once from Blender's officia
 Demo in approximately three minutes:
 
 1. Play the sample film. Click the 1:23 apple cue in the timeline to see a caption matched to that moment.
-2. Change detail or expressiveness. The candidate changes in the preview; click Apply preferences to change the player.
+2. Change detail or expressiveness. Try Preview this cue in the video: playback pauses and shows the candidate temporarily for five seconds. Return manually or let the saved settings return automatically; Apply preferences saves the changes. Text size/position changes retain unfinished content preferences.
 3. Toggle Follow cue density, Show original, and Original baseline. Baseline content is fixed; readability is available in both conditions.
 4. Reload to check preference persistence. Open Why this caption? to inspect the selection rationale.
 5. Open your team's own MP4 in Bring your own story. Add matching caption JSON. Files stay on your device. Sample captions are cleared when you change the video.
@@ -35,7 +35,7 @@ See [CAPTION_IMPORT.md](CAPTION_IMPORT.md) for the schema and workflow. The app 
 ## Setup and keys
 
 - Phase 1 demo: **none**. Node, npm, unzip and a browser are sufficient. ffmpeg is already installed locally; ffprobe is needed only to rebuild captions with npm run setup:captions.
-- NVIDIA NIM: needed only if you later choose AI-assisted offline caption generation. The earlier offline NIM probe failed its audio capability gate; that model remains blocked. The working sample uses source captions and does not depend on NIM. No NIM key belongs in the player or NEXT_PUBLIC_*.
+- NVIDIA NIM: used only by separately run offline preparation tools. Current text/audio trials have not passed quality gates. Audio decode and speech controls work, but non-speech tone recognition still fails in the tested setup. The working sample uses source captions and does not depend on NIM. No NIM key belongs in the player or NEXT_PUBLIC_*. See scripts/generation/README.md for candidate preparation, retries and response waits.
 - Hosted deployment, external video storage and a controlled participant-data store: not configured and not needed for this local submission. For a hosted study, video must stream from an external host and approved research logs need persistent, restricted storage.
 - Formal participant experiments: finalize consent/ethics with your instructor before recruitment; the rehearsal checkbox does not replace it.
 

@@ -1,0 +1,8 @@
+NVIDIA temporary HTTP 429; retry 1/6 in 2s.
+NVIDIA temporary HTTP 429; retry 2/6 in 4s.
+NVIDIA temporary HTTP 429; retry 3/6 in 8s.
+NVIDIA temporary HTTP 429; retry 4/6 in 16s.
+NVIDIA temporary HTTP 429; retry 5/6 in 32s.
+NVIDIA temporary HTTP 429; retry 6/6 in 60s.
+NVIDIA temporary HTTP 429; retry 1/6 in 10s.
+NVIDIA transport/timeout failure; retry 1/6 in 2s.

@@ -1,12 +1,14 @@
 async (page) => {
   const assert = (value, message) => { if (!value) throw new Error(message); };
   const results = [];
-  await page.goto('http://127.0.0.1:3000');
+  const base = new URL(page.url()).origin;
+  const evidence = 'artifacts/browser-smoke';
+  await page.goto(base);
   await page.evaluate(() => { localStorage.removeItem('scenecaptions.profile.v1'); });
   await page.reload();
   await page.setViewportSize({ width: 1440, height: 1100 });
   await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
-  const track = await (await page.request.get('http://127.0.0.1:3000/research/demo-captions.json')).json();
+  const track = await (await page.request.get(base + '/research/demo-captions.json')).json();
   assert(track.generated_with.kind === 'sourced', 'Playback must use the licensed source track');
   assert(await page.locator('.cue-row').count() === 87, 'All source intervals installed');
   await page.getByText('Sourced sound captions.', { exact: true }).waitFor();
@@ -84,17 +86,17 @@ async (page) => {
   await page.locator('.cue-row').nth(appleIndex).click();
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export rehearsal JSON', exact: false }).click();
-  const download = await downloadPromise; await download.saveAs('docs/verification/sourced-rehearsal-test.json');
+  const download = await downloadPromise; await download.saveAs(evidence + '/sourced-rehearsal-test.json');
   await page.getByRole('button', { name: 'Stop recording', exact: true }).click();
   results.push('opt-in rehearsal and export');
   await page.reload(); await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
   await page.locator('.cue-row').nth(appleIndex).click();
   await page.locator('.caption-lines').waitFor();
   await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
-  await page.screenshot({ path: 'docs/verification/sourced-captions-desktop.png' });
+  await page.screenshot({ path: evidence + '/sourced-captions-desktop.png' });
   await page.setViewportSize({ width: 390, height: 844 });
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'No mobile horizontal overflow');
-  await page.screenshot({ path: 'docs/verification/sourced-captions-mobile.png', fullPage: true });
+  await page.screenshot({ path: evidence + '/sourced-captions-mobile.png', fullPage: true });
   await page.getByRole('link', { name: 'Experimental plan', exact: true }).click();
   await page.getByRole('heading', { name: 'How we’ll study it.', exact: true }).waitFor();
   results.push('mobile layout and experimental plan');

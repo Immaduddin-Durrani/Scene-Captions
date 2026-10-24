@@ -1,0 +1,19 @@
+test_alias_in_local_env_file_is_supported (test_nim_client.CredentialTests.test_alias_in_local_env_file_is_supported) ... ok
+test_missing_key_has_no_secret_in_error (test_nim_client.CredentialTests.test_missing_key_has_no_secret_in_error) ... ok
+test_process_value_takes_precedence_over_local_file (test_nim_client.CredentialTests.test_process_value_takes_precedence_over_local_file) ... ok
+test_bad_request_is_not_retried (test_nim_retries.RetryTests.test_bad_request_is_not_retried) ... ok
+test_long_retry_after_stops_instead_of_retrying_early (test_nim_retries.RetryTests.test_long_retry_after_stops_instead_of_retrying_early) ... ok
+test_rate_limit_backoff_is_bounded_at_one_minute (test_nim_retries.RetryTests.test_rate_limit_backoff_is_bounded_at_one_minute) ... ok
+test_response_wait_is_separate_from_backoff (test_nim_retries.RetryTests.test_response_wait_is_separate_from_backoff) ... ok
+test_retry_after_is_honored_within_the_cap (test_nim_retries.RetryTests.test_retry_after_is_honored_within_the_cap) ... ok
+test_temporary_network_failure_can_recover (test_nim_retries.RetryTests.test_temporary_network_failure_can_recover) ... ok
+test_echoing_the_source_is_not_useful_personalization (test_variants.VariantTests.test_echoing_the_source_is_not_useful_personalization) ... ok
+test_identity_and_length_must_match_the_source_job (test_variants.VariantTests.test_identity_and_length_must_match_the_source_job) ... ok
+test_missing_cells_and_extra_cells_are_rejected (test_variants.VariantTests.test_missing_cells_and_extra_cells_are_rejected) ... ok
+test_reading_flags_do_not_change_source_timing (test_variants.VariantTests.test_reading_flags_do_not_change_source_timing) ... ok
+test_simultaneous_sound_must_not_disappear (test_variants.VariantTests.test_simultaneous_sound_must_not_disappear) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.009s
+
+OK

@@ -11,3 +11,13 @@
 - This short film is temporary demo material. The team will create the actual 20–30 minute study video.
 
 The official about page was checked during setup; it identifies the project's published data as CC BY 3.0 and excludes trademarks/logos. No Blender logo is used in the app.
+
+## Optional catalogue assets
+
+The user-run `scripts/media/prepare-library.ps1` can add these films. Their files are not included in Git and have not been downloaded by the agent.
+
+- Sintel: © 2010 Blender Foundation / durian.blender.org. [Project license](https://durian.blender.org/about/), CC BY 3.0.
+- Tears of Steel: © 2012 Blender Foundation / mango.blender.org. [Project license](https://mango.blender.org/about/), CC BY 3.0. Retain the complete credit scroll.
+- Preparation changes: H.264 video preserving original 720p-release dimensions, stereo AAC sound, extracted poster and available subtitles converted to WebVTT. Full film duration is retained. Generated per-film `.resources.json` records the exact file hash, source and modifications.
+
+See [local media preparation](../../docs/LOCAL_MEDIA.md) for official sources and the outstanding subtitle/sound-caption review. Additional films are not yet integrated into the title selector.

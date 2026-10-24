@@ -1,0 +1,35 @@
+async (page) => {
+  await page.goto('http://127.0.0.1:3001');
+  await page.evaluate(() => localStorage.removeItem('scenecaptions.profile.v1'));
+  await page.reload();
+  await page.setViewportSize({width:1440,height:1100});
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  await page.getByRole('button',{name:'Rich',exact:true}).click();
+  const draftBefore = await page.getByLabel('Level of detail',{exact:false}).inputValue();
+  await page.getByText('Caption readability',{exact:true}).click();
+  await page.getByLabel('Text size',{exact:true}).selectOption('extra-large');
+  const draftAfter = await page.getByLabel('Level of detail',{exact:false}).inputValue();
+  const applied = await page.evaluate(() => JSON.parse(localStorage.getItem('scenecaptions.profile.v1')));
+  await page.getByRole('button',{name:'Essential',exact:true}).click();
+  await page.getByRole('button',{name:'Apply preferences',exact:true}).click();
+  await page.locator('.cue-row').first().click();
+  await page.locator('.caption-lines').waitFor();
+  const essentialActual=await page.locator('.caption-lines').textContent();
+  const track=await (await page.request.get('http://127.0.0.1:3001/research/demo-captions.json')).json();
+  const essentialExpected=track.cues[0].grid['1-1'];
+  await page.setViewportSize({width:390,height:844});
+  const targets=await page.evaluate(() => [...document.querySelectorAll('.video-controls button,.switch')].map(el => {const r=el.getBoundingClientRect();return {name:el.getAttribute('aria-label')||el.textContent||el.id,width:r.width,height:r.height};}));
+  const reset=await page.getByRole('button',{name:'Reset preferences',exact:true}).count();
+  await page.getByRole('button',{name:'Show original',exact:true}).click();
+  const overridden=await page.locator('.caption-lines').textContent();
+  await page.getByLabel('I agree to record this demo’s player interactions locally.').check();
+  await page.getByRole('button',{name:'Start rehearsal',exact:false}).click();
+  const downloadPromise=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Export rehearsal JSON',exact:false}).click();
+  const download=await downloadPromise;
+  await download.saveAs('docs/verification/audit-2026-10-24/exports/start-with-original.json');
+  const pingGet=await page.request.get('http://127.0.0.1:3001/api/ping');
+  const pingHead=await page.request.head('http://127.0.0.1:3001/api/ping');
+  const range=await page.request.get('http://127.0.0.1:3001/media/big-buck-bunny.mp4',{headers:{Range:'bytes=0-99'}});
+  return {draftBefore,draftAfter,applied,essentialActual,essentialExpected,overridden,targets,reset,ping:{get:pingGet.status(),head:pingHead.status(),range:range.status()},headers:(await page.request.get('http://127.0.0.1:3001')).headers()};
+}

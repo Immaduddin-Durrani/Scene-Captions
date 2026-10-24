@@ -1,0 +1,1449 @@
+{
+  "heuristic": "20 characters/second for editing review only, not a validated DHH threshold",
+  "timings_changed": false,
+  "variant_version": "demuxed-anchored-v2-concise-effects",
+  "flags": [
+    {
+      "cue_id": "bbb-sdh-002",
+      "variant": "3-1",
+      "characters": 69,
+      "seconds": 2.167,
+      "characters_per_second": 31.8
+    },
+    {
+      "cue_id": "bbb-sdh-002",
+      "variant": "3-2",
+      "characters": 71,
+      "seconds": 2.167,
+      "characters_per_second": 32.8
+    },
+    {
+      "cue_id": "bbb-sdh-002",
+      "variant": "3-3",
+      "characters": 76,
+      "seconds": 2.167,
+      "characters_per_second": 35.1
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "original",
+      "characters": 26,
+      "seconds": 0.541,
+      "characters_per_second": 48.1
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-1",
+      "characters": 22,
+      "seconds": 0.541,
+      "characters_per_second": 40.7
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-2",
+      "characters": 22,
+      "seconds": 0.541,
+      "characters_per_second": 40.7
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-3",
+      "characters": 19,
+      "seconds": 0.541,
+      "characters_per_second": 35.1
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-1",
+      "characters": 30,
+      "seconds": 0.541,
+      "characters_per_second": 55.5
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-2",
+      "characters": 28,
+      "seconds": 0.541,
+      "characters_per_second": 51.8
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-3",
+      "characters": 33,
+      "seconds": 0.541,
+      "characters_per_second": 61.0
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-1",
+      "characters": 26,
+      "seconds": 0.541,
+      "characters_per_second": 48.1
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-2",
+      "characters": 28,
+      "seconds": 0.541,
+      "characters_per_second": 51.8
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-3",
+      "characters": 28,
+      "seconds": 0.541,
+      "characters_per_second": 51.8
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "variant": "2-2",
+      "characters": 17,
+      "seconds": 0.667,
+      "characters_per_second": 25.5
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "variant": "3-1",
+      "characters": 21,
+      "seconds": 0.667,
+      "characters_per_second": 31.5
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "variant": "3-2",
+      "characters": 22,
+      "seconds": 0.667,
+      "characters_per_second": 33.0
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "variant": "3-3",
+      "characters": 27,
+      "seconds": 0.667,
+      "characters_per_second": 40.5
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "variant": "3-1",
+      "characters": 21,
+      "seconds": 0.875,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "variant": "3-2",
+      "characters": 22,
+      "seconds": 0.875,
+      "characters_per_second": 25.1
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "variant": "3-3",
+      "characters": 27,
+      "seconds": 0.875,
+      "characters_per_second": 30.9
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "original",
+      "characters": 17,
+      "seconds": 0.834,
+      "characters_per_second": 20.4
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "2-1",
+      "characters": 19,
+      "seconds": 0.834,
+      "characters_per_second": 22.8
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "2-2",
+      "characters": 19,
+      "seconds": 0.834,
+      "characters_per_second": 22.8
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "2-3",
+      "characters": 19,
+      "seconds": 0.834,
+      "characters_per_second": 22.8
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-1",
+      "characters": 34,
+      "seconds": 0.834,
+      "characters_per_second": 40.8
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-2",
+      "characters": 35,
+      "seconds": 0.834,
+      "characters_per_second": 42.0
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-3",
+      "characters": 35,
+      "seconds": 0.834,
+      "characters_per_second": 42.0
+    },
+    {
+      "cue_id": "bbb-sdh-009",
+      "variant": "3-3",
+      "characters": 29,
+      "seconds": 1.292,
+      "characters_per_second": 22.4
+    },
+    {
+      "cue_id": "bbb-sdh-010",
+      "variant": "3-3",
+      "characters": 29,
+      "seconds": 1.292,
+      "characters_per_second": 22.4
+    },
+    {
+      "cue_id": "bbb-sdh-011",
+      "variant": "3-1",
+      "characters": 32,
+      "seconds": 1.292,
+      "characters_per_second": 24.8
+    },
+    {
+      "cue_id": "bbb-sdh-011",
+      "variant": "3-2",
+      "characters": 33,
+      "seconds": 1.292,
+      "characters_per_second": 25.5
+    },
+    {
+      "cue_id": "bbb-sdh-011",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.292,
+      "characters_per_second": 30.2
+    },
+    {
+      "cue_id": "bbb-sdh-012",
+      "variant": "3-1",
+      "characters": 32,
+      "seconds": 1.333,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-012",
+      "variant": "3-2",
+      "characters": 33,
+      "seconds": 1.333,
+      "characters_per_second": 24.8
+    },
+    {
+      "cue_id": "bbb-sdh-012",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.333,
+      "characters_per_second": 29.3
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "variant": "3-1",
+      "characters": 33,
+      "seconds": 1.208,
+      "characters_per_second": 27.3
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "variant": "3-2",
+      "characters": 34,
+      "seconds": 1.208,
+      "characters_per_second": 28.1
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "variant": "3-3",
+      "characters": 40,
+      "seconds": 1.208,
+      "characters_per_second": 33.1
+    },
+    {
+      "cue_id": "bbb-sdh-014",
+      "variant": "3-1",
+      "characters": 27,
+      "seconds": 1.333,
+      "characters_per_second": 20.3
+    },
+    {
+      "cue_id": "bbb-sdh-014",
+      "variant": "3-2",
+      "characters": 28,
+      "seconds": 1.333,
+      "characters_per_second": 21.0
+    },
+    {
+      "cue_id": "bbb-sdh-014",
+      "variant": "3-3",
+      "characters": 32,
+      "seconds": 1.333,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-015",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.875,
+      "characters_per_second": 20.3
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "2-1",
+      "characters": 23,
+      "seconds": 1.042,
+      "characters_per_second": 22.1
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "2-2",
+      "characters": 27,
+      "seconds": 1.042,
+      "characters_per_second": 25.9
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "2-3",
+      "characters": 30,
+      "seconds": 1.042,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-017",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.542,
+      "characters_per_second": 20.1
+    },
+    {
+      "cue_id": "bbb-sdh-017",
+      "variant": "3-3",
+      "characters": 37,
+      "seconds": 1.542,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-018",
+      "variant": "3-3",
+      "characters": 37,
+      "seconds": 1.667,
+      "characters_per_second": 22.2
+    },
+    {
+      "cue_id": "bbb-sdh-019",
+      "variant": "3-1",
+      "characters": 32,
+      "seconds": 1.25,
+      "characters_per_second": 25.6
+    },
+    {
+      "cue_id": "bbb-sdh-019",
+      "variant": "3-2",
+      "characters": 33,
+      "seconds": 1.25,
+      "characters_per_second": 26.4
+    },
+    {
+      "cue_id": "bbb-sdh-019",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.25,
+      "characters_per_second": 30.4
+    },
+    {
+      "cue_id": "bbb-sdh-020",
+      "variant": "3-1",
+      "characters": 33,
+      "seconds": 1.375,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-020",
+      "variant": "3-2",
+      "characters": 34,
+      "seconds": 1.375,
+      "characters_per_second": 24.7
+    },
+    {
+      "cue_id": "bbb-sdh-020",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.375,
+      "characters_per_second": 28.4
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "original",
+      "characters": 27,
+      "seconds": 1.042,
+      "characters_per_second": 25.9
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "2-3",
+      "characters": 23,
+      "seconds": 1.042,
+      "characters_per_second": 22.1
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.042,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.042,
+      "characters_per_second": 29.8
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.042,
+      "characters_per_second": 36.5
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "variant": "2-3",
+      "characters": 22,
+      "seconds": 1.042,
+      "characters_per_second": 21.1
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "variant": "3-1",
+      "characters": 33,
+      "seconds": 1.042,
+      "characters_per_second": 31.7
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "variant": "3-2",
+      "characters": 34,
+      "seconds": 1.042,
+      "characters_per_second": 32.6
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "variant": "3-3",
+      "characters": 41,
+      "seconds": 1.042,
+      "characters_per_second": 39.3
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "variant": "2-3",
+      "characters": 25,
+      "seconds": 1.041,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.041,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.041,
+      "characters_per_second": 29.8
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.041,
+      "characters_per_second": 36.5
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "2-2",
+      "characters": 21,
+      "seconds": 1.042,
+      "characters_per_second": 20.2
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "2-3",
+      "characters": 23,
+      "seconds": 1.042,
+      "characters_per_second": 22.1
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-1",
+      "characters": 38,
+      "seconds": 1.042,
+      "characters_per_second": 36.5
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-2",
+      "characters": 39,
+      "seconds": 1.042,
+      "characters_per_second": 37.4
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-3",
+      "characters": 44,
+      "seconds": 1.042,
+      "characters_per_second": 42.2
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "2-2",
+      "characters": 21,
+      "seconds": 1.042,
+      "characters_per_second": 20.2
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "2-3",
+      "characters": 21,
+      "seconds": 1.042,
+      "characters_per_second": 20.2
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "3-1",
+      "characters": 35,
+      "seconds": 1.042,
+      "characters_per_second": 33.6
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "3-2",
+      "characters": 36,
+      "seconds": 1.042,
+      "characters_per_second": 34.5
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.042,
+      "characters_per_second": 34.5
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "variant": "2-3",
+      "characters": 27,
+      "seconds": 1.166,
+      "characters_per_second": 23.2
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "variant": "3-1",
+      "characters": 32,
+      "seconds": 1.166,
+      "characters_per_second": 27.4
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "variant": "3-2",
+      "characters": 33,
+      "seconds": 1.166,
+      "characters_per_second": 28.3
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "variant": "3-3",
+      "characters": 40,
+      "seconds": 1.166,
+      "characters_per_second": 34.3
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "original",
+      "characters": 18,
+      "seconds": 0.875,
+      "characters_per_second": 20.6
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "2-1",
+      "characters": 20,
+      "seconds": 0.875,
+      "characters_per_second": 22.9
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "2-2",
+      "characters": 20,
+      "seconds": 0.875,
+      "characters_per_second": 22.9
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "2-3",
+      "characters": 28,
+      "seconds": 0.875,
+      "characters_per_second": 32.0
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-1",
+      "characters": 18,
+      "seconds": 0.875,
+      "characters_per_second": 20.6
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-2",
+      "characters": 19,
+      "seconds": 0.875,
+      "characters_per_second": 21.7
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-3",
+      "characters": 19,
+      "seconds": 0.875,
+      "characters_per_second": 21.7
+    },
+    {
+      "cue_id": "bbb-sdh-028",
+      "variant": "3-1",
+      "characters": 21,
+      "seconds": 1.042,
+      "characters_per_second": 20.2
+    },
+    {
+      "cue_id": "bbb-sdh-028",
+      "variant": "3-2",
+      "characters": 22,
+      "seconds": 1.042,
+      "characters_per_second": 21.1
+    },
+    {
+      "cue_id": "bbb-sdh-028",
+      "variant": "3-3",
+      "characters": 27,
+      "seconds": 1.042,
+      "characters_per_second": 25.9
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "original",
+      "characters": 26,
+      "seconds": 0.833,
+      "characters_per_second": 31.2
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-1",
+      "characters": 20,
+      "seconds": 0.833,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-2",
+      "characters": 20,
+      "seconds": 0.833,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-3",
+      "characters": 28,
+      "seconds": 0.833,
+      "characters_per_second": 33.6
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-1",
+      "characters": 28,
+      "seconds": 0.833,
+      "characters_per_second": 33.6
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-2",
+      "characters": 29,
+      "seconds": 0.833,
+      "characters_per_second": 34.8
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 0.833,
+      "characters_per_second": 43.2
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.0,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.0,
+      "characters_per_second": 36.0
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.0,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.0,
+      "characters_per_second": 36.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "original",
+      "characters": 24,
+      "seconds": 1.0,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-1",
+      "characters": 29,
+      "seconds": 1.0,
+      "characters_per_second": 29.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-2",
+      "characters": 30,
+      "seconds": 1.0,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-3",
+      "characters": 35,
+      "seconds": 1.0,
+      "characters_per_second": 35.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-1",
+      "characters": 24,
+      "seconds": 1.0,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-2",
+      "characters": 25,
+      "seconds": 1.0,
+      "characters_per_second": 25.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-3",
+      "characters": 25,
+      "seconds": 1.0,
+      "characters_per_second": 25.0
+    },
+    {
+      "cue_id": "bbb-sdh-035",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 1.542,
+      "characters_per_second": 20.1
+    },
+    {
+      "cue_id": "bbb-sdh-035",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 1.542,
+      "characters_per_second": 20.8
+    },
+    {
+      "cue_id": "bbb-sdh-035",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.542,
+      "characters_per_second": 25.3
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "2-3",
+      "characters": 24,
+      "seconds": 1.0,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "3-1",
+      "characters": 37,
+      "seconds": 1.0,
+      "characters_per_second": 37.0
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "3-2",
+      "characters": 38,
+      "seconds": 1.0,
+      "characters_per_second": 38.0
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "3-3",
+      "characters": 44,
+      "seconds": 1.0,
+      "characters_per_second": 44.0
+    },
+    {
+      "cue_id": "bbb-sdh-043",
+      "variant": "3-1",
+      "characters": 34,
+      "seconds": 1.5,
+      "characters_per_second": 22.7
+    },
+    {
+      "cue_id": "bbb-sdh-043",
+      "variant": "3-2",
+      "characters": 35,
+      "seconds": 1.5,
+      "characters_per_second": 23.3
+    },
+    {
+      "cue_id": "bbb-sdh-043",
+      "variant": "3-3",
+      "characters": 40,
+      "seconds": 1.5,
+      "characters_per_second": 26.7
+    },
+    {
+      "cue_id": "bbb-sdh-044",
+      "variant": "3-1",
+      "characters": 32,
+      "seconds": 1.167,
+      "characters_per_second": 27.4
+    },
+    {
+      "cue_id": "bbb-sdh-044",
+      "variant": "3-2",
+      "characters": 33,
+      "seconds": 1.167,
+      "characters_per_second": 28.3
+    },
+    {
+      "cue_id": "bbb-sdh-044",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.167,
+      "characters_per_second": 32.6
+    },
+    {
+      "cue_id": "bbb-sdh-046",
+      "variant": "3-1",
+      "characters": 21,
+      "seconds": 1.0,
+      "characters_per_second": 21.0
+    },
+    {
+      "cue_id": "bbb-sdh-046",
+      "variant": "3-2",
+      "characters": 22,
+      "seconds": 1.0,
+      "characters_per_second": 22.0
+    },
+    {
+      "cue_id": "bbb-sdh-046",
+      "variant": "3-3",
+      "characters": 27,
+      "seconds": 1.0,
+      "characters_per_second": 27.0
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "variant": "2-3",
+      "characters": 27,
+      "seconds": 1.0,
+      "characters_per_second": 27.0
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 1.0,
+      "characters_per_second": 32.0
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.0,
+      "characters_per_second": 39.0
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "variant": "2-3",
+      "characters": 24,
+      "seconds": 1.0,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.0,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.0,
+      "characters_per_second": 36.0
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "original",
+      "characters": 18,
+      "seconds": 0.833,
+      "characters_per_second": 21.6
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "2-1",
+      "characters": 17,
+      "seconds": 0.833,
+      "characters_per_second": 20.4
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "2-2",
+      "characters": 20,
+      "seconds": 0.833,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "2-3",
+      "characters": 23,
+      "seconds": 0.833,
+      "characters_per_second": 27.6
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-1",
+      "characters": 18,
+      "seconds": 0.833,
+      "characters_per_second": 21.6
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-2",
+      "characters": 19,
+      "seconds": 0.833,
+      "characters_per_second": 22.8
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-3",
+      "characters": 19,
+      "seconds": 0.833,
+      "characters_per_second": 22.8
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "variant": "2-3",
+      "characters": 21,
+      "seconds": 0.833,
+      "characters_per_second": 25.2
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 0.833,
+      "characters_per_second": 37.2
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 0.833,
+      "characters_per_second": 38.4
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "variant": "3-3",
+      "characters": 37,
+      "seconds": 0.833,
+      "characters_per_second": 44.4
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "original",
+      "characters": 25,
+      "seconds": 1.208,
+      "characters_per_second": 20.7
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "2-3",
+      "characters": 28,
+      "seconds": 1.208,
+      "characters_per_second": 23.2
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-1",
+      "characters": 27,
+      "seconds": 1.208,
+      "characters_per_second": 22.4
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-2",
+      "characters": 28,
+      "seconds": 1.208,
+      "characters_per_second": 23.2
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-3",
+      "characters": 35,
+      "seconds": 1.208,
+      "characters_per_second": 29.0
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "original",
+      "characters": 33,
+      "seconds": 1.375,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "2-2",
+      "characters": 38,
+      "seconds": 1.375,
+      "characters_per_second": 27.6
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "2-3",
+      "characters": 41,
+      "seconds": 1.375,
+      "characters_per_second": 29.8
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-1",
+      "characters": 50,
+      "seconds": 1.375,
+      "characters_per_second": 36.4
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-2",
+      "characters": 52,
+      "seconds": 1.375,
+      "characters_per_second": 37.8
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-3",
+      "characters": 64,
+      "seconds": 1.375,
+      "characters_per_second": 46.5
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "variant": "2-3",
+      "characters": 23,
+      "seconds": 0.959,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 0.959,
+      "characters_per_second": 31.3
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 0.959,
+      "characters_per_second": 32.3
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 0.959,
+      "characters_per_second": 39.6
+    },
+    {
+      "cue_id": "bbb-sdh-064",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-064",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 1.0,
+      "characters_per_second": 32.0
+    },
+    {
+      "cue_id": "bbb-sdh-064",
+      "variant": "3-3",
+      "characters": 38,
+      "seconds": 1.0,
+      "characters_per_second": 38.0
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "variant": "2-3",
+      "characters": 23,
+      "seconds": 1.0,
+      "characters_per_second": 23.0
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 1.0,
+      "characters_per_second": 32.0
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 1.0,
+      "characters_per_second": 39.0
+    },
+    {
+      "cue_id": "bbb-sdh-066",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 1.0,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-066",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 1.0,
+      "characters_per_second": 31.0
+    },
+    {
+      "cue_id": "bbb-sdh-066",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.0,
+      "characters_per_second": 36.0
+    },
+    {
+      "cue_id": "bbb-sdh-067",
+      "variant": "2-3",
+      "characters": 28,
+      "seconds": 1.0,
+      "characters_per_second": 28.0
+    },
+    {
+      "cue_id": "bbb-sdh-068",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 0.917,
+      "characters_per_second": 32.7
+    },
+    {
+      "cue_id": "bbb-sdh-068",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 0.917,
+      "characters_per_second": 33.8
+    },
+    {
+      "cue_id": "bbb-sdh-068",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 0.917,
+      "characters_per_second": 39.3
+    },
+    {
+      "cue_id": "bbb-sdh-070",
+      "variant": "3-1",
+      "characters": 21,
+      "seconds": 0.917,
+      "characters_per_second": 22.9
+    },
+    {
+      "cue_id": "bbb-sdh-070",
+      "variant": "3-2",
+      "characters": 22,
+      "seconds": 0.917,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-070",
+      "variant": "3-3",
+      "characters": 27,
+      "seconds": 0.917,
+      "characters_per_second": 29.4
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "variant": "2-3",
+      "characters": 21,
+      "seconds": 0.916,
+      "characters_per_second": 22.9
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "variant": "3-1",
+      "characters": 31,
+      "seconds": 0.916,
+      "characters_per_second": 33.8
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "variant": "3-2",
+      "characters": 32,
+      "seconds": 0.916,
+      "characters_per_second": 34.9
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "variant": "3-3",
+      "characters": 37,
+      "seconds": 0.916,
+      "characters_per_second": 40.4
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "variant": "3-1",
+      "characters": 33,
+      "seconds": 0.917,
+      "characters_per_second": 36.0
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "variant": "3-2",
+      "characters": 34,
+      "seconds": 0.917,
+      "characters_per_second": 37.1
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "variant": "3-3",
+      "characters": 39,
+      "seconds": 0.917,
+      "characters_per_second": 42.5
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "variant": "2-3",
+      "characters": 22,
+      "seconds": 0.916,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "variant": "3-1",
+      "characters": 28,
+      "seconds": 0.916,
+      "characters_per_second": 30.6
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "variant": "3-2",
+      "characters": 29,
+      "seconds": 0.916,
+      "characters_per_second": 31.7
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "variant": "3-3",
+      "characters": 34,
+      "seconds": 0.916,
+      "characters_per_second": 37.1
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "original",
+      "characters": 15,
+      "seconds": 0.709,
+      "characters_per_second": 21.2
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-1",
+      "characters": 19,
+      "seconds": 0.709,
+      "characters_per_second": 26.8
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-2",
+      "characters": 15,
+      "seconds": 0.709,
+      "characters_per_second": 21.2
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-3",
+      "characters": 25,
+      "seconds": 0.709,
+      "characters_per_second": 35.3
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-1",
+      "characters": 15,
+      "seconds": 0.709,
+      "characters_per_second": 21.2
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-2",
+      "characters": 16,
+      "seconds": 0.709,
+      "characters_per_second": 22.6
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-3",
+      "characters": 16,
+      "seconds": 0.709,
+      "characters_per_second": 22.6
+    },
+    {
+      "cue_id": "bbb-sdh-078",
+      "variant": "3-2",
+      "characters": 30,
+      "seconds": 1.458,
+      "characters_per_second": 20.6
+    },
+    {
+      "cue_id": "bbb-sdh-078",
+      "variant": "3-3",
+      "characters": 30,
+      "seconds": 1.458,
+      "characters_per_second": 20.6
+    },
+    {
+      "cue_id": "bbb-sdh-079",
+      "variant": "3-1",
+      "characters": 35,
+      "seconds": 1.083,
+      "characters_per_second": 32.3
+    },
+    {
+      "cue_id": "bbb-sdh-079",
+      "variant": "3-2",
+      "characters": 36,
+      "seconds": 1.083,
+      "characters_per_second": 33.2
+    },
+    {
+      "cue_id": "bbb-sdh-079",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.083,
+      "characters_per_second": 33.2
+    },
+    {
+      "cue_id": "bbb-sdh-081",
+      "variant": "3-3",
+      "characters": 36,
+      "seconds": 1.708,
+      "characters_per_second": 21.1
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "2-3",
+      "characters": 19,
+      "seconds": 0.792,
+      "characters_per_second": 24.0
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-1",
+      "characters": 30,
+      "seconds": 0.792,
+      "characters_per_second": 37.9
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-2",
+      "characters": 31,
+      "seconds": 0.792,
+      "characters_per_second": 39.1
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-3",
+      "characters": 37,
+      "seconds": 0.792,
+      "characters_per_second": 46.7
+    }
+  ]
+}

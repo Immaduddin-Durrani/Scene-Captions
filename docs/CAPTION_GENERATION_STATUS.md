@@ -19,7 +19,7 @@ The final source cue ends at 596.457 seconds, within our exact film's 596.461678
 
 The former arbitrary thud at 1:18 is absent. At 1:23.624 the track supplies the actual source cue `[APPLE THUDS]`. Gaps are intentional: captions appear for selected sound events, not continuously throughout the film.
 
-**Follow cue density** counts cue intervals intersecting the ±5-second neighborhood: at least four means dense; at most one means sparse; otherwise moderate. It selects less or more detail from the cached grid. The UI names this proxy explicitly. It is not visual scene recognition or a validated measure of cognitive load.
+**Follow cue density** counts cue intervals intersecting the ±5-second neighborhood: at least four means dense; at most one means sparse; otherwise moderate. Dense passages select shorter wording; other passages retain the viewer's chosen maximum. Sparse cues never raise detail above that limit. This is not visual scene recognition or a validated measure of cognitive load.
 
 ## Rebuild and run
 
@@ -52,4 +52,14 @@ A working captioned application and the experimental plan are available locally.
 
 The team will create its study video. Keep a timed sound-event log while editing, prepare a matching source-caption track, check the exported edit by listening, review wording with DHH collaborators, and import the completed JSON. Full caption review, study approval and recruitment remain future work. No participant results are claimed.
 
-No additional key or paid software is required for this approach. No skills, agents, hooks or external workers were activated for this follow-up.
+The working source-caption track requires no API key or paid software. Subsequent 24 October work used authorized skills and bounded free-model diagnostics in the main session; no agents or hooks were launched. See [the fixes report](audits/2026-10-24-fixes.md) for current evidence rather than treating earlier verification as current.
+
+## 24 October preparation and controls
+
+The user selected existing timed sound captions plus corresponding-audio checks. Offline generation/audio tools now exist, but no model track has passed acceptance. An example-like structured silence response failed calibration. Simpler controls correctly recognized silence and transcribed synthetic speech, but classified the audible tone as silence with reasoning off/on. Invalid WAV input caused a decoder error. The input reaches an audio-capable path; non-speech task suitability remains unproven in the tested setup.
+
+Text probes copied source wording, omitted a simultaneous sound, returned incomplete grids, invented unrelated content or timed out. Missing output/timeouts are inconclusive where applicable, not global model-capability judgments. The strict generation path rejects source-copy-only batches and missing/added sound lines, and only writes separate candidates. Rejected probes are quarantined; the default demo never loads them.
+
+Seven verbose rich-effect entries were shortened locally while preserving the licensed original text and all intervals. One problematic simultaneous cue is now 28 rather than 68 characters in 0.541 seconds. This is still a reading-review concern. A 20-character/second editing heuristic flags 206 original/variant cases; it is not a validated DHH threshold, and timing is not extended automatically.
+
+See [tool usage and request limits](../scripts/generation/README.md), [model results](integrations/NVIDIA_MODELS.md), and [fresh evidence](verification/fixes-2026-10-24/README.md). Review the exact soundtrack and captions with DHH collaborators before study use. Model agreement, concise wording and schema validity do not independently establish sound accuracy.

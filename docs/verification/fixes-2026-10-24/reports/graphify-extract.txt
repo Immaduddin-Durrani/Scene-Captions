@@ -1,0 +1,10 @@
+[graphify extract] --force --code-only: full AST re-scan, existing semantic layer preserved (no semantic pass this run)
+[graphify extract] --force: full re-scan, semantic cache reads skipped
+[graphify extract] scanning D:\HCI\HCI Project\Scene-Captions
+[graphify extract] --code-only: skipping 77 non-code file(s) (60 docs, 3 papers, 14 images) — no LLM extraction
+[graphify extract] found 92 code, 0 docs, 0 papers, 0 images
+[graphify extract] 9 file(s) not classified (no supported extension or shebang), skipped: .env.example, .gitattributes, .gitignore, .gitkeep, SceneCaptions_Project_Proposal.pptx, big-buck-bunny.srt (+3 more)
+[graphify extract] AST extraction on 92 code files...
+[graphify extract] wrote D:\HCI\HCI Project\Scene-Captions\graphify-out\graph.json: 273 nodes, 504 edges, 19 communities
+[graphify extract] wrote D:\HCI\HCI Project\Scene-Captions\graphify-out\.graphify_analysis.json
+[graphify extract] next: run `graphify cluster-only D:\HCI\HCI Project\Scene-Captions` to generate GRAPH_REPORT.md and name communities

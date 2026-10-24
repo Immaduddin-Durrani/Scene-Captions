@@ -1,0 +1,33 @@
+async (page) => {
+  await page.goto('http://127.0.0.1:3001');
+  await page.evaluate(() => localStorage.removeItem('scenecaptions.profile.v1'));
+  await page.reload();
+  await page.setViewportSize({width:390,height:844});
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  await page.getByRole('button',{name:'Original baseline',exact:true}).click();
+  await page.getByText('Caption readability',{exact:true}).click();
+  await page.getByLabel('Text size',{exact:true}).selectOption('extra-large');
+  const track=await (await page.request.get('http://127.0.0.1:3001/research/demo-captions.json')).json();
+  const clipped=[];
+  for (const cue of track.cues) {
+    await page.evaluate(t => {document.querySelector('video').currentTime=t;},(cue.start_s+cue.end_s)/2);
+    await page.waitForFunction(expected=>document.querySelector('.caption-lines')?.textContent===expected,cue.original_text);
+    const bounds=await page.evaluate(() => {
+      const f=document.querySelector('.video-frame').getBoundingClientRect();
+      const c=document.querySelector('.caption-lines').getBoundingClientRect();
+      return {outside:c.top<f.top||c.bottom>f.bottom||c.left<f.left||c.right>f.right,height:c.height,frameHeight:f.height};
+    });
+    if(bounds.outside)clipped.push({cue:cue.cue_id,text:cue.original_text,...bounds});
+  }
+  const keyboard=[];
+  await page.reload();
+  await page.keyboard.press('Tab');
+  keyboard.push(await page.evaluate(()=>({text:document.activeElement.textContent,outline:getComputedStyle(document.activeElement).outlineStyle})));
+  await page.keyboard.press('Enter');
+  keyboard.push(await page.evaluate(()=>({hash:location.hash,active:document.activeElement.id})));
+  await page.setViewportSize({width:720,height:900});
+  await page.evaluate(()=>document.documentElement.style.fontSize='200%');
+  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
+  await page.screenshot({path:'docs/verification/audit-2026-10-24/screenshots/text-scaling.png',fullPage:true});
+  return {clipped,keyboard,relativeFontScaleOverflow:overflow,scope:'390px Chrome viewport, stored source originals, extra-large captions. Root-font scaling is not browser zoom or a complete accessibility audit.'};
+}

@@ -9,7 +9,7 @@
   "annotation_status": "draft",
   "generated_with": {
     "method": "Imported licensed Demuxed sound captions with unchanged timings; locally authored source-anchored wording variants. Visual sync anchors spot-checked; not a complete listening or participant review.",
-    "prompt_version": "demuxed-anchored-v1",
+    "prompt_version": "demuxed-anchored-v2-concise-effects",
     "kind": "sourced",
     "source_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
     "expressiveness": "source-anchored",
@@ -87,9 +87,9 @@
         "2-1": "[bird tweets]",
         "2-2": "[A bird tweets]",
         "2-3": "[Tweet! bird tweets]",
-        "3-1": "[A bird makes tweeting sounds]",
-        "3-2": "[A bird makes tweeting sounds.]",
-        "3-3": "[Tweet! A bird makes tweeting sounds]"
+        "3-1": "[Bird tweets]",
+        "3-2": "[Bird tweets.]",
+        "3-3": "[Bird tweets!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -112,9 +112,9 @@
         "2-1": "[wings flapping]",
         "2-2": "[Wings flap]",
         "2-3": "[Wings flap]",
-        "3-1": "[The sound of wings flapping]",
-        "3-2": "[The sound of wings flapping.]",
-        "3-3": "[The sound of wings flapping.]"
+        "3-1": "[Wings flap]",
+        "3-2": "[Wings flap.]",
+        "3-3": "[Wings flap!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -136,9 +136,9 @@
         "2-1": "[bird tweets]\n[wings flapping]",
         "2-2": "[A bird tweets]\n[Wings flap]",
         "2-3": "[Tweet! bird tweets]\n[Wings flap]",
-        "3-1": "[A bird makes tweeting sounds]\n[The sound of wings flapping]",
-        "3-2": "[A bird makes tweeting sounds.]\n[The sound of wings flapping.]",
-        "3-3": "[Tweet! A bird makes tweeting sounds]\n[The sound of wings flapping.]"
+        "3-1": "[Bird tweets]\n[Wings flap]",
+        "3-2": "[Bird tweets.]\n[Wings flap.]",
+        "3-3": "[Bird tweets!]\n[Wings flap!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -409,9 +409,9 @@
         "2-1": "[bunny's neck cracking]",
         "2-2": "[The bunny cracks its neck]",
         "2-3": "[Crack! bunny's neck cracking]",
-        "3-1": "[The sound of the bunny cracking its neck]",
-        "3-2": "[The sound of the bunny cracking its neck.]",
-        "3-3": "[Crack! The sound of the bunny cracking its neck]"
+        "3-1": "[Bunny cracks neck]",
+        "3-2": "[Bunny cracks neck.]",
+        "3-3": "[Bunny cracks neck!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -683,9 +683,9 @@
         "2-1": "[squirrel squeaking]",
         "2-2": "[A squirrel squeaks]",
         "2-3": "[Squeak! squirrel squeaking]",
-        "3-1": "[The sound of a squirrel squeaking]",
-        "3-2": "[The sound of a squirrel squeaking.]",
-        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+        "3-1": "[Squirrel squeaks]",
+        "3-2": "[Squirrel squeaks.]",
+        "3-3": "[Squirrel squeaks!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -857,9 +857,9 @@
         "2-1": "[squirrel's fingers snapping]",
         "2-2": "[A squirrel snaps its fingers]",
         "2-3": "[Snap! squirrel's fingers snapping]",
-        "3-1": "[The sound of a squirrel snapping its fingers]",
-        "3-2": "[The sound of a squirrel snapping its fingers.]",
-        "3-3": "[Snap! The sound of a squirrel snapping its fingers]"
+        "3-1": "[Squirrel snaps fingers]",
+        "3-2": "[Squirrel snaps fingers.]",
+        "3-3": "[Squirrel snaps fingers!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -1130,9 +1130,9 @@
         "2-1": "[wings flapping]",
         "2-2": "[Wings flap]",
         "2-3": "[Wings flap]",
-        "3-1": "[The sound of wings flapping]",
-        "3-2": "[The sound of wings flapping.]",
-        "3-3": "[The sound of wings flapping.]"
+        "3-1": "[Wings flap]",
+        "3-2": "[Wings flap.]",
+        "3-3": "[Wings flap!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -1179,9 +1179,9 @@
         "2-1": "[squirrel squeaking]",
         "2-2": "[A squirrel squeaks]",
         "2-3": "[Squeak! squirrel squeaking]",
-        "3-1": "[The sound of a squirrel squeaking]",
-        "3-2": "[The sound of a squirrel squeaking.]",
-        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+        "3-1": "[Squirrel squeaks]",
+        "3-2": "[Squirrel squeaks.]",
+        "3-3": "[Squirrel squeaks!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -1399,9 +1399,9 @@
         "2-1": "[bow string ping]",
         "2-2": "[A bow string pings]",
         "2-3": "[Ping! bow string ping]",
-        "3-1": "[A bow string makes a pinging sound]",
-        "3-2": "[A bow string makes a pinging sound.]",
-        "3-3": "[Ping! A bow string makes a pinging sound]"
+        "3-1": "[Bow string pings]",
+        "3-2": "[Bow string pings.]",
+        "3-3": "[Bow string pings!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -1674,9 +1674,9 @@
         "2-1": "[squirrel squeaking]",
         "2-2": "[A squirrel squeaks]",
         "2-3": "[Squeak! squirrel squeaking]",
-        "3-1": "[The sound of a squirrel squeaking]",
-        "3-2": "[The sound of a squirrel squeaking.]",
-        "3-3": "[Squeak! The sound of a squirrel squeaking]"
+        "3-1": "[Squirrel squeaks]",
+        "3-2": "[Squirrel squeaks.]",
+        "3-3": "[Squirrel squeaks!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
@@ -1923,9 +1923,9 @@
         "2-1": "[branches snapping]",
         "2-2": "[Branches snap]",
         "2-3": "[Snap! branches snapping]",
-        "3-1": "[Branches make snapping sounds]",
-        "3-2": "[Branches make snapping sounds.]",
-        "3-3": "[Snap! Branches make snapping sounds]"
+        "3-1": "[Branches snap]",
+        "3-2": "[Branches snap.]",
+        "3-3": "[Branches snap!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {

@@ -42,7 +42,7 @@ const result = videoSchema.parse({
   duration_seconds: duration, annotation_status: "draft",
   generated_with: {
     method: "Imported licensed Demuxed sound captions with unchanged timings; locally authored source-anchored wording variants. Visual sync anchors spot-checked; not a complete listening or participant review.",
-    prompt_version: "demuxed-anchored-v1", kind: "sourced", source_sha256: videoHash,
+    prompt_version: "demuxed-anchored-v2-concise-effects", kind: "sourced", source_sha256: videoHash,
     expressiveness: "source-anchored", scene_load_method: "cue-density", quality_gate: "unverified",
     caption_source: { url: provenance.source_url, revision: provenance.commit, license: provenance.license, author: provenance.author, sha256: provenance.file_sha256 },
   }, cues,

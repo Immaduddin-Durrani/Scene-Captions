@@ -49,6 +49,7 @@ web_modules/
 
 # Optional npm cache directory
 .npm
+.npm-cache/
 
 # Optional eslint cache
 .eslintcache
@@ -149,6 +150,10 @@ artifacts/
 graphify-out/
 .media-cache/
 public/media/*.mp4
+public/media/sintel-poster.jpg
+public/media/tears-of-steel-poster.jpg
+public/media/*-en.vtt
+public/media/*.resources.json
 .fallow/
 __pycache__/
 *.py[cod]

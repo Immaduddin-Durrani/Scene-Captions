@@ -60,7 +60,7 @@ export function activeCues(cues: CaptionCue[], seconds: number): CaptionCue[] {
 
 export function resolveCaption(cue: CaptionCue, profile: CaptionProfile, condition: Condition, showOriginal = false) {
   if (condition === "baseline" || showOriginal) return { text: cue.original_text, reason: "Original caption", adapted: false, detail: profile.detail };
-  const detail: Level = profile.adaptive ? (cue.scene_load === "dense" ? 1 : cue.scene_load === "quiet" ? 3 : profile.detail) : profile.detail;
+  const detail: Level = profile.adaptive && cue.scene_load === "dense" ? 1 : profile.detail;
   const adapted = profile.adaptive && detail !== profile.detail;
   const text = profile.representation === "plain" ? cue.representations.plain
     : profile.representation === "onomatopoeic" && cue.representations.onomatopoeic ? cue.representations.onomatopoeic

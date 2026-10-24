@@ -1,0 +1,212 @@
+{
+  "scope": "Synthetic controls only; audio_url with WAV data URI. Documentation establishes audio_url in self-hosted examples, not conclusive hosted transport support.",
+  "tests": [
+    {
+      "name": "text-arithmetic",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "reasoning": false,
+      "max_tokens": 2048,
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "25",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 3,
+        "total_tokens": 33,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "error": null,
+      "seconds": 0.73
+    },
+    {
+      "name": "text-caption-no-reasoning",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "reasoning": false,
+      "max_tokens": 2048,
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "[ambient]",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 5,
+        "total_tokens": 47,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "error": null,
+      "seconds": 0.5
+    },
+    {
+      "name": "text-caption-reasoning",
+      "requested_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "reasoning": true,
+      "max_tokens": 2048,
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "[Ambient]",
+            "role": "assistant",
+            "reasoning_content": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - \"Return only the broad sound type in [SERENE MUSIC].\"\n   - \"Omit the mood word.\"\n   - \"Use one bracketed label.\"\n\n2.  **Deconstruct the Request:**\n   - Input context: \"[SERENE MUSIC]\" - this seems like a tag or category.\n   - I need to identify the \"broad sound type\" associated with \"serene music\".\n   - I must omit the \"mood word\" (so probably avoid just saying \"serene\" or similar emotional descriptors).\n   - Output must be a single bracketed label, like [something].\n\n3.  **Identify the \"Broad Sound Type\":**\n   - \"Serene music\" typically falls under categories like ambient, classical, new age, minimalist, acoustic, etc.\n   - \"Broad sound type\" suggests a genre or general category, not a mood (like calm, peaceful, etc.).\n   - Common broad sound types for serene music: Ambient, Classical, New Age, Minimalist, Acoustic.\n   - Which one is most broadly applicable? \"Ambient\" is often used as a broad category for serene, atmospheric music. \"New Age\" is also common but often considered a mood/genre hybrid. \"Classical\" is broad but not all serene music is classical.\n   - Let's think about what \"broad sound type\" means in a tagging context. Often, \"Ambient\" is considered the broad sound type for serene music, as it focuses on tone and atmosphere rather than rhythm/melody in the traditional sense.\n\n4.  **Check Constraints:**\n   - \"Return only the broad sound type in [SERENE MUSIC].\" -> The input \"[SERENE MUSIC]\" might be a label itself, but I need to output the broad sound type that fits within/underlies it.\n   - \"Omit the mood word.\" -> Don't output \"serene\", \"calm\", \"peaceful\", etc.\n   - \"Use one bracketed label.\" -> Output format like [Ambient] or [Classical].\n\n5.  **Determine the Best Fit:**\n   - If the input is \"[SERENE MUSIC]\", the broad sound type that categorizes it without being a mood word is likely \"Ambient\". Ambient is a genre/sound type, not a mood word"
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 517,
+        "total_tokens": 559,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 511,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "error": null,
+      "seconds": 7.69
+    },
+    {
+      "name": "audio-silence-no-reasoning",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "reasoning": false,
+      "max_tokens": 2048,
+      "audio": {
+        "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+        "pcm_all_zero": true,
+        "samples": 48000
+      },
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "SILENCE",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 5,
+        "total_tokens": 101
+      },
+      "error": null,
+      "seconds": 0.91
+    },
+    {
+      "name": "audio-tone-no-reasoning",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "reasoning": false,
+      "max_tokens": 2048,
+      "audio": {
+        "sha256": "fca2999e2f1422e4dfdb6814bd3954853eae391a2b5da76170a4e1bef12e093a",
+        "pcm_all_zero": false,
+        "samples": 48000
+      },
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "SILENCE",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 5,
+        "total_tokens": 101
+      },
+      "error": null,
+      "seconds": 0.91
+    },
+    {
+      "name": "audio-silence-reasoning",
+      "requested_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "reasoning": true,
+      "max_tokens": 2048,
+      "audio": {
+        "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+        "pcm_all_zero": true,
+        "samples": 48000
+      },
+      "http_status": 200,
+      "response_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "SILENCE",
+            "role": "assistant",
+            "reasoning_content": "The audio contains no discernible speech, music, or environmental sounds. It is a continuous, unchanging silence with no variation in volume or frequency content. The absence of any audible events, even subtle ones, confirms the recording is entirely silent. Therefore, the correct classification is: SILENCE.\n"
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 69,
+        "total_tokens": 165
+      },
+      "error": null,
+      "seconds": 1.83
+    }
+  ]
+}

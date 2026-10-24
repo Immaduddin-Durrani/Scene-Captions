@@ -1,0 +1,1 @@
+[X] Exit code 1: gate error-severity-findings (2 at or above error) failed. To report a finding type without a failure, set its rule to "warn".

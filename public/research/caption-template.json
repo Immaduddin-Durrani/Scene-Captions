@@ -14,25 +14,26 @@
   "cues": [
     {
       "cue_id": "cue-001",
-      "start_s": 2,
-      "end_s": 9,
-      "original_text": "[music]",
+      "start_s": 2.499,
+      "end_s": 6.416,
+      "original_text": "[SERENE MUSIC]",
       "scene_context": "Replace every cue field and variant using your exact soundtrack.",
-      "sound_key": "music",
+      "sound_key": "serene-music",
       "scene_load": "quiet",
       "grid": {
         "1-1": "[music]",
-        "1-2": "[music]",
-        "1-3": "[music]",
-        "2-1": "[gentle orchestral music]",
-        "2-2": "[gentle orchestral music]",
-        "2-3": "[a soft, flowing orchestral melody]",
-        "3-1": "[warm strings play a gentle melody]",
-        "3-2": "[a soft, flowing orchestral melody]",
-        "3-3": "[a soft, flowing orchestral melody]"
+        "1-2": "[Music plays]",
+        "1-3": "[A musical passage]",
+        "2-1": "[serene music]",
+        "2-2": "[Serene music plays]",
+        "2-3": "[A serene musical passage]",
+        "3-1": "[Music with a serene character]",
+        "3-2": "[Music plays with a serene character]",
+        "3-3": "[A musical passage with a serene character]"
       },
+      "scene_load_basis": "cue-density",
       "representations": {
-        "plain": "[music]"
+        "plain": "[serene music]"
       }
     }
   ]

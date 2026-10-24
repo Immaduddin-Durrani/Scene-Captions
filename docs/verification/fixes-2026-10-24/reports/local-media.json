@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-24",
+  "scope": "User downloaded and converted; agent verified local metadata, hashes and resource presence. No full listening or subtitle-timing review.",
+  "media": [
+    {
+      "id": "sintel",
+      "durationSeconds": 888.032,
+      "bytes": 269851663,
+      "sha256": "09d89a762ab8fb358d83c03efe4a4ba2c7540f53c6e6cb4f0a00b8a31b116510",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 544
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        },
+        {
+          "codec_name": "bin_data",
+          "codec_type": "data"
+        }
+      ],
+      "nonSpeechCaptionStatus": "not-prepared",
+      "subtitleTimingReviewed": false
+    },
+    {
+      "id": "tears-of-steel",
+      "durationSeconds": 734.166667,
+      "bytes": 231928087,
+      "sha256": "2a63559bcbe43e90e0aa88ef083f27a95a6a3bf96d9f4df8ddb6721cf5188625",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 534
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "nonSpeechCaptionStatus": "not-prepared",
+      "subtitleTimingReviewed": false
+    }
+  ]
+}

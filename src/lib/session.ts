@@ -7,7 +7,8 @@ const eventSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("profile"), video_s: z.number(), profile: profileSchema }),
   z.object({ type: z.literal("original"), video_s: z.number(), enabled: z.boolean() }),
   z.object({ type: z.literal("condition"), video_s: z.number(), condition: z.enum(["baseline", "personalized"]) }),
-  z.object({ type: z.literal("preview"), video_s: z.number() }),
+  z.object({ type: z.literal("preview"), video_s: z.number(), profile: profileSchema.optional(), cue_id: z.string().optional() }),
+  z.object({ type: z.literal("preview_end"), video_s: z.number() }),
 ]);
 export type StudyEvent = z.infer<typeof eventSchema>;
 export type RecordedEvent = StudyEvent & { elapsed_ms: number };

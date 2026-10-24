@@ -1,0 +1,47 @@
+### Result
+{"draftBefore":"3","draftAfter":"2","applied":{"detail":2,"expression":2,"adaptive":true,"representation":"descriptive","size":"extra-large","position":"bottom"},"essentialActual":"[Music with a serene character]","essentialExpected":"[music]","overridden":"[SERENE MUSIC]","targets":[{"name":"Play video","width":28,"height":30},{"name":"Mute video","width":28,"height":30},{"name":"Show original","width":68.03125,"height":27},{"name":"Fullscreen player","width":28,"height":30},{"name":"adaptive","width":34,"height":20}],"reset":0,"ping":{"get":200,"head":200,"range":206},"headers":{"vary":"rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding","x-nextjs-cache":"HIT","x-nextjs-prerender":"1, 1","x-nextjs-stale-time":"300","cache-control":"s-maxage=31536000","etag":"\"167w2mj3txv3ajn\"","content-type":"text/html; charset=utf-8","content-encoding":"gzip","date":"Sat, 24 Oct 2026 00:48:15 GMT","connection":"keep-alive","keep-alive":"timeout=5","transfer-encoding":"chunked"}}
+### Ran Playwright code
+```js
+await (async (page) => {
+  await page.goto('http://127.0.0.1:3001');
+  await page.evaluate(() => localStorage.removeItem('scenecaptions.profile.v1'));
+  await page.reload();
+  await page.setViewportSize({width:1440,height:1100});
+  await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
+  await page.getByRole('button',{name:'Rich',exact:true}).click();
+  const draftBefore = await page.getByLabel('Level of detail',{exact:false}).inputValue();
+  await page.getByText('Caption readability',{exact:true}).click();
+  await page.getByLabel('Text size',{exact:true}).selectOption('extra-large');
+  const draftAfter = await page.getByLabel('Level of detail',{exact:false}).inputValue();
+  const applied = await page.evaluate(() => JSON.parse(localStorage.getItem('scenecaptions.profile.v1')));
+  await page.getByRole('button',{name:'Essential',exact:true}).click();
+  await page.getByRole('button',{name:'Apply preferences',exact:true}).click();
+  await page.locator('.cue-row').first().click();
+  await page.locator('.caption-lines').waitFor();
+  const essentialActual=await page.locator('.caption-lines').textContent();
+  const track=await (await page.request.get('http://127.0.0.1:3001/research/demo-captions.json')).json();
+  const essentialExpected=track.cues[0].grid['1-1'];
+  await page.setViewportSize({width:390,height:844});
+  const targets=await page.evaluate(() => [...document.querySelectorAll('.video-controls button,.switch')].map(el => {const r=el.getBoundingClientRect();return {name:el.getAttribute('aria-label')||el.textContent||el.id,width:r.width,height:r.height};}));
+  const reset=await page.getByRole('button',{name:'Reset preferences',exact:true}).count();
+  await page.getByRole('button',{name:'Show original',exact:true}).click();
+  const overridden=await page.locator('.caption-lines').textContent();
+  await page.getByLabel('I agree to record this demo’s player interactions locally.').check();
+  await page.getByRole('button',{name:'Start rehearsal',exact:false}).click();
+  const downloadPromise=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Export rehearsal JSON',exact:false}).click();
+  const download=await downloadPromise;
+  await download.saveAs('docs/verification/audit-2026-10-24/start-with-original.json');
+  const pingGet=await page.request.get('http://127.0.0.1:3001/api/ping');
+  const pingHead=await page.request.head('http://127.0.0.1:3001/api/ping');
+  const range=await page.request.get('http://127.0.0.1:3001/media/big-buck-bunny.mp4',{headers:{Range:'bytes=0-99'}});
+  return {draftBefore,draftAfter,applied,essentialActual,essentialExpected,overridden,targets,reset,ping:{get:pingGet.status(),head:pingHead.status(),range:range.status()},headers:(await page.request.get('http://127.0.0.1:3001')).headers()};
+}
+)(page);
+```
+### Page
+- Page URL: http://127.0.0.1:3001/
+- Page Title: SceneCaptions — Stay in the story
+### Events
+- Downloading file scenecaptions-rehearsal-ed20754e.json ...
+- Downloaded file scenecaptions-rehearsal-ed20754e.json to ".playwright-cli\scenecaptions-rehearsal-ed20754e.json"

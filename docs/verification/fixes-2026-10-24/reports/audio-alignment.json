@@ -1,0 +1,43 @@
+{
+  "version": "blind-audio-check-v1",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "source_sha256": "fcea021303d933dd2ea570a3f8d09e93ef4d8f4bf7ef6ece61aba39fdf78bece",
+  "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "status": "failed-calibration",
+  "human_reviewed": false,
+  "notice": "Audio observations are independent of source caption text, but model agreement is not ground truth. No candidate is installed and no existing failed gate is cleared.",
+  "clips": [
+    {
+      "cue_id": "bbb-sdh-001",
+      "start_s": 2.499,
+      "end_s": 6.416,
+      "source_text": "[SERENE MUSIC]",
+      "local_review_clip": "artifacts\\audio-checks\\738e2f999860553d\\5465319a31b71ccc.wav",
+      "duration_s": 3.9170000000000003
+    },
+    {
+      "cue_id": "bbb-sdh-002",
+      "start_s": 11.791,
+      "end_s": 13.958,
+      "source_text": "[BROOK BABBLES]\n[FLY BUZZES]",
+      "local_review_clip": "artifacts\\audio-checks\\738e2f999860553d\\00ad838c4c4475aa.wav",
+      "duration_s": 2.167
+    },
+    {
+      "cue_id": "bbb-sdh-003",
+      "start_s": 16.166,
+      "end_s": 17.666,
+      "source_text": "[BIRD TWEETS]",
+      "local_review_clip": "artifacts\\audio-checks\\738e2f999860553d\\9ea320248dccec76.wav",
+      "duration_s": 1.5
+    }
+  ],
+  "silence_observation": [
+    {
+      "description": "short factual sound label",
+      "start_s": 0,
+      "end_s": 1
+    }
+  ],
+  "reason": "Model described sounds on digital silence. Semantic matching is blocked; use the extracted clips for human review."
+}

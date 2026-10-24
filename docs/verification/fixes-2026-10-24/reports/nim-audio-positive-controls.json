@@ -1,0 +1,94 @@
+[
+  {
+    "file": "speech.wav",
+    "input_info": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "frames": 38560
+    },
+    "reasoning": false,
+    "response": {
+      "id": "chatcmpl-fd05971e-2abf-474c-a3a1-78eec2ff2f76",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "The bluebird is by the window.",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1792821386,
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 64,
+        "completion_tokens": 9,
+        "total_tokens": 73
+      },
+      "nvext": {
+        "scheduler_snapshot": {
+          "num_running_reqs": 8,
+          "num_waiting_reqs": 0
+        },
+        "request_throughput": {
+          "e2e_latency_seconds": 0.18790364265441897,
+          "generation_tokens_per_second": 47.89688945281522,
+          "draft_tokens_per_second": 0.0
+        }
+      }
+    }
+  },
+  {
+    "file": "tone.wav",
+    "input_info": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "frames": 48000
+    },
+    "reasoning": true,
+    "response": {
+      "id": "chatcmpl-2f751515-bda2-4fa4-8d43-ff695688d7fd",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "SILENCE",
+            "role": "assistant",
+            "reasoning_content": "The audio contains no speech, music, or environmental sounds. The only audible event is a brief, sharp click, which is a non-tonal, non-musical, non-speech sound. Since the recording is otherwise silent and the click is a transient artifact, the dominant acoustic character is silence. Therefore, the most accurate classification is SILENCE. Let me listen again. The audio contains no speech, music, or environmental sounds."
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1792821392,
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 96,
+        "total_tokens": 192
+      },
+      "nvext": {
+        "scheduler_snapshot": {
+          "num_running_reqs": 12,
+          "num_waiting_reqs": 0
+        },
+        "request_throughput": {
+          "e2e_latency_seconds": 2.30332350730896,
+          "generation_tokens_per_second": 41.678904285642275,
+          "draft_tokens_per_second": 0.0
+        }
+      }
+    }
+  }
+]

@@ -1,8 +1,14 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile, rename, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
+import { extractDemoArchive } from "./media/archive.mjs";
 const target = "public/media/big-buck-bunny.mp4";
-if (existsSync(target)) { console.log("Demo video already present."); process.exit(0); }
+const expected = "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7";
+const matches = async (file) => createHash("sha256").update(await readFile(file)).digest("hex") === expected;
+if (existsSync(target)) {
+  if (!await matches(target)) throw new Error("Existing sample video does not match the expected edit. Inspect it before replacing it.");
+  console.log("Demo video present; exact edit verified."); process.exit(0);
+}
 await mkdir("public/media", { recursive: true });
 const source = "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_640x360.m4v.zip";
 // This script only downloads the licensed demo; no API keys or model calls.
@@ -12,13 +18,13 @@ const zip = `${cache}/bunny.zip`;
 if (!existsSync(zip)) {
   const response = await fetch(source);
   if (!response.ok) throw new Error(`Download failed (${response.status})`);
-  await writeFile(zip, Buffer.from(await response.arrayBuffer()));
+  await writeFile(`${zip}.download`, Buffer.from(await response.arrayBuffer()));
+  await rename(`${zip}.download`, zip);
 }
-const entries = spawnSync("unzip", ["-Z1", zip], { encoding: "utf8" });
-if (entries.status !== 0) throw new Error("Install unzip to extract the demo video.");
-const entry = entries.stdout.split("\n").find((line) => line.endsWith(".m4v"));
-if (!entry) throw new Error("The official archive did not contain an M4V video.");
-const extraction = spawnSync("unzip", ["-p", zip, entry], { maxBuffer: 160 * 1024 * 1024 });
-if (extraction.status !== 0) throw new Error("Video extraction failed.");
-await writeFile(target, extraction.stdout);
+const pending = `${target}.pending`;
+try {
+  extractDemoArchive(zip, pending);
+  if (!await matches(pending)) throw new Error("Downloaded movie hash does not match the captioned edit. Nothing installed.");
+  await rename(pending, target);
+} finally { await rm(pending, { force: true }); }
 console.log("Downloaded Big Buck Bunny; © 2008 Blender Foundation, CC BY 3.0. See public/media/ATTRIBUTION.md.");
