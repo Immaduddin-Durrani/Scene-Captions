@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/scenecaptions-mlx/.venv/bin/python",
+    "scripts/diagnostics/local-sound-controls.py",
+    "--model-directory",
+    "/Users/hamza/runtimes/cache/scenecaptions-gemma3n-66e7276",
+    "--cases",
+    "artifacts/sound-captions/control-v1/cases.json",
+    "--report",
+    "docs/verification/sound-captions-2026-10-24/reports/local-controls.json"
+  ],
+  "exit_code": 0
+}

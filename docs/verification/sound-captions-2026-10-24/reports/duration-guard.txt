@@ -1,0 +1,4 @@
+usage: local-sound-controls.py [-h] --model-directory MODEL_DIRECTORY
+                               --cases CASES --report REPORT
+                               [--plain-observation]
+local-sound-controls.py: error: Measured audio duration exceeds the short-control bound or disagrees with metadata.

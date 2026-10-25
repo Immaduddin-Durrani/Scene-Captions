@@ -1,0 +1,7 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/scenecaptions-mlx/.venv/bin/python",
+    "artifacts/sound-captions/inspect-embeddings.py"
+  ],
+  "exit_code": 0
+}

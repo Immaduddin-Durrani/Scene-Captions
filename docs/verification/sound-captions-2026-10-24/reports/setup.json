@@ -1,0 +1,17 @@
+{
+  "purpose": "Bounded offline sound-caption capability trial, not accepted film captions",
+  "runtime": "/Users/hamza/runtimes/scenecaptions-mlx/.venv",
+  "package": "mlx-vlm==0.7.10",
+  "requirements": "/Users/hamza/skill-library/setup-records/scenecaptions-mlx-requirements-2026-10-24.txt",
+  "model": "mlx-community/gemma-3n-E2B-it-4bit",
+  "revision": "66e7276cfc589073b4f92ebed58c05301f990222",
+  "weight_bytes": 4462976625,
+  "weight_sha256": "8d5af4ae73617d12496301ebad11226f9056c4b0d51dbb9ef9409234fb87d6fa",
+  "license": "gemma",
+  "network_policy": "Anonymous public artifact downloads only; inference will set HF_HUB_OFFLINE and HF_HUB_DISABLE_TELEMETRY. No cloud inference, login, service or agents.",
+  "sources": [
+    "https://github.com/Blaizzy/mlx-vlm",
+    "https://huggingface.co/mlx-community/gemma-3n-E2B-it-4bit",
+    "https://ai.google.dev/gemma/docs/gemma-3n"
+  ]
+}

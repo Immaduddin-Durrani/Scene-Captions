@@ -1,0 +1,21 @@
+{
+  "status": "audio-only-preparation-no-inference-or-installation",
+  "films": [
+    {
+      "video_id": "sintel",
+      "video_duration_s": 888.032,
+      "audio_duration_s": 888.0426875,
+      "window_count": 30,
+      "total_audio_input_s": 946.032,
+      "manifest": "artifacts/sound-captions/sintel/windows.json"
+    },
+    {
+      "video_id": "tears-of-steel",
+      "video_duration_s": 734.166667,
+      "audio_duration_s": 734.098875,
+      "window_count": 25,
+      "total_audio_input_s": 782.098875,
+      "manifest": "artifacts/sound-captions/tears-of-steel/windows.json"
+    }
+  ]
+}

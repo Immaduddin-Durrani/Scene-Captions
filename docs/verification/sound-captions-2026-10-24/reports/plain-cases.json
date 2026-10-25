@@ -1,0 +1,47 @@
+[
+  {
+    "name": "silence",
+    "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+    "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+    "duration_s": 3,
+    "expected": "No audible sound",
+    "reference_kind": "synthetic known samples"
+  },
+  {
+    "name": "tone",
+    "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+    "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+    "duration_s": 3,
+    "expected": "Continuous electronic tone; no speech or music",
+    "reference_kind": "synthetic known samples"
+  },
+  {
+    "name": "source-music",
+    "file": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav",
+    "sha256": "ad909b108ce5ef6b8a8d2f5e8db1bcf4fd616caa25df4b331bd4ae51955bf22e",
+    "duration_s": 4,
+    "source_interval": [
+      2,
+      6
+    ],
+    "source_caption_reference": [
+      "[SERENE MUSIC]"
+    ],
+    "reference_kind": "licensed caption anchor, not new listening ground truth"
+  },
+  {
+    "name": "official-dialogue-positive",
+    "file": "artifacts/sound-captions/control-v1/078305bc50bc6bf2ea62.wav",
+    "sha256": "cb4b72d203aa37ce35e3ff6fbaf9face07862b9bbd99634770e7bc7132748dd8",
+    "duration_s": 6,
+    "source_interval": [
+      23,
+      29
+    ],
+    "source_caption_reference": [
+      "You\u2019re a jerk, Thom.",
+      "Look Celia, we have to follow our passions;"
+    ],
+    "reference_kind": "Official dialogue timing; not new independent listening ground truth"
+  }
+]

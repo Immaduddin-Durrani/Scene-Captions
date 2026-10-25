@@ -1,0 +1,103 @@
+{
+  "model": "mlx-community/gemma-3n-E2B-it-4bit",
+  "revision": "66e7276cfc589073b4f92ebed58c05301f990222",
+  "weights_sha256": "8d5af4ae73617d12496301ebad11226f9056c4b0d51dbb9ef9409234fb87d6fa",
+  "engine": "local MLX-VLM 0.7.10",
+  "prompt": "Describe only the audible contents of this recording in one concise sentence. Mention overlapping sounds if audible. Do not infer visual events, objects, a story or inaudible causes. If there is no audible sound, say no audible sound.",
+  "temperature": 0,
+  "max_tokens": 96,
+  "call_ceiling": 6,
+  "tests": [
+    {
+      "name": "silence",
+      "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+      "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "duration_s": 3,
+      "expected": "No audible sound",
+      "reference_kind": "synthetic known samples",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 7.238
+    },
+    {
+      "name": "tone",
+      "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+      "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+      "duration_s": 3,
+      "expected": "Continuous electronic tone; no speech or music",
+      "reference_kind": "synthetic known samples",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 0.493
+    },
+    {
+      "name": "mixed",
+      "file": "artifacts/sound-captions/control-v1/fba0c45762a2e7675539.wav",
+      "sha256": "fba0c45762a2e7675539dc4178fefea134ba27149bb2243713c3aefb044995ef",
+      "duration_s": 3,
+      "expected": "Continuous tone with a second overlapping tone from 1 to 2 seconds",
+      "reference_kind": "synthetic known samples",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 0.484
+    },
+    {
+      "name": "source-music",
+      "file": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav",
+      "sha256": "ad909b108ce5ef6b8a8d2f5e8db1bcf4fd616caa25df4b331bd4ae51955bf22e",
+      "duration_s": 4,
+      "source_interval": [
+        2,
+        6
+      ],
+      "source_caption_reference": [
+        "[SERENE MUSIC]"
+      ],
+      "reference_kind": "licensed caption anchor, not new listening ground truth",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 0.494
+    },
+    {
+      "name": "source-overlap",
+      "file": "artifacts/sound-captions/control-v1/2033f2c1ba98bd91c722.wav",
+      "sha256": "4211506a95f985844b1afc542b399a6840e3253483074a72006dc787348e128b",
+      "duration_s": 3.5,
+      "source_interval": [
+        10.5,
+        14
+      ],
+      "source_caption_reference": [
+        "[BROOK BABBLES]\n[FLY BUZZES]"
+      ],
+      "reference_kind": "licensed caption anchor, not new listening ground truth",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 0.487
+    },
+    {
+      "name": "source-thud",
+      "file": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav",
+      "sha256": "dd8a9c4d364ba6466fa1345b6d0d9db382d4e60ff8060317742e2c037d305a82",
+      "duration_s": 2.200000000000003,
+      "source_interval": [
+        83.3,
+        85.5
+      ],
+      "source_caption_reference": [
+        "[APPLE THUDS]"
+      ],
+      "reference_kind": "licensed caption anchor, not new listening ground truth",
+      "response": "No audible sound.",
+      "finish_reason": "stop",
+      "generation_tokens": 5,
+      "seconds": 0.479
+    }
+  ],
+  "scope": "Small synthetic controls and licensed source-caption anchors. Ground-truth metadata is never sent in the prompt. No film track generation, installation or review approval."
+}

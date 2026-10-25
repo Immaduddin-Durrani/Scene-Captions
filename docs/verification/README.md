@@ -1,5 +1,7 @@
 # Phase 1 verification
 
+Latest preparation attempt: [bounded local sound-caption controls](sound-captions-2026-10-24/README.md). This did not complete the full sound tracks.
+
 Latest follow-up: [local film integration and caption coverage](library-2026-10-24/README.md).
 
 Latest checks: [24 October model investigation and component cleanup](investigation-2026-10-24/README.md). Earlier results below retain their original scope.

@@ -1,0 +1,2 @@
+text-only "This is a fun, word-based puzzle! Here's how to solve it:\n\n**The Solution**\n\nThe answer is: **2 + 3 = 5**\n\n**Explanation**\n\nThe puzzle is a simple substitution cipher. Each letter represents a number.\n\n*   **2** is represented by **A**\n*   **3** is represented by **B**\n*   **5** is represented by **E**\n\nTherefore, "
+official-speech "You're jerk, dumb. Look, Celia, we have to follow our passions. You have your robotics, I just want to"

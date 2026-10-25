@@ -1,0 +1,6 @@
+silence 'silence. There are no discernible sounds, speech, or music present. The recording appears to be of good quality, with no noticeable distortion or background noise.'
+tone 'laioning'
+mixed 'laioning'
+source-music 'laioningand The audio presents a solo piano performance with a melancholic and reflective mood. The recording quality is good, capturing the nuances of the piano. The performance is precise and expressive, conveying a sense of sadness. The tempo is slow and deliberate.'
+source-overlap 'laioningoh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh, oh'
+source-thud 'laioning.com'

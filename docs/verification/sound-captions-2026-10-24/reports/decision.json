@@ -1,0 +1,21 @@
+{
+  "status": "local-non-speech-method-not-accepted",
+  "generation_calls": 24,
+  "full_film_generation_calls": 0,
+  "cloud_inference_calls": 0,
+  "case_results": {
+    "careful_prompt": "All six recordings, including audible tones/music/source events, returned No audible sound. All finish_reason stop.",
+    "plain_prompt": "Silence/music received requests to rephrase; tone did not identify a tone; speech received a request to rephrase.",
+    "direct_transcription": "Official speech was partially transcribed, with word errors and an unfinished six-second sentence; evidence of some audio conditioning, not non-speech accuracy.",
+    "text_only": "Included arithmetic answer 5 inside an unrelated puzzle explanation and hit the 96-token cap; instruction compliance not accepted.",
+    "whisper": "Silence recognized; tones not recognized; brook/fly anchor repeated oh; thud returned laioning.com. Explicit audio attention mask removed warning but did not change any response."
+  },
+  "frontend_evidence": "All six fixtures produced 188 audio placeholder tokens. Distinct nonzero input-feature tensors and different merged audio/text embedding hashes were observed. This does not prove reference-model parity or rule out a conversion/runtime issue.",
+  "next_step": "No cloud work. Both local trials failed recognition. Full sound tracks require local manual listening/timing/wording annotation and review; no full-film inference is queued.",
+  "user_constraint": "Keep everything local",
+  "generation_calls_by_method": {
+    "gemma": 12,
+    "whisper_initial": 6,
+    "whisper_explicit_attention_mask": 6
+  }
+}

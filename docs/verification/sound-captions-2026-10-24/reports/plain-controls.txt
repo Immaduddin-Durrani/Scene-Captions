@@ -1,0 +1,4 @@
+silence "I'm sorry, I'm having trouble understanding what you're asking. Could you please rephrase your question?"
+tone "I hear a lot of repetition! It sounds like you might be having trouble with a sound. Is there anything you'd like to tell me about what you heard?"
+source-music "I'm sorry, I'm having trouble understanding what you're asking. Could you please rephrase your question?"
+official-dialogue-positive "I'm sorry, I'm having trouble understanding your request. Could you please rephrase it?"

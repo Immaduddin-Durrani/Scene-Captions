@@ -1,3 +1,11 @@
+# Local-only constraint confirmed — 24 October 2026
+
+The user declined cloud generation and selected “Keep everything local.” No Gemini/cloud calls are authorized for this work; the earlier pending cloud proposal is closed. Continue only with local preparation and bounded local model controls. The pinned small Whisper sound-caption fine-tune has now also failed six controls, repeated with an explicit audio attention mask (12 local generations; identical descriptions). Both tested local candidates are rejected for full-film preparation. Full sound tracks remain unfinished until a local method passes recognition/timing checks and actual annotations are prepared.
+
+# Sound-caption preparation follow-up — 24 October 2026
+
+The user requested full sound-effect captions. A new isolated local Gemma 3n/MLX trial made 12 bounded generations and did not pass non-speech controls. Audio feature/embedding checks and partial speech transcription show some audio conditioning, but no reliable sound descriptions or event timings were obtained. No full-film caption inference, cloud call or playback change occurred. Audio input windows for both exact-hash films are prepared locally (55 target intervals total). The proposed Gemini trial was declined; no cloud work is pending or authorized. See [results and limits](verification/sound-captions-2026-10-24/README.md). Full reviewed sound tracks remain unfinished.
+
 # Current library integration — 24 October 2026
 
 The latest user request explicitly authorized downloading and integrating Sintel and Tears of Steel. Both official full 720p sources are now local and selectable alongside Big Buck Bunny, with independent posters, credits and precomputed English dialogue (26 / 76 cues). Title switching clears the previous workspace; rehearsal locks title selection. Full non-speech tracks for the two new films remain unprepared, and their sound-personalization controls are disabled. No successful automatic sound-caption generation or human review is claimed. See [coverage](LIBRARY_CAPTIONS.md) and [current evidence](verification/library-2026-10-24/README.md).

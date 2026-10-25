@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/Users/hamza/runtimes/scenecaptions-mlx/.venv/bin/python",
+    "scripts/diagnostics/local-sound-controls.py",
+    "--model-directory",
+    "/Users/hamza/runtimes/cache/scenecaptions-gemma3n-66e7276",
+    "--cases",
+    "/Users/hamza/Scene-Captions/artifacts/sound-captions/guard-check/cases.json",
+    "--report",
+    "/Users/hamza/Scene-Captions/docs/verification/sound-captions-2026-10-24/reports/must-not-exist.json"
+  ],
+  "exit_code": 2,
+  "expected_exit_code": 2,
+  "accepted": true,
+  "scope": "False 3-second metadata for 9-second WAV rejected before model load/inference."
+}

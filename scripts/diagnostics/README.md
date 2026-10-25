@@ -22,3 +22,9 @@ python scripts/diagnostics/factor-controls.py --phase head-noun --report docs/ve
 ```
 
 The 24 October follow-up made ten actual requests in total, with one inconclusive 503 capacity failure. Inspect [saved results](../../docs/verification/investigation-2026-10-24/README.md) before any authorized rerun. Silence and audible negatives must both be distinguished; correct silence alone is not calibration. Expected audio content stays in local ground-truth metadata, outside the prompts. Repeated small controls are not a representative movie benchmark.
+
+## Local offline replacement controls
+
+`local-sound-controls.py` uses the isolated `~/runtimes/scenecaptions-mlx` installation and a pinned, checksum-verified local Gemma 3n artifact. It permits at most six mono 16 kHz PCM WAV fixtures under eight seconds each, checks actual duration/hash, and requires a new report path. It sets offline/telemetry-disabled Hub mode, runs no server and cannot produce/install a film track. `--plain-observation` is a bounded prompt-specificity follow-up; it is not approval for a full-film run. The 24 October run failed non-speech controls. See [scope, setup and actual results](../../docs/verification/sound-captions-2026-10-24/README.md) before repeating anything. Runtime requirements/setup records live under `~/skill-library/setup-records`; no application dependency was added.
+
+`whisper-sound-controls.py` is the second bounded offline diagnostic, using the existing isolated audio runtime and pinned/checksummed Whisper sound-caption weights. It validates the same six short mono WAV inputs, requires a new verification report, passes an explicit audio attention mask, and rejects weight-loading mismatches. Both the initial and corrected six-case runs failed recognition; do not use `scripts/caption-audio.py` to process full films on the assumption that these controls passed. See the linked local-trial evidence.

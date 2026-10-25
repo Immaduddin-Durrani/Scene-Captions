@@ -1,0 +1,13 @@
+{
+  "head": "7418c07875eb1b0d6867b45077f0e0f80dfbdeb3",
+  "unchanged_playback_and_gate": [
+    "data/captions/big-buck-bunny.json",
+    "data/captions/sintel.json",
+    "data/captions/tears-of-steel.json",
+    "docs/verification/nim-capability-status.json"
+  ],
+  "no_current_nvidia_key_in_nonignored_files": true,
+  "cloud_inference_calls": 0,
+  "full_film_caption_generation_calls": 0,
+  "scope": "Current-key and exact-byte checks only, not an exhaustive history or secret audit."
+}
