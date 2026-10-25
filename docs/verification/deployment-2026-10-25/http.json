@@ -1,0 +1,40 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/experiment",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "path": "/api/ping",
+    "status": 200,
+    "content_type": "application/json"
+  },
+  {
+    "path": "/media/bunny-poster.jpg",
+    "status": 200,
+    "content_type": "image/jpeg"
+  },
+  {
+    "path": "/media/sintel-poster.jpg",
+    "status": 200,
+    "content_type": "image/jpeg"
+  },
+  {
+    "path": "/media/tears-of-steel-poster.jpg",
+    "status": 200,
+    "content_type": "image/jpeg"
+  },
+  {
+    "path": "/.env",
+    "status": 404
+  },
+  {
+    "path": "/artifacts/deployment/production.env",
+    "status": 404
+  }
+]

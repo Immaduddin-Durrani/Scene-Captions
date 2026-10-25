@@ -221,3 +221,5 @@ No prior evidence either way — open design space:
   ASSETS '25. doi:10.1145/3663547.3746400
 - Ubur, Adewale, Donekel Chandrashekar, Akli, Gracanin. *Interpretive Caption:
   Real-Time Vocal Emotion Cues for DHH Users*. ASSETS '25. doi:10.1145/3663547.3759697
+
+For hosted setup, see [Vercel deployment](docs/VERCEL_DEPLOYMENT.md). The three films require external HTTPS media URLs; local MP4s are excluded from Git.

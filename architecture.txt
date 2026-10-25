@@ -800,3 +800,15 @@ Architecture Decisions (DON'T DELETE existing entries), but only
 if it is crucial; otherwise ignore it. Architecture can change,
 but only when crucial, and then this doc must be updated and a new
 entry logged in the Architecture Decisions section.
+
+
+VERCEL DEPLOYMENT FOLLOW-UP (25 October 2026)
+The user explicitly selected Vercel for this deployment, overriding the
+earlier Render hosting choice for the current demo. Next.js runs on
+Vercel; all three films stream directly from a public Vercel Blob store.
+No AI inference, account API key or video proxy is needed during viewing.
+Hosted film URLs are build-time configuration. The hosted Sintel copy
+compresses picture only, preserves AAC audio and duration, and differs
+in frame presentation times by less than 1 ms. Original local films
+remain intact. See docs/VERCEL_DEPLOYMENT.md for current status, storage
+allowances and verification. Caption coverage remains unchanged.

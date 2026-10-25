@@ -1,0 +1,48 @@
+{
+  "method": "Sintel picture recompressed using libx264 CRF25/preset fast; audio copied without reencoding; full film and credits retained. No cuts. MP4 frame time-base quantization differs by less than 1 ms.",
+  "files": [
+    {
+      "file": "public/media/sintel.mp4",
+      "bytes": 625173895,
+      "sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+      "duration": "888.032000",
+      "video": {
+        "width": 1280,
+        "height": 544,
+        "nb_frames": "21312",
+        "start_time": "0.000000",
+        "duration": "887.999000"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "start_time": "0.000000",
+        "duration": "888.032000",
+        "nb_frames": "41628"
+      }
+    },
+    {
+      "file": "artifacts/deployment/media/sintel.mp4",
+      "bytes": 143305281,
+      "sha256": "c3727b2c329b18ffea6eb50311a45a1315c684dc9e422182af8312d6c6632706",
+      "duration": "888.032000",
+      "video": {
+        "width": 1280,
+        "height": 544,
+        "nb_frames": "21312",
+        "start_time": "0.000000",
+        "duration": "888.000000"
+      },
+      "audio": {
+        "codec_name": "aac",
+        "start_time": "0.000000",
+        "duration": "888.032000",
+        "nb_frames": "41628"
+      }
+    }
+  ],
+  "video_frame_count_equal": true,
+  "max_frame_pts_delta_seconds": 0.0003330000000687505,
+  "audio_packet_hash_equal": true,
+  "audio_packet_hash": "SHA256=808dafba6da3a98772b53d384defaecbcd88721155214da685f3ca9dd45e8b27",
+  "total_hosted_bytes": 630993877
+}

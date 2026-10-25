@@ -1,0 +1,63 @@
+Vercel CLI 65.2.0 (Node.js 25.2.1)
+2026-10-25T18:42:35.738Z  Running build in Washington, D.C., USA (East) – iad1
+2026-10-25T18:42:35.738Z  Build machine configuration: 2 cores, 8 GB
+2026-10-25T18:42:35.748Z  Retrieving list of deployment files...
+2026-10-25T18:42:35.832Z  Previous build caches not available.
+2026-10-25T18:42:36.130Z  Downloading 363 deployment files...
+2026-10-25T18:42:37.194Z  Running "vercel build"
+2026-10-25T18:42:37.213Z  Vercel CLI 65.1.0
+2026-10-25T18:42:37.473Z  Warning: Detected "engines": { "node": ">=22.13.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+2026-10-25T18:42:37.481Z  Running "install" command: `npm ci`...
+2026-10-25T18:42:37.951Z  npm warn Unknown env config "cache-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-25T18:42:42.878Z  
+2026-10-25T18:42:42.878Z  added 32 packages, and audited 33 packages in 5s
+2026-10-25T18:42:42.878Z  
+2026-10-25T18:42:42.878Z  9 packages are looking for funding
+2026-10-25T18:42:42.878Z  run `npm fund` for details
+2026-10-25T18:42:42.879Z  
+2026-10-25T18:42:42.879Z  found 0 vulnerabilities
+2026-10-25T18:42:42.907Z  Detected Next.js version: 16.4.2
+2026-10-25T18:42:42.907Z  Running "npm run build"
+2026-10-25T18:42:42.982Z  npm warn Unknown env config "cache-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+2026-10-25T18:42:42.994Z  
+2026-10-25T18:42:42.994Z  > scene-captions@0.1.0 build
+2026-10-25T18:42:42.995Z  > next build --webpack
+2026-10-25T18:42:42.995Z  
+2026-10-25T18:42:43.317Z  ▲ Next.js 16.4.2 (webpack)
+2026-10-25T18:42:43.379Z  Applying modifyConfig from Vercel
+2026-10-25T18:42:43.382Z  ✓ Running next.config.ts took 65ms
+2026-10-25T18:42:43.390Z  
+2026-10-25T18:42:43.410Z  Creating an optimized production build ...
+2026-10-25T18:42:51.455Z  ✓ Compiled successfully in 5.9s
+2026-10-25T18:42:51.456Z  Running TypeScript ...
+2026-10-25T18:42:53.779Z  Finished TypeScript in 2.3s ...
+2026-10-25T18:42:53.780Z  Collecting page data using 1 worker ...
+2026-10-25T18:42:54.803Z  Generating static pages using 1 worker (0/6) ...
+2026-10-25T18:42:54.885Z  Generating static pages using 1 worker (1/6)
+2026-10-25T18:42:55.195Z  Generating static pages using 1 worker (2/6)
+2026-10-25T18:42:55.195Z  Generating static pages using 1 worker (4/6)
+2026-10-25T18:42:55.196Z  ✓ Generating static pages using 1 worker (6/6) in 392ms
+2026-10-25T18:42:55.272Z  Finalizing page optimization ...
+2026-10-25T18:42:55.272Z  Collecting build traces ...
+2026-10-25T18:43:01.499Z  Running onBuildComplete from Vercel
+2026-10-25T18:43:01.528Z  Warning: Detected "engines": { "node": ">=22.13.0" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version
+2026-10-25T18:43:01.542Z  
+2026-10-25T18:43:01.544Z  Route (app)
+2026-10-25T18:43:01.544Z  ┌ ○ /
+2026-10-25T18:43:01.544Z  ├ ○ /_not-found
+2026-10-25T18:43:01.545Z  ├ ƒ /api/ping
+2026-10-25T18:43:01.545Z  ├ ○ /experiment
+2026-10-25T18:43:01.545Z  └ ○ /icon.svg
+2026-10-25T18:43:01.545Z  
+2026-10-25T18:43:01.545Z  
+2026-10-25T18:43:01.545Z  ○  (Static)   prerendered as static content
+2026-10-25T18:43:01.545Z  ƒ  (Dynamic)  server-rendered on demand
+2026-10-25T18:43:01.545Z  
+2026-10-25T18:43:01.631Z  Build Completed in /vercel/output [24s]
+2026-10-25T18:43:01.644Z  Deploying outputs...
+2026-10-25T18:43:04.741Z  Deployment completed
+2026-10-25T18:43:04.745Z  Creating build cache...
+2026-10-25T18:43:10.899Z  Created build cache: 6s
+2026-10-25T18:43:10.900Z  Uploading build cache [144.66 MB]
+2026-10-25T18:43:13.839Z  Build cache uploaded: 2.939s
+status	● Ready
