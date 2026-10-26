@@ -7,7 +7,7 @@ Adaptive non-speech captions for Deaf and hard-of-hearing (DHH) viewers of long-
 Read this README, [architecture.txt](architecture.txt) and the required
 [skill workflow](docs/SKILL_WORKFLOW.md) first. Then read the
 [current project state](docs/PROJECT_STATE.md) and
-[latest investigation and cleanup](docs/audits/2026-10-24-investigation.md) for current decisions,
+[latest NIM investigation](docs/verification/nim-counterfactuals-2026-10-26/README.md) for current decisions,
 verified findings and unfinished work. Use [the glossary](GLOSSARY.md)
 for domain meanings and the experimental plan for study details.
 The [documentation index](docs/README.md) explains where each kind of file belongs.
@@ -21,6 +21,8 @@ current-state page for snapshot locations and known coverage gaps.
 
 No automatic skill activation, agents, paid services, publishing or hooks
 are authorized by these documents. Keep all model generation outside playback.
+
+Latest BBB work: [caption-free NIM tests and audit](docs/verification/nim-counterfactuals-2026-10-26/README.md) and [self-contained research prompt](docs/research/RESEARCH_HANDOFF_PROMPT.md). Twelve new controls confirm some audio input works, but silence hallucinations leave the sound-generation gate failed. The player compares the existing source-assisted draft with its fetched reference; no independent NIM full track is installed.
 
 ## Phase 1: run the prototype
 
@@ -43,13 +45,13 @@ Research protocol: [Experimental plan](docs/EXPERIMENTAL_PLAN.md).
 Own-video preparation: [Caption import guide](docs/CAPTION_IMPORT.md).
 Optional short-film downloads and local resources: [local media guide](docs/LOCAL_MEDIA.md).
 This follow-up explicitly authorized downloading and integrating Sintel and Tears of Steel. All three films are now selectable; the new titles have official English dialogue subtitles. [Caption coverage](docs/LIBRARY_CAPTIONS.md) distinguishes those subtitles from the still-missing full sound tracks.
-The sample now includes 87 timed non-speech caption cues from the licensed
-[Demuxed caption track](https://github.com/demuxed/big-buck-captions), with
-source-anchored wording variants and cue-density adaptation. No API key is
-needed. See [caption provenance and checks](docs/CAPTION_GENERATION_STATUS.md).
+The sample now uses 87 AI-assisted generated draft captions: local Qwen wording,
+with extensive recorded source-text corrections. The licensed
+[Demuxed track](https://github.com/demuxed/big-buck-captions) provides reference
+events and timestamps. New wording replaces fetched text in playback. No API key is needed. See [caption provenance and checks](docs/CAPTION_GENERATION_STATUS.md).
 The study still needs a full caption review against your team's own video.
 Offline model preparation is separate: see [the tooling guide](scripts/generation/README.md).
-Current model trials have not passed caption-generation/audio-corroboration quality gates.
+Automatic audio-recognition checks remain failed; this source-assisted generation does not clear them. See [generation evidence and demo notes](docs/GENERATED_CAPTIONS_DEMO.md).
 
 ## Team
 - Zuhair Amirali Merchant (29021)

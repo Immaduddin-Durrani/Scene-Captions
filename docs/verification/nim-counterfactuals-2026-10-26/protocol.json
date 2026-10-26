@@ -1,0 +1,66 @@
+{
+  "created_before_inference": true,
+  "scope": "8 single-attempt NVIDIA requests; no source-caption input or playback installation",
+  "cases": {
+    "c01": {
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+      "sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+      "duration_s": 10.0,
+      "category": "dog",
+      "source_support_s": [
+        1,
+        6
+      ]
+    },
+    "c02": {
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c02.wav",
+      "sha256": "c5c7b7acacfa638be199fcfe0dada8f533a83dab247c22ac5364bcaf38078235",
+      "duration_s": 10.0,
+      "category": "dog",
+      "source_support_s": [
+        4,
+        9
+      ]
+    },
+    "c03": {
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+      "sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+      "duration_s": 10.0,
+      "category": "rain",
+      "source_support_s": [
+        1,
+        6
+      ]
+    }
+  },
+  "shift_samples": 48000,
+  "shift_seconds": 3,
+  "picture_sha256": "912036525ab2f204ec470b416eaa0ff7b263cdcfb56d0e6c4dea952579563faa",
+  "original_film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "source_manifest_sha256": "d62e8f719a00b6cf971decdb2f310080660896f59aa92e48674f3d07472087f2",
+  "manifest_sha256": "0021da48283fe4b948f7b3a314a916d3035a7ef7bcaf2ebf697f296101ea8769",
+  "same_picture_for_all_av_cases": true,
+  "picture_streams": [
+    "video"
+  ],
+  "caption_files_read": false,
+  "plot_provided": false,
+  "criteria": {
+    "strict_categories": [
+      "dog",
+      "rain"
+    ],
+    "water_without_rain": "partial only",
+    "support_tolerance_s": 0.25,
+    "relative_shift_tolerance_s": 0.5,
+    "mute": "zero events and zero speech",
+    "speech": "seventeen/17 blue lanterns are beside the window"
+  },
+  "limits": [
+    "ESC-10 labels are clip-level, not exact event-onset annotations.",
+    "Padding support and relative shift are known exactly; actual bark onset is not manually annotated.",
+    "Small diagnostic only, not representative film accuracy or timing benchmark.",
+    "Same WAV bytes in audio and split-AV; no AAC/PCM codec confound.",
+    "A model may have seen public ESC-10 training audio; this is not a held-out generalization claim."
+  ]
+}

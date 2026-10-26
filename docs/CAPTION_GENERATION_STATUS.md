@@ -1,3 +1,21 @@
+## Latest caption-free controls — 26 October 2026
+
+Twelve additional NIM requests tested natural sounds, exact audio shifts, silent pictures and digital silence: six HTTP 200, five capacity errors and one timeout. Novel speech transcribed correctly, but a tone was reported on zero-valued audio. Relative sound timing remains unscorable because no correctly identified timed pair completed. The independent audio gate stays failed; no new NIM track is installed. See [the complete results and audit](verification/nim-counterfactuals-2026-10-26/README.md) and [research handoff prompt](research/RESEARCH_HANDOFF_PROMPT.md). Software tests pass; they do not establish sound-caption accuracy.
+
+## Earlier NIM follow-up — 26 October 2026
+
+42 new NVIDIA requests tested audio, video, plot/reference context and source-assisted transformations. NIM access works, but non-speech controls still fail, including false sounds on decoded digital silence. Some Super VL visual/reference expansions are useful drafts; a full NIM-generated track has not been accepted. The existing Qwen/editorial draft remains Personalized; Reference baseline and Show reference display the actual fetched source. See [proof and research](verification/nim-phase1-2026-10-26/README.md). No independent audio-grounded improvement or DHH usability benefit is established.
+
+# Current local draft — 26 October 2026
+
+Big Buck Bunny now uses 87 AI-assisted generated fixed captions and exports, supplying Personalized and exports. Reference baseline displays the fetched source. A local Qwen2.5-1.5B 4-bit model generated drafts from licensed reference labels. The main assistant then made extensive source-text corrections: 63 of 67 labels, 120 of 201 generated fields. All raw prompts/outputs and edits are saved. This is generated-and-edited source-assisted wording, not untouched model output or independent audio recognition.
+
+The reference supplies event coverage and timestamps, with CC BY attribution retained. Each cue has separate reference_text. Three detail descriptions and three punctuation styles form nine cached combinations; they are not nine independent semantic generations. All 87 fixed captions differ from fetched wording. Full human listening review is pending; existing failed audio-model gates remain unchanged. A 20-character/second heuristic flags 7 baseline intervals versus 10 before; this is not a validated DHH measure or evidence of better accessibility.
+
+See [demo/presentation notes](GENERATED_CAPTIONS_DEMO.md), [saved generation evidence](verification/generated-captions-2026-10-26/README.md) and [generated SRT](../public/research/big-buck-bunny.srt). Playback and rebuilding saved outputs need no model, cloud request or API key. The new draft is local until a fresh push/publish request.
+
+# Historical source-track status (superseded for current local Big Buck Bunny wording)
+
 # Working Big Buck Bunny captions
 
 ## Current approach

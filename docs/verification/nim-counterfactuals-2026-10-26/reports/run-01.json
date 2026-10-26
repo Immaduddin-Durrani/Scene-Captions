@@ -1,0 +1,729 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "0021da48283fe4b948f7b3a314a916d3035a7ef7bcaf2ebf697f296101ea8769",
+  "calls": [
+    {
+      "case": "c01-audio",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+          "sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "b5d4069aed737cafa39be608cbaa444ffb8c7191c5c2d2c61039ba542336d9ce",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "efa7c015ead384d84353568e4e9120bd81399a5668eb65d279ac06a972eb8a90",
+      "wire_bytes": 428058,
+      "attempts": 1,
+      "error": "The read operation timed out",
+      "classification": "inconclusive-transport-or-response",
+      "seconds": 181.025
+    },
+    {
+      "case": "c02-audio",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c02.wav",
+          "sha256": "c5c7b7acacfa638be199fcfe0dada8f533a83dab247c22ac5364bcaf38078235",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d98399a6ff2231fa1e3275a2b9df217838d24cac7dde56004a79e89bc3bd07b",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "02da17bc73edc7e5e4e5e614a97f1fdd8f946beaf41d2fdc4b30aa7bd2239c66",
+      "wire_bytes": 428058,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.538
+    },
+    {
+      "case": "c03-audio",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+          "sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1cf14f35ef5304a2d54b4ed026e6e93a00e25754ed5b3ccc82026ba14226baa3",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "34620f8a2b399984425a98e7df2de6be5078fa39d9f570358367b079f3fc8d67",
+      "wire_bytes": 428058,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "09fd87e0-327d-4b59-b0b1-8dc65994af9f",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-4249e784-b5cb-44dd-996a-e6ac04f5de3b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\n  {\"sound\": \"Water splashing\", \"start_s\": 0.0, \"end_s\": 6.0},\n  {\"sound\": \"Silence\", \"start_s\": 6.0, \"end_s\": 10.0}\n]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031304,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 352,
+          "completion_tokens": 57,
+          "total_tokens": 409
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 2.0412912368774414,
+            "generation_tokens_per_second": 27.923502031583094,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 5.256
+    },
+    {
+      "case": "c01-split-av",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+          "sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+          "sha256": "912036525ab2f204ec470b416eaa0ff7b263cdcfb56d0e6c4dea952579563faa",
+          "duration_s": 10.0,
+          "bytes": 229339,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "b5d4069aed737cafa39be608cbaa444ffb8c7191c5c2d2c61039ba542336d9ce",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a5677d9e861339024e14bddf84cd99e41748416ae71f96328d7be693586cbc10",
+                    "data_uri_characters": 305810,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "c6e79635f9169264200db75e331222608d9a1288f16fbc12919058f965d8bb8a",
+      "wire_bytes": 733917,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "96300b1d-ded0-4483-9335-28bb5f8a6ffc",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-558c0db4-c96f-4757-a8f3-cd403bd97aca",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\n  {\"sound\": \"A low, sustained electronic tone begins and continues until the end of the clip.\", \"start_s\": 8.5, \"end_s\": 10.5},\n  {\"sound\": \"A sharp, high-pitched electronic beep occurs at the very beginning of the clip.\", \"start_s\": 0.0, \"end_s\": 0.1},\n  {\"sound\": \"A brief, low-frequency electronic buzz or click is heard at the start of the clip.\", \"start_s\": 0.0, \"end_s\": 0.1}\n]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031309,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1904,
+          "completion_tokens": 125,
+          "total_tokens": 2029
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 6.239814758300781,
+            "generation_tokens_per_second": 20.032645974580156,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 9.456
+    },
+    {
+      "case": "c02-split-av",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c02.wav",
+          "sha256": "c5c7b7acacfa638be199fcfe0dada8f533a83dab247c22ac5364bcaf38078235",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+          "sha256": "912036525ab2f204ec470b416eaa0ff7b263cdcfb56d0e6c4dea952579563faa",
+          "duration_s": 10.0,
+          "bytes": 229339,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d98399a6ff2231fa1e3275a2b9df217838d24cac7dde56004a79e89bc3bd07b",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a5677d9e861339024e14bddf84cd99e41748416ae71f96328d7be693586cbc10",
+                    "data_uri_characters": 305810,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "b635e6b4f6f2c20b94174bfe4269b26b8e1ee52aa6eb8a4357d9de067193d434",
+      "wire_bytes": 733917,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "eb318868-86f0-4ec8-972e-263bd8440351",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-b06c60f1-5de8-48fd-a93d-e8d1eab4593f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\n  {\"sound\": \"rustling leaves\", \"start_s\": 0.0, \"end_s\": 10.0},\n  {\"sound\": \"wind\", \"start_s\": 0.0, \"end_s\": 10.0}\n]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031319,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1904,
+          "completion_tokens": 57,
+          "total_tokens": 1961
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.3816978931427002,
+            "generation_tokens_per_second": 41.253591166989715,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 4.455
+    },
+    {
+      "case": "c03-split-av",
+      "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+          "sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+          "sha256": "912036525ab2f204ec470b416eaa0ff7b263cdcfb56d0e6c4dea952579563faa",
+          "duration_s": 10.0,
+          "bytes": 229339,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1cf14f35ef5304a2d54b4ed026e6e93a00e25754ed5b3ccc82026ba14226baa3",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a5677d9e861339024e14bddf84cd99e41748416ae71f96328d7be693586cbc10",
+                    "data_uri_characters": 305810,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "f8922a5ed630d12758476f7727625d682ae1b806587bef45c329e30b63c4b35b",
+      "wire_bytes": 733917,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 3.32
+    },
+    {
+      "case": "c00-split-av",
+      "hypothesis": "Digital silence with identical picture must not yield sound or speech events.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c00.wav",
+          "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+          "sha256": "912036525ab2f204ec470b416eaa0ff7b263cdcfb56d0e6c4dea952579563faa",
+          "duration_s": 10.0,
+          "bytes": 229339,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "f60e78304bdc925cd50a66e7b2fef90988848562b1ceefb1b2e15907b94a800d",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a5677d9e861339024e14bddf84cd99e41748416ae71f96328d7be693586cbc10",
+                    "data_uri_characters": 305810,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "1519f0ce23e0c86dd39f07727183bd7616f567eb1f55688a5e40e59a4fa99992",
+      "wire_bytes": 733873,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "8b2e347b-1d2a-45f8-b0c1-b6dd90925177",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-154f152d-78a9-4e16-8ef1-bb6fc16efd85",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\n  {\"sound\": \"A single, sustained electronic tone\", \"start_s\": 0.0, \"end_s\": 10.0},\n  {\"speech\": [], \"start_s\": 0.0, \"end_s\": 10.0},\n  {\"limitations\": [\"No speech or vocalizations are audible in the clip.\"]}\n]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031326,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1904,
+          "completion_tokens": 77,
+          "total_tokens": 1981
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 2.041409730911255,
+            "generation_tokens_per_second": 37.719032506829656,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 5.171
+    },
+    {
+      "case": "c04-speech",
+      "hypothesis": "Positive input control only; successful transcription does not establish sound recognition.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+          "sha256": "7900f43de63338d52497ff23b483c0f416a175e7f111d21b8492b786de268342",
+          "duration_s": 2.429375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "093f2ab5bc2d64f789a69816bd8811188d73b9675c6a79d2affee0005193fb64",
+                    "data_uri_characters": 103782,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "934525e3e24660e17b53523428e9ce0668116b5c850efa49d04124cb50d1460e",
+      "wire_bytes": 104133,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "007daaa5-4d76-42de-90ab-d587fd9d99fd",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-1433368c-5655-494b-a6db-cda83870ecc4",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "17 blue lanterns are beside the window.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031331,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 11,
+          "total_tokens": 70
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.32396912574768066,
+            "generation_tokens_per_second": 33.95385277721561,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.441
+    }
+  ]
+}

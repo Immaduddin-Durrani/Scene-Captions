@@ -1,0 +1,25 @@
+{
+  "dataset": "ESC-50, ESC-10 subset",
+  "revision": "33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6",
+  "license_url": "https://raw.githubusercontent.com/karolpiczak/ESC-50/33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6/LICENSE",
+  "license_file_sha256": "f6aec3a3283a2efdcbb1feff334adad7ab17c097bdec0cbb4eebdb9e16886074",
+  "subset_license": "CC BY 3.0; full ESC-50 dataset differs (CC BY-NC)",
+  "clips": [
+    {
+      "fixture": "1-100032-A-0.wav",
+      "original": "rose_bark.wav",
+      "author": "nfrae",
+      "original_license": "CC0",
+      "original_url": "https://freesound.org/people/nfrae/sounds/100032/"
+    },
+    {
+      "fixture": "1-17367-A-10.wav",
+      "original": "unlocki door to mod rain.wav",
+      "author": "cognito perceptu",
+      "original_license": "CC0",
+      "original_url": "https://freesound.org/people/cognito%20perceptu/sounds/17367/"
+    }
+  ],
+  "usage": "Local diagnostic derivatives; normalized to PCM16/16k mono, padded and shifted. Media remains ignored; not deployed.",
+  "csv_verified_against_pinned_revision": true
+}

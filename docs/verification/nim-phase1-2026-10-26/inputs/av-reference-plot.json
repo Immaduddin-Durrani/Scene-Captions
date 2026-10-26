@@ -1,0 +1,98 @@
+[
+  {
+    "case": "bbb-sdh-001-av-reference-plot",
+    "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-001\", \"target_interval_in_clip\": [2.499, 6.416], \"licensed_reference\": \"[SERENE MUSIC]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-av-context.mp4"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "mm_processor_kwargs": {
+        "use_audio_in_video": true
+      }
+    }
+  },
+  {
+    "case": "bbb-sdh-020-av-reference-plot",
+    "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-020\", \"target_interval_in_clip\": [5.0, 6.375], \"licensed_reference\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-av-context.mp4"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "mm_processor_kwargs": {
+        "use_audio_in_video": true
+      }
+    }
+  },
+  {
+    "case": "bbb-sdh-020-muted-reference-plot",
+    "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-020\", \"target_interval_in_clip\": [5.0, 6.375], \"licensed_reference\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-av-muted-context.mp4"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "mm_processor_kwargs": {
+        "use_audio_in_video": true
+      }
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "node_tests": {
+    "passed": 19,
+    "command": "npm test"
+  },
+  "offline_python_tests": {
+    "passed": 24,
+    "command": "~/runtimes/markitdown/.venv/bin/python -m unittest discover -s tests/offline",
+    "network": "mocked/offline; retry messages are simulated"
+  },
+  "typecheck": "passed",
+  "production_build": "passed after feedback-label correction",
+  "caption_validation": "87 BBB sound cues plus unchanged dialogue datasets valid",
+  "diff_check": "passed",
+  "design_detection": {
+    "initial_changed_components": [],
+    "feedback_component": [],
+    "limit": "No findings on selected TSX files; not an accessibility certification."
+  },
+  "visual_review": "Desktop, 390px mobile and 720px reflow inspected. Initial CSS-zoom simulation clipped content because media queries retained the original viewport; it is not a native browser zoom test. Native 200% zoom remains unverified.",
+  "audio_gate": "failed; no NIM track installed",
+  "deployment": "not performed"
+}

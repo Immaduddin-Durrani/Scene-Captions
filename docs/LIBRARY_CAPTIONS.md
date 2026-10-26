@@ -4,7 +4,7 @@ All three films are full-length local demos with their own credits. Nothing is g
 
 | Film | Available captions | Remaining limit |
 | --- | --- | --- |
-| Big Buck Bunny | 87 licensed non-speech source intervals, with source-anchored wording variants | Full listening/readability review before a study remains pending |
+| Big Buck Bunny | 87 AI-assisted generated drafts, with new local-model wording and recorded editorial corrections; licensed reference supplies event coverage and timestamps | Full listening/readability review before a study remains pending |
 | Sintel | 26 English dialogue subtitle cues extracted from the official 720p MKV | No verified non-speech track or approved personalized sound variants; official subtitle coverage does not include all sounds or end-credit lyrics |
 | Tears of Steel | 76 English subtitle cues from the official Blender download directory | No verified non-speech track or approved personalized sound variants |
 

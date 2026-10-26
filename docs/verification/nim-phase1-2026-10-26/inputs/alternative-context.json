@@ -1,0 +1,56 @@
+[
+  {
+    "case": "apple-super-vl-low",
+    "hypothesis": "Reasoning-mode follow-up to a capacity/internal error on apple: identical grounded visual/reference prompt, reasoning_effort low. Capacity error is not counted as semantic failure.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "low",
+      "max_tokens": 8192,
+      "temperature": 0.2,
+      "stream": false
+    }
+  },
+  {
+    "case": "apple-kimi-grounded",
+    "hypothesis": "Alternative large NIM VLM for reference-plus-visible-context detail generation; audio support is not claimed.",
+    "payload": {
+      "model": "moonshotai/kimi-k2.6",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false,
+      "chat_template_kwargs": {
+        "thinking": false
+      }
+    }
+  }
+]

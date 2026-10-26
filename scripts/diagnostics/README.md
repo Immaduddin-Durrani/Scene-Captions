@@ -28,3 +28,19 @@ The 24 October follow-up made ten actual requests in total, with one inconclusiv
 `local-sound-controls.py` uses the isolated `~/runtimes/scenecaptions-mlx` installation and a pinned, checksum-verified local Gemma 3n artifact. It permits at most six mono 16 kHz PCM WAV fixtures under eight seconds each, checks actual duration/hash, and requires a new report path. It sets offline/telemetry-disabled Hub mode, runs no server and cannot produce/install a film track. `--plain-observation` is a bounded prompt-specificity follow-up; it is not approval for a full-film run. The 24 October run failed non-speech controls. See [scope, setup and actual results](../../docs/verification/sound-captions-2026-10-24/README.md) before repeating anything. Runtime requirements/setup records live under `~/skill-library/setup-records`; no application dependency was added.
 
 `whisper-sound-controls.py` is the second bounded offline diagnostic, using the existing isolated audio runtime and pinned/checksummed Whisper sound-caption weights. It validates the same six short mono WAV inputs, requires a new verification report, passes an explicit audio attention mask, and rejects weight-loading mismatches. Both the initial and corrected six-case runs failed recognition; do not use `scripts/caption-audio.py` to process full films on the assumption that these controls passed. See the linked local-trial evidence.
+
+## 26 October exact-payload BBB experiments
+
+`phase1_nim.py` is a separate single-attempt, NVIDIA-only driver. It permits at most
+12 explicit jobs per report, bounds WAV/video fixtures, records exact parameter and
+media hashes, and redacts inline media. It cannot accept or install playback data.
+Both audio_url and input_audio were tested; schema acceptance did not establish
+non-speech quality. `scripts/generation/prepare-nim-context.py` prepares exact-hash
+BBB reference/silent-visual context jobs without inference. Use new manifest/report
+paths and inspect [saved results](../../docs/verification/nim-phase1-2026-10-26/README.md)
+before any authorized repeat. Raw failures remain evidence. Offline shape/redaction
+tests are in tests/offline/test_phase1_nim.py.
+
+# Caption-free counterfactual follow-up
+
+`nim-counterfactuals.py` prepares blinded natural-sound/shift/silence controls and assesses saved reports. Preparation and scoring make no API calls and cannot install captions. `phase1_nim.py` is the separate bounded NVIDIA request driver; invoking it does make API calls. Preserve frozen manifests/reports rather than overwriting them. See [the dated results and audit](../../docs/verification/nim-counterfactuals-2026-10-26/README.md) and [the research handoff prompt](../../docs/research/RESEARCH_HANDOFF_PROMPT.md).

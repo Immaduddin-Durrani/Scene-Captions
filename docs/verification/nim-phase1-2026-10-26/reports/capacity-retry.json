@@ -1,0 +1,201 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "54d22338225764e3941bd0e6cfd4369f0159c1685a0cd4e891be65b5ea9fdd41",
+  "calls": [
+    {
+      "case": "documented-silence-capacity-retry",
+      "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "02155405c336b8d5c6f684d18477947ccea629a88cae5fce28e69f1e7c4bd347",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "6a3059720bdc89f2ab5e53b345427fde7a25c841915ec7af778609b9215af5c0",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.649
+    },
+    {
+      "case": "documented-tone-capacity-retry",
+      "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+          "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "719acd6481eaf77cdea723ee1c8bfa11374c65284782c99c85fe9c4ed654f754",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "3c8e6d0127441f1e7c31f3189054346d9865ca882bba3d57909404763684bfb1",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "cb912e38-7d05-4991-8e46-5e2eaee9faa8",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-4af4dc4d-f5ac-4772-aa36-29dfe2badf6f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The sound of picking a pen from the table",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997506,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 10,
+          "total_tokens": 80
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.40474462509155273,
+            "generation_tokens_per_second": 24.706937115565182,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.662
+    },
+    {
+      "case": "documented-music-capacity-retry",
+      "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav",
+          "sha256": "ad909b108ce5ef6b8a8d2f5e8db1bcf4fd616caa25df4b331bd4ae51955bf22e",
+          "duration_s": 4.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "caffe70229c7a08a696082f0be4bb857cfb58925ec4322bcfba8df977052dfa7",
+                    "data_uri_characters": 170962,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "c65e136c499a53f890192ef6763e4cf7709193c49f3fd60a0e9349b1351cdbb5",
+      "wire_bytes": 171337,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (511/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.584
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "c997b545ddbb323b525c7ef9f73111a014f84262a6fb90908c114b773ad0c2cf",
+  "calls": [
+    {
+      "case": "apple-super-vl-low",
+      "hypothesis": "Reasoning-mode follow-up to a capacity/internal error on apple: identical grounded visual/reference prompt, reasoning_effort low. Capacity error is not counted as semantic failure.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4",
+          "sha256": "19d2bf84e700d50331acf8644bb3a582dacac9ea1d29d6ea366312633b40bfb3",
+          "duration_s": 9.5,
+          "bytes": 124315,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a6a6bf75e6baf3590065f036b858a083adc9883bfda3b13eafc80ca9b0bc78e4",
+                    "data_uri_characters": 165778,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "3270b5ca0da1f838144bf642a55976146b5e6fdb0c5e87c9969c50fecec2cfd1",
+      "wire_bytes": 167578,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "78403ffb-ee83-44e4-91c9-4e97752348e4",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-0b1386e3-3ff3-4845-9711-1477932553de",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-020\",\n  \"visual_facts\": [\"white rabbit\", \"red apple\", \"grass\"],\n  \"sound_facts\": [\"apple thud\"],\n  \"essential\": \"[Apple thuds]\",\n  \"balanced\": \"[An apple thuds on the grass]\",\n  \"detailed\": \"[A red apple thuds onto the grass near the rabbit]\",\n  \"added_details\": [\n    {\n      \"detail\": \"red apple\",\n      \"basis\": \"visible object color and type\"\n    },\n    {\n      \"detail\": \"onto the grass\",\n      \"basis\": \"visible surface\"\n    },\n    {\n      \"detail\": \"near the rabbit\",\n      \"basis\": \"visible proximity\"\n    }\n  ],\n  \"limitation\": \"\"\n}",
+              "role": "assistant",
+              "reasoning_content": "The user wants me to draft three detail levels of a sound caption for DHH viewers based on a specific video clip and reference caption.\n\n**1. Analyze the Input:**\n*   **Target Interval:** [4.0, 5.375] seconds.\n*   **Reference Caption:** \"[APPLE THUDS]\"\n*   **Visual Frames:** I need to look at frames around 4.0s to 5.375s.\n    *   Frame at 4.0s: A large white rabbit is holding something small (looks like an apple core or just hands clasped). There are two red apples on the grass near its feet.\n    *   Frame at 4.5s: The rabbit is looking down. One apple is clearly visible on the grass.\n    *   Frame at 5.0s: The rabbit is looking down at an apple on the grass.\n    *   Frame at 5.375s (implied between 5.0 and 6.0): The rabbit is standing near the apple.\n*   **Constraint Check:**\n    *   NO AUDIO in the video itself. Use the reference \"[APPLE THUDS]\" as the sound anchor.\n    *   Use SILENT pixels to identify visible actions/objects relating to that event.\n    *   MAY add visible action, identity, location to Detailed if actually visible at target time.\n    *   MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent.\n    *   Visual location allowed (e.g., object landing on grass). Auditory location not allowed.\n    *   If no supported extra detail exists, return equal levels and explain limitation.\n    *   Do not use background scenery as filler.\n    *   Max 100 characters each.\n    *   JSON format required.\n\n**2. Evaluate Visual Evidence for Interval [4.0, 5.375]:**\n*   **Object:** Red apple(s) on the grass.\n*   **Action:** The rabbit is standing near them. It looks like they have just landed or are sitting there. The reference says \"THUDS\", implying impact.\n*   **Identity:** White rabbit.\n*   **Location:** Grassy field.\n\n**3. Draft Captions:**\n\n*   **Essential:** Needs to retain all events in short wording.\n    *   Draft: [Apple thuds]\n    *   Wait, the prompt asks for \"Essential retains all events in short wording\". The reference is just \"[APPLE THUDS]\". So Essential should probably be very close to that but maybe slightly more descriptive if needed, but strictly short. Let's stick to the core event.\n    *   Draft: [Apple thuds]\n\n*   **Balanced:** Identifies sources and descriptive event verbs.\n    *   Source: Apple. Event: Thuds/Lands.\n    *   Draft: [An apple thuds on the grass] -> \"on the grass\" is visual location.\n    *   Character count: ~28 chars. Good.\n\n*   **Detailed:** Adds only relevant supported context.\n    *   Context: Visible at target time? Yes, the apple is on the grass near the rabbit.\n    *   Draft: [A red apple thuds onto the grass near the rabbit]\n    *   Character count: ~46 chars. Good.\n    *   Wait, is \"near the rabbit\" visible? Yes, the rabbit is right there.\n    *   Is \"red\" visible? Yes.\n    *   Is \"thuds\" audible? Yes, from reference.\n    *   Is \"onto\" visible? The apple is stationary on the grass in the frames provided (4.0-5.0), implying it landed. The reference says \"Thuds\", so the event is the impact/landing.\n\n**4. Refine based on constraints:**\n*   \"You MAY NOT add new sounds...\": I am using the reference sound.\n*   \"Visual location is allowed\": \"on the grass\", \"near the rabbit\".\n*   \"Do not invent detail\": Stick to what is seen.\n*   \"Maximum 100 characters each\".\n\n**Let's check the frames again carefully.**\n*   Frame 4.0s: Rabbit holding something? No, hands are clasped. Apples are on the ground.\n*   Frame 4.5s: Apples on ground.\n*   Frame 5.0s: Apple on ground.\n*   The reference is \"[APPLE THUDS]\". This implies the sound of the apple hitting the ground.\n*   Visuals show the apple *already* on the ground or just landing. In frame 4.0, there are two apples. In 4.5, one apple is prominent. In 5.0, one apple.\n*   Actually, looking closely at 4.0s, there are two orange/red round objects on the grass. At 4.5s, one is clearly an apple. At 5.0s, one apple.\n*   So, \"An apple thuds on the grass\" is accurate.\n\n**Drafting the JSON:**\n\n*   **cue_id:** bbb-sdh-020\n*   **visual_facts:** [\"white rabbit\", \"red apple\", \"grass\"]\n*   **sound_facts:** [\"apple thud\"] (from reference)\n*   **essential:** [Apple thuds] (13 chars)\n*   **balanced:** [An apple thuds on the grass] (28 chars)\n*   **detailed:** [A red apple thuds onto the grass near the rabbit] (49 chars)\n*   **added_details:**\n    *   {detail: \"red apple\", basis: \"visible object color and type\"}\n    *   {detail: \"onto the grass\", basis: \"visible surface\"}\n    *   {detail: \"near the rabbit\", basis: \"visible proximity\"}\n*   **limitation:** None really, unless I can't confirm the \"thud\" visually (which I can't, it's audio reference). But the prompt says use reference as anchor.\n\nWait, looking at the instruction: \"If no supported extra detail exists, return equal levels and explain the limitation.\"\nHere, supported extra detail *does* exist (red color, grass surface, rabbit proximity). So I can differentiate levels.\n\nLet's double check character counts.\nEssential: `[Apple thuds]` -> 14 chars.\nBalanced: `[An apple thuds on the grass]` -> 29 chars.\nDetailed: `[A red apple thuds onto the grass near the rabbit]` -> 50 chars.\n\nAll under 100.\n\nLet's refine the \"Essential\" level. Usually, Essential is just the sound event. `[Apple thuds]` fits.\nBalanced adds source/verb. `[An apple thuds on the grass]`.\nDetailed adds context. `[A red apple thuds onto the grass near the rabbit]`.\n\nOne detail: The prompt says \"Caption only the target reference interval, not surrounding events.\" The interval is 4.0-5.375. The visuals show the apple sitting there. The sound is the thud. This implies the landing happened right then or just before. The caption describes the sound event.\n\nLet's construct the JSON.\n\n```json\n{\n  \"cue_id\": \"bbb-sdh-020\",\n  \"visual_facts\": [\"white rabbit\", \"red apple\", \"grass\"],\n  \"sound_facts\": [\"apple thud\"],\n  \"essential\": \"[Apple thuds]\",\n  \"balanced\": \"[An apple thuds on the grass]\",\n  \"detailed\": \"[A red apple thuds onto the grass near the rabbit]\",\n  \"added_details\": [\n    {\"detail\": \"red apple\", \"basis\": \"visible object color and type\"},\n    {\"detail\": \"onto the grass\", \"basis\": \"visible surface\"},\n    {\"detail\": \"near the rabbit\", \"basis\": \"visible proximity\"}\n  ],\n  \"limitation\": \"\"\n}\n```\nWait, I need to check if \"limitation\" should be empty or null if none. The schema implies a string. I'll leave it empty or put \"None\". The prompt says \"If no supported extra detail exists, return equal levels and explain the limitation.\" Since details exist, limitation is likely N/A or empty. I will put an empty string or \"None\". Let's look at the example structure. It doesn't show an example with limitation filled. I'll put an empty string.\n\nRe-reading: \"You MAY add visible action, identity and location to Detailed if actually visible at the target time.\"\nIdentity: Rabbit. Location: Grass. Action: Thudding (implied by sound ref + visual of apple on ground).\n\nFinal check on constraints:\n- No speculative emotions: Checked.\n- No loudness/pitch: Checked.\n- Max 100 chars: Checked.\n- JSON format: Checked.\n\nOne small correction on visual facts: The frames show the rabbit holding something in 4.0s? No, hands are clasped. The apples are on the ground.\nIn frame 4.0, there are two apples. In 4.5, one apple is very clear.\nSo \"red apple\" is valid.\n\nLet's finalize the strings.\nEssential: `[Apple thuds]`\nBalanced: `[An apple thuds on the grass]`\nDetailed: `[A red apple thuds onto the grass near the rabbit]`\n\nWait, is \"thuds\" a verb or a sound description? In SDH, it's often treated as the sound event.\nThe reference is `[APPLE THUDS]`.\nSo Essential is basically the reference.\nBalanced expands it.\nDetailed expands further.\n\nOne detail: \"Do not invent detail to meet length.\" My lengths are fine.\n\nLet's write the response."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999290,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1923,
+          "completion_tokens": 2258,
+          "total_tokens": 4181,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 2086,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 44.27
+    },
+    {
+      "case": "apple-kimi-grounded",
+      "hypothesis": "Alternative large NIM VLM for reference-plus-visible-context detail generation; audio support is not claimed.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4",
+          "sha256": "19d2bf84e700d50331acf8644bb3a582dacac9ea1d29d6ea366312633b40bfb3",
+          "duration_s": 9.5,
+          "bytes": 124315,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a6a6bf75e6baf3590065f036b858a083adc9883bfda3b13eafc80ca9b0bc78e4",
+                    "data_uri_characters": 165778,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false,
+        "chat_template_kwargs": {
+          "thinking": false
+        }
+      },
+      "wire_sha256": "009f0fb7799d6d78df8dae2a75352d0aaea66c3a8bc664d5e4031915bc4f3369",
+      "wire_bytes": 167578,
+      "attempts": 1,
+      "http_status": 404,
+      "error": "{\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '[REDACTED ACCOUNT]'\"}",
+      "seconds": 0.781
+    }
+  ]
+}

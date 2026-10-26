@@ -1,0 +1,443 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "9d407abcecaace46932a98d1dae1b55e4bb675b3746ae7340e9f19cc4a06d1b0",
+  "calls": [
+    {
+      "case": "nonce-default",
+      "hypothesis": "NIM 1.7 documents explicit use_audio_in_video; test hosted support and whether visual context hallucinates sounds when the same picture is muted.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.mp4",
+          "sha256": "be209e9a2c76b1b96ce72d4f98eefcc6bb7b42cb7b22850fa7099d0746a89cd3",
+          "duration_s": 2.43,
+          "bytes": 24805,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 384,
+              "height": 216,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe any speech in this video exactly. If no speech is audible, answer NO SPEECH."
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "65346c23823740a2ec940e642886d073bc81b34048af6dadc09388d76cdee6ff",
+                    "data_uri_characters": 33098,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "c54cd1f119c3f268753f167f617854a29f2ff9b456c31be110744a411d5175e2",
+      "wire_bytes": 33488,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "0a0b9af1-1e3e-4088-b4d1-0a372bef48b5",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-cd5bb0fe-cd35-4975-be19-0927d53c6713",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "17 blue lanterns are beside the window.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997676,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 378,
+          "completion_tokens": 11,
+          "total_tokens": 389
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 12,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.344541072845459,
+            "generation_tokens_per_second": 31.926527392378436,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.492
+    },
+    {
+      "case": "nonce-enabled",
+      "hypothesis": "NIM 1.7 documents explicit use_audio_in_video; test hosted support and whether visual context hallucinates sounds when the same picture is muted.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.mp4",
+          "sha256": "be209e9a2c76b1b96ce72d4f98eefcc6bb7b42cb7b22850fa7099d0746a89cd3",
+          "duration_s": 2.43,
+          "bytes": 24805,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 384,
+              "height": 216,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe any speech in this video exactly. If no speech is audible, answer NO SPEECH."
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "65346c23823740a2ec940e642886d073bc81b34048af6dadc09388d76cdee6ff",
+                    "data_uri_characters": 33098,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "ad7ee4c3365df37fa7d96d0f941db53c3d1f51b4b92c349ca2fc0fb2e5e3d1dd",
+      "wire_bytes": 33541,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "42f6c57a-cc5c-4915-a29a-af113db81810",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-0fd9fb6b-32b0-4e40-8e39-2a1427b77d8e",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "17 blue lanterns are beside the window.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997678,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 378,
+          "completion_tokens": 11,
+          "total_tokens": 389
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 8,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.31285834312438965,
+            "generation_tokens_per_second": 35.15968246250828,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.283
+    },
+    {
+      "case": "apple-enabled",
+      "hypothesis": "NIM 1.7 documents explicit use_audio_in_video; test hosted support and whether visual context hallucinates sounds when the same picture is muted.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/apple.mp4",
+          "sha256": "c4d3978374337c0d4edbfb90f0651bff7f403a8d2f939173ab3b654b807098d1",
+          "duration_s": 3.0,
+          "bytes": 46328,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 384,
+              "height": 216,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe only the sounds you can actually hear in this clip. Separate audible observations from things merely visible. Do not invent sounds from visible actions."
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "935272ddfc0e9fcd1f58e3a670d08f0dc3dca27d17d3b9741f88160e4489ac9c",
+                    "data_uri_characters": 61794,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "5e8b1abc5a24241074ed451639d5d87a35611d1e140b0be8c896f986c7875d10",
+      "wire_bytes": 62311,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "59a187d6-e67b-4faa-bec7-3d2eae5cc22a",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-8a367fee-2771-48d6-9ef1-3d4d785c3ec7",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\nA loud pop is heard.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997680,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 548,
+          "completion_tokens": 8,
+          "total_tokens": 556
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.5620851516723633,
+            "generation_tokens_per_second": 14.232718968287498,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.002
+    },
+    {
+      "case": "apple-muted",
+      "hypothesis": "NIM 1.7 documents explicit use_audio_in_video; test hosted support and whether visual context hallucinates sounds when the same picture is muted.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/apple-muted.mp4",
+          "sha256": "40add4bbd824b60c8d007af9936823f23da159c7ee528663d006eb2d0e3b42e1",
+          "duration_s": 3.008,
+          "bytes": 24515,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 384,
+              "height": 216,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe only the sounds you can actually hear in this clip. Separate audible observations from things merely visible. Do not invent sounds from visible actions."
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "8243931fc764cfe6c75927b043f0ba7b96c5590af5274834f325bd7b33fa3e76",
+                    "data_uri_characters": 32710,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "dacd331d066eb44d8a6e54d0dc126509929007e3db915391c740205af402c2bc",
+      "wire_bytes": 33227,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "a5d5eaa7-26d5-4301-9cf4-5d1fdef823c1",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-1fabc529-7e69-4b0a-8671-0bf4b9e92a89",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\nA loud buzzing sound is heard.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997682,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 548,
+          "completion_tokens": 10,
+          "total_tokens": 558
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 9,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.3179595470428467,
+            "generation_tokens_per_second": 31.45054172143618,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.355
+    }
+  ]
+}

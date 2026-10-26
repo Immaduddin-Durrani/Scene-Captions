@@ -2,7 +2,9 @@
 
 Recorded 24 October 2026 from the model catalogue supplied by the team, with selected official model cards checked below. This is a shortlist for evaluation, not a claim that the models have passed our caption-quality checks or that this account can call every endpoint.
 
-**Current outcome:** bounded live tests have now run. No model-generated track has passed acceptance or replaced the source-caption demo. See [the fixes/diagnosis report](../audits/2026-10-24-fixes.md) and the results below. The initial shortlist is not an approved production selection.
+**Latest follow-up (26 October):** [42 new bounded requests](../verification/nim-phase1-2026-10-26/README.md) tested current documented audio/video shapes, embedded audio, reference/plot context and Super VL reasoning controls. Some source-assisted expansions worked; independent sound grounding remains failed. No full NIM track is accepted. The following 24 October shortlist/results are historical.
+
+**Historical outcome:** bounded live tests have now run. No model-generated track has passed acceptance or replaced the source-caption demo. See [the fixes/diagnosis report](../audits/2026-10-24-fixes.md) and the results below. The initial shortlist is not an approved production selection.
 
 ## Best fits for SceneCaptions
 

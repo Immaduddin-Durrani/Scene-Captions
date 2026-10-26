@@ -1,3 +1,7 @@
+# Current local source-assisted generation
+
+The 26 October Big Buck Bunny draft uses local MLX-LM/Qwen generation, with extensive recorded main-assistant source-text corrections. See [demo notes and reproducibility](../../docs/GENERATED_CAPTIONS_DEMO.md). `npm run setup:captions` installs only saved generation/editorial records; it makes no inference/network calls. Fresh `scripts/generate-local-source-captions.py` output stays under ignored artifacts and cannot install a track. The user's local-only constraint remains active; the historical NVIDIA commands below are not authorization to use a cloud model. No model pipeline is called while viewing.
+
 # Offline source-caption preparation
 
 These tools run locally before viewing. They are not web routes and are never imported by the player. Python standard-library code needs no additional package installation. Node and the existing project dependencies validate tracks; audio checks also need ffmpeg.
@@ -59,3 +63,12 @@ python scripts/prepare-caption-review.py --input data/captions/big-buck-bunny.js
 Checking rejects wrong hashes, changed/unknown/duplicate/missing cues, absent reviewer identity, unapproved checks and missing grid decisions. It reports documented self-reported review completion only; it never installs output, marks a track reviewed, certifies sound truth or claims independent/DHH review. Follow up with listening/readability and DHH review before study use. The current three-cue packet has **no completed human approvals**.
 
 Explicit non-stop model completions are now rejected even if JSON parses. Atomic wording rejects hidden additional bracket groups and empty labels; semantic errors still need review. See the [current investigation](../../docs/audits/2026-10-24-investigation.md) for all controls and uncertainty.
+
+
+26 October NIM follow-up: the latest request authorizes bounded NVIDIA preparation
+for BBB. [42-request evidence](../../docs/verification/nim-phase1-2026-10-26/README.md)
+records continued non-speech grounding failures and limited reference/visual-context
+success. `prepare-nim-context.py` only prepares silent clips/manifests for that
+separate source-assisted experiment; it does not listen to audio, clear a gate or
+install a track. A full NIM track is still unaccepted. Earlier local-only decisions
+remain historical; paid generation and publication still require fresh requests.

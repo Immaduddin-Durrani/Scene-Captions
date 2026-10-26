@@ -1,0 +1,291 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "d285f8d671a036c2ef99f5b942eae40420e866f1513150beca8db51a5791e31f",
+  "calls": [
+    {
+      "case": "bbb-sdh-001-grounded-pilot",
+      "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-context.mp4",
+          "sha256": "9dbdaab190ae66dbb923adeda3abe56033b4cff22e56a0c4a316165c0fd31f05",
+          "duration_s": 10.5,
+          "bytes": 218600,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-001\", \"reference_interval_seconds_in_clip\": [2.499, 6.416], \"reference_caption\": \"[SERENE MUSIC]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "30474e17678ae2f00e4717e574f86686ebf9b5104eab89b14ac30436ced7863b",
+                    "data_uri_characters": 291490,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "50e1579581850cdd8bea2637b7aae9eaf0660573e65d87d456e5f16735b21936",
+      "wire_bytes": 293100,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "89941653-c6e0-4b43-a008-b0d87faea358",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-0d04eced-4bc1-411a-a9e7-b9c86455b074",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-001\",\n  \"visual_facts\": [\"Pink clouds fill the sky above green trees and rolling hills.\"],\n  \"sound_facts\": [\"Serene music plays.\"],\n  \"essential\": \"[Serene music]\",\n  \"balanced\": \"[Serene music]\",\n  \"detailed\": \"[Serene music]\",\n  \"added_details\": [],\n  \"limitation\": \"Reference provides only music descriptor; no source, instruments, pitch, intensity, location, temporal pattern, or causal details are supported.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998988,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2019,
+          "completion_tokens": 120,
+          "total_tokens": 2139,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 3.433
+    },
+    {
+      "case": "bbb-sdh-002-grounded-pilot",
+      "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-002-context.mp4",
+          "sha256": "262bdc3ad0d5bc3c41bed8c4f23e1dea71fa3480ecc8d5e3d0b643053490bf87",
+          "duration_s": 10.0,
+          "bytes": 273920,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-002\", \"reference_interval_seconds_in_clip\": [4.0, 6.167], \"reference_caption\": \"[BROOK BABBLES]\\n[FLY BUZZES]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "e4ec9936f3fce25db54702453ba72491390ef542d5f59a90fce707cfd2dc737d",
+                    "data_uri_characters": 365250,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "99684b4a0478f54d1f15df86772c198bc02e2b5d2d1f4973f6d58cfa2a0baac1",
+      "wire_bytes": 366874,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "0dc64006-23a4-4c26-9e58-2682e42f5912",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-de265d16-53f8-407b-b5a5-27a234406a14",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"A small stream flows through green grass with flowers and lily pads.\",\n    \"A bird stands on a tree branch with its beak open.\"\n  ],\n  \"sound_facts\": [\n    \"BROOK BABBLES\",\n    \"FLY BUZZES\"\n  ],\n  \"essential\": \"[Brook babbles][Fly buzzes]\",\n  \"balanced\": \"[Brook babbles][Fly buzzes]\",\n  \"detailed\": \"[Brook babbles][Fly buzzes]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible source confirms brook babbling or fly buzzing; only reference audio supports these sounds.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998991,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1881,
+          "completion_tokens": 166,
+          "total_tokens": 2047,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 3.979
+    },
+    {
+      "case": "bbb-sdh-020-grounded-pilot",
+      "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4",
+          "sha256": "19d2bf84e700d50331acf8644bb3a582dacac9ea1d29d6ea366312633b40bfb3",
+          "duration_s": 9.5,
+          "bytes": 124315,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a6a6bf75e6baf3590065f036b858a083adc9883bfda3b13eafc80ca9b0bc78e4",
+                    "data_uri_characters": 165778,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "6508e3ff088226c70df224c629fbe2adb520c2d40d764e03b99b36d00c75763d",
+      "wire_bytes": 167385,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "93881574-ef37-4218-b11a-7e2ec45869bf",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-aeba8e11-d695-43fa-8c66-bbd94f477f5c",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-020\",\n  \"visual_facts\": [\"A white rabbit stands in a grassy field with trees and mountains in the background.\", \"An orange round object falls from above and lands on the grass near the rabbit's feet.\"],\n  \"sound_facts\": [\"APPLE THUDS\"],\n  \"essential\": \"[APPLE THUDS]\",\n  \"balanced\": \"[APPLE THUDS]\",\n  \"detailed\": \"[APPLE THUDS]\",\n  \"added_details\": [],\n  \"limitation\": \"The reference caption provides only the sound label; no additional sound attributes such as pitch, intensity, or duration are supported.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998995,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1858,
+          "completion_tokens": 148,
+          "total_tokens": 2006,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 7.113
+    }
+  ]
+}

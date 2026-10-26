@@ -1,0 +1,122 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "4a7b979884df65453e9465f1c908c41e7fed55ecf797516e62f6c08609d29ee5",
+  "calls": [
+    {
+      "case": "nemotron-3.5-super-vl-120b-a12b-authoring-anchors",
+      "hypothesis": "Explicit creator authoring anchors distinguish reference-word explanations from newly measured sound. Test informative detail, fact traceability and refusal to invent music attributes.",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Create source-assisted non-speech caption variants for a DHH-centered detail-level demo. Use ONLY supplied authoring facts. These are reference interpretations, not independent audio observations. No audio is provided. Do not invent loudness, measured frequency, spatial sound direction, instruments, tempo, emotion or actions. Lexical facts may explain the conventional meaning of a source word, but do not claim acoustic measurement. Do not turn an approximate sound-label meaning into an exact physical claim.\nFor each item return id, essential, balanced, detailed, and used_fact_ids (per level). Essential keeps the core sound/event in <=25 characters. Balanced identifies the source and action in <=40 characters. Detailed uses a relevant supplied explanation/context in <=70 characters. All captions must be single bracketed lines. No poetry, padding, extra sound events or exclamation marks. If the reference has only a mood/category and no additional facts, detailed should equal balanced, with limitation explaining why. The goal is meaningful information selection, not changing every word. Never claim a listening review or superiority. Output JSON {items:[{id,essential,balanced,detailed,used_fact_ids:{essential:[],balanced:[],detailed:[]},limitation}]}.\n[{\"id\": \"apple\", \"reference\": \"[APPLE THUDS]\", \"facts\": [{\"id\": \"source\", \"text\": \"An apple makes a thud.\", \"basis\": \"reference\"}, {\"id\": \"meaning\", \"text\": \"Thud conventionally denotes a dull impact sound. This is a lexical interpretation of the reference word, NOT an independently measured sound characteristic.\", \"basis\": \"reference-term meaning\"}, {\"id\": \"location\", \"text\": \"The apple is on grass beside the white rabbit.\", \"basis\": \"reviewed frame context\"}]}, {\"id\": \"bird\", \"reference\": \"[BIRD TWEETS]\", \"facts\": [{\"id\": \"source\", \"text\": \"A bird tweets.\", \"basis\": \"reference\"}, {\"id\": \"meaning\", \"text\": \"Tweet conventionally denotes a short high-pitched bird chirp. This is a lexical interpretation of the reference word, NOT measured pitch.\", \"basis\": \"reference-term meaning\"}]}, {\"id\": \"music\", \"reference\": \"[SERENE MUSIC]\", \"facts\": [{\"id\": \"source\", \"text\": \"Music with a calm/peaceful mood.\", \"basis\": \"reference\"}]}]"
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "4d24dc2277e00cc86416df3460198671c8e1dc7cf9c35768e9a3d0b97c285020",
+      "wire_bytes": 2491,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "f81eed1b-a63a-4a66-996d-00a6b9813159",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-4af3051c-0d1a-42ff-8a80-a7193b8a78f4",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"items\": [\n    {\n      \"id\": \"apple\",\n      \"essential\": \"[APPLE THUDS]\",\n      \"balanced\": \"[APPLE THUDS ON GRASS]\",\n      \"detailed\": \"[APPLE THUDS ON GRASS BESIDE WHITE RABBIT]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\", \"location\"],\n        \"detailed\": [\"source\", \"location\"]\n      },\n      \"limitation\": \"\"\n    },\n    {\n      \"id\": \"bird\",\n      \"essential\": \"[BIRD TWEETS]\",\n      \"balanced\": \"[BIRD TWEETS]\",\n      \"detailed\": \"[BIRD TWEETS]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\"],\n        \"detailed\": [\"source\"]\n      },\n      \"limitation\": \"Reference provides only mood/category with no additional facts, so detailed equals balanced.\"\n    },\n    {\n      \"id\": \"music\",\n      \"essential\": \"[SERENE MUSIC]\",\n      \"balanced\": \"[SERENE MUSIC]\",\n      \"detailed\": \"[SERENE MUSIC]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\"],\n        \"detailed\": [\"source\"]\n      },\n      \"limitation\": \"Reference provides only mood/category with no additional facts, so detailed equals balanced.\"\n    }\n  ]\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793006449,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 535,
+          "completion_tokens": 326,
+          "total_tokens": 861,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 5.384
+    },
+    {
+      "case": "nemotron-3-ultra-550b-a55b-authoring-anchors",
+      "hypothesis": "Explicit creator authoring anchors distinguish reference-word explanations from newly measured sound. Test informative detail, fact traceability and refusal to invent music attributes.",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Create source-assisted non-speech caption variants for a DHH-centered detail-level demo. Use ONLY supplied authoring facts. These are reference interpretations, not independent audio observations. No audio is provided. Do not invent loudness, measured frequency, spatial sound direction, instruments, tempo, emotion or actions. Lexical facts may explain the conventional meaning of a source word, but do not claim acoustic measurement. Do not turn an approximate sound-label meaning into an exact physical claim.\nFor each item return id, essential, balanced, detailed, and used_fact_ids (per level). Essential keeps the core sound/event in <=25 characters. Balanced identifies the source and action in <=40 characters. Detailed uses a relevant supplied explanation/context in <=70 characters. All captions must be single bracketed lines. No poetry, padding, extra sound events or exclamation marks. If the reference has only a mood/category and no additional facts, detailed should equal balanced, with limitation explaining why. The goal is meaningful information selection, not changing every word. Never claim a listening review or superiority. Output JSON {items:[{id,essential,balanced,detailed,used_fact_ids:{essential:[],balanced:[],detailed:[]},limitation}]}.\n[{\"id\": \"apple\", \"reference\": \"[APPLE THUDS]\", \"facts\": [{\"id\": \"source\", \"text\": \"An apple makes a thud.\", \"basis\": \"reference\"}, {\"id\": \"meaning\", \"text\": \"Thud conventionally denotes a dull impact sound. This is a lexical interpretation of the reference word, NOT an independently measured sound characteristic.\", \"basis\": \"reference-term meaning\"}, {\"id\": \"location\", \"text\": \"The apple is on grass beside the white rabbit.\", \"basis\": \"reviewed frame context\"}]}, {\"id\": \"bird\", \"reference\": \"[BIRD TWEETS]\", \"facts\": [{\"id\": \"source\", \"text\": \"A bird tweets.\", \"basis\": \"reference\"}, {\"id\": \"meaning\", \"text\": \"Tweet conventionally denotes a short high-pitched bird chirp. This is a lexical interpretation of the reference word, NOT measured pitch.\", \"basis\": \"reference-term meaning\"}]}, {\"id\": \"music\", \"reference\": \"[SERENE MUSIC]\", \"facts\": [{\"id\": \"source\", \"text\": \"Music with a calm/peaceful mood.\", \"basis\": \"reference\"}]}]"
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "0c44e503d1b7247e5b8e329ee1df9efc0e593dca2dfaccbb4b7d3c818a4eec2e",
+      "wire_bytes": 2486,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "952ec146-efb0-4c1c-87dc-78e529cc7a7c",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-2daa9305-0023-4322-b483-8affb557e41b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"items\": [\n    {\n      \"id\": \"apple\",\n      \"essential\": \"[APPLE THUDS]\",\n      \"balanced\": \"[Apple thuds on grass]\",\n      \"detailed\": \"[Apple thuds on grass beside rabbit]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\", \"location\"],\n        \"detailed\": [\"source\", \"location\"]\n      },\n      \"limitation\": \"\"\n    },\n    {\n      \"id\": \"bird\",\n      \"essential\": \"[BIRD TWEETS]\",\n      \"balanced\": \"[Bird tweets]\",\n      \"detailed\": \"[Bird tweets]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\"],\n        \"detailed\": [\"source\"]\n      },\n      \"limitation\": \"No contextual facts beyond source; detailed equals balanced.\"\n    },\n    {\n      \"id\": \"music\",\n      \"essential\": \"[SERENE MUSIC]\",\n      \"balanced\": \"[Serene music plays]\",\n      \"detailed\": \"[Serene music plays]\",\n      \"used_fact_ids\": {\n        \"essential\": [\"source\"],\n        \"balanced\": [\"source\"],\n        \"detailed\": [\"source\"]\n      },\n      \"limitation\": \"Only mood/category fact supplied; detailed equals balanced.\"\n    }\n  ]\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793006454,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 535,
+          "completion_tokens": 290,
+          "total_tokens": 825
+        }
+      },
+      "seconds": 4.407
+    }
+  ]
+}

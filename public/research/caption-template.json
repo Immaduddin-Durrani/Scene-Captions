@@ -16,24 +16,24 @@
       "cue_id": "cue-001",
       "start_s": 2.499,
       "end_s": 6.416,
-      "original_text": "[SERENE MUSIC]",
+      "original_text": "[Calm music]",
       "scene_context": "Replace every cue field and variant using your exact soundtrack.",
       "sound_key": "serene-music",
       "scene_load": "quiet",
       "grid": {
-        "1-1": "[music]",
-        "1-2": "[Music plays]",
-        "1-3": "[A musical passage]",
-        "2-1": "[serene music]",
-        "2-2": "[Serene music plays]",
-        "2-3": "[A serene musical passage]",
-        "3-1": "[Music with a serene character]",
-        "3-2": "[Music plays with a serene character]",
-        "3-3": "[A musical passage with a serene character]"
+        "1-1": "[Music]",
+        "1-2": "[Music.]",
+        "1-3": "[Music!]",
+        "2-1": "[Calm music]",
+        "2-2": "[Calm music.]",
+        "2-3": "[Calm music!]",
+        "3-1": "[Calm music plays]",
+        "3-2": "[Calm music plays.]",
+        "3-3": "[Calm music plays!]"
       },
       "scene_load_basis": "cue-density",
       "representations": {
-        "plain": "[serene music]"
+        "plain": "[Music]"
       }
     }
   ]

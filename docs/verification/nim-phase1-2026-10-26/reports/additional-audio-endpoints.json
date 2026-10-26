@@ -1,0 +1,104 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "9faedd68f3fdcea7f87f3f7452c7b8c361f2cc55f5a259de32b7a27ceaeb2f4c",
+  "calls": [
+    {
+      "case": "phi-4-multimodal-instruct-availability-speech",
+      "hypothesis": "Official audio-capable endpoint outside the earlier account chat-model listing: check actual access/conditioning before non-speech tests. Phi uses its documented model-specific route, Gemma chat route.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+          "sha256": "7900f43de63338d52497ff23b483c0f416a175e7f111d21b8492b786de268342",
+          "duration_s": 2.429375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/microsoft/phi-4-multimodal-instruct",
+      "payload": {
+        "model": "microsoft/phi-4-multimodal-instruct",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "093f2ab5bc2d64f789a69816bd8811188d73b9675c6a79d2affee0005193fb64",
+                    "data_uri_characters": 103782,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 1024,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "cd2afe9ad1c5379981c8f152f693b40a321c5f51e0b61effd343b8eed54d6e8f",
+      "wire_bytes": 104059,
+      "attempts": 1,
+      "http_status": 404,
+      "error": "404 page not found\n",
+      "seconds": 0.935
+    },
+    {
+      "case": "gemma-3n-e4b-it-availability-speech",
+      "hypothesis": "Official audio-capable endpoint outside the earlier account chat-model listing: check actual access/conditioning before non-speech tests. Phi uses its documented model-specific route, Gemma chat route.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+          "sha256": "7900f43de63338d52497ff23b483c0f416a175e7f111d21b8492b786de268342",
+          "duration_s": 2.429375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "google/gemma-3n-e4b-it",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "093f2ab5bc2d64f789a69816bd8811188d73b9675c6a79d2affee0005193fb64",
+                    "data_uri_characters": 103782,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 1024,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "2b56ea5922c3a23fa7a0bf965968cdb2179103589110700046c01fb918b5e4c7",
+      "wire_bytes": 104046,
+      "attempts": 1,
+      "http_status": 410,
+      "error": "{\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'google/gemma-3n-e4b-it' has reached its end of life on 2026-07-27T00:00:00Z and is no longer available.\"}\n",
+      "seconds": 0.733
+    }
+  ]
+}

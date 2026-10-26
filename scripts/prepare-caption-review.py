@@ -38,7 +38,8 @@ def main():
         subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-ss',str(start),'-i',str(args.video.resolve()),'-t',str(end-start),'-vn','-ac','1','-ar','16000','-y',str(directory/filename)],check=True)
         clips.append({'cue_id':cue['cue_id'],'file':filename,'clip_start_s':start,'clip_end_s':end,'source_interval_in_clip':[cue['start_s']-start,cue['end_s']-start]})
         variants = ''.join('<dt>'+html.escape(key)+'</dt><dd>'+html.escape(text)+'</dd>' for key,text in cue['grid'].items())
-        panels.append(f'<section><h2>{html.escape(cue["cue_id"])}</h2><p>Source interval {cue["start_s"]:.3f}–{cue["end_s"]:.3f}s. Local clip starts {start:.3f}s into the film.</p><audio controls preload="none" src="{filename}"></audio><details><summary>Compare source and all wording variants after listening</summary><pre>{html.escape(cue["original_text"])}</pre><dl>{variants}</dl></details></section>')
+        reference = ('<h3>Licensed reference</h3><pre>'+html.escape(cue['reference_text'])+'</pre><h3>Generated fixed draft</h3>') if cue.get('reference_text') else '<h3>Fixed source caption</h3>'
+        panels.append(f'<section><h2>{html.escape(cue["cue_id"])}</h2><p>Source interval {cue["start_s"]:.3f}–{cue["end_s"]:.3f}s. Local clip starts {start:.3f}s into the film.</p><audio controls preload="none" src="{filename}"></audio><details><summary>Compare reference, fixed caption and variants after listening</summary>{reference}<pre>{html.escape(cue["original_text"])}</pre><dl>{variants}</dl></details></section>')
     receipt = review_receipt(track, caption_hash, video_hash, selected)
     (directory/'review.json').write_text(json.dumps(receipt,indent=2)+'\n')
     (directory/'clips.json').write_text(json.dumps(clips,indent=2)+'\n')

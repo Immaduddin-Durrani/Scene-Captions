@@ -1,0 +1,437 @@
+{
+  "inference_requests": 42,
+  "http_status_counts": {
+    "200": 27,
+    "404": 1,
+    "503": 9,
+    "None": 1,
+    "500": 4
+  },
+  "rows": [
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/alternative-context.json",
+      "case": "apple-super-vl-low",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 44.27,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-020\",\n  \"visual_facts\": [\"white rabbit\", \"red apple\", \"grass\"],\n  \"sound_facts\": [\"apple thud\"],\n  \"essential\": \"[Apple thuds]\",\n  \"balanced\": \"[An apple thuds on the grass]\",\n  \"detailed\": \"[A red apple thuds onto the grass near the rabbit]\",\n  \"added_details\": [\n    {\n      \"detail\": \"red apple\",\n      \"basis\": \"visible object color and type\"\n    },\n    {\n      \"detail\": \"onto the grass\",\n      \"basis\": \"visible surface\"\n    },\n    {\n      \"detail\": \"near the rabbit\",\n      \"basis\": \"visible proximity\"\n    }\n  ],\n  \"limitation\": \"\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/alternative-context.json",
+      "case": "apple-kimi-grounded",
+      "model": "moonshotai/kimi-k2.6",
+      "http_status": 404,
+      "finish_reason": null,
+      "seconds": 0.781,
+      "content": null,
+      "error": "{\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function '23d4f03a-b8a6-4adb-a183-7daa083a09cc': Not found for account '[REDACTED ACCOUNT]'\"}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/av-reference-plot.json",
+      "case": "bbb-sdh-001-av-reference-plot",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 5.754,
+      "content": "\n```json\n{\n  \"audible_observations\": [\n    \"Serene music plays throughout the interval.\"\n  ],\n  \"reference_only\": [\n    \"[SERENE MUSIC]\"\n  ],\n  \"visible_facts\": [\n    \"A large rabbit is bullied by small forest creatures and eventually fights back.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}\n```",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/av-reference-plot.json",
+      "case": "bbb-sdh-020-av-reference-plot",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 5.56,
+      "content": "\n```json\n{\n  \"audible_observations\": [\n    \"A soft thud sound is heard as an apple lands on the grass.\"\n  ],\n  \"reference_only\": [\n    \"[APPLE THUDS]\"\n  ],\n  \"visible_facts\": [\n    \"A large white rabbit stands in a grassy field.\",\n    \"A red apple is on the ground near the rabbit's feet.\",\n    \"The rabbit looks down at the apple and then picks it up.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}\n```",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/av-reference-plot.json",
+      "case": "bbb-sdh-020-muted-reference-plot",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 5.872,
+      "content": "\n{\n  \"audible_observations\": [\n    \"A distinct thud sound occurs as an apple hits the ground.\"\n  ],\n  \"reference_only\": [\n    \"[APPLE THUDS]\"\n  ],\n  \"visible_facts\": [\n    \"A large white rabbit stands in a grassy field.\",\n    \"An orange-red apple is on the ground near the rabbit's feet.\",\n    \"The rabbit looks down at the apple and then picks it up.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/capacity-retry.json",
+      "case": "documented-silence-capacity-retry",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.649,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/capacity-retry.json",
+      "case": "documented-tone-capacity-retry",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.662,
+      "content": "The sound of picking a pen from the table",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/capacity-retry.json",
+      "case": "documented-music-capacity-retry",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.584,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (511/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-pilot-v3.json",
+      "case": "bbb-sdh-002-v3",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 20.421,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"A brook flows through a grassy field\",\n    \"Flowers and lily pads line the water\"\n  ],\n  \"sound_facts\": [\n    \"BROOK BABBLES\",\n    \"FLY BUZZES\"\n  ],\n  \"essential\": \"[Brook babbles, fly buzzes]\",\n  \"balanced\": \"[A brook babbles]\\n[A fly buzzes]\",\n  \"detailed\": \"[A brook babbles along a grassy bank]\\n[A fly buzzes]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Grassy bank\",\n      \"basis\": \"Visible vegetation lining the brook\"\n    },\n    {\n      \"detail\": \"Flowing water\",\n      \"basis\": \"Visible stream movement\"\n    }\n  ],\n  \"limitation\": \"Audio is unavailable; sound facts rely solely on the reference caption. Visual confirmation of the fly is absent.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-pilot-v3.json",
+      "case": "bbb-sdh-011-v3",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 13.831,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-011\",\n  \"visual_facts\": [\n    \"A large dark rabbit sleeps curled up inside a grassy burrow\",\n    \"The camera zooms into the burrow entrance\"\n  ],\n  \"sound_facts\": [\n    \"[BUNNY SNORES]\"\n  ],\n  \"essential\": \"[Bunny snores]\",\n  \"balanced\": \"[A bunny snores]\",\n  \"detailed\": \"[A bunny snores while sleeping in a grassy burrow]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Bunny sleeping in burrow\",\n      \"basis\": \"Visible in frames 5.0s-6.0s\"\n    },\n    {\n      \"detail\": \"Camera zooms into hole\",\n      \"basis\": \"Visible camera movement from 5.0s to 5.5s\"\n    }\n  ],\n  \"limitation\": \"Audio evidence is unavailable; sound characteristics like pitch or intensity cannot be verified.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-pilot-v3.json",
+      "case": "bbb-sdh-039-v3",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": null,
+      "finish_reason": null,
+      "seconds": 180.647,
+      "content": null,
+      "error": "The read operation timed out"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-pilot-v3.json",
+      "case": "bbb-sdh-061-v3",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 500,
+      "finish_reason": null,
+      "seconds": 1.84,
+      "content": null,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-pilot-v3.json",
+      "case": "bbb-sdh-083-v3",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 500,
+      "finish_reason": null,
+      "seconds": 1.724,
+      "content": null,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-v3-no-reasoning.json",
+      "case": "bbb-sdh-011-v3-no-reasoning",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 6.39,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-011\",\n  \"visual_facts\": [\n    \"A large rabbit sleeps curled inside a grassy burrow entrance\",\n    \"Rocks sit beside the burrow opening\",\n    \"Green grass surrounds the burrow\"\n  ],\n  \"sound_facts\": [\n    \"[BUNNY SNORES]\"\n  ],\n  \"essential\": \"[Snoring]\",\n  \"balanced\": \"[A bunny snores]\",\n  \"detailed\": \"[A bunny snores while sleeping in a grassy burrow]\",\n  \"added_details\": [\n    {\n      \"detail\": \"sleeping in a grassy burrow\",\n      \"basis\": \"visible rabbit curled inside burrow entrance\"\n    }\n  ],\n  \"limitation\": \"No audio evidence exists; snoring details come solely from the reference caption.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-v3-no-reasoning.json",
+      "case": "bbb-sdh-039-v3-no-reasoning",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 7.622,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-039\",\n  \"visual_facts\": [\n    \"A squirrel climbs a tree trunk\",\n    \"A fox and a mouse sit beside the squirrel\",\n    \"A green fruit flies through the air\",\n    \"The fruit strikes a large rabbit on the head\",\n    \"The rabbit stands in a grassy field\"\n  ],\n  \"sound_facts\": [\n    \"[NUTS WHOOSHING]\"\n  ],\n  \"essential\": \"[Nuts whooshing]\",\n  \"balanced\": \"[Nuts whooshing through the air]\",\n  \"detailed\": \"[Nuts whooshing through the air toward the rabbit]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Nuts flying through the air\",\n      \"basis\": \"Reference caption identifies nuts whooshing; visible green fruit moves through the air and hits the rabbit\"\n    }\n  ],\n  \"limitation\": \"No audio is available; instrument, rhythm, pitch, and intensity cannot be determined from visuals alone.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-v3-no-reasoning.json",
+      "case": "bbb-sdh-061-v3-no-reasoning",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 5.675,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-061\",\n  \"visual_facts\": [\n    \"A squirrel holds two acorns while swinging on a rope\",\n    \"An acorn falls through the air against a bright sky\",\n    \"A gray mouse sits on the ground holding an acorn\",\n    \"The mouse drops the acorn onto the dirt\"\n  ],\n  \"sound_facts\": [\n    \"[THUD]\",\n    \"[SQUIRREL SQUEAKS IN PAIN]\"\n  ],\n  \"essential\": \"[Thud] [Squirrel squeaks]\",\n  \"balanced\": \"[A thud] [A squirrel squeaks in pain]\",\n  \"detailed\": \"[A thud] [A squirrel squeaks in pain]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible impact or squirrel reaction occurs in the target interval; visual facts show falling and dropped acorns only, so balanced and detailed levels match essential due to thin evidence.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/context-v3-no-reasoning.json",
+      "case": "bbb-sdh-083-v3-no-reasoning",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 500,
+      "finish_reason": null,
+      "seconds": 1.289,
+      "content": null,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "documented-speech",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.303,
+      "content": "17 blue lanterns are beside the window.",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "documented-silence",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.357,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "documented-tone",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.544,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (891/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "documented-music",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.599,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "documented-overlap",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.092,
+      "content": "The sound of playing a piano",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/documented-baseline.json",
+      "case": "super-vl-text-control",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.109,
+      "content": "{\n  \"essential\": \"Piano melody plays.\",\n  \"balanced\": \"A quiet piano melody plays with sustained strings.\",\n  \"detailed\": \"A quiet piano melody plays while sustained strings accompany it, and the music gradually fades out.\",\n  \"evidence_ids\": [\"f1\", \"f2\", \"f3\"]\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-context-v2.json",
+      "case": "bbb-sdh-001-context-v2",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 6.217,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-001\",\n  \"visual_facts\": [\n    \"pink clouds\",\n    \"green trees\",\n    \"green hills\"\n  ],\n  \"sound_facts\": [\n    \"serene music\"\n  ],\n  \"essential\": \"[Serene music]\",\n  \"balanced\": \"[Serene music]\",\n  \"detailed\": \"[Serene music]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible actions or objects relate to the music; no supported extra detail exists.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-context-v2.json",
+      "case": "bbb-sdh-002-context-v2",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 11.933,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"stream flows through grass\",\n    \"flowers line bank\",\n    \"lily pads float on water\"\n  ],\n  \"sound_facts\": [\n    \"brook babbling\",\n    \"fly buzzing\"\n  ],\n  \"essential\": \"[Brook babbles] [Fly buzzes]\",\n  \"balanced\": \"Brook babbles; fly buzzes\",\n  \"detailed\": \"Brook babbles; fly buzzes\",\n  \"added_details\": [],\n  \"limitation\": \"No visible brook, fly, or sound-related action appears in the target interval; no supported extra detail can be added.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-context-v2.json",
+      "case": "bbb-sdh-020-context-v2",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 500,
+      "finish_reason": null,
+      "seconds": 1.066,
+      "content": null,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-pilot.json",
+      "case": "bbb-sdh-001-grounded-pilot",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 3.433,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-001\",\n  \"visual_facts\": [\"Pink clouds fill the sky above green trees and rolling hills.\"],\n  \"sound_facts\": [\"Serene music plays.\"],\n  \"essential\": \"[Serene music]\",\n  \"balanced\": \"[Serene music]\",\n  \"detailed\": \"[Serene music]\",\n  \"added_details\": [],\n  \"limitation\": \"Reference provides only music descriptor; no source, instruments, pitch, intensity, location, temporal pattern, or causal details are supported.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-pilot.json",
+      "case": "bbb-sdh-002-grounded-pilot",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 3.979,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"A small stream flows through green grass with flowers and lily pads.\",\n    \"A bird stands on a tree branch with its beak open.\"\n  ],\n  \"sound_facts\": [\n    \"BROOK BABBLES\",\n    \"FLY BUZZES\"\n  ],\n  \"essential\": \"[Brook babbles][Fly buzzes]\",\n  \"balanced\": \"[Brook babbles][Fly buzzes]\",\n  \"detailed\": \"[Brook babbles][Fly buzzes]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible source confirms brook babbling or fly buzzing; only reference audio supports these sounds.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/grounded-pilot.json",
+      "case": "bbb-sdh-020-grounded-pilot",
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 7.113,
+      "content": "{\n  \"cue_id\": \"bbb-sdh-020\",\n  \"visual_facts\": [\"A white rabbit stands in a grassy field with trees and mountains in the background.\", \"An orange round object falls from above and lands on the grass near the rabbit's feet.\"],\n  \"sound_facts\": [\"APPLE THUDS\"],\n  \"essential\": \"[APPLE THUDS]\",\n  \"balanced\": \"[APPLE THUDS]\",\n  \"detailed\": \"[APPLE THUDS]\",\n  \"added_details\": [],\n  \"limitation\": \"The reference caption provides only the sound label; no additional sound attributes such as pitch, intensity, or duration are supported.\"\n}",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/input-audio-controls.json",
+      "case": "input-audio-speech",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.718,
+      "content": "\nUm",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/input-audio-controls.json",
+      "case": "input-audio-silence",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 6.067,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (17/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/input-audio-controls.json",
+      "case": "input-audio-tone",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.837,
+      "content": "\nA person is speaking in a quiet room.",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "silence-strict",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.097,
+      "content": "tone",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "tone-strict",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.888,
+      "content": "SILENCE",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "apple-strict",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.792,
+      "content": "tone",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "silence-reasoning",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.597,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "tone-reasoning",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.635,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/strict-controls.json",
+      "case": "apple-reasoning",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.525,
+      "content": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/video-audio-controls.json",
+      "case": "nonce-default",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.492,
+      "content": "17 blue lanterns are beside the window.",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/video-audio-controls.json",
+      "case": "nonce-enabled",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.283,
+      "content": "17 blue lanterns are beside the window.",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/video-audio-controls.json",
+      "case": "apple-enabled",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.002,
+      "content": "\nA loud pop is heard.",
+      "error": null
+    },
+    {
+      "report": "docs/verification/nim-phase1-2026-10-26/reports/video-audio-controls.json",
+      "case": "apple-muted",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.355,
+      "content": "\nA loud buzzing sound is heard.",
+      "error": null
+    }
+  ],
+  "notes": [
+    "Transport/capacity failures are inconclusive for model accuracy.",
+    "Success is not approval. No new full-film track accepted or installed.",
+    "All reported calls are single attempts; retry reports are additional explicit requests."
+  ]
+}

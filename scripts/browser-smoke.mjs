@@ -9,18 +9,18 @@ async (page) => {
   await page.setViewportSize({ width: 1440, height: 1100 });
   await page.waitForFunction(() => document.querySelector('video').readyState >= 1);
   const track = await (await page.request.get(base + '/research/demo-captions.json')).json();
-  assert(track.generated_with.kind === 'sourced', 'Playback must use the licensed source track');
+  assert(track.generated_with.kind === 'source-assisted', 'Playback must use the generated source-assisted draft');
   assert(await page.locator('.cue-row').count() === 87, 'All source intervals installed');
-  await page.getByText('Sourced sound captions.', { exact: true }).waitFor();
+  await page.getByText('AI-assisted generated captions.', { exact: true }).waitFor();
   assert(await page.getByLabel('Expressiveness', { exact: false }).isEnabled(), 'Expression variants are usable');
   assert(await page.getByLabel('Follow cue density', { exact: true }).isEnabled(), 'Cue-density adaptation available');
-  await page.getByRole('button', { name: 'Original baseline', exact: true }).click();
-  // Verify every interval renders its exact stored original after an actual media seek.
+  await page.getByRole('button', { name: 'Reference baseline', exact: true }).click();
+  // Verify the baseline renders fetched wording after actual media seeks.
   for (const cue of track.cues) {
     await page.evaluate(seconds => { document.querySelector('video').currentTime = seconds; }, (cue.start_s + cue.end_s) / 2);
-    await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, cue.original_text);
+    await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, cue.reference_text);
   }
-  results.push('all 87 source intervals render after real video seeks, including multiline effects and the final cue');
+  results.push('all 87 fetched captions render at their exact reference intervals after real video seeks, including multiline effects and the final cue');
   await page.evaluate(() => { document.querySelector('video').currentTime = 78; });
   await page.waitForFunction(() => Math.abs(document.querySelector('video').currentTime - 78) < 0.1 && !document.querySelector('.caption-overlay'));
   await page.getByText('Next sound caption at 1:23', { exact: true }).waitFor();
@@ -28,7 +28,7 @@ async (page) => {
   await page.getByRole('button', { name: 'Personalized', exact: true }).click();
   await page.getByLabel('Follow cue density', { exact: true }).uncheck();
   await page.getByRole('button', { name: 'Apply preferences', exact: true }).click();
-  const apple = track.cues.find(c => c.original_text === '[APPLE THUDS]');
+  const apple = track.cues.find(c => c.reference_text === '[APPLE THUDS]');
   const appleIndex = track.cues.indexOf(apple);
   await page.locator('.cue-row').nth(appleIndex).click();
   await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, apple.grid['2-2']);
@@ -36,9 +36,9 @@ async (page) => {
   assert(await page.locator('.caption-lines').textContent() === apple.grid['2-2'], 'Preview does not mutate applied caption');
   await page.getByRole('button', { name: 'Apply preferences', exact: true }).click();
   await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, apple.grid['3-3']);
-  await page.getByRole('button', { name: 'Show original', exact: true }).click();
-  assert(await page.locator('.caption-lines').textContent() === apple.original_text, 'Original overrides personalization');
-  await page.getByRole('button', { name: 'Original on', exact: true }).click();
+  await page.getByRole('button', { name: 'Show reference', exact: true }).click();
+  assert(await page.locator('.caption-lines').textContent() === apple.reference_text, 'Fetched reference overrides personalization');
+  await page.getByRole('button', { name: 'Reference on', exact: true }).click();
   await page.getByRole('button', { name: 'Essential', exact: true }).click();
   await page.getByRole('button', { name: 'Apply preferences', exact: true }).click();
   await page.waitForFunction(expected => document.querySelector('.caption-lines')?.textContent === expected, apple.grid['1-1']);
@@ -69,7 +69,7 @@ async (page) => {
   await page.waitForFunction(() => document.querySelector('video').src.startsWith('blob:') && document.querySelector('video').readyState >= 1);
   assert(await page.locator('.cue-row').count() === 0, 'New video clears sample captions');
   assert(await page.getByLabel('Level of detail', { exact: false }).isDisabled(), 'No controls without a matching track');
-  assert(await page.getByText('Original mode uses fixed captions.', { exact: false }).count() === 0, 'No misleading baseline notice without captions');
+  assert(await page.getByText('Baseline mode uses fixed captions.', { exact: false }).count() === 0, 'No misleading baseline notice without captions');
   await page.getByLabel('Choose caption JSON', { exact: true }).setInputFiles('public/research/caption-template.json');
   await page.getByRole('alert').filter({ hasText: 'does not match' }).waitFor();
   assert(await page.locator('.caption-overlay').count() === 0, 'Duration mismatch suppresses overlay');

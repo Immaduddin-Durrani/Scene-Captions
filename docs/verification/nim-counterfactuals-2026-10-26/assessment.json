@@ -1,0 +1,79 @@
+{
+  "inference_calls": 8,
+  "rows": [
+    {
+      "case": "c01-audio",
+      "http_status": null,
+      "seconds": 181.025,
+      "status": "inconclusive-provider-or-transport",
+      "error": "The read operation timed out"
+    },
+    {
+      "case": "c02-audio",
+      "http_status": 503,
+      "seconds": 2.538,
+      "status": "inconclusive-provider-or-transport",
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "case": "c03-audio",
+      "http_status": 200,
+      "seconds": 5.256,
+      "status": "invalid-or-incomplete-output",
+      "error": "Expected exactly events, speech and limitations arrays"
+    },
+    {
+      "case": "c01-split-av",
+      "http_status": 200,
+      "seconds": 9.456,
+      "status": "invalid-or-incomplete-output",
+      "error": "Expected exactly events, speech and limitations arrays"
+    },
+    {
+      "case": "c02-split-av",
+      "http_status": 200,
+      "seconds": 4.455,
+      "status": "invalid-or-incomplete-output",
+      "error": "Expected exactly events, speech and limitations arrays"
+    },
+    {
+      "case": "c03-split-av",
+      "http_status": 503,
+      "seconds": 3.32,
+      "status": "inconclusive-provider-or-transport",
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "case": "c00-split-av",
+      "http_status": 200,
+      "seconds": 5.171,
+      "status": "invalid-or-incomplete-output",
+      "error": "Expected exactly events, speech and limitations arrays"
+    },
+    {
+      "case": "c04-speech",
+      "http_status": 200,
+      "seconds": 2.441,
+      "status": "speech-positive-control",
+      "matches_expected": true,
+      "text": "17 blue lanterns are beside the window."
+    }
+  ],
+  "timing_shift_checks": [
+    {
+      "mode": "audio",
+      "observed_onset_shift_s": null,
+      "expected_shift_s": 3,
+      "pass": null
+    },
+    {
+      "mode": "split-av",
+      "observed_onset_shift_s": null,
+      "expected_shift_s": 3,
+      "pass": null
+    }
+  ],
+  "automatic_installation": false,
+  "model_gate_cleared": false,
+  "interpretation": "Keyword recognition and timestamp bounds are narrow checks, not proof of correct full descriptions. Inspect raw responses; no aggregate film-quality claim."
+}

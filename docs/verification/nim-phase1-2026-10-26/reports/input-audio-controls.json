@@ -1,0 +1,243 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "e35619cee16b182bedbc9a6d36ae072f354dd808f60e20ecc71f3654527dde98",
+  "calls": [
+    {
+      "case": "input-audio-speech",
+      "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+          "sha256": "7900f43de63338d52497ff23b483c0f416a175e7f111d21b8492b786de268342",
+          "duration_s": 2.429375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "input_audio"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              },
+              {
+                "type": "input_audio",
+                "input_audio": {
+                  "data": {
+                    "base64_sha256": "4385a95351aa479cc8edc482cfa4e69cb20253f12db37f97279e217ddaa8c264",
+                    "characters": 103760
+                  },
+                  "format": "wav"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "dab5a7d150c943efebbbdbeb0c2fdb715a27f9f3ced56917be0da7bfd1a2a291",
+      "wire_bytes": 104133,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "0554306d-2bcc-4798-be1f-2fcb400c35c0",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-df2fd3e0-f631-4044-aba7-3a3376fda410",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\nUm",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999134,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 25,
+          "completion_tokens": 3,
+          "total_tokens": 28
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.16386795043945312,
+            "generation_tokens_per_second": 18.30742370277254,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.718
+    },
+    {
+      "case": "input-audio-silence",
+      "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "input_audio"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "input_audio",
+                "input_audio": {
+                  "data": {
+                    "base64_sha256": "cf73d5acf32f6ae1f77efeca0db4ca3d8ef9adcccc6b99b88620b2699e6ac530",
+                    "characters": 128060
+                  },
+                  "format": "wav"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "4416f0f357d96ceb608317293fc1fd9ed29115ac56570ed03799038c35f82ad0",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (17/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 6.067
+    },
+    {
+      "case": "input-audio-tone",
+      "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+          "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "input_audio"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "input_audio",
+                "input_audio": {
+                  "data": {
+                    "base64_sha256": "8afd84d8c4de3490fea38de5936c90c0de257ac38ded270befe644041f24d2d0",
+                    "characters": 128060
+                  },
+                  "format": "wav"
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5fcfa74c1afeda6ab63cc38587f039adf58205e65509176749e92cd0e9314c65",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "503e02a7-abb8-411f-a8b8-a54661c891d3",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-85354386-4dc3-4961-8840-18a56927fd9b",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\nA person is speaking in a quiet room.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999142,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 29,
+          "completion_tokens": 11,
+          "total_tokens": 40
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.22446465492248535,
+            "generation_tokens_per_second": 49.00548820837135,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.837
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "calls": [
+    {
+      "report": "run-01",
+      "case": "c01-audio",
+      "http_status": null,
+      "seconds": 181.025,
+      "finish_reason": null
+    },
+    {
+      "report": "run-01",
+      "case": "c02-audio",
+      "http_status": 503,
+      "seconds": 2.538,
+      "finish_reason": null
+    },
+    {
+      "report": "run-01",
+      "case": "c03-audio",
+      "http_status": 200,
+      "seconds": 5.256,
+      "finish_reason": "stop"
+    },
+    {
+      "report": "run-01",
+      "case": "c01-split-av",
+      "http_status": 200,
+      "seconds": 9.456,
+      "finish_reason": "stop"
+    },
+    {
+      "report": "run-01",
+      "case": "c02-split-av",
+      "http_status": 200,
+      "seconds": 4.455,
+      "finish_reason": "stop"
+    },
+    {
+      "report": "run-01",
+      "case": "c03-split-av",
+      "http_status": 503,
+      "seconds": 3.32,
+      "finish_reason": null
+    },
+    {
+      "report": "run-01",
+      "case": "c00-split-av",
+      "http_status": 200,
+      "seconds": 5.171,
+      "finish_reason": "stop"
+    },
+    {
+      "report": "run-01",
+      "case": "c04-speech",
+      "http_status": 200,
+      "seconds": 2.441,
+      "finish_reason": "stop"
+    },
+    {
+      "report": "simple-followup",
+      "case": "c01-audio-simple",
+      "http_status": 503,
+      "seconds": 2.694,
+      "finish_reason": null
+    },
+    {
+      "report": "simple-followup",
+      "case": "c03-audio-simple",
+      "http_status": 503,
+      "seconds": 2.05,
+      "finish_reason": null
+    },
+    {
+      "report": "thinking-followup",
+      "case": "c01-audio-simple-thinking",
+      "http_status": 503,
+      "seconds": 2.417,
+      "finish_reason": null
+    },
+    {
+      "report": "thinking-followup",
+      "case": "c03-audio-simple-thinking",
+      "http_status": 200,
+      "seconds": 8.266,
+      "finish_reason": "stop"
+    }
+  ],
+  "http_outcomes": {
+    "timeout": 1,
+    "503": 5,
+    "200": 6
+  },
+  "manifest_hashes_match": true,
+  "fixture_hash_checks": [
+    {
+      "report": "run-01",
+      "case": "c01-audio",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c02-audio",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c02.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c03-audio",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c01-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c01-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c02-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c02.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c02-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c03-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c03-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c00-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c00.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c00-split-av",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4",
+      "hash_matches": true
+    },
+    {
+      "report": "run-01",
+      "case": "c04-speech",
+      "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "simple-followup",
+      "case": "c01-audio-simple",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "simple-followup",
+      "case": "c03-audio-simple",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "thinking-followup",
+      "case": "c01-audio-simple-thinking",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+      "hash_matches": true
+    },
+    {
+      "report": "thinking-followup",
+      "case": "c03-audio-simple-thinking",
+      "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+      "hash_matches": true
+    }
+  ],
+  "audio_only_and_split_av_same_pcm": true,
+  "picture_streams": [
+    {
+      "codec_type": "video"
+    }
+  ],
+  "accepted_track": false,
+  "gate": {
+    "status": "failed",
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "authentication": "Replacement key successfully invoked model",
+    "reason": "Model hallucinated audible sounds on digitally silent 5-second WAV in both thinking and non-thinking modes. Non-speech labels and timestamps are not validated.",
+    "control_files": [
+      "nim-silence-probe.json",
+      "nim-silence-thinking-control.json",
+      "nim-beep-thinking-control.json"
+    ],
+    "film_probe": "nim-ten-clip-probe.json",
+    "full_film_generation": false,
+    "installed_candidates": false,
+    "previous_illustrative_track": "withdrawn",
+    "local_classifier": "AST analysis completed on full soundtrack; no non-music class reached 0.85 in saved windows. Not an adequate replacement for the requested sound-effect captions."
+  },
+  "limits": "Hashes establish local fixture/report consistency, not what the opaque hosted backend internally decoded."
+}

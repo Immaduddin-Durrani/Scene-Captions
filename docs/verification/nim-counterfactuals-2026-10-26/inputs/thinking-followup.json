@@ -1,0 +1,60 @@
+[
+  {
+    "case": "c01-audio-simple-thinking",
+    "hypothesis": "Change only enable_thinking false to true on the same simple natural-sound prompt. No forced reasoning budget; max_tokens stays 4096.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c01.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    }
+  },
+  {
+    "case": "c03-audio-simple-thinking",
+    "hypothesis": "Change only enable_thinking false to true on the same simple natural-sound prompt. No forced reasoning budget; max_tokens stays 4096.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c03.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    }
+  }
+]

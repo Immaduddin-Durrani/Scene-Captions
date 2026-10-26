@@ -21,11 +21,11 @@ export function VideoPlayer({ source, data, profile, condition, showOriginal, on
       <video ref={video} src={source} poster={source.startsWith("blob:") ? undefined : poster} preload="metadata" playsInline
         aria-label={`${data?.title || "Your video"} video player`} aria-describedby="video-description" tabIndex={0}
         {...playback.events} />
-      <div className="video-topline"><span className="screen-label"><span className="live-dot" />{condition === "baseline" ? "Original captions" : "Your caption experience"}</span><span className="video-quality">{data?.annotation_status === "draft" ? "DEMO" : "LOCAL VIDEO"}</span></div>
+      <div className="video-topline"><span className="screen-label"><span className="live-dot" />{condition === "baseline" || showOriginal ? (data?.generated_with.kind === "source-assisted" ? "Fetched reference captions" : "Original captions") : "Your caption experience"}</span><span className="video-quality">{data?.annotation_status === "draft" ? "DEMO" : "LOCAL VIDEO"}</span></div>
       {!playing && !error && <button className="big-play" onClick={() => void toggle()} disabled={!ready} aria-label={ready ? "Play video" : "Loading video"}><Icon name="play" size={30} /></button>}
       {waiting && playing && <span className="buffering" role="status">Buffering video…</span>}
       <CaptionOverlay active={display.active} cues={display.cues} profile={profile} dialogue={display.mismatch ? [] : data?.dialogue?.filter(cue => cue.start_s <= time && time < cue.end_s)} />
-      <PlayerControls playback={playback} baseline={condition === "baseline"} hasCaptions={!!data?.cues.length} showOriginal={showOriginal} onOriginal={onOriginal} />
+      <PlayerControls playback={playback} baseline={condition === "baseline"} hasCaptions={!!data?.cues.length} showOriginal={showOriginal} onOriginal={onOriginal} generatedBaseline={data?.generated_with.kind === "source-assisted"} />
     </div>
     {previewProfile && <div className="caption-preview-notice" role="status"><span>Preview only · your saved settings have not changed.</span><button className="text-button" onClick={onPreviewEnd}>Return to saved settings</button></div>}
     {error && <p role="alert" className="inline-error">{error}</p>}

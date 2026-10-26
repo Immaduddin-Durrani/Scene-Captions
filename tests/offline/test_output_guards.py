@@ -7,6 +7,13 @@ from nim_client import parse_json
 from generation.variants import GRID_KEYS, validate_item
 
 class OutputGuardTests(unittest.TestCase):
+    def test_missing_finish_reason_is_not_a_completed_generation(self):
+        for reason in [None, 'length', 'content_filter', 'tool_calls']:
+            response = {'choices':[{'finish_reason':reason,'message':{'content':'{"items": []}'}}]}
+            with self.subTest(reason=reason), self.assertRaisesRegex(ValueError,'completion'):
+                parse_json(response)
+        self.assertEqual(parse_json({'choices':[{'finish_reason':'stop','message':{'content':'{"items": []}'}}]}), {'items':[]})
+
     def test_truncated_completion_is_not_a_valid_candidate_even_if_json_parses(self):
         response = {'choices': [{'finish_reason': 'length', 'message': {'content': '{"items": []}'}}]}
         with self.assertRaisesRegex(ValueError, 'completion'):

@@ -1,0 +1,411 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "4fe5ff5b9286eeb003ba97beaae9872fae5413428442b5c0be03213174ae9116",
+  "calls": [
+    {
+      "case": "documented-speech",
+      "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+          "sha256": "7900f43de63338d52497ff23b483c0f416a175e7f111d21b8492b786de268342",
+          "duration_s": 2.429375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "093f2ab5bc2d64f789a69816bd8811188d73b9675c6a79d2affee0005193fb64",
+                    "data_uri_characters": 103782,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "c8e06be45b7d9432aaf9bc897edc7bac52d9476b71e15eb2ab5ae19610bd34ed",
+      "wire_bytes": 104133,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "28683aa1-2332-43b4-9b5d-7003aa62916b",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-723f69cd-d981-4d27-acf8-d3a62892cf33",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "17 blue lanterns are beside the window.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997399,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 11,
+          "total_tokens": 70
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.3746364116668701,
+            "generation_tokens_per_second": 29.361801622692493,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.303
+    },
+    {
+      "case": "documented-silence",
+      "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "02155405c336b8d5c6f684d18477947ccea629a88cae5fce28e69f1e7c4bd347",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "6a3059720bdc89f2ab5e53b345427fde7a25c841915ec7af778609b9215af5c0",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.357
+    },
+    {
+      "case": "documented-tone",
+      "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+          "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "719acd6481eaf77cdea723ee1c8bfa11374c65284782c99c85fe9c4ed654f754",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "3c8e6d0127441f1e7c31f3189054346d9865ca882bba3d57909404763684bfb1",
+      "wire_bytes": 128457,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (891/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.544
+    },
+    {
+      "case": "documented-music",
+      "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav",
+          "sha256": "ad909b108ce5ef6b8a8d2f5e8db1bcf4fd616caa25df4b331bd4ae51955bf22e",
+          "duration_s": 4.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "caffe70229c7a08a696082f0be4bb857cfb58925ec4322bcfba8df977052dfa7",
+                    "data_uri_characters": 170962,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "c65e136c499a53f890192ef6763e4cf7709193c49f3fd60a0e9349b1351cdbb5",
+      "wire_bytes": 171337,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.599
+    },
+    {
+      "case": "documented-overlap",
+      "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/2033f2c1ba98bd91c722.wav",
+          "sha256": "4211506a95f985844b1afc542b399a6840e3253483074a72006dc787348e128b",
+          "duration_s": 3.5,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Describe the audible contents of this recording in one concise sentence."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "3ec48df54a2e3a094cd5e5b9ac51075072bf22a64f702dbd7e2174f2f4f7869f",
+                    "data_uri_characters": 149630,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "62881435e7faedd9624582da2d2a4d37f64e197b9819d547ec96fb6a951ce134",
+      "wire_bytes": 150005,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "767711e2-bb42-4eb4-8d78-37af1c1f8732",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-fc5b04e3-0122-403e-b6fe-726dda06137f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The sound of playing a piano",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997408,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 76,
+          "completion_tokens": 7,
+          "total_tokens": 83
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.27123475074768066,
+            "generation_tokens_per_second": 25.807902492965702,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.092
+    },
+    {
+      "case": "super-vl-text-control",
+      "hypothesis": "Use Super VL documented reasoning_effort=none rather than the older shared enable_thinking setting; test reference-fidelity on a clearly synthetic example.",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You write accurate non-speech captions for Deaf viewers. Only use the supplied facts. Return JSON with essential, balanced, detailed and evidence_ids; do not add a sound, mood or instrument."
+          },
+          {
+            "role": "user",
+            "content": "Synthetic test, not a movie: f1=a quiet piano melody; f2=sustained strings accompany it; f3=the music gradually fades out. Write three progressively informative captions; essential<=35 characters, balanced<=80, detailed<=140."
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false,
+        "reasoning_effort": "none"
+      },
+      "wire_sha256": "0414dd5fac45e274da18a2eb08ae4731848675f8af31e91302d9d0f6c89e223b",
+      "wire_bytes": 633,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "27b85efd-8e2c-48bf-b033-dc944c96c6cc",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-ff4b9591-1935-4453-93f9-88c67499916f",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"essential\": \"Piano melody plays.\",\n  \"balanced\": \"A quiet piano melody plays with sustained strings.\",\n  \"detailed\": \"A quiet piano melody plays while sustained strings accompany it, and the music gradually fades out.\",\n  \"evidence_ids\": [\"f1\", \"f2\", \"f3\"]\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792997409,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 115,
+          "completion_tokens": 70,
+          "total_tokens": 185,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 1.109
+    }
+  ]
+}

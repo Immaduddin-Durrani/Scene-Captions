@@ -1,0 +1,250 @@
+[
+  {
+    "case": "c01-audio",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c01.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c02-audio",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c02.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c03-audio",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c03.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c01-split-av",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c01.wav"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c02-split-av",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c02.wav"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c03-split-av",
+    "hypothesis": "Same audio/prompt with and without identical silent video. Names and known times are withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c03.wav"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c00-split-av",
+    "hypothesis": "Digital silence with identical picture must not yield sound or speech events.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/c00.wav"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-counterfactuals-2026-10-26/picture.mp4"
+            },
+            {
+              "type": "text",
+              "text": "Describe only sounds actually audible in the supplied media, with their\napproximate start and end times. If a video and separate audio are supplied, they\nshare the same zero-second origin; the separate audio is the sound evidence.\nDo not infer sounds from visible actions or reconstruct a known story.\nInclude music, sound effects and non-word vocalizations in events. Put spoken words\nin speech instead. Do not invent uncertain sources, instruments or acoustic traits.\nIf nothing is audible, return empty events and speech arrays. If timing is uncertain,\nuse null for both times instead of guessing. Times are relative to the media clip.\nReturn JSON with exactly: events (array), speech (array), limitations (array).\nEach event: sound (short description), start_s (number or null), end_s (number or null).\nEach speech item: text (verbatim), start_s (number or null), end_s (number or null).\nAt most 20 events. No markdown. Clip duration: 10 seconds."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "c04-speech",
+    "hypothesis": "Positive input control only; successful transcription does not establish sound recognition.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-phase1-2026-10-26/nonce.wav"
+            },
+            {
+              "type": "text",
+              "text": "Transcribe the speech in this recording exactly."
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

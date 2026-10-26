@@ -1,0 +1,12 @@
+{
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+  "model_card_license": "apache-2.0",
+  "weight_bytes": 868628559,
+  "weight_sha256": "0979f33d1bc58afcf696d13f57977644e7b11a6f0eec3e631d8e9463d18c0717",
+  "mlx_lm_version": "0.32.2",
+  "runtime": "~/runtimes/scenecaptions-text/.venv",
+  "inference_offline": true,
+  "telemetry_disabled": true,
+  "cloud_inference_calls": 0
+}

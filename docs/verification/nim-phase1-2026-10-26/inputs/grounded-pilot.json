@@ -1,0 +1,80 @@
+[
+  {
+    "case": "bbb-sdh-001-grounded-pilot",
+    "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-001\", \"reference_interval_seconds_in_clip\": [2.499, 6.416], \"reference_caption\": \"[SERENE MUSIC]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  },
+  {
+    "case": "bbb-sdh-002-grounded-pilot",
+    "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-002\", \"reference_interval_seconds_in_clip\": [4.0, 6.167], \"reference_caption\": \"[BROOK BABBLES]\\n[FLY BUZZES]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-002-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  },
+  {
+    "case": "bbb-sdh-020-grounded-pilot",
+    "hypothesis": "SuperVL can add visible source/context to source-supported sound descriptions without claiming to hear a silent video. An unsupported rich level must be refused, not fabricated.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are drafting non-speech captions for Deaf and hard-of-hearing viewers of an animated film. This supplied clip is SILENT. You cannot infer sound from the pixels. The licensed reference below is the sole allowed SOUND evidence. Use the visible clip only to identify the associated visible source/action, and label it visual evidence. Plot synopsis is intentionally omitted in this pilot to measure grounding. No invented instruments, pitch, intensity, location, emotions, temporal patterns or causal claims. If the evidence does not permit richer detail, explicitly say so and repeat wording rather than pad it. Preserve every reference sound event at every level, including concurrent events. Essential: shortest clear event wording. Balanced: name the supported source and sound. Detailed: add only supported scene relation or concurrent event information, never subjective poetry. Caption maximum 100 characters; [] around each sound caption. Return JSON with keys cue_id, visual_facts (array), sound_facts (array copied from reference in plain language), essential, balanced, detailed, added_details (array of {detail,basis:reference|visible}), limitation. Focus ONLY on reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  }
+]

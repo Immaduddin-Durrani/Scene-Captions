@@ -12,7 +12,7 @@
     "validate:captions": "node --experimental-strip-types scripts/validate-captions.ts",
     "setup:demo": "node scripts/fetch-demo.mjs",
     "export:plan": "node --experimental-strip-types scripts/export-plan.ts",
-    "setup:captions": "node --experimental-strip-types scripts/import-demo-captions.ts"
+    "setup:captions": "node --experimental-strip-types scripts/install-generated-captions.ts"
   },
   "engines": {
     "node": ">=22.13.0"

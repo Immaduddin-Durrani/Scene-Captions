@@ -1,0 +1,48 @@
+[
+  {
+    "command": [
+      "/Users/hamza/runtimes/fallow/node_modules/.bin/fallow",
+      "health",
+      "--format",
+      "json",
+      "--quiet",
+      "--explain",
+      "--no-type-aware"
+    ],
+    "exit_code": 1,
+    "valid_json": true,
+    "kind": "health",
+    "seconds": 0.443
+  },
+  {
+    "command": [
+      "/Users/hamza/runtimes/fallow/node_modules/.bin/fallow",
+      "architecture",
+      "--format",
+      "json",
+      "--quiet",
+      "--explain",
+      "--no-type-aware"
+    ],
+    "exit_code": 0,
+    "valid_json": true,
+    "kind": "architecture",
+    "seconds": 0.166
+  },
+  {
+    "command": [
+      "/Users/hamza/runtimes/fallow/node_modules/.bin/fallow",
+      "dead-code",
+      "--format",
+      "json",
+      "--quiet",
+      "--explain",
+      "--no-type-aware",
+      "--unused-files"
+    ],
+    "exit_code": 1,
+    "valid_json": true,
+    "kind": "dead-code",
+    "seconds": 0.13
+  }
+]

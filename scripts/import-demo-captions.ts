@@ -4,6 +4,9 @@ import { execFileSync } from "node:child_process";
 import { parseSrt } from "../src/lib/srt.ts";
 import { videoSchema } from "../src/lib/captions.ts";
 
+// The default setup now rebuilds the generated track; do not silently restore fetched playback.
+if (!process.argv.includes("--restore-reference")) throw new Error("This historical importer replaces generated playback with fetched captions. Use npm run setup:captions to rebuild generated captions, or explicitly pass --restore-reference for a rollback.");
+
 // Offline, deterministic import of a pinned, CC BY 3.0 caption source.
 const root = "data/sources/big-buck-captions/";
 const provenance = JSON.parse(readFileSync(root + "source.json", "utf8"));

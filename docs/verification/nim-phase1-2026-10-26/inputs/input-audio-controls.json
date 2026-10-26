@@ -1,0 +1,92 @@
+[
+  {
+    "case": "input-audio-speech",
+    "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Transcribe the speech in this recording exactly."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+              "wire_type": "input_audio"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "input-audio-silence",
+    "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+              "wire_type": "input_audio"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "input-audio-tone",
+    "hypothesis": "Change only audio_url to hosted-schema input_audio with identical WAV bytes, prompt and sampling. Check alternate content shape as a possible serving-path issue; no sound priors.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+              "wire_type": "input_audio"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

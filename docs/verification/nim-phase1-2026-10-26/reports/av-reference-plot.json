@@ -1,0 +1,336 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "832e32acd26cdb21d6428c0db6dd1b8d96a9e88b38eb3e2fb11e514619de0e79",
+  "calls": [
+    {
+      "case": "bbb-sdh-001-av-reference-plot",
+      "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-av-context.mp4",
+          "sha256": "b7e28a2598ce2ed026853560a12d339a6c2532d67351f4d6afbb2fde8fa83a01",
+          "duration_s": 11.5,
+          "bytes": 336086,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-001\", \"target_interval_in_clip\": [2.499, 6.416], \"licensed_reference\": \"[SERENE MUSIC]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "4da0d217a9efc17d3d0028cc074a739df069db857fa8fe1910039027f074aebf",
+                    "data_uri_characters": 448138,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "8a7dafd81c5a981fd39f7b8015850b94460be5b331a958389853d710be4e7503",
+      "wire_bytes": 449551,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "dbc02b1a-ef3b-49e2-a9bd-be6d83063257",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-1ae4e61a-9628-414f-aa4c-beb77694969c",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n```json\n{\n  \"audible_observations\": [\n    \"Serene music plays throughout the interval.\"\n  ],\n  \"reference_only\": [\n    \"[SERENE MUSIC]\"\n  ],\n  \"visible_facts\": [\n    \"A large rabbit is bullied by small forest creatures and eventually fights back.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}\n```",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999216,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2261,
+          "completion_tokens": 94,
+          "total_tokens": 2355
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 3.307734489440918,
+            "generation_tokens_per_second": 28.418242244070843,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 5.754
+    },
+    {
+      "case": "bbb-sdh-020-av-reference-plot",
+      "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-av-context.mp4",
+          "sha256": "bb6a2e1674cde491cc0fbf522c9aa6f40539fde1ed9840f67002cba39e918dbe",
+          "duration_s": 11.5,
+          "bytes": 274953,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-020\", \"target_interval_in_clip\": [5.0, 6.375], \"licensed_reference\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "b8961022af7aaf7fdae4777c693ef8aaa6a4adc001b3f60d018928e6e20fdb09",
+                    "data_uri_characters": 366626,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "e585668ae3fecb5e050b9cbcc56774a4b0c189857b7d0ae8a685d8f69bb4af2c",
+      "wire_bytes": 368036,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "915aee0d-3dd0-45e3-a154-1d273fc4d70c",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-890455cb-001d-4cca-87cd-87d4e4a80f19",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n```json\n{\n  \"audible_observations\": [\n    \"A soft thud sound is heard as an apple lands on the grass.\"\n  ],\n  \"reference_only\": [\n    \"[APPLE THUDS]\"\n  ],\n  \"visible_facts\": [\n    \"A large white rabbit stands in a grassy field.\",\n    \"A red apple is on the ground near the rabbit's feet.\",\n    \"The rabbit looks down at the apple and then picks it up.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}\n```",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999222,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2258,
+          "completion_tokens": 127,
+          "total_tokens": 2385
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 3.5157530307769775,
+            "generation_tokens_per_second": 36.12312892522292,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 5.56
+    },
+    {
+      "case": "bbb-sdh-020-muted-reference-plot",
+      "hypothesis": "CapTune-inspired \u00b15-second AV context and a separately labelled plot/reference may enable richer grounded detail. Compare with prior audio-only/visual-only results; a reference-biased response is not independent audio evidence.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-av-muted-context.mp4",
+          "sha256": "c01c73ba7ffbb113d2518f86bcd9bd8e0547ebdaf6748b3a24711ad8cf6915db",
+          "duration_s": 11.5,
+          "bytes": 192036,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            },
+            {
+              "codec_type": "audio",
+              "codec_name": "aac",
+              "width": null,
+              "height": null,
+              "sample_rate": "16000",
+              "channels": 1
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Prepare sound captions for Deaf and hard-of-hearing viewers. Listen first. The reference and plot below are CONTEXT, not proof of sound. Report audible observations separately from reference-only facts and visible facts. If silent, state silence even if the reference suggests an event. Do not invent sounds from visible action or plot. Do not assign unverified acoustic adjectives. Return JSON {audible_observations:[],reference_only:[],visible_facts:[],essential,balanced,detailed,uncertain:[]}. Preserve only sound events you can support; levels should add evidence-backed detail, not just punctuation. Captions <=100 characters. Target only the stated interval; surrounding seconds provide context.\nPlot context (paraphrased from Blender's official description at https://studio.blender.org/projects/big-buck-bunny/): A large rabbit is bullied by small forest creatures and eventually fights back. Plot does not establish any sound.\n{\"cue_id\": \"bbb-sdh-020\", \"target_interval_in_clip\": [5.0, 6.375], \"licensed_reference\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "f8bcc82b4fafbdb77faacce793dfa272a7af796b5329087dc10602216f1c494c",
+                    "data_uri_characters": 256070,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "mm_processor_kwargs": {
+          "use_audio_in_video": true
+        }
+      },
+      "wire_sha256": "083230a7f954f6d7de11570a1276b82db88b71986c74201d4bacaa20721a8609",
+      "wire_bytes": 257480,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "ba251573-f19c-412e-afa2-c1c31df98c07",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-933b2f8c-2f3e-4046-a1b4-f8657d2d8041",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n{\n  \"audible_observations\": [\n    \"A distinct thud sound occurs as an apple hits the ground.\"\n  ],\n  \"reference_only\": [\n    \"[APPLE THUDS]\"\n  ],\n  \"visible_facts\": [\n    \"A large white rabbit stands in a grassy field.\",\n    \"An orange-red apple is on the ground near the rabbit's feet.\",\n    \"The rabbit looks down at the apple and then picks it up.\"\n  ],\n  \"essential\": [],\n  \"balanced\": [],\n  \"detailed\": [],\n  \"uncertain\": []\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999228,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2258,
+          "completion_tokens": 122,
+          "total_tokens": 2380
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 3.546355724334717,
+            "generation_tokens_per_second": 34.401512280014366,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 5.872
+    }
+  ]
+}

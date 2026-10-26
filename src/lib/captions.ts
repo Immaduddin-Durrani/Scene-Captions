@@ -11,6 +11,7 @@ const gridSchema = z.record(z.string(), z.string().trim().min(1).max(280)).refin
 const cueSchema = z.object({
   cue_id: z.string().min(1).max(80), start_s: z.number().finite().nonnegative(),
   end_s: z.number().finite().positive(), original_text: z.string().trim().min(1).max(280),
+  reference_text: z.string().trim().min(1).max(280).optional(),
   scene_context: z.string().max(500), sound_key: z.string().min(1).max(80),
   scene_load: z.enum(["quiet", "balanced", "dense"]), grid: gridSchema,
   scene_load_basis: z.enum(["manual", "cue-density"]).optional(),
@@ -28,8 +29,11 @@ export const videoSchema = z.object({
   annotation_status: z.enum(["draft", "reviewed"]),
   generated_with: z.object({
     method: z.string().min(1), prompt_version: z.string().min(1),
-    kind: z.enum(["illustrative", "audio-derived", "audio-video-derived", "human", "sourced"]).optional(),
+    kind: z.enum(["illustrative", "audio-derived", "audio-video-derived", "human", "sourced", "source-assisted"]).optional(),
     model: z.string().optional(), source_sha256: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+    model_revision: z.string().regex(/^[a-f0-9]{40}$/).optional(),
+    generation_record_sha256: z.string().regex(/^[a-f0-9]{64}$/).optional(),
+    expression_method: z.literal("punctuation-only").optional(),
     expressiveness: z.enum(["conservative", "reviewed", "source-anchored"]).optional(),
     scene_load_method: z.enum(["unreviewed", "reviewed", "cue-density"]).optional(),
     caption_source: z.object({ url: z.string().url().regex(/^https?:\/\//), revision: z.string(), license: z.string(), author: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
@@ -40,6 +44,7 @@ export const videoSchema = z.object({
   dialogue_source: z.object({ url: z.string().url().regex(/^https?:\/\//), author: z.string(), license: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
   cues: z.array(cueSchema).max(5000),
 }).superRefine((video, ctx) => {
+  if (video.generated_with.kind === "source-assisted" && (!video.generated_with.model || !video.generated_with.caption_source || video.cues.some(cue => !cue.reference_text))) ctx.addIssue({ code: "custom", path: ["generated_with"], message: "Source-assisted generation needs a model, source credit and separate reference text for every cue." });
   if (!video.cues.length && video.generated_with.quality_gate !== "failed" && video.generated_with.non_speech_status !== "not-prepared") ctx.addIssue({ code: "custom", path: ["cues"], message: "Provide caption cues, or explicitly mark failed generation or sound captions not prepared." });
   if (video.cues.length && video.generated_with.non_speech_status === "not-prepared") ctx.addIssue({ code: "custom", path: ["cues"], message: "A not-prepared sound track cannot contain playback sound cues." });
   if (video.generated_with.quality_gate === "failed" && video.cues.length) ctx.addIssue({ code: "custom", path: ["cues"], message: "Failed generation candidates cannot be used for playback. Review and correct the captions first." });
@@ -73,7 +78,7 @@ export function activeCues(cues: CaptionCue[], seconds: number): CaptionCue[] {
 }
 
 export function resolveCaption(cue: CaptionCue, profile: CaptionProfile, condition: Condition, showOriginal = false) {
-  if (condition === "baseline" || showOriginal) return { text: cue.original_text, reason: "Original caption", adapted: false, detail: profile.detail };
+  if (condition === "baseline" || showOriginal) return { text: cue.reference_text ?? cue.original_text, reason: cue.reference_text ? "Fetched reference caption" : "Original caption", adapted: false, detail: profile.detail };
   const detail: Level = profile.adaptive && cue.scene_load === "dense" ? 1 : profile.detail;
   const adapted = profile.adaptive && detail !== profile.detail;
   const text = profile.representation === "plain" ? cue.representations.plain

@@ -812,3 +812,46 @@ compresses picture only, preserves AAC audio and duration, and differs
 in frame presentation times by less than 1 ms. Original local films
 remain intact. See docs/VERCEL_DEPLOYMENT.md for current status, storage
 allowances and verification. Caption coverage remains unchanged.
+
+
+SOURCE-ASSISTED GENERATED DRAFT (26 October 2026)
+Big Buck Bunny's local playback now uses new generated-and-edited caption
+wording. Licensed source labels and intervals remain reference evidence,
+not the displayed fixed baseline. Local Qwen/MLX-LM drafts required extensive
+source-text corrections; no fully automatic success or audio recognition is
+claimed. Each cue retains reference_text separately; legacy original_text
+stores the fixed generated baseline. Three detail descriptions combine with
+three explicitly disclosed punctuation styles, not nine independent semantic
+generations. All outputs are precomputed, draft, and pending full listening
+review. Existing failed audio-model gates stay unchanged. setup:captions
+rebuilds saved outputs; restoring fetched playback requires an explicit
+--restore-reference rollback. See docs/GENERATED_CAPTIONS_DEMO.md and the raw
+generation/edit records. This work does not authorize cloud inference or
+publish a new release without a fresh explicit user request.
+
+
+26 October 2026 — BBB NIM follow-up and comparison correction
+The latest user request explicitly authorizes NVIDIA NIM inference for Big Buck
+Bunny only, superseding earlier local-only preparation for this task. Paid cloud
+generation and publication still require fresh requests. Keep models out of
+playback. Forty-two bounded requests tested documented audio_url/input_audio,
+embedded audio, reasoning settings, source/plot context and source-assisted visual
+transformation. Novel speech input worked; non-speech grounding still failed,
+including fabricated sound on two verified digital-silence videos. Do not weaken
+the failed audio gate or claim the harness is ideal/model weights alone are the
+cause. Some Super VL visual/reference detail is useful draft material; no full
+NIM track is accepted. Preserve raw experiment evidence, cache exact source/model/
+prompt/media hashes and clearly distinguish sound evidence from visible context.
+Reference baseline and temporary Show reference now select fetched reference_text
+when present, while Personalized keeps generated variants. Preserve original_text
+as the saved generated fixed export; do not relabel it as the fetched baseline.
+The current default remains the prior local Qwen/editorial draft. No paid model,
+agent, new runtime installation, push or deployment was performed. See docs/
+verification/nim-phase1-2026-10-26/README.md. Existing maps are stale for these edits.
+
+26 October 2026 — NVIDIA-only constraint reaffirmed
+The user declined the proposed eight-clip paid fallback and selected “Keep
+everything on NVIDIA NIM.” Close that proposal; no OpenRouter call/key use or paid
+fallback is authorized. Continue BBB preparation on NIM, separating source-assisted
+transformation from independent audio grounding. Earlier failed controls remain
+valid; source context must not be used to relabel a hallucination as audio evidence.

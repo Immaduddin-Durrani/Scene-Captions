@@ -118,7 +118,7 @@ def request(content,max_tokens=4096,thinking=True,model=MODEL,timeout=None,*,tem
 
 def parse_json(response):
     choices = response.get('choices') or []
-    if choices and choices[0].get('finish_reason') not in (None, 'stop'):
+    if not choices or choices[0].get('finish_reason') != 'stop':
         raise ValueError('Model completion did not finish normally; no candidate can be accepted.')
     text = choices[0].get('message', {}).get('content') if choices else None
     if not isinstance(text, str) or not text.strip():

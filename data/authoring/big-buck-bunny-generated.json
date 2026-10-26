@@ -1,0 +1,1484 @@
+{
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+  "prompt_version": "local-source-assisted-v2-three-details",
+  "method": "Local model drafts with explicit main-assistant source-text edits. Model generated three detail descriptions; expression styling is deterministic punctuation only. No audio recognition or human listening approval.",
+  "human_listening_review": false,
+  "labels": [
+    {
+      "reference": "[SERENE MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Calm music]",
+      "detailed": "[Calm music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/probe-v2.json",
+      "index": 0,
+      "raw_response_sha256": "3377b08901c5b586e0be5a0195d00c89dd6913e89f295b44b1a46e6ec729715b",
+      "editorial_changes": [],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BROOK BABBLES]",
+      "short": "[Babbling water]",
+      "balanced": "[Stream babbling]",
+      "detailed": "[Brook babbling]",
+      "report": "docs/verification/generated-captions-2026-10-26/probe-v2.json",
+      "index": 1,
+      "raw_response_sha256": "39c2eb7644af4001b0436c7ae7a0002a688dd459813c1bfee552b20374e2eaa2",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Babble]",
+          "after": "[Babbling water]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Stream babbling]",
+          "after": "[Brook babbling]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[FLY BUZZES]",
+      "short": "[Fly buzzes]",
+      "balanced": "[Fly buzzing]",
+      "detailed": "[A fly buzzes]",
+      "report": "docs/verification/generated-captions-2026-10-26/probe-v2.json",
+      "index": 2,
+      "raw_response_sha256": "6519ac318d05cdb558c32d3d91b0a334891a1a015a82ec7e4ebe105ecd8cd030",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Fly's buzzing]",
+          "after": "[A fly buzzes]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BIRD TWEETS]",
+      "short": "[Tweeting]",
+      "balanced": "[Bird chirps]",
+      "detailed": "[Bird chirping]",
+      "report": "docs/verification/generated-captions-2026-10-26/probe-v2.json",
+      "index": 3,
+      "raw_response_sha256": "5432c65e8bb7267aee41ec10bc50ee1f25aeaaac3e17d8911477737eadd9e14c",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Bird tweeting]",
+          "after": "[Bird chirps]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[WINGS FLAP]",
+      "short": "[Flapping]",
+      "balanced": "[Wingbeats]",
+      "detailed": "[Flapping wings]",
+      "report": "docs/verification/generated-captions-2026-10-26/full-v2.json",
+      "index": 0,
+      "raw_response_sha256": "c052e2c659dafaf234e4182fec42c260fbf96413adfa14bc83c6d37e64bc6a43",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Wings flapping sound]",
+          "after": "[Flapping wings]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Wings flapping]",
+          "after": "[Wingbeats]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[THUD]",
+      "short": "[Thud]",
+      "balanced": "[A thud]",
+      "detailed": "[Thudding]",
+      "report": "docs/verification/generated-captions-2026-10-26/full-v2.json",
+      "index": 1,
+      "raw_response_sha256": "3b22c0fac723f605a2da2a0789b038135afe9a1b5fdfe5ccac61df6a39ec2d69",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Thud sound]",
+          "after": "[A thud]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Thud sound heard]",
+          "after": "[Thudding]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL LAUGHS]",
+      "short": "[Squirrel laughing]",
+      "balanced": "[Squirrel laugh]",
+      "detailed": "[Squirrel chuckling]",
+      "report": "docs/verification/generated-captions-2026-10-26/full-v2.json",
+      "index": 2,
+      "raw_response_sha256": "a035c3e64772c61b083ab195bd30679cf52751447bf93338635c6dbc4be3ea56",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Squirrel laughing]",
+          "after": "[Squirrel laugh]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SNORES]",
+      "short": "[Snoring]",
+      "balanced": "[Snoring]",
+      "detailed": "[Snoring]",
+      "report": "docs/verification/generated-captions-2026-10-26/full-v2.json",
+      "index": 3,
+      "raw_response_sha256": "42ab6854e6534f3fb8391728237cfff3ff6576bd63176821cf981973f4e34f45",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Someone is snoring]",
+          "after": "[Snoring]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Someone is snoring loudly]",
+          "after": "[Snoring]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY SNORES]",
+      "short": "[Snoring]",
+      "balanced": "[Bunny snoring]",
+      "detailed": "[The bunny snores]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 0,
+      "raw_response_sha256": "ab2d1d1cf4364b2a1ca407b55bce208db24a05311394dea10ad50257ab333e72",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Bunny snoring]",
+          "after": "[Snoring]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Bunny snoring loudly]",
+          "after": "[Bunny snoring]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Bunny snoring deeply]",
+          "after": "[The bunny snores]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY SNIFFS]",
+      "short": "[Bunny sniffs]",
+      "balanced": "[Bunny sniffing]",
+      "detailed": "[The bunny sniffs]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 1,
+      "raw_response_sha256": "6ec33705e77c27cf9a0a5ce6c3eaa947a2816790cac2388c95a55faff26e8677",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Bunny sniffing the air]",
+          "after": "[The bunny sniffs]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[EARS POP]",
+      "short": "[Ears pop]",
+      "balanced": "[Ears popping]",
+      "detailed": "[Popping ears]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 2,
+      "raw_response_sha256": "143f596efdb2282aa18c8ae2dbdaa3c76346b4cfe216d0c834a9cd9256b1f73e",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Ears popping sound]",
+          "after": "[Popping ears]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY YAWNS]",
+      "short": "[Yawning]",
+      "balanced": "[Bunny yawning]",
+      "detailed": "[The bunny yawns]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 3,
+      "raw_response_sha256": "320d129d31ae905efc785dcb934e041362e4efc05c6295c35456080c6354e00b",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Bunny yawning loudly]",
+          "after": "[The bunny yawns]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY CRACKS NECK]",
+      "short": "[Bunny cracks neck]",
+      "balanced": "[Bunny neck crack]",
+      "detailed": "[Bunny cracking neck]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 4,
+      "raw_response_sha256": "ad9233141c878c65a07ba6a7999816e42e10982aedb13584d079ab8ff8f920c2",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Bunny cracking neck]",
+          "after": "[Bunny neck crack]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY SNIFFS DEEPLY]",
+      "short": "[Sniffing]",
+      "balanced": "[Bunny sniffing deeply]",
+      "detailed": "[The bunny sniffs deeply]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 5,
+      "raw_response_sha256": "19441b1643f80c19d6a694054e10b40ff3d2807aec640ac96748f9616dd2fca7",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Bunny sniffs deeply]",
+          "after": "[Sniffing]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Bunny sniffing]",
+          "after": "[The bunny sniffs deeply]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY SIGHS]",
+      "short": "[Bunny sighs]",
+      "balanced": "[Bunny sighing]",
+      "detailed": "[The bunny sighs]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 6,
+      "raw_response_sha256": "786e3e24f1e9845d5699b82d79ab5d053f96b18bae603a87c83e27800ff965d7",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Bunny sighing softly]",
+          "after": "[The bunny sighs]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[APPLE THUDS]",
+      "short": "[Thud]",
+      "balanced": "[Apple thudding]",
+      "detailed": "[An apple thuds]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 7,
+      "raw_response_sha256": "089edbd002bf1a6139d568a22092fcd03bf2c26c51a9c901e6efa9fa1cb6aec2",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Apple thuds]",
+          "after": "[Thud]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Apple thuds]",
+          "after": "[Apple thudding]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Apple thuds against something]",
+          "after": "[An apple thuds]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+      "short": "[Rustling]",
+      "balanced": "[Suspicious tree rustling]",
+      "detailed": "[Tree rustling suspiciously]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 8,
+      "raw_response_sha256": "1f62f553176ec7d6b7f79b7ddc894209d7a07ed4ab89d0abfad7b3a2eb9ff183",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Tree rustling]",
+          "after": "[Suspicious tree rustling]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[APPLE CRUNCHES]",
+      "short": "[Apple crunches]",
+      "balanced": "[Apple crunching]",
+      "detailed": "[An apple crunches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 9,
+      "raw_response_sha256": "b900365f5761968febe3b871b87c31ea77251e748645b1b1310fe4c9244d6d7f",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Apple crunching sound]",
+          "after": "[An apple crunches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[LEAVES RUSTLE]",
+      "short": "[Leaves rustle]",
+      "balanced": "[Leaves rustling]",
+      "detailed": "[Rustling leaves]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 10,
+      "raw_response_sha256": "4f2192fe71c0b494321fbc8abcbea3b4127d8ac4f76beb6df7a1eece102df1c5",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Leaves moving]",
+          "after": "[Rustling leaves]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[APPLE CORE THUDS]",
+      "short": "[Thud]",
+      "balanced": "[Apple core thud]",
+      "detailed": "[An apple core thuds]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 11,
+      "raw_response_sha256": "a2b4e6a96cba8323f4c5080020592ecca0d8e878b2562be803cf33e047b2fb90",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Apple core hitting surface]",
+          "after": "[An apple core thuds]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Apple core thuds]",
+          "after": "[Apple core thud]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SCUTTLES]",
+      "short": "[Scuttling]",
+      "balanced": "[Squirrel scurries]",
+      "detailed": "[Scuttling squirrel]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 12,
+      "raw_response_sha256": "3b22f2118ddcd8a5e33d27c4af0a5ce004a20cadbbd64481061ace521448b1ca",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrel scuttles]",
+          "after": "[Scuttling]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrel scuttles quickly]",
+          "after": "[Scuttling squirrel]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BRANCHES RUSTLE]",
+      "short": "[Branches rustle]",
+      "balanced": "[Branches rustling]",
+      "detailed": "[Rustling branches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 13,
+      "raw_response_sha256": "526be22f63835b3c2a45a29dc4d0cc60ec8497566c28fa9e29c27f659f3efb6a",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Branches moving]",
+          "after": "[Rustling branches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SQUEAKS]",
+      "short": "[Squeaking]",
+      "balanced": "[Squirrel squeak]",
+      "detailed": "[A squirrel squeaks]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 14,
+      "raw_response_sha256": "3f8cea1ab49e09a026d397c281b9020ed39362a92aaf549de237bc66ca5cae04",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrels squeak]",
+          "after": "[Squeaking]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels making squeaking sounds]",
+          "after": "[A squirrel squeaks]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrels squeaking]",
+          "after": "[Squirrel squeak]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUT CRUNCHING]",
+      "short": "[Crunching]",
+      "balanced": "[Nut crunches]",
+      "detailed": "[A nut crunches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 15,
+      "raw_response_sha256": "7b4c641ff4ed2a137fe8a1f55ea75f814a8f3c6dc7deacab4f3f6a5b8a7b61cb",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Nuts crunching]",
+          "after": "[Nut crunches]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Nuts crunching sound]",
+          "after": "[A nut crunches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SQUEAKS ANGRILY]",
+      "short": "[Squeaking]",
+      "balanced": "[Angry squirrel squeaks]",
+      "detailed": "[Squirrel squeaking angrily]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 16,
+      "raw_response_sha256": "b4c1f729acd69af7b629627138f6a9b159dcd96d3cb0b5945ecb49e5c0919583",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Aggressive squirrel squeaking]",
+          "after": "[Angry squirrel squeaks]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Aggressive squirrel squeaking angrily]",
+          "after": "[Squirrel squeaking angrily]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUT THUDS]",
+      "short": "[Thud]",
+      "balanced": "[Nut thudding]",
+      "detailed": "[Nut thudding]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 17,
+      "raw_response_sha256": "6c5d98644dee54bfba893594296dd25ef6ee0088ea9220f8c7cc9039f553f06b",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Nut thuds]",
+          "after": "[Nut thudding]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRRELS LAUGHING]",
+      "short": "[Laughter]",
+      "balanced": "[Laughing squirrels]",
+      "detailed": "[The squirrels laugh]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 18,
+      "raw_response_sha256": "9ba7c31c21eb563883959fe8f10f8eb5bc4ffad6587f8a1e4aa0f2588b4fda04",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrels laughing]",
+          "after": "[Laughter]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrels laughing]",
+          "after": "[Laughing squirrels]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels laughing]",
+          "after": "[The squirrels laugh]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SNAPS FINGERS]",
+      "short": "[Finger snap]",
+      "balanced": "[Squirrel snapping fingers]",
+      "detailed": "[A squirrel snaps its fingers]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 19,
+      "raw_response_sha256": "07eef4083c8697993083cfe427920f556b3dd54b8b1d8ebca91771e0185b8c68",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrel snaps fingers]",
+          "after": "[Finger snap]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrel snaps fingers]",
+          "after": "[Squirrel snapping fingers]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrel snapping fingers]",
+          "after": "[A squirrel snaps its fingers]"
+        }
+      ],
+      "discarded_response_suffix": true,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUT WHOOSHES]",
+      "short": "[Whooshing]",
+      "balanced": "[Nut whooshing]",
+      "detailed": "[A nut whooshes]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 20,
+      "raw_response_sha256": "c8bffeec0d42c792d4a3847ea16c2fab3f1d90d8ffd84da7cf929227cbb7174b",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Nut whooshing sound]",
+          "after": "[A nut whooshes]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUTS THUDDING]",
+      "short": "[Thuds]",
+      "balanced": "[Thudding nuts]",
+      "detailed": "[Thuds from nuts]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 21,
+      "raw_response_sha256": "8e37032be0387bd7ac06bbf39c0793049b9ad04cf17e08c5cf5b8c5d8ed26989",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Nuts Thudding]",
+          "after": "[Thuds]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Nuts Thudding]",
+          "after": "[Thudding nuts]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Nuts Thudding]",
+          "after": "[Thuds from nuts]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUTS WHOOSHING]",
+      "short": "[Whooshing]",
+      "balanced": "[Nuts whizzing]",
+      "detailed": "[Nuts whoosh]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 22,
+      "raw_response_sha256": "40a20985d60f50de703a4700c2ae425ebb30ce9e3a70cb895031b1c9cba96b7e",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Nuts whizzing]",
+          "after": "[Whooshing]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Nuts whizzing]",
+          "after": "[Nuts whoosh]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SUSPENSFUL MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Tense music]",
+      "detailed": "[Suspenseful music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 23,
+      "raw_response_sha256": "37760d8e50f81819daa87331e206dde4c1e4b169909ca6096f38e8b69d926ac3",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Suspicious music]",
+          "after": "[Music]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Suspicious music playing]",
+          "after": "[Tense music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Suspicious music in the background]",
+          "after": "[Suspenseful music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUTTERFLY SPLATS]",
+      "short": "[Splat]",
+      "balanced": "[Butterfly splat]",
+      "detailed": "[A butterfly splats]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 24,
+      "raw_response_sha256": "b3eb53f3b18a19dfcff4d998baf2b0d5e4647e151f1d522f6cbcb53a27a8d223",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Butterfly splat]",
+          "after": "[Splat]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Butterfly lands on a leaf, splat]",
+          "after": "[A butterfly splats]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Butterfly lands on a leaf]",
+          "after": "[Butterfly splat]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[DRAMATIC MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Dramatic score]",
+      "detailed": "[Dramatic music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 25,
+      "raw_response_sha256": "e1842ad0458db145c69e07de9e7fa3a1db81a7ec6de7eccb679e984dac73310c",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Stunning music]",
+          "after": "[Dramatic score]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Stunning music playing]",
+          "after": "[Dramatic music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL CLAPS]",
+      "short": "[Clapping]",
+      "balanced": "[Squirrel clapping]",
+      "detailed": "[A squirrel claps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 26,
+      "raw_response_sha256": "ae183bc92c4a727b53c566dbcddb690a32ffd46d108c4817b57bc233168035b5",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Squirrels clapping]",
+          "after": "[Squirrel clapping]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels clapping]",
+          "after": "[A squirrel claps]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BUNNY GULPS]",
+      "short": "[Bunny gulps]",
+      "balanced": "[Bunny gulping]",
+      "detailed": "[The bunny gulps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 27,
+      "raw_response_sha256": "f8b63ec863c3ffd53432261cc12a50b52416a076ca768db493e4a7549dbc9098",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Bunny's mouth moving]",
+          "after": "[The bunny gulps]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[CONKERS WHOOSH]",
+      "short": "[Whooshing]",
+      "balanced": "[Conkers whooshing]",
+      "detailed": "[Whooshing conkers]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 28,
+      "raw_response_sha256": "c68908a1357636ea626d9f93038970100b65f5fc98dcf03b1c0e5e17916414ea",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Whooshing sound]",
+          "after": "[Conkers whooshing]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Whooshing sound]",
+          "after": "[Whooshing conkers]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[CONKERS THUD]",
+      "short": "[Thud]",
+      "balanced": "[Conkers thudding]",
+      "detailed": "[Thudding conkers]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 29,
+      "raw_response_sha256": "b9e00281abba6c5f2e89c36b3a08d838d1d0cb2776dfbdad8526c3fe131a8905",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Conk thud]",
+          "after": "[Conkers thudding]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Conk on the head]",
+          "after": "[Thudding conkers]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[MOTIVATIONAL MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Motivating music]",
+      "detailed": "[Motivational music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 30,
+      "raw_response_sha256": "a29960837ac69d4a9cccf5fd85b6f75fd29acfd2e6ef38fb1fd0e0a30086939f",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Motivational music]",
+          "after": "[Music]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Music that motivates]",
+          "after": "[Motivating music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Music playing]",
+          "after": "[Motivational music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[JOVIAL MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Cheerful music]",
+      "detailed": "[Jovial music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 31,
+      "raw_response_sha256": "230da70a9793154030e4bb1e91c3d4c1edf17f07f27df1f2e1c3f5f42e70d625",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Jovial music]",
+          "after": "[Music]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Jovial music playing]",
+          "after": "[Cheerful music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Jovial music in the background]",
+          "after": "[Jovial music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[MILITARY MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Military-style music]",
+      "detailed": "[Military music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 32,
+      "raw_response_sha256": "0793f24dd00712fca87fef835402c1407a4e2902d49dc9d65243941a822678d2",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Military music]",
+          "after": "[Music]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Military music playing]",
+          "after": "[Military-style music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Military music in background]",
+          "after": "[Military music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[INQUISITIVE MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Inquiring music]",
+      "detailed": "[Inquiring music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 33,
+      "raw_response_sha256": "102ea3d31fe02434e5eb2e3a4529d777a93de9716f7ff1e17bd2f4be2e87429d",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Inquiring music]",
+          "after": "[Music]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[MUSIC CRESCENDOS]",
+      "short": "[Music]",
+      "balanced": "[Music swelling]",
+      "detailed": "[Music grows louder]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 34,
+      "raw_response_sha256": "657cea508a94e458c128020786bcb00831faaf6ce7d57a3f4f87a76838f3574d",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Music crescendo]",
+          "after": "[Music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Music gradually increases in volume]",
+          "after": "[Music grows louder]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[GRASS RUSTLING]",
+      "short": "[Rustling]",
+      "balanced": "[Rustling grass]",
+      "detailed": "[Grass rustles]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 35,
+      "raw_response_sha256": "13f7dc6ef72a75715e78da0d5f92a768b2ef87385e3bfa3634ad3f6636b7c5ea",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Grass rustling]",
+          "after": "[Rustling]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Grass rustling]",
+          "after": "[Rustling grass]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Grass moving]",
+          "after": "[Grass rustles]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BOW STRING PINGS]",
+      "short": "[Pinging]",
+      "balanced": "[Bowstring ping]",
+      "detailed": "[A bowstring pings]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 36,
+      "raw_response_sha256": "0fef6cf41c07923226f788392db6d0f40070eed4f4c6206645650807331ac155",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Pinging Bow String]",
+          "after": "[Pinging]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Bow string snapping]",
+          "after": "[A bowstring pings]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Bow string pings]",
+          "after": "[Bowstring ping]",
+          "reason": "Shorter source-faithful fixed caption; do not extend original timing."
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[VINE SNAPS]",
+      "short": "[Vine snaps]",
+      "balanced": "[Vine snapping]",
+      "detailed": "[A vine snaps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 37,
+      "raw_response_sha256": "6b14cd8b6d5516a0cf2d29277a6f65a1fc9e95da2758f98c1440aef210323375",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Vine snapping sound]",
+          "after": "[A vine snaps]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRRELS SNIFFING]",
+      "short": "[Sniffing]",
+      "balanced": "[Sniffing squirrels]",
+      "detailed": "[The squirrels sniff]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 38,
+      "raw_response_sha256": "dae4f4dd24a475074252802854ee0dbc27d9bedaa5d18fd843c20f5dcfb64e10",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrels sniffling]",
+          "after": "[Sniffing]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrels sniffing]",
+          "after": "[Sniffing squirrels]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels sniffing each other]",
+          "after": "[The squirrels sniff]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SQUEAKS ORDERS]",
+      "short": "[Squeaking]",
+      "balanced": "[Squirrel squeaking orders]",
+      "detailed": "[A squirrel squeaks orders]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 39,
+      "raw_response_sha256": "dc8786d2c38a3ed0f0ccd268c774a457276afe2a8ab382053e720765b3ceed86",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrels squeal orders]",
+          "after": "[Squeaking]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrels squeal orders]",
+          "after": "[Squirrel squeaking orders]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels squeal orders]",
+          "after": "[A squirrel squeaks orders]"
+        }
+      ],
+      "discarded_response_suffix": true,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[ROPES CREAK]",
+      "short": "[Creaking ropes]",
+      "balanced": "[Ropes creaking]",
+      "detailed": "[Ropes creaking]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 40,
+      "raw_response_sha256": "f302b3e640bd55ee3f96bba9e6c338ad29f00c2382ee0b0a83118ff343546113",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Ropes making a faint sound]",
+          "after": "[Ropes creaking]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SQUEAKS IN PAIN]",
+      "short": "[Squeaking]",
+      "balanced": "[Squirrel squeaking in pain]",
+      "detailed": "[A squirrel squeaks in pain]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 41,
+      "raw_response_sha256": "b7d4e73a90d3c90539ba7326a3355ccdcd07015d21929aa7422fcf586089e510",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Squeaking in pain]",
+          "after": "[Squirrel squeaking in pain]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squeaking sound of a squirrel in pain]",
+          "after": "[A squirrel squeaks in pain]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[NUT CRUNCHES]",
+      "short": "[Crunch]",
+      "balanced": "[Nut crunching]",
+      "detailed": "[A nut crunches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 42,
+      "raw_response_sha256": "23222b2eea0657460a71a87e669bb439031d1e55513ad85da933b5693bfa685c",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Nut crunching sound]",
+          "after": "[A nut crunches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[ROCK CRASHES]",
+      "short": "[Crash]",
+      "balanced": "[Rock crashing]",
+      "detailed": "[A rock crashes]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 43,
+      "raw_response_sha256": "8ac67a449003bd2b02690c6fd560492beef872268c1919ec487153356e2fd849",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Rock crashing]",
+          "after": "[Crash]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Rock crashing sound]",
+          "after": "[A rock crashes]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[LOG CRUNCHES]",
+      "short": "[Crunch]",
+      "balanced": "[Log crunching]",
+      "detailed": "[A log crunches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 44,
+      "raw_response_sha256": "07d9b4606154a7d2dfd7e1020df050e735f74d792149fe7289831d8b02823bdf",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Log crunching]",
+          "after": "[Crunch]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Log crunching sound]",
+          "after": "[A log crunches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[LOG THUDS]",
+      "short": "[Thud]",
+      "balanced": "[Log thudding]",
+      "detailed": "[A log thuds]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 45,
+      "raw_response_sha256": "2321d06e1d60d72dafd4667774d5b5736a82ed42a5189fc4160f43c833b879c9",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Log thuds]",
+          "after": "[Log thudding]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Log thuds on the ground]",
+          "after": "[A log thuds]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TRAP PINGS]",
+      "short": "[Pings]",
+      "balanced": "[Trap pinging]",
+      "detailed": "[A trap pings]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 46,
+      "raw_response_sha256": "99cec8adc8ef3de5ee1bc71ca07f9ce08bcaa06e9790fb0f3e07c5a7e3f3ca6a",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Trap pings]",
+          "after": "[Trap pinging]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Trap pings sound]",
+          "after": "[A trap pings]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[SQUIRREL SQUEALS]",
+      "short": "[Squeal]",
+      "balanced": "[Squirrel squealing]",
+      "detailed": "[A squirrel squeals]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 47,
+      "raw_response_sha256": "502c5b7cf406d9ee535d5c6c5d9658ee5b9bdbc037e461e80d83605680560252",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Squirrels squeal]",
+          "after": "[Squeal]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Squirrels squeal]",
+          "after": "[Squirrel squealing]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Squirrels squeal]",
+          "after": "[A squirrel squeals]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[WINGS POP]",
+      "short": "[Popping]",
+      "balanced": "[Wings popping]",
+      "detailed": "[Popping wings]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 48,
+      "raw_response_sha256": "12dfabf0c72cd29e975cc36b8eb948e4b31e226da7b34adbbc007c9dc42cdbd7",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Wings Pop]",
+          "after": "[Popping]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Wings Pop]",
+          "after": "[Wings popping]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Wings making popping sound]",
+          "after": "[Popping wings]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TWIG SNAPS]",
+      "short": "[Twig snaps]",
+      "balanced": "[Twig snapping]",
+      "detailed": "[A twig snaps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 49,
+      "raw_response_sha256": "9d2f85d5c87ca4a76c55dd52e22c30787a66df0c99410728ded0f93a480694d2",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Twist of a twig]",
+          "after": "[A twig snaps]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TRAPS SNAP]",
+      "short": "[Snapping]",
+      "balanced": "[Traps snapping]",
+      "detailed": "[Snapping traps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 50,
+      "raw_response_sha256": "42aedd11391db61daff535d2170b77be9183ad30ac9d1bfd1fdbdd9fa5dbba87",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Traps snapping loudly]",
+          "after": "[Snapping traps]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TRAPS SNAPPING]",
+      "short": "[Snapping]",
+      "balanced": "[Snapping of traps]",
+      "detailed": "[Snapping of traps]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 51,
+      "raw_response_sha256": "3ccb84cdb0e6531608eacd5b7fe6942dccbf52dafbba737a980e6ce1bae52a0a",
+      "editorial_changes": [],
+      "discarded_response_suffix": true,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BRANCHES SNAP]",
+      "short": "[Branches snap]",
+      "balanced": "[Branches snapping]",
+      "detailed": "[Snapping branches]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 52,
+      "raw_response_sha256": "f362623e2b06b8f5432b99599af0939ad3519ce28ded4f0a9f507d8bbd08c454",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Branches snapping loudly]",
+          "after": "[Snapping branches]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[WINGS FLAPPING]",
+      "short": "[Flapping]",
+      "balanced": "[Wings flapping]",
+      "detailed": "[Flapping wings]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 53,
+      "raw_response_sha256": "c052e2c659dafaf234e4182fec42c260fbf96413adfa14bc83c6d37e64bc6a43",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Wings flapping sound]",
+          "after": "[Flapping wings]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BRANCH CREAKING]",
+      "short": "[Creaking]",
+      "balanced": "[Creaking branch]",
+      "detailed": "[A branch creaks]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 54,
+      "raw_response_sha256": "05435e0ca8ad6bc97547067bab4fdafd76618ed2d03e931b99ebe10c18174ec6",
+      "editorial_changes": [
+        {
+          "field": "short",
+          "before": "[Creaking Branch]",
+          "after": "[Creaking]"
+        },
+        {
+          "field": "balanced",
+          "before": "[Branch creaking]",
+          "after": "[Creaking branch]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Branch creaking]",
+          "after": "[A branch creaks]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[WIND BLOWS]",
+      "short": "[Wind blows]",
+      "balanced": "[Wind blowing]",
+      "detailed": "[Wind blowing]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 55,
+      "raw_response_sha256": "14101d7e707ce8853677ee8eab4e0c161ae6129eb5f1043254141e63486a740d",
+      "editorial_changes": [],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[TRIUMPHANT MUSIC]",
+      "short": "[Music]",
+      "balanced": "[Victorious music]",
+      "detailed": "[Triumphant music plays]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 56,
+      "raw_response_sha256": "39cf23af2023ac24e439c425a976a8d0e7bba910ea84ad35598130f4d17bf24e",
+      "editorial_changes": [
+        {
+          "field": "balanced",
+          "before": "[Rhythmic music]",
+          "after": "[Victorious music]"
+        },
+        {
+          "field": "detailed",
+          "before": "[Rhythmic music playing]",
+          "after": "[Triumphant music plays]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[BIRD FLAPPING]",
+      "short": "[Bird flapping]",
+      "balanced": "[Bird flapping wings]",
+      "detailed": "[Bird flapping wings]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 57,
+      "raw_response_sha256": "b1767b9a3312635c2991fcfc2f346ebf1b754c589fb92085c46fce02498d1fbd",
+      "editorial_changes": [],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    },
+    {
+      "reference": "[POOP SPLATS]",
+      "short": "[Splat]",
+      "balanced": "[Poop splat]",
+      "detailed": "[A splat of poop]",
+      "report": "docs/verification/generated-captions-2026-10-26/rest-v2.json",
+      "index": 58,
+      "raw_response_sha256": "2b0229a473c72273806057a7ab8acce6316736e7631cee5c1b6be48a516762fd",
+      "editorial_changes": [
+        {
+          "field": "detailed",
+          "before": "[Poop splat on ground]",
+          "after": "[A splat of poop]"
+        }
+      ],
+      "discarded_response_suffix": false,
+      "source_text_check": "Main assistant compared with reference; unsupported details/changed sources/padding corrected. Not independent review or listening approval."
+    }
+  ]
+}

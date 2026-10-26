@@ -1,0 +1,459 @@
+{
+  "method": "Local model drafts with explicit main-assistant source-text edits. Model generated three detail descriptions; expression styling is deterministic punctuation only. No audio recognition or human listening approval.",
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+  "generation_record_sha256": "dc850947a75252b2eab9c302c1b35ddf802526a76862501793e28aa31a793ff0",
+  "track_sha256": "f3b94a1af05b830bb0bc685dc3fad059602397598bc45011831f6da7acd6ec5b",
+  "srt_sha256": "c2f58cd6b1081e627fd38fc49df7613984d0ed2b67a47771082221bbda4d9007",
+  "cue_count": 87,
+  "unique_labels": 67,
+  "baseline_differs_from_reference_count": 87,
+  "original_timestamps_preserved": true,
+  "simultaneous_sound_lines_preserved": true,
+  "expression_styles": "Deterministic punctuation only; not nine independently generated semantic variants.",
+  "human_listening_review": false,
+  "audio_recognition": false,
+  "reading_rate_heuristic": "20 characters/second; flags, not a validated DHH threshold or proof of improvement.",
+  "reading_flags": [
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "baseline",
+      "characters_per_second": 46.210720887245806
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-1",
+      "characters_per_second": 38.81700554528648
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-2",
+      "characters_per_second": 42.513863216266145
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "1-3",
+      "characters_per_second": 42.513863216266145
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-1",
+      "characters_per_second": 46.210720887245806
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-2",
+      "characters_per_second": 49.907578558225474
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "2-3",
+      "characters_per_second": 49.907578558225474
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-1",
+      "characters_per_second": 59.14972273567464
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-2",
+      "characters_per_second": 62.846580406654304
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "variant": "3-3",
+      "characters_per_second": 62.846580406654304
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "1-1",
+      "characters_per_second": 22.781774580335743
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "1-2",
+      "characters_per_second": 23.980815347721833
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "1-3",
+      "characters_per_second": 23.980815347721833
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "2-2",
+      "characters_per_second": 20.383693045563557
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "2-3",
+      "characters_per_second": 20.383693045563557
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-1",
+      "characters_per_second": 23.980815347721833
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-2",
+      "characters_per_second": 25.179856115107924
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "variant": "3-3",
+      "characters_per_second": 25.179856115107924
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "3-1",
+      "characters_per_second": 20.153550863723716
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "3-2",
+      "characters_per_second": 21.113243761996273
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "variant": "3-3",
+      "characters_per_second": 21.113243761996273
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "baseline",
+      "characters_per_second": 24.952015355086335
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "2-1",
+      "characters_per_second": 24.952015355086335
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "2-2",
+      "characters_per_second": 25.911708253358885
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "2-3",
+      "characters_per_second": 25.911708253358885
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-1",
+      "characters_per_second": 26.87140115163144
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-2",
+      "characters_per_second": 27.83109404990399
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "variant": "3-3",
+      "characters_per_second": 27.83109404990399
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-1",
+      "characters_per_second": 20.153550863723577
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-2",
+      "characters_per_second": 21.113243761996127
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "variant": "3-3",
+      "characters_per_second": 21.113243761996127
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "3-2",
+      "characters_per_second": 20.153550863723577
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "variant": "3-3",
+      "characters_per_second": 20.153550863723577
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "2-2",
+      "characters_per_second": 20.571428571428573
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "2-3",
+      "characters_per_second": 20.571428571428573
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-1",
+      "characters_per_second": 22.857142857142858
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-2",
+      "characters_per_second": 24
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "variant": "3-3",
+      "characters_per_second": 24
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "baseline",
+      "characters_per_second": 28.811524609843993
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-1",
+      "characters_per_second": 28.811524609843993
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-2",
+      "characters_per_second": 30.012004801920824
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "2-3",
+      "characters_per_second": 30.012004801920824
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-1",
+      "characters_per_second": 33.613445378151326
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-2",
+      "characters_per_second": 34.81392557022816
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "variant": "3-3",
+      "characters_per_second": 34.81392557022816
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "baseline",
+      "characters_per_second": 27
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-1",
+      "characters_per_second": 27
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-2",
+      "characters_per_second": 28
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "2-3",
+      "characters_per_second": 28
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-1",
+      "characters_per_second": 30
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-2",
+      "characters_per_second": 31
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "variant": "3-3",
+      "characters_per_second": 31
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "3-2",
+      "characters_per_second": 21
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "variant": "3-3",
+      "characters_per_second": 21
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "2-2",
+      "characters_per_second": 20.408163265306857
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "2-3",
+      "characters_per_second": 20.408163265306857
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-1",
+      "characters_per_second": 22.809123649460606
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-2",
+      "characters_per_second": 24.00960384153748
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "variant": "3-3",
+      "characters_per_second": 24.00960384153748
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "baseline",
+      "characters_per_second": 22.350993377484
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "2-1",
+      "characters_per_second": 22.350993377484
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "2-2",
+      "characters_per_second": 23.178807947020445
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "2-3",
+      "characters_per_second": 23.178807947020445
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-1",
+      "characters_per_second": 22.350993377484
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-2",
+      "characters_per_second": 23.178807947020445
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "variant": "3-3",
+      "characters_per_second": 23.178807947020445
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "baseline",
+      "characters_per_second": 26.90909090909091
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "2-1",
+      "characters_per_second": 26.90909090909091
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "2-2",
+      "characters_per_second": 28.363636363636363
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "2-3",
+      "characters_per_second": 28.363636363636363
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-1",
+      "characters_per_second": 28.363636363636363
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-2",
+      "characters_per_second": 29.818181818181817
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "variant": "3-3",
+      "characters_per_second": 29.818181818181817
+    },
+    {
+      "cue_id": "bbb-sdh-067",
+      "variant": "3-2",
+      "characters_per_second": 21
+    },
+    {
+      "cue_id": "bbb-sdh-067",
+      "variant": "3-3",
+      "characters_per_second": 21
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "baseline",
+      "characters_per_second": 26.798307475317227
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "1-1",
+      "characters_per_second": 21.15655853314518
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "1-2",
+      "characters_per_second": 22.56699576868819
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "1-3",
+      "characters_per_second": 22.56699576868819
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-1",
+      "characters_per_second": 26.798307475317227
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-2",
+      "characters_per_second": 28.20874471086024
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "2-3",
+      "characters_per_second": 28.20874471086024
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-1",
+      "characters_per_second": 26.798307475317227
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-2",
+      "characters_per_second": 28.20874471086024
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "variant": "3-3",
+      "characters_per_second": 28.20874471086024
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-1",
+      "characters_per_second": 21.46464646464565
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-2",
+      "characters_per_second": 22.727272727271867
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "variant": "3-3",
+      "characters_per_second": 22.727272727271867
+    }
+  ]
+}

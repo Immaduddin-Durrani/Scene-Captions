@@ -1,0 +1,435 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "645e4c5b5ad5d25a8ea1f083c7a77808ecdd7731f25c6a71160513e38d41cea8",
+  "calls": [
+    {
+      "case": "silence-strict",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "02155405c336b8d5c6f684d18477947ccea629a88cae5fce28e69f1e7c4bd347",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "2be6156b2c08b86e718d73c671820665b060e4e92b2dba5acf1ab5fbded3e725",
+      "wire_bytes": 128722,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "3fdd6dfc-f4e3-4c18-bff1-a248f6ab8159",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-c4b69d01-d9f2-4860-ad07-86371e2f4641",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "tone",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998910,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 126,
+          "completion_tokens": 3,
+          "total_tokens": 129
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.220874547958374,
+            "generation_tokens_per_second": 13.582370751768917,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.097
+    },
+    {
+      "case": "tone-strict",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+          "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "719acd6481eaf77cdea723ee1c8bfa11374c65284782c99c85fe9c4ed654f754",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "7221921838bcd0187a606160fed434e6829f64c82f2d147a5410affed942e3cb",
+      "wire_bytes": 128722,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "263f61b0-be42-4ac6-9633-214d2fcb2663",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-0a54ba43-5e46-44de-a08b-28374df38ba1",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "SILENCE",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998911,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 126,
+          "completion_tokens": 5,
+          "total_tokens": 131
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.24280667304992676,
+            "generation_tokens_per_second": 20.592514765736617,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.888
+    },
+    {
+      "case": "apple-strict",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav",
+          "sha256": "dd8a9c4d364ba6466fa1345b6d0d9db382d4e60ff8060317742e2c037d305a82",
+          "duration_s": 2.2,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "df98af9d4c012e7bd3c6a6abb749b218555d9e311c4049f12b9b7bfb330b9c2d",
+                    "data_uri_characters": 94162,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "868558e0a6e487dad351e53b58da73bf550664fb18c52a9324f1e083f9357f0b",
+      "wire_bytes": 94802,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "150fcefe-317b-4bda-bbed-a984de63e910",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-2e409f4a-83d1-4970-a734-84e51ec39c41",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "tone",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792998913,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 116,
+          "completion_tokens": 3,
+          "total_tokens": 119
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.4613299369812012,
+            "generation_tokens_per_second": 6.502938048267715,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.792
+    },
+    {
+      "case": "silence-reasoning",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "02155405c336b8d5c6f684d18477947ccea629a88cae5fce28e69f1e7c4bd347",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "wire_sha256": "ee0b724f00b38f0a622dff71aa2092a0d59778c5202122f546685eded8264d22",
+      "wire_bytes": 128721,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.597
+    },
+    {
+      "case": "tone-reasoning",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+          "sha256": "4c59f1c1bf90c16e7f82b754f551d3db07d8eb0233b65c7407370f3d54641b06",
+          "duration_s": 3.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "719acd6481eaf77cdea723ee1c8bfa11374c65284782c99c85fe9c4ed654f754",
+                    "data_uri_characters": 128082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "wire_sha256": "f415418f187a18db3d22c4da3a36f89a14d792b8628cc26f37d418a0f5cad222",
+      "wire_bytes": 128721,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.635
+    },
+    {
+      "case": "apple-reasoning",
+      "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+      "fixtures": [
+        {
+          "file": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav",
+          "sha256": "dd8a9c4d364ba6466fa1345b6d0d9db382d4e60ff8060317742e2c037d305a82",
+          "duration_s": 2.2,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+              },
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "df98af9d4c012e7bd3c6a6abb749b218555d9e311c4049f12b9b7bfb330b9c2d",
+                    "data_uri_characters": 94162,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "wire_sha256": "c25d46d42ff8f6787c266b4701e4607552eed2203b444c0cfae596b9a9bda5d6",
+      "wire_bytes": 94801,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.525
+    }
+  ]
+}

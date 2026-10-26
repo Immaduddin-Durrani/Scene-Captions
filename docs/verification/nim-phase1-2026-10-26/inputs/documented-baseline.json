@@ -1,0 +1,168 @@
+[
+  {
+    "case": "documented-speech",
+    "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Transcribe the speech in this recording exactly."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-phase1-2026-10-26/nonce.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-silence",
+    "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-tone",
+    "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-music",
+    "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-overlap",
+    "hypothesis": "Check the documented audio_url data-URI request shape and media conditioning before adding context or complex schemas. No reference labels are passed.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/2033f2c1ba98bd91c722.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "super-vl-text-control",
+    "hypothesis": "Use Super VL documented reasoning_effort=none rather than the older shared enable_thinking setting; test reference-fidelity on a clearly synthetic example.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You write accurate non-speech captions for Deaf viewers. Only use the supplied facts. Return JSON with essential, balanced, detailed and evidence_ids; do not add a sound, mood or instrument."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic test, not a movie: f1=a quiet piano melody; f2=sustained strings accompany it; f3=the music gradually fades out. Write three progressively informative captions; essential<=35 characters, balanced<=80, detailed<=140."
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false,
+      "reasoning_effort": "none"
+    }
+  }
+]

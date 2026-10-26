@@ -1,0 +1,253 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "474de14414bdc64ea9740bbc50744cb42b97987550c4d3002ff0b0a5eded59b6",
+  "calls": [
+    {
+      "case": "bbb-sdh-001-context-v2",
+      "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-context.mp4",
+          "sha256": "9dbdaab190ae66dbb923adeda3abe56033b4cff22e56a0c4a316165c0fd31f05",
+          "duration_s": 10.5,
+          "bytes": 218600,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-001\", \"reference_interval_seconds_in_clip\": [2.499, 6.416], \"reference_caption\": \"[SERENE MUSIC]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "30474e17678ae2f00e4717e574f86686ebf9b5104eab89b14ac30436ced7863b",
+                    "data_uri_characters": 291490,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "78d76d0f97644256e5892865c235229ad81ed1f8d582a564b0da83374e568dd1",
+      "wire_bytes": 293294,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "13b762ef-ef36-40e0-b6ec-44545129e9dd",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-96ef36b2-aa8a-40b3-8ec2-8487b4837019",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-001\",\n  \"visual_facts\": [\n    \"pink clouds\",\n    \"green trees\",\n    \"green hills\"\n  ],\n  \"sound_facts\": [\n    \"serene music\"\n  ],\n  \"essential\": \"[Serene music]\",\n  \"balanced\": \"[Serene music]\",\n  \"detailed\": \"[Serene music]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible actions or objects relate to the music; no supported extra detail exists.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999083,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2084,
+          "completion_tokens": 117,
+          "total_tokens": 2201,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 6.217
+    },
+    {
+      "case": "bbb-sdh-002-context-v2",
+      "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-002-context.mp4",
+          "sha256": "262bdc3ad0d5bc3c41bed8c4f23e1dea71fa3480ecc8d5e3d0b643053490bf87",
+          "duration_s": 10.0,
+          "bytes": 273920,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-002\", \"reference_interval_seconds_in_clip\": [4.0, 6.167], \"reference_caption\": \"[BROOK BABBLES]\\n[FLY BUZZES]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "e4ec9936f3fce25db54702453ba72491390ef542d5f59a90fce707cfd2dc737d",
+                    "data_uri_characters": 365250,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "811bc5037b1a5a4bf39a44a87fae03eb3203c0e5095926538d446a8019395305",
+      "wire_bytes": 367068,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "a54e8bfb-1a80-4c64-805c-532e2fd3fdd4",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-63f98a83-18be-4b39-9515-94dbae6a93ab",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"stream flows through grass\",\n    \"flowers line bank\",\n    \"lily pads float on water\"\n  ],\n  \"sound_facts\": [\n    \"brook babbling\",\n    \"fly buzzing\"\n  ],\n  \"essential\": \"[Brook babbles] [Fly buzzes]\",\n  \"balanced\": \"Brook babbles; fly buzzes\",\n  \"detailed\": \"Brook babbles; fly buzzes\",\n  \"added_details\": [],\n  \"limitation\": \"No visible brook, fly, or sound-related action appears in the target interval; no supported extra detail can be added.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999090,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1946,
+          "completion_tokens": 156,
+          "total_tokens": 2102,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 11.933
+    },
+    {
+      "case": "bbb-sdh-020-context-v2",
+      "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4",
+          "sha256": "19d2bf84e700d50331acf8644bb3a582dacac9ea1d29d6ea366312633b40bfb3",
+          "duration_s": 9.5,
+          "bytes": 124315,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "a6a6bf75e6baf3590065f036b858a083adc9883bfda3b13eafc80ca9b0bc78e4",
+                    "data_uri_characters": 165778,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "0bd0063166d2766e066518d20a16759683d4b1232663c7de0ac1a810b3c8761a",
+      "wire_bytes": 167579,
+      "attempts": 1,
+      "http_status": 500,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}",
+      "seconds": 1.066
+    }
+  ]
+}

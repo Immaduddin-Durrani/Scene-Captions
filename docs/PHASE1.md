@@ -2,7 +2,7 @@
 
 Two deliverables: a running application and the experimental plan.
 
-**Current demo:** 87 licensed, timed sound-caption cues are installed, with source-anchored wording variants. Automatic sound recognition was replaced with a deterministic import of the [Demuxed caption track](https://github.com/demuxed/big-buck-captions). See [provenance and checks](CAPTION_GENERATION_STATUS.md). No key is needed.
+**Current local draft (26 October):** 87 AI-assisted generated sound captions supply Personalized and the generated SRT; Reference baseline shows the fetched source. Qwen2.5-1.5B generated descriptions locally; 63 of 67 labels then needed recorded source-text edits. Demuxed supplies reference events and timestamps. Expression levels change punctuation only. See [generation/demo notes](GENERATED_CAPTIONS_DEMO.md). This is not independent sound recognition or an audio-verified track. No key is needed to view or rebuild saved outputs.
 
 ## Start the app
 
@@ -20,7 +20,7 @@ Demo in approximately three minutes:
 
 1. Play the sample film. Click the 1:23 apple cue in the timeline to see a caption matched to that moment.
 2. Change detail or expressiveness. Try Preview this cue in the video: playback pauses and shows the candidate temporarily for five seconds. Return manually or let the saved settings return automatically; Apply preferences saves the changes. Text size/position changes retain unfinished content preferences.
-3. Toggle Follow cue density, Show original, and Original baseline. Baseline content is fixed; readability is available in both conditions.
+3. Toggle Follow cue density, Show reference, and Reference baseline. Reference baseline displays the fetched source, while Personalized uses generated draft wording; readability is available in both conditions.
 4. Reload to check preference persistence. Open Why this caption? to inspect the selection rationale.
 5. Open your team's own MP4 in Bring your own story. Add matching caption JSON. Files stay on your device. Sample captions are cleared when you change the video.
 6. Opt into a study rehearsal, interact with the player, answer optional ratings, stop and export JSON. No data is uploaded or persisted across reloads.
@@ -28,17 +28,17 @@ Demo in approximately three minutes:
 
 ## Your video and caption preparation
 
-Your team is making the study video. The temporary Big Buck Bunny sample is about 10 minutes and is not a long-form study stimulus. Its 87 source captions come from a licensed Demuxed SRT, with unchanged timing. Personalized wording is prepared locally from those source labels. Visual sync anchors were spot-checked; full listening and participant review are still required.
+Your team is making the study video. The temporary Big Buck Bunny sample is about 10 minutes and is not a long-form study stimulus. Its 87 new generated-and-edited captions use events/timestamps from a licensed Demuxed reference. Visual sync anchors were spot-checked; full listening and participant review are still required.
 
 See [CAPTION_IMPORT.md](CAPTION_IMPORT.md) for the schema and workflow. The app opens compatible local video files without uploads. The actual study needs reviewed captions tied to the exact edit. With no reviewed caption JSON, your video still plays but sound captions stay off. Caption content is hidden if file and declared duration differ by more than two seconds.
 
 ## Setup and keys
 
-- Phase 1 demo: **none**. Node, npm, unzip and a browser are sufficient. ffmpeg is already installed locally; ffprobe is needed only to rebuild captions with npm run setup:captions.
-- NVIDIA NIM: used only by separately run offline preparation tools. Current text/audio trials have not passed quality gates. Audio decode and speech controls work, but non-speech tone recognition still fails in the tested setup. The working sample uses source captions and does not depend on NIM. No NIM key belongs in the player or NEXT_PUBLIC_*. See scripts/generation/README.md for candidate preparation, retries and response waits.
-- Hosted deployment, external video storage and a controlled participant-data store: not configured and not needed for this local submission. For a hosted study, video must stream from an external host and approved research logs need persistent, restricted storage.
+- Phase 1 demo: **none**. Node, npm, unzip and a browser are sufficient. ffmpeg is already installed locally; Rebuilding saved captions uses npm run setup:captions without a model or ffprobe; fresh local generation needs the isolated MLX-LM runtime.
+- NVIDIA NIM: used only by separately run offline preparation tools. Current text/audio trials have not passed quality gates. Audio decode and speech controls work, but non-speech tone recognition still fails in the tested setup. The new sample uses local source-assisted wording and does not depend on NIM. No NIM key belongs in the player or NEXT_PUBLIC_*. See scripts/generation/README.md for candidate preparation, retries and response waits.
+- Vercel and video storage are configured for the previous release; this new generated draft has not been published. A controlled participant-data store is not configured. For a hosted study, video must stream from an external host and approved research logs need persistent, restricted storage.
 - Formal participant experiments: finalize consent/ethics with your instructor before recruitment; the rehearsal checkbox does not replace it.
 
 ## Boundaries
 
-This Phase 1 build is a functional interface prototype. It does not establish an accessibility outcome, validate caption accuracy, demonstrate the full long-form hypothesis or reuse CapTune's engine. It follows the precompute-and-select architecture with imported licensed source captions. Dialogue subtitle import is not implemented; choose a dialogue-free study video or add fixed verified dialogue subtitles equally to both conditions before studying a dialogue-containing video.
+This Phase 1 build is a functional interface prototype. It does not establish an accessibility outcome, validate caption accuracy, demonstrate the full long-form hypothesis or reuse CapTune's engine. It follows the precompute-and-select architecture with source-assisted generated draft captions. The app supports fixed dialogue separately; verify dialogue equally in both conditions before a study.

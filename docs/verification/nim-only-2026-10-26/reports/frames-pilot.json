@@ -1,0 +1,301 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "64c92ce6dba655269ecaf99191ab8bca079730bad6f424d3ce7941c1bc8bf4d8",
+  "calls": [
+    {
+      "case": "frames-020-039-061",
+      "hypothesis": "Exact-interval frames avoid importing surrounding actions; each reference event gets explicit evidence-bounded detail levels.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/6a5d721b1065d57dbef6.jpg",
+          "sha256": "19a3839d75f40e8bd9b7c9acb706b536bcc496384043759118a0f3bdaac7dd4d",
+          "bytes": 17608,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/d3195a15ad4c02cb6b84.jpg",
+          "sha256": "6ed56e543566681ac987bb7786af56c0d52f9c766d26149e24cf429eab5021b1",
+          "bytes": 17720,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/6a1579d2b93f58c16681.jpg",
+          "sha256": "b38e6caeb8aa0ba718ace158b03934c2f6735f873d8ee1a2f1ad25df6538ec11",
+          "bytes": 23976,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/a88b3ddc0ba27e7f2b2d.jpg",
+          "sha256": "94a4867000f21042b8fe12cf3d96580a765c7065e7901ccccedde307ac4fb6ff",
+          "bytes": 23703,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/470c11e76a7721e2c444.jpg",
+          "sha256": "37a2a076ce082fee965a97e99f5340f5d9c0bb5891895ea2b1e09684d2bded96",
+          "bytes": 15159,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/662e97dd38abcd147987.jpg",
+          "sha256": "ad7f73349d29dd98466957ac5965e94b9257cb114416c77be0d34db160a06201",
+          "bytes": 15193,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Create three levels of non-speech captions for a DHH-centered research demo.\nThis is REFERENCE-ASSISTED generation: the supplied images are silent. Sound events\ncome ONLY from the licensed reference. Images identify relevant visible context;\nthey cannot prove acoustic properties. Each cue has two frames INSIDE its interval.\nNever import actions/characters from memory, the plot, another cue, or another time.\n\nFor EACH numbered reference event produce:\nessential: shortest understandable sound category/event;\nbalanced: the source and sound action, plus any salient reference attribute;\ndetailed: add relevant visible source/action/location if firmly supported by that\ncue's images. Prefer helpful context (who/what/where) over redundant articles,\nunnecessary color, decorative language, or scene narration. Do not describe\nunrelated scenery. If no additional supported fact exists, repeat the balanced\ncaption and explain the limit; a richer label must not invent information.\nDo not add instruments, loudness, pitch, rhythm, emotions or sound direction unless\nthe REFERENCE states them. A visible location is allowed. Reference [DOOR CREAKS]\nplus a visible person opening it can become [Creaking], [A door creaks],\n[The door creaks as it opens]. The opening is visible, the creak is reference-only.\nKeep reference attributes such as pain/anger when appropriate for the detail level.\nUnidentified sources stay unidentified. An off-screen source is not automatically\nan inaudible one; do not drop its reference event because it is not pictured.\n\nReturn ALL cues and ALL reference events, in order. Each caption is ONE bracketed\nline, with no internal newline. At most 40/65/95 characters per event, respectively.\nAvoid repeated brackets and padding. Source intervals will not be extended: shorter\ncaptions are preferable, especially for the subsecond intervals. Reading time still\nneeds separate review. Keep visual_facts factual and specific to that cue's images.\nEach added_detail must cite reference or visible as its basis. No invented audio\nobservations. Empty visual facts and equal levels are allowed. Return only JSON.\n"
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-020\", \"start_s\": 83.624, \"end_s\": 84.999, \"events\": [{\"index\": 1, \"reference\": \"[APPLE THUDS]\"}], \"frame_times_s\": [83.968, 84.655]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-020 frame at 83.968s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "af91b4d151623812bb1f82d801510b7dbbe13164a0ef6ccfb8b7a873f775d27f",
+                    "data_uri_characters": 23503,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-020 frame at 84.655s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "88dfe7b14e3a6b9d741a999631b38eaa9951672dedf40c8b8ce94091e8b96eb9",
+                    "data_uri_characters": 23651,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-039\", \"start_s\": 180.583, \"end_s\": 184.208, \"events\": [{\"index\": 1, \"reference\": \"[NUTS WHOOSHING]\"}], \"frame_times_s\": [181.489, 183.302]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-039 frame at 181.489s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "15c1e4b49971c69b82a43e4e22de204cff3266b27d8adaf3cc58fadd4636dea4",
+                    "data_uri_characters": 31991,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-039 frame at 183.302s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "4ad39f141928affd41379afe7f88128277266b0c6da5cb68713dcee0d03decc6",
+                    "data_uri_characters": 31627,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-061\", \"start_s\": 337.124, \"end_s\": 338.499, \"events\": [{\"index\": 1, \"reference\": \"[THUD]\"}, {\"index\": 2, \"reference\": \"[SQUIRREL SQUEAKS IN PAIN]\"}], \"frame_times_s\": [337.468, 338.155]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-061 frame at 337.468s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3c5b9a99465f99b0857eab275aafcfe9ef3aab642a197a381905ba3c764ba53e",
+                    "data_uri_characters": 20235,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-061 frame at 338.155s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "94b790fdb5d0a74c2a4e02dd339e0f638dfabc0bfc0b55f889e547b869ec1c82",
+                    "data_uri_characters": 20283,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "temperature": 0.2,
+        "max_tokens": 8192,
+        "stream": false,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "source_assisted_captions",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "cues": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "cue_id": {
+                        "type": "string"
+                      },
+                      "visual_facts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "events": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "index": {
+                              "type": "integer"
+                            },
+                            "essential": {
+                              "type": "string"
+                            },
+                            "balanced": {
+                              "type": "string"
+                            },
+                            "detailed": {
+                              "type": "string"
+                            },
+                            "added_details": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "detail": {
+                                    "type": "string"
+                                  },
+                                  "basis": {
+                                    "type": "string",
+                                    "enum": [
+                                      "reference",
+                                      "visible"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "detail",
+                                  "basis"
+                                ]
+                              }
+                            },
+                            "limitation": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "index",
+                            "essential",
+                            "balanced",
+                            "detailed",
+                            "added_details",
+                            "limitation"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "cue_id",
+                      "visual_facts",
+                      "events"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "cues"
+              ]
+            }
+          }
+        }
+      },
+      "wire_sha256": "f320c60dad7bdba5923f00d0bc22aed353eca6b22085d720d6e5600ca0a7fcc3",
+      "wire_bytes": 156140,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "acf888fa-d49c-4f4a-aa18-7dee2e734610",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-5949cbca-3e0e-48bb-a639-338f3299bc78",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\"cues\": [{\"cue_id\": \"bbb-sdh-020\", \"visual_facts\": [\"A white rabbit stands in a grassy field with an apple on the ground nearby.\"], \"events\": [{\"index\": 1, \"essential\": \"[Apple thuds]\", \"balanced\": \"[An apple thuds]\", \"detailed\": \"[An apple thuds]\", \"added_details\": [], \"limitation\": \"No additional supported fact exists beyond the reference event.\"}]}, {\"cue_id\": \"bbb-sdh-039\", \"visual_facts\": [\"A squirrel and a chipmunk are on a rock while a small gray animal sits in the grass nearby.\"], \"events\": [{\"index\": 1, \"essential\": \"[Nuts whooshing]\", \"balanced\": \"[Nuts whooshing]\", \"detailed\": \"[Nuts whooshing]\", \"added_details\": [], \"limitation\": \"No additional supported fact exists beyond the reference event.\"}]}, {\"cue_id\": \"bbb-sdh-061\", \"visual_facts\": [\"An acorn falls through the air against a bright sky with trees below.\"], \"events\": [{\"index\": 1, \"essential\": \"[Thud]\", \"balanced\": \"[A thud]\", \"detailed\": \"[A thud]\", \"added_details\": [], \"limitation\": \"No additional supported fact exists beyond the reference event.\"}, {\"index\": 2, \"essential\": \"[Squirrel squeaks]\", \"balanced\": \"[A squirrel squeaks in pain]\", \"detailed\": \"[A squirrel squeaks in pain]\", \"added_details\": [], \"limitation\": \"No additional supported fact exists beyond the reference event.\"}]}]}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793001588,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2497,
+          "completion_tokens": 371,
+          "total_tokens": 2868,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 26.725
+    }
+  ]
+}

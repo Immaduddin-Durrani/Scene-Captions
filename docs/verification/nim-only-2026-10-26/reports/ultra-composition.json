@@ -1,0 +1,32 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "98575f2e3f0df54584e5b8a00fcbbd8fc46290ada9f994e38df43993896b9501",
+  "calls": [
+    {
+      "case": "apple-ultra-text-composition",
+      "hypothesis": "Test the larger NIM text model on the same reviewed facts; no audio or visual capability is inferred from text composition.",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write sound captions for a Deaf/hard-of-hearing viewer using ONLY these supplied facts. The sound event is reference-derived; the location is visually observed. Essential must name the sound event; balanced must name its source; detailed must include the relevant supported visual location. Never add unsupported acoustic information. Example for different content: [Clattering] -> [A can clatters] -> [A can clatters beside the actor]. Return JSON with essential, balanced, detailed, and evidence_used. These are source-assisted captions, not independently heard sounds.\n{\"reference\": \"[APPLE THUDS]\", \"visual_fact\": \"An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\", \"allowed_acoustic_information\": [\"thud\"], \"forbidden_unverified_acoustic_information\": [\"pitch\", \"loudness\", \"texture\", \"instruments\", \"direction of sound\"]}"
+          }
+        ],
+        "reasoning_effort": "medium",
+        "temperature": 0.2,
+        "max_tokens": 16384,
+        "stream": false,
+        "reasoning_budget": 4096
+      },
+      "wire_sha256": "c7c4aacd1aab8396af3c7122b7143653dc62722ff93dfe18a871bcde70356518",
+      "wire_bytes": 1102,
+      "attempts": 1,
+      "http_status": 400,
+      "error": "{\"error\":{\"message\":\"ValueError: thinking_token_budget is not yet supported by the V2 model runner. Run vLLM with VLLM_USE_V2_MODEL_RUNNER=0 to use thinking_token_budget.\",\"type\":\"Bad Request\",\"code\":400}}",
+      "seconds": 0.77
+    }
+  ]
+}

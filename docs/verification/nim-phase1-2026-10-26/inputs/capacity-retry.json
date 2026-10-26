@@ -1,0 +1,89 @@
+[
+  {
+    "case": "documented-silence-capacity-retry",
+    "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-tone-capacity-retry",
+    "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "documented-music-capacity-retry",
+    "hypothesis": "Retry unchanged payload once after provider capacity failure; failure is not semantic evidence.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Describe the audible contents of this recording in one concise sentence."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

@@ -16,5 +16,11 @@
     "bytes": 23368039,
     "sha256": "a0257c4dbb4c9769ce8386e87b52529576875b95c4d327169ab55ac88d0ff466",
     "source": "https://arxiv.org/pdf/2604.19300v1"
+  },
+  "nvidia-2026-nemotron-omni.pdf": {
+    "bytes": 4737494,
+    "sha256": "dd00e605fd69e3e45b4143f147a95649e9f47a52fb983313e1d1bd212fcd3f5a",
+    "source": "https://arxiv.org/pdf/2604.24954v2",
+    "license": "CC BY 4.0; arXiv v2 license link checked 2026-10-26"
   }
 }

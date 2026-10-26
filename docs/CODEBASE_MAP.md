@@ -1,63 +1,66 @@
-# Current freshness notice
-
-The library integration changed `src/app/page.tsx`, the schema/parser, player/timeline/workspace and added `screening-room.tsx`, subtitle import/preparation and regression checks. The saved graph below predates those changes; its input manifest is stale for them. No new Graphify activation was requested for this follow-up. Read the current [library evidence](verification/library-2026-10-24/README.md) and source for these boundaries.
-
 # Codebase map
 
-Refreshed on 24 October 2026 after the current [model investigation and component cleanup](audits/2026-10-24-investigation.md). The manifest records 63 source/config/test files, 334 nodes and 740 edges. Local deterministic Graphify extraction used zero semantic/model tokens and no agents, providers, MCP or watchers. The later media helper is now inventoried; eight source files yield no extracted symbols. The current input manifest is authoritative for byte hashes and scope; cross-platform line endings can change those hashes.
+Refreshed **26 October 2026** for the caption-free NIM investigation. The manifest covers **79 code/config/test files, 436 nodes and 1,019 edges**. All recorded input hashes matched after final code edits. Graphifyy 0.9.92 used local deterministic AST extraction with `parallel=False`: zero semantic/model calls, no agents, providers, watchers or MCP services.
 
+- [Interactive map](codebase-map.html) — the optional viewer loads CDN-hosted vis.js when opened; playback does not depend on it.
 - [Machine-readable graph](codebase-map.json)
-- [Interactive Graphify map](codebase-map.html) — optional visualization uses CDN-hosted vis.js when opened; the application does not depend on it.
-- [Input hashes and method](codebase-map-inputs.json)
+- [Input hashes, version and scope](codebase-map-inputs.json)
+- [Current raw extraction diagnostics](verification/nim-counterfactuals-2026-10-26/reports/map-diagnostics.json)
+- [Test, audit and model evidence](verification/nim-counterfactuals-2026-10-26/README.md)
+
+**Integrity/coverage warning:** raw extraction has 302 dangling endpoint references and 29 same-endpoint directed edge collapses; 11 inventoried files yield no symbols. The built DiGraph binds stored endpoints but does not resolve those raw omissions. `dedup=False` controls entity merging, not parallel-edge preservation. This map is an orientation aid, not complete or corruption-free runtime/data-flow proof. Media, documents, source JSON and generated evidence are outside AST extraction. The broad ignored `graphify-out/graph.json` from earlier work has a different scope and remains historical; use the committed source map and manifest above.
+
+## Current boundaries
+
+This diagram was checked manually against source and selected graph edges. Dotted file/data relationships require manual inspection; Graphify does not discover them reliably.
 
 ```mermaid
 flowchart TD
-  Home[Next.js home page] --> Data[Precomputed caption JSON]
-  Home --> Workspace[Workspace and viewer state]
-  Workspace --> Player[Native video and caption overlay]
-  Workspace --> Preferences[Draft preview and explicit Apply]
-  Preferences --> Temporary[Temporary on-video preview]
-  Temporary --> Player
-  Workspace --> Rehearsal[Opt-in rehearsal and JSON export]
-  Workspace --> Schema[Caption and profile validation]
-  Preferences --> Selector[Pure cached caption selector]
-  Player --> Selector
-  Workspace --> Profile[Browser localStorage: profile only]
-  Workspace --> Imports[Local video blob and caption JSON]
-  Rehearsal --> Events[Validated events in page memory]
+  Home[Next.js home page] --> Schema[Caption schema]
+  Home -.-> Bundled[Bundled caption JSON and configured media URLs]
+  Home --> Library[ScreeningRoom film selection]
+  Library --> Workspace[Workspace viewer state]
+  Workspace --> Player[VideoPlayer and playback hook]
+  Workspace --> Preferences[Draft preferences and explicit Apply]
+  Preferences --> Preview[Temporary caption preview]
+  Preview --> Player
+  Player --> Selector[Pure caption selector]
+  Selector -.-> Reference[Fetched reference text or generated draft grid]
+  Workspace --> LocalMedia[Local media and caption imports]
+  Workspace --> Rehearsal[Consent, in-memory events and JSON export]
+  Workspace -.-> Profile[Browser localStorage: profile]
   PlanRoute[Experimental plan route] --> Plan[Shared protocol content]
-  Plan --> Exporter[Markdown plan export script]
+  Plan --> Exporter[Markdown exporter]
   Ping[GET and HEAD health route]
-  Source[Timed source captions] --> Candidate[Offline variant generation and strict checks]
-  Candidate --> Review[Separate candidate and review report]
-  Source --> Audio[Exact-video clips and calibration]
-  Audio --> Gate[Audio observations or failed gate]
-  Gate --> Human[Listening and wording review]
-  Review --> Human
-  Setup[Demo setup] --> Zip[Windows PowerShell ZIP or Unix unzip]
+  LocalGeneration[Source-assisted local generation] -.-> SavedDraft[Saved wording and editorial edits]
+  SavedDraft -.-> ExplicitInstall[Explicit source-assisted installer]
+  ExplicitInstall -.-> Bundled
+  Prep[Caption-free counterfactual preparation] -.-> Media[Blinded WAV and silent MP4]
+  Prep -.-> Manifest[Frozen protocol and request manifest]
+  Manifest -.-> Driver[Bounded phase1_nim driver]
+  Media -.-> Driver
+  Driver --> Client[Private key loading and shared rate limit]
+  Driver -.-> NIM[NVIDIA hosted endpoint]
+  NIM -.-> Report[Separate raw report]
+  Report -.-> Assessment[Manifest-bound validation and assessment]
+  Assessment --> JSONGuard[Explicit completion and strict structure]
+  Assessment -.-> Review[Manual sound, timing and wording review]
+  OldGenerator[Older full-film generation CLI] -.-> Gate[Existing failed audio gate]
+  Gate -.-> Blocked[Full-film generation/install blocked]
 ```
 
-The diagram is a manually checked boundary guide, not proof that extraction discovers every React interaction. The committed map inventories code under src/scripts/tests plus root Next.js/package/TypeScript configuration. Some anonymous browser/test files and the PowerShell bridge yield no symbols; see extraction warnings in the dated fixes evidence. Graphify does not prove runtime behavior, audio capability, annotation accuracy or complete alias/data-flow coverage. Source JSON, media, generated evidence and participant behavior require separate checks.
+`Workspace` coordinates viewer state; `useLocalMedia` owns imported files and blob cleanup; `useRehearsal` owns event capture/stopped time. `useVideoPlayback` owns media events, seeking, playback and preview timing. The selector chooses actual `reference_text` for source-assisted reference comparison and grid wording for personalized viewing. Applying preferences is separate from temporary preview. Current BBB wording remains a source-assisted, unverified draft.
 
-Refresh after structural changes with the isolated runtime:
+Offline diagnostics are separate from application playback. `nim-counterfactuals.py` prepares inputs and scores saved reports; it performs no inference or installation. `phase1_nim.py` sends only explicit bounded NIM jobs and writes separate reports. Its network call uses private key loading/rate limiting from `nim_client.py`; structured assessment calls `validate_result` then the shared completion/JSON guard. These symbol edges are present in the source graph. File-based protocol/manifest/media/report edges and the absence of installation in the diagnostic driver were checked manually.
+
+The old full-film generator and source-assisted installer are distinct tools. The old generator's existing failed capability gate still blocks full generation/installation. This is a workflow guard, not a security boundary against deliberately editing the file or invoking another installer. No counterfactual output is connected automatically to playback, and no accepted independent NIM track exists.
+
+## Refresh
+
+Run only when mapping is explicitly authorized, using the isolated pinned environment:
 
 ```sh
-python scripts/map-codebase.py
+/Users/hamza/runtimes/graphify/.venv/bin/python scripts/map-codebase.py
 ```
 
-Use an isolated Python environment with the pinned Graphify package from `requirements-tools.txt`, not an arbitrary system interpreter. On another machine, rebuild that environment; do not copy it. Mapping is a manual authorized task, never a startup hook or background service. Refresh after final code changes, then compare the input hashes before relying on the map.
-
-
-## Source-caption follow-up
-
-The current map includes the importer/parser path and newer preparation modules. Pinned SRT + editorial lexicon → importer → strict SRT parser/schema → bundled/public JSON → Workspace/VideoPlayer/Preferences. The importer preserves source timing and hashes the exact movie. Model candidates remain separate; there is no automatic edge from model output into playback. Failed audio calibration and rejected wording require review, not an installation shortcut.
-
-The broad local `graphify-out/` map is refreshed separately with code-only CLI extraction. It also classifies structured JSON/evidence and therefore has a different scope/count from the committed source map. Documents/media were not semantically indexed; a broad scan is not proof of complete understanding. Local ignored outputs may be absent in another checkout. The dated [fixes report](audits/2026-10-24-fixes.md) records freshness and tool limits.
-
-## Current ownership boundaries
-
-`Workspace` orchestrates the viewer; `useLocalMedia` owns local files/blob cleanup, `useRehearsal` owns event capture and stopped time, and track notice/timeline/import panels own presentation. `useVideoPlayback` owns media readiness, events, preview timing and transport actions; player controls and caption display/feedback are separate views. Preferences retain their draft identity with separate style, preview and readability views. Active rehearsal answers/export and pre-start consent are separate phases; snapshot construction is pure.
-
-Offline source caption generation → strict variant/completion guards → separate candidates. Contextual review preparation → hash-bound pending receipt → explicit human review; there is no automatic edge into playback. The refreshed source map includes these boundaries. The broad ignored graphify-out graph from earlier sessions was not refreshed and is historical. Graphs cannot establish complete React wiring, sound correctness or runtime behavior. Current behavior evidence is linked from the investigation.
-
-Integrity warning from the cached raw extraction: 169 dangling endpoint references and 28 same-endpoint directed pairs under the diagnostic's default deduplicating build. The committed mapper uses a DiGraph; all stored endpoints are bound, but that does not resolve the raw reference/coverage uncertainty. Its `dedup=False` controls entity merging, not parallel-edge collapse. See [raw diagnostics](verification/investigation-2026-10-24/reports/map-diagnostics.json). No claim of complete or corruption-free call extraction is made.
+After structural changes, refresh and compare input hashes before relying on the graph. Cross-platform line endings can change byte hashes. Hash freshness proves the map's input snapshot, not complete extraction, annotation correctness, runtime behavior or DHH usefulness. Current diagnostics and manual boundary review are necessary alongside the visualization; do not treat old snapshot counts as current.

@@ -1,0 +1,11 @@
+{
+  "passed": [
+    "all 87 fetched captions render at their exact reference intervals after real video seeks, including multiline effects and the final cue",
+    "former 1:18 mismatch absent; next-cue timing explains the gap",
+    "play/pause, cue jump, original override, preview/apply, preferences persist, keyboard seeking",
+    "cue-density adaptation and explicit rationale",
+    "local media clears captions, correct unavailable notice, mismatch suppression, failed candidate rejection, matching import and restoration",
+    "opt-in rehearsal and export",
+    "mobile layout and experimental plan"
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "case": "bbb-sdh-001-context-v2",
+    "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-001\", \"reference_interval_seconds_in_clip\": [2.499, 6.416], \"reference_caption\": \"[SERENE MUSIC]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-001-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  },
+  {
+    "case": "bbb-sdh-002-context-v2",
+    "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-002\", \"reference_interval_seconds_in_clip\": [4.0, 6.167], \"reference_caption\": \"[BROOK BABBLES]\\n[FLY BUZZES]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-002-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  },
+  {
+    "case": "bbb-sdh-020-context-v2",
+    "hypothesis": "Clarify an over-restrictive pilot prompt: visible source/action relationships may enrich details, but pixels do not establish extra acoustic properties. Compare against pilot; preserve every reference event.",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Draft three detail levels of a sound caption for DHH viewers. This video has NO AUDIO; use the licensed reference as the sound-event anchor, and the SILENT pixels to identify visible actions/objects that relate to that same event. You MAY add visible action, identity and location to Detailed if actually visible at the target time. You MAY NOT add new sounds, unheard instruments, loudness, pitch, rhythm, direction of audio, or speculative emotions/intent. A visual location is allowed (e.g. an object landing on grass); an auditory location is not (e.g. sound from behind the viewer). If no supported extra detail exists, return equal levels and explain the limitation. Do not use background scenery as filler.\nExample unrelated to this film: reference [DOOR CREAKS], visible a woman slowly opening a wooden door. Essential [Creaking]; Balanced [A door creaks]; Detailed [The wooden door creaks as she opens it]. Wood/opening is visible evidence, creak is reference evidence. Never claim you heard it.\nReturn JSON {cue_id,visual_facts:[],sound_facts:[],essential,balanced,detailed,added_details:[{detail,basis}],limitation}. Essential retains all events in short wording, balanced identifies sources and descriptive event verbs, detailed adds only relevant supported context. Maximum 100 characters each. Do not invent detail to meet length. Caption only the target reference interval, not surrounding events.\n{\"cue_id\": \"bbb-sdh-020\", \"reference_interval_seconds_in_clip\": [4.0, 5.375], \"reference_caption\": \"[APPLE THUDS]\"}"
+            },
+            {
+              "type": "local_mp4",
+              "path": "artifacts/nim-phase1-2026-10-26/bbb-sdh-020-context.mp4"
+            }
+          ]
+        }
+      ],
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "stream": false
+    }
+  }
+]

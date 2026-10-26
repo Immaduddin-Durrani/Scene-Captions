@@ -1,0 +1,30 @@
+{
+  "c01": {
+    "frames": 160000,
+    "peak_abs": 32347,
+    "rms_dbfs": -30.65194299271888,
+    "first_nonzero_s": 3.2291875,
+    "last_nonzero_s": 3.586625
+  },
+  "c02": {
+    "frames": 160000,
+    "peak_abs": 32347,
+    "rms_dbfs": -30.65194299271888,
+    "first_nonzero_s": 6.2291875,
+    "last_nonzero_s": 6.586625
+  },
+  "c03": {
+    "frames": 160000,
+    "peak_abs": 21288,
+    "rms_dbfs": -24.188974107409212,
+    "first_nonzero_s": 1.0,
+    "last_nonzero_s": 5.9999375
+  },
+  "c00": {
+    "frames": 160000,
+    "peak_abs": 0,
+    "rms_dbfs": null,
+    "first_nonzero_s": null,
+    "last_nonzero_s": null
+  }
+}

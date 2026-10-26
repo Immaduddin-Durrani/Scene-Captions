@@ -1,0 +1,13 @@
+{
+  "checked": [
+    "bbb-sdh-002",
+    "bbb-sdh-020",
+    "bbb-sdh-061"
+  ],
+  "detailPresets": 3,
+  "referencePreservesTime": true,
+  "keyboardReference": true,
+  "mobileOverflow": false,
+  "reflow": "720 CSS-pixel viewport; native browser zoom unverified",
+  "dataset": "Existing local Qwen/editorial draft, not new NIM captions"
+}

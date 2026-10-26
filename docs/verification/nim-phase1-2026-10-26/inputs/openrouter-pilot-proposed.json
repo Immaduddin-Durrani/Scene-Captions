@@ -1,0 +1,210 @@
+{
+  "state": "DECLINED \u2014 User selected NVIDIA NIM only; do not execute",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "max_requests": 8,
+  "max_estimated_usage_usd": 1,
+  "requires": "Fresh permission and a privately stored, account-capped OPENROUTER_API_KEY. Verify current model/provider modalities and pricing before invocation. No full-film authorization is implied.",
+  "hypothesis": "An alternative audio-capable model/serving path may resolve failed NIM non-speech controls. No claim it will pass.",
+  "jobs": [
+    {
+      "case": "documented-speech",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/nim-phase1-2026-10-26/nonce.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "documented-silence",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "documented-tone",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "documented-music",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/sound-captions/control-v1/4526fb2d82c604413ecc.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "documented-overlap",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/sound-captions/control-v1/2033f2c1ba98bd91c722.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "apple-strict",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_wav",
+                "path": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav",
+                "wire_type": "input_audio"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "apple-enabled",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_mp4",
+                "path": "artifacts/nim-phase1-2026-10-26/apple.mp4",
+                "processing": "static"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    },
+    {
+      "case": "apple-muted",
+      "payload": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Transcribe speech if present, then describe only audible sounds in one concise sentence. If there is no audible sound, state that. Do not infer sound from visible action. Do not guess physical sources when uncertain."
+              },
+              {
+                "type": "local_mp4",
+                "path": "artifacts/nim-phase1-2026-10-26/apple-muted.mp4",
+                "processing": "static"
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "stream": false
+      }
+    }
+  ]
+}

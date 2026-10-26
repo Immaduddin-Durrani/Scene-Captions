@@ -1,0 +1,367 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "c8936ae50b303ed7cb19c90603af855e6f66dddb8c1e7504b11f1d843e1794e0",
+  "calls": [
+    {
+      "case": "bbb-sdh-002-v3",
+      "hypothesis": "Source events plus silent visual context can support useful detail without inventing acoustic attributes; draft only, not listening approval.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-002.mp4",
+          "sha256": "fd1e6f449fb19e5864c087770825ceb9ce17cba112e62a931370277e4f5b4f81",
+          "duration_s": 12.0,
+          "bytes": 313359,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-002\", \"reference_caption\": \"[BROOK BABBLES]\\n[FLY BUZZES]\", \"target_interval_in_clip\": [5.0, 7.167], \"clip_start_in_film_s\": 6.791, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "8435722f4959193ff1e5590a1ecf7f77f800bd99c95e0192cd57bdb50ed6103c",
+                    "data_uri_characters": 417834,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "16c478cf579ae25de7baae7a10b524e785266aace737fd60d5d6cceedb102e35",
+      "wire_bytes": 420316,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "7b33bfd4-10be-4b7c-8ee1-3f4825a67fcd",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-638ecfe9-ba39-42e8-b145-d91c04c4a2ce",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-002\",\n  \"visual_facts\": [\n    \"A brook flows through a grassy field\",\n    \"Flowers and lily pads line the water\"\n  ],\n  \"sound_facts\": [\n    \"BROOK BABBLES\",\n    \"FLY BUZZES\"\n  ],\n  \"essential\": \"[Brook babbles, fly buzzes]\",\n  \"balanced\": \"[A brook babbles]\\n[A fly buzzes]\",\n  \"detailed\": \"[A brook babbles along a grassy bank]\\n[A fly buzzes]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Grassy bank\",\n      \"basis\": \"Visible vegetation lining the brook\"\n    },\n    {\n      \"detail\": \"Flowing water\",\n      \"basis\": \"Visible stream movement\"\n    }\n  ],\n  \"limitation\": \"Audio is unavailable; sound facts rely solely on the reference caption. Visual confirmation of the fly is absent.\"\n}",
+              "role": "assistant",
+              "reasoning_content": "The user wants me to draft non-speech captions for a specific interval of a video.\n\n**1. Analyze the Input:**\n*   **Video:** A sequence of frames from \"Big Buck Bunny\".\n    *   Frames 00:00 - 00:04: Landscape shot, trees, grass, pink sky.\n    *   Frames 00:05 - 00:07: A brook/stream flowing through grass.\n    *   Frames 00:08 - 00:12: Birds on a branch.\n*   **Target Interval:** [5.0, 7.167]. This corresponds to frames showing the brook/stream.\n*   **Reference Caption:** `[BROOK BABBLES]\\n[FLY BUZZES]`. This is the \"licensed reference\" sound evidence.\n*   **Constraint:** The video has NO AUDIO. I must rely *only* on the reference caption for sound facts and the visible video for visual facts.\n*   **Task:** Produce three levels of captions: Essential (<=40 chars), Balanced (<=72 chars), Detailed (<=100 chars).\n*   **Format:** JSON with specific keys: `cue_id`, `visual_facts`, `sound_facts`, `essential`, `balanced`, `detailed`, `added_details`, `limitation`.\n\n**2. Analyze the Target Interval (5.0 - 7.167):**\n*   **Visuals:** A small stream or brook flowing through green grass. There are flowers and lily pads visible. Water is moving.\n*   **Reference Sounds:** `[BROOK BABBLES]` and `[FLY BUZZES]`.\n*   **Constraint Check:** The prompt says \"Use pixels ONLY to identify the visible source/action associated with the reference event at the target interval.\"\n    *   Visible source for \"Brook Babble\": The brook/stream itself.\n    *   Visible source for \"Fly Buzzes\": Is there a fly visible? Looking closely at frames 00:05-00:07... I see water, grass, flowers, lily pads. I don't clearly see a fly. However, the reference says \"[FLY BUZZES]\". The prompt says \"Preserve ALL concurrent reference events at ALL levels.\" So I must include both sounds even if the fly isn't clearly visible, but I can only describe what is visible for the source/action if it matches. Wait, the prompt says \"Use pixels ONLY to identify the visible source/action associated with the reference event\". If I can't see a fly, I can't confirm the source visually, but the reference *is* the sound evidence. I will stick to the reference for sound facts.\n    *   Actually, looking really closely at the crop images or just the main frames... frame 00:05 shows the brook. Frame 00:06 shows the brook. Frame 00:07 shows the brook. No obvious fly. But the reference caption explicitly lists it. I must include it.\n\n**3. Drafting Captions:**\n\n*   **Sound Facts:** `[\"BROOK BABBLES\", \"FLY BUZZES\"]`\n*   **Visual Facts:** `[\"A brook flows through grass\", \"Flowers and lily pads line the water\"]` (Keep it concise).\n\n*   **Level 1: Essential (<=40 chars)**\n    *   Needs to name every sound briefly.\n    *   Draft: `[Brook babbles, fly buzzes]` -> 26 chars. Good.\n\n*   **Level 2: Balanced (<=72 chars)**\n    *   Identifies supported source and sound action.\n    *   Draft: `[A brook babbles and a fly buzzes]` -> 34 chars. Or maybe separate lines? The prompt says \"separate lines for simultaneous sounds\".\n    *   Let's look at the example format: `[Creaking]`, `[A door creaks]`, `[The door creaks as it opens]`.\n    *   So for Balanced: `[A brook babbles]\\n[A fly buzzes]`?\n    *   Wait, the output format requires `essential`, `balanced`, `detailed` as single strings. The prompt says \"Keep each caption in square brackets, with separate lines for simultaneous sounds.\" This implies the string value should contain newlines if there are multiple sounds.\n    *   Let's try to combine or separate. The reference has two lines.\n    *   Draft Balanced: `[A brook babbles]\\n[A fly buzzes]` (33 chars).\n    *   Alternative: `[Brook babbles, fly buzzes]`.\n    *   Let's look at the instruction: \"Balanced identifies its supported source and sound action\".\n    *   Draft: `[A brook babbles]\\n[A fly buzzes]`\n\n*   **Level 3: Detailed (<=100 chars)**\n    *   Adds relevant, actually visible source/action/context.\n    *   Visible: Brook flowing, grassy bank.\n    *   Draft: `[A brook babbles along a grassy bank]\\n[A fly buzzes near the water]` -> 66 chars.\n    *   Wait, is the fly visible? If not, I shouldn't invent it. But the reference says it buzzes. I can say \"[A fly buzzes]\" but adding context \"near the water\" might be an assumption if I don't see it. However, the brook is definitely there.\n    *   Let's refine: `[A brook babbles through grass]\\n[A fly buzzes]`\n    *   Let's try to make it more descriptive based on visuals: `[Water babbles in a grassy brook]\\n[A fly buzzes]`\n\n*   **Added Details:**\n    *   Need objects with `detail` and `basis`.\n    *   Detail: \"Grassy bank\", Basis: \"Visible vegetation lining the brook\".\n    *   Detail: \"Flowing water\", Basis: \"Visible stream movement\".\n\n*   **Limitation:**\n    *   \"If evidence is too thin, levels may be identical: explain this in limitation.\"\n    *   Since I have visual confirmation of the brook but maybe not the fly, there might be a limitation regarding the fly's visibility. Or generally, since there is no audio, I rely entirely on the reference.\n    *   Limitation: \"Audio is unavailable; sound facts rely solely on the reference caption. Fly visibility is not confirmed in the visual frames.\"\n\n**4. Refining JSON Structure:**\n*   `cue_id`: \"bbb-sdh-002\"\n*   `visual_facts`: [\"A brook flows through a grassy field\", \"Flowers and lily pads line the water\"]\n*   `sound_facts`: [\"BROOK BABBLES\", \"FLY BUZZES\"]\n*   `essential`: \"[Brook babbles, fly buzzes]\"\n*   `balanced`: \"[A brook babbles]\\n[A fly buzzes]\"\n*   `detailed`: \"[A brook babbles through grass]\\n[A fly buzzes near the water]\" -> Wait, \"near the water\" is an assumption if I don't see the fly. Let's stick to what is visible for the brook part.\n    *   Revised Detailed: \"[A brook babbles along a grassy bank]\\n[A fly buzzes]\"\n*   `added_details`: [{\"detail\": \"Grassy bank\", \"basis\": \"Visible vegetation lining the brook\"}, {\"detail\": \"Flowing water\", \"basis\": \"Visible stream movement\"}]\n*   `limitation`: \"Audio is unavailable; sound facts rely solely on the reference caption. Fly visibility is not confirmed in the visual frames.\"\n\n**5. Final Check against constraints:**\n*   Chars count:\n    *   Essential: `[Brook babbles, fly buzzes]` (26 chars) <= 40. OK.\n    *   Balanced: `[A brook babbles]\\n[A fly buzzes]` (33 chars) <= 72. OK.\n    *   Detailed: `[A brook babbles along a grassy bank]\\n[A fly buzzes]` (53 chars) <= 100. OK.\n*   JSON keys correct? Yes.\n*   No markdown? Yes.\n*   Square brackets? Yes.\n*   Separate lines for simultaneous sounds? Yes, using `\\n`.\n\nLet's double check the \"Fly Buzzes\" part. The reference says it. The prompt says \"Preserve ALL concurrent reference events at ALL levels.\" So I must include it in all levels.\n\nLet's refine the `added_details`.\nDetail: \"Brook\", Basis: \"Visible stream flowing through grass\".\nDetail: \"Fly\", Basis: \"Referenced sound event, source not clearly visible\". Or just omit if not visible. The prompt says \"added_details (array of objects with detail and basis)\". I will add the brook details.\n\nLet's refine the limitation string. \"Audio is unavailable; sound facts rely solely on the reference caption. Visual confirmation of the fly is absent.\"\n\nOne detail: \"Use pixels ONLY to identify the visible source/action associated with the reference event at the target interval.\"\nTarget interval: 5.0 - 7.167.\nFrames show: Brook.\nReference: Brook Babble, Fly Buzz.\nSo for the brook, I can link visual to sound. For the fly, I can't link visual to sound, but I must include the sound.\n\nFinal Polish of strings:\nEssential: `[Brook babbles, fly buzzes]`\nBalanced: `[A brook babbles]\\n[A fly buzzes]`\nDetailed: `[A brook babbles along a grassy bank]\\n[A fly buzzes]`\n\nWait, looking at the frames 00:05-00:07 again. It's definitely a brook.\nIs there a fly? I don't see one.\nSo the limitation is valid.\n\nLet's construct the JSON."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999459,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2444,
+          "completion_tokens": 2386,
+          "total_tokens": 4830,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 2163,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 20.421
+    },
+    {
+      "case": "bbb-sdh-011-v3",
+      "hypothesis": "Source events plus silent visual context can support useful detail without inventing acoustic attributes; draft only, not listening approval.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-011.mp4",
+          "sha256": "0e007b2a3af3a0fac1626bd1a75463b84f11d36d70c323a2a553f8391f0a7453",
+          "duration_s": 11.5,
+          "bytes": 360092,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-011\", \"reference_caption\": \"[BUNNY SNORES]\", \"target_interval_in_clip\": [5.0, 6.292], \"clip_start_in_film_s\": 27.749000000000002, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "59d57d2e4f81832aa57f5ddfe8b283bc944400f800fd02b76aca896de5d60af7",
+                    "data_uri_characters": 480146,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "f488800319402a7fb0f8b5c296c417bb9bcdf22b75a1d038e62f842a19afb5d1",
+      "wire_bytes": 482625,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "d5ca0471-6718-4655-9a82-58d391bc77fb",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-e9235163-92a6-4035-b2f4-d2db90710580",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-011\",\n  \"visual_facts\": [\n    \"A large dark rabbit sleeps curled up inside a grassy burrow\",\n    \"The camera zooms into the burrow entrance\"\n  ],\n  \"sound_facts\": [\n    \"[BUNNY SNORES]\"\n  ],\n  \"essential\": \"[Bunny snores]\",\n  \"balanced\": \"[A bunny snores]\",\n  \"detailed\": \"[A bunny snores while sleeping in a grassy burrow]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Bunny sleeping in burrow\",\n      \"basis\": \"Visible in frames 5.0s-6.0s\"\n    },\n    {\n      \"detail\": \"Camera zooms into hole\",\n      \"basis\": \"Visible camera movement from 5.0s to 5.5s\"\n    }\n  ],\n  \"limitation\": \"Audio evidence is unavailable; sound characteristics like pitch or intensity cannot be verified.\"\n}",
+              "role": "assistant",
+              "reasoning_content": "The user wants me to generate SDH captions for a specific video interval based on a reference caption.\n\n**1. Analyze the Input:**\n*   **Video:** Frames from 0.0s to 11.0s are provided.\n*   **Target Interval:** [5.0, 6.292] seconds.\n*   **Reference Caption:** \"[BUNNY SNORES]\"\n*   **Reference Source:** Big Buck Bunny SRT file.\n*   **Constraint:** No audio is available to me. I must rely *only* on the visual evidence in the frames corresponding to the target interval and the reference caption.\n*   **Plot Context:** A large rabbit is bullied... (but I shouldn't use this as evidence for sound).\n*   **Output Format:** JSON with keys: `cue_id`, `visual_facts`, `sound_facts`, `essential`, `balanced`, `detailed`, `added_details`, `limitation`.\n\n**2. Analyze the Target Interval (5.0s - 6.292s):**\n*   Looking at the frames around 5.0s to 6.0s:\n    *   Frame at 5.0s: Shows a grassy mound with a hole. Something dark is inside.\n    *   Frame at 5.5s: The camera zooms into the hole. A large, dark, furry creature (the bunny) is curled up sleeping inside.\n    *   Frame at 6.0s: Close up of the sleeping bunny.\n*   **Visual Facts:** A large dark rabbit is sleeping curled up inside a grassy burrow/hole. The camera zooms in on it.\n*   **Sound Facts:** The reference says \"[BUNNY SNORES]\". Since there is no audio, I treat this as the only sound evidence.\n\n**3. Draft Captions:**\n\n*   **Essential (<= 40 chars):** Needs to name the sound briefly.\n    *   Draft: [Bunny snores]\n    *   Check length: 14 chars. Good.\n\n*   **Balanced (<= 72 chars):** Identifies supported source and sound action.\n    *   Draft: [A bunny snores]\n    *   Check length: 15 chars. Good.\n\n*   **Detailed (<= 100 chars):** Adds relevant visible source/action/context.\n    *   Draft: [A bunny snores while sleeping in a burrow]\n    *   Check length: 39 chars. Good.\n    *   Wait, let's look at the frames again. At 5.0s-6.292s, the bunny is clearly visible sleeping in the hole.\n    *   Draft: [A bunny snores while sleeping in a grassy burrow]\n    *   Check length: 46 chars. Good.\n\n**4. Construct Added Details:**\n*   Detail: Bunny sleeping in burrow. Basis: Visible in frames 5.0s-6.0s.\n*   Detail: Camera zooms into hole. Basis: Visible transition from 5.0s to 5.5s.\n\n**5. Construct Limitation:**\n*   Since there is no audio, pitch, intensity, or specific snore characteristics cannot be verified. The levels might be similar if visual context doesn't add much beyond \"bunny snores\". Here, visual context adds \"sleeping in burrow\".\n\n**6. Final Review against Constraints:**\n*   JSON format? Yes.\n*   No markdown? Yes.\n*   Keys correct? Yes.\n*   Pixel-only identification? Yes, referring to visible bunny/burrow.\n*   No invented audio details? Yes.\n*   Preserve concurrent events? Only one event listed in reference.\n\n**Refining the JSON content:**\n\n*   `cue_id`: \"bbb-sdh-011\"\n*   `visual_facts`: [\"A large dark rabbit sleeps curled up inside a grassy burrow\", \"The camera zooms into the burrow entrance\"]\n*   `sound_facts`: [\"[BUNNY SNORES]\"]\n*   `essential`: \"[Bunny snores]\"\n*   `balanced`: \"[A bunny snores]\"\n*   `detailed`: \"[A bunny snores while sleeping in a grassy burrow]\"\n*   `added_details`: [{\"detail\": \"Bunny sleeping in burrow\", \"basis\": \"Visible in frames 5.0s-6.0s\"}, {\"detail\": \"Camera zooms into hole\", \"basis\": \"Visible camera movement from 5.0s to 5.5s\"}]\n*   `limitation`: \"Audio evidence is unavailable; sound characteristics like pitch or intensity cannot be verified.\"\n\nLet's double check the character counts.\nEssential: \"[Bunny snores]\" -> 14 chars. OK.\nBalanced: \"[A bunny snores]\" -> 15 chars. OK.\nDetailed: \"[A bunny snores while sleeping in a grassy burrow]\" -> 49 chars. OK.\n\nWait, looking at the frames 5.0 to 6.292.\nFrame 5.0: Wide shot of mound.\nFrame 5.5: Zoomed in, bunny visible.\nFrame 6.0: Close up of bunny face.\nSo \"sleeping in a grassy burrow\" is accurate.\n\nLet's assemble the JSON."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999480,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2434,
+          "completion_tokens": 1381,
+          "total_tokens": 3815,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 1158,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 13.831
+    },
+    {
+      "case": "bbb-sdh-039-v3",
+      "hypothesis": "Source events plus silent visual context can support useful detail without inventing acoustic attributes; draft only, not listening approval.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-039.mp4",
+          "sha256": "79af21f47c2e20348f2877e346304a31f66b0c0327cf017d683068e7caa21b1f",
+          "duration_s": 13.5,
+          "bytes": 239279,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-039\", \"reference_caption\": \"[NUTS WHOOSHING]\", \"target_interval_in_clip\": [5.0, 8.625], \"clip_start_in_film_s\": 175.583, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "e09051ce2b358b5250970dec7b9e3b03b5c046fddbb95bab37a55fd7f04282b0",
+                    "data_uri_characters": 319062,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "406242e77e90f6f8258b58c1cf02bf6db34e84bf262cc51de9ec85933041520f",
+      "wire_bytes": 321532,
+      "attempts": 1,
+      "error": "The read operation timed out",
+      "classification": "inconclusive-transport-or-response",
+      "seconds": 180.647
+    },
+    {
+      "case": "bbb-sdh-061-v3",
+      "hypothesis": "Source events plus silent visual context can support useful detail without inventing acoustic attributes; draft only, not listening approval.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-061.mp4",
+          "sha256": "a057f14cf56ddbeb60826c33cf04f67c6181369c09feb05ef909e51a46f65a05",
+          "duration_s": 11.5,
+          "bytes": 234356,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-061\", \"reference_caption\": \"[THUD]\\n[SQUIRREL SQUEAKS IN PAIN]\", \"target_interval_in_clip\": [5.0, 6.375], \"clip_start_in_film_s\": 332.124, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "0d2cb8a95f6b00c5dcae6406847981d3cecc26298e2446083622cf55b5134f23",
+                    "data_uri_characters": 312498,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "6534eedfba1288625a0cf5c4c29a609fce550c9921c10fad011808aec8b778d7",
+      "wire_bytes": 314987,
+      "attempts": 1,
+      "http_status": 500,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}",
+      "seconds": 1.84
+    },
+    {
+      "case": "bbb-sdh-083-v3",
+      "hypothesis": "Source events plus silent visual context can support useful detail without inventing acoustic attributes; draft only, not listening approval.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-083.mp4",
+          "sha256": "41366a47ce3cbde7a76e06a4d1648084e8ff331094a567ecf08ee0b981f27124",
+          "duration_s": 13.0,
+          "bytes": 186082,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-083\", \"reference_caption\": \"[WIND BLOWS]\", \"target_interval_in_clip\": [5.0, 7.75], \"clip_start_in_film_s\": 475.749, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "266d85b23d955cf45f340b4cc2bfd8c86c74c59b27d237e0aa64ab628ad6bcee",
+                    "data_uri_characters": 248134,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "fb0dba1c9c4c5fd8574285471b6bade1eb9e258215eaa13b24e81a35a9ec58fe",
+      "wire_bytes": 250599,
+      "attempts": 1,
+      "http_status": 500,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}",
+      "seconds": 1.724
+    }
+  ]
+}

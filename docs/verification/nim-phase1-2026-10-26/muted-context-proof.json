@@ -1,0 +1,11 @@
+{
+  "samples": 182272,
+  "nonzero_samples": 0,
+  "peak_abs": 0,
+  "video_packet_hashes": [
+    "SHA256=73b30852a3280b365ecf3ac569f1486c30da8c3e30aea5aa0b633cca69c119b9",
+    "SHA256=73b30852a3280b365ecf3ac569f1486c30da8c3e30aea5aa0b633cca69c119b9"
+  ],
+  "identical_picture": true,
+  "outcome": "Muted input nevertheless described as audible thud with plot/reference in prompt. Independent sound gate remains failed."
+}

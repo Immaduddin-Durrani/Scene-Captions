@@ -1,0 +1,37 @@
+{
+  "dataset": "ESC-50: ESC-10 subset",
+  "revision": "33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6",
+  "source_revision_note": "Immutable revision",
+  "csv_sha256": "ca660da60191a97de289983a05821c9382d852a38a2ba8428980816b68cf6246",
+  "readme_sha256": "60a3ae8cecca8488f5381ef54f302396dbd1b0d82ae0d14afc92a4bfd6b34501",
+  "clips": [
+    {
+      "file": "artifacts/nim-counterfactuals-2026-10-26/f40a849a2375c8c63312.wav",
+      "sha256": "f40a849a2375c8c63312a73dd2dd6c74007301fcc21b4be2ece29a642831e3d8",
+      "source_url": "https://raw.githubusercontent.com/karolpiczak/ESC-50/33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6/audio/1-100032-A-0.wav",
+      "evaluation_only_metadata": {
+        "filename": "1-100032-A-0.wav",
+        "fold": "1",
+        "target": "0",
+        "category": "dog",
+        "esc10": "True",
+        "src_file": "100032",
+        "take": "A"
+      }
+    },
+    {
+      "file": "artifacts/nim-counterfactuals-2026-10-26/d732acd2e0c7c4040596.wav",
+      "sha256": "d732acd2e0c7c40405968010f49f250740c86998fc416eff2ed5330fc8c89dea",
+      "source_url": "https://raw.githubusercontent.com/karolpiczak/ESC-50/33c8ce9eb2cf0b1c2f8bcf322eb349b6be34dbb6/audio/1-17367-A-10.wav",
+      "evaluation_only_metadata": {
+        "filename": "1-17367-A-10.wav",
+        "fold": "1",
+        "target": "10",
+        "category": "rain",
+        "esc10": "True",
+        "src_file": "17367",
+        "take": "A"
+      }
+    }
+  ]
+}

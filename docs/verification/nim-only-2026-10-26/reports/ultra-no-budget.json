@@ -1,0 +1,59 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "80ee49afd96239a438f37626740578698599933c8bfcd7d94a6cd00b47b836fa",
+  "calls": [
+    {
+      "case": "apple-ultra-no-budget",
+      "hypothesis": "Remove only the advertised reasoning_budget parameter rejected by the hosted V2 runner; retain medium reasoning and the same supplied facts.",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write sound captions for a Deaf/hard-of-hearing viewer using ONLY these supplied facts. The sound event is reference-derived; the location is visually observed. Essential must name the sound event; balanced must name its source; detailed must include the relevant supported visual location. Never add unsupported acoustic information. Example for different content: [Clattering] -> [A can clatters] -> [A can clatters beside the actor]. Return JSON with essential, balanced, detailed, and evidence_used. These are source-assisted captions, not independently heard sounds.\n{\"reference\": \"[APPLE THUDS]\", \"visual_fact\": \"An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\", \"allowed_acoustic_information\": [\"thud\"], \"forbidden_unverified_acoustic_information\": [\"pitch\", \"loudness\", \"texture\", \"instruments\", \"direction of sound\"]}"
+          }
+        ],
+        "reasoning_effort": "medium",
+        "temperature": 0.2,
+        "max_tokens": 16384,
+        "stream": false
+      },
+      "wire_sha256": "4f0398bd4bf9c07dc6b6da47752dfb6afc1f9b9539a9d46901b7a6665b757a5b",
+      "wire_bytes": 1076,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "75d6a5f4-f698-4e41-89d5-afe946e1840d",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-d54b3191-e759-4e33-992f-315bf721fdca",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"essential\": \"Apple thuds\",\n  \"balanced\": \"An apple thuds\",\n  \"detailed\": \"An apple thuds on the grass next to the white rabbit\",\n  \"evidence_used\": [\n    \"reference: [APPLE THUDS]\",\n    \"visual_fact: An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\"\n  ]\n}",
+              "role": "assistant",
+              "reasoning_content": "We need to produce JSON with fields: essential, balanced, detailed, evidence_used.\n\nWe have reference \"[APPLE THUDS]\" and visual_fact: \"An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\"\n\nAllowed acoustic info: [\"thud\"]; forbidden: pitch, loudness, texture, instruments, direction of sound.\n\nWe must name sound event in essential, source in balanced, location in detailed (supported visual location). Use only supplied facts. So essential: \"[Apple thuds]\" maybe \"Apple thuds\". Balanced: \"An apple thuds\". Detailed: \"An apple thuds on the grass next to the white rabbit\". Must include location: grass next to white rabbit, close to rabbit's feet.\n\nEvidence_used: list of facts used: reference and visual_fact.\n\nReturn JSON.\n\nMake sure not to add unsupported acoustic info. Use \"thud\" only.\n\nLet's craft.\n\nessential: \"Apple thuds\"\nbalanced: \"An apple thuds\"\ndetailed: \"An apple thuds on the grass next to the white rabbit\"\nevidence_used: [\"reference: [APPLE THUDS]\", \"visual_fact: An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\"]\n\nReturn JSON."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793006138,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 220,
+          "completion_tokens": 366,
+          "total_tokens": 586
+        }
+      },
+      "seconds": 5.385
+    }
+  ]
+}

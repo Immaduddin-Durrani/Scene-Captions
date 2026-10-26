@@ -1,0 +1,19 @@
+{
+  "scope": "Two targeted guard mutations only; no project-wide mutation score. Original bytes restored after each mutation.",
+  "checks": [
+    {
+      "mutation": "completion-required",
+      "file": "scripts/nim_client.py",
+      "exit_code": 1,
+      "detected_by_tests": true,
+      "output": "F..\n======================================================================\nFAIL: test_missing_finish_reason_is_not_a_completed_generation (test_output_guards.OutputGuardTests.test_missing_finish_reason_is_not_a_completed_generation) (reason=None)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/hamza/Scene-Captions/tests/offline/test_output_guards.py\", line 13, in test_missing_finish_reason_is_not_a_completed_generation\n    with self.subTest(reason=reason), self.assertRaisesRegex(ValueError,'completion'):\n                                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "mutation": "manifest-binding",
+      "file": "scripts/diagnostics/nim-counterfactuals.py",
+      "exit_code": 1,
+      "detected_by_tests": true,
+      "output": ".....F..\n======================================================================\nFAIL: test_report_from_another_manifest_is_not_scored (test_nim_counterfactuals.CounterfactualTests.test_report_from_another_manifest_is_not_scored)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/hamza/Scene-Captions/tests/offline/test_nim_counterfactuals.py\", line 19, in test_report_from_another_manifest_is_not_scored\n    with self.assertRaisesRegex(ValueError, 'manifest'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nFAILED (failures=1)\n"
+    }
+  ]
+}

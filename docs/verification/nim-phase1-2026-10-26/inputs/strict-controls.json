@@ -1,0 +1,176 @@
+[
+  {
+    "case": "silence-strict",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "tone-strict",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "apple-strict",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "silence-reasoning",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/d303811b8c84619667cd.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    }
+  },
+  {
+    "case": "tone-reasoning",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/4c59f1c1bf90c16e7f82.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    }
+  },
+  {
+    "case": "apple-reasoning",
+    "hypothesis": "One-factor prompt change versus prior generic description; then enable documented reasoning with identical audio/prompt. Known silence/tone detect fabricated physical sound sources. Successful speech input is only a transport positive control.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Listen to the recording. First decide whether it contains any audible sound. If silent, answer SILENCE. Otherwise name only the sounds actually audible. A pure electronic tone should be described as a tone, not an imagined object or action. Do not guess a physical source when uncertain. No plot, subtitles or visual context is supplied."
+            },
+            {
+              "type": "local_wav",
+              "path": "artifacts/sound-captions/control-v1/7b7b45154b66a16b3d18.wav"
+            }
+          ]
+        }
+      ],
+      "max_tokens": 4096,
+      "temperature": 0.2,
+      "top_k": 1,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      }
+    }
+  }
+]

@@ -1,0 +1,364 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "7dfa7eb0790d725940873785847b0909fb21345a3b6c60629a5403457afd9012",
+  "calls": [
+    {
+      "case": "exact-frames-pilot-low",
+      "hypothesis": "Change only reasoning mode from none to low on the exact same frame/reference task.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/6a5d721b1065d57dbef6.jpg",
+          "sha256": "19a3839d75f40e8bd9b7c9acb706b536bcc496384043759118a0f3bdaac7dd4d",
+          "bytes": 17608,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/d3195a15ad4c02cb6b84.jpg",
+          "sha256": "6ed56e543566681ac987bb7786af56c0d52f9c766d26149e24cf429eab5021b1",
+          "bytes": 17720,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/6a1579d2b93f58c16681.jpg",
+          "sha256": "b38e6caeb8aa0ba718ace158b03934c2f6735f873d8ee1a2f1ad25df6538ec11",
+          "bytes": 23976,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/a88b3ddc0ba27e7f2b2d.jpg",
+          "sha256": "94a4867000f21042b8fe12cf3d96580a765c7065e7901ccccedde307ac4fb6ff",
+          "bytes": 23703,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/470c11e76a7721e2c444.jpg",
+          "sha256": "37a2a076ce082fee965a97e99f5340f5d9c0bb5891895ea2b1e09684d2bded96",
+          "bytes": 15159,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-only-2026-10-26/frames/662e97dd38abcd147987.jpg",
+          "sha256": "ad7f73349d29dd98466957ac5965e94b9257cb114416c77be0d34db160a06201",
+          "bytes": 15193,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Create three levels of non-speech captions for a DHH-centered research demo.\nThis is REFERENCE-ASSISTED generation: the supplied images are silent. Sound events\ncome ONLY from the licensed reference. Images identify relevant visible context;\nthey cannot prove acoustic properties. Each cue has two frames INSIDE its interval.\nNever import actions/characters from memory, the plot, another cue, or another time.\n\nFor EACH numbered reference event produce:\nessential: shortest understandable sound category/event;\nbalanced: the source and sound action, plus any salient reference attribute;\ndetailed: add relevant visible source/action/location if firmly supported by that\ncue's images. Prefer helpful context (who/what/where) over redundant articles,\nunnecessary color, decorative language, or scene narration. Do not describe\nunrelated scenery. If no additional supported fact exists, repeat the balanced\ncaption and explain the limit; a richer label must not invent information.\nDo not add instruments, loudness, pitch, rhythm, emotions or sound direction unless\nthe REFERENCE states them. A visible location is allowed. Reference [DOOR CREAKS]\nplus a visible person opening it can become [Creaking], [A door creaks],\n[The door creaks as it opens]. The opening is visible, the creak is reference-only.\nKeep reference attributes such as pain/anger when appropriate for the detail level.\nUnidentified sources stay unidentified. An off-screen source is not automatically\nan inaudible one; do not drop its reference event because it is not pictured.\n\nReturn ALL cues and ALL reference events, in order. Each caption is ONE bracketed\nline, with no internal newline. At most 40/65/95 characters per event, respectively.\nAvoid repeated brackets and padding. Source intervals will not be extended: shorter\ncaptions are preferable, especially for the subsecond intervals. Reading time still\nneeds separate review. Keep visual_facts factual and specific to that cue's images.\nEach added_detail must cite reference or visible as its basis. No invented audio\nobservations. Empty visual facts and equal levels are allowed. Return only JSON.\n"
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-020\", \"start_s\": 83.624, \"end_s\": 84.999, \"events\": [{\"index\": 1, \"reference\": \"[APPLE THUDS]\"}], \"frame_times_s\": [83.968, 84.655]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-020 frame at 83.968s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "af91b4d151623812bb1f82d801510b7dbbe13164a0ef6ccfb8b7a873f775d27f",
+                    "data_uri_characters": 23503,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-020 frame at 84.655s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "88dfe7b14e3a6b9d741a999631b38eaa9951672dedf40c8b8ce94091e8b96eb9",
+                    "data_uri_characters": 23651,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-039\", \"start_s\": 180.583, \"end_s\": 184.208, \"events\": [{\"index\": 1, \"reference\": \"[NUTS WHOOSHING]\"}], \"frame_times_s\": [181.489, 183.302]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-039 frame at 181.489s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "15c1e4b49971c69b82a43e4e22de204cff3266b27d8adaf3cc58fadd4636dea4",
+                    "data_uri_characters": 31991,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-039 frame at 183.302s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "4ad39f141928affd41379afe7f88128277266b0c6da5cb68713dcee0d03decc6",
+                    "data_uri_characters": 31627,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "{\"cue_id\": \"bbb-sdh-061\", \"start_s\": 337.124, \"end_s\": 338.499, \"events\": [{\"index\": 1, \"reference\": \"[THUD]\"}, {\"index\": 2, \"reference\": \"[SQUIRREL SQUEAKS IN PAIN]\"}], \"frame_times_s\": [337.468, 338.155]}"
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-061 frame at 337.468s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3c5b9a99465f99b0857eab275aafcfe9ef3aab642a197a381905ba3c764ba53e",
+                    "data_uri_characters": 20235,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "bbb-sdh-061 frame at 338.155s (inside interval)."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "94b790fdb5d0a74c2a4e02dd339e0f638dfabc0bfc0b55f889e547b869ec1c82",
+                    "data_uri_characters": 20283,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "low",
+        "temperature": 0.2,
+        "max_tokens": 8192,
+        "stream": false,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "source_assisted_captions",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "cues": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "cue_id": {
+                        "type": "string"
+                      },
+                      "visual_facts": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "events": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "index": {
+                              "type": "integer"
+                            },
+                            "essential": {
+                              "type": "string"
+                            },
+                            "balanced": {
+                              "type": "string"
+                            },
+                            "detailed": {
+                              "type": "string"
+                            },
+                            "added_details": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                  "detail": {
+                                    "type": "string"
+                                  },
+                                  "basis": {
+                                    "type": "string",
+                                    "enum": [
+                                      "reference",
+                                      "visible"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "detail",
+                                  "basis"
+                                ]
+                              }
+                            },
+                            "limitation": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "index",
+                            "essential",
+                            "balanced",
+                            "detailed",
+                            "added_details",
+                            "limitation"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "cue_id",
+                      "visual_facts",
+                      "events"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "cues"
+              ]
+            }
+          }
+        }
+      },
+      "wire_sha256": "afa776b8ae53e11da39383d1a22823b0f28f0f8bcedeccf573af54bf7c756727",
+      "wire_bytes": 156139,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "0fb14ec4-1e38-4cef-b204-fc8b663927c6",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-cdb8804e-b134-46cd-929a-57d875123b68",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\"cues\": [{\"cue_id\": \"bbb-sdh-020\", \"visual_facts\": [\"A white rabbit stands in a grassy field with an apple on the ground nearby.\"], \"events\": [{\"index\": 1, \"essential\": \"[Apple thuds]\", \"balanced\": \"[An apple thuds]\", \"detailed\": \"[An apple thuds on the grass]\", \"added_details\": [{\"detail\": \"on the grass\", \"basis\": \"visible\"}], \"limitation\": \"\"}]}, {\"cue_id\": \"bbb-sdh-039\", \"visual_facts\": [\"Squirrels and a mouse are near a large tree trunk in a grassy field.\"], \"events\": [{\"index\": 1, \"essential\": \"[Nuts whooshing]\", \"balanced\": \"[Nuts whooshing]\", \"detailed\": \"[Nuts whooshing near a tree]\", \"added_details\": [{\"detail\": \"near a tree\", \"basis\": \"visible\"}], \"limitation\": \"\"}]}, {\"cue_id\": \"bbb-sdh-061\", \"visual_facts\": [\"An acorn falls through the air against a backdrop of trees and sky.\"], \"events\": [{\"index\": 1, \"essential\": \"[Thud]\", \"balanced\": \"[A thud]\", \"detailed\": \"[A thud]\", \"added_details\": [], \"limitation\": \"No visible impact source or location in frames.\"}, {\"index\": 2, \"essential\": \"[Squirrel squeaks]\", \"balanced\": \"[A squirrel squeaks in pain]\", \"detailed\": \"[A squirrel squeaks in pain]\", \"added_details\": [], \"limitation\": \"Squirrel not visible in frames.\"}]}]}",
+              "role": "assistant",
+              "reasoning_content": "The user wants me to generate three levels of non-speech captions for three specific cues based on the provided images and reference audio events.\n\n**Cue 1: bbb-sdh-020**\n- **Interval:** 83.624s - 84.999s\n- **Reference Event:** `[APPLE THUDS]`\n- **Images:** Two frames showing a large white rabbit standing in a grassy field with an apple on the ground near its feet.\n- **Task:**\n    - **Essential:** Shortest understandable sound category/event. -> `[Apple thuds]`\n    - **Balanced:** Source and sound action, plus salient reference attribute. -> `[An apple thuds]` (Source: apple, Action: thuds).\n    - **Detailed:** Add relevant visible source/action/location if firmly supported. The image shows the apple on the ground near the rabbit. The reference says \"Apple Thuds\". So, `[An apple thuds on the grass]` or similar. Wait, looking at the constraint: \"Prefer helpful context (who/what/where) over redundant articles...\". The image shows the apple is on the ground/grass. So `[An apple thuds on the grass]` seems appropriate. Let's check character limits.\n        - Essential: `[Apple thuds]` (13 chars) - OK (<40).\n        - Balanced: `[An apple thuds]` (15 chars) - OK (<65).\n        - Detailed: `[An apple thuds on the grass]` (28 chars) - OK (<95).\n    - **Visual Facts:** Apple on grass near rabbit.\n    - **Added Detail Basis:** Visible (apple on grass).\n\n**Cue 2: bbb-sdh-039**\n- **Interval:** 180.583s - 184.208s\n- **Reference Event:** `[NUTS WHOOSHING]`\n- **Images:** Two frames showing squirrels and a mouse/rat near a tree. One squirrel is climbing/jumping.\n- **Task:**\n    - **Essential:** `[Nuts whooshing]`\n    - **Balanced:** `[Nuts whooshing]` (Source: nuts, Action: whooshing).\n    - **Detailed:** Add visible source/action/location. The image shows squirrels near a tree. The reference says \"Nuts Whooshing\". It implies nuts are moving through the air. The image doesn't explicitly show nuts flying, but shows squirrels. However, the prompt says \"Images identify relevant visible context; they cannot prove acoustic properties.\" I can mention the location visible. `[Nuts whooshing near a tree]`? Or just stick to the reference if no extra fact is supported. The prompt says: \"If no additional supported fact exists, repeat the balanced caption and explain the limit\". But wait, I can see squirrels and a tree. Is that relevant? The sound is \"Nuts Whooshing\". The source is nuts. The location is near a tree/squirrels. Let's try to be helpful. `[Nuts whooshing past squirrels]`? No, that invents interaction. `[Nuts whooshing near a tree]` is safe based on visual context.\n    - Let's re-read carefully: \"Detailed: add relevant visible source/action/location if firmly supported by that cue's images.\"\n    - Image shows squirrels and a tree. Reference says \"Nuts Whooshing\".\n    - Essential: `[Nuts whooshing]` (16 chars).\n    - Balanced: `[Nuts whooshing]` (16 chars).\n    - Detailed: `[Nuts whooshing near a tree]` (27 chars).\n    - Wait, looking at the images again. Frame 181.489 shows squirrels on a tree trunk/root. Frame 183.302 shows them interacting. The sound is nuts whooshing.\n    - Let's check limits. Essential < 40. Balanced < 65. Detailed < 95.\n    - Essential: `[Nuts whooshing]`\n    - Balanced: `[Nuts whooshing]`\n    - Detailed: `[Nuts whooshing near a tree]` (Visible location).\n\n**Cue 3: bbb-sdh-061**\n- **Interval:** 337.124s - 338.499s\n- **Reference Events:**\n    1. `[THUD]`\n    2. `[SQUIRREL SQUEAKS IN PAIN]`\n- **Images:** Two frames showing an acorn falling through the air against a sky/trees background.\n- **Task:** Produce captions for *each* numbered reference event? Or for the cue generally? The prompt says \"For EACH numbered reference event produce...\". But the output format is a list of cues. Wait, the input JSON has `events` array.\n- Let's look at the structure. The input provides `cue_id`, `start_s`, `end_s`, `events` (list of references), `frame_times_s`.\n- The output should likely be a list of objects corresponding to the cues provided in the prompt.\n- Wait, the prompt says \"Return ALL cues and ALL reference events, in order.\"\n- For Cue 3, there are two events.\n    - Event 1: `[THUD]`\n    - Event 2: `[SQUIRREL SQUEAKS IN PAIN]`\n- I need to generate captions for both events within that cue interval? Or just one set of captions for the cue?\n- \"For EACH numbered reference event produce: essential... balanced... detailed...\"\n- This implies I need to output entries for each event.\n- However, the output format requested is just JSON. The example input shows a single cue object. I should probably output a list of cue objects, where each cue object contains the generated captions for its events.\n- Actually, looking at the instruction \"Return ALL cues and ALL reference events, in order.\" and \"Each caption is ONE bracketed line\".\n- Let's assume I need to output a JSON list of objects, where each object corresponds to a cue, and contains the three levels of captions for *each* event? Or maybe just one set of captions per cue if the events happen simultaneously?\n- The events `[THUD]` and `[SQUIRREL SQUEAKS IN PAIN]` happen in the same interval (337.124 - 338.499). The images show an acorn falling. A thud would happen when it hits. A squeak would happen if a squirrel gets hit.\n- Let's look at the images for Cue 3. They show an acorn falling. No squirrel is visible in the frames provided (just trees and sky).\n- So for Event 1 `[THUD]`:\n    - Essential: `[Thud]`\n    - Balanced: `[A thud]` or `[Something thuds]`. Reference is just `[THUD]`. Source is unidentified visually (acorn is falling, maybe hitting something off screen?). Let's stick to `[A thud]`.\n    - Detailed: `[A thud]` (No extra visible fact supports the source location specifically other than \"falling acorn\" which implies impact soon). But the image shows the acorn in the air. So the thud hasn't happened yet or is happening off-screen.\n- For Event 2 `[SQUIRREL SQUEAKS IN PAIN]`:\n    - Essential: `[Squirrel squeaks]`\n    - Balanced: `[A squirrel squeaks in pain]`\n    - Detailed: `[A squirrel squeaks in pain]` (No squirrel visible in these specific frames, so no visual addition).\n\n- Wait, let's look at the input format again. It provides 3 distinct blocks of data (images + JSON).\n    - Block 1: bbb-sdh-020\n    - Block 2: bbb-sdh-039\n    - Block 3: bbb-sdh-061\n- I need to return JSON for all of them.\n- Structure: A list of objects.\n- Each object: `cue_id`, `captions` (list of objects for each event? or just the captions?).\n- The prompt says \"Return ALL cues and ALL reference events, in order.\"\n- Let's create a JSON array where each item corresponds to a cue.\n- Inside each cue item, I should probably list the events and their captions.\n- Let's refine the plan.\n- I will output a JSON array.\n- Item 1: Cue bbb-sdh-020. Event 1: Apple Thuds.\n- Item 2: Cue bbb-sdh-039. Event 1: Nuts Whooshing.\n- Item 3: Cue bbb-sdh-061. Event 1: Thud. Event 2: Squirrel Squeaks.\n\n- Let's draft the content.\n\n**Cue 1: bbb-sdh-020**\n- Event: `[APPLE THUDS]`\n- Essential: `[Apple thuds]`\n- Balanced: `[An apple thuds]`\n- Detailed: `[An apple thuds on the grass]` (Visible: apple on grass).\n- Char counts:\n    - Essential: 14 (incl brackets) -> OK.\n    - Balanced: 16 -> OK.\n    - Detailed: 28 -> OK.\n\n**Cue 2: bbb-sdh-039**\n- Event: `[NUTS WHOOSHING]`\n- Essential: `[Nuts whooshing]`\n- Balanced: `[Nuts whooshing]`\n- Detailed: `[Nuts whooshing near a tree]` (Visible: tree trunk/roots).\n- Char counts:\n    - Essential: 16 -> OK.\n    - Balanced: 16 -> OK.\n    - Detailed: 27 -> OK.\n\n**Cue 3: bbb-sdh-061**\n- This cue has two events.\n- Event 1: `[THUD]`\n    - Essential: `[Thud]`\n    - Balanced: `[A thud]`\n    - Detailed: `[A thud]` (No additional supported fact. The acorn is in the air, impact not visible).\n- Event 2: `[SQUIRREL SQUEAKS IN PAIN]`\n    - Essential: `[Squirrel squeaks]`\n    - Balanced: `[A squirrel squeaks in pain]`\n    - Detailed: `[A squirrel squeaks in pain]` (No squirrel visible in frames).\n\n- Wait, how to structure the JSON for multiple events in one cue?\n- The prompt input format for the cue was: `{\"cue_id\": \"...\", \"start_s\": ..., \"end_s\": ..., \"events\": [...], \"frame_times_s\": [...]}`.\n- I should probably return a similar structure but with the generated captions.\n- Or maybe just a list of caption objects?\n- \"Return ALL cues and ALL reference events, in order.\"\n- I will return a JSON array of objects. Each object represents a cue processing result.\n- Let's look at the \"added_detail must cite reference or visible as its basis\" instruction. This suggests I might need to output metadata too? No, \"Return only JSON.\" usually implies the final result.\n- Let's assume the output should be a list of objects like:\n  ```json\n  [\n    {\n      \"cue_id\": \"bbb-sdh-020\",\n      \"event_index\": 1,\n      \"essential\": \"...\",\n      \"balanced\": \"...\",\n      \"detailed\": \"...\"\n    },\n    ...\n  ]\n  ```\n- Or grouped by cue?\n- \"Return ALL cues and ALL reference events, in order.\"\n- I'll group by cue to be safe, or just list every event caption.\n- Let's look at the example provided in the prompt description? No example output provided.\n- I will create a list of objects, one for each event in each cue.\n- Object keys: `cue_id`, `event_index`, `essential`, `balanced`, `detailed`.\n\n- Let's refine the captions based on strict constraints.\n- **Cue 1 (bbb-sdh-020):**\n    - Ref: `[APPLE THUDS]`\n    - Essential: `[Apple thuds]`\n    - Balanced: `[An apple thuds]`\n    - Detailed: `[An apple thuds on the grass]` (Visible: apple on grass).\n- **Cue 2 (bbb-sdh-039):**\n    - Ref: `[NUTS WHOOSHING]`\n    - Essential: `[Nuts whooshing]`\n    - Balanced: `[Nuts whooshing]`\n    - Detailed: `[Nuts whooshing near a tree]` (Visible: tree).\n- **Cue 3 (bbb-sdh-061):**\n    - Event 1 Ref: `[THUD]`\n        - Essential: `[Thud]`\n        - Balanced: `[A thud]`\n        - Detailed: `[A thud]` (Limit: no visual source for impact).\n    - Event 2 Ref: `[SQUIRREL SQUEAKS IN PAIN]`\n        - Essential: `[Squirrel squeaks]`\n        - Balanced: `[A squirrel squeaks in pain]`\n        - Detailed: `[A squirrel squeaks in pain]` (Limit: squirrel not visible in frames).\n\n- Wait, check char limits again.\n    - Essential: max 40 chars.\n    - Balanced: max 65 chars.\n    - Detailed: max 95 chars.\n- My drafts are well within limits.\n\n- One detail on Cue 3 Detailed for Event 1: \"If no additional supported fact exists, repeat the balanced caption and explain the limit\".\n- The prompt says: \"Return only JSON.\" It doesn't ask for an explanation text field. It says \"explain the limit\" in the instruction text, but the output format is JSON. Usually, this means if I can't add detail, I just repeat the balanced caption. I won't add an \"explanation\" field unless requested. The instruction \"explain the limit\" might be for my internal reasoning or implies I should just repeat it. I will just repeat it.\n- Wait, \"added_detail must cite reference or visible as its basis.\" This sounds like a field requirement? No, \"Each added_detail must cite...\". This likely refers to the logic I use.\n- Let's check if I need to output `visual_facts`. The prompt says \"Keep visual_facts factual and specific to that cue's images.\" This sounds like an instruction for me, not necessarily a JSON field.\n- However, often these prompts want a specific schema. Since none is strictly defined other than \"Return only JSON\", I will construct a clean schema.\n- Schema: `[{\"cue_id\": \"...\", \"event_index\": 1, \"essential\": \"...\", \"balanced\": \"...\", \"detailed\": \"...\"}, ...]`\n\n- Let's double check Cue 2 Detailed. `[Nuts whooshing near a tree]`. Is \"near a tree\" firmly supported? Yes, there is a large tree trunk on the left.\n- Let's double check Cue 1 Detailed. `[An apple thuds on the grass]`. Is \"on the grass\" supported? Yes, the apple is sitting on the grass.\n\n- Final check on Cue 3 Event 1. Reference `[THUD]`.\n    - Essential: `[Thud]`\n    - Balanced: `[A thud]`\n    - Detailed: `[A thud]`\n- Final check on Cue 3 Event 2. Reference `[SQUIRREL SQUEAKS IN PAIN]`.\n    - Essential: `[Squirrel squeaks]`\n    - Balanced: `[A squirrel squeaks in pain]`\n    - Detailed: `[A squirrel squeaks in pain]`\n\n- Wait, looking at Cue 3 images again. It's an acorn falling. The reference says \"Thud\" and \"Squirrel squeaks in pain\". This implies the acorn hits a squirrel. But the squirrel isn't in the frame. So I cannot add visual details about the squirrel or the impact location.\n\n- One detail: \"Avoid repeated brackets and padding.\" -> Just the text inside brackets.\n- \"Each caption is ONE bracketed line, with no internal newline.\"\n\n- Let's assemble the JSON.\n\n```json\n[\n  {\n    \"cue_id\": \"bbb-sdh-020\",\n    \"event_index\": 1,\n    \"essential\": \"[Apple thuds]\",\n    \"balanced\": \"[An apple thuds]\",\n    \"detailed\": \"[An apple thuds on the grass]\"\n  },\n  {\n    \"cue_id\": \"bbb-sdh-039\",\n    \"event_index\": 1,\n    \"essential\": \"[Nuts whooshing]\",\n    \"balanced\": \"[Nuts whooshing]\",\n    \"detailed\": \"[Nuts whooshing near a tree]\"\n  },\n  {\n    \"cue_id\": \"bbb-sdh-061\",\n    \"event_index\": 1,\n    \"essential\": \"[Thud]\",\n    \"balanced\": \"[A thud]\",\n    \"detailed\": \"[A thud]\"\n  },\n  {\n    \"cue_id\": \"bbb-sdh-061\",\n    \"event_index\": 2,\n    \"essential\": \"[Squirrel squeaks]\",\n    \"balanced\": \"[A squirrel squeaks in pain]\",\n    \"detailed\": \"[A squirrel squeaks in pain]\"\n  }\n]\n```\n- Wait, I need to check the character counts strictly.\n    - `[Apple thuds]`: 14 chars. OK.\n    - `[An apple thuds]`: 16 chars. OK.\n    - `[An apple thuds on the grass]`: 28 chars. OK.\n    - `[Nuts whooshing]`: 16 chars. OK.\n    - `[Nuts whooshing near a tree]`: 27 chars. OK.\n    - `[Thud]`: 6 chars. OK.\n    - `[A thud]`: 8 chars. OK.\n    - `[Squirrel squeaks]`: 18 chars. OK.\n    - `[A squirrel squeaks in pain]`: 28 chars. OK.\n\n- One detail on Cue 2 Balanced: \"the source and sound action, plus any salient reference attribute\". Reference is `[NUTS WHOOSHING]`. Source: Nuts. Action: Whooshing. So `[Nuts whooshing]` is correct.\n- One detail on Cue 1 Balanced: Reference `[APPLE THUDS]`. Source: Apple. Action: Thuds. `[An apple thuds]`.\n\n- Is there any nuance I missed? \"Keep reference attributes such as pain/anger when appropriate for the detail level.\"\n- For Cue 3 Event 2, \"pain\" is in the reference. I included it in Balanced and Detailed. Good.\n\n- Final check on JSON validity. No trailing commas.\n- The prompt asks for \"Return ALL cues and ALL reference events, in order.\"\n- My list is in order of cues provided.\n\nOne small check on Cue 2 Detailed: \"Nuts whooshing near a tree\". Is \"near a tree\" redundant? No, it adds location.\nOne small check on Cue 1 Detailed: \"An apple thuds on the grass\". Is \"on the grass\" redundant? No, adds location.\n\nLet's double check if I should output `visual_facts` in the JSON. The prompt says \"Keep visual_facts factual and specific to that cue's images.\" and \"Each added_detail must cite reference or visible as its basis.\" This sounds like instructions for generation, not necessarily output fields. I will stick to the caption fields.\n\nWait, looking at the instruction: \"Return only JSON.\"\nI will output the JSON array.\n\nOne detail: \"For EACH numbered reference event produce: essential... balanced... detailed...\"\nMy JSON structure handles this by having an entry per event.\n\nLet's refine Cue 3 Event 1 Detailed. \"If no additional supported fact exists, repeat the balanced caption and explain the limit\". Since I can't put text explanation in the JSON easily without a schema, I will just repeat the balanced caption. The instruction \"explain the limit\" might be interpreted as \"don't invent info\". I will just repeat `[A thud]`.\n\nSame for Cue 3 Event 2 Detailed. Repeat `[A squirrel squeaks in pain]`.\n\nFinal check on Cue 1 images. Frame 83.968 and 84.655. Apple is on the ground. Rabbit is standing.\nFinal check on Cue 2 images. Frame 181.489 and 183.302. Squirrels on tree root. Tree is visible.\nFinal check on Cue 3 images. Frame 337.468 and 338.155. Acorn falling. Sky and trees.\n\nReady to write."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793002166,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2497,
+          "completion_tokens": 4940,
+          "total_tokens": 7437,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 4559,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 141.683
+    },
+    {
+      "case": "apple-grounded-text-composition",
+      "hypothesis": "Separate visible-fact extraction from wording: can the text stage select the already-supported relevant location instead of unnecessarily repeating the baseline?",
+      "fixtures": [],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write sound captions for a Deaf/hard-of-hearing viewer using ONLY these supplied facts. The sound event is reference-derived; the location is visually observed. Essential must name the sound event; balanced must name its source; detailed must include the relevant supported visual location. Never add unsupported acoustic information. Example for different content: [Clattering] -> [A can clatters] -> [A can clatters beside the actor]. Return JSON with essential, balanced, detailed, and evidence_used. These are source-assisted captions, not independently heard sounds.\n{\"reference\": \"[APPLE THUDS]\", \"visual_fact\": \"An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\", \"allowed_acoustic_information\": [\"thud\"], \"forbidden_unverified_acoustic_information\": [\"pitch\", \"loudness\", \"texture\", \"instruments\", \"direction of sound\"]}"
+          }
+        ],
+        "reasoning_effort": "low",
+        "temperature": 0.2,
+        "max_tokens": 8192,
+        "stream": false
+      },
+      "wire_sha256": "285b8d06a01c722cc12417dd3a78df83e53b7b4356d4e9ed760ebefc519ef43a",
+      "wire_bytes": 1077,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "952636b2-93a1-4c7b-a74d-f329b8699944",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-a47780c2-539c-4d9c-a794-375eb764dc48",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"essential\": \"[Apple thuds]\",\n  \"balanced\": \"[An apple thuds]\",\n  \"detailed\": \"[An apple thuds on the grass next to the white rabbit]\",\n  \"evidence_used\": [\n    \"reference: [APPLE THUDS]\",\n    \"visual: An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\"\n  ]\n}",
+              "role": "assistant",
+              "reasoning_content": "The user wants sound captions for a Deaf/hard-of-hearing viewer using ONLY supplied facts.\n\nConstraints:\n- Sound event is reference-derived: \"[APPLE THUDS]\" -> sound event is apple thuds / thud.\n- Location is visually observed: apple is on the grass next to the white rabbit, close to rabbit's feet.\n- Essential must name the sound event.\n- Balanced must name its source.\n- Detailed must include relevant supported visual location.\n- Never add unsupported acoustic information.\n- Allowed acoustic info: [\"thud\"]. Forbidden: pitch, loudness, texture, instruments, direction of sound.\n- Return JSON with essential, balanced, detailed, evidence_used.\n- Source-assisted captions, not independently heard sounds.\n\nExample:\n[Clattering] -> [A can clatters] -> [A can clatters beside the actor].\n\nSo:\nEssential: [Apple thuds] or [Thud]? Must name the sound event. Reference is \"[APPLE THUDS]\". So essential: \"[Apple thuds]\" or \"[An apple thuds]\". Let's follow example style: [A can clatters] for balanced? Wait example:\n[Clattering] -> [A can clatters] -> [A can clatters beside the actor].\nSo:\nEssential: [Clattering] (names sound event)\nBalanced: [A can clatters] (names source)\nDetailed: [A can clatters beside the actor] (includes visual location)\n\nApplying:\nReference: [APPLE THUDS]\nVisual fact: An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\n\nEssential: [Apple thuds] (names sound event)\nBalanced: [An apple thuds] (names source: apple)\nDetailed: [An apple thuds on the grass next to the white rabbit] or [An apple thuds close to the white rabbit's feet on the grass]. Must include relevant supported visual location. Use only visual facts: apple on grass next to white rabbit, close to rabbit's feet.\n\nAllowed acoustic info: thud. So we can say \"thuds\". Avoid pitch, loudness, texture, instruments, direction.\n\nJSON:\n{\n  \"essential\": \"[Apple thuds]\",\n  \"balanced\": \"[An apple thuds]\",\n  \"detailed\": \"[An apple thuds on the grass next to the white rabbit]\",\n  \"evidence_used\": [\"reference: [APPLE THUDS]\", \"visual: An apple is on the grass next to the white rabbit. The apple is close to the rabbit's feet.\"]\n}\n\nCheck if \"Apple thuds\" names sound event. Yes. \"An apple thuds\" names source. Detailed includes location: on the grass next to the white rabbit. Could also mention close to rabbit's feet. Let's include both if supported: \"on the grass next to the white rabbit, close to its feet\". But keep concise.\n\nNeed to ensure no unsupported acoustic info. \"Thud\" is allowed. No direction, loudness, etc.\n\nevidence_used should list the facts used.\n\nLet's craft final JSON only."
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793002307,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 213,
+          "completion_tokens": 756,
+          "total_tokens": 969,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 664,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 21.559
+    }
+  ]
+}

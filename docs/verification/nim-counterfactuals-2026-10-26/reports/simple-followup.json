@@ -1,0 +1,112 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "d048cf184c3703a6819463731276bcc6c38665864fd47b008bb95424c8e19b14",
+  "calls": [
+    {
+      "case": "c01-audio-simple",
+      "hypothesis": "Remove JSON/timing demands only, keeping the exact WAV/model/sampling. Diagnose whether structured output obscures natural-sound recognition.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+          "sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "b5d4069aed737cafa39be608cbaa444ffb8c7191c5c2d2c61039ba542336d9ce",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "535fb16fed629029b1a568b3219b708297b0f7cf30b00c5af1019d0a288f806a",
+      "wire_bytes": 427230,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.694
+    },
+    {
+      "case": "c03-audio-simple",
+      "hypothesis": "Remove JSON/timing demands only, keeping the exact WAV/model/sampling. Diagnose whether structured output obscures natural-sound recognition.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+          "sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1cf14f35ef5304a2d54b4ed026e6e93a00e25754ed5b3ccc82026ba14226baa3",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "ff2c82eeb6dcbb854fc1f65de9b51c01d510bd9650521732b7df011bbc344271",
+      "wire_bytes": 427230,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.05
+    }
+  ]
+}

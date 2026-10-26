@@ -1,0 +1,118 @@
+[
+  {
+    "case": "apple-super-vl-low",
+    "report": "reports/alternative-context.json",
+    "candidate": {
+      "cue_id": "bbb-sdh-020",
+      "visual_facts": [
+        "white rabbit",
+        "red apple",
+        "grass"
+      ],
+      "sound_facts": [
+        "apple thud"
+      ],
+      "essential": "[Apple thuds]",
+      "balanced": "[An apple thuds on the grass]",
+      "detailed": "[A red apple thuds onto the grass near the rabbit]",
+      "added_details": [
+        {
+          "detail": "red apple",
+          "basis": "visible object color and type"
+        },
+        {
+          "detail": "onto the grass",
+          "basis": "visible surface"
+        },
+        {
+          "detail": "near the rabbit",
+          "basis": "visible proximity"
+        }
+      ],
+      "limitation": ""
+    },
+    "accepted_for_playback": false
+  },
+  {
+    "case": "bbb-sdh-002-v3",
+    "report": "reports/context-pilot-v3.json",
+    "candidate": {
+      "cue_id": "bbb-sdh-002",
+      "visual_facts": [
+        "A brook flows through a grassy field",
+        "Flowers and lily pads line the water"
+      ],
+      "sound_facts": [
+        "BROOK BABBLES",
+        "FLY BUZZES"
+      ],
+      "essential": "[Brook babbles, fly buzzes]",
+      "balanced": "[A brook babbles]\n[A fly buzzes]",
+      "detailed": "[A brook babbles along a grassy bank]\n[A fly buzzes]",
+      "added_details": [
+        {
+          "detail": "Grassy bank",
+          "basis": "Visible vegetation lining the brook"
+        },
+        {
+          "detail": "Flowing water",
+          "basis": "Visible stream movement"
+        }
+      ],
+      "limitation": "Audio is unavailable; sound facts rely solely on the reference caption. Visual confirmation of the fly is absent."
+    },
+    "accepted_for_playback": false
+  },
+  {
+    "case": "bbb-sdh-011-v3",
+    "report": "reports/context-pilot-v3.json",
+    "candidate": {
+      "cue_id": "bbb-sdh-011",
+      "visual_facts": [
+        "A large dark rabbit sleeps curled up inside a grassy burrow",
+        "The camera zooms into the burrow entrance"
+      ],
+      "sound_facts": [
+        "[BUNNY SNORES]"
+      ],
+      "essential": "[Bunny snores]",
+      "balanced": "[A bunny snores]",
+      "detailed": "[A bunny snores while sleeping in a grassy burrow]",
+      "added_details": [
+        {
+          "detail": "Bunny sleeping in burrow",
+          "basis": "Visible in frames 5.0s-6.0s"
+        },
+        {
+          "detail": "Camera zooms into hole",
+          "basis": "Visible camera movement from 5.0s to 5.5s"
+        }
+      ],
+      "limitation": "Audio evidence is unavailable; sound characteristics like pitch or intensity cannot be verified."
+    },
+    "accepted_for_playback": false
+  },
+  {
+    "case": "bbb-sdh-061-v3-no-reasoning",
+    "report": "reports/context-v3-no-reasoning.json",
+    "candidate": {
+      "cue_id": "bbb-sdh-061",
+      "visual_facts": [
+        "A squirrel holds two acorns while swinging on a rope",
+        "An acorn falls through the air against a bright sky",
+        "A gray mouse sits on the ground holding an acorn",
+        "The mouse drops the acorn onto the dirt"
+      ],
+      "sound_facts": [
+        "[THUD]",
+        "[SQUIRREL SQUEAKS IN PAIN]"
+      ],
+      "essential": "[Thud] [Squirrel squeaks]",
+      "balanced": "[A thud] [A squirrel squeaks in pain]",
+      "detailed": "[A thud] [A squirrel squeaks in pain]",
+      "added_details": [],
+      "limitation": "No visible impact or squirrel reaction occurs in the target interval; visual facts show falling and dropped acorns only, so balanced and detailed levels match essential due to thin evidence."
+    },
+    "accepted_for_playback": false
+  }
+]

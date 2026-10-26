@@ -1,0 +1,13 @@
+{
+  "local_model_generation_calls": 68,
+  "unique_reference_labels": 67,
+  "labels_with_editorial_changes": 63,
+  "edited_fields": 120,
+  "cloud_inference_calls": 0,
+  "human_listening_review": false,
+  "old_baseline_20cps_flags": 10,
+  "new_baseline_20cps_flags": 7,
+  "comparison_limit": "Reading-rate flags only, not accuracy, validated DHH measures, accessibility or better-quality evidence.",
+  "audio_gate_unchanged": true,
+  "first_installed_draft_baseline_flags": 13
+}

@@ -1,0 +1,9 @@
+{
+  "production_build": {
+    "command": "NEXT_TELEMETRY_DISABLED=1 npm run build",
+    "exit_code": 0,
+    "log": "pre-push-build.log"
+  },
+  "existing_verification": "checks.json records 35 offline Python tests, 19 application tests, TypeScript checking and caption validation; code is unchanged since those checks.",
+  "scope": "Caption provenance/comparison, NVIDIA diagnostics and research evidence. No model inference performed for this push."
+}

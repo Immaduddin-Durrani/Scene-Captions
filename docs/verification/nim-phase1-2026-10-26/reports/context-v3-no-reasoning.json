@@ -1,0 +1,348 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "0da8f7f29cfc683ea6a6d04ee6c67f07c16fea2749b81e104e8bac90e9e2bd89",
+  "calls": [
+    {
+      "case": "bbb-sdh-011-v3-no-reasoning",
+      "hypothesis": "Change only documented reasoning_effort low to none; compare successful snoring case and three inconclusive timeout/500 cases. Keep media/prompt identical.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-011.mp4",
+          "sha256": "0e007b2a3af3a0fac1626bd1a75463b84f11d36d70c323a2a553f8391f0a7453",
+          "duration_s": 11.5,
+          "bytes": 360092,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-011\", \"reference_caption\": \"[BUNNY SNORES]\", \"target_interval_in_clip\": [5.0, 6.292], \"clip_start_in_film_s\": 27.749000000000002, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "59d57d2e4f81832aa57f5ddfe8b283bc944400f800fd02b76aca896de5d60af7",
+                    "data_uri_characters": 480146,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "c5451a161a52041c762c462574002186a739d97a235b444329cbebeeac00a16f",
+      "wire_bytes": 482626,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "fd6d61dd-50f1-4f11-b404-4196f188f3df",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-723257cd-11a2-418d-beee-ce8ea44ec42c",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-011\",\n  \"visual_facts\": [\n    \"A large rabbit sleeps curled inside a grassy burrow entrance\",\n    \"Rocks sit beside the burrow opening\",\n    \"Green grass surrounds the burrow\"\n  ],\n  \"sound_facts\": [\n    \"[BUNNY SNORES]\"\n  ],\n  \"essential\": \"[Snoring]\",\n  \"balanced\": \"[A bunny snores]\",\n  \"detailed\": \"[A bunny snores while sleeping in a grassy burrow]\",\n  \"added_details\": [\n    {\n      \"detail\": \"sleeping in a grassy burrow\",\n      \"basis\": \"visible rabbit curled inside burrow entrance\"\n    }\n  ],\n  \"limitation\": \"No audio evidence exists; snoring details come solely from the reference caption.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999720,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2434,
+          "completion_tokens": 184,
+          "total_tokens": 2618,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 6.39
+    },
+    {
+      "case": "bbb-sdh-039-v3-no-reasoning",
+      "hypothesis": "Change only documented reasoning_effort low to none; compare successful snoring case and three inconclusive timeout/500 cases. Keep media/prompt identical.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-039.mp4",
+          "sha256": "79af21f47c2e20348f2877e346304a31f66b0c0327cf017d683068e7caa21b1f",
+          "duration_s": 13.5,
+          "bytes": 239279,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-039\", \"reference_caption\": \"[NUTS WHOOSHING]\", \"target_interval_in_clip\": [5.0, 8.625], \"clip_start_in_film_s\": 175.583, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "e09051ce2b358b5250970dec7b9e3b03b5c046fddbb95bab37a55fd7f04282b0",
+                    "data_uri_characters": 319062,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "6375871030ef3819b959d6cd65a3f6df17edad242caa376013321b09dd5471c9",
+      "wire_bytes": 321533,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "83e1314c-f530-4d36-acf2-32613d078281",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-b2cbf0a3-8d64-431f-9db9-537d6f7c6edb",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-039\",\n  \"visual_facts\": [\n    \"A squirrel climbs a tree trunk\",\n    \"A fox and a mouse sit beside the squirrel\",\n    \"A green fruit flies through the air\",\n    \"The fruit strikes a large rabbit on the head\",\n    \"The rabbit stands in a grassy field\"\n  ],\n  \"sound_facts\": [\n    \"[NUTS WHOOSHING]\"\n  ],\n  \"essential\": \"[Nuts whooshing]\",\n  \"balanced\": \"[Nuts whooshing through the air]\",\n  \"detailed\": \"[Nuts whooshing through the air toward the rabbit]\",\n  \"added_details\": [\n    {\n      \"detail\": \"Nuts flying through the air\",\n      \"basis\": \"Reference caption identifies nuts whooshing; visible green fruit moves through the air and hits the rabbit\"\n    }\n  ],\n  \"limitation\": \"No audio is available; instrument, rhythm, pitch, and intensity cannot be determined from visuals alone.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999726,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2744,
+          "completion_tokens": 226,
+          "total_tokens": 2970,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 7.622
+    },
+    {
+      "case": "bbb-sdh-061-v3-no-reasoning",
+      "hypothesis": "Change only documented reasoning_effort low to none; compare successful snoring case and three inconclusive timeout/500 cases. Keep media/prompt identical.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-061.mp4",
+          "sha256": "a057f14cf56ddbeb60826c33cf04f67c6181369c09feb05ef909e51a46f65a05",
+          "duration_s": 11.5,
+          "bytes": 234356,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-061\", \"reference_caption\": \"[THUD]\\n[SQUIRREL SQUEAKS IN PAIN]\", \"target_interval_in_clip\": [5.0, 6.375], \"clip_start_in_film_s\": 332.124, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "0d2cb8a95f6b00c5dcae6406847981d3cecc26298e2446083622cf55b5134f23",
+                    "data_uri_characters": 312498,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "2e094291cf5cddb97376be245d1b35cd6474f3b510a50b44c5a7ff6e3204e6ea",
+      "wire_bytes": 314988,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "5b8c393e-6e84-45e7-b445-368e54354e17",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-a90e7d99-76f4-4466-97ff-5f1fa6a7be2e",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "{\n  \"cue_id\": \"bbb-sdh-061\",\n  \"visual_facts\": [\n    \"A squirrel holds two acorns while swinging on a rope\",\n    \"An acorn falls through the air against a bright sky\",\n    \"A gray mouse sits on the ground holding an acorn\",\n    \"The mouse drops the acorn onto the dirt\"\n  ],\n  \"sound_facts\": [\n    \"[THUD]\",\n    \"[SQUIRREL SQUEAKS IN PAIN]\"\n  ],\n  \"essential\": \"[Thud] [Squirrel squeaks]\",\n  \"balanced\": \"[A thud] [A squirrel squeaks in pain]\",\n  \"detailed\": \"[A thud] [A squirrel squeaks in pain]\",\n  \"added_details\": [],\n  \"limitation\": \"No visible impact or squirrel reaction occurs in the target interval; visual facts show falling and dropped acorns only, so balanced and detailed levels match essential due to thin evidence.\"\n}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1792999733,
+        "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 2434,
+          "completion_tokens": 214,
+          "total_tokens": 2648,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0
+          },
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          }
+        }
+      },
+      "seconds": 5.675
+    },
+    {
+      "case": "bbb-sdh-083-v3-no-reasoning",
+      "hypothesis": "Change only documented reasoning_effort low to none; compare successful snoring case and three inconclusive timeout/500 cases. Keep media/prompt identical.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-phase1-2026-10-26/context-clips/bbb-sdh-083.mp4",
+          "sha256": "41366a47ce3cbde7a76e06a4d1648084e8ff331094a567ecf08ee0b981f27124",
+          "duration_s": 13.0,
+          "bytes": 186082,
+          "streams": [
+            {
+              "codec_type": "video",
+              "codec_name": "h264",
+              "width": 512,
+              "height": 288,
+              "sample_rate": null,
+              "channels": null
+            }
+          ]
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "text",
+                "text": "Draft non-speech captions for Deaf and hard-of-hearing viewers.\nThe supplied video has NO AUDIO. The licensed reference is the only SOUND evidence.\nUse pixels ONLY to identify the visible source/action associated with the reference\nevent at the target interval. Plot context: a large rabbit is bullied by forest\ncreatures and eventually fights back (Blender Studio official synopsis). Plot is\nnot evidence of a particular event or sound. Do not use remembered film details.\n\nProduce three meaningful levels: Essential names every sound briefly (<=40 chars);\nBalanced identifies its supported source and sound action (<=72 chars); Detailed\nadds relevant, actually visible source/action/context (<=100 chars). Do not expand\nmerely with punctuation, redundant words or scenic filler. Music adjectives may\ncome from the reference; instruments, rhythm, pitch and intensity need actual\naudio evidence, which is unavailable. Never invent them. If evidence is too thin,\nlevels may be identical: explain this in limitation. More detail is not inherently\nbetter. Avoid subjective narrative, emotions, intentions, spoilers and unnecessary\ncolor descriptions. Preserve ALL concurrent reference events at ALL levels.\n\nVisible location/action is allowed: reference [DOOR CREAKS] + visible door opening\ncan yield [Creaking], [A door creaks], [The door creaks as it opens]. This is a\nreference-assisted transformation, not independent audio recognition.\nCaption ONLY the target interval. Surrounding seconds give context, not extra\nevents to caption. Keep each caption in square brackets, with separate lines for\nsimultaneous sounds. Return JSON, no markdown, with exactly these keys:\ncue_id, visual_facts (array of concise strings), sound_facts (array of reference\nevents), essential (string), balanced (string), detailed (string), added_details\n(array of objects with detail and basis), limitation (string).\n\n{\"cue_id\": \"bbb-sdh-083\", \"reference_caption\": \"[WIND BLOWS]\", \"target_interval_in_clip\": [5.0, 7.75], \"clip_start_in_film_s\": 475.749, \"reference_source\": \"https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt\"}"
+              },
+              {
+                "type": "video_url",
+                "video_url": {
+                  "url": {
+                    "inline_media_sha256": "266d85b23d955cf45f340b4cc2bfd8c86c74c59b27d237e0aa64ab628ad6bcee",
+                    "data_uri_characters": 248134,
+                    "prefix": "data:video/mp4;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "reasoning_effort": "none",
+        "max_tokens": 8192,
+        "temperature": 0.2,
+        "stream": false
+      },
+      "wire_sha256": "9f5a025a4a6302904fba4e230f0a7124b313963bcb8f1071743982247bc1ac64",
+      "wire_bytes": 250600,
+      "attempts": 1,
+      "http_status": 500,
+      "error": "{\"message\":\"Failed to generate completions\",\"type\":\"Internal Server Error\",\"code\":500}",
+      "seconds": 1.289
+    }
+  ]
+}

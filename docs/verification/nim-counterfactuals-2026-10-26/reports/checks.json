@@ -1,0 +1,51 @@
+[
+  {
+    "name": "offline-tests",
+    "command": [
+      "/Users/hamza/runtimes/markitdown/.venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/offline",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": null,
+    "log": "docs/verification/nim-counterfactuals-2026-10-26/reports/offline-tests.log",
+    "test_count": 35,
+    "note": "Final offline rerun includes correct-shift, false-shift, capacity and silence scoring controls; timing not separately recorded."
+  },
+  {
+    "name": "node-tests",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "seconds": 0.473,
+    "log": "docs/verification/nim-counterfactuals-2026-10-26/reports/node-tests.log"
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "exit_code": 0,
+    "seconds": 1.37,
+    "log": "docs/verification/nim-counterfactuals-2026-10-26/reports/typecheck.log"
+  },
+  {
+    "name": "caption-validation",
+    "command": [
+      "npm",
+      "run",
+      "validate:captions"
+    ],
+    "exit_code": 0,
+    "seconds": 0.241,
+    "log": "docs/verification/nim-counterfactuals-2026-10-26/reports/caption-validation.log"
+  }
+]

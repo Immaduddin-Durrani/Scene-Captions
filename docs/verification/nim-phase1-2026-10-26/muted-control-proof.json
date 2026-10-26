@@ -1,0 +1,9 @@
+{
+  "muted_audio": {
+    "decoded_pcm16_16khz_mono_samples": 48128,
+    "peak_abs": 0,
+    "nonzero_samples": 0
+  },
+  "identical_compressed_video_sha256": "8e5303e0808ffff0c7fe55e0b3b90db11b50143fe575403d6d0c0fd3a6444738",
+  "interpretation": "The model reported buzzing on a decoded-digital-silence clip. This is a controlled false-positive, not proof that the endpoint never uses audio."
+}

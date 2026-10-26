@@ -1,0 +1,151 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "4552d13cc69379ca697b03238bcba2ec5b337c1fdac4137fc8d03a07271c9a77",
+  "calls": [
+    {
+      "case": "c01-audio-simple-thinking",
+      "hypothesis": "Change only enable_thinking false to true on the same simple natural-sound prompt. No forced reasoning budget; max_tokens stays 4096.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c01.wav",
+          "sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "b5d4069aed737cafa39be608cbaa444ffb8c7191c5c2d2c61039ba542336d9ce",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "wire_sha256": "94fc44061b8dbda63477df24e49945e027267a25450c45bd08c73ebb9bddb08a",
+      "wire_bytes": 427229,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.417
+    },
+    {
+      "case": "c03-audio-simple-thinking",
+      "hypothesis": "Change only enable_thinking false to true on the same simple natural-sound prompt. No forced reasoning budget; max_tokens stays 4096.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-counterfactuals-2026-10-26/c03.wav",
+          "sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1cf14f35ef5304a2d54b4ed026e6e93a00e25754ed5b3ccc82026ba14226baa3",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe only what you can actually hear in this recording, in one concise sentence. Do not infer a scene or guess uncertain sources."
+              }
+            ]
+          }
+        ],
+        "max_tokens": 4096,
+        "temperature": 0.2,
+        "top_k": 1,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "wire_sha256": "6bf81a21ecf82aca0b266a647c81e86d3bb0aad44c28bddcaefade3213b91822",
+      "wire_bytes": 427229,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "776c821a-9584-42a2-8e90-5c6076009fd7",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-c7a0a9bd-d372-4fd9-9a85-e3a141b53752",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The audio consists solely of a continuous, immersive roar of turbulent water with no other audible elements.",
+              "role": "assistant",
+              "reasoning_content": "The audio contains a continuous, low-frequency rumble with intermittent high-frequency hissing, suggesting a large volume of water in motion. There are no voices, music, or distinct environmental cues beyond the water sound. The recording is clear and uninterrupted, indicating a focused capture of a natural water feature, likely a waterfall or rapids, with no other audible elements present. Let me listen again. The audio begins with a powerful, immersive roar of water, characterized by deep, resonant low-frequency rumble and a continuous high-frequency hiss, indicating turbulent flow. The sound is steady and unchanging, with no interruptions or additional elements such as voices, music, or other environmental noises. The recording is clear and focused solely on the water's movement, with no evidence of human activity or other sources. The absence of any other sounds confirms the water is the only audible element throughout the entire clip.\n"
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793031534,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 171,
+          "completion_tokens": 205,
+          "total_tokens": 376
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 6.301296234130859,
+            "generation_tokens_per_second": 32.5329888300793,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 8.266
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # SceneCaptions — Experimental plan
 
-Phase 1 proposal · revised 24 October 2026
+Phase 1 proposal · revised 26 October 2026
 
 ## Research question
 
@@ -10,7 +10,7 @@ Hypotheses: personalized captions may reduce reported effort and improve control
 
 ## Phase 1 demonstration
 
-Deliver a running local player with fixed and personalized conditions, precomputed caption variants, persistent preferences, a preview, Show Original, readable text settings, a cue timeline, and opt-in rehearsal export. The team will create the study video. The short licensed sample uses 87 licensed source-caption intervals and source-anchored wording; it is not the long-form study stimulus.
+Deliver a running local player with fixed and personalized conditions, precomputed caption variants, persistent preferences, a preview, Show Original, readable text settings, a cue timeline, and opt-in rehearsal export. The team will create the study video. The short sample has 87 AI-assisted generated draft captions in Personalized; Reference baseline and Show reference display the credited fetched captions at the same timestamps. A local Qwen text model generated descriptions from licensed reference labels; the main assistant made extensive source-text corrections. Timing and event coverage remain reference-derived, not independently detected from audio. It is not the long-form study stimulus.
 
 Phase 1 is a technical demonstration and a proposed experimental protocol. No study has been conducted. Rehearsal exports are not research evidence. Source-caption correctness and reading time still require a full review.
 
@@ -20,7 +20,7 @@ The current prototype adapts to sound-cue density, explicitly disclosed as a pro
 
 The preview pauses at a source cue and temporarily shows the draft settings on the video for five seconds. Saved settings return automatically or on request; preview never saves the draft. Original-caption override takes priority. Readability changes apply immediately in both conditions and preserve unfinished content preferences.
 
-Automated preparation starts from existing timed sound captions. A separate audio check extracts corresponding clips and must pass calibration before its observations can assist review. Current audio calibration failed on silence, and text-model trials did not produce acceptable personalization. No model candidates replaced the working track. Model agreement would still require listening and wording review; it is not independent ground truth.
+Automated preparation starts from existing timed sound captions. A separate audio check extracts corresponding clips and must pass calibration before its observations can assist review. Audio-model checks remain failed. A separate local source-guided wording run supplies the current drafts, with explicit editorial corrections. A 26 October follow-up made 42 NVIDIA requests with audio, video, reference and plot controls. Independent sound grounding still failed; a few source-assisted visual expansions worked, but no NIM track was accepted. These are preparation trials, not participant results. Three generated detail descriptions are combined with three punctuation styles; these are not nine independently generated semantic variants. Model agreement would still require listening and wording review; it is not independent ground truth.
 
 A 20-character-per-second editing heuristic flags possible reading-time problems, including in source originals. It is not a validated DHH reading-speed limit. Shortening wording does not establish correctness, and source timing is never extended automatically.
 
@@ -36,7 +36,7 @@ The team will make one rights-clear, story-driven 20–30 minute video, with a b
 
 Create a cue list tied to that exact edit. For every cue, precompute an original caption and all nine detail-by-expression variants, sound key, scene-load tag, representation options and scene context. Human reviewers check sound correctness, timing, clarity, respectful language and same-sound consistency. Reviewers resolve disagreements before the study; record prompt/model versions if AI is used.
 
-Have DHH collaborators review caption readability and study materials before the main study. If the video has dialogue, supply the same verified dialogue subtitles in both conditions, separately from the experimental non-speech captions. The current app imports non-speech JSON only; dialogue-subtitle support must be added before using a dialogue-containing study video. The bundled demonstration has no dialogue.
+Have DHH collaborators review caption readability and study materials before the main study. If the video has dialogue, supply the same verified dialogue subtitles in both conditions, separately from the experimental non-speech captions. The app supports fixed dialogue separately from personalized sound captions. Big Buck Bunny has no dialogue; the other demo films currently have source dialogue only.
 
 ## Design and allocation
 

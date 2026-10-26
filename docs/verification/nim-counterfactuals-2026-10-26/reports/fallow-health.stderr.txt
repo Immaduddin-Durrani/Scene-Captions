@@ -1,0 +1,2 @@
+   0.058180542s  WARN Graph cache decoded but not reused: resolver, entry points, or plugins changed
+[X] Exit code 1: gate health-findings (23 at or above error) failed. To report complexity findings without a failure, set the rules complexity-cyclomatic, complexity-cognitive and complexity-crap to "warn", or run `fallow health --report-only`.
