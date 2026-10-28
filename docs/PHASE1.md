@@ -19,7 +19,7 @@ Open http://localhost:3000 . The movie is downloaded once from Blender's officia
 Demo in approximately three minutes:
 
 1. Play the sample film. Click the 1:23 apple cue in the timeline to see a caption matched to that moment.
-2. Change detail or expressiveness. Try Preview this cue in the video: playback pauses and shows the candidate temporarily for five seconds. Return manually or let the saved settings return automatically; Apply preferences saves the changes. Text size/position changes retain unfinished content preferences.
+2. Change detail or expressiveness: changes apply and save immediately, with no Apply button. Preview this cue in the video pauses at a cue for five seconds; the current preferences remain applied. Text size/position changes preserve the chosen content preferences.
 3. Toggle Follow cue density, Show reference, and Reference baseline. Reference baseline displays the fetched source, while Personalized uses generated draft wording; readability is available in both conditions.
 4. Reload to check preference persistence. Open Why this caption? to inspect the selection rationale.
 5. Open your team's own MP4 in Bring your own story. Add matching caption JSON. Files stay on your device. Sample captions are cleared when you change the video.

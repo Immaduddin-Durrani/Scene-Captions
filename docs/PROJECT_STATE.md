@@ -1,3 +1,19 @@
+# Richness applies immediately — 28 October 2026
+
+Essential, Balanced, Rich and the detail slider now apply immediately through
+shared preference saving and rehearsal event recording. The manual Apply button
+and unsaved-draft state are removed; other enabled style controls also apply
+immediately. Baseline and missing-track restrictions remain. Cue preview copy
+and the Phase 1/experimental-plan descriptions match this interaction.
+
+29 Node tests, type checking and the production build pass. The updated browser
+check confirms all three richness levels update the actual video overlay without
+Apply, keyboard slider changes save immediately, and Rich is restored after
+reload. Reference comparison, mobile layout, downloads and rehearsal locking
+also pass with no page errors. The user subsequently requested deployment of
+these changes through the connected Git/Vercel project. No caption generation,
+skills or agents were used.
+
 # Viewer caption options simplified — 28 October 2026
 
 Removed **Use existing captions** and **Use media-only AI subtitles** from the

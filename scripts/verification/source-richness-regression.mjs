@@ -26,14 +26,23 @@ async (page) => {
     for(const [label,detail] of [['Essential',1],['Balanced',2],['Rich',3]]) {
       const preset=page.getByRole('button',{name:label,exact:true});await preset.click();
       assert(await preset.getAttribute('aria-pressed')==='true','Conservative preset pressed state is wrong');
-      const apply=page.getByRole('button',{name:'Apply preferences',exact:true});if(await apply.count())await apply.click();
+      assert(await page.getByRole('button',{name:/^(Apply preferences|Preferences applied)$/}).count()===0,'Manual Apply button is still present');
       await page.waitForFunction(text=>document.querySelector('.caption-lines')?.textContent===text,cue.grid[`${detail}-2`]);
+      assert(await page.evaluate(d=>JSON.parse(localStorage.getItem('scenecaptions.profile.v1')).detail===d,detail),'Richness did not save automatically');
     }
     await page.getByRole('button',{name:'Show reference',exact:true}).click();
     await page.waitForFunction(text=>document.querySelector('.caption-lines')?.textContent===text,cue.reference_text);
     await page.getByRole('button',{name:'Reference on',exact:true}).click();
     checked.push(id);
   }
+  const slider=page.getByRole('slider',{name:/Level of detail/});
+  await slider.focus();await page.keyboard.press('Home');
+  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('scenecaptions.profile.v1')).detail===1);
+  await slider.focus();await page.keyboard.press('End');
+  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('scenecaptions.profile.v1')).detail===3);
+  await page.reload({waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>document.querySelector('#detail')?.value==='3');
+  assert(await page.getByRole('button',{name:'Rich',exact:true}).getAttribute('aria-pressed')==='true','Richness was not restored after reload');
   await page.screenshot({path:'artifacts/source-richness-ui/desktop.png',fullPage:true});
   await page.setViewportSize({width:390,height:844});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile overflow');
@@ -53,7 +62,7 @@ async (page) => {
   const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Export rehearsal JSON',exact:false}).click()]);
   await download.saveAs('artifacts/source-richness-ui/rehearsal.json');
   assert(errors.length===0,errors.join('; '));
-  return {checked,threeDetailLevels:true,presetPressedState:true,keyboardSelection:true,timePreserved:true,referenceComparison:true,
+  return {checked,threeDetailLevels:true,immediateRichness:true,sliderKeyboardApplies:true,persistsAfterReload:true,presetPressedState:true,keyboardSelection:true,timePreserved:true,referenceComparison:true,
     sourceOnlyCoverage:true,removedButtonsAbsent:true,sourceGuidedDefault:true,mobileOverflow:false,rehearsalLocked:true,downloads:3,pageErrors:errors,
     limits:'UI and source-text checks, not listening/DHH validation'};
 }

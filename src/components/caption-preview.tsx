@@ -9,6 +9,6 @@ export function CaptionPreview({ sample, candidate, onPreview, originalActive, p
 }) {
   const preview = sample ? resolveCaption(sample, candidate, "personalized").text : "Add your caption file to preview a sound.";
   return (
-      <div className="preview-card"><div><span>TRY BEFORE YOU APPLY</span><Icon name="sound" size={16} /></div><p>{preview}</p><button className="text-button" disabled={!sample || originalActive} onClick={() => onPreview(candidate)}><Icon name="play" size={13} />Preview this cue in the video</button><small>{originalActive ? "Turn Show original off to try different wording." : previewing ? "Temporary preview. Saved settings return in five seconds, or choose Return to saved settings." : "Pauses the video at this cue to try your changes for five seconds. Nothing is saved."}</small></div>
+      <div className="preview-card"><div><span>CAPTION PREVIEW</span><Icon name="sound" size={16} /></div><p>{preview}</p><button className="text-button" disabled={!sample || originalActive} onClick={() => onPreview(candidate)}><Icon name="play" size={13} />Preview this cue in the video</button><small>{originalActive ? "Turn Show original off to try different wording." : previewing ? "Cue preview ends in five seconds, or choose Return to saved settings." : "Pauses the video at this cue for five seconds. Your preferences stay applied."}</small></div>
   );
 }
