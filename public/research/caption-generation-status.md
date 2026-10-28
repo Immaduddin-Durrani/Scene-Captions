@@ -1,3 +1,19 @@
+## Simple source-guided captions — 28 October 2026
+
+Big Buck Bunny now offers **Use source-guided captions**. Existing licensed sound
+captions guide simple Essential, Balanced and Rich wording. NVIDIA receives the
+full source timeline, exact times, overlapping source sounds, a plain-word glossary
+and targeted correction feedback. All 87 source intervals remain unchanged.
+Main-session source-text edits corrected 88 fields across 48 labels; the result
+is AI-assisted and edited. It is not independent sound discovery. Full listening
+and DHH readability review are pending. Rich explains the existing sound and
+adds no unverified sound events. Other films' dialogue-only sources are unchanged.
+
+Downloads: [Essential](source-richness/big-buck-bunny-detail-1.srt),
+[Balanced](source-richness/big-buck-bunny-detail-2.srt),
+[Rich](source-richness/big-buck-bunny-detail-3.srt),
+[JSON](source-richness/big-buck-bunny.json).
+
 ## Media-only experimental option — 28 October 2026
 
 All three films now offer **Use media-only AI subtitles**. These were generated

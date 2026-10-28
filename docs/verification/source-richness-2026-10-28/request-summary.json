@@ -1,0 +1,15 @@
+{
+  "recorded_requests": 27,
+  "http_statuses": {
+    "200": 27
+  },
+  "reported_chat_usage": {
+    "prompt_tokens": 137396,
+    "completion_tokens": 24094,
+    "total_tokens": 161490
+  },
+  "interrupted_requests": "Two interrupted sequential earlier runs may each have one unpersisted in-flight call. Saved request counts are not an exhaustive billing record.",
+  "paid_provider_used": false,
+  "new_packages_or_models_installed": false,
+  "no_participant_media": true
+}

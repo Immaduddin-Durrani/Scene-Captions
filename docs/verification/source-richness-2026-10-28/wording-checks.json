@@ -1,0 +1,13 @@
+{
+  "atomic_labels": 67,
+  "cue_intervals": 87,
+  "three_distinct_levels": 66,
+  "balanced_differs_from_rich": 66,
+  "maximum_words_any_atomic_caption": 8,
+  "edited_labels": 48,
+  "edited_fields": 88,
+  "source_only": true,
+  "independent_listening_review": false,
+  "DHH_readability_validation": false,
+  "scope": "Manual source-text/wording review, not acoustic verification or an accuracy score"
+}

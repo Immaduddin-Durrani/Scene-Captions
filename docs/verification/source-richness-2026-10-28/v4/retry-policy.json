@@ -1,0 +1,4 @@
+{
+  "maximum_attempts_per_batch": 2,
+  "policy": "Strict checks first. On a bounded parseable draft failure, one correction request includes the previous unverified draft and exact length/jargon/unsupported-word feedback. Base source context remains unchanged. At the ceiling, collect mode may preserve a bounded draft for main-session editing; never installs it."
+}

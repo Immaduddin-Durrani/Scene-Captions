@@ -1,0 +1,135 @@
+{
+  "cues": 87,
+  "unique_labels": 67,
+  "track_sha256": "f9da56b365ac3a20a0fed25be2dd47bcf28646ac0e18e3ca0d6a9c2d55ad420c",
+  "source_intervals_preserved": true,
+  "source_text_review": "main-session assistant, not independent listening",
+  "reading_rate_flag": "28 characters/second budget heuristic only, NOT validated DHH reading speed",
+  "reading_flags": [
+    {
+      "cue_id": "bbb-sdh-002",
+      "detail": 3,
+      "characters_per_second": 28.6
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "detail": 1,
+      "characters_per_second": 55.5
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "detail": 2,
+      "characters_per_second": 51.8
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "detail": 3,
+      "characters_per_second": 94.3
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "detail": 2,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "detail": 3,
+      "characters_per_second": 37.5
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "detail": 3,
+      "characters_per_second": 28.6
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "detail": 3,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "detail": 3,
+      "characters_per_second": 29.8
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "detail": 3,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "detail": 3,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "detail": 3,
+      "characters_per_second": 29.7
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "detail": 2,
+      "characters_per_second": 28.8
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "detail": 3,
+      "characters_per_second": 31.2
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "detail": 3,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "detail": 3,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "detail": 3,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "detail": 3,
+      "characters_per_second": 30.0
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "detail": 3,
+      "characters_per_second": 29.8
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "detail": 2,
+      "characters_per_second": 34.2
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "detail": 3,
+      "characters_per_second": 37.8
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "detail": 3,
+      "characters_per_second": 30.5
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "detail": 3,
+      "characters_per_second": 30.6
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "detail": 3,
+      "characters_per_second": 36.7
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "detail": 3,
+      "characters_per_second": 30.3
+    }
+  ]
+}

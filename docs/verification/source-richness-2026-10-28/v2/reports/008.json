@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these EXISTING sound captions in simple English for Deaf and hard-of-hearing\nviewers. The source references are the ONLY evidence. This is not sound discovery.\nNever add another sound, instrument, material, place, speed, number of impacts,\nvolume, pitch, emotion, character action or cause that is absent from the source.\nDo not infer music instruments from mood labels. Do not infer feelings in viewers.\nYou MAY explain the meaning of a sound word in ordinary words, preserving its\nmeaning. Translate rare source words into everyday English: conkers are nuts;\ncrescendo means music gets louder; serene means calm; jovial means cheerful;\ninquisitive music has a curious feel. Keep singular/plural sources unchanged.\nFor each id return essential, balanced, rich. Essential is a short sound label;\nbalanced names the source and its sound; rich EXPLAINS THE MEANING OF THE SOUND\nWORD in an ordinary short sentence, rather than simply repeating balanced.\nEssential must describe a SOUND, not just name an object (not merely 'bird',\n'brook', 'fly', 'wings', or 'squirrel'). Naming only an object is not a caption.\nUse plain sound words in essential and a fuller, easier explanation in rich.\nExplaining a word's ordinary meaning is allowed; inventing scene facts is not.\nEvery level must use everyday\nwords, never harder vocabulary at higher richness. Rich should normally differ\nfrom balanced by explaining its sound word, even when no new factual detail is\navailable. Reuse wording ONLY if the short character budget prevents a useful\nexplanation. Do not pad with 'can be heard', 'the sound of', 'fills the air'.\nPreserve the sound source in balanced and rich. No new sounds to make rich longer.\nAvoid jargon, long clauses, sound spellings, poetic language and technical audio\nterms. No markdown, brackets, periods, exclamation marks, or newlines in values.\nAt most 4 / 7 / 12 words for essential / balanced / rich; respect each supplied\ncharacter budget too. Brief events have tighter budgets for reading. Do not\nchange reference text. Output ONLY one JSON object with key captions: an array\nof objects with EXACT keys id, essential, balanced, rich. Keep all ids once.\nReferences:\n[{\"id\": \"label-008\", \"reference\": \"[BUNNY SNORES]\", \"max_characters\": {\"essential\": 30, \"balanced\": 36, \"rich\": 36}}, {\"id\": \"label-009\", \"reference\": \"[BUNNY SNIFFS]\", \"max_characters\": {\"essential\": 30, \"balanced\": 34, \"rich\": 34}}, {\"id\": \"label-010\", \"reference\": \"[EARS POP]\", \"max_characters\": {\"essential\": 30, \"balanced\": 37, \"rich\": 37}}, {\"id\": \"label-011\", \"reference\": \"[BUNNY YAWNS]\", \"max_characters\": {\"essential\": 30, \"balanced\": 52, \"rich\": 52}}, {\"id\": \"label-012\", \"reference\": \"[BUNNY CRACKS NECK]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-013\", \"reference\": \"[BUNNY SNIFFS DEEPLY]\", \"max_characters\": {\"essential\": 30, \"balanced\": 43, \"rich\": 43}}, {\"id\": \"label-014\", \"reference\": \"[BUNNY SIGHS]\", \"max_characters\": {\"essential\": 30, \"balanced\": 35, \"rich\": 35}}, {\"id\": \"label-015\", \"reference\": \"[APPLE THUDS]\", \"max_characters\": {\"essential\": 26, \"balanced\": 26, \"rich\": 26}}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "e7fd667dda97c2594726eac0c95431697b80ee83d45fdcfce61b924567dd2136",
+    "wire_bytes": 3467,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "80121f79-78de-4546-97a6-8a3ff89e49b2",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "e41cfb2c-d208-4065-90e1-2fa1bf500f25"
+    },
+    "response": {
+      "id": "chatcmpl-01b9ee4f-69f1-4551-8cf2-235361b5c76c",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\": [{\"id\": \"label-008\", \"essential\": \"bunny snores\", \"balanced\": \"bunny snores\", \"rich\": \"bunny snores\"}, {\"id\": \"label-009\", \"essential\": \"bunny sniffs\", \"balanced\": \"bunny sniffs\", \"rich\": \"bunny sniffs\"}, {\"id\": \"label-010\", \"essential\": \"ears pop\", \"balanced\": \"ears pop\", \"rich\": \"ears pop\"}, {\"id\": \"label-011\", \"essential\": \"bunny yawns\", \"balanced\": \"bunny yawns\", \"rich\": \"bunny yawns\"}, {\"id\": \"label-012\", \"essential\": \"bunny cracks neck\", \"balanced\": \"bunny cracks neck\", \"rich\": \"bunny cracks neck\"}, {\"id\": \"label-013\", \"essential\": \"bunny sniffs deeply\", \"balanced\": \"bunny sniffs deeply\", \"rich\": \"bunny sniffs deeply\"}, {\"id\": \"label-014\", \"essential\": \"bunny sighs\", \"balanced\": \"bunny sighs\", \"rich\": \"bunny sighs\"}, {\"id\": \"label-015\", \"essential\": \"apple thuds\", \"balanced\": \"apple thuds\", \"rich\": \"apple thuds\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793180363,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 887,
+        "completion_tokens": 319,
+        "total_tokens": 1206,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.308
+  }
+]

@@ -27,7 +27,7 @@ export function useLocalMedia(initialVideo: CaptionVideo, demoSource: string, no
   function selectPreparedTrack(track: CaptionVideo) {
     if (localName || source !== demoSource || track.video_id !== initialVideo.video_id) return;
     setData(track); setImportError("");
-    notify(track.generated_with.experimental ? "Experimental media-only subtitles selected. Sound recognition and timing are unverified." : "Existing caption track restored.");
+    notify(track.generated_with.experimental ? "Experimental media-only subtitles selected. Sound recognition and timing are unverified." : track.generated_with.wording_style ? "Simple source-guided captions selected. Sound events and timing follow the credited reference." : "Existing caption track restored.");
   }
   async function importAnnotations(file: File) {
     setImportError("");

@@ -41,12 +41,14 @@ export const videoSchema = z.object({
     experimental: z.literal(true).optional(),
     acoustic_validation: z.literal("failed").optional(),
     input_basis: z.literal("media-only").optional(),
+    wording_style: z.literal("simple-source-richness").optional(),
     non_speech_status: z.literal("not-prepared").optional(),
   }),
   dialogue: z.array(dialogueCueSchema).max(5000).optional(),
   dialogue_source: z.object({ url: z.string().url().regex(/^https?:\/\//), author: z.string(), license: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
   cues: z.array(cueSchema).max(5000),
 }).superRefine((video, ctx) => {
+  if (video.generated_with.wording_style && (video.generated_with.kind !== "source-assisted" || video.generated_with.experimental || video.annotation_status !== "draft" || video.generated_with.quality_gate !== "unverified")) ctx.addIssue({ code: "custom", path: ["generated_with"], message: "Simple source-guided wording must stay a separate, unverified source-assisted draft." });
   if (video.generated_with.experimental && (video.annotation_status !== "draft" || video.generated_with.quality_gate !== "unverified" || video.generated_with.acoustic_validation !== "failed" || video.generated_with.input_basis !== "media-only" || video.generated_with.kind !== "audio-derived" || video.generated_with.caption_source || video.dialogue_source || video.cues.some(cue => cue.reference_text))) ctx.addIssue({ code: "custom", path: ["generated_with"], message: "Experimental media-only tracks must disclose failed acoustic validation, remain unverified drafts and contain no sourced captions." });
   if (!video.generated_with.experimental && (video.generated_with.acoustic_validation || video.generated_with.input_basis)) ctx.addIssue({ code: "custom", path: ["generated_with"], message: "Media-only experimental metadata needs an explicit experimental flag." });
   if (video.generated_with.kind === "source-assisted" && (!video.generated_with.model || !video.generated_with.caption_source || video.cues.some(cue => !cue.reference_text))) ctx.addIssue({ code: "custom", path: ["generated_with"], message: "Source-assisted generation needs a model, source credit and separate reference text for every cue." });

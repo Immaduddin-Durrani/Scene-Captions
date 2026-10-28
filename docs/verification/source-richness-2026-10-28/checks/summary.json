@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-28",
+  "node_tests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "offline_python_tests": {
+    "passed": 46,
+    "failed": 0
+  },
+  "production_build": "passed",
+  "new_track_schema": "passed",
+  "browser": "browser.json",
+  "media_only_regression": "media-only-regression.json",
+  "source_text_review": "../v4/source-text-review.json",
+  "existing_default_media_only_and_failed_gate_unchanged": true,
+  "private_credential_scan": "passed; secret values never printed",
+  "changed_json_syntax": "passed",
+  "input_hashes": {
+    "src/app/page.tsx": "6afe0eaa8bc0ef6e097b5065a2d85666abd4cb7081d2fde11898a8924a27fa64",
+    "src/lib/captions.ts": "356c9dead9af3985284b28b654135d4b10ecffbb4feefd76986b7171bf1759b0",
+    "src/lib/source-captions.ts": "581325b01be5dc22433e466523715cf841c9fa94a9ba097b0fd651e696601329",
+    "src/components/workspace.tsx": "ae11ed56c7e4d3e8f04f6d2a6c13512524e65c10e3e4a2a721234c8471cbb555",
+    "src/components/screening-room.tsx": "c7976bbb0f9437d297bbd289c797d6d36cd4a4afed479c0fba3962b3ebd55a2d",
+    "src/components/hooks/use-local-media.ts": "685393b58714dffb57e2783cef5926541c2e1f9558d1a9b2cbe8211d664af6a1",
+    "src/components/caption-track.tsx": "b9c6d989cc00f882da0e1b496828376553d320414aee7634c42008794e04a177",
+    "src/components/caption-style-controls.tsx": "6acf7d0186eef462eb9633a0c63b946c76b9e0f5d0d0dccc9a4a6b6660de7113",
+    "scripts/generate-source-richness.py": "3e2c62f6e7443b77219a04caf0e874a5b18c864800a892ea6689c19fea05bc96",
+    "scripts/verification/source-richness-regression.mjs": "b437064f2e2d0dc0cfdc332d2da8dab49ee78df269e2a01548d988995eeeea33",
+    "tests/source-captions.test.ts": "55b0c91e4214d21a9664cbb3d2e9083068145ac4edf48011d2314f6eb62363c9",
+    "tests/offline/test_source_richness.py": "d3fb0593725fca864e7420851cb245e8018ecf0c9223866a57194990d834431d",
+    "data/source-assisted-captions/big-buck-bunny.json": "f9da56b365ac3a20a0fed25be2dd47bcf28646ac0e18e3ca0d6a9c2d55ad420c"
+  },
+  "limitations": "Source-text/implementation checks only. No independent listening, DHH study, physical mobile test or acoustic accuracy certification. No push/deployment."
+}

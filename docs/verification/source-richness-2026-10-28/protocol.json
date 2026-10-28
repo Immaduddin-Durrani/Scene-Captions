@@ -1,0 +1,617 @@
+{
+  "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "version": "nim-source-simple-richness-v1",
+  "source_srt_sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd",
+  "source_assisted": true,
+  "media_only_observations_used": false,
+  "audio_input": false,
+  "new_sound_facts_permitted": false,
+  "prompt": "Rewrite these EXISTING sound captions in simple English for Deaf and hard-of-hearing\nviewers. The source references are the ONLY evidence. This is not sound discovery.\nNever add another sound, instrument, material, place, speed, number of impacts,\nvolume, pitch, emotion, character action or cause that is absent from the source.\nDo not infer music instruments from mood labels. Do not infer feelings in viewers.\nYou MAY explain the meaning of a sound word in ordinary words, preserving its\nmeaning. Translate rare source words into everyday English: conkers are nuts;\ncrescendo means music gets louder; serene means calm; jovial means cheerful;\ninquisitive music has a curious feel. Keep singular/plural sources unchanged.\nFor each id return essential, balanced, rich. Essential is a short sound label;\nbalanced names the source and its sound; rich explains more of the information\nalready in that reference in a short, clear phrase. Every level must use everyday\nwords, never harder vocabulary at higher richness. Reuse wording if extra facts\nare not supported. Do not pad with 'can be heard', 'the sound of', 'fills the air'.\nPreserve the sound source in balanced and rich. No new sounds to make rich longer.\nAvoid jargon, long clauses, sound spellings, poetic language and technical audio\nterms. No markdown, brackets, periods, exclamation marks, or newlines in values.\nAt most 4 / 7 / 12 words for essential / balanced / rich; respect each supplied\ncharacter budget too. Brief events have tighter budgets for reading. Do not\nchange reference text. Output ONLY one JSON object with key captions: an array\nof objects with EXACT keys id, essential, balanced, rich. Keep all ids once.\nReferences:\n",
+  "labels": [
+    {
+      "id": "label-000",
+      "reference": "[SERENE MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-001",
+      "reference": "[BROOK BABBLES]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 30,
+        "rich": 30
+      }
+    },
+    {
+      "id": "label-002",
+      "reference": "[FLY BUZZES]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 30,
+        "rich": 30
+      }
+    },
+    {
+      "id": "label-003",
+      "reference": "[BIRD TWEETS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-004",
+      "reference": "[WINGS FLAP]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-005",
+      "reference": "[THUD]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-006",
+      "reference": "[SQUIRREL LAUGHS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-007",
+      "reference": "[SNORES]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 36,
+        "rich": 36
+      }
+    },
+    {
+      "id": "label-008",
+      "reference": "[BUNNY SNORES]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 36,
+        "rich": 36
+      }
+    },
+    {
+      "id": "label-009",
+      "reference": "[BUNNY SNIFFS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 34,
+        "rich": 34
+      }
+    },
+    {
+      "id": "label-010",
+      "reference": "[EARS POP]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 37,
+        "rich": 37
+      }
+    },
+    {
+      "id": "label-011",
+      "reference": "[BUNNY YAWNS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 52
+      }
+    },
+    {
+      "id": "label-012",
+      "reference": "[BUNNY CRACKS NECK]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-013",
+      "reference": "[BUNNY SNIFFS DEEPLY]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 43,
+        "rich": 43
+      }
+    },
+    {
+      "id": "label-014",
+      "reference": "[BUNNY SIGHS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 35,
+        "rich": 35
+      }
+    },
+    {
+      "id": "label-015",
+      "reference": "[APPLE THUDS]",
+      "max_characters": {
+        "essential": 26,
+        "balanced": 26,
+        "rich": 26
+      }
+    },
+    {
+      "id": "label-016",
+      "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-017",
+      "reference": "[APPLE CRUNCHES]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-018",
+      "reference": "[LEAVES RUSTLE]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-019",
+      "reference": "[APPLE CORE THUDS]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-020",
+      "reference": "[SQUIRREL SCUTTLES]",
+      "max_characters": {
+        "essential": 29,
+        "balanced": 29,
+        "rich": 29
+      }
+    },
+    {
+      "id": "label-021",
+      "reference": "[BRANCHES RUSTLE]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 33,
+        "rich": 33
+      }
+    },
+    {
+      "id": "label-022",
+      "reference": "[SQUIRREL SQUEAKS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-023",
+      "reference": "[NUT CRUNCHING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-024",
+      "reference": "[SQUIRREL SQUEAKS ANGRILY]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-025",
+      "reference": "[NUT THUDS]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-026",
+      "reference": "[SQUIRRELS LAUGHING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 48,
+        "rich": 48
+      }
+    },
+    {
+      "id": "label-027",
+      "reference": "[SQUIRREL SNAPS FINGERS]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-028",
+      "reference": "[NUT WHOOSHES]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 43,
+        "rich": 43
+      }
+    },
+    {
+      "id": "label-029",
+      "reference": "[NUTS THUDDING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 47,
+        "rich": 47
+      }
+    },
+    {
+      "id": "label-030",
+      "reference": "[NUTS WHOOSHING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 55
+      }
+    },
+    {
+      "id": "label-031",
+      "reference": "[SUSPENSFUL MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 71
+      }
+    },
+    {
+      "id": "label-032",
+      "reference": "[BUTTERFLY SPLATS]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-033",
+      "reference": "[DRAMATIC MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 65
+      }
+    },
+    {
+      "id": "label-034",
+      "reference": "[SQUIRREL CLAPS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 42,
+        "rich": 42
+      }
+    },
+    {
+      "id": "label-035",
+      "reference": "[BUNNY GULPS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 33,
+        "rich": 33
+      }
+    },
+    {
+      "id": "label-036",
+      "reference": "[CONKERS WHOOSH]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-037",
+      "reference": "[CONKERS THUD]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-038",
+      "reference": "[MOTIVATIONAL MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-039",
+      "reference": "[JOVIAL MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-040",
+      "reference": "[MILITARY MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-041",
+      "reference": "[INQUISITIVE MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-042",
+      "reference": "[MUSIC CRESCENDOS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 71
+      }
+    },
+    {
+      "id": "label-043",
+      "reference": "[GRASS RUSTLING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-044",
+      "reference": "[BOW STRING PINGS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-045",
+      "reference": "[VINE SNAPS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-046",
+      "reference": "[SQUIRRELS SNIFFING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-047",
+      "reference": "[SQUIRREL SQUEAKS ORDERS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 34,
+        "rich": 34
+      }
+    },
+    {
+      "id": "label-048",
+      "reference": "[ROPES CREAK]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 69
+      }
+    },
+    {
+      "id": "label-049",
+      "reference": "[SQUIRREL SQUEAKS IN PAIN]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-050",
+      "reference": "[NUT CRUNCHES]",
+      "max_characters": {
+        "essential": 27,
+        "balanced": 27,
+        "rich": 27
+      }
+    },
+    {
+      "id": "label-051",
+      "reference": "[ROCK CRASHES]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-052",
+      "reference": "[LOG CRUNCHES]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-053",
+      "reference": "[LOG THUDS]",
+      "max_characters": {
+        "essential": 28,
+        "balanced": 28,
+        "rich": 28
+      }
+    },
+    {
+      "id": "label-054",
+      "reference": "[TRAP PINGS]",
+      "max_characters": {
+        "essential": 26,
+        "balanced": 26,
+        "rich": 26
+      }
+    },
+    {
+      "id": "label-055",
+      "reference": "[SQUIRREL SQUEALS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 30,
+        "rich": 30
+      }
+    },
+    {
+      "id": "label-056",
+      "reference": "[WINGS POP]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 49,
+        "rich": 49
+      }
+    },
+    {
+      "id": "label-057",
+      "reference": "[TWIG SNAPS]",
+      "max_characters": {
+        "essential": 26,
+        "balanced": 26,
+        "rich": 26
+      }
+    },
+    {
+      "id": "label-058",
+      "reference": "[TRAPS SNAP]",
+      "max_characters": {
+        "essential": 26,
+        "balanced": 26,
+        "rich": 26
+      }
+    },
+    {
+      "id": "label-059",
+      "reference": "[TRAPS SNAPPING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 60
+      }
+    },
+    {
+      "id": "label-060",
+      "reference": "[BRANCHES SNAP]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    },
+    {
+      "id": "label-061",
+      "reference": "[WINGS FLAPPING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 41,
+        "rich": 41
+      }
+    },
+    {
+      "id": "label-062",
+      "reference": "[BRANCH CREAKING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 60
+      }
+    },
+    {
+      "id": "label-063",
+      "reference": "[WIND BLOWS]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-064",
+      "reference": "[TRIUMPHANT MUSIC]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-065",
+      "reference": "[BIRD FLAPPING]",
+      "max_characters": {
+        "essential": 30,
+        "balanced": 52,
+        "rich": 76
+      }
+    },
+    {
+      "id": "label-066",
+      "reference": "[POOP SPLATS]",
+      "max_characters": {
+        "essential": 24,
+        "balanced": 24,
+        "rich": 24
+      }
+    }
+  ],
+  "max_calls_full_run": 18,
+  "human_listening_review": false
+}

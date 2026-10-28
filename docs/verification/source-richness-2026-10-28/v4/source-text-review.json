@@ -1,0 +1,784 @@
+{
+  "reviewer": "main-session assistant",
+  "generated_labels_sha256": "126c00eae3e0a313996c714d22c15241ab412c50164f5dc4f74869f7b0b1be2b",
+  "approved_ids": [
+    "label-000",
+    "label-001",
+    "label-002",
+    "label-003",
+    "label-004",
+    "label-005",
+    "label-006",
+    "label-007",
+    "label-008",
+    "label-009",
+    "label-010",
+    "label-011",
+    "label-012",
+    "label-013",
+    "label-014",
+    "label-015",
+    "label-016",
+    "label-017",
+    "label-018",
+    "label-019",
+    "label-020",
+    "label-021",
+    "label-022",
+    "label-023",
+    "label-024",
+    "label-025",
+    "label-026",
+    "label-027",
+    "label-028",
+    "label-029",
+    "label-030",
+    "label-031",
+    "label-032",
+    "label-033",
+    "label-034",
+    "label-035",
+    "label-036",
+    "label-037",
+    "label-038",
+    "label-039",
+    "label-040",
+    "label-041",
+    "label-042",
+    "label-043",
+    "label-044",
+    "label-045",
+    "label-046",
+    "label-047",
+    "label-048",
+    "label-049",
+    "label-050",
+    "label-051",
+    "label-052",
+    "label-053",
+    "label-054",
+    "label-055",
+    "label-056",
+    "label-057",
+    "label-058",
+    "label-059",
+    "label-060",
+    "label-061",
+    "label-062",
+    "label-063",
+    "label-064",
+    "label-065",
+    "label-066"
+  ],
+  "edits": [
+    {
+      "id": "label-000",
+      "reference": "[SERENE MUSIC]",
+      "field": "essential",
+      "before": "Calm music",
+      "after": "Music",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-000",
+      "reference": "[SERENE MUSIC]",
+      "field": "rich",
+      "before": "Calm music plays in the background",
+      "after": "Music with a calm feel plays",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-001",
+      "reference": "[BROOK BABBLES]",
+      "field": "rich",
+      "before": "Water bubbles and runs in a brook",
+      "after": "A stream makes bubbling sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-003",
+      "reference": "[BIRD TWEETS]",
+      "field": "rich",
+      "before": "A bird makes chirping calls",
+      "after": "Bird calls with chirps",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-004",
+      "reference": "[WINGS FLAP]",
+      "field": "rich",
+      "before": "Wings make flapping sounds",
+      "after": "Flapping sounds of wings",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-005",
+      "reference": "[THUD]",
+      "field": "rich",
+      "before": "A dull hit makes a thud sound",
+      "after": "A dull hit makes a thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-006",
+      "reference": "[SQUIRREL LAUGHS]",
+      "field": "rich",
+      "before": "A squirrel makes laughing sounds",
+      "after": "A squirrel is laughing",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-007",
+      "reference": "[SNORES]",
+      "field": "essential",
+      "before": "Sleep snores",
+      "after": "Snoring",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-007",
+      "reference": "[SNORES]",
+      "field": "balanced",
+      "before": "Someone snores in sleep",
+      "after": "Snoring sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-007",
+      "reference": "[SNORES]",
+      "field": "rich",
+      "before": "Noisy breathing sounds during sleep",
+      "after": "Noisy breathing during sleep",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-010",
+      "reference": "[EARS POP]",
+      "field": "balanced",
+      "before": "Ears make a popping sound",
+      "after": "Ears make a pop",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-010",
+      "reference": "[EARS POP]",
+      "field": "rich",
+      "before": "Ears make a short popping sound",
+      "after": "Ears make popping sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-011",
+      "reference": "[BUNNY YAWNS]",
+      "field": "rich",
+      "before": "A bunny opens its mouth wide and breathes in",
+      "after": "A bunny makes a yawning sound",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-012",
+      "reference": "[BUNNY CRACKS NECK]",
+      "field": "balanced",
+      "before": "A bunny cracks its neck",
+      "after": "Bunny cracks its neck",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-012",
+      "reference": "[BUNNY CRACKS NECK]",
+      "field": "rich",
+      "before": "A bunny makes a cracking neck sound",
+      "after": "Bunny's neck makes a crack",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-013",
+      "reference": "[BUNNY SNIFFS DEEPLY]",
+      "field": "rich",
+      "before": "A bunny draws air in strongly through nose",
+      "after": "Bunny takes a deep sniff through its nose",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-015",
+      "reference": "[APPLE THUDS]",
+      "field": "rich",
+      "before": "An apple makes a dull hit",
+      "after": "An apple makes a dull thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-016",
+      "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+      "field": "essential",
+      "before": "Tree rustles suspiciously",
+      "after": "Odd tree rustling",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-016",
+      "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+      "field": "balanced",
+      "before": "A tree rustles suspiciously",
+      "after": "A tree rustles oddly",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-016",
+      "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+      "field": "rich",
+      "before": "Tree makes suspicious rustling",
+      "after": "Tree makes an odd rustle",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-018",
+      "reference": "[LEAVES RUSTLE]",
+      "field": "essential",
+      "before": "Leaves rustle",
+      "after": "Rustling",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-019",
+      "reference": "[APPLE CORE THUDS]",
+      "field": "rich",
+      "before": "Apple core makes dull thud",
+      "after": "Apple core makes a dull thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-020",
+      "reference": "[SQUIRREL SCUTTLES]",
+      "field": "essential",
+      "before": "Squirrel scuttles",
+      "after": "Quick footsteps",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-020",
+      "reference": "[SQUIRREL SCUTTLES]",
+      "field": "balanced",
+      "before": "A squirrel scuttles",
+      "after": "Squirrel footsteps",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-020",
+      "reference": "[SQUIRREL SCUTTLES]",
+      "field": "rich",
+      "before": "Squirrel makes quick scuttling",
+      "after": "Quick steps from a squirrel",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-021",
+      "reference": "[BRANCHES RUSTLE]",
+      "field": "essential",
+      "before": "Branches rustle",
+      "after": "Rustling",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-022",
+      "reference": "[SQUIRREL SQUEAKS]",
+      "field": "rich",
+      "before": "Squirrel makes squeaking calls",
+      "after": "A squirrel gives squeaks",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-024",
+      "reference": "[SQUIRREL SQUEAKS ANGRILY]",
+      "field": "balanced",
+      "before": "Squirrel squeaks angrily",
+      "after": "Angry squirrel squeaks",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-024",
+      "reference": "[SQUIRREL SQUEAKS ANGRILY]",
+      "field": "rich",
+      "before": "Squirrel makes angry squeaks",
+      "after": "Squirrel squeaks angrily",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-032",
+      "reference": "[BUTTERFLY SPLATS]",
+      "field": "rich",
+      "before": "Butterfly hits with wet sound",
+      "after": "A butterfly makes a splat",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-035",
+      "reference": "[BUNNY GULPS]",
+      "field": "rich",
+      "before": "Bunny swallows with gulp sound",
+      "after": "Bunny swallows with a gulp",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-036",
+      "reference": "[CONKERS WHOOSH]",
+      "field": "essential",
+      "before": "Conkers whoosh",
+      "after": "Rushing sound",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-036",
+      "reference": "[CONKERS WHOOSH]",
+      "field": "balanced",
+      "before": "Conkers whoosh",
+      "after": "Nuts whoosh",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-036",
+      "reference": "[CONKERS WHOOSH]",
+      "field": "rich",
+      "before": "Nuts rush through the air",
+      "after": "Nuts make a rushing sound",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-037",
+      "reference": "[CONKERS THUD]",
+      "field": "essential",
+      "before": "Conkers thud",
+      "after": "Thuds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-037",
+      "reference": "[CONKERS THUD]",
+      "field": "balanced",
+      "before": "Conkers thud",
+      "after": "Nuts thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-037",
+      "reference": "[CONKERS THUD]",
+      "field": "rich",
+      "before": "Nuts hit with a dull sound",
+      "after": "Nuts make dull hit sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-042",
+      "reference": "[MUSIC CRESCENDOS]",
+      "field": "essential",
+      "before": "Music gets louder",
+      "after": "Music",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-042",
+      "reference": "[MUSIC CRESCENDOS]",
+      "field": "rich",
+      "before": "The music gets louder",
+      "after": "Music builds up and gets louder",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-043",
+      "reference": "[GRASS RUSTLING]",
+      "field": "essential",
+      "before": "Grass rustling",
+      "after": "Rustling",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-043",
+      "reference": "[GRASS RUSTLING]",
+      "field": "balanced",
+      "before": "Grass makes rustling sounds",
+      "after": "Grass rustles",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-043",
+      "reference": "[GRASS RUSTLING]",
+      "field": "rich",
+      "before": "Grass makes a rustling sound",
+      "after": "Grass makes rustling sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-044",
+      "reference": "[BOW STRING PINGS]",
+      "field": "essential",
+      "before": "Bow string pings",
+      "after": "Ping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-044",
+      "reference": "[BOW STRING PINGS]",
+      "field": "balanced",
+      "before": "Bow string pinging",
+      "after": "Bow string pings",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-044",
+      "reference": "[BOW STRING PINGS]",
+      "field": "rich",
+      "before": "Bow string pings",
+      "after": "Bow string makes a ping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-045",
+      "reference": "[VINE SNAPS]",
+      "field": "essential",
+      "before": "Vine snaps",
+      "after": "Snap",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-045",
+      "reference": "[VINE SNAPS]",
+      "field": "balanced",
+      "before": "Vine snapping",
+      "after": "A vine snaps",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-045",
+      "reference": "[VINE SNAPS]",
+      "field": "rich",
+      "before": "Vine snaps",
+      "after": "A vine makes a snap",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-046",
+      "reference": "[SQUIRRELS SNIFFING]",
+      "field": "essential",
+      "before": "Squirrels sniffing",
+      "after": "Sniffing",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-046",
+      "reference": "[SQUIRRELS SNIFFING]",
+      "field": "balanced",
+      "before": "Squirrels make sniffing sounds",
+      "after": "Squirrels sniff",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-046",
+      "reference": "[SQUIRRELS SNIFFING]",
+      "field": "rich",
+      "before": "Squirrels make sniffing sounds",
+      "after": "Squirrels draw air through their noses",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-047",
+      "reference": "[SQUIRREL SQUEAKS ORDERS]",
+      "field": "essential",
+      "before": "Squirrel squeaks orders",
+      "after": "Squeaked orders",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-047",
+      "reference": "[SQUIRREL SQUEAKS ORDERS]",
+      "field": "balanced",
+      "before": "Squirrel squeaks giving orders",
+      "after": "Squirrel squeaks orders",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-047",
+      "reference": "[SQUIRREL SQUEAKS ORDERS]",
+      "field": "rich",
+      "before": "A squirrel squeaks giving orders",
+      "after": "A squirrel gives orders in squeaks",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-048",
+      "reference": "[ROPES CREAK]",
+      "field": "essential",
+      "before": "Ropes creaking",
+      "after": "Creaking",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-048",
+      "reference": "[ROPES CREAK]",
+      "field": "balanced",
+      "before": "Ropes make creaking sounds",
+      "after": "Ropes creak",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-048",
+      "reference": "[ROPES CREAK]",
+      "field": "rich",
+      "before": "Ropes make creaking or squeaking sounds",
+      "after": "Ropes make a creaking sound",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-049",
+      "reference": "[SQUIRREL SQUEAKS IN PAIN]",
+      "field": "essential",
+      "before": "Squirrel squeaks in pain",
+      "after": "Squeaks in pain",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-050",
+      "reference": "[NUT CRUNCHES]",
+      "field": "essential",
+      "before": "Nut crunching",
+      "after": "Crunch",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-050",
+      "reference": "[NUT CRUNCHES]",
+      "field": "rich",
+      "before": "A nut crunches",
+      "after": "A nut makes a crunch",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-051",
+      "reference": "[ROCK CRASHES]",
+      "field": "essential",
+      "before": "Rock crashing",
+      "after": "Crash",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-051",
+      "reference": "[ROCK CRASHES]",
+      "field": "rich",
+      "before": "A rock crashes",
+      "after": "A rock makes a crash",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-052",
+      "reference": "[LOG CRUNCHES]",
+      "field": "essential",
+      "before": "Log crunching",
+      "after": "Crunch",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-052",
+      "reference": "[LOG CRUNCHES]",
+      "field": "rich",
+      "before": "A log crunches",
+      "after": "A log makes a crunch",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-053",
+      "reference": "[LOG THUDS]",
+      "field": "essential",
+      "before": "Log thudding",
+      "after": "Thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-053",
+      "reference": "[LOG THUDS]",
+      "field": "rich",
+      "before": "A log thuds",
+      "after": "A log makes a dull thud",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-054",
+      "reference": "[TRAP PINGS]",
+      "field": "essential",
+      "before": "Trap pinging",
+      "after": "Ping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-054",
+      "reference": "[TRAP PINGS]",
+      "field": "rich",
+      "before": "A trap pings",
+      "after": "A trap makes a ping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-055",
+      "reference": "[SQUIRREL SQUEALS]",
+      "field": "essential",
+      "before": "Squirrel squealing",
+      "after": "Squealing",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-055",
+      "reference": "[SQUIRREL SQUEALS]",
+      "field": "rich",
+      "before": "A squirrel squeals",
+      "after": "A squirrel makes a squeal",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-056",
+      "reference": "[WINGS POP]",
+      "field": "essential",
+      "before": "Wings pop",
+      "after": "Popping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-056",
+      "reference": "[WINGS POP]",
+      "field": "balanced",
+      "before": "Wings make popping sounds",
+      "after": "Wings pop",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-057",
+      "reference": "[TWIG SNAPS]",
+      "field": "essential",
+      "before": "Twig snaps",
+      "after": "Snap",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-058",
+      "reference": "[TRAPS SNAP]",
+      "field": "essential",
+      "before": "Traps snap",
+      "after": "Snapping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-058",
+      "reference": "[TRAPS SNAP]",
+      "field": "balanced",
+      "before": "Traps snap shut",
+      "after": "Traps snap",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-058",
+      "reference": "[TRAPS SNAP]",
+      "field": "rich",
+      "before": "Traps snap shut",
+      "after": "Traps make snapping sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-059",
+      "reference": "[TRAPS SNAPPING]",
+      "field": "essential",
+      "before": "Traps snapping",
+      "after": "Snapping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-060",
+      "reference": "[BRANCHES SNAP]",
+      "field": "essential",
+      "before": "Branches snap",
+      "after": "Snapping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-060",
+      "reference": "[BRANCHES SNAP]",
+      "field": "rich",
+      "before": "Branches snap",
+      "after": "Snaps come from branches",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-061",
+      "reference": "[WINGS FLAPPING]",
+      "field": "rich",
+      "before": "Wings make flapping sounds",
+      "after": "Flapping sounds of wings",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-062",
+      "reference": "[BRANCH CREAKING]",
+      "field": "essential",
+      "before": "Branch creaking",
+      "after": "Creaking",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-063",
+      "reference": "[WIND BLOWS]",
+      "field": "essential",
+      "before": "Wind blows",
+      "after": "Wind",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-064",
+      "reference": "[TRIUMPHANT MUSIC]",
+      "field": "essential",
+      "before": "Happy music",
+      "after": "Music",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-064",
+      "reference": "[TRIUMPHANT MUSIC]",
+      "field": "balanced",
+      "before": "Happy music plays",
+      "after": "Victory music",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-064",
+      "reference": "[TRIUMPHANT MUSIC]",
+      "field": "rich",
+      "before": "Happy music plays in a winning style",
+      "after": "Music with a winning feel plays",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-065",
+      "reference": "[BIRD FLAPPING]",
+      "field": "essential",
+      "before": "Bird wings flapping",
+      "after": "Bird flapping",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-065",
+      "reference": "[BIRD FLAPPING]",
+      "field": "rich",
+      "before": "Bird wings make flapping sounds",
+      "after": "A bird makes flapping sounds",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    },
+    {
+      "id": "label-066",
+      "reference": "[POOP SPLATS]",
+      "field": "essential",
+      "before": "Poop splats",
+      "after": "Splat",
+      "reason": "Main-session source-text/wording correction: preserve only the reference sound, explain its meaning in common words, fit the fixed brief-event budget, and keep sound descriptions distinct where supported. No listening claim."
+    }
+  ],
+  "reference_only": true,
+  "review_scope": "All 67 atomic source labels and all three wording levels inspected against the pinned source. Glossary explains sound-word meanings, not new observed facts. No media-only sound guesses used.",
+  "limitations": "Not independent review, human listening, DHH readability validation, new sound discovery or an accuracy certificate. Source music moods remain author interpretations.",
+  "edited_fields": 88,
+  "edited_labels": 48
+}

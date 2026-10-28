@@ -1,0 +1,2119 @@
+{
+  "schema_version": 1,
+  "video_id": "big-buck-bunny",
+  "title": "Big Buck Bunny",
+  "source_url": "https://peach.blender.org/about/",
+  "license": "CC BY 3.0",
+  "attribution": "SceneCaptions source-guided wording, based on Demuxed / big-buck-captions contributors, CC BY 3.0",
+  "duration_seconds": 596.461678,
+  "annotation_status": "draft",
+  "generated_with": {
+    "method": "NVIDIA source-caption rewriting at three plain-English detail levels. Existing licensed sound labels and intervals are the only factual input; no new sound events or acoustic discoveries. Main-session source-text review recorded; full listening review pending.",
+    "prompt_version": "nim-source-simple-richness-v4-context",
+    "kind": "source-assisted",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "source_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "generation_record_sha256": "126c00eae3e0a313996c714d22c15241ab412c50164f5dc4f74869f7b0b1be2b",
+    "expressiveness": "conservative",
+    "scene_load_method": "unreviewed",
+    "caption_source": {
+      "url": "https://github.com/demuxed/big-buck-captions/blob/e490383ca58f53507cfa18a64e1324f28d77c65a/big-buck-bunny.srt",
+      "revision": "e490383ca58f53507cfa18a64e1324f28d77c65a",
+      "license": "CC BY 3.0",
+      "author": "Demuxed / big-buck-captions contributors",
+      "sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd"
+    },
+    "quality_gate": "unverified",
+    "wording_style": "simple-source-richness"
+  },
+  "cues": [
+    {
+      "cue_id": "bbb-sdh-001",
+      "start_s": 2.499,
+      "end_s": 6.416,
+      "original_text": "[Calm music plays]",
+      "reference_text": "[SERENE MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "serene-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Music]",
+        "1-2": "[Music]",
+        "1-3": "[Music]",
+        "2-1": "[Calm music plays]",
+        "2-2": "[Calm music plays]",
+        "2-3": "[Calm music plays]",
+        "3-1": "[Music with a calm feel plays]",
+        "3-2": "[Music with a calm feel plays]",
+        "3-3": "[Music with a calm feel plays]"
+      },
+      "representations": {
+        "plain": "[Music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-002",
+      "start_s": 11.791,
+      "end_s": 13.958,
+      "original_text": "[Water bubbles in a brook]\n[A fly buzzes]",
+      "reference_text": "[BROOK BABBLES]\n[FLY BUZZES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "brook-babbles--fly-buzzes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bubbling water]\n[Buzzing fly]",
+        "1-2": "[Bubbling water]\n[Buzzing fly]",
+        "1-3": "[Bubbling water]\n[Buzzing fly]",
+        "2-1": "[Water bubbles in a brook]\n[A fly buzzes]",
+        "2-2": "[Water bubbles in a brook]\n[A fly buzzes]",
+        "2-3": "[Water bubbles in a brook]\n[A fly buzzes]",
+        "3-1": "[A stream makes bubbling sounds]\n[A fly makes a buzzing sound]",
+        "3-2": "[A stream makes bubbling sounds]\n[A fly makes a buzzing sound]",
+        "3-3": "[A stream makes bubbling sounds]\n[A fly makes a buzzing sound]"
+      },
+      "representations": {
+        "plain": "[Bubbling water]\n[Buzzing fly]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-003",
+      "start_s": 16.166,
+      "end_s": 17.666,
+      "original_text": "[A bird chirps]",
+      "reference_text": "[BIRD TWEETS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bird-tweets",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bird chirps]",
+        "1-2": "[Bird chirps]",
+        "1-3": "[Bird chirps]",
+        "2-1": "[A bird chirps]",
+        "2-2": "[A bird chirps]",
+        "2-3": "[A bird chirps]",
+        "3-1": "[Bird calls with chirps]",
+        "3-2": "[Bird calls with chirps]",
+        "3-3": "[Bird calls with chirps]"
+      },
+      "representations": {
+        "plain": "[Bird chirps]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-004",
+      "start_s": 17.666,
+      "end_s": 18.708,
+      "original_text": "[Wings flap]",
+      "reference_text": "[WINGS FLAP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "wings-flap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Wings flapping]",
+        "1-2": "[Wings flapping]",
+        "1-3": "[Wings flapping]",
+        "2-1": "[Wings flap]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[Flapping sounds of wings]",
+        "3-2": "[Flapping sounds of wings]",
+        "3-3": "[Flapping sounds of wings]"
+      },
+      "representations": {
+        "plain": "[Wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-005",
+      "start_s": 19.833,
+      "end_s": 20.374,
+      "original_text": "[A bird chirps]\n[Wings flap]",
+      "reference_text": "[BIRD TWEETS]\n[WINGS FLAP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bird-tweets--wings-flap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bird chirps]\n[Wings flapping]",
+        "1-2": "[Bird chirps]\n[Wings flapping]",
+        "1-3": "[Bird chirps]\n[Wings flapping]",
+        "2-1": "[A bird chirps]\n[Wings flap]",
+        "2-2": "[A bird chirps]\n[Wings flap]",
+        "2-3": "[A bird chirps]\n[Wings flap]",
+        "3-1": "[Bird calls with chirps]\n[Flapping sounds of wings]",
+        "3-2": "[Bird calls with chirps]\n[Flapping sounds of wings]",
+        "3-3": "[Bird calls with chirps]\n[Flapping sounds of wings]"
+      },
+      "representations": {
+        "plain": "[Bird chirps]\n[Wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-006",
+      "start_s": 20.374,
+      "end_s": 21.041,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-007",
+      "start_s": 21.374,
+      "end_s": 22.249,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-008",
+      "start_s": 22.249,
+      "end_s": 23.083,
+      "original_text": "[A squirrel laughs]",
+      "reference_text": "[SQUIRREL LAUGHS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-laughs",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrel laughter]",
+        "1-2": "[Squirrel laughter]",
+        "1-3": "[Squirrel laughter]",
+        "2-1": "[A squirrel laughs]",
+        "2-2": "[A squirrel laughs]",
+        "2-3": "[A squirrel laughs]",
+        "3-1": "[A squirrel is laughing]",
+        "3-2": "[A squirrel is laughing]",
+        "3-3": "[A squirrel is laughing]"
+      },
+      "representations": {
+        "plain": "[Squirrel laughter]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-009",
+      "start_s": 26.249,
+      "end_s": 27.541,
+      "original_text": "[Snoring sounds]",
+      "reference_text": "[SNORES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snoring]",
+        "2-1": "[Snoring sounds]",
+        "2-2": "[Snoring sounds]",
+        "2-3": "[Snoring sounds]",
+        "3-1": "[Noisy breathing during sleep]",
+        "3-2": "[Noisy breathing during sleep]",
+        "3-3": "[Noisy breathing during sleep]"
+      },
+      "representations": {
+        "plain": "[Snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-010",
+      "start_s": 29.416,
+      "end_s": 30.708,
+      "original_text": "[Snoring sounds]",
+      "reference_text": "[SNORES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snoring]",
+        "1-2": "[Snoring]",
+        "1-3": "[Snoring]",
+        "2-1": "[Snoring sounds]",
+        "2-2": "[Snoring sounds]",
+        "2-3": "[Snoring sounds]",
+        "3-1": "[Noisy breathing during sleep]",
+        "3-2": "[Noisy breathing during sleep]",
+        "3-3": "[Noisy breathing during sleep]"
+      },
+      "representations": {
+        "plain": "[Snoring]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-011",
+      "start_s": 32.749,
+      "end_s": 34.041,
+      "original_text": "[A bunny snores]",
+      "reference_text": "[BUNNY SNORES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny snores]",
+        "1-2": "[Bunny snores]",
+        "1-3": "[Bunny snores]",
+        "2-1": "[A bunny snores]",
+        "2-2": "[A bunny snores]",
+        "2-3": "[A bunny snores]",
+        "3-1": "[A bunny breathes noisily in sleep]",
+        "3-2": "[A bunny breathes noisily in sleep]",
+        "3-3": "[A bunny breathes noisily in sleep]"
+      },
+      "representations": {
+        "plain": "[Bunny snores]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-012",
+      "start_s": 35.916,
+      "end_s": 37.249,
+      "original_text": "[A bunny snores]",
+      "reference_text": "[BUNNY SNORES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-snores",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny snores]",
+        "1-2": "[Bunny snores]",
+        "1-3": "[Bunny snores]",
+        "2-1": "[A bunny snores]",
+        "2-2": "[A bunny snores]",
+        "2-3": "[A bunny snores]",
+        "3-1": "[A bunny breathes noisily in sleep]",
+        "3-2": "[A bunny breathes noisily in sleep]",
+        "3-3": "[A bunny breathes noisily in sleep]"
+      },
+      "representations": {
+        "plain": "[Bunny snores]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-013",
+      "start_s": 45.333,
+      "end_s": 46.541,
+      "original_text": "[A bunny sniffs]",
+      "reference_text": "[BUNNY SNIFFS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-sniffs",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny sniffs]",
+        "1-2": "[Bunny sniffs]",
+        "1-3": "[Bunny sniffs]",
+        "2-1": "[A bunny sniffs]",
+        "2-2": "[A bunny sniffs]",
+        "2-3": "[A bunny sniffs]",
+        "3-1": "[A bunny draws air through its nose]",
+        "3-2": "[A bunny draws air through its nose]",
+        "3-3": "[A bunny draws air through its nose]"
+      },
+      "representations": {
+        "plain": "[Bunny sniffs]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-014",
+      "start_s": 46.541,
+      "end_s": 47.874,
+      "original_text": "[Ears make a pop]",
+      "reference_text": "[EARS POP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "ears-pop",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Ears pop]",
+        "1-2": "[Ears pop]",
+        "1-3": "[Ears pop]",
+        "2-1": "[Ears make a pop]",
+        "2-2": "[Ears make a pop]",
+        "2-3": "[Ears make a pop]",
+        "3-1": "[Ears make popping sounds]",
+        "3-2": "[Ears make popping sounds]",
+        "3-3": "[Ears make popping sounds]"
+      },
+      "representations": {
+        "plain": "[Ears pop]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-015",
+      "start_s": 50.083,
+      "end_s": 51.958,
+      "original_text": "[A bunny yawns]",
+      "reference_text": "[BUNNY YAWNS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-yawns",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny yawns]",
+        "1-2": "[Bunny yawns]",
+        "1-3": "[Bunny yawns]",
+        "2-1": "[A bunny yawns]",
+        "2-2": "[A bunny yawns]",
+        "2-3": "[A bunny yawns]",
+        "3-1": "[A bunny makes a yawning sound]",
+        "3-2": "[A bunny makes a yawning sound]",
+        "3-3": "[A bunny makes a yawning sound]"
+      },
+      "representations": {
+        "plain": "[Bunny yawns]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-016",
+      "start_s": 52.499,
+      "end_s": 53.541,
+      "original_text": "[Bunny cracks its neck]",
+      "reference_text": "[BUNNY CRACKS NECK]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-cracks-neck",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny cracks neck]",
+        "1-2": "[Bunny cracks neck]",
+        "1-3": "[Bunny cracks neck]",
+        "2-1": "[Bunny cracks its neck]",
+        "2-2": "[Bunny cracks its neck]",
+        "2-3": "[Bunny cracks its neck]",
+        "3-1": "[Bunny's neck makes a crack]",
+        "3-2": "[Bunny's neck makes a crack]",
+        "3-3": "[Bunny's neck makes a crack]"
+      },
+      "representations": {
+        "plain": "[Bunny cracks neck]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-017",
+      "start_s": 68.416,
+      "end_s": 69.958,
+      "original_text": "[A bunny sniffs deeply]",
+      "reference_text": "[BUNNY SNIFFS DEEPLY]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-sniffs-deeply",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny sniffs deeply]",
+        "1-2": "[Bunny sniffs deeply]",
+        "1-3": "[Bunny sniffs deeply]",
+        "2-1": "[A bunny sniffs deeply]",
+        "2-2": "[A bunny sniffs deeply]",
+        "2-3": "[A bunny sniffs deeply]",
+        "3-1": "[Bunny takes a deep sniff through its nose]",
+        "3-2": "[Bunny takes a deep sniff through its nose]",
+        "3-3": "[Bunny takes a deep sniff through its nose]"
+      },
+      "representations": {
+        "plain": "[Bunny sniffs deeply]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-018",
+      "start_s": 73.499,
+      "end_s": 75.166,
+      "original_text": "[A bunny sniffs deeply]",
+      "reference_text": "[BUNNY SNIFFS DEEPLY]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-sniffs-deeply",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny sniffs deeply]",
+        "1-2": "[Bunny sniffs deeply]",
+        "1-3": "[Bunny sniffs deeply]",
+        "2-1": "[A bunny sniffs deeply]",
+        "2-2": "[A bunny sniffs deeply]",
+        "2-3": "[A bunny sniffs deeply]",
+        "3-1": "[Bunny takes a deep sniff through its nose]",
+        "3-2": "[Bunny takes a deep sniff through its nose]",
+        "3-3": "[Bunny takes a deep sniff through its nose]"
+      },
+      "representations": {
+        "plain": "[Bunny sniffs deeply]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-019",
+      "start_s": 75.166,
+      "end_s": 76.416,
+      "original_text": "[A bunny sighs]",
+      "reference_text": "[BUNNY SIGHS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-sighs",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny sighs]",
+        "1-2": "[Bunny sighs]",
+        "1-3": "[Bunny sighs]",
+        "2-1": "[A bunny sighs]",
+        "2-2": "[A bunny sighs]",
+        "2-3": "[A bunny sighs]",
+        "3-1": "[A bunny lets out a breath]",
+        "3-2": "[A bunny lets out a breath]",
+        "3-3": "[A bunny lets out a breath]"
+      },
+      "representations": {
+        "plain": "[Bunny sighs]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-020",
+      "start_s": 83.624,
+      "end_s": 84.999,
+      "original_text": "[An apple thuds]",
+      "reference_text": "[APPLE THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "apple-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Apple thuds]",
+        "1-2": "[Apple thuds]",
+        "1-3": "[Apple thuds]",
+        "2-1": "[An apple thuds]",
+        "2-2": "[An apple thuds]",
+        "2-3": "[An apple thuds]",
+        "3-1": "[An apple makes a dull thud]",
+        "3-2": "[An apple makes a dull thud]",
+        "3-3": "[An apple makes a dull thud]"
+      },
+      "representations": {
+        "plain": "[Apple thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-021",
+      "start_s": 90.041,
+      "end_s": 91.083,
+      "original_text": "[A tree rustles oddly]",
+      "reference_text": "[TREE RUSTLES SUSPICIOUSLY]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "tree-rustles-suspiciously",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Odd tree rustling]",
+        "1-2": "[Odd tree rustling]",
+        "1-3": "[Odd tree rustling]",
+        "2-1": "[A tree rustles oddly]",
+        "2-2": "[A tree rustles oddly]",
+        "2-3": "[A tree rustles oddly]",
+        "3-1": "[Tree makes an odd rustle]",
+        "3-2": "[Tree makes an odd rustle]",
+        "3-3": "[Tree makes an odd rustle]"
+      },
+      "representations": {
+        "plain": "[Odd tree rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-022",
+      "start_s": 94.499,
+      "end_s": 95.541,
+      "original_text": "[An apple crunches]",
+      "reference_text": "[APPLE CRUNCHES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "apple-crunches",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Apple crunches]",
+        "1-2": "[Apple crunches]",
+        "1-3": "[Apple crunches]",
+        "2-1": "[An apple crunches]",
+        "2-2": "[An apple crunches]",
+        "2-3": "[An apple crunches]",
+        "3-1": "[Apple makes crunching sounds]",
+        "3-2": "[Apple makes crunching sounds]",
+        "3-3": "[Apple makes crunching sounds]"
+      },
+      "representations": {
+        "plain": "[Apple crunches]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-023",
+      "start_s": 101.958,
+      "end_s": 102.999,
+      "original_text": "[Leaves rustle]",
+      "reference_text": "[LEAVES RUSTLE]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "leaves-rustle",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustling]",
+        "2-1": "[Leaves rustle]",
+        "2-2": "[Leaves rustle]",
+        "2-3": "[Leaves rustle]",
+        "3-1": "[Leaves make rustling sounds]",
+        "3-2": "[Leaves make rustling sounds]",
+        "3-3": "[Leaves make rustling sounds]"
+      },
+      "representations": {
+        "plain": "[Rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-024",
+      "start_s": 106.541,
+      "end_s": 107.583,
+      "original_text": "[An apple core thuds]",
+      "reference_text": "[APPLE CORE THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "apple-core-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Apple core thuds]",
+        "1-2": "[Apple core thuds]",
+        "1-3": "[Apple core thuds]",
+        "2-1": "[An apple core thuds]",
+        "2-2": "[An apple core thuds]",
+        "2-3": "[An apple core thuds]",
+        "3-1": "[Apple core makes a dull thud]",
+        "3-2": "[Apple core makes a dull thud]",
+        "3-3": "[Apple core makes a dull thud]"
+      },
+      "representations": {
+        "plain": "[Apple core thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-025",
+      "start_s": 130.874,
+      "end_s": 131.916,
+      "original_text": "[Squirrel footsteps]",
+      "reference_text": "[SQUIRREL SCUTTLES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-scuttles",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Quick footsteps]",
+        "1-2": "[Quick footsteps]",
+        "1-3": "[Quick footsteps]",
+        "2-1": "[Squirrel footsteps]",
+        "2-2": "[Squirrel footsteps]",
+        "2-3": "[Squirrel footsteps]",
+        "3-1": "[Quick steps from a squirrel]",
+        "3-2": "[Quick steps from a squirrel]",
+        "3-3": "[Quick steps from a squirrel]"
+      },
+      "representations": {
+        "plain": "[Quick footsteps]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-026",
+      "start_s": 133.083,
+      "end_s": 134.249,
+      "original_text": "[Branches rustle]",
+      "reference_text": "[BRANCHES RUSTLE]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "branches-rustle",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustling]",
+        "2-1": "[Branches rustle]",
+        "2-2": "[Branches rustle]",
+        "2-3": "[Branches rustle]",
+        "3-1": "[Branches make rustling sounds]",
+        "3-2": "[Branches make rustling sounds]",
+        "3-3": "[Branches make rustling sounds]"
+      },
+      "representations": {
+        "plain": "[Rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-027",
+      "start_s": 139.499,
+      "end_s": 140.374,
+      "original_text": "[A squirrel squeaks]",
+      "reference_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrel squeaks]",
+        "1-2": "[Squirrel squeaks]",
+        "1-3": "[Squirrel squeaks]",
+        "2-1": "[A squirrel squeaks]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[A squirrel squeaks]",
+        "3-1": "[A squirrel gives squeaks]",
+        "3-2": "[A squirrel gives squeaks]",
+        "3-3": "[A squirrel gives squeaks]"
+      },
+      "representations": {
+        "plain": "[Squirrel squeaks]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-028",
+      "start_s": 140.374,
+      "end_s": 141.416,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-029",
+      "start_s": 149.208,
+      "end_s": 152.083,
+      "original_text": "[A nut crunches]",
+      "reference_text": "[NUT CRUNCHING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nut-crunching",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nut crunching]",
+        "1-2": "[Nut crunching]",
+        "1-3": "[Nut crunching]",
+        "2-1": "[A nut crunches]",
+        "2-2": "[A nut crunches]",
+        "2-3": "[A nut crunches]",
+        "3-1": "[A nut makes crunching sounds]",
+        "3-2": "[A nut makes crunching sounds]",
+        "3-3": "[A nut makes crunching sounds]"
+      },
+      "representations": {
+        "plain": "[Nut crunching]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-030",
+      "start_s": 152.916,
+      "end_s": 153.749,
+      "original_text": "[Angry squirrel squeaks]",
+      "reference_text": "[SQUIRREL SQUEAKS ANGRILY]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks-angrily",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squeaks angrily]",
+        "1-2": "[Squeaks angrily]",
+        "1-3": "[Squeaks angrily]",
+        "2-1": "[Angry squirrel squeaks]",
+        "2-2": "[Angry squirrel squeaks]",
+        "2-3": "[Angry squirrel squeaks]",
+        "3-1": "[Squirrel squeaks angrily]",
+        "3-2": "[Squirrel squeaks angrily]",
+        "3-3": "[Squirrel squeaks angrily]"
+      },
+      "representations": {
+        "plain": "[Squeaks angrily]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-031",
+      "start_s": 153.749,
+      "end_s": 154.749,
+      "original_text": "[A nut thuds]",
+      "reference_text": "[NUT THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nut-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nut thuds]",
+        "1-2": "[Nut thuds]",
+        "1-3": "[Nut thuds]",
+        "2-1": "[A nut thuds]",
+        "2-2": "[A nut thuds]",
+        "2-3": "[A nut thuds]",
+        "3-1": "[A nut makes a dull hit sound]",
+        "3-2": "[A nut makes a dull hit sound]",
+        "3-3": "[A nut makes a dull hit sound]"
+      },
+      "representations": {
+        "plain": "[Nut thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-032",
+      "start_s": 158.166,
+      "end_s": 159.166,
+      "original_text": "[A nut thuds]",
+      "reference_text": "[NUT THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nut-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nut thuds]",
+        "1-2": "[Nut thuds]",
+        "1-3": "[Nut thuds]",
+        "2-1": "[A nut thuds]",
+        "2-2": "[A nut thuds]",
+        "2-3": "[A nut thuds]",
+        "3-1": "[A nut makes a dull hit sound]",
+        "3-2": "[A nut makes a dull hit sound]",
+        "3-3": "[A nut makes a dull hit sound]"
+      },
+      "representations": {
+        "plain": "[Nut thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-033",
+      "start_s": 160.999,
+      "end_s": 162.708,
+      "original_text": "[Squirrels are laughing]",
+      "reference_text": "[SQUIRRELS LAUGHING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrels-laughing",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrels laughing]",
+        "1-2": "[Squirrels laughing]",
+        "1-3": "[Squirrels laughing]",
+        "2-1": "[Squirrels are laughing]",
+        "2-2": "[Squirrels are laughing]",
+        "2-3": "[Squirrels are laughing]",
+        "3-1": "[Squirrels make laughing sounds]",
+        "3-2": "[Squirrels make laughing sounds]",
+        "3-3": "[Squirrels make laughing sounds]"
+      },
+      "representations": {
+        "plain": "[Squirrels laughing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-034",
+      "start_s": 164.166,
+      "end_s": 165.166,
+      "original_text": "[A squirrel snaps fingers]",
+      "reference_text": "[SQUIRREL SNAPS FINGERS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-snaps-fingers",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snaps fingers]",
+        "1-2": "[Snaps fingers]",
+        "1-3": "[Snaps fingers]",
+        "2-1": "[A squirrel snaps fingers]",
+        "2-2": "[A squirrel snaps fingers]",
+        "2-3": "[A squirrel snaps fingers]",
+        "3-1": "[Squirrel makes a finger snap]",
+        "3-2": "[Squirrel makes a finger snap]",
+        "3-3": "[Squirrel makes a finger snap]"
+      },
+      "representations": {
+        "plain": "[Snaps fingers]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-035",
+      "start_s": 169.374,
+      "end_s": 170.916,
+      "original_text": "[A nut whooshes]",
+      "reference_text": "[NUT WHOOSHES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nut-whooshes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nut whooshes]",
+        "1-2": "[Nut whooshes]",
+        "1-3": "[Nut whooshes]",
+        "2-1": "[A nut whooshes]",
+        "2-2": "[A nut whooshes]",
+        "2-3": "[A nut whooshes]",
+        "3-1": "[A nut makes a rushing sound]",
+        "3-2": "[A nut makes a rushing sound]",
+        "3-3": "[A nut makes a rushing sound]"
+      },
+      "representations": {
+        "plain": "[Nut whooshes]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-036",
+      "start_s": 174.458,
+      "end_s": 176.124,
+      "original_text": "[Nuts are thudding]",
+      "reference_text": "[NUTS THUDDING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nuts-thudding",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nuts thudding]",
+        "1-2": "[Nuts thudding]",
+        "1-3": "[Nuts thudding]",
+        "2-1": "[Nuts are thudding]",
+        "2-2": "[Nuts are thudding]",
+        "2-3": "[Nuts are thudding]",
+        "3-1": "[Nuts make dull hit sounds]",
+        "3-2": "[Nuts make dull hit sounds]",
+        "3-3": "[Nuts make dull hit sounds]"
+      },
+      "representations": {
+        "plain": "[Nuts thudding]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-037",
+      "start_s": 176.124,
+      "end_s": 178.083,
+      "original_text": "[Nuts are whooshing]",
+      "reference_text": "[NUTS WHOOSHING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nuts-whooshing",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nuts whooshing]",
+        "1-2": "[Nuts whooshing]",
+        "1-3": "[Nuts whooshing]",
+        "2-1": "[Nuts are whooshing]",
+        "2-2": "[Nuts are whooshing]",
+        "2-3": "[Nuts are whooshing]",
+        "3-1": "[Nuts make rushing sounds]",
+        "3-2": "[Nuts make rushing sounds]",
+        "3-3": "[Nuts make rushing sounds]"
+      },
+      "representations": {
+        "plain": "[Nuts whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-038",
+      "start_s": 178.083,
+      "end_s": 180.583,
+      "original_text": "[Nuts are thudding]",
+      "reference_text": "[NUTS THUDDING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nuts-thudding",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nuts thudding]",
+        "1-2": "[Nuts thudding]",
+        "1-3": "[Nuts thudding]",
+        "2-1": "[Nuts are thudding]",
+        "2-2": "[Nuts are thudding]",
+        "2-3": "[Nuts are thudding]",
+        "3-1": "[Nuts make dull hit sounds]",
+        "3-2": "[Nuts make dull hit sounds]",
+        "3-3": "[Nuts make dull hit sounds]"
+      },
+      "representations": {
+        "plain": "[Nuts thudding]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-039",
+      "start_s": 180.583,
+      "end_s": 184.208,
+      "original_text": "[Nuts are whooshing]",
+      "reference_text": "[NUTS WHOOSHING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nuts-whooshing",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Nuts whooshing]",
+        "1-2": "[Nuts whooshing]",
+        "1-3": "[Nuts whooshing]",
+        "2-1": "[Nuts are whooshing]",
+        "2-2": "[Nuts are whooshing]",
+        "2-3": "[Nuts are whooshing]",
+        "3-1": "[Nuts make rushing sounds]",
+        "3-2": "[Nuts make rushing sounds]",
+        "3-3": "[Nuts make rushing sounds]"
+      },
+      "representations": {
+        "plain": "[Nuts whooshing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-040",
+      "start_s": 186.541,
+      "end_s": 189.083,
+      "original_text": "[Tense music plays]",
+      "reference_text": "[SUSPENSFUL MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "suspensful-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Tense music]",
+        "1-2": "[Tense music]",
+        "1-3": "[Tense music]",
+        "2-1": "[Tense music plays]",
+        "2-2": "[Tense music plays]",
+        "2-3": "[Tense music plays]",
+        "3-1": "[Music plays in a tense style]",
+        "3-2": "[Music plays in a tense style]",
+        "3-3": "[Music plays in a tense style]"
+      },
+      "representations": {
+        "plain": "[Tense music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-041",
+      "start_s": 195.833,
+      "end_s": 196.833,
+      "original_text": "[A butterfly splats]",
+      "reference_text": "[BUTTERFLY SPLATS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "butterfly-splats",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Butterfly splats]",
+        "1-2": "[Butterfly splats]",
+        "1-3": "[Butterfly splats]",
+        "2-1": "[A butterfly splats]",
+        "2-2": "[A butterfly splats]",
+        "2-3": "[A butterfly splats]",
+        "3-1": "[A butterfly makes a splat]",
+        "3-2": "[A butterfly makes a splat]",
+        "3-3": "[A butterfly makes a splat]"
+      },
+      "representations": {
+        "plain": "[Butterfly splats]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-042",
+      "start_s": 197.083,
+      "end_s": 199.416,
+      "original_text": "[Dramatic music plays]",
+      "reference_text": "[DRAMATIC MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "dramatic-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dramatic music]",
+        "1-2": "[Dramatic music]",
+        "1-3": "[Dramatic music]",
+        "2-1": "[Dramatic music plays]",
+        "2-2": "[Dramatic music plays]",
+        "2-3": "[Dramatic music plays]",
+        "3-1": "[Music plays in a dramatic style]",
+        "3-2": "[Music plays in a dramatic style]",
+        "3-3": "[Music plays in a dramatic style]"
+      },
+      "representations": {
+        "plain": "[Dramatic music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-043",
+      "start_s": 202.708,
+      "end_s": 204.208,
+      "original_text": "[A squirrel claps]",
+      "reference_text": "[SQUIRREL CLAPS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-claps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrel claps]",
+        "1-2": "[Squirrel claps]",
+        "1-3": "[Squirrel claps]",
+        "2-1": "[A squirrel claps]",
+        "2-2": "[A squirrel claps]",
+        "2-3": "[A squirrel claps]",
+        "3-1": "[A squirrel makes a clapping sound]",
+        "3-2": "[A squirrel makes a clapping sound]",
+        "3-3": "[A squirrel makes a clapping sound]"
+      },
+      "representations": {
+        "plain": "[Squirrel claps]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-044",
+      "start_s": 204.999,
+      "end_s": 206.166,
+      "original_text": "[A bunny gulps]",
+      "reference_text": "[BUNNY GULPS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bunny-gulps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bunny gulps]",
+        "1-2": "[Bunny gulps]",
+        "1-3": "[Bunny gulps]",
+        "2-1": "[A bunny gulps]",
+        "2-2": "[A bunny gulps]",
+        "2-3": "[A bunny gulps]",
+        "3-1": "[Bunny swallows with a gulp]",
+        "3-2": "[Bunny swallows with a gulp]",
+        "3-3": "[Bunny swallows with a gulp]"
+      },
+      "representations": {
+        "plain": "[Bunny gulps]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-045",
+      "start_s": 209.124,
+      "end_s": 210.249,
+      "original_text": "[Wings flap]",
+      "reference_text": "[WINGS FLAP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "wings-flap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Wings flapping]",
+        "1-2": "[Wings flapping]",
+        "1-3": "[Wings flapping]",
+        "2-1": "[Wings flap]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[Flapping sounds of wings]",
+        "3-2": "[Flapping sounds of wings]",
+        "3-3": "[Flapping sounds of wings]"
+      },
+      "representations": {
+        "plain": "[Wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-046",
+      "start_s": 214.166,
+      "end_s": 215.166,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-047",
+      "start_s": 218.499,
+      "end_s": 220.791,
+      "original_text": "[A squirrel squeaks]",
+      "reference_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrel squeaks]",
+        "1-2": "[Squirrel squeaks]",
+        "1-3": "[Squirrel squeaks]",
+        "2-1": "[A squirrel squeaks]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[A squirrel squeaks]",
+        "3-1": "[A squirrel gives squeaks]",
+        "3-2": "[A squirrel gives squeaks]",
+        "3-3": "[A squirrel gives squeaks]"
+      },
+      "representations": {
+        "plain": "[Squirrel squeaks]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-048",
+      "start_s": 225.457,
+      "end_s": 226.457,
+      "original_text": "[Nuts whoosh]",
+      "reference_text": "[CONKERS WHOOSH]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "conkers-whoosh",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Rushing sound]",
+        "1-2": "[Rushing sound]",
+        "1-3": "[Rushing sound]",
+        "2-1": "[Nuts whoosh]",
+        "2-2": "[Nuts whoosh]",
+        "2-3": "[Nuts whoosh]",
+        "3-1": "[Nuts make a rushing sound]",
+        "3-2": "[Nuts make a rushing sound]",
+        "3-3": "[Nuts make a rushing sound]"
+      },
+      "representations": {
+        "plain": "[Rushing sound]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-049",
+      "start_s": 226.707,
+      "end_s": 227.707,
+      "original_text": "[Nuts thud]",
+      "reference_text": "[CONKERS THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "conkers-thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Thuds]",
+        "1-2": "[Thuds]",
+        "1-3": "[Thuds]",
+        "2-1": "[Nuts thud]",
+        "2-2": "[Nuts thud]",
+        "2-3": "[Nuts thud]",
+        "3-1": "[Nuts make dull hit sounds]",
+        "3-2": "[Nuts make dull hit sounds]",
+        "3-3": "[Nuts make dull hit sounds]"
+      },
+      "representations": {
+        "plain": "[Thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-050",
+      "start_s": 254.582,
+      "end_s": 258.582,
+      "original_text": "[Uplifting music plays]",
+      "reference_text": "[MOTIVATIONAL MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "motivational-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Uplifting music]",
+        "1-2": "[Uplifting music]",
+        "1-3": "[Uplifting music]",
+        "2-1": "[Uplifting music plays]",
+        "2-2": "[Uplifting music plays]",
+        "2-3": "[Uplifting music plays]",
+        "3-1": "[Music plays in an uplifting style]",
+        "3-2": "[Music plays in an uplifting style]",
+        "3-3": "[Music plays in an uplifting style]"
+      },
+      "representations": {
+        "plain": "[Uplifting music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-051",
+      "start_s": 270.207,
+      "end_s": 274.291,
+      "original_text": "[Cheerful music plays]",
+      "reference_text": "[JOVIAL MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "jovial-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Cheerful music]",
+        "1-2": "[Cheerful music]",
+        "1-3": "[Cheerful music]",
+        "2-1": "[Cheerful music plays]",
+        "2-2": "[Cheerful music plays]",
+        "2-3": "[Cheerful music plays]",
+        "3-1": "[Music plays in a cheerful style]",
+        "3-2": "[Music plays in a cheerful style]",
+        "3-3": "[Music plays in a cheerful style]"
+      },
+      "representations": {
+        "plain": "[Cheerful music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-052",
+      "start_s": 276.582,
+      "end_s": 280.666,
+      "original_text": "[Military style music plays]",
+      "reference_text": "[MILITARY MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "military-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Military music]",
+        "1-2": "[Military music]",
+        "1-3": "[Military music]",
+        "2-1": "[Military style music plays]",
+        "2-2": "[Military style music plays]",
+        "2-3": "[Military style music plays]",
+        "3-1": "[Music plays in a military style]",
+        "3-2": "[Music plays in a military style]",
+        "3-3": "[Music plays in a military style]"
+      },
+      "representations": {
+        "plain": "[Military music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-053",
+      "start_s": 285.332,
+      "end_s": 289.416,
+      "original_text": "[Curious style music plays]",
+      "reference_text": "[INQUISITIVE MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "inquisitive-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Curious music]",
+        "1-2": "[Curious music]",
+        "1-3": "[Curious music]",
+        "2-1": "[Curious style music plays]",
+        "2-2": "[Curious style music plays]",
+        "2-3": "[Curious style music plays]",
+        "3-1": "[Music plays in a curious style]",
+        "3-2": "[Music plays in a curious style]",
+        "3-3": "[Music plays in a curious style]"
+      },
+      "representations": {
+        "plain": "[Curious music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-054",
+      "start_s": 294.541,
+      "end_s": 297.082,
+      "original_text": "[Music gets louder]",
+      "reference_text": "[MUSIC CRESCENDOS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "music-crescendos",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Music]",
+        "1-2": "[Music]",
+        "1-3": "[Music]",
+        "2-1": "[Music gets louder]",
+        "2-2": "[Music gets louder]",
+        "2-3": "[Music gets louder]",
+        "3-1": "[Music builds up and gets louder]",
+        "3-2": "[Music builds up and gets louder]",
+        "3-3": "[Music builds up and gets louder]"
+      },
+      "representations": {
+        "plain": "[Music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-055",
+      "start_s": 302.207,
+      "end_s": 304.957,
+      "original_text": "[Grass rustles]",
+      "reference_text": "[GRASS RUSTLING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "grass-rustling",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Rustling]",
+        "1-2": "[Rustling]",
+        "1-3": "[Rustling]",
+        "2-1": "[Grass rustles]",
+        "2-2": "[Grass rustles]",
+        "2-3": "[Grass rustles]",
+        "3-1": "[Grass makes rustling sounds]",
+        "3-2": "[Grass makes rustling sounds]",
+        "3-3": "[Grass makes rustling sounds]"
+      },
+      "representations": {
+        "plain": "[Rustling]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-056",
+      "start_s": 321.374,
+      "end_s": 322.207,
+      "original_text": "[Bow string pings]",
+      "reference_text": "[BOW STRING PINGS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bow-string-pings",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Ping]",
+        "1-2": "[Ping]",
+        "1-3": "[Ping]",
+        "2-1": "[Bow string pings]",
+        "2-2": "[Bow string pings]",
+        "2-3": "[Bow string pings]",
+        "3-1": "[Bow string makes a ping]",
+        "3-2": "[Bow string makes a ping]",
+        "3-3": "[Bow string makes a ping]"
+      },
+      "representations": {
+        "plain": "[Ping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-057",
+      "start_s": 322.624,
+      "end_s": 323.457,
+      "original_text": "[A vine snaps]",
+      "reference_text": "[VINE SNAPS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "vine-snaps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snap]",
+        "1-2": "[Snap]",
+        "1-3": "[Snap]",
+        "2-1": "[A vine snaps]",
+        "2-2": "[A vine snaps]",
+        "2-3": "[A vine snaps]",
+        "3-1": "[A vine makes a snap]",
+        "3-2": "[A vine makes a snap]",
+        "3-3": "[A vine makes a snap]"
+      },
+      "representations": {
+        "plain": "[Snap]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-058",
+      "start_s": 325.499,
+      "end_s": 328.416,
+      "original_text": "[Squirrels sniff]",
+      "reference_text": "[SQUIRRELS SNIFFING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrels-sniffing",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Sniffing]",
+        "1-2": "[Sniffing]",
+        "1-3": "[Sniffing]",
+        "2-1": "[Squirrels sniff]",
+        "2-2": "[Squirrels sniff]",
+        "2-3": "[Squirrels sniff]",
+        "3-1": "[Squirrels draw air through their noses]",
+        "3-2": "[Squirrels draw air through their noses]",
+        "3-3": "[Squirrels draw air through their noses]"
+      },
+      "representations": {
+        "plain": "[Sniffing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-059",
+      "start_s": 329.624,
+      "end_s": 330.832,
+      "original_text": "[Squirrel squeaks orders]",
+      "reference_text": "[SQUIRREL SQUEAKS ORDERS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks-orders",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squeaked orders]",
+        "1-2": "[Squeaked orders]",
+        "1-3": "[Squeaked orders]",
+        "2-1": "[Squirrel squeaks orders]",
+        "2-2": "[Squirrel squeaks orders]",
+        "2-3": "[Squirrel squeaks orders]",
+        "3-1": "[A squirrel gives orders in squeaks]",
+        "3-2": "[A squirrel gives orders in squeaks]",
+        "3-3": "[A squirrel gives orders in squeaks]"
+      },
+      "representations": {
+        "plain": "[Squeaked orders]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-060",
+      "start_s": 332.624,
+      "end_s": 335.082,
+      "original_text": "[Ropes creak]",
+      "reference_text": "[ROPES CREAK]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "ropes-creak",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Creaking]",
+        "1-2": "[Creaking]",
+        "1-3": "[Creaking]",
+        "2-1": "[Ropes creak]",
+        "2-2": "[Ropes creak]",
+        "2-3": "[Ropes creak]",
+        "3-1": "[Ropes make a creaking sound]",
+        "3-2": "[Ropes make a creaking sound]",
+        "3-3": "[Ropes make a creaking sound]"
+      },
+      "representations": {
+        "plain": "[Creaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-061",
+      "start_s": 337.124,
+      "end_s": 338.499,
+      "original_text": "[A dull thud sounds]\n[Squirrel squeaks in pain]",
+      "reference_text": "[THUD]\n[SQUIRREL SQUEAKS IN PAIN]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud--squirrel-squeaks-in-pain",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]\n[Squeaks in pain]",
+        "1-2": "[Dull thud]\n[Squeaks in pain]",
+        "1-3": "[Dull thud]\n[Squeaks in pain]",
+        "2-1": "[A dull thud sounds]\n[Squirrel squeaks in pain]",
+        "2-2": "[A dull thud sounds]\n[Squirrel squeaks in pain]",
+        "2-3": "[A dull thud sounds]\n[Squirrel squeaks in pain]",
+        "3-1": "[A dull hit makes a thud]\n[Squirrel squeaks in pain]",
+        "3-2": "[A dull hit makes a thud]\n[Squirrel squeaks in pain]",
+        "3-3": "[A dull hit makes a thud]\n[Squirrel squeaks in pain]"
+      },
+      "representations": {
+        "plain": "[Dull thud]\n[Squeaks in pain]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-062",
+      "start_s": 338.499,
+      "end_s": 339.916,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-063",
+      "start_s": 341.582,
+      "end_s": 342.541,
+      "original_text": "[A nut crunches]",
+      "reference_text": "[NUT CRUNCHES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "nut-crunches",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Crunch]",
+        "1-2": "[Crunch]",
+        "1-3": "[Crunch]",
+        "2-1": "[A nut crunches]",
+        "2-2": "[A nut crunches]",
+        "2-3": "[A nut crunches]",
+        "3-1": "[A nut makes a crunch]",
+        "3-2": "[A nut makes a crunch]",
+        "3-3": "[A nut makes a crunch]"
+      },
+      "representations": {
+        "plain": "[Crunch]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-064",
+      "start_s": 346.374,
+      "end_s": 347.374,
+      "original_text": "[A rock crashes]",
+      "reference_text": "[ROCK CRASHES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "rock-crashes",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Crash]",
+        "1-2": "[Crash]",
+        "1-3": "[Crash]",
+        "2-1": "[A rock crashes]",
+        "2-2": "[A rock crashes]",
+        "2-3": "[A rock crashes]",
+        "3-1": "[A rock makes a crash]",
+        "3-2": "[A rock makes a crash]",
+        "3-3": "[A rock makes a crash]"
+      },
+      "representations": {
+        "plain": "[Crash]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-065",
+      "start_s": 351.332,
+      "end_s": 352.332,
+      "original_text": "[A log crunches]",
+      "reference_text": "[LOG CRUNCHES]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "log-crunches",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Crunch]",
+        "1-2": "[Crunch]",
+        "1-3": "[Crunch]",
+        "2-1": "[A log crunches]",
+        "2-2": "[A log crunches]",
+        "2-3": "[A log crunches]",
+        "3-1": "[A log makes a crunch]",
+        "3-2": "[A log makes a crunch]",
+        "3-3": "[A log makes a crunch]"
+      },
+      "representations": {
+        "plain": "[Crunch]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-066",
+      "start_s": 353.332,
+      "end_s": 354.332,
+      "original_text": "[A log thuds]",
+      "reference_text": "[LOG THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "log-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Thud]",
+        "1-2": "[Thud]",
+        "1-3": "[Thud]",
+        "2-1": "[A log thuds]",
+        "2-2": "[A log thuds]",
+        "2-3": "[A log thuds]",
+        "3-1": "[A log makes a dull thud]",
+        "3-2": "[A log makes a dull thud]",
+        "3-3": "[A log makes a dull thud]"
+      },
+      "representations": {
+        "plain": "[Thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-067",
+      "start_s": 360.874,
+      "end_s": 361.874,
+      "original_text": "[A squirrel squeaks]",
+      "reference_text": "[SQUIRREL SQUEAKS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squirrel squeaks]",
+        "1-2": "[Squirrel squeaks]",
+        "1-3": "[Squirrel squeaks]",
+        "2-1": "[A squirrel squeaks]",
+        "2-2": "[A squirrel squeaks]",
+        "2-3": "[A squirrel squeaks]",
+        "3-1": "[A squirrel gives squeaks]",
+        "3-2": "[A squirrel gives squeaks]",
+        "3-3": "[A squirrel gives squeaks]"
+      },
+      "representations": {
+        "plain": "[Squirrel squeaks]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-068",
+      "start_s": 371.957,
+      "end_s": 372.874,
+      "original_text": "[A trap pings]",
+      "reference_text": "[TRAP PINGS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "trap-pings",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Ping]",
+        "1-2": "[Ping]",
+        "1-3": "[Ping]",
+        "2-1": "[A trap pings]",
+        "2-2": "[A trap pings]",
+        "2-3": "[A trap pings]",
+        "3-1": "[A trap makes a ping]",
+        "3-2": "[A trap makes a ping]",
+        "3-3": "[A trap makes a ping]"
+      },
+      "representations": {
+        "plain": "[Ping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-069",
+      "start_s": 372.874,
+      "end_s": 375.832,
+      "original_text": "[A squirrel squeals]",
+      "reference_text": "[SQUIRREL SQUEALS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeals",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squealing]",
+        "1-2": "[Squealing]",
+        "1-3": "[Squealing]",
+        "2-1": "[A squirrel squeals]",
+        "2-2": "[A squirrel squeals]",
+        "2-3": "[A squirrel squeals]",
+        "3-1": "[A squirrel makes a squeal]",
+        "3-2": "[A squirrel makes a squeal]",
+        "3-3": "[A squirrel makes a squeal]"
+      },
+      "representations": {
+        "plain": "[Squealing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-070",
+      "start_s": 388.582,
+      "end_s": 389.499,
+      "original_text": "[A dull thud sounds]",
+      "reference_text": "[THUD]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "thud",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Dull thud]",
+        "1-2": "[Dull thud]",
+        "1-3": "[Dull thud]",
+        "2-1": "[A dull thud sounds]",
+        "2-2": "[A dull thud sounds]",
+        "2-3": "[A dull thud sounds]",
+        "3-1": "[A dull hit makes a thud]",
+        "3-2": "[A dull hit makes a thud]",
+        "3-3": "[A dull hit makes a thud]"
+      },
+      "representations": {
+        "plain": "[Dull thud]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-071",
+      "start_s": 398.582,
+      "end_s": 400.332,
+      "original_text": "[Wings pop]",
+      "reference_text": "[WINGS POP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "wings-pop",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Popping]",
+        "1-2": "[Popping]",
+        "1-3": "[Popping]",
+        "2-1": "[Wings pop]",
+        "2-2": "[Wings pop]",
+        "2-3": "[Wings pop]",
+        "3-1": "[Wings make popping sounds]",
+        "3-2": "[Wings make popping sounds]",
+        "3-3": "[Wings make popping sounds]"
+      },
+      "representations": {
+        "plain": "[Popping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-072",
+      "start_s": 410.791,
+      "end_s": 411.707,
+      "original_text": "[A twig snaps]",
+      "reference_text": "[TWIG SNAPS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "twig-snaps",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snap]",
+        "1-2": "[Snap]",
+        "1-3": "[Snap]",
+        "2-1": "[A twig snaps]",
+        "2-2": "[A twig snaps]",
+        "2-3": "[A twig snaps]",
+        "3-1": "[A small branch snaps]",
+        "3-2": "[A small branch snaps]",
+        "3-3": "[A small branch snaps]"
+      },
+      "representations": {
+        "plain": "[Snap]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-073",
+      "start_s": 418.665,
+      "end_s": 419.582,
+      "original_text": "[An apple thuds]",
+      "reference_text": "[APPLE THUDS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "apple-thuds",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Apple thuds]",
+        "1-2": "[Apple thuds]",
+        "1-3": "[Apple thuds]",
+        "2-1": "[An apple thuds]",
+        "2-2": "[An apple thuds]",
+        "2-3": "[An apple thuds]",
+        "3-1": "[An apple makes a dull thud]",
+        "3-2": "[An apple makes a dull thud]",
+        "3-3": "[An apple makes a dull thud]"
+      },
+      "representations": {
+        "plain": "[Apple thuds]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-074",
+      "start_s": 419.999,
+      "end_s": 420.915,
+      "original_text": "[Traps snap]",
+      "reference_text": "[TRAPS SNAP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "traps-snap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snapping]",
+        "2-1": "[Traps snap]",
+        "2-2": "[Traps snap]",
+        "2-3": "[Traps snap]",
+        "3-1": "[Traps make snapping sounds]",
+        "3-2": "[Traps make snapping sounds]",
+        "3-3": "[Traps make snapping sounds]"
+      },
+      "representations": {
+        "plain": "[Snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-075",
+      "start_s": 421.874,
+      "end_s": 423.999,
+      "original_text": "[Traps keep snapping]",
+      "reference_text": "[TRAPS SNAPPING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "traps-snapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snapping]",
+        "2-1": "[Traps keep snapping]",
+        "2-2": "[Traps keep snapping]",
+        "2-3": "[Traps keep snapping]",
+        "3-1": "[Traps make repeated snapping sounds]",
+        "3-2": "[Traps make repeated snapping sounds]",
+        "3-3": "[Traps make repeated snapping sounds]"
+      },
+      "representations": {
+        "plain": "[Snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-076",
+      "start_s": 430.915,
+      "end_s": 433.04,
+      "original_text": "[Traps keep snapping]",
+      "reference_text": "[TRAPS SNAPPING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "traps-snapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snapping]",
+        "2-1": "[Traps keep snapping]",
+        "2-2": "[Traps keep snapping]",
+        "2-3": "[Traps keep snapping]",
+        "3-1": "[Traps make repeated snapping sounds]",
+        "3-2": "[Traps make repeated snapping sounds]",
+        "3-3": "[Traps make repeated snapping sounds]"
+      },
+      "representations": {
+        "plain": "[Snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-077",
+      "start_s": 436.29,
+      "end_s": 436.999,
+      "original_text": "[Branches snap]",
+      "reference_text": "[BRANCHES SNAP]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "branches-snap",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Snapping]",
+        "1-2": "[Snapping]",
+        "1-3": "[Snapping]",
+        "2-1": "[Branches snap]",
+        "2-2": "[Branches snap]",
+        "2-3": "[Branches snap]",
+        "3-1": "[Snaps come from branches]",
+        "3-2": "[Snaps come from branches]",
+        "3-3": "[Snaps come from branches]"
+      },
+      "representations": {
+        "plain": "[Snapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-078",
+      "start_s": 437.957,
+      "end_s": 439.415,
+      "original_text": "[Wings flap]",
+      "reference_text": "[WINGS FLAPPING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "wings-flapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Wings flapping]",
+        "1-2": "[Wings flapping]",
+        "1-3": "[Wings flapping]",
+        "2-1": "[Wings flap]",
+        "2-2": "[Wings flap]",
+        "2-3": "[Wings flap]",
+        "3-1": "[Flapping sounds of wings]",
+        "3-2": "[Flapping sounds of wings]",
+        "3-3": "[Flapping sounds of wings]"
+      },
+      "representations": {
+        "plain": "[Wings flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-079",
+      "start_s": 441.957,
+      "end_s": 443.04,
+      "original_text": "[A squirrel squeals]",
+      "reference_text": "[SQUIRREL SQUEALS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeals",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squealing]",
+        "1-2": "[Squealing]",
+        "1-3": "[Squealing]",
+        "2-1": "[A squirrel squeals]",
+        "2-2": "[A squirrel squeals]",
+        "2-3": "[A squirrel squeals]",
+        "3-1": "[A squirrel makes a squeal]",
+        "3-2": "[A squirrel makes a squeal]",
+        "3-3": "[A squirrel makes a squeal]"
+      },
+      "representations": {
+        "plain": "[Squealing]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-080",
+      "start_s": 446.124,
+      "end_s": 448.249,
+      "original_text": "[A branch creaks]",
+      "reference_text": "[BRANCH CREAKING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "branch-creaking",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Creaking]",
+        "1-2": "[Creaking]",
+        "1-3": "[Creaking]",
+        "2-1": "[A branch creaks]",
+        "2-2": "[A branch creaks]",
+        "2-3": "[A branch creaks]",
+        "3-1": "[A branch makes creaking sounds]",
+        "3-2": "[A branch makes creaking sounds]",
+        "3-3": "[A branch makes creaking sounds]"
+      },
+      "representations": {
+        "plain": "[Creaking]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-081",
+      "start_s": 456.749,
+      "end_s": 458.457,
+      "original_text": "[Squirrel squeaks in pain]",
+      "reference_text": "[SQUIRREL SQUEAKS IN PAIN]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "squirrel-squeaks-in-pain",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Squeaks in pain]",
+        "1-2": "[Squeaks in pain]",
+        "1-3": "[Squeaks in pain]",
+        "2-1": "[Squirrel squeaks in pain]",
+        "2-2": "[Squirrel squeaks in pain]",
+        "2-3": "[Squirrel squeaks in pain]",
+        "3-1": "[Squirrel squeaks in pain]",
+        "3-2": "[Squirrel squeaks in pain]",
+        "3-3": "[Squirrel squeaks in pain]"
+      },
+      "representations": {
+        "plain": "[Squeaks in pain]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-082",
+      "start_s": 463.249,
+      "end_s": 467.874,
+      "original_text": "[Calm music plays]",
+      "reference_text": "[SERENE MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "serene-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Music]",
+        "1-2": "[Music]",
+        "1-3": "[Music]",
+        "2-1": "[Calm music plays]",
+        "2-2": "[Calm music plays]",
+        "2-3": "[Calm music plays]",
+        "3-1": "[Music with a calm feel plays]",
+        "3-2": "[Music with a calm feel plays]",
+        "3-3": "[Music with a calm feel plays]"
+      },
+      "representations": {
+        "plain": "[Music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-083",
+      "start_s": 480.749,
+      "end_s": 483.499,
+      "original_text": "[Wind blows]",
+      "reference_text": "[WIND BLOWS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "wind-blows",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Wind]",
+        "1-2": "[Wind]",
+        "1-3": "[Wind]",
+        "2-1": "[Wind blows]",
+        "2-2": "[Wind blows]",
+        "2-3": "[Wind blows]",
+        "3-1": "[Wind makes blowing sounds]",
+        "3-2": "[Wind makes blowing sounds]",
+        "3-3": "[Wind makes blowing sounds]"
+      },
+      "representations": {
+        "plain": "[Wind]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-084",
+      "start_s": 490.04,
+      "end_s": 497.04,
+      "original_text": "[Victory music]",
+      "reference_text": "[TRIUMPHANT MUSIC]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "triumphant-music",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Music]",
+        "1-2": "[Music]",
+        "1-3": "[Music]",
+        "2-1": "[Victory music]",
+        "2-2": "[Victory music]",
+        "2-3": "[Victory music]",
+        "3-1": "[Music with a winning feel plays]",
+        "3-2": "[Music with a winning feel plays]",
+        "3-3": "[Music with a winning feel plays]"
+      },
+      "representations": {
+        "plain": "[Music]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-085",
+      "start_s": 581.79,
+      "end_s": 584.999,
+      "original_text": "[Bird wings flap]",
+      "reference_text": "[BIRD FLAPPING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bird-flapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bird flapping]",
+        "1-2": "[Bird flapping]",
+        "1-3": "[Bird flapping]",
+        "2-1": "[Bird wings flap]",
+        "2-2": "[Bird wings flap]",
+        "2-3": "[Bird wings flap]",
+        "3-1": "[A bird makes flapping sounds]",
+        "3-2": "[A bird makes flapping sounds]",
+        "3-3": "[A bird makes flapping sounds]"
+      },
+      "representations": {
+        "plain": "[Bird flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-086",
+      "start_s": 587.749,
+      "end_s": 590.957,
+      "original_text": "[Bird wings flap]",
+      "reference_text": "[BIRD FLAPPING]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "bird-flapping",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Bird flapping]",
+        "1-2": "[Bird flapping]",
+        "1-3": "[Bird flapping]",
+        "2-1": "[Bird wings flap]",
+        "2-2": "[Bird wings flap]",
+        "2-3": "[Bird wings flap]",
+        "3-1": "[A bird makes flapping sounds]",
+        "3-2": "[A bird makes flapping sounds]",
+        "3-3": "[A bird makes flapping sounds]"
+      },
+      "representations": {
+        "plain": "[Bird flapping]"
+      }
+    },
+    {
+      "cue_id": "bbb-sdh-087",
+      "start_s": 595.665,
+      "end_s": 596.457,
+      "original_text": "[Poop splats]",
+      "reference_text": "[POOP SPLATS]",
+      "scene_context": "Plain-English wording based only on the credited sound caption. Rich explains source details without adding sound events. Reference timing is unchanged. Full listening and DHH readability review are pending.",
+      "sound_key": "poop-splats",
+      "scene_load": "balanced",
+      "grid": {
+        "1-1": "[Splat]",
+        "1-2": "[Splat]",
+        "1-3": "[Splat]",
+        "2-1": "[Poop splats]",
+        "2-2": "[Poop splats]",
+        "2-3": "[Poop splats]",
+        "3-1": "[Poop hits with a splat]",
+        "3-2": "[Poop hits with a splat]",
+        "3-3": "[Poop hits with a splat]"
+      },
+      "representations": {
+        "plain": "[Splat]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+[
+  {
+    "reference": "[SERENE MUSIC]",
+    "id": "label-000",
+    "essential": "Calm music",
+    "balanced": "Calm music plays",
+    "rich": "Calm music plays in the background"
+  },
+  {
+    "reference": "[BROOK BABBLES]",
+    "id": "label-001",
+    "essential": "Bubbling water",
+    "balanced": "Water bubbles in a brook",
+    "rich": "Water bubbles and runs in a brook"
+  },
+  {
+    "reference": "[FLY BUZZES]",
+    "id": "label-002",
+    "essential": "Buzzing fly",
+    "balanced": "A fly buzzes",
+    "rich": "A fly makes a buzzing sound"
+  },
+  {
+    "reference": "[BIRD TWEETS]",
+    "id": "label-003",
+    "essential": "Bird chirps",
+    "balanced": "A bird chirps",
+    "rich": "A bird makes chirping calls"
+  },
+  {
+    "reference": "[WINGS FLAP]",
+    "id": "label-004",
+    "essential": "Wings flapping",
+    "balanced": "Wings flap",
+    "rich": "Wings make flapping sounds"
+  },
+  {
+    "reference": "[THUD]",
+    "id": "label-005",
+    "essential": "Dull thud",
+    "balanced": "A dull thud sounds",
+    "rich": "A dull hit makes a thud sound"
+  },
+  {
+    "reference": "[SQUIRREL LAUGHS]",
+    "id": "label-006",
+    "essential": "Squirrel laughter",
+    "balanced": "A squirrel laughs",
+    "rich": "A squirrel makes laughing sounds"
+  },
+  {
+    "reference": "[SNORES]",
+    "id": "label-007",
+    "essential": "Sleep snores",
+    "balanced": "Someone snores in sleep",
+    "rich": "Noisy breathing sounds during sleep"
+  },
+  {
+    "reference": "[BUNNY SNORES]",
+    "id": "label-008",
+    "essential": "Bunny snores",
+    "balanced": "A bunny snores",
+    "rich": "A bunny breathes noisily in sleep"
+  },
+  {
+    "reference": "[BUNNY SNIFFS]",
+    "id": "label-009",
+    "essential": "Bunny sniffs",
+    "balanced": "A bunny sniffs",
+    "rich": "A bunny draws air through its nose"
+  },
+  {
+    "reference": "[EARS POP]",
+    "id": "label-010",
+    "essential": "Ears pop",
+    "balanced": "Ears make a popping sound",
+    "rich": "Ears make a short popping sound"
+  },
+  {
+    "reference": "[BUNNY YAWNS]",
+    "id": "label-011",
+    "essential": "Bunny yawns",
+    "balanced": "A bunny yawns",
+    "rich": "A bunny opens its mouth wide and breathes in"
+  },
+  {
+    "reference": "[BUNNY CRACKS NECK]",
+    "id": "label-012",
+    "essential": "Bunny cracks neck",
+    "balanced": "A bunny cracks its neck",
+    "rich": "A bunny makes a cracking neck sound"
+  },
+  {
+    "reference": "[BUNNY SNIFFS DEEPLY]",
+    "id": "label-013",
+    "essential": "Bunny sniffs deeply",
+    "balanced": "A bunny sniffs deeply",
+    "rich": "A bunny draws air in strongly through nose"
+  },
+  {
+    "reference": "[BUNNY SIGHS]",
+    "id": "label-014",
+    "essential": "Bunny sighs",
+    "balanced": "A bunny sighs",
+    "rich": "A bunny lets out a breath"
+  },
+  {
+    "reference": "[APPLE THUDS]",
+    "id": "label-015",
+    "essential": "Apple thuds",
+    "balanced": "An apple thuds",
+    "rich": "An apple makes a dull hit"
+  },
+  {
+    "reference": "[TREE RUSTLES SUSPICIOUSLY]",
+    "id": "label-016",
+    "essential": "Tree rustles suspiciously",
+    "balanced": "A tree rustles suspiciously",
+    "rich": "Tree makes suspicious rustling"
+  },
+  {
+    "reference": "[APPLE CRUNCHES]",
+    "id": "label-017",
+    "essential": "Apple crunches",
+    "balanced": "An apple crunches",
+    "rich": "Apple makes crunching sounds"
+  },
+  {
+    "reference": "[LEAVES RUSTLE]",
+    "id": "label-018",
+    "essential": "Leaves rustle",
+    "balanced": "Leaves rustle",
+    "rich": "Leaves make rustling sounds"
+  },
+  {
+    "reference": "[APPLE CORE THUDS]",
+    "id": "label-019",
+    "essential": "Apple core thuds",
+    "balanced": "An apple core thuds",
+    "rich": "Apple core makes dull thud"
+  },
+  {
+    "reference": "[SQUIRREL SCUTTLES]",
+    "id": "label-020",
+    "essential": "Squirrel scuttles",
+    "balanced": "A squirrel scuttles",
+    "rich": "Squirrel makes quick scuttling"
+  },
+  {
+    "reference": "[BRANCHES RUSTLE]",
+    "id": "label-021",
+    "essential": "Branches rustle",
+    "balanced": "Branches rustle",
+    "rich": "Branches make rustling sounds"
+  },
+  {
+    "reference": "[SQUIRREL SQUEAKS]",
+    "id": "label-022",
+    "essential": "Squirrel squeaks",
+    "balanced": "A squirrel squeaks",
+    "rich": "Squirrel makes squeaking calls"
+  },
+  {
+    "reference": "[NUT CRUNCHING]",
+    "id": "label-023",
+    "essential": "Nut crunching",
+    "balanced": "A nut crunches",
+    "rich": "A nut makes crunching sounds"
+  },
+  {
+    "reference": "[SQUIRREL SQUEAKS ANGRILY]",
+    "id": "label-024",
+    "essential": "Squeaks angrily",
+    "balanced": "Squirrel squeaks angrily",
+    "rich": "Squirrel makes angry squeaks"
+  },
+  {
+    "reference": "[NUT THUDS]",
+    "id": "label-025",
+    "essential": "Nut thuds",
+    "balanced": "A nut thuds",
+    "rich": "A nut makes a dull hit sound"
+  },
+  {
+    "reference": "[SQUIRRELS LAUGHING]",
+    "id": "label-026",
+    "essential": "Squirrels laughing",
+    "balanced": "Squirrels are laughing",
+    "rich": "Squirrels make laughing sounds"
+  },
+  {
+    "reference": "[SQUIRREL SNAPS FINGERS]",
+    "id": "label-027",
+    "essential": "Snaps fingers",
+    "balanced": "A squirrel snaps fingers",
+    "rich": "Squirrel makes a finger snap"
+  },
+  {
+    "reference": "[NUT WHOOSHES]",
+    "id": "label-028",
+    "essential": "Nut whooshes",
+    "balanced": "A nut whooshes",
+    "rich": "A nut makes a rushing sound"
+  },
+  {
+    "reference": "[NUTS THUDDING]",
+    "id": "label-029",
+    "essential": "Nuts thudding",
+    "balanced": "Nuts are thudding",
+    "rich": "Nuts make dull hit sounds"
+  },
+  {
+    "reference": "[NUTS WHOOSHING]",
+    "id": "label-030",
+    "essential": "Nuts whooshing",
+    "balanced": "Nuts are whooshing",
+    "rich": "Nuts make rushing sounds"
+  },
+  {
+    "reference": "[SUSPENSFUL MUSIC]",
+    "id": "label-031",
+    "essential": "Tense music",
+    "balanced": "Tense music plays",
+    "rich": "Music plays in a tense style"
+  },
+  {
+    "reference": "[BUTTERFLY SPLATS]",
+    "id": "label-032",
+    "essential": "Butterfly splats",
+    "balanced": "A butterfly splats",
+    "rich": "Butterfly hits with wet sound"
+  },
+  {
+    "reference": "[DRAMATIC MUSIC]",
+    "id": "label-033",
+    "essential": "Dramatic music",
+    "balanced": "Dramatic music plays",
+    "rich": "Music plays in a dramatic style"
+  },
+  {
+    "reference": "[SQUIRREL CLAPS]",
+    "id": "label-034",
+    "essential": "Squirrel claps",
+    "balanced": "A squirrel claps",
+    "rich": "A squirrel makes a clapping sound"
+  },
+  {
+    "reference": "[BUNNY GULPS]",
+    "id": "label-035",
+    "essential": "Bunny gulps",
+    "balanced": "A bunny gulps",
+    "rich": "Bunny swallows with gulp sound"
+  },
+  {
+    "reference": "[CONKERS WHOOSH]",
+    "id": "label-036",
+    "essential": "Conkers whoosh",
+    "balanced": "Conkers whoosh",
+    "rich": "Nuts rush through the air"
+  },
+  {
+    "reference": "[CONKERS THUD]",
+    "id": "label-037",
+    "essential": "Conkers thud",
+    "balanced": "Conkers thud",
+    "rich": "Nuts hit with a dull sound"
+  },
+  {
+    "reference": "[MOTIVATIONAL MUSIC]",
+    "id": "label-038",
+    "essential": "Uplifting music",
+    "balanced": "Uplifting music plays",
+    "rich": "Music plays in an uplifting style"
+  },
+  {
+    "reference": "[JOVIAL MUSIC]",
+    "id": "label-039",
+    "essential": "Cheerful music",
+    "balanced": "Cheerful music plays",
+    "rich": "Music plays in a cheerful style"
+  },
+  {
+    "reference": "[MILITARY MUSIC]",
+    "id": "label-040",
+    "essential": "Military music",
+    "balanced": "Military style music plays",
+    "rich": "Music plays in a military style"
+  },
+  {
+    "reference": "[INQUISITIVE MUSIC]",
+    "id": "label-041",
+    "essential": "Curious music",
+    "balanced": "Curious style music plays",
+    "rich": "Music plays in a curious style"
+  },
+  {
+    "reference": "[MUSIC CRESCENDOS]",
+    "id": "label-042",
+    "essential": "Music gets louder",
+    "balanced": "Music gets louder",
+    "rich": "The music gets louder"
+  },
+  {
+    "reference": "[GRASS RUSTLING]",
+    "id": "label-043",
+    "essential": "Grass rustling",
+    "balanced": "Grass makes rustling sounds",
+    "rich": "Grass makes a rustling sound"
+  },
+  {
+    "reference": "[BOW STRING PINGS]",
+    "id": "label-044",
+    "essential": "Bow string pings",
+    "balanced": "Bow string pinging",
+    "rich": "Bow string pings"
+  },
+  {
+    "reference": "[VINE SNAPS]",
+    "id": "label-045",
+    "essential": "Vine snaps",
+    "balanced": "Vine snapping",
+    "rich": "Vine snaps"
+  },
+  {
+    "reference": "[SQUIRRELS SNIFFING]",
+    "id": "label-046",
+    "essential": "Squirrels sniffing",
+    "balanced": "Squirrels make sniffing sounds",
+    "rich": "Squirrels make sniffing sounds"
+  },
+  {
+    "reference": "[SQUIRREL SQUEAKS ORDERS]",
+    "id": "label-047",
+    "essential": "Squirrel squeaks orders",
+    "balanced": "Squirrel squeaks giving orders",
+    "rich": "A squirrel squeaks giving orders"
+  },
+  {
+    "reference": "[ROPES CREAK]",
+    "id": "label-048",
+    "essential": "Ropes creaking",
+    "balanced": "Ropes make creaking sounds",
+    "rich": "Ropes make creaking or squeaking sounds"
+  },
+  {
+    "reference": "[SQUIRREL SQUEAKS IN PAIN]",
+    "id": "label-049",
+    "essential": "Squirrel squeaks in pain",
+    "balanced": "Squirrel squeaks in pain",
+    "rich": "Squirrel squeaks in pain"
+  },
+  {
+    "reference": "[NUT CRUNCHES]",
+    "id": "label-050",
+    "essential": "Nut crunching",
+    "balanced": "A nut crunches",
+    "rich": "A nut crunches"
+  },
+  {
+    "reference": "[ROCK CRASHES]",
+    "id": "label-051",
+    "essential": "Rock crashing",
+    "balanced": "A rock crashes",
+    "rich": "A rock crashes"
+  },
+  {
+    "reference": "[LOG CRUNCHES]",
+    "id": "label-052",
+    "essential": "Log crunching",
+    "balanced": "A log crunches",
+    "rich": "A log crunches"
+  },
+  {
+    "reference": "[LOG THUDS]",
+    "id": "label-053",
+    "essential": "Log thudding",
+    "balanced": "A log thuds",
+    "rich": "A log thuds"
+  },
+  {
+    "reference": "[TRAP PINGS]",
+    "id": "label-054",
+    "essential": "Trap pinging",
+    "balanced": "A trap pings",
+    "rich": "A trap pings"
+  },
+  {
+    "reference": "[SQUIRREL SQUEALS]",
+    "id": "label-055",
+    "essential": "Squirrel squealing",
+    "balanced": "A squirrel squeals",
+    "rich": "A squirrel squeals"
+  },
+  {
+    "reference": "[WINGS POP]",
+    "id": "label-056",
+    "essential": "Wings pop",
+    "balanced": "Wings make popping sounds",
+    "rich": "Wings make popping sounds"
+  },
+  {
+    "reference": "[TWIG SNAPS]",
+    "id": "label-057",
+    "essential": "Twig snaps",
+    "balanced": "A twig snaps",
+    "rich": "A small branch snaps"
+  },
+  {
+    "reference": "[TRAPS SNAP]",
+    "id": "label-058",
+    "essential": "Traps snap",
+    "balanced": "Traps snap shut",
+    "rich": "Traps snap shut"
+  },
+  {
+    "reference": "[TRAPS SNAPPING]",
+    "id": "label-059",
+    "essential": "Traps snapping",
+    "balanced": "Traps keep snapping",
+    "rich": "Traps make repeated snapping sounds"
+  },
+  {
+    "reference": "[BRANCHES SNAP]",
+    "id": "label-060",
+    "essential": "Branches snap",
+    "balanced": "Branches snap",
+    "rich": "Branches snap"
+  },
+  {
+    "reference": "[WINGS FLAPPING]",
+    "id": "label-061",
+    "essential": "Wings flapping",
+    "balanced": "Wings flap",
+    "rich": "Wings make flapping sounds"
+  },
+  {
+    "reference": "[BRANCH CREAKING]",
+    "id": "label-062",
+    "essential": "Branch creaking",
+    "balanced": "A branch creaks",
+    "rich": "A branch makes creaking sounds"
+  },
+  {
+    "reference": "[WIND BLOWS]",
+    "id": "label-063",
+    "essential": "Wind blows",
+    "balanced": "Wind blows",
+    "rich": "Wind makes blowing sounds"
+  },
+  {
+    "reference": "[TRIUMPHANT MUSIC]",
+    "id": "label-064",
+    "essential": "Happy music",
+    "balanced": "Happy music plays",
+    "rich": "Happy music plays in a winning style"
+  },
+  {
+    "reference": "[BIRD FLAPPING]",
+    "id": "label-065",
+    "essential": "Bird wings flapping",
+    "balanced": "Bird wings flap",
+    "rich": "Bird wings make flapping sounds"
+  },
+  {
+    "reference": "[POOP SPLATS]",
+    "id": "label-066",
+    "essential": "Poop splats",
+    "balanced": "Poop splats",
+    "rich": "Poop hits with a splat"
+  }
+]

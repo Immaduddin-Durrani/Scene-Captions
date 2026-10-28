@@ -1,0 +1,20 @@
+{
+  "checked": [
+    "bbb-sdh-002",
+    "bbb-sdh-020",
+    "bbb-sdh-054",
+    "bbb-sdh-061"
+  ],
+  "threeDetailLevels": true,
+  "presetPressedState": true,
+  "keyboardSelection": true,
+  "timePreserved": true,
+  "referenceComparison": true,
+  "sourceOnlyCoverage": true,
+  "mobileOverflow": false,
+  "rehearsalLocked": true,
+  "downloads": 3,
+  "pageErrors": [],
+  "limits": "UI and source-text checks, not listening/DHH validation",
+  "rehearsalProvenance": true
+}

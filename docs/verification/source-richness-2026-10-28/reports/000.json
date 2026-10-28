@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these EXISTING sound captions in simple English for Deaf and hard-of-hearing\nviewers. The source references are the ONLY evidence. This is not sound discovery.\nNever add another sound, instrument, material, place, speed, number of impacts,\nvolume, pitch, emotion, character action or cause that is absent from the source.\nDo not infer music instruments from mood labels. Do not infer feelings in viewers.\nYou MAY explain the meaning of a sound word in ordinary words, preserving its\nmeaning. Translate rare source words into everyday English: conkers are nuts;\ncrescendo means music gets louder; serene means calm; jovial means cheerful;\ninquisitive music has a curious feel. Keep singular/plural sources unchanged.\nFor each id return essential, balanced, rich. Essential is a short sound label;\nbalanced names the source and its sound; rich explains more of the information\nalready in that reference in a short, clear phrase. Every level must use everyday\nwords, never harder vocabulary at higher richness. Reuse wording if extra facts\nare not supported. Do not pad with 'can be heard', 'the sound of', 'fills the air'.\nPreserve the sound source in balanced and rich. No new sounds to make rich longer.\nAvoid jargon, long clauses, sound spellings, poetic language and technical audio\nterms. No markdown, brackets, periods, exclamation marks, or newlines in values.\nAt most 4 / 7 / 12 words for essential / balanced / rich; respect each supplied\ncharacter budget too. Brief events have tighter budgets for reading. Do not\nchange reference text. Output ONLY one JSON object with key captions: an array\nof objects with EXACT keys id, essential, balanced, rich. Keep all ids once.\nReferences:\n[{\"id\": \"label-000\", \"reference\": \"[SERENE MUSIC]\", \"max_characters\": {\"essential\": 30, \"balanced\": 52, \"rich\": 76}}, {\"id\": \"label-001\", \"reference\": \"[BROOK BABBLES]\", \"max_characters\": {\"essential\": 30, \"balanced\": 30, \"rich\": 30}}, {\"id\": \"label-002\", \"reference\": \"[FLY BUZZES]\", \"max_characters\": {\"essential\": 30, \"balanced\": 30, \"rich\": 30}}, {\"id\": \"label-003\", \"reference\": \"[BIRD TWEETS]\", \"max_characters\": {\"essential\": 24, \"balanced\": 24, \"rich\": 24}}, {\"id\": \"label-004\", \"reference\": \"[WINGS FLAP]\", \"max_characters\": {\"essential\": 24, \"balanced\": 24, \"rich\": 24}}, {\"id\": \"label-005\", \"reference\": \"[THUD]\", \"max_characters\": {\"essential\": 24, \"balanced\": 24, \"rich\": 24}}, {\"id\": \"label-006\", \"reference\": \"[SQUIRREL LAUGHS]\", \"max_characters\": {\"essential\": 24, \"balanced\": 24, \"rich\": 24}}, {\"id\": \"label-007\", \"reference\": \"[SNORES]\", \"max_characters\": {\"essential\": 30, \"balanced\": 36, \"rich\": 36}}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "3ace2ab2a2b42ef8530c845f5ed0659fc2d22f557e380813d93a96aa86e69c96",
+    "wire_bytes": 2952,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "60becc87-2f00-4e8c-98f3-b3fd6895fd24",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "904b2561-94da-4d70-84c9-7c4a29b88d28"
+    },
+    "response": {
+      "id": "chatcmpl-5b27298c-eac3-4982-82b6-119629c86024",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\": [{\"id\": \"label-000\", \"essential\": \"calm music\", \"balanced\": \"calm music plays\", \"rich\": \"calm music plays\"}, {\"id\": \"label-001\", \"essential\": \"brook\", \"balanced\": \"brook babbles\", \"rich\": \"brook babbles\"}, {\"id\": \"label-002\", \"essential\": \"fly\", \"balanced\": \"fly buzzes\", \"rich\": \"fly buzzes\"}, {\"id\": \"label-003\", \"essential\": \"bird\", \"balanced\": \"bird tweets\", \"rich\": \"bird tweets\"}, {\"id\": \"label-004\", \"essential\": \"wings\", \"balanced\": \"wings flap\", \"rich\": \"wings flap\"}, {\"id\": \"label-005\", \"essential\": \"thud\", \"balanced\": \"thud\", \"rich\": \"thud\"}, {\"id\": \"label-006\", \"essential\": \"squirrel\", \"balanced\": \"squirrel laughs\", \"rich\": \"squirrel laughs\"}, {\"id\": \"label-007\", \"essential\": \"snore\", \"balanced\": \"someone snores\", \"rich\": \"someone snores\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793180195,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 761,
+        "completion_tokens": 275,
+        "total_tokens": 1036,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.982
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "reference": "[SERENE MUSIC]",
+    "id": "label-000",
+    "essential": "Calm music",
+    "balanced": "A calm melody plays",
+    "rich": "Music plays softly and steadily"
+  },
+  {
+    "reference": "[BROOK BABBLES]",
+    "id": "label-001",
+    "essential": "Babbling brook",
+    "balanced": "A brook babbles",
+    "rich": "Water runs over stones"
+  },
+  {
+    "reference": "[FLY BUZZES]",
+    "id": "label-002",
+    "essential": "Buzzing fly",
+    "balanced": "A fly buzzes",
+    "rich": "Wings vibrate making buzz"
+  },
+  {
+    "reference": "[BIRD TWEETS]",
+    "id": "label-003",
+    "essential": "Bird tweet",
+    "balanced": "A bird tweets",
+    "rich": "Bird sings high notes"
+  },
+  {
+    "reference": "[WINGS FLAP]",
+    "id": "label-004",
+    "essential": "Flapping wings",
+    "balanced": "Wings flap",
+    "rich": "Wings move up and down"
+  },
+  {
+    "reference": "[THUD]",
+    "id": "label-005",
+    "essential": "Thud",
+    "balanced": "A thud sounds",
+    "rich": "Heavy object hits ground"
+  },
+  {
+    "reference": "[SQUIRREL LAUGHS]",
+    "id": "label-006",
+    "essential": "Squirrel laugh",
+    "balanced": "A squirrel laughs",
+    "rich": "Squirrel makes laugh"
+  },
+  {
+    "reference": "[SNORES]",
+    "id": "label-007",
+    "essential": "Snoring",
+    "balanced": "Someone snores",
+    "rich": "Air moves in throat during sleep"
+  }
+]

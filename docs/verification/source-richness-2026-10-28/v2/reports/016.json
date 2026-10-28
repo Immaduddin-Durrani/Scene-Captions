@@ -1,0 +1,64 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these EXISTING sound captions in simple English for Deaf and hard-of-hearing\nviewers. The source references are the ONLY evidence. This is not sound discovery.\nNever add another sound, instrument, material, place, speed, number of impacts,\nvolume, pitch, emotion, character action or cause that is absent from the source.\nDo not infer music instruments from mood labels. Do not infer feelings in viewers.\nYou MAY explain the meaning of a sound word in ordinary words, preserving its\nmeaning. Translate rare source words into everyday English: conkers are nuts;\ncrescendo means music gets louder; serene means calm; jovial means cheerful;\ninquisitive music has a curious feel. Keep singular/plural sources unchanged.\nFor each id return essential, balanced, rich. Essential is a short sound label;\nbalanced names the source and its sound; rich EXPLAINS THE MEANING OF THE SOUND\nWORD in an ordinary short sentence, rather than simply repeating balanced.\nEssential must describe a SOUND, not just name an object (not merely 'bird',\n'brook', 'fly', 'wings', or 'squirrel'). Naming only an object is not a caption.\nUse plain sound words in essential and a fuller, easier explanation in rich.\nExplaining a word's ordinary meaning is allowed; inventing scene facts is not.\nEvery level must use everyday\nwords, never harder vocabulary at higher richness. Rich should normally differ\nfrom balanced by explaining its sound word, even when no new factual detail is\navailable. Reuse wording ONLY if the short character budget prevents a useful\nexplanation. Do not pad with 'can be heard', 'the sound of', 'fills the air'.\nPreserve the sound source in balanced and rich. No new sounds to make rich longer.\nAvoid jargon, long clauses, sound spellings, poetic language and technical audio\nterms. No markdown, brackets, periods, exclamation marks, or newlines in values.\nAt most 4 / 7 / 12 words for essential / balanced / rich; respect each supplied\ncharacter budget too. Brief events have tighter budgets for reading. Do not\nchange reference text. Output ONLY one JSON object with key captions: an array\nof objects with EXACT keys id, essential, balanced, rich. Keep all ids once.\nReferences:\n[{\"id\": \"label-016\", \"reference\": \"[TREE RUSTLES SUSPICIOUSLY]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-017\", \"reference\": \"[APPLE CRUNCHES]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-018\", \"reference\": \"[LEAVES RUSTLE]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-019\", \"reference\": \"[APPLE CORE THUDS]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-020\", \"reference\": \"[SQUIRREL SCUTTLES]\", \"max_characters\": {\"essential\": 29, \"balanced\": 29, \"rich\": 29}}, {\"id\": \"label-021\", \"reference\": \"[BRANCHES RUSTLE]\", \"max_characters\": {\"essential\": 30, \"balanced\": 33, \"rich\": 33}}, {\"id\": \"label-022\", \"reference\": \"[SQUIRREL SQUEAKS]\", \"max_characters\": {\"essential\": 24, \"balanced\": 24, \"rich\": 24}}, {\"id\": \"label-023\", \"reference\": \"[NUT CRUNCHING]\", \"max_characters\": {\"essential\": 30, \"balanced\": 52, \"rich\": 76}}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "516715d1fc353ec5ddf63c39014b1f5f0751e18be72eb0d2c3d8248f5af03ac1",
+    "wire_bytes": 3495,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "4269d830-7f45-4352-bac8-88dd2edb19e3",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "e853cd68-8c84-4603-add7-0f3a6c4bdc14"
+    },
+    "response": {
+      "id": "chatcmpl-7ae8318b-cbfa-47d1-955a-e0eee8f08420",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\": [{\"id\": \"label-016\", \"essential\": \"rustling tree\", \"balanced\": \"tree rustles suspiciously\", \"rich\": \"tree rustles in a way that seems doubtful\"}, {\"id\": \"label-017\", \"essential\": \"crunching apple\", \"balanced\": \"apple crunches\", \"rich\": \"apple makes a loud crunching sound\"}, {\"id\": \"label-018\", \"essential\": \"rustling leaves\", \"balanced\": \"leaves rustle\", \"rich\": \"leaves make a soft rustling sound\"}, {\"id\": \"label-019\", \"essential\": \"thudding core\", \"balanced\": \"apple core thuds\", \"rich\": \"apple core makes a dull thud sound\"}, {\"id\": \"label-020\", \"essential\": \"scuttling squirrel\", \"balanced\": \"squirrel scuttles\", \"rich\": \"squirrel moves quickly with small steps\"}, {\"id\": \"label-021\", \"essential\": \"rustling branches\", \"balanced\": \"branches rustle\", \"rich\": \"branches make a soft rustling sound\"}, {\"id\": \"label-022\", \"essential\": \"squeaking squirrel\", \"balanced\": \"squirrel squeaks\", \"rich\": \"squirrel makes a short high sound\"}, {\"id\": \"label-023\", \"essential\": \"crunching nut\", \"balanced\": \"nut crunching\", \"rich\": \"nut makes a loud crunching sound\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"label-016\",\n      \"essential\": \"rustling tree\",\n      \"balanced\": \"tree rustles suspiciously\",\n      \"rich\": \"tree rustles in a way that seems doubtful\"\n    },\n    {\n      \"id\": \"label-017\",\n      \"essential\": \"crunching apple\",\n      \"balanced\": \"apple crunches\",\n      \"rich\": \"apple makes a loud crunching sound\"\n    },\n    {\n      \"id\": \"label-018\",\n      \"essential\": \"rustling leaves\",\n      \"balanced\": \"leaves rustle\",\n      \"rich\": \"leaves make a soft rustling sound\"\n    },\n    {\n      \"id\": \"label-019\",\n      \"essential\": \"thudding core\",\n      \"balanced\": \"apple core thuds\",\n      \"rich\": \"apple core makes a dull thud sound\"\n    },\n    {\n      \"id\": \"label-020\",\n      \"essential\": \"scuttling squirrel\",\n      \"balanced\": \"squirrel scuttles\",\n      \"rich\": \"squirrel moves quickly with small steps\"\n    },\n    {\n      \"id\": \"label-021\",\n      \"essential\": \"rustling branches\",\n      \"balanced\": \"branches rustle\",\n      \"rich\": \"branches make a soft rustling sound\"\n    },\n    {\n      \"id\": \"label-022\",\n      \"essential\": \"squeaking squirrel\",\n      \"balanced\": \"squirrel squeaks\",\n      \"rich\": \"squirrel makes a short high sound\"\n    },\n    {\n      \"id\": \"label-023\",\n      \"essential\": \"crunching nut\",\n      \"balanced\": \"nut crunching\",\n      \"rich\": \"nut makes a loud crunching sound\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793180366,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 897,
+        "completion_tokens": 750,
+        "total_tokens": 1647,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 6.281,
+    "validation_error": "Word/character/plain-language limit exceeded for label-016 rich"
+  }
+]

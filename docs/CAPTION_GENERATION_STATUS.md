@@ -1,3 +1,16 @@
+## Simple source-guided wording — 28 October 2026
+
+Big Buck Bunny has a separate **Use source-guided captions** option, based only
+on its licensed sound references. NVIDIA Ultra receives the full source timeline,
+exact cue occurrences/overlap, simple sound definitions, explicit unknowns and
+corrective feedback. Source-text review and edits remain necessary: 88 fields
+across 48 labels were corrected. All 87 source intervals/credits are preserved.
+66/67 labels have distinct three-level wording; atomic captions use at most eight
+words. Rich explains the given sound rather than inventing another one. This is
+source-assisted, unverified wording, not a repaired independent audio pipeline.
+Source-only enhancement does not apply to the other films' dialogue-only source
+tracks. Listening/readability review is pending. [Evidence and exact prompt](verification/source-richness-2026-10-28/README.md).
+
 ## Experimental full-film media-only option — 28 October 2026
 
 All three films now have separate, opt-in NVIDIA-generated experimental tracks:

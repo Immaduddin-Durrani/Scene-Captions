@@ -1,0 +1,58 @@
+[
+  {
+    "reference": "[SERENE MUSIC]",
+    "id": "label-000",
+    "essential": "calm music",
+    "balanced": "serene music",
+    "rich": "calm music"
+  },
+  {
+    "reference": "[BROOK BABBLES]",
+    "id": "label-001",
+    "essential": "water sound",
+    "balanced": "brook babble",
+    "rich": "water sound"
+  },
+  {
+    "reference": "[FLY BUZZES]",
+    "id": "label-002",
+    "essential": "fly buzz",
+    "balanced": "fly buzz",
+    "rich": "fly buzz"
+  },
+  {
+    "reference": "[BIRD TWEETS]",
+    "id": "label-003",
+    "essential": "bird tweet",
+    "balanced": "bird tweet",
+    "rich": "bird tweet"
+  },
+  {
+    "reference": "[WINGS FLAP]",
+    "id": "label-004",
+    "essential": "wing flap",
+    "balanced": "wing flap",
+    "rich": "wing flap"
+  },
+  {
+    "reference": "[THUD]",
+    "id": "label-005",
+    "essential": "thud",
+    "balanced": "thud",
+    "rich": "thud"
+  },
+  {
+    "reference": "[SQUIRREL LAUGHS]",
+    "id": "label-006",
+    "essential": "squirrel laugh",
+    "balanced": "squirrel laugh",
+    "rich": "squirrel laugh"
+  },
+  {
+    "reference": "[SNORES]",
+    "id": "label-007",
+    "essential": "snore",
+    "balanced": "snore",
+    "rich": "snore"
+  }
+]

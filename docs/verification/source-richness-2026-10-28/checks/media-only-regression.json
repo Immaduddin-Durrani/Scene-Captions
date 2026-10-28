@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "video": "big-buck-bunny",
+      "soundCues": 40,
+      "dialogueCues": 0,
+      "defaultPreserved": true,
+      "keyboardSelection": true,
+      "timePreserved": true,
+      "threeDetails": true,
+      "fixedDraft": true,
+      "restoreExisting": true,
+      "mobileOverflow": false,
+      "downloads": 3
+    },
+    {
+      "video": "sintel",
+      "soundCues": 59,
+      "dialogueCues": 71,
+      "defaultPreserved": true,
+      "keyboardSelection": true,
+      "timePreserved": true,
+      "threeDetails": true,
+      "fixedDraft": true,
+      "restoreExisting": true,
+      "mobileOverflow": false,
+      "downloads": 3
+    },
+    {
+      "video": "tears-of-steel",
+      "soundCues": 49,
+      "dialogueCues": 68,
+      "defaultPreserved": true,
+      "keyboardSelection": true,
+      "timePreserved": true,
+      "threeDetails": true,
+      "fixedDraft": true,
+      "restoreExisting": true,
+      "mobileOverflow": false,
+      "downloads": 3
+    }
+  ],
+  "rehearsalLocks": true,
+  "rehearsalExport": "artifacts/media-only-ui/rehearsal.json",
+  "browserErrors": [],
+  "scope": "UI/transport/timing selection only; NOT acoustic accuracy, full listening or DHH validation"
+}

@@ -1,0 +1,41 @@
+
+> scene-captions@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ cue boundaries exclude ended captions and preserve simultaneous sounds (4.533167ms)
+✔ baseline and Show Original always preserve the original (0.397375ms)
+✔ adaptation is cached selection and does not mutate saved preferences (0.192708ms)
+✔ malformed and incomplete annotation files are rejected (1.919625ms)
+✔ alternate representation falls back to descriptive when unavailable (0.296458ms)
+✔ failed audio generation cannot activate unreviewed candidates (0.540166ms)
+✔ bundled captions preserve every licensed source interval and simultaneous event (4.452375ms)
+✔ source-derived adaptation discloses its caption-density proxy (2.855291ms)
+✔ adaptation never exceeds the viewer's detail limit (0.345041ms)
+✔ generated captions and fetched comparison remain separate with shared timings (4.551375ms)
+✔ experimental opt-in cannot claim review, success or reference-free sourced input (8.828583ms)
+✔ an experimental track cannot attach to a different film or edit (2.608792ms)
+✔ empty experimental output does not masquerade as a missing or verified source track (0.233083ms)
+✔ big-buck-bunny: complete media-only export stays separate and all three SRTs match its generated data (4.473458ms)
+✔ sintel: complete media-only export stays separate and all three SRTs match its generated data (4.211167ms)
+✔ tears-of-steel: complete media-only export stays separate and all three SRTs match its generated data (3.278125ms)
+✔ sintel preserves official dialogue, timing and provenance without inventing sounds (5.3035ms)
+✔ tears-of-steel preserves official dialogue, timing and provenance without inventing sounds (2.327458ms)
+✔ dialogue validation rejects duplicate IDs and intervals outside the selected film (5.472166ms)
+✔ event recording validates event types and stores relative elapsed time (2.392167ms)
+✔ rehearsal event buffer stays bounded (0.38525ms)
+✔ rehearsal snapshots keep stopped duration and the complete caption override state (0.352708ms)
+✔ source-guided richness cannot change event identity, timing or simultaneous sound coverage (8.562666ms)
+✔ source-guided richness cannot attach to another film or remove source credit (2.736792ms)
+✔ new source-guided wording cannot claim independent generation or completed review (2.712375ms)
+✔ new source-guided exports keep all pinned intervals and preserve every richness level (5.322417ms)
+✔ SubRip preserves BOM/CRLF multiline sound cues and millisecond timing (6.131916ms)
+✔ SubRip rejects broken blocks, reversed intervals, duplicate IDs and invalid timestamps (0.338375ms)
+✔ SubRip accepts multiple blank separators without dropping official dialogue (0.099083ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 175.349917

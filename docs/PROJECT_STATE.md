@@ -1,3 +1,25 @@
+# Simple source-guided richness and prompt improvements — 28 October 2026
+
+The user requested richer wording from existing captions in simple English, then
+explicitly limited enhancement to verified/source-caption sounds and requested
+more context/better prompting. A separate BBB source-guided option now uses
+NVIDIA Ultra with the full licensed 87-cue timeline, precise occurrences,
+simultaneous lines, a plain-word glossary, explicit unknown facts and targeted
+correction feedback. No media-only sound guesses or plot are supplied. All 67
+unique labels were generated and source-text reviewed; 88 fields across 48
+labels were edited. 66 labels have distinct wording at all three levels; all
+atomic text is at most eight words. This is AI-assisted editorial work, not
+untouched model output or acoustic verification. Reading-time flags remain.
+
+Use **Use source-guided captions** for BBB; original reference comparison stays
+available. The other titles' fetched tracks have dialogue only and remain
+unchanged under the source-only instruction. Existing default/media-only data
+and the failed acoustic gate are unchanged. 29 Node / 46 offline Python tests,
+types/schema/build and focused browser checks passed. Existing media-only mode
+also passed on all three films. No listening/DHH study, named skills, agents,
+installation, paid provider, push or deployment occurred. Maps remain stale.
+See [complete prompt, reviews and evidence](verification/source-richness-2026-10-28/README.md).
+
 # Experimental media-only full-film tracks — 28 October 2026
 
 The user explicitly requested full generated subtitles for all three films and
