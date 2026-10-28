@@ -22,7 +22,7 @@ current-state page for snapshot locations and known coverage gaps.
 No automatic skill activation, agents, paid services, publishing or hooks
 are authorized by these documents. Keep all model generation outside playback.
 
-Big Buck Bunny also offers **Use source-guided captions**: NVIDIA rewrote its
+Big Buck Bunny opens with **source-guided captions** selected: NVIDIA rewrote its
 existing sound references into simple Essential, Balanced and Rich descriptions,
 followed by recorded source-text edits. The full sourced timeline, cue times,
 simultaneous sounds, plain-word glossary and targeted correction feedback are
@@ -30,8 +30,10 @@ included in the improved prompt. All 87 reference intervals remain unchanged;
 this adds no independently discovered sounds. Per the user's source-only choice,
 Sintel/Tears of Steel dialogue is unchanged. [Prompt, outputs and checks](docs/verification/source-richness-2026-10-28/README.md).
 
-28 October: all three films now offer **Use media-only AI subtitles**, alongside
-the existing default captions. NVIDIA generated these experimental tracks from
+The existing-caption and media-only AI selector buttons have been removed from
+the viewer. Sintel and Tears of Steel retain their source dialogue tracks.
+Experimental media-only files remain available as research artifacts.
+NVIDIA generated those experimental tracks from
 film audio, without fetched subtitles, plot or supplied scene descriptions.
 Each has three sound-detail levels and generated dialogue where recognized.
 Sound text uses coarse 15-second analysis windows; recognition and timing are

@@ -3,7 +3,7 @@ async (page) => {
   const base = new URL(page.url()).origin;
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
-  await page.goto(base);
+  await page.goto(base, {waitUntil:"domcontentloaded"});
   await page.setViewportSize({width:1440,height:1100});
   await page.waitForFunction(() => document.querySelector('video')?.readyState >= 1);
   const response = await page.request.get(base+'/research/source-richness/big-buck-bunny.json');
@@ -12,6 +12,9 @@ async (page) => {
   await page.locator('video').evaluate(v=>{v.pause();v.currentTime=83.8});
   await page.waitForFunction(()=>Math.abs(document.querySelector('video').currentTime-83.8)<.05);
   const source = page.getByRole('button',{name:'Use source-guided captions',exact:true});
+  const removed = page.getByRole('button',{name:/^Use (existing captions|media-only AI subtitles)$/});
+  assert(await removed.count()===0,'Removed subtitle buttons are visible');
+  assert(await source.getAttribute('aria-pressed')==='true','Source-guided captions are not the default');
   await source.focus();await page.keyboard.press('Enter');
   assert(await source.getAttribute('aria-pressed')==='true','Source mode not selected');
   assert(Math.abs(await page.locator('video').evaluate(v=>v.currentTime)-83.8)<.05,'Source switch changed playback time');
@@ -39,7 +42,9 @@ async (page) => {
   for(const id of ['sintel','tears-of-steel']) {
     await page.getByLabel('Choose a film',{exact:true}).selectOption(id);
     assert(await source.count()===0,`${id}: source-only sound expansion must be unavailable`);
-    assert(await page.getByRole('button',{name:'Use existing captions',exact:true}).getAttribute('aria-pressed')==='true','Film switch leaked source track');
+    assert(await removed.count()===0,'Removed subtitle buttons returned on film switch');
+    assert(await page.locator('[aria-label="Subtitle source"]').count()===0,'Empty source picker shown');
+    assert(await page.locator('.watch-heading h2').textContent().then(text=>text.includes(id==='sintel'?'Sintel':'Tears of Steel')),'Film switch did not load selected title');
   }
   await page.getByLabel('Choose a film',{exact:true}).selectOption('big-buck-bunny');await source.click();
   await page.getByLabel('I agree to record this demo’s player interactions locally.',{exact:true}).check();
@@ -49,6 +54,6 @@ async (page) => {
   await download.saveAs('artifacts/source-richness-ui/rehearsal.json');
   assert(errors.length===0,errors.join('; '));
   return {checked,threeDetailLevels:true,presetPressedState:true,keyboardSelection:true,timePreserved:true,referenceComparison:true,
-    sourceOnlyCoverage:true,mobileOverflow:false,rehearsalLocked:true,downloads:3,pageErrors:errors,
+    sourceOnlyCoverage:true,removedButtonsAbsent:true,sourceGuidedDefault:true,mobileOverflow:false,rehearsalLocked:true,downloads:3,pageErrors:errors,
     limits:'UI and source-text checks, not listening/DHH validation'};
 }

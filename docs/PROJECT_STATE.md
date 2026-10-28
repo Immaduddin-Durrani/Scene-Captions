@@ -1,3 +1,19 @@
+# Viewer caption options simplified — 28 October 2026
+
+Removed **Use existing captions** and **Use media-only AI subtitles** from the
+viewer, as requested. Big Buck Bunny now opens with the simple source-guided
+track selected, including after restoring the sample. Its reference comparison
+and three detail levels remain available. Sintel and Tears of Steel retain their
+source dialogue captions without an empty source picker. Experimental datasets
+and downloads are retained for research, but are no longer loaded into the
+viewer. Earlier verification records below describe their historical UI.
+
+29 Node tests, type checking, caption validation and the production build pass.
+The updated source-richness browser check passes: both buttons absent across all
+three films, source-guided default selected, three detail levels, reference
+comparison, keyboard selection, playback position, mobile layout, downloads and
+rehearsal locking. No caption generation was run; maps remain stale.
+
 # Simple source-guided richness and prompt improvements — 28 October 2026
 
 The user requested richer wording from existing captions in simple English, then
