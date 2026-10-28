@@ -1,0 +1,26 @@
+{
+  "version": "media-only-experimental-v2",
+  "films": {
+    "big-buck-bunny": {
+      "duration": 596.461678,
+      "sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7"
+    },
+    "sintel": {
+      "duration": 888.032,
+      "sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c"
+    },
+    "tears-of-steel": {
+      "duration": 734.166667,
+      "sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b"
+    }
+  },
+  "window_seconds": 15,
+  "jobs": 149,
+  "max_inference_attempts": 634,
+  "parallel_requests": 2,
+  "source_captions_as_input": false,
+  "plot_or_scene_text_as_input": false,
+  "system_quality_gate_changed": false,
+  "purpose": "User-requested full-film experimental generation; opt-in, NOT validated subtitles",
+  "prompt_template": "Describe the non-speech sounds audible in this {duration:.3f}-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+}

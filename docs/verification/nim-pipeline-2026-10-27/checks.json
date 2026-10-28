@@ -1,0 +1,13 @@
+{
+  "shared_offline_tests": 35,
+  "shared_offline_status": "passed",
+  "focused_checks": "8 ASR guard cases + 1 valid renderer case + 6 adversarial renderer cases passed",
+  "integrity": "Manifest/media hashes and serialized gRPC request reconstruction passed; see assessment.json",
+  "syntax_json_and_local_links": "passed",
+  "credential_pattern_scan": "passed",
+  "existing_map_inputs_fresh": true,
+  "playback_data_gate_and_package_json_unchanged": true,
+  "no_application_code_changed": true,
+  "model_quality_gate": "FAILED",
+  "new_caption_track_installed": false
+}

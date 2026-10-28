@@ -12,3 +12,4 @@
 @media(max-width:900px){.film-library{padding:0 22px}}
 @media(max-width:500px){.film-library{padding:0 16px;gap:12px}.film-library select{width:100%}}
 .dialogue-row{grid-template-columns:40px 1fr 16px}.dialogue-row .cue-copy strong{white-space:pre-line}
+.caption-track-picker{margin:0 0 16px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}.caption-track-picker p{font-size:12px;margin-top:5px;max-width:65ch}.caption-track-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.caption-track-actions button{min-height:44px;white-space:normal;text-align:center}.caption-track-actions button[aria-pressed=true]{background:var(--green-dark);color:var(--paper);border-color:var(--green-dark)}.experimental-notice{border-left:3px solid var(--danger);padding-left:12px}@media(max-width:500px){.caption-track-actions button{width:100%;font-size:12px}}

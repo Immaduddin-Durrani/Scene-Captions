@@ -1,0 +1,31 @@
+{
+  "read_after_model_generation": true,
+  "used_for_generation": false,
+  "source": "Demuxed / big-buck-captions",
+  "license": "CC BY 3.0",
+  "srt_sha256": "c36214b5ef69ea31fbdbac0c245f13d9cef2cbb58518da206c28c2cd347ecedd",
+  "limits": "Licensed editorial reference, not independent listening ground truth; source omissions and interval breadth prevent a complete accuracy score.",
+  "rows": [
+    {
+      "case": "f01",
+      "candidate_s": 54.6,
+      "clip_start_s": 52.6,
+      "clip_end_s": 57.6,
+      "overlapping_reference_cues": [
+        {
+          "id": "16",
+          "start_s": 52.499,
+          "end_s": 53.541,
+          "text": "[BUNNY CRACKS NECK]"
+        }
+      ]
+    },
+    {
+      "case": "f02",
+      "candidate_s": 87,
+      "clip_start_s": 85,
+      "clip_end_s": 90,
+      "overlapping_reference_cues": []
+    }
+  ]
+}

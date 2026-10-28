@@ -1,0 +1,60 @@
+[
+  {
+    "case": "q08",
+    "hypothesis": "Same exact fresh speech WAV; change only transcription instruction to the general audio-description instruction.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-recognition-2026-10-27/q07.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 256,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "q09",
+    "hypothesis": "Same source burst repeated without gain changes at eight onsets; test recognition under increased event exposure.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-recognition-2026-10-27/q09.wav"
+            },
+            {
+              "type": "text",
+              "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 256,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

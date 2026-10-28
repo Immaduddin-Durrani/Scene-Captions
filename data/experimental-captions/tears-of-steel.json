@@ -1,0 +1,1562 @@
+{
+  "schema_version": 1,
+  "video_id": "tears-of-steel",
+  "title": "Tears of Steel",
+  "source_url": "https://mango.blender.org/",
+  "license": "CC BY 3.0",
+  "attribution": "\u00a9 2012 Blender Foundation / mango.blender.org. Experimental media-only captions by SceneCaptions; not creator-authored or reviewed.",
+  "duration_seconds": 734.166667,
+  "annotation_status": "draft",
+  "generated_with": {
+    "kind": "audio-derived",
+    "method": "NVIDIA audio-only observations in nonoverlapping 15-second windows, reworded at three detail levels by Super VL; dedicated Parakeet word-timed speech in 30-second windows. Sound display intervals are analysis windows, NOT detected event boundaries. No fetched subtitles, plot, titles, scene descriptions or source cue timing supplied.",
+    "prompt_version": "media-only-experimental-v2",
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning + nvidia/nemotron-3.5-super-vl-120b-a12b + nvidia/parakeet-tdt-0_6b-v2",
+    "source_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "quality_gate": "unverified",
+    "experimental": true,
+    "acoustic_validation": "failed",
+    "input_basis": "media-only",
+    "expressiveness": "conservative",
+    "scene_load_method": "unreviewed"
+  },
+  "cues": [
+    {
+      "cue_id": "media-0000-0000",
+      "start_s": 0,
+      "end_s": 15.0,
+      "original_text": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+      "grid": {
+        "1-1": "[engine start rumble whine]",
+        "1-2": "[engine start rumble whine]",
+        "1-3": "[engine start rumble whine]",
+        "2-1": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+        "2-2": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+        "2-3": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+        "3-1": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+        "3-2": "[A loud engine starts followed by a deep rumble and a high-pitched whine]",
+        "3-3": "[A loud engine starts followed by a deep rumble and a high-pitched whine]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-engine-start-rumble-whine",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[engine start rumble whine]"
+      }
+    },
+    {
+      "cue_id": "media-0015-0001",
+      "start_s": 15,
+      "end_s": 30.0,
+      "original_text": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+      "grid": {
+        "1-1": "[mechanical rumble clanking]",
+        "1-2": "[mechanical rumble clanking]",
+        "1-3": "[mechanical rumble clanking]",
+        "2-1": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+        "2-2": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+        "2-3": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+        "3-1": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+        "3-2": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]",
+        "3-3": "[A loud continuous mechanical rumble and metallic clanking sound dominates the audio]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-mechanical-rumble-clanking",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[mechanical rumble clanking]"
+      }
+    },
+    {
+      "cue_id": "media-0030-0002",
+      "start_s": 30,
+      "end_s": 45.0,
+      "original_text": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+      "grid": {
+        "1-1": "[squeak rumble clank]",
+        "1-2": "[squeak rumble clank]",
+        "1-3": "[squeak rumble clank]",
+        "2-1": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+        "2-2": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+        "2-3": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+        "3-1": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+        "3-2": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]",
+        "3-3": "[A high-pitched squeak a low-frequency rumble and a sharp metallic clank]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-squeak-rumble-clank",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[squeak rumble clank]"
+      }
+    },
+    {
+      "cue_id": "media-0045-0003",
+      "start_s": 45,
+      "end_s": 60.0,
+      "original_text": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound]",
+      "grid": {
+        "1-1": "[electronic drone ticking]",
+        "1-2": "[electronic drone ticking]",
+        "1-3": "[electronic drone ticking]",
+        "2-1": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound]",
+        "2-2": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound]",
+        "2-3": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound]",
+        "3-1": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound is audible throughout the recording]",
+        "3-2": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound is audible throughout the recording]",
+        "3-3": "[A low sustained electronic drone with a faint high-pitched rhythmic ticking sound is audible throughout the recording]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-drone-ticking",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic drone ticking]"
+      }
+    },
+    {
+      "cue_id": "media-0060-0004",
+      "start_s": 60,
+      "end_s": 75.0,
+      "original_text": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+      "grid": {
+        "1-1": "[electronic drone]",
+        "1-2": "[electronic drone]",
+        "1-3": "[electronic drone]",
+        "2-1": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+        "2-2": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+        "2-3": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+        "3-1": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+        "3-2": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]",
+        "3-3": "[A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-drone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic drone]"
+      }
+    },
+    {
+      "cue_id": "media-0075-0005",
+      "start_s": 75,
+      "end_s": 90.0,
+      "original_text": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+      "grid": {
+        "1-1": "[hum bird chirps clink]",
+        "1-2": "[hum bird chirps clink]",
+        "1-3": "[hum bird chirps clink]",
+        "2-1": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+        "2-2": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+        "2-3": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+        "3-1": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+        "3-2": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]",
+        "3-3": "[A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-hum-bird-chirps-clink",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[hum bird chirps clink]"
+      }
+    },
+    {
+      "cue_id": "media-0090-0006",
+      "start_s": 90,
+      "end_s": 105.0,
+      "original_text": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+      "grid": {
+        "1-1": "[click whine rumble]",
+        "1-2": "[click whine rumble]",
+        "1-3": "[click whine rumble]",
+        "2-1": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+        "2-2": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+        "2-3": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+        "3-1": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+        "3-2": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]",
+        "3-3": "[A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-click-whine-rumble",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[click whine rumble]"
+      }
+    },
+    {
+      "cue_id": "media-0105-0007",
+      "start_s": 105,
+      "end_s": 120.0,
+      "original_text": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+      "grid": {
+        "1-1": "[impact scraping rumble hum]",
+        "1-2": "[impact scraping rumble hum]",
+        "1-3": "[impact scraping rumble hum]",
+        "2-1": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+        "2-2": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+        "2-3": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+        "3-1": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+        "3-2": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]",
+        "3-3": "[A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-impact-scraping-rumble-hum",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[impact scraping rumble hum]"
+      }
+    },
+    {
+      "cue_id": "media-0120-0008",
+      "start_s": 120,
+      "end_s": 135.0,
+      "original_text": "[A continuous low-frequency hum and intermittent rustling]",
+      "grid": {
+        "1-1": "[hum rustling]",
+        "1-2": "[hum rustling]",
+        "1-3": "[hum rustling]",
+        "2-1": "[A continuous low-frequency hum and intermittent rustling]",
+        "2-2": "[A continuous low-frequency hum and intermittent rustling]",
+        "2-3": "[A continuous low-frequency hum and intermittent rustling]",
+        "3-1": "[A continuous low-frequency hum and intermittent rustling]",
+        "3-2": "[A continuous low-frequency hum and intermittent rustling]",
+        "3-3": "[A continuous low-frequency hum and intermittent rustling]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-hum-rustling",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[hum rustling]"
+      }
+    },
+    {
+      "cue_id": "media-0135-0009",
+      "start_s": 135,
+      "end_s": 150.0,
+      "original_text": "[door opening and closing followed by music]",
+      "grid": {
+        "1-1": "[door opening closing music]",
+        "1-2": "[door opening closing music]",
+        "1-3": "[door opening closing music]",
+        "2-1": "[door opening and closing followed by music]",
+        "2-2": "[door opening and closing followed by music]",
+        "2-3": "[door opening and closing followed by music]",
+        "3-1": "[door opening and closing followed by music begins]",
+        "3-2": "[door opening and closing followed by music begins]",
+        "3-3": "[door opening and closing followed by music begins]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-door-opening-closing-music",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[door opening closing music]"
+      }
+    },
+    {
+      "cue_id": "media-0150-0010",
+      "start_s": 150,
+      "end_s": 165.0,
+      "original_text": "[breathing followed by brief music and sustained low-frequency electronic tone]",
+      "grid": {
+        "1-1": "[breathing music electronic tone]",
+        "1-2": "[breathing music electronic tone]",
+        "1-3": "[breathing music electronic tone]",
+        "2-1": "[breathing followed by brief music and sustained low-frequency electronic tone]",
+        "2-2": "[breathing followed by brief music and sustained low-frequency electronic tone]",
+        "2-3": "[breathing followed by brief music and sustained low-frequency electronic tone]",
+        "3-1": "[breathing followed by brief musical piece and then sustained low-frequency electronic tone]",
+        "3-2": "[breathing followed by brief musical piece and then sustained low-frequency electronic tone]",
+        "3-3": "[breathing followed by brief musical piece and then sustained low-frequency electronic tone]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-breathing-music-electronic-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[breathing music electronic tone]"
+      }
+    },
+    {
+      "cue_id": "media-0165-0011",
+      "start_s": 165,
+      "end_s": 180.0,
+      "original_text": "[continuous low-frequency hum and rhythmic mechanical clanking]",
+      "grid": {
+        "1-1": "[hum mechanical clanking]",
+        "1-2": "[hum mechanical clanking]",
+        "1-3": "[hum mechanical clanking]",
+        "2-1": "[continuous low-frequency hum and rhythmic mechanical clanking]",
+        "2-2": "[continuous low-frequency hum and rhythmic mechanical clanking]",
+        "2-3": "[continuous low-frequency hum and rhythmic mechanical clanking]",
+        "3-1": "[continuous low-frequency hum and rhythmic mechanical clanking are audible]",
+        "3-2": "[continuous low-frequency hum and rhythmic mechanical clanking are audible]",
+        "3-3": "[continuous low-frequency hum and rhythmic mechanical clanking are audible]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-hum-mechanical-clanking",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[hum mechanical clanking]"
+      }
+    },
+    {
+      "cue_id": "media-0180-0012",
+      "start_s": 180,
+      "end_s": 195.0,
+      "original_text": "[rock band music with drums bass guitar followed by door opening and closing]",
+      "grid": {
+        "1-1": "[rock band music door opening closing]",
+        "1-2": "[rock band music door opening closing]",
+        "1-3": "[rock band music door opening closing]",
+        "2-1": "[rock band music with drums bass guitar followed by door opening and closing]",
+        "2-2": "[rock band music with drums bass guitar followed by door opening and closing]",
+        "2-3": "[rock band music with drums bass guitar followed by door opening and closing]",
+        "3-1": "[rock band plays energetic music with drums bass and guitar followed by a door opening and closing]",
+        "3-2": "[rock band plays energetic music with drums bass and guitar followed by a door opening and closing]",
+        "3-3": "[rock band plays energetic music with drums bass and guitar followed by a door opening and closing]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-rock-band-music-door-opening-closing",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[rock band music door opening closing]"
+      }
+    },
+    {
+      "cue_id": "media-0195-0013",
+      "start_s": 195,
+      "end_s": 210.0,
+      "original_text": "[mechanical clanking metallic scraping deep rumble accompany speech followed by sudden loud explosion]",
+      "grid": {
+        "1-1": "[mechanical clanking metallic scraping deep rumble explosion]",
+        "1-2": "[mechanical clanking metallic scraping deep rumble explosion]",
+        "1-3": "[mechanical clanking metallic scraping deep rumble explosion]",
+        "2-1": "[mechanical clanking metallic scraping deep rumble accompany speech followed by sudden loud explosion]",
+        "2-2": "[mechanical clanking metallic scraping deep rumble accompany speech followed by sudden loud explosion]",
+        "2-3": "[mechanical clanking metallic scraping deep rumble accompany speech followed by sudden loud explosion]",
+        "3-1": "[mechanical clanking metallic scraping and a deep rumble accompany the speech followed by a sudden loud explosion]",
+        "3-2": "[mechanical clanking metallic scraping and a deep rumble accompany the speech followed by a sudden loud explosion]",
+        "3-3": "[mechanical clanking metallic scraping and a deep rumble accompany the speech followed by a sudden loud explosion]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-mechanical-clanking-metallic-scraping-deep-rumble-explosion",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[mechanical clanking metallic scraping deep rumble explosion]"
+      }
+    },
+    {
+      "cue_id": "media-0210-0014",
+      "start_s": 210,
+      "end_s": 225.0,
+      "original_text": "[loud sustained high-pitched electronic tone followed by male voice speaking]",
+      "grid": {
+        "1-1": "[high-pitched electronic tone male voice]",
+        "1-2": "[high-pitched electronic tone male voice]",
+        "1-3": "[high-pitched electronic tone male voice]",
+        "2-1": "[loud sustained high-pitched electronic tone followed by male voice speaking]",
+        "2-2": "[loud sustained high-pitched electronic tone followed by male voice speaking]",
+        "2-3": "[loud sustained high-pitched electronic tone followed by male voice speaking]",
+        "3-1": "[loud sustained high-pitched electronic tone plays continuously followed by a male voice speaking]",
+        "3-2": "[loud sustained high-pitched electronic tone plays continuously followed by a male voice speaking]",
+        "3-3": "[loud sustained high-pitched electronic tone plays continuously followed by a male voice speaking]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-high-pitched-electronic-tone-male-voice",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[high-pitched electronic tone male voice]"
+      }
+    },
+    {
+      "cue_id": "media-0225-0015",
+      "start_s": 225,
+      "end_s": 240.0,
+      "original_text": "[soft background music with subtle ambient sounds and faint rhythmic heartbeat]",
+      "grid": {
+        "1-1": "[soft music ambient sounds heartbeat]",
+        "1-2": "[soft music ambient sounds heartbeat]",
+        "1-3": "[soft music ambient sounds heartbeat]",
+        "2-1": "[soft background music with subtle ambient sounds and faint rhythmic heartbeat]",
+        "2-2": "[soft background music with subtle ambient sounds and faint rhythmic heartbeat]",
+        "2-3": "[soft background music with subtle ambient sounds and faint rhythmic heartbeat]",
+        "3-1": "[music plays softly in the background accompanied by subtle ambient sounds and a faint rhythmic heartbeat]",
+        "3-2": "[music plays softly in the background accompanied by subtle ambient sounds and a faint rhythmic heartbeat]",
+        "3-3": "[music plays softly in the background accompanied by subtle ambient sounds and a faint rhythmic heartbeat]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-soft-music-ambient-sounds-heartbeat",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[soft music ambient sounds heartbeat]"
+      }
+    },
+    {
+      "cue_id": "media-0240-0016",
+      "start_s": 240,
+      "end_s": 255.0,
+      "original_text": "[low sustained musical drone with faint rhythmic ticking]",
+      "grid": {
+        "1-1": "[musical drone ticking]",
+        "1-2": "[musical drone ticking]",
+        "1-3": "[musical drone ticking]",
+        "2-1": "[low sustained musical drone with faint rhythmic ticking]",
+        "2-2": "[low sustained musical drone with faint rhythmic ticking]",
+        "2-3": "[low sustained musical drone with faint rhythmic ticking]",
+        "3-1": "[low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound]",
+        "3-2": "[low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound]",
+        "3-3": "[low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-musical-drone-ticking",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[musical drone ticking]"
+      }
+    },
+    {
+      "cue_id": "media-0255-0017",
+      "start_s": 255,
+      "end_s": 270.0,
+      "original_text": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+      "grid": {
+        "1-1": "[piano melody background hiss]",
+        "1-2": "[piano melody background hiss]",
+        "1-3": "[piano melody background hiss]",
+        "2-1": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+        "2-2": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+        "2-3": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+        "3-1": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+        "3-2": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]",
+        "3-3": "[A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-piano-melody-background-hiss",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[piano melody background hiss]"
+      }
+    },
+    {
+      "cue_id": "media-0270-0018",
+      "start_s": 270,
+      "end_s": 285.0,
+      "original_text": "[A piano plays a slow melody over the continuous sound of rain.]",
+      "grid": {
+        "1-1": "[piano melody rain]",
+        "1-2": "[piano melody rain]",
+        "1-3": "[piano melody rain]",
+        "2-1": "[A piano plays a slow melody over the continuous sound of rain.]",
+        "2-2": "[A piano plays a slow melody over the continuous sound of rain.]",
+        "2-3": "[A piano plays a slow melody over the continuous sound of rain.]",
+        "3-1": "[A piano plays a slow melody over the continuous sound of rain.]",
+        "3-2": "[A piano plays a slow melody over the continuous sound of rain.]",
+        "3-3": "[A piano plays a slow melody over the continuous sound of rain.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-piano-melody-rain",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[piano melody rain]"
+      }
+    },
+    {
+      "cue_id": "media-0285-0019",
+      "start_s": 285,
+      "end_s": 300.0,
+      "original_text": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+      "grid": {
+        "1-1": "[electronic tone electronic beep]",
+        "1-2": "[electronic tone electronic beep]",
+        "1-3": "[electronic tone electronic beep]",
+        "2-1": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+        "2-2": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+        "2-3": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+        "3-1": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+        "3-2": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]",
+        "3-3": "[A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-tone-electronic-beep",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic tone electronic beep]"
+      }
+    },
+    {
+      "cue_id": "media-0300-0020",
+      "start_s": 300,
+      "end_s": 315.0,
+      "original_text": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+      "grid": {
+        "1-1": "[speech toilet flush musical jingle]",
+        "1-2": "[speech toilet flush musical jingle]",
+        "1-3": "[speech toilet flush musical jingle]",
+        "2-1": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+        "2-2": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+        "2-3": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+        "3-1": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+        "3-2": "[A person speaks, followed by a toilet flush and a brief musical jingle.]",
+        "3-3": "[A person speaks, followed by a toilet flush and a brief musical jingle.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-speech-toilet-flush-musical-jingle",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[speech toilet flush musical jingle]"
+      }
+    },
+    {
+      "cue_id": "media-0315-0021",
+      "start_s": 315,
+      "end_s": 330.0,
+      "original_text": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+      "grid": {
+        "1-1": "[low-frequency hum electronic hiss]",
+        "1-2": "[low-frequency hum electronic hiss]",
+        "1-3": "[low-frequency hum electronic hiss]",
+        "2-1": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+        "2-2": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+        "2-3": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+        "3-1": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+        "3-2": "[A low-frequency hum and subtle electronic hiss are audible in the background.]",
+        "3-3": "[A low-frequency hum and subtle electronic hiss are audible in the background.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-low-frequency-hum-electronic-hiss",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[low-frequency hum electronic hiss]"
+      }
+    },
+    {
+      "cue_id": "media-0330-0022",
+      "start_s": 330,
+      "end_s": 345.0,
+      "original_text": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+      "grid": {
+        "1-1": "[metallic clanking scraping roar electronic beep]",
+        "1-2": "[metallic clanking scraping roar electronic beep]",
+        "1-3": "[metallic clanking scraping roar electronic beep]",
+        "2-1": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+        "2-2": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+        "2-3": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+        "3-1": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+        "3-2": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]",
+        "3-3": "[A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-metallic-clanking-scraping-roar-electronic-beep",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[metallic clanking scraping roar electronic beep]"
+      }
+    },
+    {
+      "cue_id": "media-0345-0023",
+      "start_s": 345,
+      "end_s": 360.0,
+      "original_text": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+      "grid": {
+        "1-1": "[orchestral score sound effects electronic beep]",
+        "1-2": "[orchestral score sound effects electronic beep]",
+        "1-3": "[orchestral score sound effects electronic beep]",
+        "2-1": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+        "2-2": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+        "2-3": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+        "3-1": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+        "3-2": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]",
+        "3-3": "[A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-orchestral-score-sound-effects-electronic-beep",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[orchestral score sound effects electronic beep]"
+      }
+    },
+    {
+      "cue_id": "media-0360-0024",
+      "start_s": 360,
+      "end_s": 375.0,
+      "original_text": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+      "grid": {
+        "1-1": "[musical drone metallic crash scream]",
+        "1-2": "[musical drone metallic crash scream]",
+        "1-3": "[musical drone metallic crash scream]",
+        "2-1": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+        "2-2": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+        "2-3": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+        "3-1": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+        "3-2": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]",
+        "3-3": "[A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-musical-drone-metallic-crash-scream",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[musical drone metallic crash scream]"
+      }
+    },
+    {
+      "cue_id": "media-0375-0025",
+      "start_s": 375,
+      "end_s": 390.0,
+      "original_text": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+      "grid": {
+        "1-1": "[orchestral score]",
+        "1-2": "[orchestral score]",
+        "1-3": "[orchestral score]",
+        "2-1": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+        "2-2": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+        "2-3": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+        "3-1": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+        "3-2": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]",
+        "3-3": "[A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-orchestral-score",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[orchestral score]"
+      }
+    },
+    {
+      "cue_id": "media-0390-0026",
+      "start_s": 390,
+      "end_s": 405.0,
+      "original_text": "[A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning.]",
+      "grid": {
+        "1-1": "[electronic tone impact]",
+        "1-2": "[electronic tone impact]",
+        "1-3": "[electronic tone impact]",
+        "2-1": "[A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning.]",
+        "2-2": "[A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning.]",
+        "2-3": "[A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning.]",
+        "3-1": "[A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning.]",
+        "3-2": "[A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning.]",
+        "3-3": "[A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-tone-impact",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic tone impact]"
+      }
+    },
+    {
+      "cue_id": "media-0405-0027",
+      "start_s": 405,
+      "end_s": 420.0,
+      "original_text": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+      "grid": {
+        "1-1": "[hum whine beep]",
+        "1-2": "[hum whine beep]",
+        "1-3": "[hum whine beep]",
+        "2-1": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+        "2-2": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+        "2-3": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+        "3-1": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+        "3-2": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]",
+        "3-3": "[A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-hum-whine-beep",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[hum whine beep]"
+      }
+    },
+    {
+      "cue_id": "media-0420-0028",
+      "start_s": 420,
+      "end_s": 435.0,
+      "original_text": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+      "grid": {
+        "1-1": "[engine explosion tone]",
+        "1-2": "[engine explosion tone]",
+        "1-3": "[engine explosion tone]",
+        "2-1": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+        "2-2": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+        "2-3": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+        "3-1": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+        "3-2": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]",
+        "3-3": "[A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-engine-explosion-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[engine explosion tone]"
+      }
+    },
+    {
+      "cue_id": "media-0435-0029",
+      "start_s": 435,
+      "end_s": 450.0,
+      "original_text": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+      "grid": {
+        "1-1": "[rock track]",
+        "1-2": "[rock track]",
+        "1-3": "[rock track]",
+        "2-1": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+        "2-2": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+        "2-3": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+        "3-1": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+        "3-2": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]",
+        "3-3": "[A high energy rock track plays punctuated by a car engine revving a tire screech and a crash]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-rock-track",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[rock track]"
+      }
+    },
+    {
+      "cue_id": "media-0450-0030",
+      "start_s": 450,
+      "end_s": 465.0,
+      "original_text": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+      "grid": {
+        "1-1": "[whine hum impact tone]",
+        "1-2": "[whine hum impact tone]",
+        "1-3": "[whine hum impact tone]",
+        "2-1": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+        "2-2": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+        "2-3": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+        "3-1": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+        "3-2": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]",
+        "3-3": "[A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-whine-hum-impact-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[whine hum impact tone]"
+      }
+    },
+    {
+      "cue_id": "media-0465-0031",
+      "start_s": 465,
+      "end_s": 480.0,
+      "original_text": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+      "grid": {
+        "1-1": "[whine scraping roar]",
+        "1-2": "[whine scraping roar]",
+        "1-3": "[whine scraping roar]",
+        "2-1": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+        "2-2": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+        "2-3": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+        "3-1": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+        "3-2": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]",
+        "3-3": "[A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-whine-scraping-roar",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[whine scraping roar]"
+      }
+    },
+    {
+      "cue_id": "media-0480-0032",
+      "start_s": 480,
+      "end_s": 495.0,
+      "original_text": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+      "grid": {
+        "1-1": "[roar clanking whirring]",
+        "1-2": "[roar clanking whirring]",
+        "1-3": "[roar clanking whirring]",
+        "2-1": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+        "2-2": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+        "2-3": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+        "3-1": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+        "3-2": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]",
+        "3-3": "[A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-roar-clanking-whirring",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[roar clanking whirring]"
+      }
+    },
+    {
+      "cue_id": "media-0495-0033",
+      "start_s": 495,
+      "end_s": 510.0,
+      "original_text": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+      "grid": {
+        "1-1": "[whine rumble]",
+        "1-2": "[whine rumble]",
+        "1-3": "[whine rumble]",
+        "2-1": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+        "2-2": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+        "2-3": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+        "3-1": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+        "3-2": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]",
+        "3-3": "[A continuous high-pitched electronic whine and a low-frequency rumble are audible.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-whine-rumble",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[whine rumble]"
+      }
+    },
+    {
+      "cue_id": "media-0510-0034",
+      "start_s": 510,
+      "end_s": 525.0,
+      "original_text": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+      "grid": {
+        "1-1": "[orchestral score clang]",
+        "1-2": "[orchestral score clang]",
+        "1-3": "[orchestral score clang]",
+        "2-1": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+        "2-2": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+        "2-3": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+        "3-1": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+        "3-2": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]",
+        "3-3": "[A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-orchestral-score-clang",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[orchestral score clang]"
+      }
+    },
+    {
+      "cue_id": "media-0525-0035",
+      "start_s": 525,
+      "end_s": 540.0,
+      "original_text": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+      "grid": {
+        "1-1": "[metallic impact scraping hum whine]",
+        "1-2": "[metallic impact scraping hum whine]",
+        "1-3": "[metallic impact scraping hum whine]",
+        "2-1": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+        "2-2": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+        "2-3": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+        "3-1": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+        "3-2": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]",
+        "3-3": "[A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-metallic-impact-scraping-hum-whine",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[metallic impact scraping hum whine]"
+      }
+    },
+    {
+      "cue_id": "media-0540-0036",
+      "start_s": 540,
+      "end_s": 555.0,
+      "original_text": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+      "grid": {
+        "1-1": "[electronic tone metallic click]",
+        "1-2": "[electronic tone metallic click]",
+        "1-3": "[electronic tone metallic click]",
+        "2-1": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+        "2-2": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+        "2-3": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+        "3-1": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+        "3-2": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]",
+        "3-3": "[A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-tone-metallic-click",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic tone metallic click]"
+      }
+    },
+    {
+      "cue_id": "media-0555-0037",
+      "start_s": 555,
+      "end_s": 570.0,
+      "original_text": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+      "grid": {
+        "1-1": "[musical drone explosion clatter]",
+        "1-2": "[musical drone explosion clatter]",
+        "1-3": "[musical drone explosion clatter]",
+        "2-1": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+        "2-2": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+        "2-3": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+        "3-1": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+        "3-2": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]",
+        "3-3": "[A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-musical-drone-explosion-clatter",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[musical drone explosion clatter]"
+      }
+    },
+    {
+      "cue_id": "media-0570-0038",
+      "start_s": 570,
+      "end_s": 585.0,
+      "original_text": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+      "grid": {
+        "1-1": "[scream rumble electronic tone]",
+        "1-2": "[scream rumble electronic tone]",
+        "1-3": "[scream rumble electronic tone]",
+        "2-1": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+        "2-2": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+        "2-3": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+        "3-1": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+        "3-2": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]",
+        "3-3": "[A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-scream-rumble-electronic-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[scream rumble electronic tone]"
+      }
+    },
+    {
+      "cue_id": "media-0585-0039",
+      "start_s": 585,
+      "end_s": 600.0,
+      "original_text": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+      "grid": {
+        "1-1": "[electric guitar drums bass]",
+        "1-2": "[electric guitar drums bass]",
+        "1-3": "[electric guitar drums bass]",
+        "2-1": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+        "2-2": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+        "2-3": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+        "3-1": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+        "3-2": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]",
+        "3-3": "[A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electric-guitar-drums-bass",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electric guitar drums bass]"
+      }
+    },
+    {
+      "cue_id": "media-0600-0040",
+      "start_s": 600,
+      "end_s": 615.0,
+      "original_text": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+      "grid": {
+        "1-1": "[electric guitar drums bass]",
+        "1-2": "[electric guitar drums bass]",
+        "1-3": "[electric guitar drums bass]",
+        "2-1": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+        "2-2": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+        "2-3": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+        "3-1": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+        "3-2": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]",
+        "3-3": "[A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electric-guitar-drums-bass",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electric guitar drums bass]"
+      }
+    },
+    {
+      "cue_id": "media-0615-0041",
+      "start_s": 615,
+      "end_s": 630.0,
+      "original_text": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+      "grid": {
+        "1-1": "[orchestral score percussion strings drone]",
+        "1-2": "[orchestral score percussion strings drone]",
+        "1-3": "[orchestral score percussion strings drone]",
+        "2-1": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+        "2-2": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+        "2-3": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+        "3-1": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+        "3-2": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]",
+        "3-3": "[A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-orchestral-score-percussion-strings-drone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[orchestral score percussion strings drone]"
+      }
+    },
+    {
+      "cue_id": "media-0630-0042",
+      "start_s": 630,
+      "end_s": 645.0,
+      "original_text": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+      "grid": {
+        "1-1": "[electronic tones descending glide]",
+        "1-2": "[electronic tones descending glide]",
+        "1-3": "[electronic tones descending glide]",
+        "2-1": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+        "2-2": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+        "2-3": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+        "3-1": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+        "3-2": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]",
+        "3-3": "[A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-tones-descending-glide",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic tones descending glide]"
+      }
+    },
+    {
+      "cue_id": "media-0645-0043",
+      "start_s": 645,
+      "end_s": 660.0,
+      "original_text": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+      "grid": {
+        "1-1": "[metallic percussion]",
+        "1-2": "[metallic percussion]",
+        "1-3": "[metallic percussion]",
+        "2-1": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+        "2-2": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+        "2-3": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+        "3-1": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+        "3-2": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]",
+        "3-3": "[A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-metallic-percussion",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[metallic percussion]"
+      }
+    },
+    {
+      "cue_id": "media-0660-0044",
+      "start_s": 660,
+      "end_s": 675.0,
+      "original_text": "[A high-pitched distorted electric guitar plays a fast repetitive riff with heavy distortion and reverb.]",
+      "grid": {
+        "1-1": "[distorted electric guitar]",
+        "1-2": "[distorted electric guitar]",
+        "1-3": "[distorted electric guitar]",
+        "2-1": "[A high-pitched distorted electric guitar plays a fast repetitive riff with heavy distortion and reverb.]",
+        "2-2": "[A high-pitched distorted electric guitar plays a fast repetitive riff with heavy distortion and reverb.]",
+        "2-3": "[A high-pitched distorted electric guitar plays a fast repetitive riff with heavy distortion and reverb.]",
+        "3-1": "[A high-pitched distorted electric guitar plays a fast aggressive repetitive riff with heavy distortion and reverb.]",
+        "3-2": "[A high-pitched distorted electric guitar plays a fast aggressive repetitive riff with heavy distortion and reverb.]",
+        "3-3": "[A high-pitched distorted electric guitar plays a fast aggressive repetitive riff with heavy distortion and reverb.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-distorted-electric-guitar",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[distorted electric guitar]"
+      }
+    },
+    {
+      "cue_id": "media-0675-0045",
+      "start_s": 675,
+      "end_s": 690.0,
+      "original_text": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+      "grid": {
+        "1-1": "[orchestral score and electronic tone]",
+        "1-2": "[orchestral score and electronic tone]",
+        "1-3": "[orchestral score and electronic tone]",
+        "2-1": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+        "2-2": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+        "2-3": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+        "3-1": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+        "3-2": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]",
+        "3-3": "[A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-orchestral-score-and-electronic-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[orchestral score and electronic tone]"
+      }
+    },
+    {
+      "cue_id": "media-0690-0046",
+      "start_s": 690,
+      "end_s": 705.0,
+      "original_text": "[A solo piano plays a slow melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+      "grid": {
+        "1-1": "[solo piano]",
+        "1-2": "[solo piano]",
+        "1-3": "[solo piano]",
+        "2-1": "[A solo piano plays a slow melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+        "2-2": "[A solo piano plays a slow melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+        "2-3": "[A solo piano plays a slow melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+        "3-1": "[A solo piano plays a slow melancholic melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+        "3-2": "[A solo piano plays a slow melancholic melody with sustained notes and gentle arpeggios in a quiet reverberant space.]",
+        "3-3": "[A solo piano plays a slow melancholic melody with sustained notes and gentle arpeggios in a quiet reverberant space.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-solo-piano",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[solo piano]"
+      }
+    },
+    {
+      "cue_id": "media-0705-0047",
+      "start_s": 705,
+      "end_s": 720.0,
+      "original_text": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+      "grid": {
+        "1-1": "[electronic drone click beep]",
+        "1-2": "[electronic drone click beep]",
+        "1-3": "[electronic drone click beep]",
+        "2-1": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+        "2-2": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+        "2-3": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+        "3-1": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+        "3-2": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]",
+        "3-3": "[A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-electronic-drone-click-beep",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[electronic drone click beep]"
+      }
+    },
+    {
+      "cue_id": "media-0720-0048",
+      "start_s": 720,
+      "end_s": 734.099,
+      "original_text": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+      "grid": {
+        "1-1": "[breathing fabric movement click tone]",
+        "1-2": "[breathing fabric movement click tone]",
+        "1-3": "[breathing fabric movement click tone]",
+        "2-1": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+        "2-2": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+        "2-3": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+        "3-1": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+        "3-2": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]",
+        "3-3": "[A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.]"
+      },
+      "scene_context": "Experimental audio-only observation, reworded at three detail levels. This caption describes a 15-second analysis window, not a verified event interval. Sounds may be missing or invented; no reference captions or plot were supplied.",
+      "sound_key": "experimental-breathing-fabric-movement-click-tone",
+      "scene_load": "balanced",
+      "representations": {
+        "plain": "[breathing fabric movement click tone]"
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "start_s": 4.72,
+      "end_s": 6.48,
+      "text": "We have main engine start:",
+      "cue_id": "asr-0000"
+    },
+    {
+      "start_s": 22.96,
+      "end_s": 24.16,
+      "text": "You're a Tom.",
+      "cue_id": "asr-0001"
+    },
+    {
+      "start_s": 25.36,
+      "end_s": 26.72,
+      "text": "we have to follow our passions.",
+      "cue_id": "asr-0002"
+    },
+    {
+      "start_s": 27.2,
+      "end_s": 27.52,
+      "text": "You have your",
+      "cue_id": "asr-0003"
+    },
+    {
+      "start_s": 28.32,
+      "end_s": 29.76,
+      "text": "and I just want to be awesome in space.",
+      "cue_id": "asr-0004"
+    },
+    {
+      "start_s": 30.64,
+      "end_s": 34.16,
+      "text": "Why don't you just admit that you're freaked out by my robot hand?",
+      "cue_id": "asr-0005"
+    },
+    {
+      "start_s": 34.72,
+      "end_s": 35.28,
+      "text": "I'm not freaked out.",
+      "cue_id": "asr-0006"
+    },
+    {
+      "start_s": 35.52,
+      "end_s": 36.0,
+      "text": "but it's",
+      "cue_id": "asr-0007"
+    },
+    {
+      "start_s": 38.08,
+      "end_s": 38.16,
+      "text": "fine.",
+      "cue_id": "asr-0008"
+    },
+    {
+      "start_s": 38.48,
+      "end_s": 42.32,
+      "text": "I'm freaked I'm having nightmares that I'm being chased by these giant robotic claws.",
+      "cue_id": "asr-0009"
+    },
+    {
+      "start_s": 44.32,
+      "end_s": 44.72,
+      "text": "We're done.",
+      "cue_id": "asr-0010"
+    },
+    {
+      "start_s": 50.0,
+      "end_s": 53.68,
+      "text": "Robot's memory synced and locked.",
+      "cue_id": "asr-0011"
+    },
+    {
+      "start_s": 60.88,
+      "end_s": 62.32,
+      "text": "This is pretty freaky.",
+      "cue_id": "asr-0012"
+    },
+    {
+      "start_s": 117.52,
+      "end_s": 118.64,
+      "text": "Shouldn't you be down there?",
+      "cue_id": "asr-0013"
+    },
+    {
+      "start_s": 131.2,
+      "end_s": 132.72,
+      "text": "I heard you guys talking last night.",
+      "cue_id": "asr-0014"
+    },
+    {
+      "start_s": 136.4,
+      "end_s": 137.6,
+      "text": "It's not my you know.",
+      "cue_id": "asr-0015"
+    },
+    {
+      "start_s": 191.28,
+      "end_s": 191.92,
+      "text": "Are you ready?",
+      "cue_id": "asr-0016"
+    },
+    {
+      "start_s": 192.48,
+      "end_s": 193.28,
+      "text": "Of course you're ready.",
+      "cue_id": "asr-0017"
+    },
+    {
+      "start_s": 193.52,
+      "end_s": 194.48,
+      "text": "You're a rock star.",
+      "cue_id": "asr-0018"
+    },
+    {
+      "start_s": 196.96,
+      "end_s": 198.16,
+      "text": "How's it Barley?",
+      "cue_id": "asr-0019"
+    },
+    {
+      "start_s": 198.88,
+      "end_s": 200.72,
+      "text": "We should have about 10 min",
+      "cue_id": "asr-0020"
+    },
+    {
+      "start_s": 202.0,
+      "end_s": 202.96,
+      "text": "that's perfect.",
+      "cue_id": "asr-0021"
+    },
+    {
+      "start_s": 203.6,
+      "end_s": 204.32,
+      "text": "We're only one!",
+      "cue_id": "asr-0022"
+    },
+    {
+      "start_s": 205.12,
+      "end_s": 206.16,
+      "text": "All systems go!",
+      "cue_id": "asr-0023"
+    },
+    {
+      "start_s": 206.88,
+      "end_s": 207.12,
+      "text": "you go!",
+      "cue_id": "asr-0024"
+    },
+    {
+      "start_s": 208.08,
+      "end_s": 208.16,
+      "text": "Go!",
+      "cue_id": "asr-0025"
+    },
+    {
+      "start_s": 210.16,
+      "end_s": 210.24,
+      "text": "Move",
+      "cue_id": "asr-0026"
+    },
+    {
+      "start_s": 222.88,
+      "end_s": 223.44,
+      "text": "That's nice.",
+      "cue_id": "asr-0027"
+    },
+    {
+      "start_s": 224.56,
+      "end_s": 225.28,
+      "text": "Nothing to worry about.",
+      "cue_id": "asr-0028"
+    },
+    {
+      "start_s": 225.44,
+      "end_s": 225.6,
+      "text": "Dump.",
+      "cue_id": "asr-0029"
+    },
+    {
+      "start_s": 232.08,
+      "end_s": 232.72,
+      "text": "there she is.",
+      "cue_id": "asr-0030"
+    },
+    {
+      "start_s": 235.28,
+      "end_s": 236.16,
+      "text": "you love her.",
+      "cue_id": "asr-0031"
+    },
+    {
+      "start_s": 237.36,
+      "end_s": 238.32,
+      "text": "She's your passion.",
+      "cue_id": "asr-0032"
+    },
+    {
+      "start_s": 240.16,
+      "end_s": 240.56,
+      "text": "Tender to her.",
+      "cue_id": "asr-0033"
+    },
+    {
+      "start_s": 241.36,
+      "end_s": 241.92,
+      "text": "Be honest.",
+      "cue_id": "asr-0034"
+    },
+    {
+      "start_s": 243.6,
+      "end_s": 244.08,
+      "text": "Be tender.",
+      "cue_id": "asr-0035"
+    },
+    {
+      "start_s": 245.52,
+      "end_s": 247.68,
+      "text": "Remind her what love is.",
+      "cue_id": "asr-0036"
+    },
+    {
+      "start_s": 294.24,
+      "end_s": 298.48,
+      "text": "Exercise Memory override in progress.",
+      "cue_id": "asr-0037"
+    },
+    {
+      "start_s": 299.04,
+      "end_s": 299.84,
+      "text": "You're a jerk.",
+      "cue_id": "asr-0038"
+    },
+    {
+      "start_s": 302.32,
+      "end_s": 303.12,
+      "text": "I'm sorry.",
+      "cue_id": "asr-0039"
+    },
+    {
+      "start_s": 303.76,
+      "end_s": 304.16,
+      "text": "Sorry.",
+      "cue_id": "asr-0040"
+    },
+    {
+      "start_s": 318.24,
+      "end_s": 320.32,
+      "text": "we have to follow our passions.",
+      "cue_id": "asr-0041"
+    },
+    {
+      "start_s": 321.2,
+      "end_s": 321.76,
+      "text": "You have your",
+      "cue_id": "asr-0042"
+    },
+    {
+      "start_s": 325.04,
+      "end_s": 327.92,
+      "text": "and I just want to be awesome in space.",
+      "cue_id": "asr-0043"
+    },
+    {
+      "start_s": 339.12,
+      "end_s": 339.76,
+      "text": "Get her coming.",
+      "cue_id": "asr-0044"
+    },
+    {
+      "start_s": 340.24,
+      "end_s": 340.96,
+      "text": "Two minutes left.",
+      "cue_id": "asr-0045"
+    },
+    {
+      "start_s": 341.44,
+      "end_s": 342.0,
+      "text": "Two minutes.",
+      "cue_id": "asr-0046"
+    },
+    {
+      "start_s": 342.72,
+      "end_s": 343.28,
+      "text": "Speed up.",
+      "cue_id": "asr-0047"
+    },
+    {
+      "start_s": 346.8,
+      "end_s": 350.08,
+      "text": "Why don't you just admit that you're freaked out by my robot hand?",
+      "cue_id": "asr-0048"
+    },
+    {
+      "start_s": 357.12,
+      "end_s": 357.44,
+      "text": "Celia.",
+      "cue_id": "asr-0049"
+    },
+    {
+      "start_s": 358.16,
+      "end_s": 359.04,
+      "text": "I was young.",
+      "cue_id": "asr-0050"
+    },
+    {
+      "start_s": 360.16,
+      "end_s": 363.04,
+      "text": "And a but there's no reason to destroy the world.",
+      "cue_id": "asr-0051"
+    },
+    {
+      "start_s": 364.88,
+      "end_s": 366.0,
+      "text": "Why does he do this?",
+      "cue_id": "asr-0052"
+    },
+    {
+      "start_s": 367.04,
+      "end_s": 368.32,
+      "text": "We already tried that one!",
+      "cue_id": "asr-0053"
+    },
+    {
+      "start_s": 383.6,
+      "end_s": 384.8,
+      "text": "You broke my heart",
+      "cue_id": "asr-0054"
+    },
+    {
+      "start_s": 386.08,
+      "end_s": 389.36,
+      "text": "I know you forgot me on earth I know.",
+      "cue_id": "asr-0055"
+    },
+    {
+      "start_s": 390.64,
+      "end_s": 392.0,
+      "text": "I should just brush you.",
+      "cue_id": "asr-0056"
+    },
+    {
+      "start_s": 407.6,
+      "end_s": 407.84,
+      "text": "I'm",
+      "cue_id": "asr-0057"
+    },
+    {
+      "start_s": 419.12,
+      "end_s": 419.76,
+      "text": "got my ball.",
+      "cue_id": "asr-0058"
+    },
+    {
+      "start_s": 422.24,
+      "end_s": 422.56,
+      "text": "This time",
+      "cue_id": "asr-0059"
+    },
+    {
+      "start_s": 428.48,
+      "end_s": 429.04,
+      "text": "Wireless",
+      "cue_id": "asr-0060"
+    },
+    {
+      "start_s": 430.16,
+      "end_s": 431.28,
+      "text": "route time.",
+      "cue_id": "asr-0061"
+    },
+    {
+      "start_s": 503.84,
+      "end_s": 505.12,
+      "text": "Emery overhead at %",
+      "cue_id": "asr-0062"
+    },
+    {
+      "start_s": 507.2,
+      "end_s": 508.16,
+      "text": "we have to abort.",
+      "cue_id": "asr-0063"
+    },
+    {
+      "start_s": 519.04,
+      "end_s": 520.4,
+      "text": "The world's Celia.",
+      "cue_id": "asr-0064"
+    },
+    {
+      "start_s": 534.96,
+      "end_s": 535.92,
+      "text": "Maybe we can too.",
+      "cue_id": "asr-0065"
+    },
+    {
+      "start_s": 538.08,
+      "end_s": 539.2,
+      "text": "Then we override complete.",
+      "cue_id": "asr-0066"
+    },
+    {
+      "start_s": 561.84,
+      "end_s": 563.76,
+      "text": "there's a lesson to be learned from this.",
+      "cue_id": "asr-0067"
+    }
+  ]
+}

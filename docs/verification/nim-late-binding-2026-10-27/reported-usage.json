@@ -1,0 +1,164 @@
+{
+  "requests": 14,
+  "rows": [
+    {
+      "case": "k04-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 7,
+        "total_tokens": 279
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k04-thinking",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 123,
+        "total_tokens": 395
+      },
+      "reasoning_content_present": true
+    },
+    {
+      "case": "k02-instruct",
+      "usage": null,
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k02-thinking",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 113,
+        "total_tokens": 385
+      },
+      "reasoning_content_present": true
+    },
+    {
+      "case": "k01-instruct",
+      "usage": {
+        "prompt_tokens": 180,
+        "completion_tokens": 5,
+        "total_tokens": 185
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k03-instruct",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 9,
+        "total_tokens": 219
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k05-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 21,
+        "total_tokens": 293
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k06-instruct",
+      "usage": null,
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k02-instruct",
+      "usage": {
+        "prompt_tokens": 272,
+        "completion_tokens": 14,
+        "total_tokens": 286
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "k06-instruct",
+      "usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 14,
+        "total_tokens": 224
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "v01-matched",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 84,
+        "total_tokens": 1213,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "v02-swapped",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 89,
+        "total_tokens": 1218,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "v03-known-mismatch",
+      "usage": {
+        "prompt_tokens": 1129,
+        "completion_tokens": 95,
+        "total_tokens": 1224,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "reasoning_content_present": false
+    },
+    {
+      "case": "v04-empty",
+      "usage": {
+        "prompt_tokens": 1068,
+        "completion_tokens": 8,
+        "total_tokens": 1076,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      },
+      "reasoning_content_present": false
+    }
+  ],
+  "note": "Provider-reported usage only; missing usage on capacity responses is unknown, not a billing estimate."
+}

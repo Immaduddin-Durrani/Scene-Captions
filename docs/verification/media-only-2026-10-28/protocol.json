@@ -1,0 +1,26 @@
+{
+  "version": "media-only-experimental-v1",
+  "films": {
+    "big-buck-bunny": {
+      "duration": 596.461678,
+      "sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7"
+    },
+    "sintel": {
+      "duration": 888.032,
+      "sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c"
+    },
+    "tears-of-steel": {
+      "duration": 734.166667,
+      "sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b"
+    }
+  },
+  "window_seconds": 30,
+  "jobs": 75,
+  "max_inference_attempts": 300,
+  "parallel_requests": 2,
+  "source_captions_as_input": false,
+  "plot_or_scene_text_as_input": false,
+  "system_quality_gate_changed": false,
+  "purpose": "User-requested full-film experimental generation; opt-in, NOT validated subtitles",
+  "prompt_template": "Listen only to the attached {duration:.3f}-second recording. Author factual English\nsound captions for Deaf and hard-of-hearing viewers, directly from the audio.\nDo not guess the video, story, characters, visible actions, emotional reactions,\nor causes. No external captions or story context are supplied. Do not transcribe\nspoken words: speech recognition is handled separately. Include identifiable\nmusic, sound effects and nonverbal vocalizations. Omit uncertain source identities;\nuse a general acoustic label instead. Silence needs no caption. Do not invent a\nsound merely to fill an interval. Distinct events may overlap; include music under\neffects if audible. Estimate each event's LOCAL start/end in seconds, within the\nrecording. A continuous sound can span the whole clip. Up to 12 events.\nReturn only JSON: {{\"cues\":[{{\"start_s\":0.0,\"end_s\":1.0,\"essential\":\"short sound label\",\n\"balanced\":\"brief factual sound description\",\"detailed\":\"more acoustic detail, at most 25 words\"}}]}}.\nAll three texts must describe the SAME audible event; greater detail must not\nadd a new sound, unsupported source, meaning or emotion. Plain text without brackets.\nReturn {{\"cues\":[]}} if no identifiable non-speech sounds are audible."
+}

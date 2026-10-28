@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"525\", \"observation\": \"A loud, metallic impact and scraping sound occur, followed by a deep, resonant hum and a high-pitched electronic whine.\"}, {\"id\": \"540\", \"observation\": \"A high-pitched electronic tone with a descending pitch glissando and a brief, sharp metallic click are audible.\"}, {\"id\": \"555\", \"observation\": \"A deep, resonant musical drone underlies the scene, punctuated by a sudden, powerful explosion and metallic clatter.\"}, {\"id\": \"570\", \"observation\": \"A loud, high-pitched scream is followed by a deep, rumbling sound and a sustained, high-pitched electronic tone.\"}, {\"id\": \"585\", \"observation\": \"A high-energy, distorted electric guitar riff plays over a driving rock drum beat and bassline, creating an intense, fast-paced instrumental track.\"}, {\"id\": \"600\", \"observation\": \"A distorted electric guitar plays a fast, aggressive rock riff with heavy metal effects, accompanied by a driving drum beat and bass guitar.\"}, {\"id\": \"615\", \"observation\": \"A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low, sustained ambient drone.\"}, {\"id\": \"630\", \"observation\": \"A high-pitched, sustained electronic tone with a descending pitch glide and a brief, lower-pitched electronic tone follows.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "aab12897a674559b7af922929253bf313b4f67d5ffbb68d567bde545b0ca2e07",
+    "wire_bytes": 2401,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "d10fb889-ac17-439d-8e77-865a87068aad",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "09c65a8c-7e71-4365-8db5-02f5940c369e"
+    },
+    "response": {
+      "id": "chatcmpl-dacd0e1c-e646-4348-bbd8-1623df7fd18a",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"525\",\"essential\":\"metallic impact scraping hum whine\",\"balanced\":\"A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine\",\"detailed\":\"A loud metallic impact and scraping sound occur followed by a deep resonant hum and a high pitched electronic whine\"},{\"id\":\"540\",\"essential\":\"electronic tone metallic click\",\"balanced\":\"A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible\",\"detailed\":\"A high pitched electronic tone with a descending pitch glissando and a brief sharp metallic click are audible\"},{\"id\":\"555\",\"essential\":\"musical drone explosion clatter\",\"balanced\":\"A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter\",\"detailed\":\"A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter\"},{\"id\":\"570\",\"essential\":\"scream rumble electronic tone\",\"balanced\":\"A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone\",\"detailed\":\"A loud high pitched scream is followed by a deep rumbling sound and a sustained high pitched electronic tone\"},{\"id\":\"585\",\"essential\":\"electric guitar drums bass\",\"balanced\":\"A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track\",\"detailed\":\"A high energy distorted electric guitar riff plays over a driving rock drum beat and bassline creating an intense fast paced instrumental track\"},{\"id\":\"600\",\"essential\":\"electric guitar drums bass\",\"balanced\":\"A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar\",\"detailed\":\"A distorted electric guitar plays a fast aggressive rock riff with heavy metal effects accompanied by a driving drum beat and bass guitar\"},{\"id\":\"615\",\"essential\":\"orchestral score percussion strings drone\",\"balanced\":\"A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone\",\"detailed\":\"A dramatic orchestral score with deep percussion and swelling strings builds tension before fading into a low sustained ambient drone\"},{\"id\":\"630\",\"essential\":\"electronic tones descending glide\",\"balanced\":\"A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows\",\"detailed\":\"A high pitched sustained electronic tone with a descending pitch glide and a brief lower pitched electronic tone follows\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172668,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 519,
+        "completion_tokens": 532,
+        "total_tokens": 1051,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.201
+  }
+]

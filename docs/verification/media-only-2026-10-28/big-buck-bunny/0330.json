@@ -1,0 +1,137 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v1",
+    "film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/big-buck-bunny/738e2f999860553d/0330.wav",
+      "sha256": "9173ceaf374252d3f85865f69da49ff2301dc3a5d475cd5bcd1f3b480429d0e8",
+      "duration_s": 30.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "0185de85ebafa79cf9700914e23b66e968c7ef01430f2123dedb8a4ec9e1e06e"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "c4ae7e22d083a51b2b70a96303e06e484518a45c5f43d49f0feedafc6927c832",
+                    "data_uri_characters": 1280294,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen only to the attached 30.000-second recording. Author factual English\nsound captions for Deaf and hard-of-hearing viewers, directly from the audio.\nDo not guess the video, story, characters, visible actions, emotional reactions,\nor causes. No external captions or story context are supplied. Do not transcribe\nspoken words: speech recognition is handled separately. Include identifiable\nmusic, sound effects and nonverbal vocalizations. Omit uncertain source identities;\nuse a general acoustic label instead. Silence needs no caption. Do not invent a\nsound merely to fill an interval. Distinct events may overlap; include music under\neffects if audible. Estimate each event's LOCAL start/end in seconds, within the\nrecording. A continuous sound can span the whole clip. Up to 12 events.\nReturn only JSON: {\"cues\":[{\"start_s\":0.0,\"end_s\":1.0,\"essential\":\"short sound label\",\n\"balanced\":\"brief factual sound description\",\"detailed\":\"more acoustic detail, at most 25 words\"}]}.\nAll three texts must describe the SAME audible event; greater detail must not\nadd a new sound, unsupported source, meaning or emotion. Plain text without brackets.\nReturn {\"cues\":[]} if no identifiable non-speech sounds are audible."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "e067f65237e14441997b49e53eb09881f3bfe458bfd0f606d64f84faafdeef01",
+      "wire_bytes": 1281844,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "cf372d2f-8209-4a14-8de0-88b7ce6c728b",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "070f9a26-d40e-4adb-b1fb-eb181c44ae99"
+      },
+      "response": {
+        "id": "chatcmpl-070f9a26-d40e-4adb-b1fb-eb181c44ae99",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n{\"cues\": [{\"start_s\": 0.0, \"end_s\": 1.0, \"essential\": \"short sound label\", \"balanced\": \"brief factual sound description\", \"detailed\": \"short sound label\"}]}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793171745,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 671,
+          "completion_tokens": 52,
+          "total_tokens": 723
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.136216402053833,
+            "generation_tokens_per_second": 45.7659297172655,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.932
+    }
+  ],
+  "asr_attempts": [
+    {
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet-tdt-0_6b-v2",
+      "request_sha256": "e08fdddaf68d79c97b19d5bc507afc6ce16864af12eb23430a5b6c6b09e35bb8",
+      "audio_sha256": "e8b06368e272228334464951a5e3c049ef0201d917d457e136abf6381878d523",
+      "config": {
+        "encoding": "LINEAR_PCM",
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "grpc_status": "OK",
+      "response": {
+        "id": {
+          "value": "d8b0482d-352f-44b5-af2b-543c7fa5a6cb"
+        }
+      },
+      "request_ids": {
+        "nvcf-reqid": "76f9f82f-be03-4da7-8ac1-04d377f32e58"
+      },
+      "seconds": 1.066
+    }
+  ],
+  "sound_cues": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.0,
+      "essential": "short sound label",
+      "balanced": "brief factual sound description",
+      "detailed": "short sound label"
+    }
+  ],
+  "speech_cues": [],
+  "speech_rejections": []
+}

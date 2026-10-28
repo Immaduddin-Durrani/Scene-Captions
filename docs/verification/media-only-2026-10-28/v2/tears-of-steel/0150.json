@@ -1,0 +1,139 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v2",
+    "film_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/tears-of-steel/730b5f0d32c08f68/sound15-0150.wav",
+      "sha256": "16ac23fc7229e396e04cd053c4a530a651fca39b1e33cf08da82b145d7ad2509",
+      "duration_s": 15.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "afdc4ea7a0a99a659bcd87292cd57d2b3a7bbe0ca1f8fb2524a47f1627121c4c"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "b9a33efcb8c602c091c5d232751f4cd6db0bc7f0e5d3fb931980a2b90fc2efaf",
+                    "data_uri_characters": 640126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "edde0b4a11348796ed9d9759d57966e18f456fe763a7c6e0810789f4cc1a3994",
+      "wire_bytes": 640743,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "a75fb635-ca35-4336-a394-1a4df43e2e88",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "30d65458-7542-483b-a892-9d0fd81c0a8d"
+      },
+      "response": {
+        "id": "chatcmpl-30d65458-7542-483b-a892-9d0fd81c0a8d",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A person breathes, followed by a brief musical piece and then a sustained, low-frequency electronic tone.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793172414,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 284,
+          "completion_tokens": 22,
+          "total_tokens": 306
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.7694742679595947,
+            "generation_tokens_per_second": 28.59094958215708,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.067
+    }
+  ],
+  "asr_attempts": [
+    {
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet-tdt-0_6b-v2",
+      "request_sha256": "72b2a04b7f0e9cde03d51ef30b9f5798da0597195f9b110fda23781be3c2d2e3",
+      "audio_sha256": "7fc6f4ef51e5747f36c26f3cc544932409e7fa0ba98adc0a99786640107c4946",
+      "config": {
+        "encoding": "LINEAR_PCM",
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "grpc_status": "OK",
+      "response": {
+        "id": {
+          "value": "dc8880a7-364a-46f6-b72e-cfa7fae6e1d5"
+        }
+      },
+      "request_ids": {
+        "nvcf-reqid": "5a9e553f-1df1-4583-bf0a-5e941073e821"
+      },
+      "seconds": 1.041
+    }
+  ],
+  "observation": "A person breathes, followed by a brief musical piece and then a sustained, low-frequency electronic tone.",
+  "speech_cues": [],
+  "speech_rejections": [],
+  "rendered": [
+    {
+      "start_s": 0,
+      "end_s": 15.0,
+      "essential": "breathing music electronic tone",
+      "balanced": "breathing followed by brief music and sustained low-frequency electronic tone",
+      "detailed": "breathing followed by brief musical piece and then sustained low-frequency electronic tone"
+    }
+  ],
+  "render_report": "docs/verification/media-only-2026-10-28/v2/tears-of-steel/render-0135.json"
+}

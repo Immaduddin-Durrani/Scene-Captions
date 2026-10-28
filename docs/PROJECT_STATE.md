@@ -1,4 +1,44 @@
-# Latest caption-free tests and audit — 26 October 2026
+# Experimental media-only full-film tracks — 28 October 2026
+
+The user explicitly requested full generated subtitles for all three films and
+an option to select them without existing captions or plot context. All 149
+15-second audio windows were processed. Separate experimental outputs contain
+40/59/49 sound-caption windows for BBB/Sintel/Tears of Steel and 0/71/68 generated
+dialogue cues. These counts do not measure correctness or recall. Sound display
+times are analysis windows, not detected event boundaries; 12 zero-duration
+ASR groups were rejected and logged. No source-caption text/timestamps or plot
+were supplied to generation. Text rendering uses our own unverified acoustic
+observations and can propagate their errors. Three detail levels share fixed
+expression; no expressive/visual-adaptation capability is claimed.
+
+The viewer now offers **Use media-only AI subtitles**, keeps existing captions
+as default, preserves playback position on switching and locks source after a
+rehearsal starts. Track identity, source hash and duration are checked. Separate
+three-level SRT and JSON downloads are served. Known failed acoustic controls
+remain disclosed, and default caption files/global gate are byte-unchanged.
+25 Node tests, 42 offline Python tests, all dataset validations, the production
+build and Chrome checks of all three films passed. Mobile checks use a 390 CSS
+pixel viewport, not a physical device. Source maps/health snapshots are stale
+for these edits; no named skills, agents, package installation, paid provider,
+push or deployment were used. See [complete evidence](verification/media-only-2026-10-28/README.md).
+
+# Latest audio gate and late visual association tests — 27 October 2026
+
+Fourteen NVIDIA requests tested fixed-category audio recognition, hosted-supported recommended reasoning parameters, and visual association as a separate constrained task. Twelve requests completed; two capacity errors were explicitly retried once without payload changes. The documented reasoning-budget field was accepted. Audio controls remain unaccepted: silence becomes a tone; a dog tag appears alongside a false tone; clean speech becomes silence; rain is only generic water. Visual association preserved IDs in all four cases, kept the empty ledger empty, and abstained on swapped/known-mismatched contexts. The one positive source suggestion remains only a hypothesis. This is improved separation of responsibilities, not a demonstrated caption-accuracy gain or an architecture-only causal comparison. See [full evidence](verification/nim-late-binding-2026-10-27/README.md). The 35 shared offline tests and focused guard checks passed. No source captions, plot, new model installation, named workflow, agents, track replacement, push or deployment were used for this batch. Acoustic grounding and timing remain the blocking requirement.
+
+# Earlier event-triggered screenshot prototype — 27 October 2026
+
+An offline prototype now finds audio-activity candidates, extracts exact-PTS current/nearby movie frames, and compares audio-only, single-frame and triplet-frame caption drafts. Eight NIM requests produced six HTTP-200 completions and two capacity errors. Frames add visible object/location claims, but a completed all-zero-audio control still claims a rabbit/apple thud, so caption accuracy is not accepted. RMS candidates are not semantic sound detection or validated event boundaries. The first 120 seconds selected candidates at 54.6 and 87.0 seconds without subtitle/plot input. Reference overlap was examined only after generation; it does not establish full accuracy. See [prototype and complete evidence](verification/nim-frame-pipeline-2026-10-27/README.md). Source-map code inputs, playback data and the failed gate remain unchanged; no push/deployment occurred.
+
+# Earlier NVIDIA speech/sound/rendering pipeline test — 27 October 2026
+
+An 18-request NVIDIA-only pilot used hosted Whisper, dedicated Parakeet ASR, Omni non-speech observations and Super VL three-level text rendering. Eleven gRPC requests and five chat requests completed; two chat requests hit capacity and were explicitly retried. Both ASR models recover the clean/mixed test phrase. Whisper returns no word offsets on those controls and hallucinates on raw silence; Parakeet supplies offset candidates with zero-duration words and endpoint drift, and produces unknown tokens on silence in both WAV/raw PCM. Local zero/markup guards protect tested cases. Sound grounding still fails: barks become metallic clinks and an unsupported tone appears. Rendering preserves words/IDs and three detail levels but propagates that wrong source label. No track or failed gate was replaced. See [the full pilot evidence](verification/nim-pipeline-2026-10-27/README.md). A small pinned Riva client runtime was installed under /Users/hamza/runtimes/scenecaptions-nim-asr; no local recognition model weights or new key were required. Thirty-five shared offline tests and focused guard checks passed. No agents, named workflow activation, push or deployment occurred.
+
+# Earlier audio-only recognition tests — 27 October 2026
+
+Twelve NIM requests across nine cells produced nine HTTP 200 completions and three capacity errors. Cropping did not establish dog recognition; repeated bark samples produced repetition-related impact descriptions without a dog identification. Rain descriptions were broadly water-related. Short digital silence hallucinated a drum, while long silence passed. A fresh speech WAV transcribed exactly, but the identical WAV with only the instruction changed to general sound description was called silent. This is an observed task-dependent discrepancy, not proof of a unique model or backend mechanism. Recognition/absence prerequisites failed, so timing/video/full-film tests stayed paused. The failed gate and playback track are unchanged. See [results, exact requests and integrity checks](verification/nim-recognition-2026-10-27/README.md). Thirty-five offline tests passed. No push, deployment, model installation or named workflow activation was performed for this batch.
+
+# Earlier caption-free tests and audit — 26 October 2026
 
 Twelve additional NVIDIA-only requests tested natural-sound recognition, exact shifts and silence: six HTTP 200, five 503 capacity errors and one timeout. Speech works on the positive control; sound grounding remains unreliable, including a tone on digital silence. No independent NIM track passed acceptance. Completion and experiment-matching guards were tightened; 35 offline Python tests, 19 application tests, TypeScript checking and caption validation passed. The source map is refreshed with documented extraction gaps; Fallow reports application complexity concerns and does not cover Python. Read [the latest evidence](verification/nim-counterfactuals-2026-10-26/README.md), [current map](CODEBASE_MAP.md) and [research handoff prompt](research/RESEARCH_HANDOFF_PROMPT.md). Earlier investigation entries below are historical snapshots.
 

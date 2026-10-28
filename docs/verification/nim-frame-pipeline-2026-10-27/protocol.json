@@ -1,0 +1,114 @@
+{
+  "created_before_inference": true,
+  "film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "scan_audio_sha256": "515a469ba1be84a4d6334da912767a1b9d19b0b8bcb95a196712ec16ca5101db",
+  "scan_interval_s": [
+    0,
+    120
+  ],
+  "candidate_method": "80ms RMS rise over median prior five windows; >=6dB rise, >=-38dBFS; ignore first8/last8 scan seconds; top2 separated>=15s",
+  "candidate_semantics": "Activity candidates only, not recognized events or reliable boundaries.",
+  "source_average_fps": 24.000335293871107,
+  "source_reported_rates": {
+    "r_frame_rate": "24/1",
+    "avg_frame_rate": "1717920/71579"
+  },
+  "frame_selection": "Nearest actual decoded source PTS; never assume frame index / average FPS.",
+  "fixtures": {
+    "f01": {
+      "time_s": 54.6,
+      "rise_db": 37.04071951999275,
+      "rms_dbfs": -28.332228468814236,
+      "clip_start_s": 52.6,
+      "clip_duration_s": 5,
+      "audio_file": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav",
+      "audio_sha256": "5e668be7cfef964c6ff7b1e651df70aee4de948370d6b05697db148f2ad4575b",
+      "frames": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-01.jpg",
+          "sha256": "0d6fc200dbf24319b128062b3b0e2acf94400a86c35f4ef1c76013277ed11091",
+          "source_frame_index": 1298,
+          "actual_pts_s": 54.083333,
+          "requested_time_s": 54.1,
+          "local_time_s": 1.4833330000000018
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg",
+          "sha256": "c60283125c86b50860a5b728e1697b6c31933fdb319862598f33f094be609dda",
+          "source_frame_index": 1310,
+          "actual_pts_s": 54.583333,
+          "requested_time_s": 54.6,
+          "local_time_s": 1.9833330000000018
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-03.jpg",
+          "sha256": "3147ff59727e947917672c845f939f11269403bad3326528b28fc6d890cef647",
+          "source_frame_index": 1322,
+          "actual_pts_s": 55.083333,
+          "requested_time_s": 55.1,
+          "local_time_s": 2.483333000000002
+        }
+      ]
+    },
+    "f02": {
+      "time_s": 87.0,
+      "rise_db": 39.45456941501665,
+      "rms_dbfs": -36.740468448850805,
+      "clip_start_s": 85.0,
+      "clip_duration_s": 5,
+      "audio_file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+      "audio_sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+      "frames": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-04.jpg",
+          "sha256": "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+          "source_frame_index": 2076,
+          "actual_pts_s": 86.5,
+          "requested_time_s": 86.5,
+          "local_time_s": 1.5
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg",
+          "sha256": "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+          "source_frame_index": 2088,
+          "actual_pts_s": 87.0,
+          "requested_time_s": 87.0,
+          "local_time_s": 2.0
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-06.jpg",
+          "sha256": "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd",
+          "source_frame_index": 2100,
+          "actual_pts_s": 87.5,
+          "requested_time_s": 87.5,
+          "local_time_s": 2.5
+        }
+      ]
+    }
+  },
+  "manifest_sha256": "c53b9c8ab88114d5121aeb1f8e8c7646af81f24b852e1acfdd96a71d502b7fbb",
+  "zero_wav_sha256": "262d1f34f300560a4c82ba8127ddea9e1d72946f187fdbd3e8f70ee096077aec",
+  "zero_sample_count": 80000,
+  "caption_reference_or_plot_input": false,
+  "asr_calls": 0,
+  "asr_role": "Existing separate speech branch; this pilot targets sound-effect candidates, not ASR event detection.",
+  "criteria": {
+    "mute": "NO_AUDIBLE_EVENT; any asserted sound is a false positive.",
+    "alignment": "Actual decoded image PTS within one source frame of requested time.",
+    "pairing": "Same exact WAV, generation settings and main instruction across context conditions.",
+    "quality": "Manual visual/reference comparison after generation only; no independent listening ground truth."
+  },
+  "budget": {
+    "initial_requests": 8,
+    "maximum_requests": 8,
+    "automatic_retries": 0,
+    "stop_after_consecutive_capacity_errors": 3,
+    "timeout_each_s": 180
+  },
+  "limits": [
+    "Music/ambience can trigger RMS candidates; low-energy and overlapping events may be missed.",
+    "A frame can suggest source identity but cannot establish an audible event.",
+    "Frame conditions include timestamp annotations in addition to images.",
+    "No full-film generation, human listening approval or automatic playback installation."
+  ]
+}

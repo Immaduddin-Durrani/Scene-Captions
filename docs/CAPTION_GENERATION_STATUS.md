@@ -1,4 +1,38 @@
-## Latest caption-free controls — 26 October 2026
+## Experimental full-film media-only option — 28 October 2026
+
+All three films now have separate, opt-in NVIDIA-generated experimental tracks:
+BBB: 40 sound / 0 dialogue cues; Sintel: 59 / 71; Tears of Steel: 49 / 68.
+All 149 audio windows completed, without fetched captions, source intervals,
+plot or supplied scene descriptions. Sound text spans coarse 15-second analysis
+windows; dialogue uses Parakeet word timestamps. Three sound-detail levels are
+rendered from the model's own audio observations, with fixed expressiveness.
+
+**These are not accuracy-approved subtitles.** Acoustic tests remain failed;
+descriptions/transcriptions may be missing, wrong or invented. The whole-film
+pass does not establish complete event recall or reliable timing. Twelve
+zero-duration ASR groups were rejected rather than given fabricated timing.
+Existing default caption datasets and the global failed gate remain unchanged.
+Use **Use media-only AI subtitles** to opt in and **Use existing captions** to
+return. Each film offers three SRT exports and caption JSON. See
+[raw generation evidence and implementation checks](verification/media-only-2026-10-28/README.md).
+
+## Latest audio-gate and late-association checks — 27 October 2026
+
+[Fourteen additional NIM requests](verification/nim-late-binding-2026-10-27/README.md) tested fixed-category audio recognition, the recommended hosted-compatible thinking preset, and a visual-only association stage. The visual component respected event identities and negative controls, but audio still adds false tones, misclassifies speech/silence and fails strict sound recognition. A constrained source-association contract does not repair false acoustic events. No reliable subtitle-accuracy gain, new movie track or cleared generation gate is claimed.
+
+## Earlier screenshot-assisted prototype — 27 October 2026
+
+The [event-triggered frame prototype](verification/nim-frame-pipeline-2026-10-27/README.md) extracts matched current/nearby frames from audio-activity candidates, then queries actual audio with zero/one/three screenshots. Eight NIM calls tested two BBB moments; six completed and two hit capacity. Visible context helps name objects, but the completed muted-image control invents a thud on zero-valued audio. No accuracy improvement or new track is accepted. Candidate detection is only a lightweight activity heuristic; dependable sound events/timing and listening validation remain unresolved.
+
+## Earlier split-pipeline pilot — 27 October 2026
+
+The [18-request NVIDIA pilot](verification/nim-pipeline-2026-10-27/README.md) establishes hosted Whisper access and useful dedicated ASR for controlled speech, plus successful three-level text rendering. It does not clear sound-caption quality: silence needs guards, speech timing remains partial, and Omni misidentifies barks as metallic clinks and adds an unsupported tone. Renderer success propagates those mistakes rather than validating them. No independent timed movie track was accepted or installed; the existing source-assisted playback draft and failed capability gate remain unchanged.
+
+## Earlier audio-only recognition controls — 27 October 2026
+
+The [new recognition tests](verification/nim-recognition-2026-10-27/README.md) made twelve NIM requests: nine completed and three returned capacity errors. Crop/repetition controls did not establish dog identification; rain remained broadly water-related. Silence behavior was inconsistent. A fresh speech recording transcribed exactly but was described as silent under the general sound-description instruction, with identical audio and generation parameters. This warrants a focused task/serving-path investigation; it does not establish a unique cause. No timing/video/full-film test or new track installation followed the failed prerequisites. The independent sound-caption gate remains failed.
+
+## Earlier caption-free controls — 26 October 2026
 
 Twelve additional NIM requests tested natural sounds, exact audio shifts, silent pictures and digital silence: six HTTP 200, five capacity errors and one timeout. Novel speech transcribed correctly, but a tone was reported on zero-valued audio. Relative sound timing remains unscorable because no correctly identified timed pair completed. The independent audio gate stays failed; no new NIM track is installed. See [the complete results and audit](verification/nim-counterfactuals-2026-10-26/README.md) and [research handoff prompt](research/RESEARCH_HANDOFF_PROMPT.md). Software tests pass; they do not establish sound-caption accuracy.
 

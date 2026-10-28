@@ -1,0 +1,6 @@
+{
+  "valid_equal_level_case": "passed",
+  "adversarial_cases_rejected": 6,
+  "network_calls": 0,
+  "scope": "Structure/identity guards only; no acoustic or semantic validity claim."
+}

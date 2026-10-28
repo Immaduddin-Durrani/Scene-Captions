@@ -1,0 +1,51 @@
+{
+  "structure_and_identity_pass": true,
+  "error": null,
+  "output": {
+    "essential": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible."
+        }
+      ]
+    },
+    "balanced": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay."
+        }
+      ]
+    },
+    "detailed": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals."
+        }
+      ]
+    }
+  },
+  "acoustic_grounding_pass": false,
+  "accepted_for_playback": false,
+  "limits": "Schema/ID checking cannot establish that wording adds no unsupported semantic attributes."
+}

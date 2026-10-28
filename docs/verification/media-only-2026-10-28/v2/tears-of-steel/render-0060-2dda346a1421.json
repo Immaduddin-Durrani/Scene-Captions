@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"60\", \"observation\": \"A low, sustained electronic drone with a subtle, high-frequency shimmer and a single, deep, resonant thud.\"}, {\"id\": \"375\", \"observation\": \"A dramatic orchestral score with sweeping strings, brass, and percussion accompanies a high-pitched scream and a deep, resonant impact sound.\"}, {\"id\": \"435\", \"observation\": \"A high-energy rock track plays, punctuated by a car engine revving, a tire screech, and a crash.\"}, {\"id\": \"645\", \"observation\": \"A rhythmic, metallic percussion sound plays over a sustained, high-pitched electronic tone.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "b8bc4b83dc676175ce0f9824721c3c0cc7ed99dd7e30ac4dc7141cf9f465059b",
+    "wire_bytes": 1663,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "c9a531d2-a0ee-41bf-8741-3ce68f6d77b0",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "2296a011-e86c-48db-b78f-69d1720f36d8"
+    },
+    "response": {
+      "id": "chatcmpl-310a2523-74ff-499a-a423-4a86731157b6",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"60\",\"essential\":\"electronic drone\",\"balanced\":\"A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud\",\"detailed\":\"A low sustained electronic drone with a subtle high frequency shimmer and a single deep resonant thud\"},{\"id\":\"375\",\"essential\":\"orchestral score\",\"balanced\":\"A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound\",\"detailed\":\"A dramatic orchestral score with sweeping strings brass and percussion accompanies a high pitched scream and a deep resonant impact sound\"},{\"id\":\"435\",\"essential\":\"rock track\",\"balanced\":\"A high energy rock track plays punctuated by a car engine revving a tire screech and a crash\",\"detailed\":\"A high energy rock track plays punctuated by a car engine revving a tire screech and a crash\"},{\"id\":\"645\",\"essential\":\"metallic percussion\",\"balanced\":\"A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone\",\"detailed\":\"A rhythmic metallic percussion sound plays over a sustained high pitched electronic tone\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172954,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 352,
+        "completion_tokens": 238,
+        "total_tokens": 590,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.139
+  }
+]

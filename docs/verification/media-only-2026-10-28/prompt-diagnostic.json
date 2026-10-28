@@ -1,0 +1,182 @@
+[
+  {
+    "case": 0,
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/big-buck-bunny/738e2f999860553d/0000.wav",
+      "sha256": "3f0cce35f879299ac10f740068f5c16fb28e5f9713bc3af9b6ac3d4647584188",
+      "duration_s": 30.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "audio_url",
+              "audio_url": {
+                "url": {
+                  "inline_media_sha256": "0b963f16aacf0fd29e9dc6cf40a6361cc1ccb0352d36d572324cc309ec90524a",
+                  "data_uri_characters": 1280294,
+                  "prefix": "data:audio/wav;base64"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "Describe the audible non-speech sounds in this recording. Do not describe speech words or visual scenes. Be factual. If no identifiable sounds, say so. Answer in one or two short sentences."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 2048,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "wire_sha256": "6732cabf81d63d249a7ddd91c10a4ba3ff43aa62ff6145ecfd7365a02637d9e1",
+    "wire_bytes": 1280786,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "65526c48-2903-449e-8090-b7f8402ce985",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "0a7ade3d-1069-4343-9df3-f266fa7c46bc"
+    },
+    "response": {
+      "id": "chatcmpl-0a7ade3d-1069-4343-9df3-f266fa7c46bc",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "The recording begins with a high-pitched electronic chime followed by a sustained, shimmering synthesized pad that creates a spacious, ethereal atmosphere. A deep, resonant bass note and a sharp metallic impact punctuate the soundscape, after which a rapid, high-frequency arpeggio and a low, rumbling drone build tension before the audio ends abruptly.",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793171847,
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 434,
+        "completion_tokens": 74,
+        "total_tokens": 508
+      },
+      "nvext": {
+        "scheduler_snapshot": {
+          "num_running_reqs": 16,
+          "num_waiting_reqs": 0
+        },
+        "request_throughput": {
+          "e2e_latency_seconds": 2.6959216594696045,
+          "generation_tokens_per_second": 27.448868827501,
+          "draft_tokens_per_second": 0.0
+        }
+      }
+    },
+    "seconds": 5.028
+  },
+  {
+    "case": 1,
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/big-buck-bunny/738e2f999860553d/0000.wav",
+      "sha256": "3f0cce35f879299ac10f740068f5c16fb28e5f9713bc3af9b6ac3d4647584188",
+      "duration_s": 30.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "audio_url",
+              "audio_url": {
+                "url": {
+                  "inline_media_sha256": "0b963f16aacf0fd29e9dc6cf40a6361cc1ccb0352d36d572324cc309ec90524a",
+                  "data_uri_characters": 1280294,
+                  "prefix": "data:audio/wav;base64"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "text": "Listen to this 30-second recording and identify non-speech sounds only. Return a JSON object with one key, cues, containing a list. Each item must have numeric start_s and end_s (local seconds between 0 and 30), and strings essential, balanced, detailed (three levels of factual acoustic detail about the same sound). Do not describe visible scenes, story, or spoken words. Do not guess. Empty list if none."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 2048,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "wire_sha256": "6fc145b4f64e8431baef1d7a236426a385389b366001f8a246c20ebfca29ffda",
+    "wire_bytes": 1281004,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "5cc31f9f-a8e4-41b8-aca2-00dc1828738b",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "346fc8b3-db07-4d79-85b3-2a8b36e9560d"
+    },
+    "response": {
+      "id": "chatcmpl-346fc8b3-db07-4d79-85b3-2a8b36e9560d",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "[\n  {\"label\": \"cues\", \"essential\": \"A high-pitched, crystalline chime rings out with a clear, bell-like timbre, its attack sharp and its decay long and shimmering, creating a sense of spaciousness and anticipation.\", \"balanced\": \"The chime is the sole sound at the start, with no background noise, and its pure, metallic resonance dominates the sonic space.\", \"detailed\": \"A single, high-pitched chime with a crystalline, bell-like timbre is struck, producing a sharp attack followed by a long, shimmering decay that fills the stereo field with a sense of vast, open space.\"},\n  {\"label\": \"cues\", \"essential\": \"A sustained, low-frequency drone emerges, rich in harmonic content and enveloped in lush reverb, establishing a somber and mysterious atmosphere.\", \"balanced\": \"The drone is the only sound present, with no other instruments or effects, and its deep, resonant quality creates a feeling of tension and anticipation.\", \"detailed\": \"A deep, sustained drone with a rich harmonic texture and heavy reverb fills the soundscape, its low frequencies providing a foundation of mystery and suspense.\"},\n  {\"label\": \"cues\", \"essential\": \"A high-pitched, ethereal melody begins, played on a synthesized instrument with a flute-like timbre, featuring a slow, legato phrasing and a wide stereo image.\", \"balanced\": \"The melody is the only sound, with no accompaniment, and its airy, spacious quality evokes a sense of wonder and exploration.\", \"detailed\": \"A high-pitched, ethereal melody emerges, played on a synthesized instrument with a flute-like timbre, its notes flowing smoothly in a legato style and spread across the stereo field.\"},\n  {\"label\": \"cues\", \"essential\": \"A deep, resonant bass note is introduced, providing a powerful foundation and enhancing the dramatic tension.\", \"balanced\": \"The bass note is the only sound, with no other instruments or effects, and its deep, resonant quality adds weight and gravity to the scene.\", \"detailed\": \"A deep, resonant bass note is introduced, its low frequency and sustained presence adding a sense of gravity and dramatic tension to the soundscape.\"},\n  {\"label\": \"cues\", \"essential\": \"A rapid, ascending arpeggio is played on a synthesized instrument with a bright, bell-like timbre, creating a sense of urgency and movement.\", \"balanced\": \"The arpeggio is the only sound, with no other instruments or effects, and its rapid, ascending pattern adds a feeling of excitement and anticipation.\", \"detailed\": \"A rapid, ascending arpeggio is played on a synthesized instrument with a bright, bell-like timbre, its fast, ascending pattern creating a sense of urgency and forward momentum.\"},\n  {\"label\": \"cues\", \"essential\": \"A sharp, metallic impact sound occurs, characterized by a high-frequency crack and a brief, resonant decay, suggesting a forceful collision.\", \"balanced\": \"The impact is the only sound, with no other instruments or effects, and its sharp, metallic quality creates a sudden, dramatic event.\", \"detailed\": \"A sharp, metallic impact sound occurs, featuring a high-frequency crack and a brief, resonant decay, indicating a forceful collision with a metallic quality.\"},\n  {\"label\": \"cues\", \"essential\": \"A deep, resonant thud is heard, with a low-frequency impact and a short, muffled decay, suggesting a heavy object striking a soft surface.\", \"balanced\": \"The thud is the only sound, with no other instruments or effects, and its deep, resonant quality adds a sense of weight and finality.\", \"detailed\": \"A deep, resonant thud is heard, with a low-frequency impact and a short, muffled decay, suggesting a heavy object striking a soft surface.\"},\n  {\"label\": \"cues\", \"essential\": \"A high-pitched, crystalline chime rings out, similar to the initial sound, with a clear, bell-like timbre and a long, shimmering decay.\", \"balanced\": \"The chime is the only sound, with no other instruments or effects, and its pure, metallic resonance creates a sense of clarity and resolution.\", \"detailed\": \"A high-pitched, crystalline chime rings out, its clear, bell-like timbre and long, shimmering decay creating a sense of clarity and resolution.\"},\n  {\"label\": \"cues\", \"essential\": \"A high-pitched, ethereal melody is played on a synthesized instrument with a flute-like timbre, featuring a slow, legato phrasing and a wide stereo image.\", \"balanced\": \"The melody is the only sound, with no other instruments or effects, and its airy, spacious quality evokes a sense of wonder and exploration.\", \"detailed\": \"A high-pitched, ethereal melody is played on a synthesized instrument with a flute-like timbre, its notes flowing smoothly in a legato style and spread across the stereo field.\"}\n]",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793171853,
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 485,
+        "completion_tokens": 1046,
+        "total_tokens": 1531
+      },
+      "nvext": {
+        "scheduler_snapshot": {
+          "num_running_reqs": 14,
+          "num_waiting_reqs": 0
+        },
+        "request_throughput": {
+          "e2e_latency_seconds": 19.306002378463745,
+          "generation_tokens_per_second": 54.18004097869765,
+          "draft_tokens_per_second": 0.0
+        }
+      }
+    },
+    "seconds": 22.65
+  }
+]

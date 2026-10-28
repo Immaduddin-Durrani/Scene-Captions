@@ -24,6 +24,11 @@ export function useLocalMedia(initialVideo: CaptionVideo, demoSource: string, no
     release(); setSource(demoSource); setLocalName(""); setData(initialVideo); setImportError("");
     notify("Sample film and its saved caption track restored.");
   }
+  function selectPreparedTrack(track: CaptionVideo) {
+    if (localName || source !== demoSource || track.video_id !== initialVideo.video_id) return;
+    setData(track); setImportError("");
+    notify(track.generated_with.experimental ? "Experimental media-only subtitles selected. Sound recognition and timing are unverified." : "Existing caption track restored.");
+  }
   async function importAnnotations(file: File) {
     setImportError("");
     if (file.size > 5 * 1024 * 1024) { setImportError("Choose a caption JSON file smaller than 5 MB."); return; }
@@ -38,5 +43,5 @@ export function useLocalMedia(initialVideo: CaptionVideo, demoSource: string, no
     setData(parsed.data);
     notify(`Loaded ${parsed.data.cues.length} caption cues for ${parsed.data.title}. Confirm they match this exact video edit.`);
   }
-  return { data, source, localName, importError, openVideo, restore, importAnnotations };
+  return { data, source, localName, importError, openVideo, restore, selectPreparedTrack, importAnnotations };
 }

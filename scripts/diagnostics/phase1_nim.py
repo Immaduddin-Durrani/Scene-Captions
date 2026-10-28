@@ -51,6 +51,7 @@ def run_one(payload):
    row['response']=json.loads(raw)
  except urllib.error.HTTPError as e:
   row['http_status']=e.code;row['error']=e.read().decode()[:2000].replace(key,'[REDACTED]')
+  row['response_headers']={k:v for k,v in (e.headers.items() if e.headers else []) if k.lower() in ['retry-after','x-request-id','request-id','nvcf-reqid']}
  except (urllib.error.URLError,TimeoutError,ValueError) as e:row['error']=str(e).replace(key,'[REDACTED]');row['classification']='inconclusive-transport-or-response'
  row['seconds']=round(time.monotonic()-started,3)
  return row

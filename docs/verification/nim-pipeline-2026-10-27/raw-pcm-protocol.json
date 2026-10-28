@@ -1,0 +1,14 @@
+{
+  "created_before_raw_pcm_inference": true,
+  "trigger": "Parakeet WAV speech succeeds, but zero WAV emits repeated unknown tokens. Check whether WAV/container handling causes the anomaly.",
+  "model": "nvidia/parakeet-tdt-0.6b-v2",
+  "cases": [
+    "p01",
+    "p02"
+  ],
+  "factor": "Encoding representation: raw PCM16 frames with explicit LINEAR_PCM versus WAV container with autodetection. Source PCM sample bytes unchanged.",
+  "max_calls": 2,
+  "max_total_pipeline_requests": 18,
+  "criteria": "Preserve correct speech; empty lexical transcript on raw digital-zero input. Compare raw responses without silently stripping unknown tokens.",
+  "stop": "Final two requests. No retries or full-film work."
+}

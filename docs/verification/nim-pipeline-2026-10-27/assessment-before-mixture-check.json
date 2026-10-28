@@ -1,0 +1,274 @@
+{
+  "total_inference_attempts": 18,
+  "grpc_status_counts": {
+    "OK": 11
+  },
+  "http_status_counts": {
+    "200": 5,
+    "503": 2
+  },
+  "asr_rows": [
+    {
+      "run": "asr-access",
+      "case": "p01",
+      "status": "OK",
+      "model_function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "text_prefix": "Nine silver spoons rest beside the red kettle.",
+      "text_length": 46,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "asr-controls",
+      "case": "p02",
+      "status": "OK",
+      "model_function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "text_prefix": "you",
+      "text_length": 3,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "asr-controls",
+      "case": "p03",
+      "status": "OK",
+      "model_function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "text_prefix": "*Crowing*",
+      "text_length": 9,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "asr-controls",
+      "case": "p04",
+      "status": "OK",
+      "model_function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "text_prefix": "Nine silver spoons rest beside the red kettle.",
+      "text_length": 46,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "asr-controls",
+      "case": "p05",
+      "status": "OK",
+      "model_function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "text_prefix": "\u266a",
+      "text_length": 1,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "parakeet-timing",
+      "case": "p01",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "Nine silver spoons rest beside the red kettle.",
+      "text_length": 46,
+      "unknown_token_count": 0,
+      "word_count": 8
+    },
+    {
+      "run": "parakeet-timing",
+      "case": "p04",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "Nine silver spoons rest beside the red kettle.",
+      "text_length": 46,
+      "unknown_token_count": 0,
+      "word_count": 8
+    },
+    {
+      "run": "parakeet-absence",
+      "case": "p02",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",
+      "text_length": 6300,
+      "unknown_token_count": 1260,
+      "word_count": 1
+    },
+    {
+      "run": "parakeet-absence",
+      "case": "p03",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "",
+      "text_length": 0,
+      "unknown_token_count": 0,
+      "word_count": 0
+    },
+    {
+      "run": "parakeet-raw-pcm",
+      "case": "p01",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "Nine silver spoons rest beside the red kettle.",
+      "text_length": 46,
+      "unknown_token_count": 0,
+      "word_count": 8
+    },
+    {
+      "run": "parakeet-raw-pcm",
+      "case": "p02",
+      "status": "OK",
+      "model_function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "text_prefix": "<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>",
+      "text_length": 6300,
+      "unknown_token_count": 1260,
+      "word_count": 1
+    }
+  ],
+  "chat_rows": [
+    {
+      "run": "sounds",
+      "case": "p01",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "text": "NO_NON_SPEECH_EVENTS",
+      "error": null
+    },
+    {
+      "run": "sounds",
+      "case": "p03",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "text": "A series of sharp, percussive impacts are heard at regular intervals, followed by a sustained, low-frequency electronic tone.",
+      "error": null
+    },
+    {
+      "run": "sounds",
+      "case": "p04",
+      "http_status": 503,
+      "finish_reason": null,
+      "text": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "run": "sounds",
+      "case": "p05",
+      "http_status": 503,
+      "finish_reason": null,
+      "text": null,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "run": "sounds-p04-retry",
+      "case": "p04",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "text": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals.",
+      "error": null
+    },
+    {
+      "run": "sounds-p05-retry",
+      "case": "p05",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "text": "A siren wails with a rising and falling pitch, accompanied by a high-pitched electronic tone and a brief, sharp electronic beep.",
+      "error": null
+    },
+    {
+      "run": "renderer",
+      "case": "p04-render",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "text": "{\n  \"essential\": {\n    \"speech\": {\n      \"event_id\": \"p04-sp01\",\n      \"text\": \"Nine silver spoons rest beside the red kettle.\"\n    },\n    \"sounds\": [\n      {\n        \"event_ids\": [\"p04-sfx01\"],\n        \"text\": \"Three distinct metallic clinks are audible.\"\n      }\n    ]\n  },\n  \"balanced\": {\n    \"speech\": {\n      \"event_id\": \"p04-sp01\",\n      \"text\": \"Nine silver spoons rest beside the red kettle.\"\n    },\n    \"sounds\": [\n      {\n        \"event_ids\": [\"p04-sfx01\"],\n        \"text\": \"Three distinct metallic clinks are audible, each with a sharp attack and brief decay.\"\n      }\n    ]\n  },\n  \"detailed\": {\n    \"speech\": {\n      \"event_id\": \"p04-sp01\",\n      \"text\": \"Nine silver spoons rest beside the red kettle.\"\n    },\n    \"sounds\": [\n      {\n        \"event_ids\": [\"p04-sfx01\"],\n        \"text\": \"Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals.\"\n      }\n    ]\n  }\n}",
+      "error": null
+    }
+  ],
+  "speech_timing": {
+    "expected_speech_shift_s": 0.5,
+    "observed_word_onset_shifts_s": [
+      0.32,
+      0.4,
+      0.48,
+      0.56,
+      0.48,
+      0.56,
+      0.56,
+      0.72
+    ],
+    "median_onset_shift_s": 0.52,
+    "zero_duration_words": {
+      "p01": [
+        "the"
+      ],
+      "p04": [
+        "the"
+      ]
+    },
+    "last_word_end_s": {
+      "p01": 2.32,
+      "p04": 3.36
+    },
+    "constructed_mixed_speech_pcm_support_end_s": 3.09,
+    "mixed_last_word_end_overrun_into_known_speech_silence_s": 0.27,
+    "interpretation": "Offsets supplied; median shift tracks constructed delay, but zero-length words and endpoint overrun prevent an unqualified timing pass."
+  },
+  "stages": {
+    "whisper_transcription": "Clean and mixed expected phrase correct; raw absence controls fail; no word offsets returned.",
+    "parakeet_transcription_and_timing": "Expected phrase correct, word offsets partial; empty dog transcript; silence degenerates to unknown tokens on both WAV and raw PCM.",
+    "preprocessing": "Exact-zero and ASR-markup guards work on tested cells; no general speech detector or semantic truth guarantee.",
+    "non_speech_grounding": "FAILED: dog source becomes metallic clinks; fabricated tone on repeated-bark control.",
+    "renderer": "Structure/IDs/dialogue pass; wording faithfully propagates incorrect source observation.",
+    "end_to_end_caption_quality": "FAILED, no accepted or timed movie-caption output"
+  },
+  "integrity": {
+    "all_manifest_and_fixture_hashes_match": true,
+    "grpc_request_bytes_reconstructed": true,
+    "raw_pcm_variant_uses_same_source_samples": true
+  },
+  "renderer_output": {
+    "essential": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible."
+        }
+      ]
+    },
+    "balanced": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay."
+        }
+      ]
+    },
+    "detailed": {
+      "speech": {
+        "event_id": "p04-sp01",
+        "text": "Nine silver spoons rest beside the red kettle."
+      },
+      "sounds": [
+        {
+          "event_ids": [
+            "p04-sfx01"
+          ],
+          "text": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals."
+        }
+      ]
+    }
+  },
+  "automatic_installation": false,
+  "failed_gate_cleared": false,
+  "limits": [
+    "Tiny synthetic/ESC-10 pilot, not full-film accuracy or DHH usability evidence.",
+    "Raw BBB siren/beep description is unreviewed, not accepted ground truth.",
+    "No inference was run through Qwen3-ASR; no applicable hosted NIM route was verified.",
+    "Manual assessment in the main session; not an independent listening review."
+  ]
+}

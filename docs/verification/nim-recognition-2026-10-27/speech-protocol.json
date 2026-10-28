@@ -1,0 +1,17 @@
+{
+  "created_before_speech_inference": true,
+  "trigger": "Non-speech answers incorrect/partial; two subsequent capacity failures.",
+  "local_fixture_creation": "macOS say at rate170 with default installed voice; FFmpeg to mono16kPCM16. Fixture creation only; all recognition inference NVIDIA NIM.",
+  "evaluation_only_expected_text": "Nine silver spoons rest beside the red kettle.",
+  "samples": 41479,
+  "duration_s": 2.5924375,
+  "wav_sha256": "406d8dd49c7e149ce9c5fef187ac51df680d917ede3c4d09a70525321e6d06a7",
+  "manifest_sha256": "92db3ab2d4225c6ee6f236ccb82a3787ccf6238a5bfbf8e721d3cbc6fcb6f115",
+  "optional_description_manifest_sha256": "0b614040b4df8c4f2a49195e4dfab792c0357ebd3b68f10ac36117aa05e19261",
+  "same_audio_for_both_tasks": true,
+  "criteria": {
+    "transcription": "Exact words, ignoring punctuation/case and allowing nine/9. Explicit stop required.",
+    "description": "Accurately describes speech/voice or quotes the phrase, without claiming unrelated sound sources."
+  },
+  "stop": "If this request returns a capacity error, it is the third consecutive capacity response: stop this session. Description call only if transcription succeeds."
+}

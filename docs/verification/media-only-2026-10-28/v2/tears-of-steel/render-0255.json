@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"255\", \"observation\": \"A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.\"}, {\"id\": \"270\", \"observation\": \"A piano plays a slow, melancholic melody over the continuous sound of rain.\"}, {\"id\": \"285\", \"observation\": \"A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.\"}, {\"id\": \"300\", \"observation\": \"A person speaks, followed by a toilet flush and a brief musical jingle.\"}, {\"id\": \"315\", \"observation\": \"A low-frequency hum and subtle electronic hiss are audible in the background.\"}, {\"id\": \"330\", \"observation\": \"A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.\"}, {\"id\": \"345\", \"observation\": \"A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.\"}, {\"id\": \"360\", \"observation\": \"A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched, distressed scream.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "9c5c30f8ed07a0cb92bfb1ece209bb436227aa989af4f9c2b886e9f3c103c133",
+    "wire_bytes": 2191,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "1caea67f-326a-4864-b892-75108cde25fa",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "9585b2b4-6208-468a-b9ed-5ef203629000"
+    },
+    "response": {
+      "id": "chatcmpl-59918164-6181-443f-9363-ba1a613e6a05",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"255\",\"essential\":\"piano melody background hiss\",\"balanced\":\"A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.\",\"detailed\":\"A piano plays a gentle melody while a soft, continuous hissing sound is audible in the background.\"},{\"id\":\"270\",\"essential\":\"piano melody rain\",\"balanced\":\"A piano plays a slow melody over the continuous sound of rain.\",\"detailed\":\"A piano plays a slow melody over the continuous sound of rain.\"},{\"id\":\"285\",\"essential\":\"electronic tone electronic beep\",\"balanced\":\"A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.\",\"detailed\":\"A loud, sustained electronic tone plays, followed by a sharp, high-pitched electronic beep.\"},{\"id\":\"300\",\"essential\":\"speech toilet flush musical jingle\",\"balanced\":\"A person speaks, followed by a toilet flush and a brief musical jingle.\",\"detailed\":\"A person speaks, followed by a toilet flush and a brief musical jingle.\"},{\"id\":\"315\",\"essential\":\"low-frequency hum electronic hiss\",\"balanced\":\"A low-frequency hum and subtle electronic hiss are audible in the background.\",\"detailed\":\"A low-frequency hum and subtle electronic hiss are audible in the background.\"},{\"id\":\"330\",\"essential\":\"metallic clanking scraping roar electronic beep\",\"balanced\":\"A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.\",\"detailed\":\"A rhythmic metallic clanking and scraping sound is audible, followed by a deep, resonant roar and a sudden, high-pitched electronic beep.\"},{\"id\":\"345\",\"essential\":\"orchestral score sound effects electronic beep\",\"balanced\":\"A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.\",\"detailed\":\"A dramatic orchestral score with impactful sound effects and a brief electronic beep accompanies the dialogue.\"},{\"id\":\"360\",\"essential\":\"musical drone metallic crash scream\",\"balanced\":\"A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.\",\"detailed\":\"A deep, resonant musical drone underlies the scene, punctuated by a sudden, loud metallic crash and a high-pitched scream.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172635,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 514,
+        "total_tokens": 996,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.267
+  }
+]

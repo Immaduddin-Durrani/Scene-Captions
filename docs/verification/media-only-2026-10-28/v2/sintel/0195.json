@@ -1,0 +1,112 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v2",
+    "film_sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/sintel/82985b8baad6541f/sound15-0195.wav",
+      "sha256": "8afec2d6e67c05eb00ac2c5de9722fd374c84a242a67862d1139ee5a4c174e8a",
+      "duration_s": 15.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "afdc4ea7a0a99a659bcd87292cd57d2b3a7bbe0ca1f8fb2524a47f1627121c4c"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "39a3e8d3778d3900f5c250dd698735dd27a505e6f988bde4ae7ef3f6d703e41c",
+                    "data_uri_characters": 640126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "ac8cb02d9cc0d3e0bf3558a7f1b7ebbb894f956adbd2cabd6fa7bbcf3107adea",
+      "wire_bytes": 640743,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "82994b47-8881-4d9b-a382-5c809b50375c",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "e7e11707-998b-43a1-a458-031d93bf5ccc"
+      },
+      "response": {
+        "id": "chatcmpl-e7e11707-998b-43a1-a458-031d93bf5ccc",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A sustained, high-pitched electronic tone with a shimmering, breathy quality is audible, followed by a brief, low-pitched human vocalization.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793172184,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 284,
+          "completion_tokens": 33,
+          "total_tokens": 317
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.000070095062256,
+            "generation_tokens_per_second": 32.99768702507368,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.572
+    }
+  ],
+  "asr_attempts": [],
+  "observation": "A sustained, high-pitched electronic tone with a shimmering, breathy quality is audible, followed by a brief, low-pitched human vocalization.",
+  "speech_cues": [],
+  "speech_rejections": [],
+  "rendered": [
+    {
+      "start_s": 0,
+      "end_s": 15.0,
+      "essential": "electronic tone human vocalization",
+      "balanced": "A sustained high-pitched electronic tone with a shimmering breathy quality followed by a brief low-pitched human vocalization",
+      "detailed": "A sustained high-pitched electronic tone with a shimmering breathy quality followed by a brief low-pitched human vocalization"
+    }
+  ],
+  "render_report": "docs/verification/media-only-2026-10-28/v2/sintel/render-0150.json"
+}

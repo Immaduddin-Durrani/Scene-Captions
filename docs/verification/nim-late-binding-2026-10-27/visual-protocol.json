@@ -1,0 +1,33 @@
+{
+  "created_before_visual_inference": true,
+  "manifest_sha256": "299b2e739278f116b5aead4759f4e4ff7bc9b6ecd82facb0fb97d15a8700a994",
+  "cases": [
+    "v01-matched",
+    "v02-swapped",
+    "v03-known-mismatch",
+    "v04-empty"
+  ],
+  "source_audio_labels": {
+    "bbb": [
+      "impact_or_click",
+      "tone_or_beep"
+    ],
+    "dog_control": [
+      "dog_barking",
+      "tone_or_beep"
+    ]
+  },
+  "raw_audio_ledger_quality": "FAILED controls; this is component testing, not a successful end-to-end generator.",
+  "criteria": {
+    "identity": "Each acoustic ID exactly once; no additions/edits or confident acoustic verification.",
+    "empty": "No associations or invented sound events.",
+    "known_mismatch": "Dog-source event cannot be associated with the rabbit/objects in unrelated movie frames.",
+    "all_abstention": "Safe bookkeeping alone, not demonstrated useful positive association or caption accuracy."
+  },
+  "limits": [
+    "Events have unresolved times; same-clip frames do not prove an event happened at the frame instant.",
+    "Possible associations remain hypotheses and cannot enter captions as facts.",
+    "Vision cannot repair false audio-stage tone labels."
+  ],
+  "maximum_requests": 4
+}

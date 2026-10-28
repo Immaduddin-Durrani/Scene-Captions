@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"0\", \"observation\": \"A high-pitched electronic chime sounds, followed by a sustained, mournful string melody with a slow, somber tempo.\"}, {\"id\": \"15\", \"observation\": \"A synthesized musical melody plays, followed by a series of distinct electronic sound effects including clicks, chimes, and a final sustained tone.\"}, {\"id\": \"30\", \"observation\": \"A high-pitched, sustained electronic tone is followed by a deep, resonant, and sustained musical drone.\"}, {\"id\": \"210\", \"observation\": \"A lively, upbeat jazz piece featuring prominent brass, piano, and percussion, with a brief, sharp metallic impact sound.\"}, {\"id\": \"255\", \"observation\": \"A lively orchestral piece featuring prominent brass and strings, with a steady rhythmic pulse and dynamic melodic interplay.\"}, {\"id\": \"330\", \"observation\": \"A person opens a door, walks through, and closes it, followed by a brief musical jingle.\"}, {\"id\": \"375\", \"observation\": \"A high-pitched electronic tone, followed by a piano melody, a door opening, and a loud, sharp impact sound.\"}, {\"id\": \"420\", \"observation\": \"A sharp metallic impact is followed by a sustained, high-pitched electronic tone with a subtle, rhythmic mechanical whirring in the background.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "97da90dbad05c341cc6bd13b2dba91d9403027808611f23b72652b94bc03392b",
+    "wire_bytes": 2340,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "3ee363c9-870b-4e2b-b9e3-3f6b2798934a",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "20b18c68-568b-4d3d-ab4c-b4bf06dbe035"
+    },
+    "response": {
+      "id": "chatcmpl-b8650ebd-aab0-4067-bf56-7dad3b87d81a",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"0\",\"essential\":\"electronic chime string melody\",\"balanced\":\"A high-pitched electronic chime sounds followed by a sustained string melody.\",\"detailed\":\"A high-pitched electronic chime sounds followed by a sustained string melody with a slow tempo.\"},{\"id\":\"15\",\"essential\":\"synthesized melody electronic effects\",\"balanced\":\"A synthesized musical melody plays followed by electronic sound effects including clicks chimes and a sustained tone.\",\"detailed\":\"A synthesized musical melody plays followed by distinct electronic sound effects including clicks chimes and a final sustained tone.\"},{\"id\":\"30\",\"essential\":\"electronic tone musical drone\",\"balanced\":\"A high-pitched sustained electronic tone is followed by a deep resonant sustained musical drone.\",\"detailed\":\"A high-pitched sustained electronic tone is followed by a deep resonant and sustained musical drone.\"},{\"id\":\"210\",\"essential\":\"jazz music metallic impact\",\"balanced\":\"A lively upbeat jazz piece featuring brass piano and percussion with a brief sharp metallic impact sound.\",\"detailed\":\"A lively upbeat jazz piece featuring prominent brass piano and percussion with a brief sharp metallic impact sound.\"},{\"id\":\"255\",\"essential\":\"orchestral music brass strings\",\"balanced\":\"A lively orchestral piece featuring prominent brass and strings with a steady rhythmic pulse and dynamic melodic interplay.\",\"detailed\":\"A lively orchestral piece featuring prominent brass and strings with a steady rhythmic pulse and dynamic melodic interplay.\"},{\"id\":\"330\",\"essential\":\"door movement musical jingle\",\"balanced\":\"A person opens a door walks through and closes it followed by a brief musical jingle.\",\"detailed\":\"A person opens a door walks through and closes it followed by a brief musical jingle.\"},{\"id\":\"375\",\"essential\":\"electronic tone piano melody door impact\",\"balanced\":\"A high-pitched electronic tone followed by a piano melody a door opening and a loud sharp impact sound.\",\"detailed\":\"A high-pitched electronic tone followed by a piano melody a door opening and a loud sharp impact sound.\"},{\"id\":\"420\",\"essential\":\"metallic impact electronic tone mechanical whirring\",\"balanced\":\"A sharp metallic impact is followed by a sustained high-pitched electronic tone with subtle rhythmic mechanical whirring.\",\"detailed\":\"A sharp metallic impact is followed by a sustained high-pitched electronic tone with a subtle rhythmic mechanical whirring in the background.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172942,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 507,
+        "completion_tokens": 504,
+        "total_tokens": 1011,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 4.229
+  }
+]

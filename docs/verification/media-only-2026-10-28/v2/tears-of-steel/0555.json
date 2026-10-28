@@ -1,0 +1,153 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v2",
+    "film_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/tears-of-steel/730b5f0d32c08f68/sound15-0555.wav",
+      "sha256": "d50b3f44fc5a6b56a04a9467b1ba11d79141646ca12688afaef9d58da6e176df",
+      "duration_s": 15.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "afdc4ea7a0a99a659bcd87292cd57d2b3a7bbe0ca1f8fb2524a47f1627121c4c"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "554bb33a1b3793e34dfc2736d60e65c7b91531f254898520246070e681519809",
+                    "data_uri_characters": 640126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5c13b490c57861e5711d97c45c1821baca891046fc945eb5ed62e0b03dae8b4b",
+      "wire_bytes": 640743,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.69,
+      "validation_error": "Sound inference did not complete"
+    },
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "554bb33a1b3793e34dfc2736d60e65c7b91531f254898520246070e681519809",
+                    "data_uri_characters": 640126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5c13b490c57861e5711d97c45c1821baca891046fc945eb5ed62e0b03dae8b4b",
+      "wire_bytes": 640743,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "c31500ad-1e85-4a0c-8f97-3aa9550bb59e",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "7c32f42c-4d9b-43d6-8ad7-af7b83b85db3"
+      },
+      "response": {
+        "id": "chatcmpl-7c32f42c-4d9b-43d6-8ad7-af7b83b85db3",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A deep, resonant musical drone underlies the scene, punctuated by a sudden, powerful explosion and metallic clatter.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793172506,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 284,
+          "completion_tokens": 25,
+          "total_tokens": 309
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.5813534259796143,
+            "generation_tokens_per_second": 43.003100838140845,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.993
+    }
+  ],
+  "asr_attempts": [],
+  "observation": "A deep, resonant musical drone underlies the scene, punctuated by a sudden, powerful explosion and metallic clatter.",
+  "speech_cues": [],
+  "speech_rejections": [],
+  "rendered": [
+    {
+      "start_s": 0,
+      "end_s": 15.0,
+      "essential": "musical drone explosion clatter",
+      "balanced": "A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter",
+      "detailed": "A deep resonant musical drone underlies the scene punctuated by a sudden powerful explosion and metallic clatter"
+    }
+  ],
+  "render_report": "docs/verification/media-only-2026-10-28/v2/tears-of-steel/render-0525.json"
+}

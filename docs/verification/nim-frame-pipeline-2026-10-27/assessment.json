@@ -1,0 +1,91 @@
+{
+  "inference_attempts": 8,
+  "http_counts": {
+    "200": 6,
+    "503": 2
+  },
+  "rows": [
+    {
+      "case": "f01-audio",
+      "http_status": 200,
+      "seconds": 2.358,
+      "finish_reason": "stop",
+      "text": "A train horn sounds, followed by a train passing by. The train horn and passing train are audible in the background.",
+      "status": "completed-observation"
+    },
+    {
+      "case": "f01-single",
+      "http_status": 200,
+      "seconds": 3.272,
+      "finish_reason": "stop",
+      "text": "A loud, high-pitched, sustained electronic tone sounds, followed by a brief, low-pitched musical chord. The electronic tone is clearly audible and distinct from the background, while the musical chord is softer and less prominent, occurring after the initial tone.",
+      "status": "completed-observation"
+    },
+    {
+      "case": "f01-triplet",
+      "http_status": 200,
+      "seconds": 3.126,
+      "finish_reason": "stop",
+      "text": "A loud, sustained musical note plays as the rabbit stands near a cave entrance. The musical note is audible at 2 seconds, coinciding with the rabbit's position near the cave entrance shown in the images.",
+      "status": "completed-observation"
+    },
+    {
+      "case": "f02-audio",
+      "http_status": 200,
+      "seconds": 2.597,
+      "finish_reason": "stop",
+      "text": "A sharp, high-pitched click is heard, followed by a brief, low-frequency thump. The click is consistent with a small, hard object being struck or dropped onto a solid surface, while the thump suggests a soft impact or settling of the object.",
+      "status": "completed-observation"
+    },
+    {
+      "case": "f02-single",
+      "http_status": 200,
+      "seconds": 2.554,
+      "finish_reason": "stop",
+      "text": "A soft thud is heard as a heavy object lands on grass. The sound occurs at the same moment a large white rabbit is shown in a grassy field, suggesting the rabbit may have dropped or landed on the ground.",
+      "status": "completed-observation"
+    },
+    {
+      "case": "f02-triplet",
+      "http_status": 503,
+      "seconds": 2.101,
+      "finish_reason": null,
+      "text": null,
+      "status": "inconclusive-provider-or-transport"
+    },
+    {
+      "case": "f01-mute",
+      "http_status": 503,
+      "seconds": 1.879,
+      "finish_reason": null,
+      "text": null,
+      "status": "inconclusive-provider-or-transport"
+    },
+    {
+      "case": "f02-mute",
+      "http_status": 200,
+      "seconds": 2.688,
+      "finish_reason": "stop",
+      "text": "\nA soft thud is heard as the rabbit's hand makes contact with the apple. The audio captures a gentle impact sound at the moment the rabbit's hand touches the apple, visible in the sequence where the rabbit's hand moves toward and then grasps the apple.",
+      "status": "completed-observation",
+      "mute_pass": false,
+      "manual_interpretation": "False sound assertion on digital-zero PCM; the described rabbit/apple action is visual context, not audible evidence."
+    }
+  ],
+  "integrity": {
+    "fixture_and_manifest_hashes_match": true,
+    "same_pcm_across_context_modes": true,
+    "actual_frame_pts_verified": true,
+    "reference_captions_not_used_as_inputs": true
+  },
+  "findings": [
+    "Frames helped produce visible source/location claims, not a demonstrated acoustic accuracy gain.",
+    "One completed mute control asserted a thud despite all-zero audio; the other mute request was capacity-blocked.",
+    "The second normal three-frame request was also blocked; do not score missing pairs as accuracy failures.",
+    "RMS candidates establish activity changes, not event identity or perceptual boundaries.",
+    "Post-generation reference overlap is incomplete editorial evidence, not independent listening ground truth."
+  ],
+  "accepted_for_playback": false,
+  "model_gate_cleared": false,
+  "limits": "Main-session manual interpretation; tiny two-candidate comparison; no independent listening or DHH evaluation."
+}

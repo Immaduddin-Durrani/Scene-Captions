@@ -1,0 +1,159 @@
+1
+00:00:00,000 --> 00:00:15,000
+[A high-pitched electronic chime sounds followed by a sustained string melody with a slow tempo.]
+
+2
+00:00:15,000 --> 00:00:30,000
+[A synthesized musical melody plays followed by distinct electronic sound effects including clicks chimes and a final sustained tone.]
+
+3
+00:00:30,000 --> 00:00:45,000
+[A high-pitched sustained electronic tone is followed by a deep resonant and sustained musical drone.]
+
+4
+00:00:45,000 --> 00:01:00,000
+[A sequence of distinct non-musical sound effects including a door opening a creak and a brief musical jingle are audible.]
+
+5
+00:01:00,000 --> 00:01:15,000
+[A brass band plays a lively tune accompanied by the rhythmic clatter of a typewriter and the soft rustle of paper.]
+
+6
+00:01:15,000 --> 00:01:30,000
+[A choir sings a sustained ethereal melody followed by a sharp metallic impact and a brief rustling sound.]
+
+7
+00:01:30,000 --> 00:01:45,000
+[A train whistle sounds followed by a train horn and then a train moving on tracks with music playing.]
+
+8
+00:01:45,000 --> 00:02:00,000
+[A solo flute plays a slow melancholic melody over a sustained string pad with subtle ambient noise and a faint high-pitched electronic tone.]
+
+9
+00:02:00,000 --> 00:02:15,000
+[A gentle piano melody plays softly in the background accompanied by subtle rustling and a distinct thud.]
+
+10
+00:02:15,000 --> 00:02:30,000
+[A door opens followed by a squeak a metallic clank and a brief musical jingle.]
+
+11
+00:02:30,000 --> 00:02:45,000
+[A door opens followed by a squeak a door slam and a person laughing.]
+
+12
+00:02:45,000 --> 00:03:00,000
+[A siren sounds followed by a door opening a person walking and a door closing]
+
+13
+00:03:00,000 --> 00:03:15,000
+[A lively jazz ensemble plays followed by a solo clarinet melody with intermittent mechanical sounds and a brief electronic tone]
+
+14
+00:03:15,000 --> 00:03:30,000
+[A piano plays a slow melody accompanied by a soft rhythmic heartbeat and a faint high-pitched electronic tone]
+
+15
+00:03:30,000 --> 00:03:45,000
+[A lively upbeat jazz piece featuring prominent brass piano and percussion with a brief sharp metallic impact sound.]
+
+16
+00:03:45,000 --> 00:04:00,000
+[A gentle melodic piano piece plays softly accompanied by faint intermittent bird chirps in the background]
+
+17
+00:04:00,000 --> 00:04:15,000
+[A dramatic orchestral score with sweeping strings powerful brass and resonant percussion builds tension and intensity throughout the clip]
+
+18
+00:04:15,000 --> 00:04:30,000
+[A lively orchestral piece featuring prominent brass and strings with a steady rhythmic pulse and dynamic melodic interplay.]
+
+19
+00:04:30,000 --> 00:04:45,000
+[A dramatic orchestral piece featuring strings brass and percussion with a prominent sustained high-pitched string note]
+
+20
+00:04:45,000 --> 00:05:00,000
+[A dramatic orchestral fanfare with brass strings and percussion featuring a powerful crescendo and a sharp high-pitched metallic impact]
+
+21
+00:05:00,000 --> 00:05:15,000
+[A sharp metallic impact and rapid mechanical clicks are followed by a sustained high-pitched electronic tone]
+
+22
+00:05:15,000 --> 00:05:30,000
+[series of sharp metallic impacts and scraping sounds followed by a brief high pitched electronic tone]
+
+23
+00:05:30,000 --> 00:05:45,000
+[A person opens a door walks through and closes it followed by a brief musical jingle.]
+
+24
+00:05:45,000 --> 00:06:00,000
+[sharp pop loud explosion brief laugh musical jingle followed by second explosion and final musical jingle]
+
+25
+00:06:00,000 --> 00:06:15,000
+[cat meows followed by dog barking then cat meowing again with background bird chirping and a sudden loud bang]
+
+26
+00:06:15,000 --> 00:06:30,000
+[A high-pitched electronic tone followed by a piano melody a door opening and a loud sharp impact sound.]
+
+27
+00:06:30,000 --> 00:06:45,000
+[door opens followed by a low hum then a dramatic orchestral score with strings brass and percussion]
+
+28
+00:06:45,000 --> 00:07:00,000
+[dramatic orchestral score with sweeping strings brass fanfare and impactful sound effects like whooshes and metallic clangs]
+
+29
+00:07:00,000 --> 00:07:15,000
+[A sharp metallic impact is followed by a sustained high-pitched electronic tone with a subtle rhythmic mechanical whirring in the background.]
+
+30
+00:07:15,000 --> 00:07:30,000
+[dramatic orchestral score with sharp metallic impacts a high pitched scream and a final electronic beep]
+
+31
+00:07:30,000 --> 00:07:45,000
+[series of electronic beeps a high pitched squeak and a sustained low pitched musical tone are audible]
+
+32
+00:07:45,000 --> 00:08:00,000
+[choir singing a slow sustained harmonious melody with soft reverberant ethereal quality]
+
+33
+00:08:00,000 --> 00:08:15,000
+[dramatic orchestral score with prominent strings and percussion builds tension culminating in a powerful sustained chord]
+
+34
+00:08:15,000 --> 00:08:30,000
+[orchestral piece featuring powerful percussion sweeping strings bold brass building to climactic crescendo]
+
+35
+00:08:30,000 --> 00:08:45,000
+[A lively fast-paced orchestral piece featuring prominent brass and percussion with no speech or environmental sounds present.]
+
+36
+00:08:45,000 --> 00:09:00,000
+[orchestral piece with strings and brass followed by gentle melodic piano passage]
+
+37
+00:09:00,000 --> 00:09:15,000
+[A solo clarinet plays a slow expressive melody with gentle vibrato accompanied by subtle piano chords in a quiet intimate setting.]
+
+38
+00:09:15,000 --> 00:09:30,000
+[solo violin playing fast intricate melody with bright resonant tone accompanied by subtle sustained string pad]
+
+39
+00:09:30,000 --> 00:09:45,000
+[A dramatic orchestral score with sweeping strings and brass punctuated by a sharp metallic impact and subsequent rustling sounds.]
+
+40
+00:09:45,000 --> 00:09:56,462
+[The recording features the distinct sound of footsteps on a loose granular surface likely gravel or dry earth.]

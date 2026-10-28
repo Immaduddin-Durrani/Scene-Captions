@@ -1,0 +1,98 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "d4acaa009df0bc848cf0adbfb7e3f9947ecd6ca4a7903f197e061a53cc43f3af",
+  "calls": [
+    {
+      "case": "p05",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p05.wav",
+          "sha256": "8929bd2f106bb51decc42f440fd6935919ebc156a80d19a213e53f36411f16ff",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "83547d67b893fe35a1dc144e6411a035a225436f418a1c00aeae375b66ed1277",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: No lexical speech transcript was established.\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "450635b92c22ed474127a6de444634b52f04faf09d431b9d375809819efda9bd",
+      "wire_bytes": 427759,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "909963a2-8e1a-4aea-b28d-a49c446a0cb3",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-de9cd3e1-1a4d-448b-a92e-04ce8d9e6b35",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A siren wails with a rising and falling pitch, accompanied by a high-pitched electronic tone and a brief, sharp electronic beep.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793114949,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 271,
+          "completion_tokens": 30,
+          "total_tokens": 301
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.0918662548065186,
+            "generation_tokens_per_second": 27.475892645217865,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.241
+    }
+  ]
+}

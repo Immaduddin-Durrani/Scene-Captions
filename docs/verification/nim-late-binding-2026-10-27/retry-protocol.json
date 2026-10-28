@@ -1,0 +1,13 @@
+{
+  "created_before_retries": true,
+  "cases": [
+    "k02-instruct",
+    "k06-instruct"
+  ],
+  "purpose": "Complete two capacity-blocked cells with one unchanged-payload retry each; not new prompt searching.",
+  "manifest_sha256": "f9309704eb47e30d9869b5375dd9d89864b64913b46ec46c69f585b38e962fc6",
+  "maximum_attempts_per_cell": 2,
+  "maximum_total_requests": 14,
+  "optional_open_description": "Omitted to retain the 14-request ceiling after these retries.",
+  "automatic_retries": false
+}

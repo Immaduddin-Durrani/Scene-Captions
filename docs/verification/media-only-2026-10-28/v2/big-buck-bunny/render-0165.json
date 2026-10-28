@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"165\", \"observation\": \"A siren sounds, followed by a door opening, a person walking, and a door closing.\"}, {\"id\": \"180\", \"observation\": \"A lively jazz ensemble plays, followed by a solo clarinet melody, with intermittent mechanical sounds and a brief electronic tone.\"}, {\"id\": \"195\", \"observation\": \"A piano plays a slow, melancholic melody, accompanied by a soft, rhythmic heartbeat and a faint, high-pitched electronic tone.\"}, {\"id\": \"225\", \"observation\": \"A gentle, melodic piano piece plays softly, accompanied by faint, intermittent bird chirps in the background.\"}, {\"id\": \"240\", \"observation\": \"A dramatic orchestral score with sweeping strings, powerful brass, and resonant percussion builds tension and intensity throughout the clip.\"}, {\"id\": \"270\", \"observation\": \"A dramatic orchestral piece featuring strings, brass, and percussion, with a prominent, sustained high-pitched string note.\"}, {\"id\": \"285\", \"observation\": \"A dramatic orchestral fanfare with brass, strings, and percussion, featuring a powerful crescendo and a sharp, high-pitched metallic impact.\"}, {\"id\": \"300\", \"observation\": \"A sharp metallic impact and rapid mechanical clicks are followed by a sustained, high-pitched electronic tone.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "5212eec701ad7ada0f923b198f67a47a097679757e496a07092f512c3287070c",
+    "wire_bytes": 2357,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "ed3013a7-a105-43a8-a876-124f02d32e29",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "63f1aaaf-c926-4f5a-a37c-4946e52f89bf"
+    },
+    "response": {
+      "id": "chatcmpl-e3bfa495-c28a-492e-8e1b-5534350f1bea",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"165\",\"essential\":\"siren door walking\",\"balanced\":\"A siren sounds followed by a door opening walking and a door closing\",\"detailed\":\"A siren sounds followed by a door opening a person walking and a door closing\"},{\"id\":\"180\",\"essential\":\"jazz ensemble clarinet mechanical electronic\",\"balanced\":\"A lively jazz ensemble plays followed by a solo clarinet melody with intermittent mechanical sounds and a brief electronic tone\",\"detailed\":\"A lively jazz ensemble plays followed by a solo clarinet melody with intermittent mechanical sounds and a brief electronic tone\"},{\"id\":\"195\",\"essential\":\"piano heartbeat electronic\",\"balanced\":\"A piano plays a slow melody accompanied by a soft rhythmic heartbeat and a faint high-pitched electronic tone\",\"detailed\":\"A piano plays a slow melody accompanied by a soft rhythmic heartbeat and a faint high-pitched electronic tone\"},{\"id\":\"225\",\"essential\":\"piano bird chirps\",\"balanced\":\"A gentle melodic piano piece plays softly accompanied by faint intermittent bird chirps in the background\",\"detailed\":\"A gentle melodic piano piece plays softly accompanied by faint intermittent bird chirps in the background\"},{\"id\":\"240\",\"essential\":\"orchestral strings brass percussion\",\"balanced\":\"A dramatic orchestral score with sweeping strings powerful brass and resonant percussion builds tension and intensity throughout the clip\",\"detailed\":\"A dramatic orchestral score with sweeping strings powerful brass and resonant percussion builds tension and intensity throughout the clip\"},{\"id\":\"270\",\"essential\":\"orchestral strings brass percussion sustained string\",\"balanced\":\"A dramatic orchestral piece featuring strings brass and percussion with a prominent sustained high-pitched string note\",\"detailed\":\"A dramatic orchestral piece featuring strings brass and percussion with a prominent sustained high-pitched string note\"},{\"id\":\"285\",\"essential\":\"orchestral fanfare brass strings percussion metallic impact\",\"balanced\":\"A dramatic orchestral fanfare with brass strings and percussion featuring a powerful crescendo and a sharp high-pitched metallic impact\",\"detailed\":\"A dramatic orchestral fanfare with brass strings and percussion featuring a powerful crescendo and a sharp high-pitched metallic impact\"},{\"id\":\"300\",\"essential\":\"metallic impact mechanical clicks electronic tone\",\"balanced\":\"A sharp metallic impact and rapid mechanical clicks are followed by a sustained high-pitched electronic tone\",\"detailed\":\"A sharp metallic impact and rapid mechanical clicks are followed by a sustained high-pitched electronic tone\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172549,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 504,
+        "completion_tokens": 501,
+        "total_tokens": 1005,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.133
+  }
+]

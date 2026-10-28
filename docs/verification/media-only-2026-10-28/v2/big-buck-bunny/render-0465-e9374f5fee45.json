@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"465\", \"observation\": \"A choir sings a slow, sustained, harmonious melody with a soft, reverberant, and ethereal quality.\"}, {\"id\": \"495\", \"observation\": \"A dramatic orchestral piece featuring powerful percussion, sweeping strings, and bold brass, building to a climactic crescendo.\"}, {\"id\": \"525\", \"observation\": \"A dramatic orchestral piece with strings and brass, followed by a gentle, melodic piano passage.\"}, {\"id\": \"555\", \"observation\": \"A solo violin plays a fast, intricate melody with a bright, resonant tone, accompanied by a subtle, sustained string pad.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "21c223b09a493d509c96e14bca57cb98c7cc1e992526aa796006fb72cbb088b3",
+    "wire_bytes": 1672,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "de22551a-c417-4a93-8299-5c3c95c7f689",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "aeb3efd8-6798-4f14-b7d7-571e5472410f"
+    },
+    "response": {
+      "id": "chatcmpl-72751d7d-8639-4eaa-a028-6fdd8ec229e5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"465\",\"essential\":\"choir singing\",\"balanced\":\"choir singing a slow sustained harmonious melody\",\"detailed\":\"choir singing a slow sustained harmonious melody with soft reverberant ethereal quality\"},{\"id\":\"495\",\"essential\":\"orchestral music\",\"balanced\":\"orchestral piece with percussion strings brass building to crescendo\",\"detailed\":\"orchestral piece featuring powerful percussion sweeping strings bold brass building to climactic crescendo\"},{\"id\":\"525\",\"essential\":\"orchestral music piano\",\"balanced\":\"orchestral piece with strings and brass followed by gentle melodic piano passage\",\"detailed\":\"orchestral piece with strings and brass followed by gentle melodic piano passage\"},{\"id\":\"555\",\"essential\":\"violin music\",\"balanced\":\"solo violin playing fast intricate melody with sustained string pad\",\"detailed\":\"solo violin playing fast intricate melody with bright resonant tone accompanied by subtle sustained string pad\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172946,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 353,
+        "completion_tokens": 204,
+        "total_tokens": 557,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 1.984
+  }
+]

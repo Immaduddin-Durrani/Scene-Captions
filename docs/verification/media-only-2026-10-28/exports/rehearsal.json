@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "purpose": "phase1-rehearsal-not-research",
+  "session_id": "d662a189",
+  "video_id": "tears-of-steel",
+  "annotation_status": "draft",
+  "caption_version": {
+    "method": "NVIDIA audio-only observations in nonoverlapping 15-second windows, reworded at three detail levels by Super VL; dedicated Parakeet word-timed speech in 30-second windows. Sound display intervals are analysis windows, NOT detected event boundaries. No fetched subtitles, plot, titles, scene descriptions or source cue timing supplied.",
+    "prompt_version": "media-only-experimental-v2",
+    "kind": "audio-derived",
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning + nvidia/nemotron-3.5-super-vl-120b-a12b + nvidia/parakeet-tdt-0_6b-v2",
+    "source_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "expressiveness": "conservative",
+    "scene_load_method": "unreviewed",
+    "quality_gate": "unverified",
+    "experimental": true,
+    "acoustic_validation": "failed",
+    "input_basis": "media-only"
+  },
+  "final_condition": "personalized",
+  "final_profile": {
+    "detail": 3,
+    "expression": 2,
+    "adaptive": false,
+    "representation": "descriptive",
+    "size": "large",
+    "position": "bottom"
+  },
+  "final_original_override": false,
+  "elapsed_ms": 34,
+  "events": [
+    {
+      "type": "condition",
+      "video_s": 0,
+      "condition": "personalized",
+      "elapsed_ms": 0
+    },
+    {
+      "type": "profile",
+      "video_s": 0,
+      "profile": {
+        "detail": 3,
+        "expression": 2,
+        "adaptive": false,
+        "representation": "descriptive",
+        "size": "large",
+        "position": "bottom"
+      },
+      "elapsed_ms": 0
+    },
+    {
+      "type": "original",
+      "video_s": 0,
+      "enabled": false,
+      "elapsed_ms": 0
+    }
+  ],
+  "ratings": {},
+  "note": ""
+}

@@ -1,0 +1,296 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "9067abbfb23449e2595a57cec932e28090f439dd67835fd80984417acf6e59a9",
+  "calls": [
+    {
+      "case": "p01",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p01.wav",
+          "sha256": "ee30cc75411cbd1f1bf06496899a662c8bcb816f2f783190e7301983d3769289",
+          "duration_s": 2.5924375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "491a858c899e53279903677a0d6ff841728995d5a0f255c19a3c6421d9222fa4",
+                    "data_uri_characters": 110694,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: \"Nine silver spoons rest beside the red kettle.\"\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "43112841cc89a67f7f0b31b6484bea50a5e6e1b32c30e45c98b5a4fa2e02a18d",
+      "wire_bytes": 111664,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "0680d0ec-62fc-4001-b760-0bcd76478654",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-f20f7d91-c447-4a30-9036-b3675778bd08",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "NO_NON_SPEECH_EVENTS",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793114724,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 184,
+          "completion_tokens": 9,
+          "total_tokens": 193
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.4033474922180176,
+            "generation_tokens_per_second": 22.31326628686541,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.143
+    },
+    {
+      "case": "p03",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p03.wav",
+          "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "2460a3a17980d42b22ee9e74b3b24ebaff3cc8da27e3b3c3b794113537a34654",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: No lexical speech transcript was established.\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "78af4286c5bb458d4c9512658db51c73f0914cf03cecf3834166cabb7fa159a6",
+      "wire_bytes": 427715,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "f5e7e7e7-fa6f-455d-b371-09e64f86bcde",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-afa26a45-0026-47ab-9cd0-f81807b88c26",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A series of sharp, percussive impacts are heard at regular intervals, followed by a sustained, low-frequency electronic tone.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793114728,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 271,
+          "completion_tokens": 26,
+          "total_tokens": 297
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.5935373306274414,
+            "generation_tokens_per_second": 43.8051638176066,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.681
+    },
+    {
+      "case": "p04",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+          "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "4d42ce8c742423ca91faa782943599373722ec52b5426a8658f2d3af0c1efdf5",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: \"Nine silver spoons rest beside the red kettle.\"\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "96346f1ee5b4fa20e9f11989a6d9fd0a4bff3b09032c7a698c6355fad81afa84",
+      "wire_bytes": 427720,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.174
+    },
+    {
+      "case": "p05",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p05.wav",
+          "sha256": "8929bd2f106bb51decc42f440fd6935919ebc156a80d19a213e53f36411f16ff",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "83547d67b893fe35a1dc144e6411a035a225436f418a1c00aeae375b66ed1277",
+                    "data_uri_characters": 426794,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: No lexical speech transcript was established.\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "450635b92c22ed474127a6de444634b52f04faf09d431b9d375809819efda9bd",
+      "wire_bytes": 427759,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.297
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "created_before_rain_inference": true,
+  "trigger": "All three first-stage calls completed; neither bark recognized and short silence hallucinated.",
+  "source_wav_sha256": "54b2c8e3371c750e865f1dfa3842fb1751beeaf8e246f37953b427911b2bce29",
+  "manifest_sha256": "4861364a216f9fd943a6c63d44d222ca834d102e744b8ede03beb9fa17727c14",
+  "fixtures": {
+    "q04": {
+      "file": "artifacts/nim-recognition-2026-10-27/q04.wav",
+      "sha256": "a5ee2b8b3735c49eb6b56d917c8717b4d481f5eee0f42fb1a9a8f2a46bf8a522",
+      "samples": 160000,
+      "duration_s": 10.0,
+      "evaluation_only_label": "rain"
+    },
+    "q05": {
+      "file": "artifacts/nim-recognition-2026-10-27/q05.wav",
+      "sha256": "a8442deab9bc493fe27d4334382da6091f26118d3df73de82ef968128849a6d5",
+      "samples": 80000,
+      "duration_s": 5.0,
+      "evaluation_only_label": "rain"
+    },
+    "q06": {
+      "file": "artifacts/nim-recognition-2026-10-27/q06.wav",
+      "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+      "samples": 160000,
+      "duration_s": 10.0,
+      "evaluation_only_label": "digital-silence"
+    }
+  },
+  "source_crop_samples": [
+    16000,
+    96000
+  ],
+  "amplitude_changed": false,
+  "crop_contains_all_source_nonzero_samples": true,
+  "same_prompt_and_generation_parameters_as_first_stage": true,
+  "criteria": {
+    "strict": "rain/precipitation-like sound",
+    "partial": "generic water noise without correct rain identification",
+    "silence": "no audible sound and no asserted event",
+    "inconclusive": "capacity, timeout or incomplete completion"
+  },
+  "limits": [
+    "Dataset labels, not fresh human panel annotations.",
+    "One sustained source cannot establish all environmental sound capability.",
+    "No timing or audiovisual requests unless recognition/absence prerequisites pass."
+  ]
+}

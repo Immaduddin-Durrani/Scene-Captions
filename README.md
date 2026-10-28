@@ -7,7 +7,7 @@ Adaptive non-speech captions for Deaf and hard-of-hearing (DHH) viewers of long-
 Read this README, [architecture.txt](architecture.txt) and the required
 [skill workflow](docs/SKILL_WORKFLOW.md) first. Then read the
 [current project state](docs/PROJECT_STATE.md) and
-[latest NIM investigation](docs/verification/nim-counterfactuals-2026-10-26/README.md) for current decisions,
+[latest NIM investigation](docs/verification/nim-late-binding-2026-10-27/README.md) for current decisions,
 verified findings and unfinished work. Use [the glossary](GLOSSARY.md)
 for domain meanings and the experimental plan for study details.
 The [documentation index](docs/README.md) explains where each kind of file belongs.
@@ -22,7 +22,15 @@ current-state page for snapshot locations and known coverage gaps.
 No automatic skill activation, agents, paid services, publishing or hooks
 are authorized by these documents. Keep all model generation outside playback.
 
-Latest BBB work: [caption-free NIM tests and audit](docs/verification/nim-counterfactuals-2026-10-26/README.md) and [self-contained research prompt](docs/research/RESEARCH_HANDOFF_PROMPT.md). Twelve new controls confirm some audio input works, but silence hallucinations leave the sound-generation gate failed. The player compares the existing source-assisted draft with its fetched reference; no independent NIM full track is installed.
+28 October: all three films now offer **Use media-only AI subtitles**, alongside
+the existing default captions. NVIDIA generated these experimental tracks from
+film audio, without fetched subtitles, plot or supplied scene descriptions.
+Each has three sound-detail levels and generated dialogue where recognized.
+Sound text uses coarse 15-second analysis windows; recognition and timing are
+unverified, and the acoustic gate remains failed. Full-film processing is not
+proof of complete or correct captions. [Outputs, provenance and checks](docs/verification/media-only-2026-10-28/README.md).
+
+Latest BBB work: [audio gate and late visual association tests](docs/verification/nim-late-binding-2026-10-27/README.md), [screenshot prototype](docs/verification/nim-frame-pipeline-2026-10-27/README.md) and [research handoff prompt](docs/research/RESEARCH_HANDOFF_PROMPT.md). A constrained visual stage preserves event IDs and empty ledgers on tested controls. Audio recognition still fails, including with recommended reasoning parameters; closed-category dog recognition adds a false tone. Speech transcription and three-level wording work on controlled cases, but no dependable independent sound track is accepted. The player retains its source-assisted draft and fetched reference comparison.
 
 ## Phase 1: run the prototype
 

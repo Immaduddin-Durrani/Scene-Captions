@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"150\", \"observation\": \"A door creaks open, followed by footsteps on a hard surface and a metallic clank.\"}, {\"id\": \"195\", \"observation\": \"A sustained, high-pitched electronic tone with a shimmering, breathy quality is audible, followed by a brief, low-pitched human vocalization.\"}, {\"id\": \"225\", \"observation\": \"A sustained, low-frequency musical drone with a subtle, high-pitched shimmering effect is audible throughout the recording.\"}, {\"id\": \"240\", \"observation\": \"A dramatic orchestral score plays, followed by a sharp metallic impact and a woman's urgent, high-pitched exclamation.\"}, {\"id\": \"255\", \"observation\": \"A woman speaks, followed by a dog barking, a door opening, and a door closing.\"}, {\"id\": \"300\", \"observation\": \"A high-pitched, sustained electronic tone plays over a background of crowd cheering and applause.\"}, {\"id\": \"315\", \"observation\": \"A loud, metallic impact is followed by a deep, resonant rumble and a high-pitched, sustained electronic tone.\"}, {\"id\": \"345\", \"observation\": \"A person walks on a hard surface, followed by a violin playing a melody.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "49c379f4b407ea17e0e69889fd135c598eba5f14510b49148c2f6dae7783b401",
+    "wire_bytes": 2217,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "c8a44602-2ef5-4f47-b396-0c7dc8643147",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "f2071123-3bd2-4046-9f86-50f5dec2f91c"
+    },
+    "response": {
+      "id": "chatcmpl-5a967e29-f7fa-4fc6-b1b1-2d5ff029ac58",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"150\",\"essential\":\"door creak footsteps metallic clank\",\"balanced\":\"A door creaks open followed by footsteps on a hard surface and a metallic clank\",\"detailed\":\"A door creaks open followed by footsteps on a hard surface and a metallic clank\"},{\"id\":\"195\",\"essential\":\"electronic tone human vocalization\",\"balanced\":\"A sustained high-pitched electronic tone with a shimmering breathy quality followed by a brief low-pitched human vocalization\",\"detailed\":\"A sustained high-pitched electronic tone with a shimmering breathy quality followed by a brief low-pitched human vocalization\"},{\"id\":\"225\",\"essential\":\"musical drone shimmering effect\",\"balanced\":\"A sustained low-frequency musical drone with a subtle high-pitched shimmering effect audible throughout\",\"detailed\":\"A sustained low-frequency musical drone with a subtle high-pitched shimmering effect audible throughout\"},{\"id\":\"240\",\"essential\":\"orchestral score metallic impact exclamation\",\"balanced\":\"A dramatic orchestral score plays followed by a sharp metallic impact and a woman's urgent high-pitched exclamation\",\"detailed\":\"A dramatic orchestral score plays followed by a sharp metallic impact and a woman's urgent high-pitched exclamation\"},{\"id\":\"255\",\"essential\":\"speech dog barking door opening door closing\",\"balanced\":\"A woman speaks followed by a dog barking a door opening and a door closing\",\"detailed\":\"A woman speaks followed by a dog barking a door opening and a door closing\"},{\"id\":\"300\",\"essential\":\"electronic tone crowd cheering applause\",\"balanced\":\"A high-pitched sustained electronic tone plays over a background of crowd cheering and applause\",\"detailed\":\"A high-pitched sustained electronic tone plays over a background of crowd cheering and applause\"},{\"id\":\"315\",\"essential\":\"metallic impact rumble electronic tone\",\"balanced\":\"A loud metallic impact followed by a deep resonant rumble and a high-pitched sustained electronic tone\",\"detailed\":\"A loud metallic impact followed by a deep resonant rumble and a high-pitched sustained electronic tone\"},{\"id\":\"345\",\"essential\":\"footsteps violin melody\",\"balanced\":\"A person walks on a hard surface followed by a violin playing a melody\",\"detailed\":\"A person walks on a hard surface followed by a violin playing a melody\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172561,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 495,
+        "completion_tokens": 497,
+        "total_tokens": 992,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 4.919
+  }
+]

@@ -1,0 +1,204 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "4861364a216f9fd943a6c63d44d222ca834d102e744b8ede03beb9fa17727c14",
+  "calls": [
+    {
+      "case": "q04",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q04.wav",
+          "sha256": "a5ee2b8b3735c49eb6b56d917c8717b4d481f5eee0f42fb1a9a8f2a46bf8a522",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "f914c1b51cd93d0629e95a1347e3056dc15e348ce6a906578f5c88bbb1d599ea",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5b11a10210588a99a922899681a8017384a830b4e8aa13911b9d35d24e49a79d",
+      "wire_bytes": 427164,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "13773df2-0ba3-4cbf-8fd0-8e41c3de220d",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-bfb6d796-35dc-429e-bf2c-c293a8afd718",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Waves, surf, Ocean",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112327,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 7,
+          "total_tokens": 176
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 12,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.19915318489074707,
+            "generation_tokens_per_second": 35.148822770974576,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.034
+    },
+    {
+      "case": "q05",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q05.wav",
+          "sha256": "a8442deab9bc493fe27d4334382da6091f26118d3df73de82ef968128849a6d5",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "2f4d3e61fd6955bceb7dbfec1f9530527a439029af1f13405edc9915f2cf8987",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "ddc5f83a0ab3357137eb908e4094e78bf8a6b9c1edc9e7fc97caa9ba3a8824e8",
+      "wire_bytes": 213828,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.009
+    },
+    {
+      "case": "q06",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q06.wav",
+          "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "f60e78304bdc925cd50a66e7b2fef90988848562b1ceefb1b2e15907b94a800d",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5518348bb88e9573d98692676f989fcaa2b5a9246e7870d4883b957ec43cf789",
+      "wire_bytes": 427164,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.926
+    }
+  ]
+}

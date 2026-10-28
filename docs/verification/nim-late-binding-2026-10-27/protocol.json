@@ -1,0 +1,98 @@
+{
+  "created_before_inference": true,
+  "date": "2026-10-27",
+  "fixtures": {
+    "k01": {
+      "file": "artifacts/nim-recognition-2026-10-27/q07.wav",
+      "sha256": "406d8dd49c7e149ce9c5fef187ac51df680d917ede3c4d09a70525321e6d06a7",
+      "evaluation_only_expected_labels": [
+        "human_speech"
+      ]
+    },
+    "k02": {
+      "file": "artifacts/nim-recognition-2026-10-27/q09.wav",
+      "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+      "evaluation_only_expected_labels": [
+        "dog_barking"
+      ]
+    },
+    "k03": {
+      "file": "artifacts/nim-recognition-2026-10-27/q05.wav",
+      "sha256": "a8442deab9bc493fe27d4334382da6091f26118d3df73de82ef968128849a6d5",
+      "evaluation_only_expected_labels": [
+        "rainfall"
+      ]
+    },
+    "k04": {
+      "file": "artifacts/nim-recognition-2026-10-27/q06.wav",
+      "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+      "evaluation_only_expected_labels": [
+        "silence"
+      ]
+    },
+    "k05": {
+      "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+      "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+      "evaluation_only_expected_labels": [
+        "human_speech",
+        "dog_barking"
+      ]
+    },
+    "k06": {
+      "file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+      "sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+      "evaluation_only_expected_labels": null
+    }
+  },
+  "manifest_sha256": "b1e0990d778580193fd52d49ba330a6214c2686161c30a90d0bd1c3470b0aa6b",
+  "same_fixed_vocabulary_and_prompt_all_cases": true,
+  "task": "Closed-vocabulary classification; correct labels are evaluation-only. This is not an open-ended caption benchmark.",
+  "labels": [
+    "human_speech",
+    "dog_barking",
+    "bird_call",
+    "rainfall",
+    "running_water_or_waves",
+    "music",
+    "tone_or_beep",
+    "impact_or_click",
+    "other_sound",
+    "silence",
+    "uncertain"
+  ],
+  "reference_caption_or_plot_input": false,
+  "preset_source": "https://build.nvidia.com/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning/modelcard",
+  "reasoning_budget_source": "https://docs.api.nvidia.com/nim/reference/nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-infer",
+  "preset_limits": "A bundle comparison, not an isolated thinking toggle. Server-only grace/context settings are not assumed configurable.",
+  "criteria": {
+    "complete": "HTTP200, explicit stop, JSON list of distinct allowed labels.",
+    "positive_controls": "Exact expected label sets; false added labels counted separately. Empty/uncertain results are abstentions, not passes.",
+    "rain": "rainfall required; water/waves is only partial, not a weakened substitute.",
+    "silence": "Only silence, without asserted events.",
+    "bbb": "No human ground truth; do not score as correct from fluency or scene plausibility.",
+    "visual": "No new event IDs, no changes to acoustic facts, unresolved association when unsupported; empty ledgers must stay empty."
+  },
+  "budget": {
+    "maximum_total_requests": 14,
+    "initial_audio_requests": 8,
+    "max_visual_requests": 4,
+    "optional_open_description_requests": 1,
+    "budget_compatibility_retries": "At most two, only if documented budget parameter is rejected; all requests count toward14.",
+    "no_automatic_retries": true,
+    "stop_after_consecutive_capacity_errors_per_stage": 3,
+    "per_request_timeout_s": 180
+  },
+  "conditional_plan": [
+    "Test fixed categories and hosted-supported reasoning presets on known controls.",
+    "If budget is rejected, remove only that parameter for one explicit follow-up per rejected thinking cell.",
+    "Test vision as association-only with real/constructed ledgers clearly distinguished and matching/mismatched/silent controls.",
+    "If a positive category passes, optionally test free audio description without the label vocabulary.",
+    "Never clear the existing failed audio gate or install a track from bookkeeping/schema success."
+  ],
+  "limits": [
+    "Tiny reused synthetic/ESC-10 controls; closed categories can make recognition easier without solving open discovery.",
+    "No independent listening panel or DHH usability study.",
+    "Visual abstention alone is not a useful positive caption.",
+    "Vision cannot repair an incorrect acoustic event ledger."
+  ]
+}

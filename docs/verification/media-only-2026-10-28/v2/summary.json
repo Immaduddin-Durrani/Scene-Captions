@@ -1,0 +1,88 @@
+[
+  {
+    "video_id": "big-buck-bunny",
+    "duration_seconds": 596.461678,
+    "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "windows": 40,
+    "completed": 40,
+    "missing_windows": [],
+    "sound_cues": 40,
+    "dialogue_cues": 0,
+    "asr_rejections": [],
+    "quality": "UNVERIFIED; known sound-recognition controls failed; full processing is not full event recall"
+  },
+  {
+    "video_id": "sintel",
+    "duration_seconds": 888.032,
+    "video_sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+    "windows": 60,
+    "completed": 60,
+    "missing_windows": [],
+    "sound_cues": 59,
+    "dialogue_cues": 71,
+    "asr_rejections": [
+      {
+        "window_start_s": 750,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 750,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 780,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 810,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 840,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 840,
+        "reason": "zero-duration/empty word group"
+      }
+    ],
+    "quality": "UNVERIFIED; known sound-recognition controls failed; full processing is not full event recall"
+  },
+  {
+    "video_id": "tears-of-steel",
+    "duration_seconds": 734.166667,
+    "video_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "windows": 49,
+    "completed": 49,
+    "missing_windows": [],
+    "sound_cues": 49,
+    "dialogue_cues": 68,
+    "asr_rejections": [
+      {
+        "window_start_s": 0,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 0,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 0,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 210,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 270,
+        "reason": "zero-duration/empty word group"
+      },
+      {
+        "window_start_s": 540,
+        "reason": "zero-duration/empty word group"
+      }
+    ],
+    "quality": "UNVERIFIED; known sound-recognition controls failed; full processing is not full event recall"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "created_before_parakeet_inference": true,
+  "trigger": "Whisper transcribed positive controls but returned no words/timestamps despite the offset flag.",
+  "model": "nvidia/parakeet-tdt-0.6b-v2",
+  "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+  "source": "https://build.nvidia.com/nvidia/parakeet-tdt-0_6b-v2/api",
+  "cases": [
+    "p01",
+    "p04"
+  ],
+  "max_initial_calls": 2,
+  "criteria": "Match the expected words, return finite ordered word offsets within clip bounds; compare +0.5s speech shift.",
+  "limits": "Separate dedicated ASR model; not proof of Omni or non-speech timing."
+}

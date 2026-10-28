@@ -1,0 +1,18 @@
+{
+  "chat_http_statuses": {
+    "200": 193,
+    "503": 121
+  },
+  "asr_grpc_statuses": {
+    "OK": 75
+  },
+  "reported_chat_usage": {
+    "prompt_tokens": 65934,
+    "completion_tokens": 19692,
+    "total_tokens": 85626
+  },
+  "cost": "No paid provider used; free-tier entitlement/remaining quota not independently verified",
+  "scope": "Includes interrupted v1, two prompt diagnostics, v2 and bounded retries; reused ASR responses not counted twice",
+  "recorded_requests": 389,
+  "interrupted_attempts": "The v1 process was stopped with two concurrent request slots; up to two additional in-flight attempts may not have been persisted."
+}

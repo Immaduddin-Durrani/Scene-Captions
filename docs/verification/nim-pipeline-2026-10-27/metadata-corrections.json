@@ -1,0 +1,40 @@
+{
+  "reason": "The initial wrapper inherited a Whisper scope label for Parakeet calls and named response metadata request_headers. Corrected those reporting labels only; routing, request hashes, result content and statuses unchanged. Original report bytes retained in the local ignored artifact cache.",
+  "records": [
+    {
+      "report": "reports/asr-access.json",
+      "original_report_sha256": "d29f3a8c235335898737f4ac732b9e8076b630633e46588b710c036730771735",
+      "corrected_report_sha256": "b7a32767aa29d6a2522bebc0870e670442c8cedade1a600032ea62b6fd8cda40",
+      "response_content_sha256_unchanged": "93ece26561350e131ec6f9a30206b821f3a4e615b08185dea4631ccf282e5aad",
+      "request_hashes_unchanged": true
+    },
+    {
+      "report": "reports/asr-controls.json",
+      "original_report_sha256": "53ab53b1847e1b56adf81555923325c48923a1fe3565bb27766b97bf45c895b8",
+      "corrected_report_sha256": "75621235e66987dab6c03768331a578d1a54b2b4848b964593fdbb2e65925e18",
+      "response_content_sha256_unchanged": "b9c613bae6c697c90cea4ed96e18d5c15081ff2311600ecf316f484d8031f8f9",
+      "request_hashes_unchanged": true
+    },
+    {
+      "report": "reports/parakeet-timing.json",
+      "original_report_sha256": "8a070ab620ea5c6d4cfb5e8908d2ff5d03d108193f9fe62b4568c9f310bbbc8c",
+      "corrected_report_sha256": "474b7669d25418b13ea6cd35433720118fe58a464410f9b9d3e323f140fa37e9",
+      "response_content_sha256_unchanged": "7d17a66d8c987405d0150da8cf67ee01eb4be876cb53b592b600dbab5975f1ea",
+      "request_hashes_unchanged": true
+    },
+    {
+      "report": "reports/parakeet-absence.json",
+      "original_report_sha256": "ec3b851dbf74102291edbc6e5054d8b02ea43a9beb567f43b2a6ad71ece76e6b",
+      "corrected_report_sha256": "2c1b5fb7d8938b541189ff0075733ca6da5eeb256a19791e74708bf96c22b6e8",
+      "response_content_sha256_unchanged": "bc6225e11878148052855ae117b99db330b183e6ef395eb16078a4c0a6ac6db7",
+      "request_hashes_unchanged": true
+    },
+    {
+      "report": "reports/parakeet-raw-pcm.json",
+      "original_report_sha256": "1f193868211303cd0061f381c618dfd38c65d4645aa35105aa7ff4e60e063852",
+      "corrected_report_sha256": "ddf321a55465c7fdf817bea935ca246037255a394d37b4225daf95369320cf63",
+      "response_content_sha256_unchanged": "83d4180d3c9932dea64e80e07a016cf69224949b41189f364be463bc123ff8a9",
+      "request_hashes_unchanged": true
+    }
+  ]
+}

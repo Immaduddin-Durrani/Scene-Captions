@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"0\", \"observation\": \"A siren sounds, followed by a brief musical effect.\"}, {\"id\": \"15\", \"observation\": \"A siren wails, then a car engine revs and accelerates, followed by a sustained, high-pitched electronic tone.\"}, {\"id\": \"45\", \"observation\": \"A woman grunts and yells while fighting, accompanied by a sword clashing and a monster roaring.\"}, {\"id\": \"60\", \"observation\": \"A loud, sustained musical chord plays, followed by a high-pitched scream, a heavy thud, and a person's heavy breathing.\"}, {\"id\": \"75\", \"observation\": \"A car engine starts, idles, and accelerates, with a brief high-pitched squeal and a sustained electronic tone.\"}, {\"id\": \"105\", \"observation\": \"The non-speech sounds include a steady, low-frequency hum and intermittent metallic clinks.\"}, {\"id\": \"120\", \"observation\": \"The non-speech sounds include a low-frequency hum, a high-pitched electronic whine, and intermittent rustling noises.\"}, {\"id\": \"135\", \"observation\": \"The non-speech sounds include a soft sigh, a sharp click, and a series of metallic clinks.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "96c21453c0183a38334dc489eb8a61774d6754ed4a5895b791dc83d9dfd7ab20",
+    "wire_bytes": 2174,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "cf9abc32-c29d-42aa-ba94-799df49702e1",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "b5eec887-356e-49bb-ab3a-1147dd7b75bd"
+    },
+    "response": {
+      "id": "chatcmpl-8d721566-9ab9-4c6e-bc94-60de403c3acc",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"0\",\"essential\":\"siren musical effect\",\"balanced\":\"A siren sounds followed by a brief musical effect.\",\"detailed\":\"A siren sounds followed by a brief musical effect.\"},{\"id\":\"15\",\"essential\":\"siren engine electronic tone\",\"balanced\":\"A siren wails then a car engine revs and accelerates followed by a sustained high-pitched electronic tone.\",\"detailed\":\"A siren wails then a car engine revs and accelerates followed by a sustained high-pitched electronic tone.\"},{\"id\":\"45\",\"essential\":\"grunts yells sword monster\",\"balanced\":\"A woman grunts and yells while fighting accompanied by sword clashing and a monster roaring.\",\"detailed\":\"A woman grunts and yells while fighting accompanied by sword clashing and a monster roaring.\"},{\"id\":\"60\",\"essential\":\"musical chord scream thud breathing\",\"balanced\":\"A loud sustained musical chord plays followed by a high-pitched scream a heavy thud and heavy breathing.\",\"detailed\":\"A loud sustained musical chord plays followed by a high-pitched scream a heavy thud and heavy breathing.\"},{\"id\":\"75\",\"essential\":\"engine squeal electronic tone\",\"balanced\":\"A car engine starts idles and accelerates with a brief high-pitched squeal and a sustained electronic tone.\",\"detailed\":\"A car engine starts idles and accelerates with a brief high-pitched squeal and a sustained electronic tone.\"},{\"id\":\"105\",\"essential\":\"hum metallic clinks\",\"balanced\":\"The non-speech sounds include a steady low-frequency hum and intermittent metallic clinks.\",\"detailed\":\"The non-speech sounds include a steady low-frequency hum and intermittent metallic clinks.\"},{\"id\":\"120\",\"essential\":\"hum whine rustling\",\"balanced\":\"The non-speech sounds include a low-frequency hum a high-pitched electronic whine and intermittent rustling noises.\",\"detailed\":\"The non-speech sounds include a low-frequency hum a high-pitched electronic whine and intermittent rustling noises.\"},{\"id\":\"135\",\"essential\":\"sigh click clinks\",\"balanced\":\"The non-speech sounds include a soft sigh a sharp click and a series of metallic clinks.\",\"detailed\":\"The non-speech sounds include a soft sigh a sharp click and a series of metallic clinks.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172559,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 489,
+        "completion_tokens": 496,
+        "total_tokens": 985,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.578
+  }
+]

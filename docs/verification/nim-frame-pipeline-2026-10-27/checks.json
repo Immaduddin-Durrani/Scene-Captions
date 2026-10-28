@@ -1,0 +1,10 @@
+{
+  "shared_offline_tests": 35,
+  "shared_offline_status": "passed",
+  "candidate_pairing_frame_pts_mute_checks": "passed; see offline-checks.json",
+  "json_syntax_links_secret_pattern_scan": "passed",
+  "existing_map_inputs_fresh": true,
+  "playback_data_and_failed_gate_unchanged": true,
+  "inference_requests": 8,
+  "quality_acceptance": false
+}

@@ -35,7 +35,7 @@ export function CaptionFeedback({ data, display, condition, showOriginal }: {
   const [why, setWhy] = useState(false);
   const { cues, active, nextCue } = display;
   return <>
-    <div className="caption-status"><span><Icon name="sound" size={17} />{captionStatus(cues, active, !!data?.cues.length, nextCue, condition, showOriginal)}</span><button className="text-button" onClick={() => setWhy(!why)} aria-expanded={why}><Icon name="info" size={16} />Why this caption?</button></div>
+    <div className="caption-status"><span><Icon name="sound" size={17} />{data?.generated_with.experimental && showOriginal ? "Showing fixed generated draft" : captionStatus(cues, active, !!data?.cues.length, nextCue, condition, showOriginal)}</span><button className="text-button" onClick={() => setWhy(!why)} aria-expanded={why}><Icon name="info" size={16} />Why this caption?</button></div>
     {why && <div className="explanation"><strong>{active[0]?.reason || "Sound captions follow the video timeline."}</strong><p>{cues[0]?.reference_text && (showOriginal || condition === "baseline") ? "The credited source caption is shown unchanged at its original interval. Leave reference mode to return to your saved preferences." : cues[0]?.scene_context || "When a cue is active, this panel explains the caption selection. You can turn scene adaptation off or show the original at any time."}</p></div>}
   </>;
 }

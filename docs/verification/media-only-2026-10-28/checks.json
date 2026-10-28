@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-28",
+  "node_tests": {
+    "passed": 25,
+    "failed": 0
+  },
+  "python_offline_tests": {
+    "passed": 42,
+    "failed": 0
+  },
+  "production_build": "passed",
+  "caption_schema_validation": "all three default and all three experimental datasets passed",
+  "browser_checks": "reports/browser-checks.json",
+  "baseline_datasets_and_failed_gate_unchanged_from_HEAD": true,
+  "source_hashes": {
+    "src/app/page.tsx": "413915786cb8d361ce10df204f353ceb5fcd4afd8f28f0cf04454660925ec6fc",
+    "src/app/globals.css": "999930bf155d45f7cc5b967d1bdc897605899d0168d02c9d5d9d86b09bcf9a22",
+    "src/lib/captions.ts": "cff117d5d17f54ae8292c931537cb740e2da1f3c2c10cc83654b176d5d24bc9d",
+    "src/lib/experimental-captions.ts": "b5d8340ae0b325a8b3f84c37885c74fdb0603235634cb2065b09dac1c995f23b",
+    "src/components/workspace.tsx": "49fb4f45a8f07889c2fd8134f55923f7e891fd9efac37cb42b099a82bac793cc",
+    "src/components/screening-room.tsx": "719bfc636aeffd3d53f997d237a7c49d9d6775389ce6b8d6366237447d26ca2e",
+    "src/components/hooks/use-local-media.ts": "9cdf72f8029faf404eff762cb2c946e8933d2b3c0a96750d4483751bf860c517",
+    "src/components/caption-track.tsx": "bed8c0f58b7d4315f384c0051aab2807c95cfcd0e17b8dae7d71366c92ce4bba",
+    "src/components/caption-display.tsx": "8e55c782eed20d1e3a96908d94bb97914ffb9039ddb5a4a20a9bdb25bc217a45",
+    "src/components/video-player.tsx": "eb249f9ef48149e2f6493be91c96bd58125902d1c28e7808aea8efb2fa9d8686",
+    "src/components/player-controls.tsx": "7c2d48f3333251e0e92b0ae5c2f18fef6a191803dff629b96a5020691be0ae80",
+    "scripts/generate-media-only.py": "3c6cdef1b4c21b85fc75ee7e5101630eea1345f4f435f02f78435c71fe3c6be9",
+    "scripts/diagnostics/phase1_nim.py": "3b7694b960b220491dd1693fcdaf5bdb4ac04f216ba78e1e64ea49118b3ecb0c",
+    "scripts/verification/media-only-regression.mjs": "a40da46aa66fd5f3a5cf290f67f1828e625d15a33fb4ec542a1f0cb35b9ab0f1",
+    "tests/experimental-captions.test.ts": "487ba33488b3ecae1f5b78db94708a8ec1d1b1a3b0be6a8b7d7b517a00eb8c9f",
+    "tests/offline/test_media_only_generation.py": "1fb14e00c9f449678793c841b5977b4639836037351757db10f02d7a666d0bf8"
+  },
+  "limits": "No full listening review, word/error benchmark, DHH study, full accessibility audit, physical mobile test or accuracy certification. No push/deployment.",
+  "media_manifest_windows_verified": 149,
+  "media_integrity_report": "reports/media-integrity.json",
+  "private_credential_scan": "passed on all changed/untracked files; no secret values printed",
+  "changed_json_parsing": "passed",
+  "typescript_check": "passed"
+}

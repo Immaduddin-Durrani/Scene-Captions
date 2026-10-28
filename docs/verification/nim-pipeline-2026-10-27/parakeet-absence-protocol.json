@@ -1,0 +1,12 @@
+{
+  "created_before_inference": true,
+  "trigger": "Parakeet transcribed speech and returned offsets; negative controls are needed before using it as a speech detector.",
+  "model": "nvidia/parakeet-tdt-0.6b-v2",
+  "cases": [
+    "p02",
+    "p03"
+  ],
+  "max_initial_requests": 2,
+  "criteria": "No invented lexical dialogue on digital silence or controlled dog-only audio. No sound-source labels requested or supplied.",
+  "limits": "Additional ASR control, not a sound-captioning model. Full request budget remains18."
+}

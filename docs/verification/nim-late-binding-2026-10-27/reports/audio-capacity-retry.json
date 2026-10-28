@@ -1,0 +1,189 @@
+{
+  "scope": "NVIDIA audio-first recognition and constrained late visual association",
+  "manifest_sha256": "f9309704eb47e30d9869b5375dd9d89864b64913b46ec46c69f585b38e962fc6",
+  "calls": [
+    {
+      "case": "k02-instruct",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q09.wav",
+          "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "2460a3a17980d42b22ee9e74b3b24ebaff3cc8da27e3b3c3b794113537a34654",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording. Which meaningful sound-event categories are actually audible? Use this same fixed vocabulary: human_speech, dog_barking, bird_call, rainfall, running_water_or_waves, music, tone_or_beep, impact_or_click, other_sound, silence, uncertain. Choose all clearly supported categories; do not guess a category merely because it is listed. Do not count speech consonants as environmental impacts or voiced speech as an electronic tone. silence means no audible signal, not merely no speech. If uncertain about every category, choose uncertain. Return only a JSON array of category names, no explanation or timestamps."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 1024,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "94037471db1043dc4d50f4e6beaab71257126f74d35c8a123532786c05e84b1c",
+      "wire_bytes": 427686,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "9958feab-45e5-4a9e-8abd-2d2597e938ee",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-df625fda-a5ed-41aa-97c6-d73bb37eadd1",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\"dog_barking\", \"tone_or_beep\"]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793117464,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 272,
+          "completion_tokens": 14,
+          "total_tokens": 286
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.8705322742462158,
+            "generation_tokens_per_second": 16.082114832701,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 10.953
+    },
+    {
+      "case": "k06-instruct",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+          "sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d0a6bb73c87c4a3d83b56336698ac3ad1a3a4b153d54dac4a37c9ffd63bfcbe",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording. Which meaningful sound-event categories are actually audible? Use this same fixed vocabulary: human_speech, dog_barking, bird_call, rainfall, running_water_or_waves, music, tone_or_beep, impact_or_click, other_sound, silence, uncertain. Choose all clearly supported categories; do not guess a category merely because it is listed. Do not count speech consonants as environmental impacts or voiced speech as an electronic tone. silence means no audible signal, not merely no speech. If uncertain about every category, choose uncertain. Return only a JSON array of category names, no explanation or timestamps."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 1024,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "23cb34482ff0791208882fbfe124c3044c8042294331344b499e477c89b018a4",
+      "wire_bytes": 214350,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "b471cfe4-99fb-43df-9328-4a6cb1a175e4",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-aef35c5c-9cb4-4943-a256-a46533936d2a",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "[\"impact_or_click\", \"tone_or_beep\"]",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793117475,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 210,
+          "completion_tokens": 14,
+          "total_tokens": 224
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.4967639446258545,
+            "generation_tokens_per_second": 28.18239961143782,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.653
+    }
+  ],
+  "stopped_on_capacity": false
+}

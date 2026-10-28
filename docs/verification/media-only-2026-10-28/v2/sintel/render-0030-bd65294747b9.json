@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"30\", \"observation\": \"A low, sustained musical drone is punctuated by metallic scraping, a sharp impact, and a brief, high-pitched electronic tone.\"}, {\"id\": \"90\", \"observation\": \"A siren wails, then fades into silence, with no other sounds present.\"}, {\"id\": \"165\", \"observation\": \"A person walks on a hard surface, rustles paper, and a door opens and closes.\"}, {\"id\": \"180\", \"observation\": \"A cat meows, a dog barks, and a door slams shut, followed by rustling and a squeaking sound.\"}, {\"id\": \"210\", \"observation\": \"A cat meows, a dog barks, and a dog growls, followed by a sustained, low-pitched musical tone.\"}, {\"id\": \"270\", \"observation\": \"A sharp metallic impact is followed by scraping, a low hum, and a sustained, high-pitched electronic tone.\"}, {\"id\": \"285\", \"observation\": \"A train moves along tracks, producing rhythmic clattering and a deep, resonant horn blast.\"}, {\"id\": \"330\", \"observation\": \"A loud, sustained, high-pitched electronic tone with a metallic, abrasive quality dominates the recording, accompanied by a brief, sharp impact sound.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "721e5159f43bea223f3c4996dab18bfba775234af6145e0b5edd1e11ece78bea",
+    "wire_bytes": 2199,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "3afea1c6-853d-4350-8790-b10df2d6679e",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "c1cddc7f-05cf-4a18-ac21-f13f3c2e2187"
+    },
+    "response": {
+      "id": "chatcmpl-c6d13246-1621-46d7-96b8-ec83f1d30bcd",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"30\",\"essential\":\"musical drone metallic scraping impact electronic tone\",\"balanced\":\"low sustained musical drone with metallic scraping sharp impact and brief high pitched electronic tone\",\"detailed\":\"low sustained musical drone punctuated by metallic scraping sharp impact brief high pitched electronic tone\"},{\"id\":\"90\",\"essential\":\"siren\",\"balanced\":\"siren wails then fades into silence\",\"detailed\":\"siren wails then fades into silence no other sounds present\"},{\"id\":\"165\",\"essential\":\"walking paper rustling door\",\"balanced\":\"person walks on hard surface rustles paper door opens and closes\",\"detailed\":\"person walks on hard surface rustles paper door opens and closes\"},{\"id\":\"180\",\"essential\":\"cat meow dog bark door slam rustling squeaking\",\"balanced\":\"cat meows dog barks door slams shut followed by rustling and squeaking\",\"detailed\":\"cat meows dog barks door slams shut followed by rustling and squeaking sound\"},{\"id\":\"210\",\"essential\":\"cat meow dog bark dog growl musical tone\",\"balanced\":\"cat meows dog barks dog growls followed by sustained low pitched musical tone\",\"detailed\":\"cat meows dog barks dog growls followed by sustained low pitched musical tone\"},{\"id\":\"270\",\"essential\":\"metallic impact scraping hum electronic tone\",\"balanced\":\"sharp metallic impact followed by scraping low hum sustained high pitched electronic tone\",\"detailed\":\"sharp metallic impact followed by scraping low hum sustained high pitched electronic tone\"},{\"id\":\"285\",\"essential\":\"train clattering horn\",\"balanced\":\"train moves along tracks producing rhythmic clattering deep resonant horn blast\",\"detailed\":\"train moves along tracks producing rhythmic clattering deep resonant horn blast\"},{\"id\":\"330\",\"essential\":\"electronic tone impact\",\"balanced\":\"loud sustained high pitched electronic tone metallic abrasive quality accompanied by brief sharp impact sound\",\"detailed\":\"loud sustained high pitched electronic tone metallic abrasive quality accompanied by brief sharp impact sound\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172949,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 502,
+        "completion_tokens": 422,
+        "total_tokens": 924,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.052
+  }
+]

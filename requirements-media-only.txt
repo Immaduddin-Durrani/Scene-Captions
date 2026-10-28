@@ -1,0 +1,9 @@
+# Reuse the isolated scenecaptions-nim-asr runtime; no local model weights.
+# Same pins as docs/verification/nim-pipeline-2026-10-27/client-requirements.lock.txt
+grpcio==1.85.0
+grpcio-tools==1.81.1
+nvidia-riva-client==2.27.0
+protobuf==6.33.5
+setuptools==84.2.1
+typing-extensions==4.16.0
+websockets==15.0.1

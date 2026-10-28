@@ -1,0 +1,154 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v2",
+    "film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/big-buck-bunny/738e2f999860553d/sound15-0510.wav",
+      "sha256": "18f44cb3a275f7c7f2168125483ca3938410eac7f4726521ba7b4ad54ceb5da9",
+      "duration_s": 15.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "afdc4ea7a0a99a659bcd87292cd57d2b3a7bbe0ca1f8fb2524a47f1627121c4c"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "7e0133cc61d25609417cee78800c788bc899b5f167803e3f40a8b0604240ce04",
+                    "data_uri_characters": 640294,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "af4c752ee7024165d76e53c5ee69bb4d7a084eeb54be467225a7c28bf22d07d9",
+      "wire_bytes": 640911,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.858,
+      "validation_error": "Sound inference did not complete"
+    },
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "7e0133cc61d25609417cee78800c788bc899b5f167803e3f40a8b0604240ce04",
+                    "data_uri_characters": 640294,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "af4c752ee7024165d76e53c5ee69bb4d7a084eeb54be467225a7c28bf22d07d9",
+      "wire_bytes": 640911,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "f989d416-c6db-4b2e-b129-1614f0600170",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "0121b497-e6a5-458d-bd46-083e11405769"
+      },
+      "response": {
+        "id": "chatcmpl-0121b497-e6a5-458d-bd46-083e11405769",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A lively, fast-paced orchestral piece featuring prominent brass and percussion, with no speech or environmental sounds present.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793172127,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 284,
+          "completion_tokens": 24,
+          "total_tokens": 308
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.6841270923614502,
+            "generation_tokens_per_second": 35.08120094638774,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.062
+    }
+  ],
+  "asr_attempts": [],
+  "observation": "A lively, fast-paced orchestral piece featuring prominent brass and percussion, with no speech or environmental sounds present.",
+  "asr_reused_from": "docs/verification/media-only-2026-10-28/big-buck-bunny/0510.json",
+  "speech_cues": [],
+  "speech_rejections": [],
+  "rendered": [
+    {
+      "start_s": 0,
+      "end_s": 15.0,
+      "essential": "orchestral music",
+      "balanced": "Orchestral music with brass and percussion plays without speech or environmental sounds.",
+      "detailed": "A lively fast-paced orchestral piece featuring prominent brass and percussion with no speech or environmental sounds present."
+    }
+  ],
+  "render_report": "docs/verification/media-only-2026-10-28/v2/big-buck-bunny/render-0510.json"
+}

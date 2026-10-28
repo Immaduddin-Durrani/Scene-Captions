@@ -1,0 +1,11 @@
+{
+  "created_before_retry": true,
+  "cases": [
+    "p04",
+    "p05"
+  ],
+  "purpose": "One unchanged-payload retry of incomplete sound-stage cells after cooldown.",
+  "maximum_attempts_per_cell": 2,
+  "stop": "If the next sound retry is a third consecutive capacity error on the sound endpoint, stop that stage; do not run the second retry.",
+  "max_total_pipeline_requests": 18
+}

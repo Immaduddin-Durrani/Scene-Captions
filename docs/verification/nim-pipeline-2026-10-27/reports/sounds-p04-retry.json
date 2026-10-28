@@ -1,0 +1,98 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "29b0c5ec676dcd0e78b8f9fc4c33e51297e2735aaba11abbf43ec021a1663301",
+  "calls": [
+    {
+      "case": "p04",
+      "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+          "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "4d42ce8c742423ca91faa782943599373722ec52b5426a8658f2d3af0c1efdf5",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: \"Nine silver spoons rest beside the red kettle.\"\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "96346f1ee5b4fa20e9f11989a6d9fd0a4bff3b09032c7a698c6355fad81afa84",
+      "wire_bytes": 427720,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "87ca7e37-0de8-42d4-9809-45e20b07bdde",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-5c1d7add-48fb-45e7-a25a-1acbd6955286",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793114864,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 276,
+          "completion_tokens": 23,
+          "total_tokens": 299
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.34736132621765137,
+            "generation_tokens_per_second": 66.21347359086414,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.405
+    }
+  ]
+}

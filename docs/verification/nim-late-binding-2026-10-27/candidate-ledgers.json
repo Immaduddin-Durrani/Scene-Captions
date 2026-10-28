@@ -1,0 +1,93 @@
+{
+  "v01-matched": {
+    "acceptance_status": "UNACCEPTED_AUDIO_CANDIDATES",
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "impact_or_click",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e1",
+          "status": "possible",
+          "visible_source": "orange ball",
+          "visual_evidence": "rabbit holds an orange ball in hand"
+        }
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "no visible source for tone or beep"
+        }
+      }
+    ]
+  },
+  "v02-swapped": {
+    "acceptance_status": "UNACCEPTED_AUDIO_CANDIDATES",
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "impact_or_click",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e1",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible impact or click source in the scene."
+        }
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible tone or beep source in the scene."
+        }
+      }
+    ]
+  },
+  "v03-known-mismatch": {
+    "acceptance_status": "UNACCEPTED_AUDIO_CANDIDATES",
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "dog_barking",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e1",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No dog is visible; only an animated rabbit in a field."
+        }
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null,
+        "visual_association": {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible device or object that could produce a tone or beep."
+        }
+      }
+    ]
+  },
+  "v04-empty": {
+    "acceptance_status": "UNACCEPTED_AUDIO_CANDIDATES",
+    "events": []
+  }
+}

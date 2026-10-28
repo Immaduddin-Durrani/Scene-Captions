@@ -1,0 +1,32 @@
+[
+  {
+    "case": "p01",
+    "file": "artifacts/nim-pipeline-2026-10-27/p01.wav",
+    "sha256": "ee30cc75411cbd1f1bf06496899a662c8bcb816f2f783190e7301983d3769289",
+    "duration_s": 2.5924375
+  },
+  {
+    "case": "p02",
+    "file": "artifacts/nim-pipeline-2026-10-27/p02.wav",
+    "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+    "duration_s": 10.0
+  },
+  {
+    "case": "p03",
+    "file": "artifacts/nim-pipeline-2026-10-27/p03.wav",
+    "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+    "duration_s": 10.0
+  },
+  {
+    "case": "p04",
+    "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+    "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+    "duration_s": 10.0
+  },
+  {
+    "case": "p05",
+    "file": "artifacts/nim-pipeline-2026-10-27/p05.wav",
+    "sha256": "8929bd2f106bb51decc42f440fd6935919ebc156a80d19a213e53f36411f16ff",
+    "duration_s": 10.0
+  }
+]

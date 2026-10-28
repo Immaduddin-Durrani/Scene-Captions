@@ -1,0 +1,126 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"510\", \"observation\": \"The recording features footsteps on a hard surface, rustling fabric, and a sharp tearing sound, likely from opening a package.\"}, {\"id\": \"525\", \"observation\": \"A person breathes heavily, then a loud, high-pitched scream is heard.\"}, {\"id\": \"540\", \"observation\": \"A sharp metallic impact is followed by a deep, resonant roar and a series of heavy, rhythmic thuds.\"}, {\"id\": \"555\", \"observation\": \"A woman speaks, followed by a loud explosion, metallic clanking, and a deep, resonant roar.\"}, {\"id\": \"570\", \"observation\": \"A loud, high-pitched scream is followed by a deep, resonant roar and a series of metallic clanks and scrapes.\"}, {\"id\": \"585\", \"observation\": \"A person breathes heavily, followed by a loud, sustained whooshing sound, then a low, resonant hum.\"}, {\"id\": \"600\", \"observation\": \"A loud, high-pitched, sustained scream is followed by a brief silence and then a low, continuous hum.\"}, {\"id\": \"615\", \"observation\": \"A sharp metallic impact and a deep, resonant musical chord are audible in the recording.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "d24c9f70776fe91887e87055c6841d47426ea5588d10f3f1106c214165c40e13",
+    "wire_bytes": 2180,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "13921b89-5724-4da8-a016-f92d17306c66",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "86acf3dd-1994-46f5-9f9a-c3cdb7566747"
+    },
+    "response": {
+      "id": "chatcmpl-89126752-2bd7-4c45-b2b0-df45c74328c2",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"510\",\"essential\":\"footsteps rustling fabric tearing\",\"balanced\":\"footsteps on hard surface rustling fabric sharp tearing sound\",\"detailed\":\"footsteps on hard surface rustling fabric sharp tearing sound\"},{\"id\":\"525\",\"essential\":\"heavy breathing scream\",\"balanced\":\"person breathes heavily loud high-pitched scream\",\"detailed\":\"person breathes heavily loud high-pitched scream\"},{\"id\":\"540\",\"essential\":\"metallic impact roar thuds\",\"balanced\":\"sharp metallic impact deep resonant roar heavy rhythmic thuds\",\"detailed\":\"sharp metallic impact deep resonant roar series of heavy rhythmic thuds\"},{\"id\":\"555\",\"essential\":\"speech explosion clanking roar\",\"balanced\":\"woman speaks loud explosion metallic clanking deep resonant roar\",\"detailed\":\"woman speaks loud explosion metallic clanking deep resonant roar\"},{\"id\":\"570\",\"essential\":\"scream roar clanks scrapes\",\"balanced\":\"loud high-pitched scream deep resonant roar metallic clanks scrapes\",\"detailed\":\"loud high-pitched scream deep resonant roar series of metallic clanks and scrapes\"},{\"id\":\"585\",\"essential\":\"breathing whooshing hum\",\"balanced\":\"person breathes heavily loud sustained whooshing sound low resonant hum\",\"detailed\":\"person breathes heavily loud sustained whooshing sound then low resonant hum\"},{\"id\":\"600\",\"essential\":\"scream silence hum\",\"balanced\":\"loud high-pitched sustained scream brief silence low continuous hum\",\"detailed\":\"loud high-pitched sustained scream brief silence then low continuous hum\"},{\"id\":\"615\",\"essential\":\"metallic impact musical chord\",\"balanced\":\"sharp metallic impact deep resonant musical chord\",\"detailed\":\"sharp metallic impact and deep resonant musical chord audible\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"510\",\n      \"essential\": \"footsteps rustling fabric tearing\",\n      \"balanced\": \"footsteps on hard surface rustling fabric sharp tearing sound\",\n      \"detailed\": \"footsteps on hard surface rustling fabric sharp tearing sound\"\n    },\n    {\n      \"id\": \"525\",\n      \"essential\": \"heavy breathing scream\",\n      \"balanced\": \"person breathes heavily loud high-pitched scream\",\n      \"detailed\": \"person breathes heavily loud high-pitched scream\"\n    },\n    {\n      \"id\": \"540\",\n      \"essential\": \"metallic impact roar thuds\",\n      \"balanced\": \"sharp metallic impact deep resonant roar heavy rhythmic thuds\",\n      \"detailed\": \"sharp metallic impact deep resonant roar series of heavy rhythmic thuds\"\n    },\n    {\n      \"id\": \"555\",\n      \"essential\": \"speech explosion clanking roar\",\n      \"balanced\": \"woman speaks loud explosion metallic clanking deep resonant roar\",\n      \"detailed\": \"woman speaks loud explosion metallic clanking deep resonant roar\"\n    },\n    {\n      \"id\": \"570\",\n      \"essential\": \"scream roar clanks scrapes\",\n      \"balanced\": \"loud high-pitched scream deep resonant roar metallic clanks scrapes\",\n      \"detailed\": \"loud high-pitched scream deep resonant roar series of metallic clanks and scrapes\"\n    },\n    {\n      \"id\": \"585\",\n      \"essential\": \"breathing whooshing hum\",\n      \"balanced\": \"person breathes heavily loud sustained whooshing sound low resonant hum\",\n      \"detailed\": \"person breathes heavily loud sustained whooshing sound then low resonant hum\"\n    },\n    {\n      \"id\": \"600\",\n      \"essential\": \"scream silence hum\",\n      \"balanced\": \"loud high-pitched sustained scream brief silence low continuous hum\",\n      \"detailed\": \"loud high-pitched sustained scream brief silence then low continuous hum\"\n    },\n    {\n      \"id\": \"615\",\n      \"essential\": \"metallic impact musical chord\",\n      \"balanced\": \"sharp metallic impact deep resonant musical chord\",\n      \"detailed\": \"sharp metallic impact and deep resonant musical chord audible\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172569,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 863,
+        "total_tokens": 1353,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 7.133,
+    "validation_error": "Extra data: line 3 column 1 (char 1693)"
+  },
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"510\", \"observation\": \"The recording features footsteps on a hard surface, rustling fabric, and a sharp tearing sound, likely from opening a package.\"}, {\"id\": \"525\", \"observation\": \"A person breathes heavily, then a loud, high-pitched scream is heard.\"}, {\"id\": \"540\", \"observation\": \"A sharp metallic impact is followed by a deep, resonant roar and a series of heavy, rhythmic thuds.\"}, {\"id\": \"555\", \"observation\": \"A woman speaks, followed by a loud explosion, metallic clanking, and a deep, resonant roar.\"}, {\"id\": \"570\", \"observation\": \"A loud, high-pitched scream is followed by a deep, resonant roar and a series of metallic clanks and scrapes.\"}, {\"id\": \"585\", \"observation\": \"A person breathes heavily, followed by a loud, sustained whooshing sound, then a low, resonant hum.\"}, {\"id\": \"600\", \"observation\": \"A loud, high-pitched, sustained scream is followed by a brief silence and then a low, continuous hum.\"}, {\"id\": \"615\", \"observation\": \"A sharp metallic impact and a deep, resonant musical chord are audible in the recording.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "d24c9f70776fe91887e87055c6841d47426ea5588d10f3f1106c214165c40e13",
+    "wire_bytes": 2180,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "ee0b6350-246b-4d3c-a19a-b85c99cb1223",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "484177c0-e0be-483b-b793-eb8f5a74b67a"
+    },
+    "response": {
+      "id": "chatcmpl-dbb3a0bf-fcfe-4832-848b-164a1f2a05cb",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"510\",\"essential\":\"footsteps fabric rustle tearing\",\"balanced\":\"footsteps on hard surface rustling fabric sharp tearing sound\",\"detailed\":\"footsteps on hard surface rustling fabric sharp tearing sound\"},{\"id\":\"525\",\"essential\":\"heavy breathing scream\",\"balanced\":\"heavy breathing then loud high pitched scream\",\"detailed\":\"heavy breathing then loud high pitched scream\"},{\"id\":\"540\",\"essential\":\"metallic impact roar thuds\",\"balanced\":\"sharp metallic impact deep resonant roar heavy rhythmic thuds\",\"detailed\":\"sharp metallic impact deep resonant roar series of heavy rhythmic thuds\"},{\"id\":\"555\",\"essential\":\"speech explosion clanking roar\",\"balanced\":\"woman speaks loud explosion metallic clanking deep resonant roar\",\"detailed\":\"woman speaks loud explosion metallic clanking deep resonant roar\"},{\"id\":\"570\",\"essential\":\"scream roar metallic clanks scrapes\",\"balanced\":\"loud high pitched scream deep resonant roar metallic clanks and scrapes\",\"detailed\":\"loud high pitched scream deep resonant roar series of metallic clanks and scrapes\"},{\"id\":\"585\",\"essential\":\"heavy breathing whooshing hum\",\"balanced\":\"heavy breathing loud sustained whooshing low resonant hum\",\"detailed\":\"heavy breathing loud sustained whooshing sound then low resonant hum\"},{\"id\":\"600\",\"essential\":\"scream silence hum\",\"balanced\":\"loud high pitched sustained scream brief silence low continuous hum\",\"detailed\":\"loud high pitched sustained scream brief silence then low continuous hum\"},{\"id\":\"615\",\"essential\":\"metallic impact musical chord\",\"balanced\":\"sharp metallic impact deep resonant musical chord\",\"detailed\":\"sharp metallic impact and deep resonant musical chord\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"510\",\n      \"essential\": \"footsteps fabric rustle tearing\",\n      \"balanced\": \"footsteps on hard surface rustling fabric sharp tearing sound\",\n      \"detailed\": \"footsteps on hard surface rustling fabric sharp tearing sound\"\n    },\n    {\n      \"id\": \"525\",\n      \"essential\": \"heavy breathing scream\",\n      \"balanced\": \"heavy breathing then loud high pitched scream\",\n      \"detailed\": \"heavy breathing then loud high pitched scream\"\n    },\n    {\n      \"id\": \"540\",\n      \"essential\": \"metallic impact roar thuds\",\n      \"balanced\": \"sharp metallic impact deep resonant roar heavy rhythmic thuds\",\n      \"detailed\": \"sharp metallic impact deep resonant roar series of heavy rhythmic thuds\"\n    },\n    {\n      \"id\": \"555\",\n      \"essential\": \"speech explosion clanking roar\",\n      \"balanced\": \"woman speaks loud explosion metallic clanking deep resonant roar\",\n      \"detailed\": \"woman speaks loud explosion metallic clanking deep resonant roar\"\n    },\n    {\n      \"id\": \"570\",\n      \"essential\": \"scream roar metallic clanks scrapes\",\n      \"balanced\": \"loud high pitched scream deep resonant roar metallic clanks and scrapes\",\n      \"detailed\": \"loud high pitched scream deep resonant roar series of metallic clanks and scrapes\"\n    },\n    {\n      \"id\": \"585\",\n      \"essential\": \"heavy breathing whooshing hum\",\n      \"balanced\": \"heavy breathing loud sustained whooshing low resonant hum\",\n      \"detailed\": \"heavy breathing loud sustained whooshing sound then low resonant hum\"\n    },\n    {\n      \"id\": \"600\",\n      \"essential\": \"scream silence hum\",\n      \"balanced\": \"loud high pitched sustained scream brief silence low continuous hum\",\n      \"detailed\": \"loud high pitched sustained scream brief silence then low continuous hum\"\n    },\n    {\n      \"id\": \"615\",\n      \"essential\": \"metallic impact musical chord\",\n      \"balanced\": \"sharp metallic impact deep resonant musical chord\",\n      \"detailed\": \"sharp metallic impact and deep resonant musical chord\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172576,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 490,
+        "completion_tokens": 847,
+        "total_tokens": 1337,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 4.573,
+    "validation_error": "Extra data: line 3 column 1 (char 1674)"
+  }
+]

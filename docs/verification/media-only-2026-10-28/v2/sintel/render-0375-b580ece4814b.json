@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"375\", \"observation\": \"A low, sustained musical drone is accompanied by intermittent metallic scraping and a brief, high-pitched electronic beep.\"}, {\"id\": \"495\", \"observation\": \"A person walks on a dry, crunchy surface, then tears a plastic bag, followed by a brief electronic beep.\"}, {\"id\": \"645\", \"observation\": \"A high-pitched, sustained electronic tone with a wavering, dissonant quality dominates the recording, accompanied by a faint, low-frequency hum.\"}, {\"id\": \"690\", \"observation\": \"A person breathes heavily, followed by a cat meowing and a dog barking.\"}, {\"id\": \"840\", \"observation\": \"A female vocalist sings over a gentle piano melody, accompanied by subtle string harmonies and a soft, sustained bass line.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "d999509c57830ff54a9ac387be26b1902a80e5a22d53aeb502dfd7389b57416a",
+    "wire_bytes": 1836,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "632fa9f6-3185-4b5f-8ba3-992c3f19e0ae",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "63fefa1c-68d7-4666-8abb-4b95b89d52c5"
+    },
+    "response": {
+      "id": "chatcmpl-a1aa09e0-07b1-46ec-9444-81cd81b786c6",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"375\",\"essential\":\"musical drone metallic scraping electronic beep\",\"balanced\":\"A low sustained musical drone with intermittent metallic scraping and a brief high pitched electronic beep\",\"detailed\":\"A low sustained musical drone accompanied by intermittent metallic scraping and a brief high pitched electronic beep\"},{\"id\":\"495\",\"essential\":\"walking plastic bag tear electronic beep\",\"balanced\":\"A person walks on a dry crunchy surface then tears a plastic bag followed by a brief electronic beep\",\"detailed\":\"A person walks on a dry crunchy surface then tears a plastic bag followed by a brief electronic beep\"},{\"id\":\"645\",\"essential\":\"electronic tone low frequency hum\",\"balanced\":\"A high pitched sustained electronic tone with a wavering dissonant quality accompanied by a faint low frequency hum\",\"detailed\":\"A high pitched sustained electronic tone with a wavering dissonant quality accompanied by a faint low frequency hum\"},{\"id\":\"690\",\"essential\":\"breathing cat meow dog bark\",\"balanced\":\"A person breathes heavily followed by a cat meowing and a dog barking\",\"detailed\":\"A person breathes heavily followed by a cat meowing and a dog barking\"},{\"id\":\"840\",\"essential\":\"female vocals piano strings bass\",\"balanced\":\"A female vocalist sings over a gentle piano melody accompanied by subtle string harmonies and a soft sustained bass line\",\"detailed\":\"A female vocalist sings over a gentle piano melody accompanied by subtle string harmonies and a soft sustained bass line\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172952,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 395,
+        "completion_tokens": 324,
+        "total_tokens": 719,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.692
+  }
+]

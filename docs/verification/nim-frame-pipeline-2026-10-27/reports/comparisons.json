@@ -1,0 +1,937 @@
+{
+  "scope": "Actual audio with event-triggered matching frames; no source-caption inputs or playback installation",
+  "manifest_sha256": "c53b9c8ab88114d5121aeb1f8e8c7646af81f24b852e1acfdd96a71d502b7fbb",
+  "calls": [
+    {
+      "case": "f01-audio",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav",
+          "sha256": "5e668be7cfef964c6ff7b1e651df70aee4de948370d6b05697db148f2ad4575b",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "5e4ef6064211758abe3fa16d3d1bc236c84b72d471a294344fd0f91782166596",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "aa83e43f2a89a3cf4d237eba7175a505f889cbff5197bd132ca5fd84d240966d",
+      "wire_bytes": 214348,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "2e6dd24b-ec52-4270-994f-ff581676b006",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-a272d253-f4b0-4e5f-beb0-0309396994df",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A train horn sounds, followed by a train passing by. The train horn and passing train are audible in the background.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116195,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 201,
+          "completion_tokens": 25,
+          "total_tokens": 226
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 11,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.3548433780670166,
+            "generation_tokens_per_second": 70.45361854062396,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.358
+    },
+    {
+      "case": "f01-single",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav",
+          "sha256": "5e668be7cfef964c6ff7b1e651df70aee4de948370d6b05697db148f2ad4575b",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg",
+          "sha256": "c60283125c86b50860a5b728e1697b6c31933fdb319862598f33f094be609dda",
+          "bytes": 29395,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "5e4ef6064211758abe3fa16d3d1bc236c84b72d471a294344fd0f91782166596",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.9833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "982fa4be89c55c6a34a5945f88d056e0a9271fdd5014c4082b4ea64b208ad98d",
+                    "data_uri_characters": 39219,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "99773a1af4a0cf107067d7f46388d8ccbec3c1b52cd84080b04ceaa1ab27a68f",
+      "wire_bytes": 253676,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "8d8b6567-1d4e-49ee-a0f7-e3f46522cf68",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-dabd2778-ed3e-466b-a13b-d81dd2d5b3a3",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A loud, high-pitched, sustained electronic tone sounds, followed by a brief, low-pitched musical chord. The electronic tone is clearly audible and distinct from the background, while the musical chord is softer and less prominent, occurring after the initial tone.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116198,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 479,
+          "completion_tokens": 52,
+          "total_tokens": 531
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 12,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.2803936004638672,
+            "generation_tokens_per_second": 40.61251163795351,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.272
+    },
+    {
+      "case": "f01-triplet",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav",
+          "sha256": "5e668be7cfef964c6ff7b1e651df70aee4de948370d6b05697db148f2ad4575b",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-01.jpg",
+          "sha256": "0d6fc200dbf24319b128062b3b0e2acf94400a86c35f4ef1c76013277ed11091",
+          "bytes": 30828,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg",
+          "sha256": "c60283125c86b50860a5b728e1697b6c31933fdb319862598f33f094be609dda",
+          "bytes": 29395,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-03.jpg",
+          "sha256": "3147ff59727e947917672c845f939f11269403bad3326528b28fc6d890cef647",
+          "bytes": 26787,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "5e4ef6064211758abe3fa16d3d1bc236c84b72d471a294344fd0f91782166596",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.4833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "77aa567f76218ad342010d16b2ae5c9bd77124180fcc305acaab6837ef3a2ca1",
+                    "data_uri_characters": 41127,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.9833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "982fa4be89c55c6a34a5945f88d056e0a9271fdd5014c4082b4ea64b208ad98d",
+                    "data_uri_characters": 39219,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.4833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3f1e79a2c8ca2d16bf47d50d0606990d9fd1c7cfb32c7089e81a1254600565e3",
+                    "data_uri_characters": 35739,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "532cd41646cb21e1b2642f81bdd858f7d6e6f08903306000eac015eee9b09b72",
+      "wire_bytes": 330760,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "f909c623-8958-4c71-9d92-39e0e563df2b",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-c4c045cc-fed4-43ab-95b6-74daf0edd45c",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A loud, sustained musical note plays as the rabbit stands near a cave entrance. The musical note is audible at 2 seconds, coinciding with the rabbit's position near the cave entrance shown in the images.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116201,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1048,
+          "completion_tokens": 43,
+          "total_tokens": 1091
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.0921027660369873,
+            "generation_tokens_per_second": 39.373584004404655,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.126
+    },
+    {
+      "case": "f02-audio",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+          "sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d0a6bb73c87c4a3d83b56336698ac3ad1a3a4b153d54dac4a37c9ffd63bfcbe",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "92f8cce0e5f0ec46ac5b82096197c3c7d502a481044b7f32a65ece9520c36cd5",
+      "wire_bytes": 214348,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "a747f13f-8b74-4114-88ce-0a77ad299afd",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-fca9b594-f0e1-4a4c-92ef-c5fe1b612f9d",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A sharp, high-pitched click is heard, followed by a brief, low-frequency thump. The click is consistent with a small, hard object being struck or dropped onto a solid surface, while the thump suggests a soft impact or settling of the object.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116204,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 201,
+          "completion_tokens": 54,
+          "total_tokens": 255
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.7118782997131348,
+            "generation_tokens_per_second": 75.85566243803238,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.597
+    },
+    {
+      "case": "f02-single",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+          "sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg",
+          "sha256": "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+          "bytes": 17244,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d0a6bb73c87c4a3d83b56336698ac3ad1a3a4b153d54dac4a37c9ffd63bfcbe",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.0000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "b3eb4a1304524355045ae1271af7af4b125f383f2e0808464423d1c4f299bc2a",
+                    "data_uri_characters": 23015,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "26163ceaed148fbb13aa72f35a2b93021928d7059709a9868887e02affb30f3e",
+      "wire_bytes": 237472,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "b254b7fe-3ef3-4d6a-85dd-911b18a3c2b6",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-24f4d09b-b0f5-4ed8-8a93-6d791f28d84d",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A soft thud is heard as a heavy object lands on grass. The sound occurs at the same moment a large white rabbit is shown in a grassy field, suggesting the rabbit may have dropped or landed on the ground.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116207,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 479,
+          "completion_tokens": 46,
+          "total_tokens": 525
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 13,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.6578929424285889,
+            "generation_tokens_per_second": 69.92019070791761,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.554
+    },
+    {
+      "case": "f02-triplet",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav",
+          "sha256": "04429c178708b7d6b4e034d8a4d471e2f0ef6e436cb5f0ed9ae49b520ecac22d",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-04.jpg",
+          "sha256": "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+          "bytes": 17514,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg",
+          "sha256": "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+          "bytes": 17244,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-06.jpg",
+          "sha256": "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd",
+          "bytes": 17096,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "9d0a6bb73c87c4a3d83b56336698ac3ad1a3a4b153d54dac4a37c9ffd63bfcbe",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.5000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3e796d8db46e57156775e027b9434a943ab7249175a116b5e339f3ef6593cb07",
+                    "data_uri_characters": 23375,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.0000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "b3eb4a1304524355045ae1271af7af4b125f383f2e0808464423d1c4f299bc2a",
+                    "data_uri_characters": 23015,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.5000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "a4fe370ecccba174a18f728dfa87362e23af5a0688b85d14b16ff387f6ad8933",
+                    "data_uri_characters": 22819,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5025309a4094748bed53d590a78d4c84d01c59533f805c0518428ddd80a5a975",
+      "wire_bytes": 283884,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 2.101
+    },
+    {
+      "case": "f01-mute",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/zero.wav",
+          "sha256": "262d1f34f300560a4c82ba8127ddea9e1d72946f187fdbd3e8f70ee096077aec",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-01.jpg",
+          "sha256": "0d6fc200dbf24319b128062b3b0e2acf94400a86c35f4ef1c76013277ed11091",
+          "bytes": 30828,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg",
+          "sha256": "c60283125c86b50860a5b728e1697b6c31933fdb319862598f33f094be609dda",
+          "bytes": 29395,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-03.jpg",
+          "sha256": "3147ff59727e947917672c845f939f11269403bad3326528b28fc6d890cef647",
+          "bytes": 26787,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "bee78c3530b386351a3298a12eca911efd2b9d395b222c29b2e9335dece9bce9",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.4833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "77aa567f76218ad342010d16b2ae5c9bd77124180fcc305acaab6837ef3a2ca1",
+                    "data_uri_characters": 41127,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.9833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "982fa4be89c55c6a34a5945f88d056e0a9271fdd5014c4082b4ea64b208ad98d",
+                    "data_uri_characters": 39219,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.4833 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3f1e79a2c8ca2d16bf47d50d0606990d9fd1c7cfb32c7089e81a1254600565e3",
+                    "data_uri_characters": 35739,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "dc0a24615029e2370d528ef4d3ca569258988b0abf1f8a9c2a0f3acc19275f69",
+      "wire_bytes": 330760,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 1.879
+    },
+    {
+      "case": "f02-mute",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/zero.wav",
+          "sha256": "262d1f34f300560a4c82ba8127ddea9e1d72946f187fdbd3e8f70ee096077aec",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-04.jpg",
+          "sha256": "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+          "bytes": 17514,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg",
+          "sha256": "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+          "bytes": 17244,
+          "modality": "image"
+        },
+        {
+          "file": "artifacts/nim-frame-pipeline-2026-10-27/frame-06.jpg",
+          "sha256": "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd",
+          "bytes": 17096,
+          "modality": "image"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "bee78c3530b386351a3298a12eca911efd2b9d395b222c29b2e9335dece9bce9",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 1.5000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "3e796d8db46e57156775e027b9434a943ab7249175a116b5e339f3ef6593cb07",
+                    "data_uri_characters": 23375,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.0000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "b3eb4a1304524355045ae1271af7af4b125f383f2e0808464423d1c4f299bc2a",
+                    "data_uri_characters": 23015,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Image at LOCAL 2.5000 seconds."
+              },
+              {
+                "type": "image_url",
+                "image_url": {
+                  "url": {
+                    "inline_media_sha256": "a4fe370ecccba174a18f728dfa87362e23af5a0688b85d14b16ff387f6ad8933",
+                    "data_uri_characters": 22819,
+                    "prefix": "data:image/jpeg;base64"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 512,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "f7f9e3c5789b624fbf0882f69f771f0d10a3cca670d4fa5bb1ac8fddf0b526b2",
+      "wire_bytes": 283884,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "9dc3d6ae-20b5-4c91-8f55-5f9b5e569010",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-0d29e7ba-9b4b-4c21-8465-6f1ce3a5fa99",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\nA soft thud is heard as the rabbit's hand makes contact with the apple. The audio captures a gentle impact sound at the moment the rabbit's hand touches the apple, visible in the sequence where the rabbit's hand moves toward and then grasps the apple.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793116213,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 1048,
+          "completion_tokens": 55,
+          "total_tokens": 1103
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.3349206447601318,
+            "generation_tokens_per_second": 41.20095094482773,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.688
+    }
+  ],
+  "stopped_on_capacity": false
+}

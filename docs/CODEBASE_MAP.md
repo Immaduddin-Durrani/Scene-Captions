@@ -1,5 +1,7 @@
 # Codebase map
 
+**28 October 2026 freshness note:** the snapshot predates the new optional media-only subtitle selector, experimental metadata/binding guards and offline full-film generator. Inspect those changed files directly; no mapping skill or refresh was requested. The graph below remains a historical orientation aid.
+
 Refreshed **26 October 2026** for the caption-free NIM investigation. The manifest covers **79 code/config/test files, 436 nodes and 1,019 edges**. All recorded input hashes matched after final code edits. Graphifyy 0.9.92 used local deterministic AST extraction with `parallel=False`: zero semantic/model calls, no agents, providers, watchers or MCP services.
 
 - [Interactive map](codebase-map.html) — the optional viewer loads CDN-hosted vis.js when opened; playback does not depend on it.

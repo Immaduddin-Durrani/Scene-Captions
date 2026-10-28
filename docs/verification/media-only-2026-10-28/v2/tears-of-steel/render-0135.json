@@ -1,0 +1,125 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"135\", \"observation\": \"A man speaks, followed by the sound of a door opening and closing, and then music begins.\"}, {\"id\": \"150\", \"observation\": \"A person breathes, followed by a brief musical piece and then a sustained, low-frequency electronic tone.\"}, {\"id\": \"165\", \"observation\": \"A continuous, low-frequency hum and rhythmic mechanical clanking are audible, suggesting an industrial or mechanical environment.\"}, {\"id\": \"180\", \"observation\": \"A rock band plays energetic music with drums, bass, and guitar, followed by a door opening and closing.\"}, {\"id\": \"195\", \"observation\": \"Mechanical clanking, metallic scraping, and a deep rumble accompany the speech, followed by a sudden, loud explosion.\"}, {\"id\": \"210\", \"observation\": \"A loud, sustained, high-pitched electronic tone plays continuously, followed by a male voice speaking.\"}, {\"id\": \"225\", \"observation\": \"Music plays softly in the background, accompanied by subtle ambient sounds and a faint, rhythmic heartbeat.\"}, {\"id\": \"240\", \"observation\": \"A low, sustained musical drone plays continuously, accompanied by a faint, rhythmic ticking sound.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "4afbdb0020e82326b079aded0af678f8e667290590316de457cd197fbf4e1b37",
+    "wire_bytes": 2248,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "2a07df92-1c87-4317-b6d6-10f3744f5a0e",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "b5ddbc7a-9f67-457a-bcc6-e64fe95a8e0c"
+    },
+    "response": {
+      "id": "chatcmpl-ee7d5dd8-ce56-4942-a4f1-d81def8d19d7",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"135\",\"essential\":\"speech door music\",\"balanced\":\"speech followed by a door opening and closing then music\",\"detailed\":\"speech followed by a door opening and closing then music begins\"},{\"id\":\"150\",\"essential\":\"breathing music tone\",\"balanced\":\"breathing followed by brief music then sustained low-frequency electronic tone\",\"detailed\":\"breathing followed by brief musical piece then sustained low-frequency electronic tone\"},{\"id\":\"165\",\"essential\":\"hum clanking\",\"balanced\":\"continuous low-frequency hum and rhythmic mechanical clanking\",\"detailed\":\"continuous low-frequency hum and rhythmic mechanical clanking\"},{\"id\":\"180\",\"essential\":\"band music door\",\"balanced\":\"rock band music with drums bass and guitar followed by door opening and closing\",\"detailed\":\"rock band plays energetic music with drums bass and guitar followed by door opening and closing\"},{\"id\":\"195\",\"essential\":\"clanking scraping rumble speech explosion\",\"balanced\":\"mechanical clanking metallic scraping and deep rumble accompany speech followed by sudden loud explosion\",\"detailed\":\"mechanical clanking metallic scraping and deep rumble accompany speech followed by sudden loud explosion\"},{\"id\":\"210\",\"essential\":\"tone speech\",\"balanced\":\"loud sustained high-pitched electronic tone followed by male voice speaking\",\"detailed\":\"loud sustained high-pitched electronic tone plays continuously followed by male voice speaking\"},{\"id\":\"225\",\"essential\":\"music ambient heartbeat\",\"balanced\":\"soft background music with subtle ambient sounds and faint rhythmic heartbeat\",\"detailed\":\"music plays softly in background accompanied by subtle ambient sounds and faint rhythmic heartbeat\"},{\"id\":\"240\",\"essential\":\"drone ticking\",\"balanced\":\"low sustained musical drone with faint rhythmic ticking\",\"detailed\":\"low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound\"}]}\n\n{\"captions\":[{\"id\":\"135\",\"essential\":\"speech door music\",\"balanced\":\"speech followed by a door opening and closing then music\",\"detailed\":\"speech followed by a door opening and closing then music begins\"},{\"id\":\"150\",\"essential\":\"breathing music tone\",\"balanced\":\"breathing followed by brief music then sustained low-frequency electronic tone\",\"detailed\":\"breathing followed by brief musical piece then sustained low-frequency electronic tone\"},{\"id\":\"165\",\"essential\":\"hum clanking\",\"balanced\":\"continuous low-frequency hum and rhythmic mechanical clanking\",\"detailed\":\"continuous low-frequency hum and rhythmic mechanical clanking\"},{\"id\":\"180\",\"essential\":\"band music door\",\"balanced\":\"rock band music with drums bass and guitar followed by door opening and closing\",\"detailed\":\"rock band plays energetic music with drums bass and guitar followed by door opening and closing\"},{\"id\":\"195\",\"essential\":\"clanking scraping rumble speech explosion\",\"balanced\":\"mechanical clanking metallic scraping and deep rumble accompany speech followed by sudden loud explosion\",\"detailed\":\"mechanical clanking metallic scraping and deep rumble accompany speech followed by sudden loud explosion\"},{\"id\":\"210\",\"essential\":\"tone speech\",\"balanced\":\"loud sustained high-pitched electronic tone followed by male voice speaking\",\"detailed\":\"loud sustained high-pitched electronic tone plays continuously followed by male voice speaking\"},{\"id\":\"225\",\"essential\":\"music ambient heartbeat\",\"balanced\":\"soft background music with subtle ambient sounds and faint rhythmic heartbeat\",\"detailed\":\"music plays softly in background accompanied by subtle ambient sounds and faint rhythmic heartbeat\"},{\"id\":\"240\",\"essential\":\"drone ticking\",\"balanced\":\"low sustained musical drone with faint rhythmic ticking\",\"detailed\":\"low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172610,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 764,
+        "total_tokens": 1246,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 19.087,
+    "validation_error": "Extra data: line 3 column 1 (char 1892)"
+  },
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"135\", \"observation\": \"A man speaks, followed by the sound of a door opening and closing, and then music begins.\"}, {\"id\": \"150\", \"observation\": \"A person breathes, followed by a brief musical piece and then a sustained, low-frequency electronic tone.\"}, {\"id\": \"165\", \"observation\": \"A continuous, low-frequency hum and rhythmic mechanical clanking are audible, suggesting an industrial or mechanical environment.\"}, {\"id\": \"180\", \"observation\": \"A rock band plays energetic music with drums, bass, and guitar, followed by a door opening and closing.\"}, {\"id\": \"195\", \"observation\": \"Mechanical clanking, metallic scraping, and a deep rumble accompany the speech, followed by a sudden, loud explosion.\"}, {\"id\": \"210\", \"observation\": \"A loud, sustained, high-pitched electronic tone plays continuously, followed by a male voice speaking.\"}, {\"id\": \"225\", \"observation\": \"Music plays softly in the background, accompanied by subtle ambient sounds and a faint, rhythmic heartbeat.\"}, {\"id\": \"240\", \"observation\": \"A low, sustained musical drone plays continuously, accompanied by a faint, rhythmic ticking sound.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "4afbdb0020e82326b079aded0af678f8e667290590316de457cd197fbf4e1b37",
+    "wire_bytes": 2248,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "1b38f663-3d8c-49ab-aceb-122dea7c87a6",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "19109b68-d183-422b-919d-bb3efd1e4422"
+    },
+    "response": {
+      "id": "chatcmpl-75da0490-e6b2-4dbf-bdfd-fc5966ac53e3",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"135\",\"essential\":\"door opening closing music\",\"balanced\":\"door opening and closing followed by music\",\"detailed\":\"door opening and closing followed by music begins\"},{\"id\":\"150\",\"essential\":\"breathing music electronic tone\",\"balanced\":\"breathing followed by brief music and sustained low-frequency electronic tone\",\"detailed\":\"breathing followed by brief musical piece and then sustained low-frequency electronic tone\"},{\"id\":\"165\",\"essential\":\"hum mechanical clanking\",\"balanced\":\"continuous low-frequency hum and rhythmic mechanical clanking\",\"detailed\":\"continuous low-frequency hum and rhythmic mechanical clanking are audible\"},{\"id\":\"180\",\"essential\":\"rock band music door opening closing\",\"balanced\":\"rock band music with drums bass guitar followed by door opening and closing\",\"detailed\":\"rock band plays energetic music with drums bass and guitar followed by a door opening and closing\"},{\"id\":\"195\",\"essential\":\"mechanical clanking metallic scraping deep rumble explosion\",\"balanced\":\"mechanical clanking metallic scraping deep rumble accompany speech followed by sudden loud explosion\",\"detailed\":\"mechanical clanking metallic scraping and a deep rumble accompany the speech followed by a sudden loud explosion\"},{\"id\":\"210\",\"essential\":\"high-pitched electronic tone male voice\",\"balanced\":\"loud sustained high-pitched electronic tone followed by male voice speaking\",\"detailed\":\"loud sustained high-pitched electronic tone plays continuously followed by a male voice speaking\"},{\"id\":\"225\",\"essential\":\"soft music ambient sounds heartbeat\",\"balanced\":\"soft background music with subtle ambient sounds and faint rhythmic heartbeat\",\"detailed\":\"music plays softly in the background accompanied by subtle ambient sounds and a faint rhythmic heartbeat\"},{\"id\":\"240\",\"essential\":\"musical drone ticking\",\"balanced\":\"low sustained musical drone with faint rhythmic ticking\",\"detailed\":\"low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172629,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 397,
+        "total_tokens": 879,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 6.037
+  }
+]

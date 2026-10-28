@@ -1,0 +1,73 @@
+{
+  "created_before_inference": true,
+  "date": "2026-10-27",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "fixtures": {
+    "q01": {
+      "file": "artifacts/nim-recognition-2026-10-27/q01.wav",
+      "sha256": "c49afe2314c0157515aa0aed65ad4ae511f72182ea820e9684cf710bf210be86",
+      "samples": 160000,
+      "duration_s": 10.0,
+      "nonzero_support_s": [
+        3.2291875,
+        3.5866875
+      ],
+      "evaluation_only_label": "dog"
+    },
+    "q02": {
+      "file": "artifacts/nim-recognition-2026-10-27/q02.wav",
+      "sha256": "d86d44780b15d8207b6d577573b19876a4791486dba02dae8c74b55f063e0184",
+      "samples": 24000,
+      "duration_s": 1.5,
+      "nonzero_support_s": [
+        0.4791875,
+        0.8366875
+      ],
+      "evaluation_only_label": "dog"
+    },
+    "q03": {
+      "file": "artifacts/nim-recognition-2026-10-27/q03.wav",
+      "sha256": "20c51a2ccfac3b8373f678d9f14b68c2e3ffc33dac17956b738f9241e4c0725b",
+      "samples": 24000,
+      "duration_s": 1.5,
+      "nonzero_support_s": null,
+      "evaluation_only_label": "digital-silence"
+    }
+  },
+  "source_protocol_sha256": "834f25e14e20feb8ff91473a95859198b63ed34fc7b60a6908af3061beadb58d",
+  "source_wav_sha256": "7d93ec4afa65e45066b66f3e7234f250faa608cea04dc685785de5a7b6a02efb",
+  "crop_source_sample_range": [
+    44000,
+    68000
+  ],
+  "crop_amplitude_changed": false,
+  "crop_contains_all_original_nonzero_samples": true,
+  "manifest_sha256": "4343c6e2f30a1099b29c813e3e3ad11d2f12b3778ccaf939771e2e22ac70aff0",
+  "caption_or_plot_input": false,
+  "criteria": {
+    "completed": "HTTP 200, finish_reason stop and nonempty text",
+    "recognition": "dog/bark/canine vocalization; generic sound alone is partial, not a strict hit",
+    "silence": "no audible sound, with no asserted sound event",
+    "capacity_timeout": "inconclusive, not semantic failure"
+  },
+  "budget": {
+    "initial_recognition_calls": 3,
+    "max_total_calls": 24,
+    "max_retries_per_inconclusive_cell": 1,
+    "timeout_s": 180,
+    "min_start_interval_s": 2.05,
+    "stop": "Stop at authentication failure or three consecutive capacity errors. No full-film run."
+  },
+  "conditional_next_steps": [
+    "If sound recognition fails: up to three rain/silence recognition controls; keep original crop samples.",
+    "If dog recognized in both recordings: test c01/c02 temporal shift, two requests.",
+    "If a natural sound and absence controls succeed: at most four audio/silent-video comparison requests.",
+    "A fresh speech positive control may diagnose transport if completed natural-sound requests fail."
+  ],
+  "limits": [
+    "Dataset category labels are evaluation-only, not listening-panel annotations.",
+    "Cropping changes duration/context and whole-clip RMS, while preserving sample amplitudes; it does not isolate every preprocessing mechanism.",
+    "This is a tiny endpoint diagnostic, not movie accuracy or DHH usability evidence.",
+    "No output installation or capability-gate changes are authorized by a passing isolated fixture."
+  ]
+}

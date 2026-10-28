@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"315\", \"observation\": \"A series of sharp, metallic impacts and scraping sounds occur, followed by a brief, high-pitched electronic tone.\"}, {\"id\": \"345\", \"observation\": \"A sharp pop, a loud explosion, a brief laugh, and a musical jingle are heard, followed by a second explosion and a final musical jingle.\"}, {\"id\": \"360\", \"observation\": \"A cat meows, followed by a dog barking, then a cat meowing again, with background bird chirping and a sudden loud bang.\"}, {\"id\": \"390\", \"observation\": \"A door opens, followed by a low hum, then a dramatic orchestral score with strings, brass, and percussion.\"}, {\"id\": \"405\", \"observation\": \"A dramatic orchestral score with sweeping strings, brass fanfare, and impactful sound effects like whooshes and metallic clangs.\"}, {\"id\": \"435\", \"observation\": \"A dramatic orchestral score with sharp metallic impacts, a high-pitched scream, and a final electronic beep.\"}, {\"id\": \"450\", \"observation\": \"A series of electronic beeps, a high-pitched squeak, and a sustained, low-pitched musical tone are audible.\"}, {\"id\": \"480\", \"observation\": \"A dramatic orchestral score with prominent strings and percussion builds tension, culminating in a powerful, sustained chord.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "1a0fec942c5fb119bd04f7d411a70f2e2eac05a74f15be424a4698ff8947043d",
+    "wire_bytes": 2340,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "ce0f4c40-0a89-4576-84ad-29ecdf9ccf01",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "6a56e77c-7383-4794-a357-7deae0f71bc9"
+    },
+    "response": {
+      "id": "chatcmpl-bc48c5ab-833c-4be8-ae39-0fcf2964dd95",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"315\",\"essential\":\"metallic impacts scraping electronic tone\",\"balanced\":\"sharp metallic impacts and scraping sounds followed by a brief high pitched electronic tone\",\"detailed\":\"series of sharp metallic impacts and scraping sounds followed by a brief high pitched electronic tone\"},{\"id\":\"345\",\"essential\":\"pop explosion laugh jingle explosion jingle\",\"balanced\":\"sharp pop loud explosion brief laugh musical jingle followed by second explosion and final musical jingle\",\"detailed\":\"sharp pop loud explosion brief laugh musical jingle followed by second explosion and final musical jingle\"},{\"id\":\"360\",\"essential\":\"cat meow dog bark bird chirp bang\",\"balanced\":\"cat meows dog barks cat meows again background bird chirping sudden loud bang\",\"detailed\":\"cat meows followed by dog barking then cat meowing again with background bird chirping and a sudden loud bang\"},{\"id\":\"390\",\"essential\":\"door hum orchestral score\",\"balanced\":\"door opens followed by low hum then dramatic orchestral score with strings brass and percussion\",\"detailed\":\"door opens followed by a low hum then a dramatic orchestral score with strings brass and percussion\"},{\"id\":\"405\",\"essential\":\"orchestral score strings brass whooshes clangs\",\"balanced\":\"dramatic orchestral score with sweeping strings brass fanfare and impactful sound effects like whooshes and metallic clangs\",\"detailed\":\"dramatic orchestral score with sweeping strings brass fanfare and impactful sound effects like whooshes and metallic clangs\"},{\"id\":\"435\",\"essential\":\"orchestral score metallic impacts scream beep\",\"balanced\":\"dramatic orchestral score with sharp metallic impacts high pitched scream and final electronic beep\",\"detailed\":\"dramatic orchestral score with sharp metallic impacts a high pitched scream and a final electronic beep\"},{\"id\":\"450\",\"essential\":\"electronic beeps squeak low tone\",\"balanced\":\"series of electronic beeps high pitched squeak and sustained low pitched musical tone are audible\",\"detailed\":\"series of electronic beeps a high pitched squeak and a sustained low pitched musical tone are audible\"},{\"id\":\"480\",\"essential\":\"orchestral score strings percussion chord\",\"balanced\":\"dramatic orchestral score with prominent strings and percussion builds tension culminating in powerful sustained chord\",\"detailed\":\"dramatic orchestral score with prominent strings and percussion builds tension culminating in a powerful sustained chord\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172552,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 521,
+        "completion_tokens": 507,
+        "total_tokens": 1028,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.675
+  }
+]

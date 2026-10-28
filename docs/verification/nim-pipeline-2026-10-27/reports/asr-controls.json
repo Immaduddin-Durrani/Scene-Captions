@@ -1,0 +1,186 @@
+{
+  "scope": "NVIDIA Whisper offline ASR, not sound recognition",
+  "manifest_sha256": "c756253b35d8537751055fda27a77a0ef6496c814a97593124b2e97283a0c4fe",
+  "calls": [
+    {
+      "case": "p02",
+      "fixture": {
+        "case": "p02",
+        "file": "artifacts/nim-pipeline-2026-10-27/p02.wav",
+        "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+        "duration_s": 10.0
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "30b7f6c3eb6208c90d01b39bef0e92ec033d99a341da295826657cf7e46a7a8c",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "you ",
+                "language_code": [
+                  "en"
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 10.0
+          }
+        ],
+        "id": {
+          "value": "16cfb216-287c-4828-a093-31c72bd67844"
+        }
+      },
+      "seconds": 1.68,
+      "response_initial_metadata": {
+        "nvcf-reqid": "51e71cc8-8846-4e6d-b89a-384ce6947d7f"
+      }
+    },
+    {
+      "case": "p03",
+      "fixture": {
+        "case": "p03",
+        "file": "artifacts/nim-pipeline-2026-10-27/p03.wav",
+        "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+        "duration_s": 10.0
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "fd0e50eab93239d4d1ede1bada4b8437dc76f379c96c376b506ee429169a32cf",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "*Crowing* ",
+                "language_code": [
+                  "en"
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 10.0
+          }
+        ],
+        "id": {
+          "value": "8a4bbb5d-1ece-499d-814b-e1367b47f24f"
+        }
+      },
+      "seconds": 0.436,
+      "response_initial_metadata": {
+        "nvcf-reqid": "51e71cc8-8846-4e6d-b89a-384ce6947d7f"
+      }
+    },
+    {
+      "case": "p04",
+      "fixture": {
+        "case": "p04",
+        "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+        "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+        "duration_s": 10.0
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "7f983829f631bfcb52d6340caee2924e4aaf3bb4a0ece55378d3a7d0a40582ef",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "Nine silver spoons rest beside the red kettle. ",
+                "language_code": [
+                  "en"
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 10.0
+          }
+        ],
+        "id": {
+          "value": "ab119ddb-960d-41a8-b37d-c6fdb8bb86fa"
+        }
+      },
+      "seconds": 0.369,
+      "response_initial_metadata": {
+        "nvcf-reqid": "51e71cc8-8846-4e6d-b89a-384ce6947d7f"
+      }
+    },
+    {
+      "case": "p05",
+      "fixture": {
+        "case": "p05",
+        "file": "artifacts/nim-pipeline-2026-10-27/p05.wav",
+        "sha256": "8929bd2f106bb51decc42f440fd6935919ebc156a80d19a213e53f36411f16ff",
+        "duration_s": 10.0
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "60d9861dba0b4ce877c3c1ae3827f62f01263a0b7fa7ca72b5aaebeb9d0e645d",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "\u266a ",
+                "language_code": [
+                  "en"
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 10.0
+          }
+        ],
+        "id": {
+          "value": "ca0cdd8b-528b-4a78-a362-0b495f58fe5d"
+        }
+      },
+      "seconds": 0.31,
+      "response_initial_metadata": {
+        "nvcf-reqid": "51e71cc8-8846-4e6d-b89a-384ce6947d7f"
+      }
+    }
+  ]
+}

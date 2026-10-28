@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"630\", \"observation\": \"A dramatic orchestral score with sweeping strings and powerful brass swells, creating an intense cinematic atmosphere.\"}, {\"id\": \"660\", \"observation\": \"A sustained, low-pitched brass note is followed by a deep, resonant impact and a brief, high-pitched electronic tone.\"}, {\"id\": \"675\", \"observation\": \"A loud, sharp explosion occurs, followed by a brief silence and then a low, continuous humming sound.\"}, {\"id\": \"705\", \"observation\": \"A person sighs, then a door opens and closes, followed by footsteps and a metallic click.\"}, {\"id\": \"720\", \"observation\": \"A slow, melancholic cello melody plays over the sound of a horse trotting and a carriage rattling on a hard surface.\"}, {\"id\": \"735\", \"observation\": \"A flute plays a melody over a string section, with a female voice singing a short phrase.\"}, {\"id\": \"750\", \"observation\": \"No non-speech sounds are identifiable in the audio.\"}, {\"id\": \"765\", \"observation\": \"A gentle piano melody plays softly in the background, accompanied by a subtle, sustained string pad.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "921225fea4cbab1369a9fbfeee405c0529f103855226ae4b2e9eb9a122699777",
+    "wire_bytes": 2179,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "90a32594-62b7-448d-af6c-09be9287b927",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "6defb058-1705-42c7-b056-31130b62dee7"
+    },
+    "response": {
+      "id": "chatcmpl-fa796edc-be82-42c8-9245-be9b001a9024",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"630\",\"essential\":\"Orchestral score\",\"balanced\":\"Orchestral score with strings and brass\",\"detailed\":\"Dramatic orchestral score with sweeping strings and powerful brass swells\"},{\"id\":\"660\",\"essential\":\"Brass note impact tone\",\"balanced\":\"Low brass note followed by deep impact and high electronic tone\",\"detailed\":\"Sustained low-pitched brass note followed by deep resonant impact and brief high-pitched electronic tone\"},{\"id\":\"675\",\"essential\":\"Explosion silence hum\",\"balanced\":\"Loud explosion followed by silence and low humming\",\"detailed\":\"Loud sharp explosion followed by brief silence then low continuous humming sound\"},{\"id\":\"705\",\"essential\":\"Sigh door footsteps click\",\"balanced\":\"Person sighs door opens and closes footsteps and metallic click\",\"detailed\":\"A person sighs then a door opens and closes followed by footsteps and a metallic click\"},{\"id\":\"720\",\"essential\":\"Cello horse carriage\",\"balanced\":\"Cello melody over horse trotting and carriage rattling\",\"detailed\":\"Slow melancholic cello melody plays over sound of horse trotting and carriage rattling on hard surface\"},{\"id\":\"735\",\"essential\":\"Flute strings voice\",\"balanced\":\"Flute melody over string section with female voice phrase\",\"detailed\":\"Flute plays melody over string section with female voice singing short phrase\"},{\"id\":\"750\",\"essential\":null,\"balanced\":null,\"detailed\":null},{\"id\":\"765\",\"essential\":\"Piano strings\",\"balanced\":\"Gentle piano melody with sustained string pad\",\"detailed\":\"Gentle piano melody plays softly in background accompanied by subtle sustained string pad\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172580,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 481,
+        "completion_tokens": 362,
+        "total_tokens": 843,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.534
+  }
+]

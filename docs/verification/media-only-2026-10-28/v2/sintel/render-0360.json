@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"360\", \"observation\": \"A dramatic orchestral piece featuring sweeping strings, powerful brass, and resonant percussion creates a tense, cinematic atmosphere.\"}, {\"id\": \"390\", \"observation\": \"A loud, high-pitched scream is followed by a deep, resonant roar and a sustained, low-frequency musical drone.\"}, {\"id\": \"405\", \"observation\": \"A dramatic orchestral score with sweeping strings and powerful percussion plays, accompanied by a deep, resonant rumble.\"}, {\"id\": \"420\", \"observation\": \"A loud, sustained electronic tone with a descending pitch and a brief, high-pitched squeal are audible.\"}, {\"id\": \"435\", \"observation\": \"A sharp metallic impact is followed by a sustained high-pitched electronic tone and intermittent rustling sounds.\"}, {\"id\": \"450\", \"observation\": \"The non-speech sounds include footsteps and a door opening and closing.\"}, {\"id\": \"465\", \"observation\": \"A clock ticks steadily, followed by a brief musical passage and a distinct mechanical click.\"}, {\"id\": \"480\", \"observation\": \"A person is walking on a hard surface, with footsteps and rustling sounds, accompanied by a continuous electronic beep.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "13ebfab13a65fbe47e39ef08442211e058b6d369e52ca5a06fcad715b7211598",
+    "wire_bytes": 2260,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "b9babf75-63c5-45ad-b820-765bd4605a24",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "6f61147c-1baa-4de9-b20e-91aafc77f6f8"
+    },
+    "response": {
+      "id": "chatcmpl-a2565590-cc01-461d-8c93-8c95add978f7",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"360\",\"essential\":\"orchestral music\",\"balanced\":\"orchestral music with strings brass and percussion\",\"detailed\":\"orchestral piece with sweeping strings powerful brass resonant percussion\"},{\"id\":\"390\",\"essential\":\"scream roar drone\",\"balanced\":\"scream followed by roar and low-frequency drone\",\"detailed\":\"loud high-pitched scream deep resonant roar sustained low-frequency musical drone\"},{\"id\":\"405\",\"essential\":\"orchestral score rumble\",\"balanced\":\"orchestral score with strings percussion and deep rumble\",\"detailed\":\"dramatic orchestral score sweeping strings powerful percussion deep resonant rumble\"},{\"id\":\"420\",\"essential\":\"electronic tone squeal\",\"balanced\":\"sustained electronic tone descending pitch with high-pitched squeal\",\"detailed\":\"loud sustained electronic tone descending pitch brief high-pitched squeal\"},{\"id\":\"435\",\"essential\":\"metallic impact tone rustling\",\"balanced\":\"sharp metallic impact sustained electronic tone intermittent rustling\",\"detailed\":\"sharp metallic impact sustained high-pitched electronic tone intermittent rustling sounds\"},{\"id\":\"450\",\"essential\":\"footsteps door\",\"balanced\":\"footsteps and door opening and closing\",\"detailed\":\"footsteps and a door opening and closing\"},{\"id\":\"465\",\"essential\":\"clock music click\",\"balanced\":\"clock ticking brief musical passage mechanical click\",\"detailed\":\"clock ticks steadily followed by brief musical passage distinct mechanical click\"},{\"id\":\"480\",\"essential\":\"footsteps rustling beep\",\"balanced\":\"footsteps rustling sounds continuous electronic beep\",\"detailed\":\"person walking on hard surface footsteps rustling sounds continuous electronic beep\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172566,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 481,
+        "completion_tokens": 352,
+        "total_tokens": 833,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.607
+  }
+]

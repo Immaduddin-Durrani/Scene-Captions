@@ -1,0 +1,98 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "92db3ab2d4225c6ee6f236ccb82a3787ccf6238a5bfbf8e721d3cbc6fcb6f115",
+  "calls": [
+    {
+      "case": "q07",
+      "hypothesis": "Fresh speech positive control after completed non-speech errors; text never supplied to model.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q07.wav",
+          "sha256": "406d8dd49c7e149ce9c5fef187ac51df680d917ede3c4d09a70525321e6d06a7",
+          "duration_s": 2.5924375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1c9541b23ec959d909d13a04bd0acb81826b8e6849872fb6a30aa10fb159447b",
+                    "data_uri_characters": 110738,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Transcribe the speech in this recording exactly."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "b9246c19697e9e6ce1dd5bc1a5f766d8206f970eaa36bc86dd255ede030f59ca",
+      "wire_bytes": 111088,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "b95a1a47-2b5d-4424-9a23-d9a414cc8e24",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-e7118599-7d3a-42ac-be13-9fd4793a1afe",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Nine silver spoons rest beside the red kettle.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112442,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 12,
+          "total_tokens": 73
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.4082324504852295,
+            "generation_tokens_per_second": 29.39501743611188,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.004
+    }
+  ]
+}

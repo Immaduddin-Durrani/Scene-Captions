@@ -1,0 +1,346 @@
+[
+  {
+    "case": "f01-audio",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f01-single",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.9833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f01-triplet",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f01.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.4833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-01.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.9833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.4833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-03.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f02-audio",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f02-single",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.0000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f02-triplet",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/f02.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.5000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-04.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.0000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.5000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-06.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f01-mute",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/zero.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.4833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-01.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.9833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-02.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.4833 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-03.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  {
+    "case": "f02-mute",
+    "hypothesis": "Same audio/prompt/settings with zero, one or three aligned images; source captions withheld.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/zero.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the attached five-second recording. Describe the audible non-speech event near local time 2 seconds, plus essential background sound if audible. Some requests include images near that moment. Images may help identify a source only when supported by the sound; visible actions alone never establish audibility. Do not infer sound from story knowledge or unrelated scenery. If no sound is audible, reply NO_AUDIBLE_EVENT. If source identity is unclear, use a broad description. Give one short sound-caption draft, followed by one sentence explaining the audio/image evidence. Do not invent acoustic attributes or timestamps."
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 1.5000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-04.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.0000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-05.jpg"
+            },
+            {
+              "type": "text",
+              "text": "Image at LOCAL 2.5000 seconds."
+            },
+            {
+              "type": "local_jpeg",
+              "path": "artifacts/nim-frame-pipeline-2026-10-27/frame-06.jpg"
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

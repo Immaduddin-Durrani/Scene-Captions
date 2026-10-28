@@ -1,0 +1,8 @@
+{
+  "created_before_retries": true,
+  "trigger": "q05/q06 capacity errors; fresh speech control q07 subsequently passed after cooldown.",
+  "max_attempts_per_original_cell_including_this_retry": 2,
+  "payloads_changed": false,
+  "manifest_sha256": "414b88609d0e596c8ecdff4178ca9b46cfee58740284716d1771f2b7c92267a8",
+  "stop": "Stop after this single retry per cell. Three consecutive capacity errors stop the session."
+}

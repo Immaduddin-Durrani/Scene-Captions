@@ -1,0 +1,31 @@
+[
+  {
+    "case": "p04",
+    "hypothesis": "Separate ASR from non-speech observations; own ASR is uncertain context, never fetched captions.",
+    "payload": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "type": "local_wav",
+              "path": "artifacts/nim-pipeline-2026-10-27/p04.wav"
+            },
+            {
+              "type": "text",
+              "text": "Listen to the recording and describe ONLY audible non-speech sounds, including music, environmental effects and non-word vocalizations. Do not describe visible or imagined scenes. A separate speech recognizer proposed the following words, which may be wrong: \"Nine silver spoons rest beside the red kettle.\"\nUse that only to separate dialogue from effects; it does not establish any sound source. Base all sound observations on the attached audio. Do not repeat spoken words. Give a concise factual description. If no non-speech event is audible, reply NO_NON_SPEECH_EVENTS. Do not guess uncertain sound identities or attributes. No timestamps or JSON are required."
+            }
+          ]
+        }
+      ],
+      "temperature": 0.2,
+      "top_k": 1,
+      "max_tokens": 512,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  }
+]

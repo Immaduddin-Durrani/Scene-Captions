@@ -1,0 +1,7 @@
+{
+  "network_calls": 0,
+  "asr_guard_cases_passed": 8,
+  "frozen_asr_context_unchanged": true,
+  "renderer_checks": "one valid case and six adversarial cases passed",
+  "limits": "A plausible lexical transcript on nonzero audio remains an unverified candidate; these guards cannot establish acoustic truth."
+}

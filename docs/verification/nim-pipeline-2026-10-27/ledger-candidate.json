@@ -1,0 +1,25 @@
+{
+  "case": "p04",
+  "acceptance_status": "REJECTED_FOR_PLAYBACK_PENDING_ACOUSTIC_AND_TIMING_REVIEW",
+  "speech": {
+    "event_id": "p04-sp01",
+    "text": "Nine silver spoons rest beside the red kettle.",
+    "start_s": null,
+    "end_s": null,
+    "provenance": "Whisper transcript agrees with dedicated Parakeet ASR; word offsets remain candidates"
+  },
+  "sounds": [
+    {
+      "event_id": "p04-sfx01",
+      "description": "Three distinct metallic clinks are audible, each with a sharp attack and brief decay, occurring at regular intervals.",
+      "start_s": null,
+      "end_s": null,
+      "provenance": "unreviewed Omni non-speech observation; not ground truth"
+    }
+  ],
+  "limits": [
+    "Sound source labels and attributes are unverified. Rendering cannot validate them.",
+    "Times are unresolved. Do not create a timed subtitle file.",
+    "No existing movie captions or plot were used."
+  ]
+}

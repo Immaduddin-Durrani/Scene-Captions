@@ -1,0 +1,178 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v1",
+    "film_sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/sintel/82985b8baad6541f/0000.wav",
+      "sha256": "fffc45bcc8b021f15e584e45b11658c1142eff827cae4419d8f78c264fcf6223",
+      "duration_s": 30.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "0185de85ebafa79cf9700914e23b66e968c7ef01430f2123dedb8a4ec9e1e06e"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "741a42cff7d6d59c0999018f94ae756bf546c8145a7d1dd84086798609ab0574",
+                    "data_uri_characters": 1280126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen only to the attached 30.000-second recording. Author factual English\nsound captions for Deaf and hard-of-hearing viewers, directly from the audio.\nDo not guess the video, story, characters, visible actions, emotional reactions,\nor causes. No external captions or story context are supplied. Do not transcribe\nspoken words: speech recognition is handled separately. Include identifiable\nmusic, sound effects and nonverbal vocalizations. Omit uncertain source identities;\nuse a general acoustic label instead. Silence needs no caption. Do not invent a\nsound merely to fill an interval. Distinct events may overlap; include music under\neffects if audible. Estimate each event's LOCAL start/end in seconds, within the\nrecording. A continuous sound can span the whole clip. Up to 12 events.\nReturn only JSON: {\"cues\":[{\"start_s\":0.0,\"end_s\":1.0,\"essential\":\"short sound label\",\n\"balanced\":\"brief factual sound description\",\"detailed\":\"more acoustic detail, at most 25 words\"}]}.\nAll three texts must describe the SAME audible event; greater detail must not\nadd a new sound, unsupported source, meaning or emotion. Plain text without brackets.\nReturn {\"cues\":[]} if no identifiable non-speech sounds are audible."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "73f892e5b778dc56cb81cb9ddd0152366f7b7dc961f1df666f9c8dde1d69c11f",
+      "wire_bytes": 1281676,
+      "attempts": 1,
+      "http_status": 503,
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}",
+      "seconds": 3.023,
+      "validation_error": "Sound inference did not complete"
+    },
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "741a42cff7d6d59c0999018f94ae756bf546c8145a7d1dd84086798609ab0574",
+                    "data_uri_characters": 1280126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen only to the attached 30.000-second recording. Author factual English\nsound captions for Deaf and hard-of-hearing viewers, directly from the audio.\nDo not guess the video, story, characters, visible actions, emotional reactions,\nor causes. No external captions or story context are supplied. Do not transcribe\nspoken words: speech recognition is handled separately. Include identifiable\nmusic, sound effects and nonverbal vocalizations. Omit uncertain source identities;\nuse a general acoustic label instead. Silence needs no caption. Do not invent a\nsound merely to fill an interval. Distinct events may overlap; include music under\neffects if audible. Estimate each event's LOCAL start/end in seconds, within the\nrecording. A continuous sound can span the whole clip. Up to 12 events.\nReturn only JSON: {\"cues\":[{\"start_s\":0.0,\"end_s\":1.0,\"essential\":\"short sound label\",\n\"balanced\":\"brief factual sound description\",\"detailed\":\"more acoustic detail, at most 25 words\"}]}.\nAll three texts must describe the SAME audible event; greater detail must not\nadd a new sound, unsupported source, meaning or emotion. Plain text without brackets.\nReturn {\"cues\":[]} if no identifiable non-speech sounds are audible."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "73f892e5b778dc56cb81cb9ddd0152366f7b7dc961f1df666f9c8dde1d69c11f",
+      "wire_bytes": 1281676,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "cfde486a-0147-4eb5-b3be-e28e8fa52352",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "70b9fd05-97ec-4c4e-9925-deac7efbcdc6"
+      },
+      "response": {
+        "id": "chatcmpl-70b9fd05-97ec-4c4e-9925-deac7efbcdc6",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n{\"cues\": [{\"start_s\": 0.0, \"end_s\": 1.0, \"essential\": \"short sound label\", \"balanced\": \"brief factual sound description\", \"detailed\": \"short sound label\"}]}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793171797,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 671,
+          "completion_tokens": 52,
+          "total_tokens": 723
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.3066492080688477,
+            "generation_tokens_per_second": 39.79645009455369,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.829
+    }
+  ],
+  "asr_attempts": [
+    {
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet-tdt-0_6b-v2",
+      "request_sha256": "6abe9f7afb46fd0309571401c952abaac1898734d31d6ab46974c30b193ee0b7",
+      "audio_sha256": "81b18d6e6e8f71666185bf45be4a71cad18c7a6e7eef421a689729d1fc26c7d1",
+      "config": {
+        "encoding": "LINEAR_PCM",
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "grpc_status": "OK",
+      "response": {
+        "id": {
+          "value": "20879b9c-56b0-4fbf-bac0-bbf6cfdce512"
+        }
+      },
+      "request_ids": {
+        "nvcf-reqid": "785bc581-e922-4145-bac9-893f15787b08"
+      },
+      "seconds": 1.064
+    }
+  ],
+  "sound_cues": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.0,
+      "essential": "short sound label",
+      "balanced": "brief factual sound description",
+      "detailed": "short sound label"
+    }
+  ],
+  "speech_cues": [],
+  "speech_rejections": []
+}

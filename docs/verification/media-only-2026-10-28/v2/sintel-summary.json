@@ -1,0 +1,37 @@
+{
+  "video_id": "sintel",
+  "duration_seconds": 888.032,
+  "video_sha256": "82985b8baad6541fd438d136ffdf000cc0e21d271f728fa46c67fe1f07473d1c",
+  "windows": 60,
+  "completed": 60,
+  "missing_windows": [],
+  "sound_cues": 59,
+  "dialogue_cues": 71,
+  "asr_rejections": [
+    {
+      "window_start_s": 750,
+      "reason": "zero-duration/empty word group"
+    },
+    {
+      "window_start_s": 750,
+      "reason": "zero-duration/empty word group"
+    },
+    {
+      "window_start_s": 780,
+      "reason": "zero-duration/empty word group"
+    },
+    {
+      "window_start_s": 810,
+      "reason": "zero-duration/empty word group"
+    },
+    {
+      "window_start_s": 840,
+      "reason": "zero-duration/empty word group"
+    },
+    {
+      "window_start_s": 840,
+      "reason": "zero-duration/empty word group"
+    }
+  ],
+  "quality": "UNVERIFIED; known sound-recognition controls failed; full processing is not full event recall"
+}

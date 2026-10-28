@@ -1,0 +1,22 @@
+{
+  "created_before_sound_inference": true,
+  "manifest_sha256": "9067abbfb23449e2595a57cec932e28090f439dd67835fd80984417acf6e59a9",
+  "calls": 4,
+  "digital_zero_bypass": [
+    "p02"
+  ],
+  "purpose": "Test separation of speech transcription and sound descriptions with own ASR as uncertain context.",
+  "expected_labels_sent": false,
+  "reference_captions_or_plot_sent": false,
+  "criteria": {
+    "p01": "No invented non-speech events on the clean synthetic phrase.",
+    "p03": "Dog vocalizations; generic impacts are partial only.",
+    "p04": "Three dog-source bursts without inventing dialogue/effects.",
+    "p05": "Unreviewed actual BBB window; no established accuracy claim."
+  },
+  "limits": [
+    "Raw ASR can hallucinate. Markup is not acoustic ground truth.",
+    "Local zero check protects only exact digital silence, not arbitrary noise/music.",
+    "No sound times requested; unresolved times must stay null during rendering."
+  ]
+}

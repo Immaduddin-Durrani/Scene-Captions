@@ -1,0 +1,190 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "ac59cc33b6ed46f60da87039f22f1fe7ac30a278d41d9f0bd9d87d94e665e339",
+  "calls": [
+    {
+      "case": "q08",
+      "hypothesis": "Same exact fresh speech WAV; change only transcription instruction to the general audio-description instruction.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q07.wav",
+          "sha256": "406d8dd49c7e149ce9c5fef187ac51df680d917ede3c4d09a70525321e6d06a7",
+          "duration_s": 2.5924375,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "1c9541b23ec959d909d13a04bd0acb81826b8e6849872fb6a30aa10fb159447b",
+                    "data_uri_characters": 110738,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "a4244c0ffd6ee47bd825cf195b08ed1345b0c6838005feca500c42de61c5e896",
+      "wire_bytes": 111152,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "054d2834-90f4-4a82-a016-c01c55aee84d",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-231b514f-e9ef-4392-80d9-8ddb761394d9",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "No sound is audible.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112629,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 77,
+          "completion_tokens": 6,
+          "total_tokens": 83
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.2954216003417969,
+            "generation_tokens_per_second": 20.309957000632725,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.003
+    },
+    {
+      "case": "q09",
+      "hypothesis": "Same source burst repeated without gain changes at eight onsets; test recognition under increased event exposure.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q09.wav",
+          "sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "2460a3a17980d42b22ee9e74b3b24ebaff3cc8da27e3b3c3b794113537a34654",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "2a58dca2379ea6bfec657e3e19b20b6fd0f95998c34c48f5b984153520dcd9cf",
+      "wire_bytes": 427164,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "57a5c68d-a5d8-4560-8b45-362b7dc8cbcd",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-949d0154-8067-4faa-bf40-86edc44f0175",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The recording contains a series of sharp, percussive impacts, each consisting of a high-frequency crack followed by a lower-frequency thud. These sounds are repeated at regular intervals, occurring approximately every 0.8 seconds. The impacts are consistent in volume and timbre, suggesting a repetitive action. There is no speech, music, or other ambient noise present. The sounds are isolated and clear, with no discernible background context.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112631,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 87,
+          "total_tokens": 256
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.6334073543548584,
+            "generation_tokens_per_second": 53.26289230181782,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 3.835
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "NVIDIA Whisper offline ASR, not sound recognition",
+  "manifest_sha256": "c756253b35d8537751055fda27a77a0ef6496c814a97593124b2e97283a0c4fe",
+  "calls": [
+    {
+      "case": "p01",
+      "fixture": {
+        "case": "p01",
+        "file": "artifacts/nim-pipeline-2026-10-27/p01.wav",
+        "sha256": "ee30cc75411cbd1f1bf06496899a662c8bcb816f2f783190e7301983d3769289",
+        "duration_s": 2.5924375
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "029eee18cb3eca03ea385ab4b119b58578dfbf8ec894e7bb9f1514d4ae436b9d",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "Nine silver spoons rest beside the red kettle. ",
+                "language_code": [
+                  "en"
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 2.5924375
+          }
+        ],
+        "id": {
+          "value": "0f6c39b0-9b07-4f0c-a373-c837685b025c"
+        }
+      },
+      "seconds": 1.793,
+      "response_initial_metadata": {
+        "nvcf-reqid": "64a5d162-b08e-4c99-a3ab-aa9f8e4a5af9"
+      }
+    }
+  ]
+}

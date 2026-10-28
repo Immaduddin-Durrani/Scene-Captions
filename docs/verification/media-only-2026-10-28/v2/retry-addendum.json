@@ -1,0 +1,6 @@
+{
+  "base_protocol_sha256": "047971a3621e0c1f9c264ffbda4b6bfd0893cc438649e6a2ee84e824479f0d9c",
+  "total_attempt_limit_per_stage": 6,
+  "max_total_inference_attempts": 1908,
+  "scope": "Only incomplete sound/ASR/render stages, unchanged payloads, complete cache reused. Supersedes initial attempt ceiling; no semantic quality approval."
+}

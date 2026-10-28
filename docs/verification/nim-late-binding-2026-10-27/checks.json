@@ -1,0 +1,13 @@
+{
+  "shared_offline_tests": 35,
+  "shared_offline_status": "passed",
+  "audio_guard_checks": "2 valid and7 rejected adversarial cases",
+  "visual_guard_checks": "2 valid and6 rejected adversarial cases",
+  "actual_model_visual_contract_passes": 4,
+  "schema_links_syntax_secret_pattern_scan": "passed",
+  "retry_payload_and_media_hash_integrity": "passed; see assessment.json",
+  "existing_map_inputs_fresh": true,
+  "playback_data_and_existing_gate_unchanged": true,
+  "inference_attempts": 14,
+  "reliable_caption_accuracy_gain_established": false
+}

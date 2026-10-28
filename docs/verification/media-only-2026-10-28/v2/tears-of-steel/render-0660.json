@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"660\", \"observation\": \"A high-pitched, distorted electric guitar plays a fast, aggressive, and repetitive riff with heavy distortion and reverb.\"}, {\"id\": \"675\", \"observation\": \"A dramatic orchestral score with deep percussion and metallic impacts, followed by a sustained electronic tone.\"}, {\"id\": \"690\", \"observation\": \"A solo piano plays a slow, melancholic melody with sustained notes and gentle arpeggios in a quiet, reverberant space.\"}, {\"id\": \"705\", \"observation\": \"A low, sustained electronic drone plays, followed by a sharp metallic click and a brief, high-pitched electronic beep.\"}, {\"id\": \"720\", \"observation\": \"A person breathes heavily, rustles fabric, and moves a heavy object, followed by a sharp click and a sustained electronic tone.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "100d25f01bba7192fbd55b681e8568a602f0d7e08641c4bb9c587c159e710ada",
+    "wire_bytes": 1867,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "7cb3de55-7be6-40be-b2dd-6f16689c11b8",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "02ac8503-c66a-471f-9b9e-f8efd4129362"
+    },
+    "response": {
+      "id": "chatcmpl-9443822c-a0ea-4c8a-b7e1-972b0296d85f",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"660\",\"essential\":\"distorted electric guitar\",\"balanced\":\"A high-pitched distorted electric guitar plays a fast repetitive riff with heavy distortion and reverb.\",\"detailed\":\"A high-pitched distorted electric guitar plays a fast aggressive repetitive riff with heavy distortion and reverb.\"},{\"id\":\"675\",\"essential\":\"orchestral score and electronic tone\",\"balanced\":\"A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.\",\"detailed\":\"A dramatic orchestral score with deep percussion and metallic impacts followed by a sustained electronic tone.\"},{\"id\":\"690\",\"essential\":\"solo piano\",\"balanced\":\"A solo piano plays a slow melody with sustained notes and gentle arpeggios in a quiet reverberant space.\",\"detailed\":\"A solo piano plays a slow melancholic melody with sustained notes and gentle arpeggios in a quiet reverberant space.\"},{\"id\":\"705\",\"essential\":\"electronic drone click beep\",\"balanced\":\"A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.\",\"detailed\":\"A low sustained electronic drone plays followed by a sharp metallic click and a brief high-pitched electronic beep.\"},{\"id\":\"720\",\"essential\":\"breathing fabric movement click tone\",\"balanced\":\"A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.\",\"detailed\":\"A person breathes heavily rustles fabric and moves a heavy object followed by a sharp click and a sustained electronic tone.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172671,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 398,
+        "completion_tokens": 339,
+        "total_tokens": 737,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.231
+  }
+]

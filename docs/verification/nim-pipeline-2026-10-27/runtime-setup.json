@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-27",
+  "runtime": "/Users/hamza/runtimes/scenecaptions-nim-asr",
+  "python": "3.13.7",
+  "packages": {
+    "nvidia-riva-client": "2.27.0",
+    "grpcio": "1.85.0",
+    "grpcio-tools": "1.81.1",
+    "protobuf": "6.33.5",
+    "websockets": "15.0.1"
+  },
+  "source": "https://pypi.org/project/nvidia-riva-client/2.27.0/",
+  "documentation": "https://build.nvidia.com/openai/whisper-large-v3/api",
+  "install_command": "uv pip install --python /Users/hamza/runtimes/scenecaptions-nim-asr/bin/python --cache-dir /Users/hamza/runtimes/cache/uv --only-binary :all: nvidia-riva-client==2.27.0 grpcio==1.85.0",
+  "scope": "Isolated client dependencies only; no local model weights, CUDA, hooks, telemetry or persistent service."
+}

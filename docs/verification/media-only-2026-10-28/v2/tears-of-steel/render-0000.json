@@ -1,0 +1,126 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"0\", \"observation\": \"A loud engine starts, followed by a deep rumble and a high-pitched whine, indicating a powerful machine powering up.\"}, {\"id\": \"15\", \"observation\": \"A loud, continuous mechanical rumble and metallic clanking sound, resembling a large vehicle or machinery in motion, dominates the audio.\"}, {\"id\": \"30\", \"observation\": \"The non-speech sounds include a high-pitched squeak, a low-frequency rumble, and a sharp metallic clank.\"}, {\"id\": \"45\", \"observation\": \"A low, sustained electronic drone with a faint, high-pitched, rhythmic ticking sound is audible throughout the recording.\"}, {\"id\": \"75\", \"observation\": \"A continuous low-frequency hum is present, accompanied by intermittent high-pitched bird chirps and a brief metallic clink.\"}, {\"id\": \"90\", \"observation\": \"A sharp metallic click is followed by a sustained, high-pitched electronic whine, then a deep, resonant rumble.\"}, {\"id\": \"105\", \"observation\": \"A loud, metallic impact and scraping sound occur, followed by a deep, resonant rumble and a low-frequency hum.\"}, {\"id\": \"120\", \"observation\": \"The non-speech sounds include a continuous low-frequency hum and intermittent rustling, likely from fabric or movement in a quiet indoor environment.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "8d5e792c4098f58fa5227393190d12209707c6712a44d5e442c804402cdf1122",
+    "wire_bytes": 2362,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "ee0ffc76-3c39-4079-bdae-9d5298713d6e",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "6adfd575-64a5-4983-b88f-78b1688bc131"
+    },
+    "response": {
+      "id": "chatcmpl-997d1355-9bbd-4d7b-8bc2-053f36fa633b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"0\",\"essential\":\"engine start rumble whine\",\"balanced\":\"A loud engine starts followed by a deep rumble and a high-pitched whine\",\"detailed\":\"A loud engine starts followed by a deep rumble and a high-pitched whine\"},{\"id\":\"15\",\"essential\":\"mechanical rumble clanking\",\"balanced\":\"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\",\"detailed\":\"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\"},{\"id\":\"30\",\"essential\":\"squeak rumble clank\",\"balanced\":\"A high-pitched squeak a low-frequency rumble and a sharp metallic clank\",\"detailed\":\"A high-pitched squeak a low-frequency rumble and a sharp metallic clank\"},{\"id\":\"45\",\"essential\":\"electronic drone ticking\",\"balanced\":\"A low sustained electronic drone with a faint high-pitched rhythmic ticking sound\",\"detailed\":\"A low sustained electronic drone with a faint high-pitched rhythmic ticking sound is audible throughout the recording\"},{\"id\":\"75\",\"essential\":\"hum bird chirps clink\",\"balanced\":\"A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink\",\"detailed\":\"A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink\"},{\"id\":\"90\",\"essential\":\"click whine rumble\",\"balanced\":\"A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble\",\"detailed\":\"A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble\"},{\"id\":\"105\",\"essential\":\"impact scraping rumble hum\",\"balanced\":\"A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum\",\"detailed\":\"A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum\"},{\"id\":\"120\",\"essential\":\"hum rustling\",\"balanced\":\"A continuous low-frequency hum and intermittent rustling\",\"detailed\":\"A continuous low-frequency hum and intermittent rustling\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"0\",\n      \"essential\": \"engine start rumble whine\",\n      \"balanced\": \"A loud engine starts followed by a deep rumble and a high-pitched whine\",\n      \"detailed\": \"A loud engine starts followed by a deep rumble and a high-pitched whine\"\n    },\n    {\n      \"id\": \"15\",\n      \"essential\": \"mechanical rumble clanking\",\n      \"balanced\": \"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\",\n      \"detailed\": \"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\"\n    },\n    {\n      \"id\": \"30\",\n      \"essential\": \"squeak rumble clank\",\n      \"balanced\": \"A high-pitched squeak a low-frequency rumble and a sharp metallic clank\",\n      \"detailed\": \"A high-pitched squeak a low-frequency rumble and a sharp metallic clank\"\n    },\n    {\n      \"id\": \"45\",\n      \"essential\": \"electronic drone ticking\",\n      \"balanced\": \"A low sustained electronic drone with a faint high-pitched rhythmic ticking sound\",\n      \"detailed\": \"A low sustained electronic drone with a faint high-pitched rhythmic ticking sound is audible throughout the recording\"\n    },\n    {\n      \"id\": \"75\",\n      \"essential\": \"hum bird chirps clink\",\n      \"balanced\": \"A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink\",\n      \"detailed\": \"A continuous low-frequency hum accompanied by intermittent high-pitched bird chirps and a brief metallic clink\"\n    },\n    {\n      \"id\": \"90\",\n      \"essential\": \"click whine rumble\",\n      \"balanced\": \"A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble\",\n      \"detailed\": \"A sharp metallic click followed by a sustained high-pitched electronic whine then a deep resonant rumble\"\n    },\n    {\n      \"id\": \"105\",\n      \"essential\": \"impact scraping rumble hum\",\n      \"balanced\": \"A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum\",\n      \"detailed\": \"A loud metallic impact and scraping sound followed by a deep resonant rumble and a low-frequency hum\"\n    },\n    {\n      \"id\": \"120\",\n      \"essential\": \"hum rustling\",\n      \"balanced\": \"A continuous low-frequency hum and intermittent rustling\",\n      \"detailed\": \"A continuous low-frequency hum and intermittent rustling\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172590,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 511,
+        "completion_tokens": 1019,
+        "total_tokens": 1530,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 8.636,
+    "validation_error": "Extra data: line 3 column 1 (char 2016)"
+  },
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"0\", \"observation\": \"A loud engine starts, followed by a deep rumble and a high-pitched whine, indicating a powerful machine powering up.\"}, {\"id\": \"15\", \"observation\": \"A loud, continuous mechanical rumble and metallic clanking sound, resembling a large vehicle or machinery in motion, dominates the audio.\"}, {\"id\": \"30\", \"observation\": \"The non-speech sounds include a high-pitched squeak, a low-frequency rumble, and a sharp metallic clank.\"}, {\"id\": \"45\", \"observation\": \"A low, sustained electronic drone with a faint, high-pitched, rhythmic ticking sound is audible throughout the recording.\"}, {\"id\": \"75\", \"observation\": \"A continuous low-frequency hum is present, accompanied by intermittent high-pitched bird chirps and a brief metallic clink.\"}, {\"id\": \"90\", \"observation\": \"A sharp metallic click is followed by a sustained, high-pitched electronic whine, then a deep, resonant rumble.\"}, {\"id\": \"105\", \"observation\": \"A loud, metallic impact and scraping sound occur, followed by a deep, resonant rumble and a low-frequency hum.\"}, {\"id\": \"120\", \"observation\": \"The non-speech sounds include a continuous low-frequency hum and intermittent rustling, likely from fabric or movement in a quiet indoor environment.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "8d5e792c4098f58fa5227393190d12209707c6712a44d5e442c804402cdf1122",
+    "wire_bytes": 2362,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "edcc47e0-d120-4304-9618-5f85a02e71a3",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "2233e106-0e99-4200-81ff-287792d9dccb"
+    },
+    "response": {
+      "id": "chatcmpl-4b123988-9c12-48ef-889d-d0b7235a8f6c",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"0\",\"essential\":\"engine start rumble whine\",\"balanced\":\"A loud engine starts followed by a deep rumble and a high-pitched whine\",\"detailed\":\"A loud engine starts followed by a deep rumble and a high-pitched whine\"},{\"id\":\"15\",\"essential\":\"mechanical rumble clanking\",\"balanced\":\"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\",\"detailed\":\"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\"},{\"id\":\"30\",\"essential\":\"squeak rumble clank\",\"balanced\":\"A high-pitched squeak low-frequency rumble and sharp metallic clank are audible\",\"detailed\":\"A high-pitched squeak low-frequency rumble and sharp metallic clank are audible\"},{\"id\":\"45\",\"essential\":\"electronic drone ticking\",\"balanced\":\"A low sustained electronic drone with faint high-pitched rhythmic ticking is audible\",\"detailed\":\"A low sustained electronic drone with faint high-pitched rhythmic ticking is audible throughout the recording\"},{\"id\":\"75\",\"essential\":\"hum bird chirps clink\",\"balanced\":\"A continuous low-frequency hum accompanies intermittent high-pitched bird chirps and a brief metallic clink\",\"detailed\":\"A continuous low-frequency hum accompanies intermittent high-pitched bird chirps and a brief metallic clink\"},{\"id\":\"90\",\"essential\":\"click whine rumble\",\"balanced\":\"A sharp metallic click followed by sustained high-pitched electronic whine then deep resonant rumble\",\"detailed\":\"A sharp metallic click followed by sustained high-pitched electronic whine then deep resonant rumble\"},{\"id\":\"105\",\"essential\":\"impact scraping rumble hum\",\"balanced\":\"A loud metallic impact and scraping sound followed by deep resonant rumble and low-frequency hum\",\"detailed\":\"A loud metallic impact and scraping sound followed by deep resonant rumble and low-frequency hum\"},{\"id\":\"120\",\"essential\":\"hum rustling\",\"balanced\":\"A continuous low-frequency hum and intermittent rustling are audible\",\"detailed\":\"A continuous low-frequency hum and intermittent rustling are audible\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"0\",\n      \"essential\": \"engine start rumble whine\",\n      \"balanced\": \"A loud engine starts followed by a deep rumble and a high-pitched whine\",\n      \"detailed\": \"A loud engine starts followed by a deep rumble and a high-pitched whine\"\n    },\n    {\n      \"id\": \"15\",\n      \"essential\": \"mechanical rumble clanking\",\n      \"balanced\": \"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\",\n      \"detailed\": \"A loud continuous mechanical rumble and metallic clanking sound dominates the audio\"\n    },\n    {\n      \"id\": \"30\",\n      \"essential\": \"squeak rumble clank\",\n      \"balanced\": \"A high-pitched squeak low-frequency rumble and sharp metallic clank are audible\",\n      \"detailed\": \"A high-pitched squeak low-frequency rumble and sharp metallic clank are audible\"\n    },\n    {\n      \"id\": \"45\",\n      \"essential\": \"electronic drone ticking\",\n      \"balanced\": \"A low sustained electronic drone with faint high-pitched rhythmic ticking is audible\",\n      \"detailed\": \"A low sustained electronic drone with faint high-pitched rhythmic ticking is audible throughout the recording\"\n    },\n    {\n      \"id\": \"75\",\n      \"essential\": \"hum bird chirps clink\",\n      \"balanced\": \"A continuous low-frequency hum accompanies intermittent high-pitched bird chirps and a brief metallic clink\",\n      \"detailed\": \"A continuous low-frequency hum accompanies intermittent high-pitched bird chirps and a brief metallic clink\"\n    },\n    {\n      \"id\": \"90\",\n      \"essential\": \"click whine rumble\",\n      \"balanced\": \"A sharp metallic click followed by sustained high-pitched electronic whine then deep resonant rumble\",\n      \"detailed\": \"A sharp metallic click followed by sustained high-pitched electronic whine then deep resonant rumble\"\n    },\n    {\n      \"id\": \"105\",\n      \"essential\": \"impact scraping rumble hum\",\n      \"balanced\": \"A loud metallic impact and scraping sound followed by deep resonant rumble and low-frequency hum\",\n      \"detailed\": \"A loud metallic impact and scraping sound followed by deep resonant rumble and low-frequency hum\"\n    },\n    {\n      \"id\": \"120\",\n      \"essential\": \"hum rustling\",\n      \"balanced\": \"A continuous low-frequency hum and intermittent rustling are audible\",\n      \"detailed\": \"A continuous low-frequency hum and intermittent rustling are audible\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172599,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 511,
+        "completion_tokens": 1007,
+        "total_tokens": 1518,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 11.472,
+    "validation_error": "Extra data: line 3 column 1 (char 2029)"
+  }
+]

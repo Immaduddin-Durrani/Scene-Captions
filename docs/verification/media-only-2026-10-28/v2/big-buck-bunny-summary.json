@@ -1,0 +1,12 @@
+{
+  "video_id": "big-buck-bunny",
+  "duration_seconds": 596.461678,
+  "video_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+  "windows": 40,
+  "completed": 40,
+  "missing_windows": [],
+  "sound_cues": 40,
+  "dialogue_cues": 0,
+  "asr_rejections": [],
+  "quality": "UNVERIFIED; known sound-recognition controls failed; full processing is not full event recall"
+}

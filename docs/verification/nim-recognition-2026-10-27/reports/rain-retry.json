@@ -1,0 +1,190 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "414b88609d0e596c8ecdff4178ca9b46cfee58740284716d1771f2b7c92267a8",
+  "calls": [
+    {
+      "case": "q05",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q05.wav",
+          "sha256": "a8442deab9bc493fe27d4334382da6091f26118d3df73de82ef968128849a6d5",
+          "duration_s": 5.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "2f4d3e61fd6955bceb7dbfec1f9530527a439029af1f13405edc9915f2cf8987",
+                    "data_uri_characters": 213414,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "ddc5f83a0ab3357137eb908e4094e78bf8a6b9c1edc9e7fc97caa9ba3a8824e8",
+      "wire_bytes": 213828,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "09fc3df4-001d-4a83-9b66-c9b99d7b5273",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-4dfc0365-d614-4c15-90df-784264040b21",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The sound of water flowing",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112516,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 107,
+          "completion_tokens": 6,
+          "total_tokens": 113
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.26590895652770996,
+            "generation_tokens_per_second": 22.56411396723581,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.553
+    },
+    {
+      "case": "q06",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q06.wav",
+          "sha256": "ee7bea4232762775f8fce9b3e27e4d3948c8ac6a45a87ca769f703d6eed0b448",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "f60e78304bdc925cd50a66e7b2fef90988848562b1ceefb1b2e15907b94a800d",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5518348bb88e9573d98692676f989fcaa2b5a9246e7870d4883b957ec43cf789",
+      "wire_bytes": 427164,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "d4bbf8f6-5d8b-406a-86a9-eae09b993add",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-03766d0e-cc98-45ff-99d0-d7d0db41d259",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Silence.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112519,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 4,
+          "total_tokens": 173
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.235684871673584,
+            "generation_tokens_per_second": 16.971814828827334,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.244
+    }
+  ]
+}

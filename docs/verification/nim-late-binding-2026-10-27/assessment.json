@@ -1,0 +1,393 @@
+{
+  "inference_attempts": 14,
+  "http_counts": {
+    "200": 12,
+    "503": 2
+  },
+  "audio_rows": [
+    {
+      "case": "k04-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "\ntone_or_beep",
+      "expected_labels": [
+        "silence"
+      ],
+      "status": "invalid-or-incomplete-output",
+      "error": "Expecting value: line 1 column 1 (char 0)",
+      "manual_semantic_note": "Bare tone_or_beep label is also wrong on digital silence; format failure is recorded separately."
+    },
+    {
+      "case": "k04-thinking",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"tone_or_beep\"]",
+      "expected_labels": [
+        "silence"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "silence"
+      ],
+      "unsupported": [
+        "tone_or_beep"
+      ]
+    },
+    {
+      "case": "k02-instruct",
+      "http_status": 503,
+      "finish_reason": null,
+      "raw_answer": null,
+      "expected_labels": [
+        "dog_barking"
+      ],
+      "status": "inconclusive-provider-or-transport",
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "case": "k02-thinking",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"impact_or_click\"]",
+      "expected_labels": [
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "impact_or_click"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "dog_barking"
+      ],
+      "unsupported": [
+        "impact_or_click"
+      ]
+    },
+    {
+      "case": "k01-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"silence\"]",
+      "expected_labels": [
+        "human_speech"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "silence"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "human_speech"
+      ],
+      "unsupported": [
+        "silence"
+      ]
+    },
+    {
+      "case": "k03-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"running_water_or_waves\"]",
+      "expected_labels": [
+        "rainfall"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "running_water_or_waves"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "rainfall"
+      ],
+      "unsupported": [
+        "running_water_or_waves"
+      ]
+    },
+    {
+      "case": "k05-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "\n[\"human_speech\", \"impact_or_click\", \"tone_or_beep\"]",
+      "expected_labels": [
+        "human_speech",
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "human_speech",
+        "impact_or_click",
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "dog_barking"
+      ],
+      "unsupported": [
+        "impact_or_click",
+        "tone_or_beep"
+      ]
+    },
+    {
+      "case": "k06-instruct",
+      "http_status": 503,
+      "finish_reason": null,
+      "raw_answer": null,
+      "expected_labels": null,
+      "status": "inconclusive-provider-or-transport",
+      "error": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "case": "k02-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"dog_barking\", \"tone_or_beep\"]",
+      "expected_labels": [
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "dog_barking",
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [],
+      "unsupported": [
+        "tone_or_beep"
+      ]
+    },
+    {
+      "case": "k06-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"impact_or_click\", \"tone_or_beep\"]",
+      "expected_labels": null,
+      "status": "complete-category-observation",
+      "labels": [
+        "impact_or_click",
+        "tone_or_beep"
+      ]
+    }
+  ],
+  "latest_valid_audio_observations": {
+    "k04-thinking": {
+      "case": "k04-thinking",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"tone_or_beep\"]",
+      "expected_labels": [
+        "silence"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "silence"
+      ],
+      "unsupported": [
+        "tone_or_beep"
+      ]
+    },
+    "k02-thinking": {
+      "case": "k02-thinking",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"impact_or_click\"]",
+      "expected_labels": [
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "impact_or_click"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "dog_barking"
+      ],
+      "unsupported": [
+        "impact_or_click"
+      ]
+    },
+    "k01-instruct": {
+      "case": "k01-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"silence\"]",
+      "expected_labels": [
+        "human_speech"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "silence"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "human_speech"
+      ],
+      "unsupported": [
+        "silence"
+      ]
+    },
+    "k03-instruct": {
+      "case": "k03-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"running_water_or_waves\"]",
+      "expected_labels": [
+        "rainfall"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "running_water_or_waves"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "rainfall"
+      ],
+      "unsupported": [
+        "running_water_or_waves"
+      ]
+    },
+    "k05-instruct": {
+      "case": "k05-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "\n[\"human_speech\", \"impact_or_click\", \"tone_or_beep\"]",
+      "expected_labels": [
+        "human_speech",
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "human_speech",
+        "impact_or_click",
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [
+        "dog_barking"
+      ],
+      "unsupported": [
+        "impact_or_click",
+        "tone_or_beep"
+      ]
+    },
+    "k02-instruct": {
+      "case": "k02-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"dog_barking\", \"tone_or_beep\"]",
+      "expected_labels": [
+        "dog_barking"
+      ],
+      "status": "complete-category-observation",
+      "labels": [
+        "dog_barking",
+        "tone_or_beep"
+      ],
+      "exact_set_match": false,
+      "missing": [],
+      "unsupported": [
+        "tone_or_beep"
+      ]
+    },
+    "k06-instruct": {
+      "case": "k06-instruct",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "raw_answer": "[\"impact_or_click\", \"tone_or_beep\"]",
+      "expected_labels": null,
+      "status": "complete-category-observation",
+      "labels": [
+        "impact_or_click",
+        "tone_or_beep"
+      ]
+    }
+  },
+  "visual_rows": [
+    {
+      "case": "v01-matched",
+      "http_status": 200,
+      "contract_pass": true,
+      "associations": [
+        {
+          "event_id": "e1",
+          "status": "possible",
+          "visible_source": "orange ball",
+          "visual_evidence": "rabbit holds an orange ball in hand"
+        },
+        {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "no visible source for tone or beep"
+        }
+      ]
+    },
+    {
+      "case": "v02-swapped",
+      "http_status": 200,
+      "contract_pass": true,
+      "associations": [
+        {
+          "event_id": "e1",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible impact or click source in the scene."
+        },
+        {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible tone or beep source in the scene."
+        }
+      ],
+      "all_associations_unresolved": true
+    },
+    {
+      "case": "v03-known-mismatch",
+      "http_status": 200,
+      "contract_pass": true,
+      "associations": [
+        {
+          "event_id": "e1",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No dog is visible; only an animated rabbit in a field."
+        },
+        {
+          "event_id": "e2",
+          "status": "unresolved",
+          "visible_source": null,
+          "visual_evidence": "No visible device or object that could produce a tone or beep."
+        }
+      ],
+      "all_associations_unresolved": true
+    },
+    {
+      "case": "v04-empty",
+      "http_status": 200,
+      "contract_pass": true,
+      "associations": [],
+      "empty_stays_empty": true
+    }
+  ],
+  "findings": [
+    "Closed categories elicited a dog tag on one control but also an unsupported tone; exact controlled recognition remained unaccepted.",
+    "The hosted-compatible recommended thinking parameters were accepted but did not solve the tested silence or dog controls.",
+    "Late association preserved supplied IDs and empty ledgers, and abstained on swapped/known-mismatched contexts in this small test.",
+    "The positive visible-source suggestion was orange ball; identity/cause were not verified and it remains a hypothesis.",
+    "New vision component differs in model, instruction and task from prior joint-caption requests. This is not a causal architecture-only comparison.",
+    "Closed-vocabulary tagging and schema success are not open-ended caption accuracy or DHH usefulness."
+  ],
+  "audio_gate_pass": false,
+  "caption_accuracy_gain_established": false,
+  "accepted_for_playback": false,
+  "limits": "Tiny reused controls, preset bundle rather than isolated parameter changes; no independent listening panel; optional open-description call omitted to retain the fixed budget."
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "film": "big-buck-bunny",
+    "windows_verified": 40,
+    "audio_end_seconds": 596.461678,
+    "video_end_seconds": 596.461678,
+    "picture_after_audio_seconds": 0.0,
+    "maximum_decoded_window_duration_delta_seconds": 9.499999993778374e-06,
+    "tolerance": "One AAC packet (1024 samples at source rate) plus two 16-kHz resampling samples; exact WAV SHA256 checked for every window"
+  },
+  {
+    "film": "sintel",
+    "windows_verified": 60,
+    "audio_end_seconds": 888.032,
+    "video_end_seconds": 888.032,
+    "picture_after_audio_seconds": 0.0,
+    "maximum_decoded_window_duration_delta_seconds": 3.907985046680551e-14,
+    "tolerance": "One AAC packet (1024 samples at source rate) plus two 16-kHz resampling samples; exact WAV SHA256 checked for every window"
+  },
+  {
+    "film": "tears-of-steel",
+    "windows_verified": 49,
+    "audio_end_seconds": 734.092993,
+    "video_end_seconds": 734.166667,
+    "picture_after_audio_seconds": 0.0736739999999827,
+    "maximum_decoded_window_duration_delta_seconds": 0.005882000000021037,
+    "tolerance": "One AAC packet (1024 samples at source rate) plus two 16-kHz resampling samples; exact WAV SHA256 checked for every window"
+  }
+]

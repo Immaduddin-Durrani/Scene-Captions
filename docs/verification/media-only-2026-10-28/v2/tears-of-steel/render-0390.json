@@ -1,0 +1,125 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"390\", \"observation\": \"A high-pitched electronic tone plays continuously, accompanied by a brief, sharp impact sound at the beginning.\"}, {\"id\": \"405\", \"observation\": \"A low-frequency hum and a high-pitched electronic whine are audible, with a brief, sharp, high-pitched electronic beep.\"}, {\"id\": \"420\", \"observation\": \"A vehicle engine idles, followed by a loud explosion and a sustained, high-pitched electronic tone.\"}, {\"id\": \"450\", \"observation\": \"A high-pitched electronic whine transitions into a deep, resonant hum, followed by a sudden, loud, metallic impact and a brief, high-frequency electronic tone.\"}, {\"id\": \"465\", \"observation\": \"A high-pitched electronic whine, metallic scraping, and a deep, resonant roar are audible in the recording.\"}, {\"id\": \"480\", \"observation\": \"A deep, resonant roar is followed by metallic clanking and a high-pitched whirring sound, suggesting a large mechanical or robotic entity in motion.\"}, {\"id\": \"495\", \"observation\": \"The recording features a continuous, high-pitched electronic whine and a low-frequency rumble, characteristic of a large vehicle in motion.\"}, {\"id\": \"510\", \"observation\": \"A dramatic orchestral score with sweeping strings, deep percussion, and a resonant metallic clang creates a tense, cinematic atmosphere.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "d873eaba1add3116ac9e2c5626725b87a4b151f11031d8d25a0677d808de79a8",
+    "wire_bytes": 2416,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "b890c62a-6eb3-44a1-98f9-a7a24af6f09d",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "e2272146-b130-4647-a79d-c64b6633d4cb"
+    },
+    "response": {
+      "id": "chatcmpl-f59eedb5-bfa3-45cd-a445-d21d0963d688",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"390\",\"essential\":\"electronic tone impact\",\"balanced\":\"A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning\",\"detailed\":\"A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning\"},{\"id\":\"405\",\"essential\":\"hum whine beep\",\"balanced\":\"A low-frequency hum and high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep\",\"detailed\":\"A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep\"},{\"id\":\"420\",\"essential\":\"engine explosion tone\",\"balanced\":\"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone\",\"detailed\":\"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone\"},{\"id\":\"450\",\"essential\":\"whine hum impact tone\",\"balanced\":\"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone\",\"detailed\":\"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone\"},{\"id\":\"465\",\"essential\":\"whine scraping roar\",\"balanced\":\"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording\",\"detailed\":\"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording\"},{\"id\":\"480\",\"essential\":\"roar clanking whirring\",\"balanced\":\"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound\",\"detailed\":\"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound\"},{\"id\":\"495\",\"essential\":\"whine rumble\",\"balanced\":\"A continuous high-pitched electronic whine and a low-frequency rumble are audible\",\"detailed\":\"A continuous high-pitched electronic whine and a low-frequency rumble are audible\"},{\"id\":\"510\",\"essential\":\"orchestral score clang\",\"balanced\":\"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang\",\"detailed\":\"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang creates a tense cinematic atmosphere\"}]}\n\n{\n  \"captions\": [\n    {\n      \"id\": \"390\",\n      \"essential\": \"electronic tone impact\",\n      \"balanced\": \"A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning\",\n      \"detailed\": \"A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning\"\n    },\n    {\n      \"id\": \"405\",\n      \"essential\": \"hum whine beep\",\n      \"balanced\": \"A low-frequency hum and high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep\",\n      \"detailed\": \"A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep\"\n    },\n    {\n      \"id\": \"420\",\n      \"essential\": \"engine explosion tone\",\n      \"balanced\": \"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone\",\n      \"detailed\": \"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone\"\n    },\n    {\n      \"id\": \"450\",\n      \"essential\": \"whine hum impact tone\",\n      \"balanced\": \"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone\",\n      \"detailed\": \"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone\"\n    },\n    {\n      \"id\": \"465\",\n      \"essential\": \"whine scraping roar\",\n      \"balanced\": \"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording\",\n      \"detailed\": \"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording\"\n    },\n    {\n      \"id\": \"480\",\n      \"essential\": \"roar clanking whirring\",\n      \"balanced\": \"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound\",\n      \"detailed\": \"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound\"\n    },\n    {\n      \"id\": \"495\",\n      \"essential\": \"whine rumble\",\n      \"balanced\": \"A continuous high-pitched electronic whine and a low-frequency rumble are audible\",\n      \"detailed\": \"A continuous high-pitched electronic whine and a low-frequency rumble are audible\"\n    },\n    {\n      \"id\": \"510\",\n      \"essential\": \"orchestral score clang\",\n      \"balanced\": \"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang\",\n      \"detailed\": \"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang creates a tense cinematic atmosphere\"\n    }\n  ]\n}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172638,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 524,
+        "completion_tokens": 1115,
+        "total_tokens": 1639,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 6.137,
+    "validation_error": "Extra data: line 3 column 1 (char 2312)"
+  },
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"390\", \"observation\": \"A high-pitched electronic tone plays continuously, accompanied by a brief, sharp impact sound at the beginning.\"}, {\"id\": \"405\", \"observation\": \"A low-frequency hum and a high-pitched electronic whine are audible, with a brief, sharp, high-pitched electronic beep.\"}, {\"id\": \"420\", \"observation\": \"A vehicle engine idles, followed by a loud explosion and a sustained, high-pitched electronic tone.\"}, {\"id\": \"450\", \"observation\": \"A high-pitched electronic whine transitions into a deep, resonant hum, followed by a sudden, loud, metallic impact and a brief, high-frequency electronic tone.\"}, {\"id\": \"465\", \"observation\": \"A high-pitched electronic whine, metallic scraping, and a deep, resonant roar are audible in the recording.\"}, {\"id\": \"480\", \"observation\": \"A deep, resonant roar is followed by metallic clanking and a high-pitched whirring sound, suggesting a large mechanical or robotic entity in motion.\"}, {\"id\": \"495\", \"observation\": \"The recording features a continuous, high-pitched electronic whine and a low-frequency rumble, characteristic of a large vehicle in motion.\"}, {\"id\": \"510\", \"observation\": \"A dramatic orchestral score with sweeping strings, deep percussion, and a resonant metallic clang creates a tense, cinematic atmosphere.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "d873eaba1add3116ac9e2c5626725b87a4b151f11031d8d25a0677d808de79a8",
+    "wire_bytes": 2416,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "213ddcf7-e1b5-48d3-8156-9ed712cca980",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "75aa0a86-e0f7-4485-883b-4ff275c3ea43"
+    },
+    "response": {
+      "id": "chatcmpl-415f432e-38d6-4334-8dcd-cfeec0f7cde5",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"390\",\"essential\":\"electronic tone impact\",\"balanced\":\"A high-pitched electronic tone plays continuously with a brief sharp impact at the beginning.\",\"detailed\":\"A high-pitched electronic tone plays continuously accompanied by a brief sharp impact sound at the beginning.\"},{\"id\":\"405\",\"essential\":\"hum whine beep\",\"balanced\":\"A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.\",\"detailed\":\"A low-frequency hum and a high-pitched electronic whine are audible with a brief sharp high-pitched electronic beep.\"},{\"id\":\"420\",\"essential\":\"engine explosion tone\",\"balanced\":\"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.\",\"detailed\":\"A vehicle engine idles followed by a loud explosion and a sustained high-pitched electronic tone.\"},{\"id\":\"450\",\"essential\":\"whine hum impact tone\",\"balanced\":\"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.\",\"detailed\":\"A high-pitched electronic whine transitions into a deep resonant hum followed by a sudden loud metallic impact and a brief high-frequency electronic tone.\"},{\"id\":\"465\",\"essential\":\"whine scraping roar\",\"balanced\":\"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.\",\"detailed\":\"A high-pitched electronic whine metallic scraping and a deep resonant roar are audible in the recording.\"},{\"id\":\"480\",\"essential\":\"roar clanking whirring\",\"balanced\":\"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.\",\"detailed\":\"A deep resonant roar is followed by metallic clanking and a high-pitched whirring sound.\"},{\"id\":\"495\",\"essential\":\"whine rumble\",\"balanced\":\"A continuous high-pitched electronic whine and a low-frequency rumble are audible.\",\"detailed\":\"A continuous high-pitched electronic whine and a low-frequency rumble are audible.\"},{\"id\":\"510\",\"essential\":\"orchestral score clang\",\"balanced\":\"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.\",\"detailed\":\"A dramatic orchestral score with sweeping strings deep percussion and a resonant metallic clang is audible.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172645,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 524,
+        "completion_tokens": 510,
+        "total_tokens": 1034,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 22.916
+  }
+]

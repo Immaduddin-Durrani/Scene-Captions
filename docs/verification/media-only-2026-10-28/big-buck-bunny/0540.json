@@ -1,0 +1,137 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v1",
+    "film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/big-buck-bunny/738e2f999860553d/0540.wav",
+      "sha256": "fb9dd2350dbb396d83837438f7b9c8bbc7d05afa7b07be58713356f538ca3bb3",
+      "duration_s": 30.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "0185de85ebafa79cf9700914e23b66e968c7ef01430f2123dedb8a4ec9e1e06e"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "6e45f2216b878366e08d4b031c409cb7d93be2c01669f9c386f7ba0d23508581",
+                    "data_uri_characters": 1280294,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Listen only to the attached 30.000-second recording. Author factual English\nsound captions for Deaf and hard-of-hearing viewers, directly from the audio.\nDo not guess the video, story, characters, visible actions, emotional reactions,\nor causes. No external captions or story context are supplied. Do not transcribe\nspoken words: speech recognition is handled separately. Include identifiable\nmusic, sound effects and nonverbal vocalizations. Omit uncertain source identities;\nuse a general acoustic label instead. Silence needs no caption. Do not invent a\nsound merely to fill an interval. Distinct events may overlap; include music under\neffects if audible. Estimate each event's LOCAL start/end in seconds, within the\nrecording. A continuous sound can span the whole clip. Up to 12 events.\nReturn only JSON: {\"cues\":[{\"start_s\":0.0,\"end_s\":1.0,\"essential\":\"short sound label\",\n\"balanced\":\"brief factual sound description\",\"detailed\":\"more acoustic detail, at most 25 words\"}]}.\nAll three texts must describe the SAME audible event; greater detail must not\nadd a new sound, unsupported source, meaning or emotion. Plain text without brackets.\nReturn {\"cues\":[]} if no identifiable non-speech sounds are audible."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 4096,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "4c12c70d50b197ce638ea34aae0b19658107b02432b5c87f229576eef0d18695",
+      "wire_bytes": 1281844,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "764a286d-1bcd-4b91-8baf-7fa323e4ec74",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "4d4d33a6-cba5-4d7f-a3b9-69618458585c"
+      },
+      "response": {
+        "id": "chatcmpl-4d4d33a6-cba5-4d7f-a3b9-69618458585c",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "\n{\"cues\":[{\"start_s\":0.0,\"end_s\":30.0,\"essential\":\"classical music\",\"balanced\":\"orchestral strings and woodwinds play a melodic piece\",\"detailed\":\"a string ensemble with woodwind instruments performs a continuous, melodic classical composition in a reverberant acoustic space\"}]}",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793171785,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 671,
+          "completion_tokens": 71,
+          "total_tokens": 742
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 1.6508619785308838,
+            "generation_tokens_per_second": 43.007835254152205,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 4.414
+    }
+  ],
+  "asr_attempts": [
+    {
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet-tdt-0_6b-v2",
+      "request_sha256": "9e90dc9c514bfb80c93cdfdfadd1c9cf69c59ee3afa8a46a756de9cb662fe737",
+      "audio_sha256": "e8464ff0c9f60a9d477064085f82c084fea22676d880e57113718bdc745411fb",
+      "config": {
+        "encoding": "LINEAR_PCM",
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "grpc_status": "OK",
+      "response": {
+        "id": {
+          "value": "fdf21447-6b2e-4958-94b7-77b7ffc201fc"
+        }
+      },
+      "request_ids": {
+        "nvcf-reqid": "1e923495-48c8-44e2-8acd-af76a8ed111a"
+      },
+      "seconds": 1.173
+    }
+  ],
+  "sound_cues": [
+    {
+      "start_s": 0.0,
+      "end_s": 30.0,
+      "essential": "classical music",
+      "balanced": "orchestral strings and woodwinds play a melodic piece",
+      "detailed": "a string ensemble with woodwind instruments performs a continuous, melodic classical composition in a reverberant acoustic space"
+    }
+  ],
+  "speech_cues": [],
+  "speech_rejections": []
+}

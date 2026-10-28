@@ -1,0 +1,234 @@
+{
+  "binding": {
+    "version": "media-only-experimental-v2",
+    "film_sha256": "730b5f0d32c08f68727525e3277f48d56d936acd6f6a5773f5fbb0904b91959b",
+    "fixture": {
+      "file": "artifacts/media-only-2026-10-28/tears-of-steel/730b5f0d32c08f68/sound15-0240.wav",
+      "sha256": "9ee903d17c6fc6f8eb148585d330c4592599960f283faad207c825d24d5f349a",
+      "duration_s": 15.0,
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width": 2,
+      "wire_type": "audio_url"
+    },
+    "prompt_sha256": "afdc4ea7a0a99a659bcd87292cd57d2b3a7bbe0ca1f8fb2524a47f1627121c4c"
+  },
+  "sound_attempts": [
+    {
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "8be8cc803e404a6a069cd6618b222951df0266b388fef4d59d29797828e7709f",
+                    "data_uri_characters": 640126,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the non-speech sounds audible in this 15.000-second recording.\nAnswer in one factual sentence of at most 30 words. Include music or effects if\naudible. Do not transcribe spoken words or describe a visual scene, story, emotion\nor imagined cause. If no non-speech sounds are identifiable, say so. No JSON."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "2e6eff1071a10f70754340301a4156fcd6e5cb65fb4804adb07521b1f82184aa",
+      "wire_bytes": 640743,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "6f6d0117-e4e9-4fd2-9ee2-61de4e77cb64",
+        "Nvcf-Status": "fulfilled",
+        "X-Request-Id": "74f872e4-6b1a-4c6f-adcb-d46c50d78176"
+      },
+      "response": {
+        "id": "chatcmpl-74f872e4-6b1a-4c6f-adcb-d46c50d78176",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "A low, sustained musical drone plays continuously, accompanied by a faint, rhythmic ticking sound.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793172432,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 284,
+          "completion_tokens": 20,
+          "total_tokens": 304
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.6698758602142334,
+            "generation_tokens_per_second": 29.856278137271268,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.382
+    }
+  ],
+  "asr_attempts": [
+    {
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet-tdt-0_6b-v2",
+      "request_sha256": "9e1d77fff9444284645069d9e76930edaf7d19fcf4efca93c8b4eb0e79b5e11d",
+      "audio_sha256": "d2572ef793e00d443922127865290d3a168e19324539b4ccadbc66b65de8014a",
+      "config": {
+        "encoding": "LINEAR_PCM",
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "Tender to her. Be honest. Be tender. Remind her what love is. ",
+                "confidence": 1.0,
+                "words": [
+                  {
+                    "start_time": 160,
+                    "end_time": 240,
+                    "word": "Tender"
+                  },
+                  {
+                    "start_time": 480,
+                    "end_time": 480,
+                    "word": "to"
+                  },
+                  {
+                    "start_time": 560,
+                    "end_time": 560,
+                    "word": "her."
+                  },
+                  {
+                    "start_time": 1360,
+                    "end_time": 1360,
+                    "word": "Be"
+                  },
+                  {
+                    "start_time": 1680,
+                    "end_time": 1920,
+                    "word": "honest."
+                  },
+                  {
+                    "start_time": 3600,
+                    "end_time": 3600,
+                    "word": "Be"
+                  },
+                  {
+                    "start_time": 3840,
+                    "end_time": 4080,
+                    "word": "tender."
+                  },
+                  {
+                    "start_time": 5520,
+                    "end_time": 6000,
+                    "word": "Remind"
+                  },
+                  {
+                    "start_time": 6240,
+                    "end_time": 6240,
+                    "word": "her"
+                  },
+                  {
+                    "start_time": 6800,
+                    "end_time": 6800,
+                    "word": "what"
+                  },
+                  {
+                    "start_time": 7440,
+                    "end_time": 7440,
+                    "word": "love"
+                  },
+                  {
+                    "start_time": 7680,
+                    "end_time": 7680,
+                    "word": "is."
+                  }
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 16.0
+          }
+        ],
+        "id": {
+          "value": "94b487e4-ecb7-4426-8e74-82d1c7b64dac"
+        }
+      },
+      "request_ids": {
+        "nvcf-reqid": "3695f752-6770-4442-8649-ee62246e2bce"
+      },
+      "seconds": 1.069
+    }
+  ],
+  "observation": "A low, sustained musical drone plays continuously, accompanied by a faint, rhythmic ticking sound.",
+  "speech_cues": [
+    {
+      "start_s": 240.16,
+      "end_s": 240.56,
+      "text": "Tender to her."
+    },
+    {
+      "start_s": 241.36,
+      "end_s": 241.92,
+      "text": "Be honest."
+    },
+    {
+      "start_s": 243.6,
+      "end_s": 244.08,
+      "text": "Be tender."
+    },
+    {
+      "start_s": 245.52,
+      "end_s": 247.68,
+      "text": "Remind her what love is."
+    }
+  ],
+  "speech_rejections": [],
+  "rendered": [
+    {
+      "start_s": 0,
+      "end_s": 15.0,
+      "essential": "musical drone ticking",
+      "balanced": "low sustained musical drone with faint rhythmic ticking",
+      "detailed": "low sustained musical drone plays continuously accompanied by faint rhythmic ticking sound"
+    }
+  ],
+  "render_report": "docs/verification/media-only-2026-10-28/v2/tears-of-steel/render-0135.json"
+}

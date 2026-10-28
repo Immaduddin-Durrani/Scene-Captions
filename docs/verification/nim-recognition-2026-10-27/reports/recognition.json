@@ -1,0 +1,282 @@
+{
+  "scope": "NVIDIA trial endpoint; single-attempt exact-payload controls; no auto acceptance, paid provider or installation",
+  "manifest_sha256": "4343c6e2f30a1099b29c813e3e3ad11d2f12b3778ccaf939771e2e22ac70aff0",
+  "calls": [
+    {
+      "case": "q01",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q01.wav",
+          "sha256": "c49afe2314c0157515aa0aed65ad4ae511f72182ea820e9684cf710bf210be86",
+          "duration_s": 10.0,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "710b11b63c3c51ef20bdd9ab2a687a3aa9c36b71ad558438f6cdc91129441604",
+                    "data_uri_characters": 426750,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "b0a62a2e8a401e82621ee5493c7bb3a0b1505e2899ed7f066a089c821ffee2c9",
+      "wire_bytes": 427164,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "d0331d9e-4cf4-4007-8035-58f12ef0768a",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-d8421623-9a2e-4ae9-a7d7-8d5499eb9eb1",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "Silence.",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112259,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 4,
+          "total_tokens": 173
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 14,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.2959868907928467,
+            "generation_tokens_per_second": 13.514112024641973,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 2.961
+    },
+    {
+      "case": "q02",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q02.wav",
+          "sha256": "d86d44780b15d8207b6d577573b19876a4791486dba02dae8c74b55f063e0184",
+          "duration_s": 1.5,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "636e2734778acab4695a74f900cdd9b170de6caa0f39c617eeb442c790491b99",
+                    "data_uri_characters": 64082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "5f3507939a50de94c2526138a742cef388d8e7d362ab3ced67b4b432b89e62d2",
+      "wire_bytes": 64496,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "b31fe770-fc65-493a-b52b-8634b26d6968",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-003d011e-4641-405c-81c0-10f50411e1cf",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The sound of opening a door",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112260,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 7,
+          "total_tokens": 70
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 16,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 0.23343968391418457,
+            "generation_tokens_per_second": 29.986332583337845,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 1.662
+    },
+    {
+      "case": "q03",
+      "hypothesis": "Audio-only recognition with no timing or schema burden; raw media only.",
+      "fixtures": [
+        {
+          "file": "artifacts/nim-recognition-2026-10-27/q03.wav",
+          "sha256": "20c51a2ccfac3b8373f678d9f14b68c2e3ffc33dac17956b738f9241e4c0725b",
+          "duration_s": 1.5,
+          "sample_rate": 16000,
+          "channels": 1,
+          "sample_width": 2,
+          "wire_type": "audio_url"
+        }
+      ],
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "payload": {
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "messages": [
+          {
+            "role": "user",
+            "content": [
+              {
+                "type": "audio_url",
+                "audio_url": {
+                  "url": {
+                    "inline_media_sha256": "a5663e7125decc965aa2e994ff51047b1aea0f54a80e66b4a30a18d5fe90e21e",
+                    "data_uri_characters": 64082,
+                    "prefix": "data:audio/wav;base64"
+                  }
+                }
+              },
+              {
+                "type": "text",
+                "text": "Describe the audible sounds in this recording. If no sound is audible, say so. Do not infer sounds from context."
+              }
+            ]
+          }
+        ],
+        "temperature": 0.2,
+        "top_k": 1,
+        "max_tokens": 256,
+        "stream": false,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      },
+      "wire_sha256": "9f8e7d9cadf9931dae25af30574cb0e3efd2de6d4192d2660e7f98193dbde0aa",
+      "wire_bytes": 64496,
+      "attempts": 1,
+      "http_status": 200,
+      "response_headers": {
+        "Nvcf-Reqid": "d0efa851-65a7-4c80-94bf-0c1895c1d2cc",
+        "Nvcf-Status": "fulfilled"
+      },
+      "response": {
+        "id": "chatcmpl-7456ef6d-9488-4f7a-bfb7-f7487b23b9ed",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "content": "The sound of hitting a drum",
+              "role": "assistant",
+              "reasoning_content": null
+            },
+            "finish_reason": "stop",
+            "logprobs": null
+          }
+        ],
+        "created": 1793112262,
+        "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "object": "chat.completion",
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 7,
+          "total_tokens": 70
+        },
+        "nvext": {
+          "scheduler_snapshot": {
+            "num_running_reqs": 15,
+            "num_waiting_reqs": 0
+          },
+          "request_throughput": {
+            "e2e_latency_seconds": 3.424091339111328,
+            "generation_tokens_per_second": 2.044337988313345,
+            "draft_tokens_per_second": 0.0
+          }
+        }
+      },
+      "seconds": 6.449
+    }
+  ]
+}

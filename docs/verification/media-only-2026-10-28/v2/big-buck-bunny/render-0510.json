@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"510\", \"observation\": \"A lively, fast-paced orchestral piece featuring prominent brass and percussion, with no speech or environmental sounds present.\"}, {\"id\": \"540\", \"observation\": \"A solo clarinet plays a slow, expressive melody with gentle vibrato, accompanied by subtle piano chords in a quiet, intimate setting.\"}, {\"id\": \"570\", \"observation\": \"A dramatic orchestral score with sweeping strings and brass, punctuated by a sharp metallic impact and subsequent rustling sounds.\"}, {\"id\": \"585\", \"observation\": \"The recording features the distinct sound of footsteps on a loose, granular surface, likely gravel or dry earth.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "90f4737e8cc4dd16b33c91904c279ec8934b28cbe2a5450ab770ecc6ed508dd7",
+    "wire_bytes": 1732,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "db71f243-37cd-4b55-a65e-b09b067297b9",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "57ef2fef-a515-4e39-90b1-03b734d6bdb7"
+    },
+    "response": {
+      "id": "chatcmpl-aabde6c2-8751-426e-bd90-e721ad8da76c",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"510\",\"essential\":\"orchestral music\",\"balanced\":\"Orchestral music with brass and percussion plays without speech or environmental sounds.\",\"detailed\":\"A lively fast-paced orchestral piece featuring prominent brass and percussion with no speech or environmental sounds present.\"},{\"id\":\"540\",\"essential\":\"clarinet and piano\",\"balanced\":\"A solo clarinet plays a slow expressive melody with gentle vibrato accompanied by subtle piano chords.\",\"detailed\":\"A solo clarinet plays a slow expressive melody with gentle vibrato accompanied by subtle piano chords in a quiet intimate setting.\"},{\"id\":\"570\",\"essential\":\"orchestral music with impacts\",\"balanced\":\"Orchestral score with sweeping strings and brass punctuated by sharp metallic impact and rustling sounds.\",\"detailed\":\"A dramatic orchestral score with sweeping strings and brass punctuated by a sharp metallic impact and subsequent rustling sounds.\"},{\"id\":\"585\",\"essential\":\"footsteps\",\"balanced\":\"Footsteps sound on a loose granular surface likely gravel or dry earth.\",\"detailed\":\"The recording features the distinct sound of footsteps on a loose granular surface likely gravel or dry earth.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172556,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 353,
+        "completion_tokens": 246,
+        "total_tokens": 599,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 2.727
+  }
+]

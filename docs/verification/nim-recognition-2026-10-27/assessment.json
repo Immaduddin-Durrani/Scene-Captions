@@ -1,0 +1,243 @@
+{
+  "scope": "Small NVIDIA-only endpoint diagnostic, not a film-caption benchmark.",
+  "inference_attempts": 12,
+  "unique_cells": 9,
+  "http_outcomes": {
+    "200": 9,
+    "503": 3
+  },
+  "review_method": "Manual text interpretation in the main session against dataset labels and constructed controls; no independent listening panel.",
+  "rows": [
+    {
+      "run": "recognition",
+      "case": "q01",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.961,
+      "text": "Silence.",
+      "status": "failed-recognition",
+      "rationale": "Expected dog; response asserted silence."
+    },
+    {
+      "run": "recognition",
+      "case": "q02",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.662,
+      "text": "The sound of opening a door",
+      "status": "failed-recognition",
+      "rationale": "Expected dog; response asserted a door opening."
+    },
+    {
+      "run": "recognition",
+      "case": "q03",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 6.449,
+      "text": "The sound of hitting a drum",
+      "status": "failed-absence",
+      "rationale": "Digital-zero PCM; response asserted a drum hit."
+    },
+    {
+      "run": "rain",
+      "case": "q04",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.034,
+      "text": "Waves, surf, Ocean",
+      "status": "partial-water-related",
+      "rationale": "Dataset rain; response asserts waves/surf/ocean. Strict rain criterion not met."
+    },
+    {
+      "run": "rain",
+      "case": "q05",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 2.009,
+      "text": null,
+      "status": "inconclusive-provider-or-transport",
+      "rationale": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "run": "rain",
+      "case": "q06",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.926,
+      "text": null,
+      "status": "inconclusive-provider-or-transport",
+      "rationale": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "run": "speech",
+      "case": "q07",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.004,
+      "text": "Nine silver spoons rest beside the red kettle.",
+      "status": "passed-speech-control",
+      "rationale": "Fresh expected phrase transcribed exactly."
+    },
+    {
+      "run": "speech-description",
+      "case": "q08",
+      "http_status": 503,
+      "finish_reason": null,
+      "seconds": 1.464,
+      "text": null,
+      "status": "inconclusive-provider-or-transport",
+      "rationale": "{\"error\":{\"message\":\"ResourceExhausted: Worker local total request limit reached (16/16)\",\"type\":\"Service Unavailable\",\"code\":503}}"
+    },
+    {
+      "run": "rain-retry",
+      "case": "q05",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.553,
+      "text": "The sound of water flowing",
+      "status": "partial-water-related",
+      "rationale": "Dataset rain; response describes flowing water. Strict rain criterion not met."
+    },
+    {
+      "run": "rain-retry",
+      "case": "q06",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.244,
+      "text": "Silence.",
+      "status": "passed-absence-control",
+      "rationale": "Ten-second digital-zero PCM correctly described as silence."
+    },
+    {
+      "run": "final-checks",
+      "case": "q08",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.003,
+      "text": "No sound is audible.",
+      "status": "failed-speech-presence",
+      "rationale": "Same audible speech as q07; general description incorrectly asserts no sound."
+    },
+    {
+      "run": "final-checks",
+      "case": "q09",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 3.835,
+      "text": "The recording contains a series of sharp, percussive impacts, each consisting of a high-frequency crack followed by a lower-frequency thud. These sounds are repeated at regular intervals, occurring approximately every 0.8 seconds. The impacts are consistent in volume and timbre, suggesting a repetitive action. There is no speech, music, or other ambient noise present. The sounds are isolated and clear, with no discernible background context.",
+      "status": "partial-repetition-recognition",
+      "rationale": "Repeated short events described as percussive impacts; dog category not identified. Other acoustic claims unreviewed."
+    }
+  ],
+  "last_complete_observation_by_cell": {
+    "q01": {
+      "run": "recognition",
+      "case": "q01",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.961,
+      "text": "Silence.",
+      "status": "failed-recognition",
+      "rationale": "Expected dog; response asserted silence."
+    },
+    "q02": {
+      "run": "recognition",
+      "case": "q02",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.662,
+      "text": "The sound of opening a door",
+      "status": "failed-recognition",
+      "rationale": "Expected dog; response asserted a door opening."
+    },
+    "q03": {
+      "run": "recognition",
+      "case": "q03",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 6.449,
+      "text": "The sound of hitting a drum",
+      "status": "failed-absence",
+      "rationale": "Digital-zero PCM; response asserted a drum hit."
+    },
+    "q04": {
+      "run": "rain",
+      "case": "q04",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.034,
+      "text": "Waves, surf, Ocean",
+      "status": "partial-water-related",
+      "rationale": "Dataset rain; response asserts waves/surf/ocean. Strict rain criterion not met."
+    },
+    "q07": {
+      "run": "speech",
+      "case": "q07",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.004,
+      "text": "Nine silver spoons rest beside the red kettle.",
+      "status": "passed-speech-control",
+      "rationale": "Fresh expected phrase transcribed exactly."
+    },
+    "q05": {
+      "run": "rain-retry",
+      "case": "q05",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 1.553,
+      "text": "The sound of water flowing",
+      "status": "partial-water-related",
+      "rationale": "Dataset rain; response describes flowing water. Strict rain criterion not met."
+    },
+    "q06": {
+      "run": "rain-retry",
+      "case": "q06",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.244,
+      "text": "Silence.",
+      "status": "passed-absence-control",
+      "rationale": "Ten-second digital-zero PCM correctly described as silence."
+    },
+    "q08": {
+      "run": "final-checks",
+      "case": "q08",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 2.003,
+      "text": "No sound is audible.",
+      "status": "failed-speech-presence",
+      "rationale": "Same audible speech as q07; general description incorrectly asserts no sound."
+    },
+    "q09": {
+      "run": "final-checks",
+      "case": "q09",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "seconds": 3.835,
+      "text": "The recording contains a series of sharp, percussive impacts, each consisting of a high-frequency crack followed by a lower-frequency thud. These sounds are repeated at regular intervals, occurring approximately every 0.8 seconds. The impacts are consistent in volume and timbre, suggesting a repetitive action. There is no speech, music, or other ambient noise present. The sounds are isolated and clear, with no discernible background context.",
+      "status": "partial-repetition-recognition",
+      "rationale": "Repeated short events described as percussive impacts; dog category not identified. Other acoustic claims unreviewed."
+    }
+  },
+  "integrity": {
+    "manifest_hashes_match": true,
+    "fixture_hashes_match": true,
+    "exact_crop_sample_equality": true,
+    "digital_silence_confirmed": true,
+    "repeated_burst_sample_equality": true,
+    "retry_payloads_unchanged": true,
+    "asr_vs_description_same_audio_and_parameters_only_text_changed": true
+  },
+  "interpretation": [
+    "Shorter context did not establish dog recognition.",
+    "Repeated samples yielded repetition-related acoustic text, not a strict dog hit.",
+    "Silence outcomes differ across durations/requests; neither a unique duration mechanism nor out-of-distribution input is proven.",
+    "Speech transcript versus sound-description discrepancy establishes an observed task-dependent outcome; opaque serving/replica variability remains a possible confound.",
+    "Broad water descriptions are partial evidence, not accepted strict rain captions."
+  ],
+  "timing_and_video_tests": "Not run: prerequisite recognition and absence controls did not pass.",
+  "automatic_installation": false,
+  "model_gate_cleared": false
+}

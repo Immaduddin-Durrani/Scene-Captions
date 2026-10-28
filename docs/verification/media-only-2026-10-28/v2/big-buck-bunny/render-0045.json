@@ -1,0 +1,63 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"45\", \"observation\": \"A sequence of distinct, non-musical sound effects, including a door opening, a creak, and a brief musical jingle, are audible.\"}, {\"id\": \"60\", \"observation\": \"A brass band plays a lively tune, accompanied by the rhythmic clatter of a typewriter and the soft rustle of paper.\"}, {\"id\": \"75\", \"observation\": \"A choir sings a sustained, ethereal melody, followed by a sharp metallic impact and a brief rustling sound.\"}, {\"id\": \"90\", \"observation\": \"A train whistle sounds, followed by a train horn, and then a train moving on tracks with music playing.\"}, {\"id\": \"105\", \"observation\": \"A solo flute plays a slow, melancholic melody over a sustained string pad, with subtle ambient noise and a faint, high-pitched electronic tone.\"}, {\"id\": \"120\", \"observation\": \"A gentle piano melody plays softly in the background, accompanied by subtle rustling and a distinct thud.\"}, {\"id\": \"135\", \"observation\": \"A door opens, followed by a squeak, a metallic clank, and a brief musical jingle.\"}, {\"id\": \"150\", \"observation\": \"A door opens, followed by a squeak, a door slam, and a person laughing.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "691247ca11989c6d80a9c4cad7242d43702ef394b06d71c2b443e283fb60a8af",
+    "wire_bytes": 2245,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "c7addd17-08e3-4823-9116-83f4c1fb15e9",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "de1881b7-f99d-49c6-8568-51dfbe1bac3f"
+    },
+    "response": {
+      "id": "chatcmpl-9ba5d212-577a-404a-a59b-e5b4e60995b6",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"45\",\"essential\":\"door opening creak musical jingle\",\"balanced\":\"A door opening, a creak, and a brief musical jingle are audible.\",\"detailed\":\"A sequence of distinct non-musical sound effects including a door opening a creak and a brief musical jingle are audible.\"},{\"id\":\"60\",\"essential\":\"brass band typewriter paper rustle\",\"balanced\":\"A brass band plays a lively tune accompanied by the rhythmic clatter of a typewriter and the soft rustle of paper.\",\"detailed\":\"A brass band plays a lively tune accompanied by the rhythmic clatter of a typewriter and the soft rustle of paper.\"},{\"id\":\"75\",\"essential\":\"choir metallic impact rustling\",\"balanced\":\"A choir sings a sustained ethereal melody followed by a sharp metallic impact and a brief rustling sound.\",\"detailed\":\"A choir sings a sustained ethereal melody followed by a sharp metallic impact and a brief rustling sound.\"},{\"id\":\"90\",\"essential\":\"train whistle train horn train music\",\"balanced\":\"A train whistle sounds followed by a train horn and then a train moving on tracks with music playing.\",\"detailed\":\"A train whistle sounds followed by a train horn and then a train moving on tracks with music playing.\"},{\"id\":\"105\",\"essential\":\"flute string pad ambient noise electronic tone\",\"balanced\":\"A solo flute plays a slow melody over a sustained string pad with subtle ambient noise and a faint high-pitched electronic tone.\",\"detailed\":\"A solo flute plays a slow melancholic melody over a sustained string pad with subtle ambient noise and a faint high-pitched electronic tone.\"},{\"id\":\"120\",\"essential\":\"piano rustling thud\",\"balanced\":\"A gentle piano melody plays softly in the background accompanied by subtle rustling and a distinct thud.\",\"detailed\":\"A gentle piano melody plays softly in the background accompanied by subtle rustling and a distinct thud.\"},{\"id\":\"135\",\"essential\":\"door opening squeak metallic clank musical jingle\",\"balanced\":\"A door opens followed by a squeak a metallic clank and a brief musical jingle.\",\"detailed\":\"A door opens followed by a squeak a metallic clank and a brief musical jingle.\"},{\"id\":\"150\",\"essential\":\"door opening squeak door slam laughing\",\"balanced\":\"A door opens followed by a squeak a door slam and a person laughing.\",\"detailed\":\"A door opens followed by a squeak a door slam and a person laughing.\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172546,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 507,
+        "completion_tokens": 539,
+        "total_tokens": 1046,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.003
+  }
+]

@@ -855,3 +855,23 @@ everything on NVIDIA NIM.” Close that proposal; no OpenRouter call/key use or 
 fallback is authorized. Continue BBB preparation on NIM, separating source-assisted
 transformation from independent audio grounding. Earlier failed controls remain
 valid; source context must not be used to relabel a hallucination as audio evidence.
+
+28 October 2026 — Explicit experimental media-only full-film generation
+The user requested full generated subtitles for all three films and an option
+to select them, explicitly excluding reference-caption/plot-assisted generation.
+This authorizes NVIDIA-only offline full-film experiments despite the failed
+recognition gate; it does not clear that gate or certify the resulting captions.
+Keep these tracks separately in data/experimental-captions/, default to the
+existing tracks, and require an explicit viewer selection. Experimental metadata
+must retain failed acoustic validation and unverified draft status. Reject
+cross-film/source-hash mismatches and do not mix sourced dialogue into generated
+tracks. The first structured-output attempt copied examples/failed JSON; retain
+its evidence. The revised experiment uses 15-second audio-only observations,
+three-level text rendering from those observations, and separate word-timed
+Parakeet ASR on 30-second audio. Sound display intervals are analysis windows,
+not verified event boundaries. Entire-film processing does not establish full
+sound-event coverage, correct words, accessibility suitability or generalization.
+No model calls, credentials or generation scripts enter viewing. Preserve the
+existing failed gate, source captions, licensing and full provenance. Changing
+subtitle source is disabled after rehearsal starts so exports keep one track
+version. This request does not authorize publishing, a push or paid providers.

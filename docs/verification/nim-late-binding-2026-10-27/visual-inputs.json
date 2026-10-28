@@ -1,0 +1,77 @@
+{
+  "v01-matched": {
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "impact_or_click",
+        "start_s": null,
+        "end_s": null
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null
+      }
+    ],
+    "frame_hashes": [
+      "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+      "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+      "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd"
+    ],
+    "source": "Own model-generated audio-category candidates; not accepted acoustic ground truth."
+  },
+  "v02-swapped": {
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "impact_or_click",
+        "start_s": null,
+        "end_s": null
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null
+      }
+    ],
+    "frame_hashes": [
+      "0d6fc200dbf24319b128062b3b0e2acf94400a86c35f4ef1c76013277ed11091",
+      "c60283125c86b50860a5b728e1697b6c31933fdb319862598f33f094be609dda",
+      "3147ff59727e947917672c845f939f11269403bad3326528b28fc6d890cef647"
+    ],
+    "source": "Own model-generated audio-category candidates; not accepted acoustic ground truth."
+  },
+  "v03-known-mismatch": {
+    "events": [
+      {
+        "event_id": "e1",
+        "audio_category": "dog_barking",
+        "start_s": null,
+        "end_s": null
+      },
+      {
+        "event_id": "e2",
+        "audio_category": "tone_or_beep",
+        "start_s": null,
+        "end_s": null
+      }
+    ],
+    "frame_hashes": [
+      "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+      "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+      "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd"
+    ],
+    "source": "Own model-generated audio-category candidates; not accepted acoustic ground truth."
+  },
+  "v04-empty": {
+    "events": [],
+    "frame_hashes": [
+      "d0a3687d80812fbbeb50ce667fdad0e0af930c7da96b53e50b718d070ca95165",
+      "b7834658d136cdf9e4d24b33e9677881f086220014b410abfc0d380fed3e3419",
+      "23d4c28bd84a87d7b828f101cf6382728425d52e26bfa24b19df93a4a4b220cd"
+    ],
+    "source": "Own model-generated audio-category candidates; not accepted acoustic ground truth."
+  }
+}

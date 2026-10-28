@@ -1,0 +1,9 @@
+{
+  "created_before_renderer_inference": true,
+  "manifest_sha256": "f1836da2db75c272b047887a5507fd987e6c462414bff3613cfadeb2590b7778",
+  "ledger_sha256": "8edcc3d8ce80e887cd63b863e83c768b611f0f34f7de0d5197813fd3226aa931",
+  "max_requests": 1,
+  "criteria": "Three levels, stable IDs and exact speech, no new fields or fabricated timing.",
+  "semantic_acoustic_acceptance": false,
+  "warning": "A well-formed rendering of an incorrect sound observation remains an incorrect caption."
+}

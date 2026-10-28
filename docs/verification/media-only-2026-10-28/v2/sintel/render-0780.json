@@ -1,0 +1,125 @@
+[
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"780\", \"observation\": \"A soft, sustained piano chord is audible, providing a gentle musical backdrop to the spoken words.\"}, {\"id\": \"795\", \"observation\": \"A soft, sustained musical chord is audible beneath the female vocal performance.\"}, {\"id\": \"810\", \"observation\": \"A gentle piano melody plays softly, accompanied by a subtle, continuous background hum.\"}, {\"id\": \"825\", \"observation\": \"A female voice sings over a gentle, melodic piano accompaniment with subtle, sustained string-like textures in the background.\"}, {\"id\": \"855\", \"observation\": \"A female vocalist sings over a pop song featuring a steady drum beat, bass guitar, and electric guitar.\"}, {\"id\": \"870\", \"observation\": \"A female vocalist sings over a gentle piano melody in a slow, melancholic ballad with soft, sustained musical tones.\"}, {\"id\": \"885\", \"observation\": \"A person plays a piano with his right hand.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "402c37718438ea1444687250313f8a308d6d9290aa0b03384fc938001c27af91",
+    "wire_bytes": 2009,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "e5766736-89b2-4057-b62a-e48b8e17df24",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "3300a8b1-e3b6-438e-a4e8-d5c98aa972d5"
+    },
+    "response": {
+      "id": "chatcmpl-1e14dad0-38a6-4055-9d08-f6b8226e30e8",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"780\",\"essential\":\"piano chord\",\"balanced\":\"A soft sustained piano chord is audible\",\"detailed\":\"A soft sustained piano chord is audible providing a gentle musical backdrop to spoken words\"},{\"id\":\"795\",\"essential\":\"musical chord\",\"balanced\":\"A soft sustained musical chord is audible\",\"detailed\":\"A soft sustained musical chord is audible beneath the female vocal performance\"},{\"id\":\"810\",\"essential\":\"piano melody background hum\",\"balanced\":\"A gentle piano melody plays softly with a subtle continuous background hum\",\"detailed\":\"A gentle piano melody plays softly accompanied by a subtle continuous background hum\"},{\"id\":\"825\",\"essential\":\"female voice piano strings\",\"balanced\":\"A female voice sings over gentle melodic piano with subtle sustained string-like textures\",\"detailed\":\"A female voice sings over a gentle melodic piano accompaniment with subtle sustained string-like textures in the background\"},{\"id\":\"855\",\"essential\":\"female vocalist pop song\",\"balanced\":\"A female vocalist sings over a pop song featuring steady drum beat bass guitar and electric guitar\",\"detailed\":\"A female vocalist sings over a pop song featuring a steady drum beat bass guitar and electric guitar\"},{\"id\":\"870\",\"essential\":\"female vocalist piano\",\"balanced\":\"A female vocalist sings over a gentle piano melody with soft sustained musical tones\",\"detailed\":\"A female vocalist sings over a gentle piano melody in a slow melancholic ballad with soft sustained musical tones\"},{\"id\":\"885\",\"essential\":\"piano\",\"balanced\":\"A person plays a piano with his right hand\",\"detailed\":\"A person plays a piano with his right hand\"}]}\n\n{\"captions\":[{\"id\":\"780\",\"essential\":\"piano chord\",\"balanced\":\"A soft sustained piano chord is audible\",\"detailed\":\"A soft sustained piano chord is audible providing a gentle musical backdrop to spoken words\"},{\"id\":\"795\",\"essential\":\"musical chord\",\"balanced\":\"A soft sustained musical chord is audible\",\"detailed\":\"A soft sustained musical chord is audible beneath the female vocal performance\"},{\"id\":\"810\",\"essential\":\"piano melody background hum\",\"balanced\":\"A gentle piano melody plays softly with a subtle continuous background hum\",\"detailed\":\"A gentle piano melody plays softly accompanied by a subtle continuous background hum\"},{\"id\":\"825\",\"essential\":\"female voice piano strings\",\"balanced\":\"A female voice sings over gentle melodic piano with subtle sustained string-like textures\",\"detailed\":\"A female voice sings over a gentle melodic piano accompaniment with subtle sustained string-like textures in the background\"},{\"id\":\"855\",\"essential\":\"female vocalist pop song\",\"balanced\":\"A female vocalist sings over a pop song featuring steady drum beat bass guitar and electric guitar\",\"detailed\":\"A female vocalist sings over a pop song featuring a steady drum beat bass guitar and electric guitar\"},{\"id\":\"870\",\"essential\":\"female vocalist piano\",\"balanced\":\"A female vocalist sings over a gentle piano melody with soft sustained musical tones\",\"detailed\":\"A female vocalist sings over a gentle piano melody in a slow melancholic ballad with soft sustained musical tones\"},{\"id\":\"885\",\"essential\":\"piano\",\"balanced\":\"A person plays a piano with his right hand\",\"detailed\":\"A person plays a piano with his right hand\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172583,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 430,
+        "completion_tokens": 682,
+        "total_tokens": 1112,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.717,
+    "validation_error": "Extra data: line 3 column 1 (char 1633)"
+  },
+  {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "payload": {
+      "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Rewrite these unverified audio-model observations into non-speech captions\nfor Deaf/hard-of-hearing viewers. These observations are the ONLY factual input;\ndo not add sounds, source identities, emotion, visuals, plot or interpretations.\nDo not treat observations as independently verified. Remove speculative causes\nor moods. Preserve multiple audible sound types. Three texts per observation:\nessential (short labels), balanced (brief description), detailed (more of the\nalready supplied acoustic detail, at most 25 words). All <= 278 characters, no\nbrackets, markup or newlines. If the observation explicitly reports no non-speech\nsounds, return null texts for that id. Return only a JSON object with key captions,\nan array of objects with EXACT keys id, essential, balanced, detailed. Preserve\nevery input id exactly once. Do not generate timestamps. Observations:\n[{\"id\": \"780\", \"observation\": \"A soft, sustained piano chord is audible, providing a gentle musical backdrop to the spoken words.\"}, {\"id\": \"795\", \"observation\": \"A soft, sustained musical chord is audible beneath the female vocal performance.\"}, {\"id\": \"810\", \"observation\": \"A gentle piano melody plays softly, accompanied by a subtle, continuous background hum.\"}, {\"id\": \"825\", \"observation\": \"A female voice sings over a gentle, melodic piano accompaniment with subtle, sustained string-like textures in the background.\"}, {\"id\": \"855\", \"observation\": \"A female vocalist sings over a pop song featuring a steady drum beat, bass guitar, and electric guitar.\"}, {\"id\": \"870\", \"observation\": \"A female vocalist sings over a gentle piano melody in a slow, melancholic ballad with soft, sustained musical tones.\"}, {\"id\": \"885\", \"observation\": \"A person plays a piano with his right hand.\"}]"
+        }
+      ],
+      "temperature": 0.2,
+      "reasoning_effort": "none",
+      "max_tokens": 4096,
+      "stream": false
+    },
+    "wire_sha256": "402c37718438ea1444687250313f8a308d6d9290aa0b03384fc938001c27af91",
+    "wire_bytes": 2009,
+    "attempts": 1,
+    "http_status": 200,
+    "response_headers": {
+      "Nvcf-Reqid": "86ec78b9-44e0-4ee9-a519-b0e15de69e5b",
+      "Nvcf-Status": "fulfilled",
+      "X-Request-Id": "df589364-0901-4cb5-a9d4-c9a7a3f0419d"
+    },
+    "response": {
+      "id": "chatcmpl-88966425-8ae0-4e70-9a1d-533a6cfa657f",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "content": "{\"captions\":[{\"id\":\"780\",\"essential\":\"soft sustained piano chord\",\"balanced\":\"soft sustained piano chord audible\",\"detailed\":\"soft sustained piano chord audible gentle musical backdrop spoken words\"},{\"id\":\"795\",\"essential\":\"soft sustained musical chord\",\"balanced\":\"soft sustained musical chord audible beneath female vocal performance\",\"detailed\":\"soft sustained musical chord audible beneath female vocal performance\"},{\"id\":\"810\",\"essential\":\"gentle piano melody background hum\",\"balanced\":\"gentle piano melody plays softly accompanied by subtle continuous background hum\",\"detailed\":\"gentle piano melody plays softly accompanied by subtle continuous background hum\"},{\"id\":\"825\",\"essential\":\"female voice piano accompaniment string-like textures\",\"balanced\":\"female voice sings over gentle melodic piano accompaniment with subtle sustained string-like textures in background\",\"detailed\":\"female voice sings over gentle melodic piano accompaniment with subtle sustained string-like textures in background\"},{\"id\":\"855\",\"essential\":\"female vocalist pop song drum beat bass guitar electric guitar\",\"balanced\":\"female vocalist sings over pop song featuring steady drum beat bass guitar and electric guitar\",\"detailed\":\"female vocalist sings over pop song featuring steady drum beat bass guitar and electric guitar\"},{\"id\":\"870\",\"essential\":\"female vocalist gentle piano melody slow ballad sustained musical tones\",\"balanced\":\"female vocalist sings over gentle piano melody in slow melancholic ballad with soft sustained musical tones\",\"detailed\":\"female vocalist sings over gentle piano melody in slow melancholic ballad with soft sustained musical tones\"},{\"id\":\"885\",\"essential\":\"person plays piano right hand\",\"balanced\":\"person plays piano with his right hand\",\"detailed\":\"person plays piano with his right hand\"}]}",
+            "role": "assistant",
+            "reasoning_content": null
+          },
+          "finish_reason": "stop",
+          "logprobs": null
+        }
+      ],
+      "created": 1793172587,
+      "model": "private/nvidia/nemotron-3.5-super-120b-a12b",
+      "service_tier": null,
+      "system_fingerprint": null,
+      "object": "chat.completion",
+      "usage": {
+        "prompt_tokens": 430,
+        "completion_tokens": 349,
+        "total_tokens": 779,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        }
+      }
+    },
+    "seconds": 3.264
+  }
+]

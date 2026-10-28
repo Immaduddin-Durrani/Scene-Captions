@@ -1,0 +1,9 @@
+{
+  "zero_audio_produces_no_candidates": true,
+  "synthetic_onsets_localized_within_80ms": true,
+  "15s_candidate_separation_enforced": true,
+  "paired_audio_and_main_prompt_identical": true,
+  "image_hashes_and_frame_pts_checked": true,
+  "mute_samples_all_zero": true,
+  "network_calls": 0
+}

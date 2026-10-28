@@ -1,0 +1,72 @@
+{
+  "created_before_inference": true,
+  "date": "2026-10-27",
+  "asr": {
+    "model": "openai/whisper-large-v3",
+    "endpoint": "grpc.nvcf.nvidia.com:443",
+    "function_id": "b702f636-f60c-4a3d-a6f4-f3568c13bd7d",
+    "language_code": "en",
+    "word_timestamps_requested": true,
+    "single_attempt_timeout_s": 90
+  },
+  "manifest_sha256": "c756253b35d8537751055fda27a77a0ef6496c814a97593124b2e97283a0c4fe",
+  "evaluation_only": {
+    "p01": {
+      "speech": "Nine silver spoons rest beside the red kettle.",
+      "non_speech": []
+    },
+    "p02": {
+      "speech": "",
+      "non_speech": [],
+      "digital_zero": true
+    },
+    "p03": {
+      "speech": "",
+      "non_speech": "dog vocalizations, eight repeated exact bursts"
+    },
+    "p04": {
+      "speech": "Nine silver spoons rest beside the red kettle.",
+      "speech_offset_s": 0.5,
+      "non_speech": "same dog source, three bursts",
+      "onsets_s": [
+        4,
+        6,
+        8
+      ]
+    },
+    "p05": {
+      "source": "BBB first ten seconds; fixed window independent of caption timing",
+      "film_sha256": "738e2f999860553d056dd79c952f58f63cbb73892a57c72342ce9e5330d9d2d7",
+      "human_audio_ground_truth": "not annotated"
+    }
+  },
+  "criteria": {
+    "asr_words": "Correct clean/mixed phrase, no invented dialogue on absent-speech controls.",
+    "asr_timing": "Finite ordered word intervals within clip; zero/missing offsets are not timing success.",
+    "sound_stage": "Audio-grounded events separate from dialogue; strict dog recognition on controlled bursts; no effects on digital silence.",
+    "rendering": "One ledger, stable event IDs and speech, three detail levels, no invented events/attributes/times.",
+    "no_speech_vs_no_sound": "Empty ASR transcript never establishes acoustic silence."
+  },
+  "budget": {
+    "max_total_requests": 18,
+    "initial_asr_cells": 5,
+    "initial_sound_cells": 5,
+    "initial_renderer_requests": 1,
+    "max_one_explicit_retry_per_inconclusive_cell": true,
+    "stop": "Stop at auth/access failure for the affected stage or three consecutive capacity errors; no full-film run."
+  },
+  "stages": [
+    "Whisper speech and word offsets",
+    "Omni non-speech observations with own ASR as uncertain context",
+    "Evidence-labelled ledger and three-level draft rendering",
+    "Validate and retain failed candidates separately"
+  ],
+  "raw_zero_asr": "Diagnostic request deliberately tests all-zero input. A production preprocessor can bypass exact zeros; raw and wrapped behavior must be reported separately.",
+  "limits": [
+    "Known synthetic/ESC-10 controls, not a generalization benchmark.",
+    "BBB window has no independent listening annotation; do not claim movie accuracy.",
+    "ASR output is generated from media, not fetched subtitle input; it may itself hallucinate.",
+    "Renderer cannot correct ungrounded observations. Unresolved sound timing cannot become invented subtitles.",
+    "All artifacts remain drafts outside playback; existing failed sound gate stays failed."
+  ]
+}

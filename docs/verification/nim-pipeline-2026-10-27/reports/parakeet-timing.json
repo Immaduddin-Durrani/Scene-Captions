@@ -1,0 +1,177 @@
+{
+  "scope": "NVIDIA Parakeet offline ASR, not sound recognition",
+  "manifest_sha256": "c756253b35d8537751055fda27a77a0ef6496c814a97593124b2e97283a0c4fe",
+  "calls": [
+    {
+      "case": "p01",
+      "fixture": {
+        "case": "p01",
+        "file": "artifacts/nim-pipeline-2026-10-27/p01.wav",
+        "sha256": "ee30cc75411cbd1f1bf06496899a662c8bcb816f2f783190e7301983d3769289",
+        "duration_s": 2.5924375
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "4ecddbe201354346cdef51b249f29b9217dd9ed5247870ff588bd48ab1fc364e",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "Nine silver spoons rest beside the red kettle. ",
+                "confidence": 1.0,
+                "words": [
+                  {
+                    "end_time": 160,
+                    "word": "Nine"
+                  },
+                  {
+                    "start_time": 320,
+                    "end_time": 560,
+                    "word": "silver"
+                  },
+                  {
+                    "start_time": 640,
+                    "end_time": 1040,
+                    "word": "spoons"
+                  },
+                  {
+                    "start_time": 1120,
+                    "end_time": 1360,
+                    "word": "rest"
+                  },
+                  {
+                    "start_time": 1520,
+                    "end_time": 1680,
+                    "word": "beside"
+                  },
+                  {
+                    "start_time": 1760,
+                    "end_time": 1760,
+                    "word": "the"
+                  },
+                  {
+                    "start_time": 1920,
+                    "end_time": 2000,
+                    "word": "red"
+                  },
+                  {
+                    "start_time": 2080,
+                    "end_time": 2320,
+                    "word": "kettle."
+                  }
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 2.5924375
+          }
+        ],
+        "id": {
+          "value": "ea1cb854-1043-4577-8987-f663db0606da"
+        }
+      },
+      "seconds": 1.556,
+      "response_initial_metadata": {
+        "nvcf-reqid": "e24df762-5df5-441d-85bd-92d1d0b99d7b"
+      }
+    },
+    {
+      "case": "p04",
+      "fixture": {
+        "case": "p04",
+        "file": "artifacts/nim-pipeline-2026-10-27/p04.wav",
+        "sha256": "f72fb24ac161724aec4e2ba4be048bf74e992a2bf02cec3f39b2f43f12e98077",
+        "duration_s": 10.0
+      },
+      "endpoint": "grpc.nvcf.nvidia.com:443",
+      "function_id": "d3fe9151-442b-4204-a70d-5fcc597fd610",
+      "model": "parakeet",
+      "config": {
+        "sample_rate_hertz": 16000,
+        "language_code": "en-US",
+        "max_alternatives": 1,
+        "audio_channel_count": 1,
+        "enable_word_time_offsets": true,
+        "enable_automatic_punctuation": true
+      },
+      "request_sha256": "3157ebe926086b6bfd70950d3332679e83de132d1ccb3ad52f996fb0c53a6593",
+      "attempts": 1,
+      "grpc_status": "OK",
+      "response": {
+        "results": [
+          {
+            "alternatives": [
+              {
+                "transcript": "Nine silver spoons rest beside the red kettle. ",
+                "confidence": 1.0,
+                "words": [
+                  {
+                    "start_time": 320,
+                    "end_time": 560,
+                    "word": "Nine"
+                  },
+                  {
+                    "start_time": 720,
+                    "end_time": 1040,
+                    "word": "silver"
+                  },
+                  {
+                    "start_time": 1120,
+                    "end_time": 1520,
+                    "word": "spoons"
+                  },
+                  {
+                    "start_time": 1680,
+                    "end_time": 1760,
+                    "word": "rest"
+                  },
+                  {
+                    "start_time": 2000,
+                    "end_time": 2240,
+                    "word": "beside"
+                  },
+                  {
+                    "start_time": 2320,
+                    "end_time": 2320,
+                    "word": "the"
+                  },
+                  {
+                    "start_time": 2480,
+                    "end_time": 2560,
+                    "word": "red"
+                  },
+                  {
+                    "start_time": 2800,
+                    "end_time": 3360,
+                    "word": "kettle."
+                  }
+                ]
+              }
+            ],
+            "channel_tag": 1,
+            "audio_processed": 10.0
+          }
+        ],
+        "id": {
+          "value": "11012deb-4733-4bfd-9794-36a215dbff52"
+        }
+      },
+      "seconds": 0.625,
+      "response_initial_metadata": {
+        "nvcf-reqid": "e24df762-5df5-441d-85bd-92d1d0b99d7b"
+      }
+    }
+  ]
+}

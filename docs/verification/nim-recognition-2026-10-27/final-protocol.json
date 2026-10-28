@@ -1,0 +1,29 @@
+{
+  "created_before_final_inference": true,
+  "manifest_sha256": "ac59cc33b6ed46f60da87039f22f1fe7ac30a278d41d9f0bd9d87d94e665e339",
+  "q08": {
+    "purpose": "One unchanged-payload retry after capacity failure; same speech WAV as successful ASR control.",
+    "max_total_attempts_for_this_cell": 2
+  },
+  "q09": {
+    "wav_sha256": "d5faf5ea52f778996e841e457b8928a87ee3bb0e71650a4e326b5dc88ae772a7",
+    "duration_s": 10,
+    "evaluation_only_label": "dog",
+    "onsets_s": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "burst_samples": 5720,
+    "amplitude_changed": false,
+    "source_burst_samples_identical": true,
+    "criteria": "Dog/bark/canine vocalization is strict recognition. Generic taps or another source is not.",
+    "limits": "Changes repetition, temporal exposure and whole-clip RMS; not proof of a unique encoder or sparsity mechanism."
+  },
+  "stop": "Final two requests for this session, no retry of q09. No timing/video/full-film calls because prerequisite recognition/absence tests failed."
+}

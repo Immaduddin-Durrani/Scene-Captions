@@ -1,0 +1,6 @@
+{
+  "valid_cases": 2,
+  "adversarial_cases_rejected": 6,
+  "network_calls": 0,
+  "scope": "Event identity/source status guards; visual/acoustic semantics still require review."
+}

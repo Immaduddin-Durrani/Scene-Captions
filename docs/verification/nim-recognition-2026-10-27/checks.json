@@ -1,0 +1,14 @@
+{
+  "offline_tests": {
+    "count": 35,
+    "exit_code": 0,
+    "log": "reports/offline-checks.txt"
+  },
+  "preparation_assertions_and_integrity_assessment": "passed; see assessment.json",
+  "evidence_json_and_script_syntax": "passed",
+  "nvidia_key_pattern_scan": "passed",
+  "existing_map_inputs_unchanged": true,
+  "existing_failed_gate_and_playback_data_match_HEAD": true,
+  "new_inference_attempts": 12,
+  "new_track_installed": false
+}

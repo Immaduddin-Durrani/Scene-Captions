@@ -1,0 +1,38 @@
+{
+  "p01": {
+    "raw_asr_text": "Nine silver spoons rest beside the red kettle.",
+    "candidate_speech_text": "Nine silver spoons rest beside the red kettle.",
+    "digital_zero": false,
+    "asr_markup_or_empty": false,
+    "status": "candidate, not independent ground truth"
+  },
+  "p02": {
+    "raw_asr_text": "you",
+    "candidate_speech_text": null,
+    "digital_zero": true,
+    "asr_markup_or_empty": false,
+    "status": "speech not established",
+    "sound_stage": "bypassed locally: all PCM samples zero; no cloud sound events"
+  },
+  "p03": {
+    "raw_asr_text": "*Crowing*",
+    "candidate_speech_text": null,
+    "digital_zero": false,
+    "asr_markup_or_empty": true,
+    "status": "speech not established"
+  },
+  "p04": {
+    "raw_asr_text": "Nine silver spoons rest beside the red kettle.",
+    "candidate_speech_text": "Nine silver spoons rest beside the red kettle.",
+    "digital_zero": false,
+    "asr_markup_or_empty": false,
+    "status": "candidate, not independent ground truth"
+  },
+  "p05": {
+    "raw_asr_text": "\u266a",
+    "candidate_speech_text": null,
+    "digital_zero": false,
+    "asr_markup_or_empty": true,
+    "status": "speech not established"
+  }
+}
